@@ -7,7 +7,7 @@ open class StampAction: TemporalAction {
 
     open override func update(_ delta: Float) {
         self.sprite.penConfiguration.setStamp(true)
-        StageActivity.stageListener.penActor.stampToFrameBuffer()
+        StageManager.shared.stageListener?.penActor.stampToFrameBuffer()
     }
 
     public func setSprite(_ sprite: Sprite) {
