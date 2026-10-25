@@ -9,7 +9,6 @@ open class SetVisibleAction: TemporalAction {
     open override func update(_ delta: Float) {
         sprite.look.setLookVisible(visible)
         
-        // Використовуємо безпечне розпакування замість перевірки на != nil
         if let stageListener = StageManager.shared.stageListener,
            let actor = stageListener.getBubbleActorForSprite(sprite) {
             actor.setVisible(visible)
