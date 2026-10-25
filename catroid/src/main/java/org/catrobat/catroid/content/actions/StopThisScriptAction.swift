@@ -9,9 +9,9 @@ open class StopThisScriptAction: Action {
         self.currentScript = currentScript
     }
 
-    open override func act(_ delta: Float) -> Bool {
-        if actor is Look {
-            (actor as! Look).stopThreadWithScript(currentScript)
+open override func act(_ delta: Float) -> Bool {
+        if let look = actor as? Look {
+            look.stopThreadWithScript(currentScript)
         }
         return true
     }
