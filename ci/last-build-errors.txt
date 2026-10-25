@@ -1,5 +1,0 @@
-BUILD ERRORS: 0 unique
-
-== Missing symbols (count) ==
-
-== First errors ==
