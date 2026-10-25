@@ -1,0 +1,31 @@
+BUILD ERRORS: 22 unique
+
+== Missing symbols (count) ==
+   4  mode
+   2  Type
+   2  TextActor
+   1  StageActivity
+
+== First errors ==
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetInstrumentAction.swift:10:26: error: type 'MidiSoundManager' has no member 'instance'
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetNfcTagAction.swift:11:21: error: overriding declaration requires an 'override' keyword
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetPhysicsObjectTypeAction.swift:5:15: error: cannot find type 'Type' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetPhysicsObjectTypeAction.swift:17:33: error: cannot find type 'Type' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetRotationStyleAction.swift:9:37: error: cannot find 'mode' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetRotationStyleAction.swift:10:12: error: cannot find 'mode' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetRotationStyleAction.swift:11:25: error: value of optional type 'LookData?' must be unwrapped to refer to member 'getTextureRegion' of wrapped base type 'LookData'
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetRotationStyleAction.swift:11:57: error: missing argument labels 'x:y:' in call
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetRotationStyleAction.swift:14:12: error: cannot find 'mode' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetRotationStyleAction.swift:15:25: error: value of optional type 'LookData?' must be unwrapped to refer to member 'getTextureRegion' of wrapped base type 'LookData'
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetRotationStyleAction.swift:15:57: error: missing argument labels 'x:y:' in call
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetRotationStyleAction.swift:25:21: error: cannot find 'mode' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetRotationStyleAction.swift:25:14: error: value of type 'SetRotationStyleAction' has no member 'mode'
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetTempoAction.swift:12:30: error: type 'MidiSoundManager' has no member 'instance'
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetTextAction.swift:8:16: error: cannot find type 'TextActor' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetTextAction.swift:17:21: error: cannot find 'TextActor' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetTextAction.swift:18:13: error: cannot find 'StageActivity' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetTextAction.swift:20:59: error: type 'Log' has no member 'getStackTraceString'
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetTextAction.swift:29:19: error: value of type 'Actor?' has no member 'setText'
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetTextAction.swift:30:19: error: value of type 'Actor?' has no member 'setPosX'
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetTextAction.swift:31:19: error: value of type 'Actor?' has no member 'setPosY'
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetTextAction.swift:33:59: error: type 'Log' has no member 'getStackTraceString'
