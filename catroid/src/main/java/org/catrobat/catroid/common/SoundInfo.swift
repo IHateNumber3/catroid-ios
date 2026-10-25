@@ -29,9 +29,20 @@ public final class SoundInfo: Nameable {
 
     public func clone() -> SoundInfo {
         do {
-            return SoundInfo(name: name, file: try StorageOperations.duplicateFile(file))
+            // Замінено на стандартний менеджер файлів Swift або твій StorageOperations, якщо він є в проєкті
+            let fileManager = FileManager.default
+            let documentsDirectory = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
+            let destinationURL = documentsDirectory.appendingPathComponent(UUID().uuidString + "-" + (file.lastPathComponent))
+            
+            if fileManager.fileExists(atPath: file.path) {
+                try fileManager.copyItem(at: file, to: destinationURL)
+                return SoundInfo(name: name, file: destinationURL, midiFile: isMidiFile)
+            } else {
+                // Якщо оригінального файлу немає, повертаємо клон з поточним посиланням
+                return SoundInfo(name: name, file: file, midiFile: isMidiFile)
+            }
         } catch {
-            fatalError("SoundInfo: Could not copy file: \(file.path)")
+            fatalError("SoundInfo: Could not copy file: \(file.path), error: \(error)")
         }
     }
 }
