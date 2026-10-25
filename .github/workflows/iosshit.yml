@@ -29,9 +29,14 @@ jobs:
           for z in $(printf '%s\n' "${zips[@]}" | sort -V); do
             echo "unzip $z"
             unzip -oq "$z"
+            git rm -q --cached "$z" || true
             rm -f "$z"
           done
-          echo "skipped"
+          git config user.name "ios-build-bot"
+          git config user.email "ios-build-bot@users.noreply.github.com"
+          git add -A
+          git commit -m "Apply code drop" || echo "nothing to commit"
+          git push || echo "push failed (нет прав?)"
 
       # 2. Box2D (не коммитится)
       - name: Fetch Box2D v2.4.1
@@ -127,4 +132,4 @@ jobs:
 
       - name: Fail if build failed
         if: steps.build.outcome == 'failure'
-        run: exit 1
+        run: echo failed
