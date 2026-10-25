@@ -8,7 +8,7 @@ open class SetSizeToAction: TemporalAction {
 
     open override func update(_ delta: Float) {
         do {
-            var newSize: Float = try size == nil ? Float(0) : size.interpretFloat(scope)
+            let newSize: Float = try size == nil ? Float(0) : size.interpretFloat(scope)
             scope.sprite.look.setSizeInUserInterfaceDimensionUnit(newSize)
         } catch let interpretationException {
             Log.d(String(describing: type(of: self)), "Formula interpretation for this specific Brick failed.", interpretationException)
