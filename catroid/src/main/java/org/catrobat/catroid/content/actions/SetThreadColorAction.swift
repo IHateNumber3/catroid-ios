@@ -14,7 +14,6 @@ open class SetThreadColorAction: TemporalAction {
                 try colorStringInterpretation = color.interpretString(scope)
             }
             
-            // Безпечне очищення префіксу та витягування RGB-компонентів у Swift
             let hexString = colorStringInterpretation.hasPrefix("0x") ? 
                 String(colorStringInterpretation.dropFirst(2)) : 
                 colorStringInterpretation
@@ -27,7 +26,6 @@ open class SetThreadColorAction: TemporalAction {
             let greenInt = Int(greenStr, radix: 16) ?? 0
             let blueInt = Int(blueStr, radix: 16) ?? 0
             
-            // Створення кольору через Swift-ініціалізатор
             let colorInterpretation = Color(
                 red: Float(redInt) / 255.0,
                 green: Float(greenInt) / 255.0,
