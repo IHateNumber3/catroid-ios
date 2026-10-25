@@ -1,0 +1,138 @@
+name: iOS build
+
+on:
+  push:
+    paths:
+      - 'drop/*.zip'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ios-build
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: macos-14
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      # 1. Распаковать залитые архивы (по имени, новые перезаписывают старые) и закоммитить
+      - name: Apply drop/*.zip
+        run: |
+          shopt -s nullglob
+          zips=(drop/*.zip)
+          if [ ${#zips[@]} -eq 0 ]; then
+            echo "Нет архивов в drop/ — собираем то, что в репо."
+            exit 0
+          fi
+          for z in $(printf '%s\n' "${zips[@]}" | sort -V); do
+            echo "unzip $z"
+            unzip -oq "$z"
+            git rm -q --cached "$z" || true
+            rm -f "$z"
+          done
+          git config user.name "ios-build-bot"
+          git config user.email "ios-build-bot@users.noreply.github.com"
+          git add -A
+          git commit -m "Apply code drop" || echo "nothing to commit"
+          git push || echo "push failed (нет прав?)"
+
+      # 2. Box2D (не коммитится)
+      - name: Fetch Box2D v2.4.1
+        run: |
+          echo "third_party/" >> .git/info/exclude
+          git clone --depth 1 --branch v2.4.1 https://github.com/erincatto/box2d.git third_party/box2d
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Generate Xcode project
+        run: xcodegen generate
+
+      # 3. Сборка без подписи под симулятор; ошибки не валят шаг, чтобы выложить лог
+      - name: Build
+        id: build
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          xcodebuild \
+            -project Catroid.xcodeproj -scheme Catroid \
+            -sdk iphonesimulator -configuration Debug \
+            -destination 'generic/platform=iOS Simulator' \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO \
+            COMPILER_INDEX_STORE_ENABLE=NO \
+            build 2>&1 | tee build.log
+
+      # 4. Короткий отчёт для копирования
+      - name: Summarize errors
+        if: always()
+        run: |
+          mkdir -p ci
+          python3 - <<'PY'
+          import re, collections
+          log = open('build.log', errors='replace').read() if __import__('os').path.exists('build.log') else ''
+          errs = []
+          for line in log.splitlines():
+              if re.search(r'(error:|fatal error:|ld: )', line):
+                  line = re.sub(r'^/Users/runner/work/[^/]+/[^/]+/', '', line)
+                  errs.append(line.strip())
+          uniq = list(dict.fromkeys(errs))
+          missing = collections.Counter()
+          for e in uniq:
+              for m in re.finditer(r"cannot find (?:type )?'([^']+)' in scope", e):
+                  missing[m.group(1)] += 1
+          out = []
+          out.append(f"BUILD ERRORS: {len(uniq)} unique")
+          out.append("")
+          out.append("== Missing symbols (count) ==")
+          for name, c in missing.most_common(80):
+              out.append(f"{c:4d}  {name}")
+          out.append("")
+          out.append("== First errors ==")
+          out += uniq[:250]
+          text = "\n".join(out) + "\n"
+          open('ci/last-build-errors.txt', 'w').write(text)
+          open('summary.md', 'w').write("```\n" + text[:60000] + "```\n")
+          PY
+          cat summary.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload build log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: |
+            build.log
+            ci/last-build-errors.txt
+
+      - name: Commit error report
+        if: always()
+        run: |
+          git config user.name "ios-build-bot"
+          git config user.email "ios-build-bot@users.noreply.github.com"
+          git add ci/last-build-errors.txt
+          git commit -m "CI: build report" || true
+          git push || true
+
+      # 5. Если собралось — неподписанный .ipa для KSign/ESign
+      - name: Package unsigned IPA
+        if: steps.build.outcome == 'success'
+        run: |
+          APP=$(find ~/Library/Developer/Xcode/DerivedData -name 'Catroid.app' -path '*Debug-iphonesimulator*' | head -1)
+          echo "app: $APP"
+          mkdir -p Payload && cp -R "$APP" Payload/ && zip -qr Catroid-simulator.zip Payload
+
+      - name: Upload IPA
+        if: steps.build.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: Catroid-simulator
+          path: Catroid-simulator.zip
+
+      - name: Fail if build failed
+        if: steps.build.outcome == 'failure'
+        run: exit 1
