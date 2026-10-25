@@ -10,13 +10,13 @@ open class TripleStitchAction: TemporalAction {
         var stepsInterpretation: Int = 0
         do {
             if steps != nil {
-                try stepsInterpretation = steps.interpretInteger(scope)
+                stepsInterpretation = try steps.interpretInteger(scope)
             }
         } catch let interpretationException {
             stepsInterpretation = 0
             Log.d(String(describing: type(of: self)), "Formula interpretation for this specific Brick failed.", interpretationException)
         }
-        self.scope.sprite.runningStitch.activateStitching(scope.sprite, TripleRunningStitch(scope.sprite, stepsInterpretation))
+        self.scope.sprite.runningStitch.activateStitching(scope.sprite, TripleRunningStitch(sprite: scope.sprite, type: stepsInterpretation))
     }
 
     public func setScope(_ scope: Scope) {
