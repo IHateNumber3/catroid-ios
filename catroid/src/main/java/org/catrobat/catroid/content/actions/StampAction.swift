@@ -14,3 +14,4 @@ open class StampAction: TemporalAction {
         self.sprite = sprite
     }
 }
+
