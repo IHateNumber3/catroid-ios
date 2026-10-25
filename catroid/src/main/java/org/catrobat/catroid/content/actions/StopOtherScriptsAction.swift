@@ -7,25 +7,27 @@ open class StopOtherScriptsAction: Action {
     public required init() { super.init() }
 
     open override func act(_ delta: Float) -> Bool {
-        if !(actor is Look) || actor.getActions() == nil {
+        guard let look = actor as? Look else {
             return true
         }
+        
         sprite.releaseAllPointers()
-        var look = (Look) actor
         look.stopThreads(getOtherThreads(look))
         return true
     }
 
-    private func getOtherThreads(_ look: Look) -> Array<Action> {
-        Array<Action> otherThreads = new Array<>(look.getActions())
-        Iterator<Action> it = otherThreads.iterator()
-        while it.hasNext() {
-            var action = it.next()
-            if action is ScriptSequenceAction && (action as! ScriptSequenceAction).script == currentScript {
-                it.remove()
-            }
+    private func getOtherThreads(_ look: Look) -> [Action] {
+        guard let actions = look.getActions() else {
+            return []
         }
-        return otherThreads
+        
+        // Використовуємо ідіоматичний фільтр замість Java Iterator
+        return actions.filter { action in
+            if let sequenceAction = action as? ScriptSequenceAction {
+                return sequenceAction.script !== currentScript
+            }
+            return true
+        }
     }
 
     public func setCurrentScript(_ currentScript: Script) {
