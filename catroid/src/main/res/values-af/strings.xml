@@ -1,0 +1,2006 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--
+  ~ Catroid: An on-device visual programming system for Android devices
+  ~ Copyright (C) 2010-2026 The Catrobat Team
+  ~ (<http://developer.catrobat.org/credits>)
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU Affero General Public License as
+  ~ published by the Free Software Foundation, either version 3 of the
+  ~ License, or (at your option) any later version.
+  ~
+  ~ An additional term exception under section 7 of the GNU Affero
+  ~ General Public License, version 3, is available at
+  ~ http://developer.catrobat.org/license_additional_term
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU Affero General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU Affero General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- General terms -->
+    <string formatted="false" name="stage">Verhoog</string>
+    <string formatted="false" name="play">Speel</string>
+    <string formatted="false" name="settings">Instellings</string>
+    <string formatted="false" name="redo">Herdoen</string>
+    <string formatted="false" name="undo">Ontdoen</string>
+    <string formatted="false" name="new_option">nuut…</string>
+    <string formatted="false" name="edit_option">wysig…</string>
+    <string formatted="false" name="confirm">Bevestig</string>
+    <string formatted="false" name="ignore">Ignoreer</string>
+    <string formatted="false" name="cancel">Kanselleer</string>
+    <string formatted="false" name="save">Stoor</string>
+    <string formatted="false" name="help">Hulp</string>
+    <string formatted="false" name="discard">Gooi weg</string>
+    <string formatted="false" name="next">Volgende</string>
+    <string formatted="false" name="ok">OK</string>
+    <string formatted="false" name="done">Klaar</string>
+    <string formatted="false" name="close">Maak toe</string>
+    <string formatted="false" name="assistant">Assistent</string>
+    <string formatted="false" name="yes">Ja</string>
+    <string formatted="false" name="no">Nee</string>
+    <string formatted="false" name="once">Een keer</string>
+    <string formatted="false" name="always">Altyd</string>
+    <string formatted="false" name="deny">Weier</string>
+    <string formatted="false" name="do_not_show_again">MOENIE WEER WYS NIE</string>
+    <string formatted="false" name="accept">Aanvaar</string>
+    <string formatted="false" name="decline">Weier</string>
+    <string formatted="false" name="select_all">Kies alles</string>
+    <string formatted="false" name="deselect_all">Ontkies alles</string>
+    <string formatted="false" name="skip">slaan oor</string>
+    <string formatted="false" name="warning">Waarskuwing</string>
+    <string formatted="false" name="error">Fout</string>
+    <string formatted="false" name="loading">Laai tans…</string>
+    <string formatted="false" name="please_wait">Wag asseblief</string>
+    <string formatted="false" name="search_hint">Soek</string>
+    <string formatted="false" name="backpack_add">Voeg by rugsak</string>
+    <string formatted="false" name="share_website_text">share.catrob.at</string>
+    <!-- Security warning dialog -->
+    <string formatted="false" name="security_warning_dialog_msg">Die projek wat jy afgelaai het, luister in die agtergrond na jou stem en stuur ook data na die internet. Dit kan onskadelik wees en nodig om te werk soos bedoel. Maak egter seker dat wat jy sê terwyl die projek loop, veilig is. As jy twyfel, vee asseblief die afgelaaide projek uit. As jy seker is dat dit skadelik is, kan jy die projek ook op sy bladsy op die Catrobat-gemeenskapsplatform rapporteer.</string>
+    <!-- Replace Api dialog -->
+    <string formatted="false" name="api_replacement_dialog_neutral">Laai op sonder verandering</string>
+    <string formatted="false" name="api_replacement_dialog_accept">Laai op met sleutels vervang</string>
+    <string formatted="false" name="api_replacement_dialog_warning">Die projek bevat blokke wat toegang tot die web kry, en dit lyk of dit ook API-sleutels bevat. Kyk asseblief by %1s waarom dit gevaarlik kan wees om hierdie sleutels op te laai.</string>
+    <string formatted="false" name="api_replacement">plaas API-sleutel hier</string>
+    <!-- -->
+    <!-- Login/Logout Mechanism -->
+    <string formatted="false" name="loading_check_oauth_token">Kontroleer tans aanmelddata…</string>
+    <string formatted="false" name="loading_google_exchange_code">Ruil tans Google-aanmelddata uit…</string>
+    <string formatted="false" name="loading_google_login">Google-aanmelding op ons bediener is voltooi…</string>
+    <string formatted="false" name="logout_successful">Suksesvol afgemeld</string>
+    <string formatted="false" name="degrees">grade</string>
+    <string formatted="false" name="background">Agtergrond</string>
+    <string formatted="false" name="landscape">landskap</string>
+    <string formatted="false" name="portrait">portret</string>
+    <string formatted="false" name="unknown">onbekend</string>
+    <string formatted="false" name="disconnect">Ontkoppel</string>
+    <!--  -->
+    <!-- Main Menu -->
+    <string formatted="false" name="main_menu_continue">Gaan voort met projek</string>
+    <string formatted="false" name="main_menu_new">Nuwe projek</string>
+    <string formatted="false" name="main_menu_programs">Projekte</string>
+    <string formatted="false" name="main_menu_help">Hulp</string>
+    <string formatted="false" name="main_menu_web">Catrobat</string>
+    <string formatted="false" name="main_menu_upload">Laai projek op</string>
+    <string formatted="false" name="main_menu_play">Speel projek</string>
+    <string formatted="false" name="main_menu_rate_app">Gradeer ons!</string>
+    <string formatted="false" name="main_menu_terms_of_use">Gebruiksvoorwaardes</string>
+    <string formatted="false" name="main_menu_privacy_policy">Privaatheidsbeleid</string>
+    <string formatted="false" name="main_menu_about">Oor hierdie app</string>
+    <string formatted="false" name="main_menu_login">Meld aan</string>
+    <string formatted="false" name="main_menu_logout">Meld af</string>
+    <string formatted="false" name="main_menu_scratch_converter">Scratch-omskakelaar</string>
+    <string formatted="false" name="main_menu_play_store_not_installed">App-winkel nie gevind nie</string>
+    <!--  -->
+    <!-- Marketing activity -->
+    <string formatted="false" name="marketing_created_with">Geskep met</string>
+    <string formatted="false" name="marketing_app_details">Besonderhede oor hierdie app</string>
+    <string formatted="false" name="marketing_more_on_google_play">Meer apps in die App-winkel</string>
+    <string formatted="false" name="error_cannot_open_huawei_app_gallery">Oeps! Kon nie Huawei AppGallery oopmaak nie, probeer asseblief later weer.</string>
+    <string formatted="false" name="google_play_store_logo">Google Play Store</string>
+    <string formatted="false" name="huawei_app_gallery">Huawei App Gallery</string>
+    <!-- NFC activity -->
+    <string formatted="false" name="nfc_activity_title">NFC-merkers</string>
+    <!-- Settings activity -->
+    <string formatted="false" name="preference_title">Instellings</string>
+    <string formatted="false" name="preference_title_language">Taal</string>
+    <string formatted="false" name="preference_description_language">Stel die taal van die app</string>
+    <string formatted="false" name="preference_title_web_access">Webtoegang</string>
+    <string formatted="false" name="preference_description_web_access">Wysig om vertroude domeine by te voeg of te verwyder</string>
+    <string formatted="false" name="preference_screen_web_access_title">Wysig vertroude domeine</string>
+    <string formatted="false" name="preference_title_ai">Uitbreiding kunsmatige intelligensie (KI)</string>
+    <string formatted="false" name="preference_description_ai">Aktiveer KI-blokke en -sensors</string>
+    <string formatted="false" name="preference_title_ai_speech_recognition">Spraakherkenning</string>
+    <string formatted="false" name="preference_description_ai_speech_recognition">Aktiveer blokke en sensors vir spraakherkenning</string>
+    <string formatted="false" name="preference_title_ai_speech_synthetization">Spraaksintese</string>
+    <string formatted="false" name="preference_description_ai_speech_synthetization">Aktiveer blokke en sensors vir spraaksintese</string>
+    <string formatted="false" name="preference_title_ai_face_detection">Gesigsbespeuring</string>
+    <string formatted="false" name="preference_description_ai_face_detection">Aktiveer blokke en sensors vir gesigsbespeuring</string>
+    <string formatted="false" name="preference_title_ai_pose_detection">Houdingbespeuring</string>
+    <string formatted="false" name="preference_description_ai_pose_detection">Aktiveer blokke en sensors vir houdingbespeuring</string>
+    <string formatted="false" name="preference_title_ai_text_recognition">Teksherkenning</string>
+    <string formatted="false" name="preference_description_ai_text_recognition">Aktiveer blokke en sensors vir teksherkenning</string>
+    <string formatted="false" name="preference_title_ai_object_recognition">Voorwerpherkenning</string>
+    <string formatted="false" name="preference_description_ai_object_recognition">Aktiveer sensors vir voorwerpherkenning en -volging</string>
+    <string formatted="false" name="preference_title_accessibility">Toeganklikheid</string>
+    <string formatted="false" name="preference_description_accessibility">Verander die voorkoms van die app</string>
+    <string formatted="false" name="preference_title_accessibility_profiles">Toeganklikheidsprofiele</string>
+    <string formatted="false" name="preference_title_accessibility_profile">Voorafbepaalde profiele</string>
+    <string formatted="false" name="preference_title_accessibility_profile_headline">Profiele</string>
+    <string formatted="false" name="preference_title_accessibility_predefined_profile_headline">Voorafbepaalde profiele</string>
+    <string formatted="false" name="preference_description_accessibility_profiles">Kies ’n voorafbepaalde toeganklikheidsprofiel</string>
+    <string formatted="false" name="preference_title_accessibility_text_appearance">Teksvoorkoms</string>
+    <string formatted="false" name="preference_title_accessibility_handling">Hantering</string>
+    <string formatted="false" name="preference_title_accessibility_category_icons_big">Groot ikone</string>
+    <string formatted="false" name="preference_description_accessibility_category_icons_big">Vergroot die ikoongrootte.</string>
+    <string formatted="false" name="preference_title_accessibility_category_icons_high_contrast">Hoëkontras-ikone</string>
+    <string formatted="false" name="preference_title_accessibility_Brick_icons">Ikone</string>
+    <string formatted="false" name="preference_title_accessibility_category_icons">Wys ikone</string>
+    <string formatted="false" name="preference_description_accessibility_category_icons">Voeg ikone by kategorieë en blokke.</string>
+    <string formatted="false" name="preference_title_accessibility_high_contrast">Hoë kontras</string>
+    <string formatted="false" name="preference_description_accessibility_high_contrast">Verhoog die tekskontras.</string>
+    <string formatted="false" name="preference_description_accessibility_large_text">Vergroot die teksgrootte.</string>
+    <string formatted="false" name="preference_title_accessibility_large_text">Groot teks</string>
+    <string formatted="false" name="preference_title_accessibility_element_spacing">Groot spasiëring tussen elemente</string>
+    <string formatted="false" name="preference_description_accessibility_element_spacing">Vergroot die spasiëring tussen elemente in lyste.</string>
+    <string formatted="false" name="preference_title_accessibility_dragndrop_delay">Sleep-en-los-vertraging</string>
+    <string formatted="false" name="preference_description_accessibility_dragndrop_delay">Sleep-en-los-vertraging vir blokke.</string>
+    <string formatted="false" name="preference_title_accessibility_beginner_bricks">Beginnermodus</string>
+    <string formatted="false" name="preference_description_accessibility_beginner_bricks">Wys net eenvoudige funksies.</string>
+    <string formatted="false" name="preference_title_accessibility_font_style">Kies ’n lettertipe</string>
+    <string formatted="false" name="accessibility_font_regular">Gewoon</string>
+    <string formatted="false" name="accessibility_font_serif">Serif</string>
+    <string formatted="false" name="accessibility_font_dyslexic">Disleksie</string>
+    <string formatted="false" name="accessibility_settings_applied">Veranderinge toegepas</string>
+    <string formatted="false" name="preference_access_title_profile_default">Verstek</string>
+    <string formatted="false" name="preference_access_summary_profile_default">Verstekinstellings</string>
+    <string formatted="false" name="preference_access_title_profile_custom">My eie profiel</string>
+    <string formatted="false" name="preference_access_summary_profile_custom">My persoonlike instellings</string>
+    <string formatted="false" name="preference_access_title_profile_argus">Argus</string>
+    <string formatted="false" name="preference_access_summary_profile_argus">Hoë kontras, ekstra ikone</string>
+    <string formatted="false" name="preference_access_title_profile_odin">Odin</string>
+    <string formatted="false" name="preference_access_summary_profile_odin">Groot teks, groot ikone, groot spasiëring tussen elemente, hoë kontras</string>
+    <string formatted="false" name="preference_access_title_profile_fenrir">Fenrir</string>
+    <string formatted="false" name="preference_access_summary_profile_fenrir">Groot spasiëring tussen elemente, sleep-en-los-vertraging</string>
+    <string formatted="false" name="preference_access_title_profile_tiro">Tiro</string>
+    <string formatted="false" name="preference_access_summary_profile_tiro">Beginnermodus</string>
+    <string name="preference_dialog_use_full_features">Gebruik alle funksies</string>
+    <string name="preference_dialog_appgallery">AppGallery</string>
+    <string name="preference_dialog_google_play">Google Play</string>
+    <string name="preference_lego_dialog_text">Gebruik asseblief Catrobat se Mindstorms Code EV3 NXT-app om alle funksies van die Lego Mindstorms-uitbreidings te benut.</string>
+    <string name="preference_embroidery_dialog_text">Gebruik asseblief Catrobat se Embroidery Designer-app om alle funksies van die borduuruitbreiding te benut.</string>
+    <string name="preference_phiro_dialog_text">Gebruik asseblief Catrobat se Phiro Code-app om alle funksies van die Phiro-robotika-uitbreiding te benut.</string>
+    <!-- Lego/Drone/Raspi/Chromecast/Embroidery -->
+    <string formatted="false" name="preference_title_enable_quadcopter_bricks">Uitbreiding Parrot AR.Drone 2.0</string>
+    <string formatted="false" name="preference_description_quadcopter_bricks">Laat die app toe om Parrot AR.Drone 2.0-hommeltuie te beheer</string>
+    <string formatted="false" name="preference_title_enable_jumpingsumo_bricks">Uitbreiding Parrot Jumping Sumo</string>
+    <string formatted="false" name="preference_description_jumpingsumo_bricks">Laat die app toe om Parrot se Jumping Sumo-robotte te beheer</string>
+    <string formatted="false" name="preference_title_enable_mindstorms_nxt_bricks">Uitbreiding Lego Mindstorms NXT</string>
+    <string formatted="false" name="preference_title_enable_mindstorms_ev3_bricks">Uitbreiding Lego Mindstorms EV3</string>
+    <string formatted="false" name="preference_description_mindstorms_nxt_bricks">Laat die app toe om Lego Mindstorms NXT-robotte te beheer</string>
+    <string formatted="false" name="preference_description_mindstorms_ev3_bricks">Laat die app toe om Lego Mindstorms EV3-robotte te beheer</string>
+    <string formatted="false" name="preference_title_mindstorms_nxt_sensors">Lego NXT-sensors</string>
+    <string formatted="false" name="preference_title_mindstorms_ev3_sensors">Lego EV3-sensors</string>
+    <string formatted="false" name="preference_title_drone_config_properties">Parrot AR.Drone 2.0-konfigurasie</string>
+    <string formatted="false" name="preference_title_enable_phiro_bricks">Uitbreiding RobotixEdu se Phiro</string>
+    <string formatted="false" name="preference_description_phiro_bricks">Laat die app toe om RobotixEdu se Phiro-robotte te beheer</string>
+    <string formatted="false" name="preference_title_enable_arduino_bricks">Uitbreiding Arduino</string>
+    <string formatted="false" name="preference_description_arduino_bricks">Laat die app toe om Arduino-borde te beheer</string>
+    <string formatted="false" name="preference_title_enable_embroidery_bricks">Uitbreiding borduurwerk</string>
+    <string formatted="false" name="preference_description_embroidery_bricks">Skep patrone vir borduurmasjiene</string>
+    <string formatted="false" name="preference_title_cast_feature_globally_enabled">Uitbreiding Chromecast</string>
+    <string formatted="false" name="preference_description_cast_feature_globally_enabled">Wys die uitsaaiknoppie en laat uitsaai van projekte toe</string>
+    <string formatted="false" name="preference_title_enable_plot_bricks">Uitbreiding plotter en laser</string>
+    <string formatted="false" name="preference_description_plot_bricks">Skep patrone vir plotters en lasersnymasjiene</string>
+    <string formatted="false" name="preference_title_enable_nfc_bricks">Uitbreiding nabyveldkommunikasie (NFC)</string>
+    <string formatted="false" name="preference_description_nfc_bricks">Laat die app toe om NFC-merkers in projekte te gebruik</string>
+    <string formatted="false" name="preference_title_enable_crash_reports">Stuur anonieme omvalverslae</string>
+    <string formatted="false" name="preference_description_crash_reports">Laat die app toe om omvalverslae outomaties te stuur</string>
+    <!-- -->
+    <string formatted="false" name="preference_title_enable_raspi_bricks">Uitbreiding Raspberry Pi</string>
+    <string formatted="false" name="preference_description_raspi_bricks">Laat die app toe om Raspberry Pi-rekenaars te beheer</string>
+    <string formatted="false" name="preference_raspi_enable_bricks">Aktiveer blokke en sensors</string>
+    <string formatted="false" name="preference_raspi_help">Hulp / om te begin</string>
+    <string formatted="false" name="preference_raspi_help_summary">Kry hulp met die opstel van die verbindingsinstellings</string>
+    <string formatted="false" name="preference_raspi_host">Raspberry Pi IP-/gasheeradres</string>
+    <string formatted="false" name="preference_raspi_port">Raspberry Pi-poort</string>
+    <!--  -->
+    <string formatted="false" name="preference_title_multiplayer_variables_enabled">Uitbreiding meerspeler</string>
+    <string formatted="false" name="preference_description_multiplayer_variables_enabled">Laat die app toe om meerspeler-veranderlikes te gebruik wat via Bluetooth gedeel word</string>
+    <string formatted="false" name="preference_title_enable_test_bricks">Uitbreiding toetse</string>
+    <string formatted="false" name="preference_description_test_bricks">Laat toe om toetse te skep</string>
+    <!-- Scratch Converter activity -->
+    <string formatted="false" name="beta">BETA</string>
+    <string formatted="false" name="error_scratch_program_not_accessible_any_more">Oeps! Dit lyk of die projek verdwyn het, of jy het dalk toegang daartoe verloor.</string>
+    <string formatted="false" name="error_scratch_project_data_not_available">Oeps! Dit lyk of sommige dele van die projek ontbreek, probeer asseblief later weer.</string>
+    <string formatted="false" name="error_request_timeout">Oeps! Ons bediener het nie betyds geantwoord nie, probeer asseblief later weer.</string>
+    <string formatted="false" name="error_scratch_program_conversion_failed">Oeps! Kon nie die projek omskakel nie, probeer asseblief later weer.</string>
+    <string formatted="false" name="error_specific_scratch_program_conversion_failed_x">Oeps! Kon nie %1$s omskakel nie, probeer asseblief later weer.</string>
+    <string formatted="false" name="error_scratch_converter_outdated_app_version">Jou weergawe van hierdie app is verouderd. Ons Scratch-omskakelaar werk net met die nuutste weergawe. Dateer asseblief die app op.</string>
+    <string formatted="false" name="error_cannot_open_not_existing_scratch_program">Ek kon nie hierdie Scratch-projek oopmaak nie. Dit lyk of jy die omskakeling/aflaai van die Scratch-projek gekanselleer het, of jy het intussen die projek hernoem/uitgevee.</string>
+    <string formatted="false" name="error_cannot_open_currently_downloading_scratch_program">Jy kan die projek nog nie oopmaak nie. Wag asseblief totdat dit afgelaai is.</string>
+    <string formatted="false" name="error_cannot_open_not_yet_downloaded_scratch_program">Jy kan die projek nog nie oopmaak nie. Laai dit asseblief eers af en maak dit dan oop.</string>
+    <string formatted="false" name="error_cannot_convert_deprecated_scratch_program_x_x">Ek kon nie %1$s omskakel nie. Dit lyk na ’n ou Scratch-projek van voor %2$s. Probeer asseblief ’n ander een.</string>
+    <plurals name="error_cannot_convert_more_than_x_programs">
+        <item quantity="one">Jy kan nie meer as %d projek gelyktydig omskakel nie. Wag asseblief eers totdat die lopende omskakelings klaar is.</item>
+        <item quantity="other">Jy kan nie meer as %d projekte gelyktydig omskakel nie. Wag asseblief eers totdat die lopende omskakelings klaar is.</item>
+    </plurals>
+    <string formatted="false" name="error_cannot_open_failed_scratch_program">Jy kan nie die projek oopmaak nie, want dit is nie korrek omgeskakel nie. Probeer asseblief om dit weer om te skakel.</string>
+    <string formatted="false" name="search_failed">Niks gevind nie, probeer asseblief later weer.</string>
+    <string formatted="false" name="connection_lost_or_closed_by_server">Bedienerverbinding verloor.</string>
+    <string formatted="false" name="connection_failed">Ons kan jou nie nou aan die bediener koppel nie, probeer asseblief later weer.</string>
+    <string formatted="false" name="authentication_failed">Dit lyk of daar ’n probleem met jou verbinding met die diens is. Kontak asseblief die Catrobat-span.</string>
+    <plurals name="scratch_conversion_scheduled_x">
+        <item quantity="one">%d Scratch-projek by die tou gevoeg…</item>
+        <item quantity="other">%d Scratch-projekte by die tou gevoeg…</item>
+    </plurals>
+    <string formatted="false" name="scratch_conversion_started">Begin tans om Scratch-projek om te skakel…</string>
+    <string formatted="false" name="convert">Skakel om</string>
+    <string formatted="false" name="converting">Skakel tans om…</string>
+    <string formatted="false" name="status_scheduled">Geskeduleer</string>
+    <string formatted="false" name="status_waiting_for_worker">Soek tans ’n vrye werker… Wag asseblief…</string>
+    <string formatted="false" name="status_started">Begin…</string>
+    <string formatted="false" name="status_conversion_finished">Omskakeling voltooi</string>
+    <plurals name="status_in_progress_x_jobs">
+        <item quantity="one">Besig: %d taak</item>
+        <item quantity="other">Besig: %d take</item>
+    </plurals>
+    <plurals name="status_completed_x_jobs">
+        <item quantity="one">Voltooi: %d taak</item>
+        <item quantity="other">Voltooi: %d take</item>
+    </plurals>
+    <string formatted="false" name="status_conversion_failed">Omskakeling het misluk!</string>
+    <string formatted="false" name="status_downloading">Laai tans af…</string>
+    <string formatted="false" name="status_download_finished">Aflaai voltooi.</string>
+    <string formatted="false" name="status_download_canceled">Aflaai gekanselleer!</string>
+    <string formatted="false" name="scratch_programs_in_progress_title">Besig</string>
+    <string formatted="false" name="scratch_programs_finished_title">Omgeskakelde projekte</string>
+    <string formatted="false" name="by_x">deur %1$s</string>
+    <string formatted="false" name="warning_program_visibility">WAARSKUWING:\nDit lyk na ’n privaat projek. Jy kan probeer om dit om te skakel, maar dit werk dalk nie.</string>
+    <string formatted="false" name="instructions">Instruksies</string>
+    <string formatted="false" name="notes_and_credits">Notas en erkennings</string>
+    <string formatted="false" name="shared_at_x">Gedeel: %1$s</string>
+    <string formatted="false" name="modified_at_x">Gewysig: %1$s</string>
+    <string formatted="false" name="remixes">Hermengsels</string>
+    <!--  -->
+    <string formatted="false" name="author">Outeur:</string>
+    <string formatted="false" name="screen_size">Verhooggrootte:</string>
+    <string formatted="false" name="mode">Modus:</string>
+    <string formatted="false" name="remix_of">Hermengsel van:</string>
+    <string formatted="false" name="description_hint">Tik om ’n beskrywing by te voeg</string>
+    <string formatted="false" name="notes_and_credits_hint">Tik om notas en erkennings by te voeg</string>
+    <!-- ScratchReconvertDialog Strings -->
+    <string formatted="false" name="reconvert_text">Jy het hierdie projek %1$s gelede omgeskakel.</string>
+    <plurals name="minutes">
+        <item quantity="one">%d minuut</item>
+        <item quantity="other">%d minute</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%d uur</item>
+        <item quantity="other">%d uur</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">%d dag</item>
+        <item quantity="other">%d dae</item>
+    </plurals>
+    <string formatted="false" name="reconvert_dialog_download">Laai die projek weer af</string>
+    <string formatted="false" name="reconvert_dialog_reconvert">Skakel hierdie projek weer om</string>
+    <!--  -->
+    <!-- ERRORS -->
+    <!-- Terms of Use and Service Error -->
+    <string formatted="false" name="declined_terms_of_use_and_service_alert">Om ons app te gebruik, moet jy ons gebruiksvoorwaardes aanvaar. As jy dit egter nie wil doen nie, kan jy ons gratis webdienste gebruik by</string>
+    <string formatted="false" name="wtf_error">’n Onverwagte fout het voorgekom: Ek kon nie die voorbeeldprojek herstel nie.</string>
+    <!-- Project Handling Errors -->
+    <string formatted="false" name="error_copy_project">’n Fout het voorgekom tydens die kopieer van die projek</string>
+    <!-- Dialog Errors -->
+    <string formatted="false" name="name_already_exists">Hierdie naam word reeds gebruik, kies asseblief ’n ander een.</string>
+    <string formatted="false" name="name_consists_of_spaces_only">Jy het net spasies in die teksveld getik. Voer asseblief teks in met letters, syfers of ander spesiale karakters.</string>
+    <string formatted="false" name="name_empty">Voer asseblief ’n teks in</string>
+    <!-- Recycler View -->
+    <string formatted="false" name="am_empty_list">Daar is nog geen items in hierdie lys nie. Voeg asseblief eers ’n paar by.</string>
+    <string formatted="false" name="reject_import">Die karakter of voorwerp kon nie bygevoeg word nie.</string>
+    <string formatted="false" name="am_merge_error">Niks is saamgevoeg nie. Presies 2 projekte moet gekies word om saam te voeg.</string>
+    <string formatted="false" name="am_backpack">Pak in</string>
+    <string formatted="false" name="am_unpack">Pak uit</string>
+    <string formatted="false" name="am_copy">Kopieer</string>
+    <string formatted="false" name="am_delete">Vee uit</string>
+    <string formatted="false" name="am_rename">Hernoem</string>
+    <string formatted="false" name="am_convert">Skakel om</string>
+    <string formatted="false" name="am_merge">Voeg saam</string>
+    <string formatted="false" name="dialog_confirm_delete">Jy kan dit nie ontdoen nie!</string>
+    <string formatted="false" name="list_headline_sprites">Karakters en voorwerpe</string>
+    <!-- Options Menu Options -->
+    <string formatted="false" name="backpack">Rugsak</string>
+    <string formatted="false" name="copy">Kopieer</string>
+    <string formatted="false" name="delete">Vee uit</string>
+    <string formatted="false" name="rename">Hernoem</string>
+    <string formatted="false" name="merge">Voeg saam</string>
+    <string formatted="false" name="show_details">Wys besonderhede</string>
+    <string formatted="false" name="hide_details">Versteek besonderhede</string>
+    <string formatted="false" name="project_options">Projekopsies</string>
+    <string formatted="false" name="from_local">Voeg by van toestel</string>
+    <string formatted="false" name="sort_projects">Sorteer</string>
+    <string formatted="false" name="unsort_projects">Ontsorteer</string>
+    <string formatted="false" name="import_from_project">Kies projek om uit in te voer</string>
+    <!-- New Dialog Titles -->
+    <string formatted="false" name="new_scene_dialog">Nuwe toneel</string>
+    <!-- Delete Dialog Titles -->
+    <plurals name="delete_projects">
+        <item quantity="one">Vee hierdie projek uit?</item>
+        <item quantity="other">Vee hierdie projekte uit?</item>
+    </plurals>
+    <plurals name="delete_scenes">
+        <item quantity="one">Vee hierdie toneel uit?</item>
+        <item quantity="other">Vee hierdie tonele uit?</item>
+    </plurals>
+    <plurals name="delete_sprites">
+        <item quantity="one">Vee hierdie karakter of voorwerp uit?</item>
+        <item quantity="other">Vee hierdie karakters of voorwerpe uit?</item>
+    </plurals>
+    <plurals name="delete_looks">
+        <item quantity="one">Vee hierdie kostuum uit?</item>
+        <item quantity="other">Vee hierdie kostuums uit?</item>
+    </plurals>
+    <plurals name="delete_sounds">
+        <item quantity="one">Vee hierdie klank uit?</item>
+        <item quantity="other">Vee hierdie klanke uit?</item>
+    </plurals>
+    <plurals name="delete_nfc_tags">
+        <item quantity="one">Vee hierdie merker uit?</item>
+        <item quantity="other">Vee hierdie merkers uit?</item>
+    </plurals>
+    <plurals name="delete_scripts">
+        <item quantity="one">Vee hierdie skrip uit?</item>
+        <item quantity="other">Vee hierdie skripte uit?</item>
+    </plurals>
+    <!-- Dialog Labels -->
+    <string formatted="false" name="project_name_label">Projeknaam</string>
+    <string formatted="false" name="scene_name_label">Toneelnaam</string>
+    <string formatted="false" name="sprite_name_label">Naam van karakter of voorwerp</string>
+    <string formatted="false" name="sprite_group_name_label">Groepnaam</string>
+    <string formatted="false" name="script_group_label">Naam van skripgroep</string>
+    <string formatted="false" name="look_name_label">Kostuumnaam</string>
+    <string formatted="false" name="sound_name_label">Klanknaam</string>
+    <string formatted="false" name="nfc_tag_name_label">Naam van NFC-merker</string>
+    <string formatted="false" name="string_label">Teks</string>
+    <string formatted="false" name="data_label">Naam</string>
+    <string formatted="false" name="keyword_label">Soek</string>
+    <string formatted="false" name="html_label">Voeg HTML-teks in</string>
+    <string formatted="false" name="Image_format_not_supported">Beeldformaat word nie ondersteun nie</string>
+    <string formatted="false" name="import_conflicting_variables">Die karakter of voorwerp kon nie bygevoeg word nie.</string>
+    <string formatted="false" name="import_conflicting_variables_reason">Die rede is dat die volgende veranderlike- of lysname bots, omdat hulle vir alle karakters en voorwerpe gebruik word en met dieselfde naam ook vir net een van die karakters of voorwerpe:</string>
+    <string formatted="false" name="import_conflicting_variables_try_again">Hernoem asseblief een van hierdie veranderlikes of lyste en probeer weer.</string>
+    <!-- Details -->
+    <string formatted="false" name="project_details">Laaste toegang: %s, grootte: %s</string>
+    <string formatted="false" name="last_access_today">vandag, %s</string>
+    <string formatted="false" name="scene_details">Karakters en voorwerpe: %d, kostuums: %d, klanke: %d</string>
+    <string formatted="false" name="sprite_details">Blokke: %d, kostuums: %d, klanke: %d</string>
+    <string formatted="false" name="look_details">Resolusie: %s, grootte: %s</string>
+    <string formatted="false" name="sound_duration">Duur: %s</string>
+    <string formatted="false" name="sound_details">Duur: %s, grootte: %s</string>
+    <!--  -->
+    <!-- Rename Dialog Titles -->
+    <string formatted="false" name="rename_project">Hernoem projek</string>
+    <string formatted="false" name="rename_scene_dialog">Hernoem toneel</string>
+    <string formatted="false" name="rename_sprite_dialog">Hernoem karakter of voorwerp</string>
+    <string formatted="false" name="rename_look_dialog">Hernoem kostuum</string>
+    <string formatted="false" name="rename_sound_dialog">Hernoem klank</string>
+    <string formatted="false" name="rename_nfctag_dialog">Hernoem NFC-merker</string>
+    <string formatted="false" name="rename_data_dialog">Hernoem</string>
+    <!-- New Script Group Dialog -->
+    <string formatted="false" name="new_group">Nuwe groep</string>
+    <string formatted="false" name="default_group_name">Groep</string>
+    <!-- New Scene Menu -->
+    <string formatted="false" name="new_scene">Nuwe toneel</string>
+    <!-- Action Toasts -->
+    <!-- Backpack -->
+    <string formatted="false" name="backpack_empty">Rugsak is leeg. Niks om uit te pak nie.</string>
+    <plurals name="packed_scenes">
+        <item quantity="one">%d toneel in die rugsak gepak.</item>
+        <item quantity="other">%d tonele in die rugsak gepak.</item>
+    </plurals>
+    <plurals name="packed_sprites">
+        <item quantity="one">%d karakter of voorwerp in die rugsak gepak.</item>
+        <item quantity="other">%d karakters of voorwerpe in die rugsak gepak.</item>
+    </plurals>
+    <plurals name="packed_looks">
+        <item quantity="one">%d kostuum in die rugsak gepak.</item>
+        <item quantity="other">%d kostuums in die rugsak gepak.</item>
+    </plurals>
+    <plurals name="packed_sounds">
+        <item quantity="one">%d klank in die rugsak gepak.</item>
+        <item quantity="other">%d klanke in die rugsak gepak.</item>
+    </plurals>
+    <string formatted="false" name="packed_script_group">Een skripgroep in die rugsak gepak.</string>
+    <!-- Unpack -->
+    <plurals name="unpacked_scenes">
+        <item quantity="one">%d toneel uitgepak.</item>
+        <item quantity="other">%d tonele uitgepak.</item>
+    </plurals>
+    <plurals name="unpacked_sprites">
+        <item quantity="one">%d karakter of voorwerp uitgepak.</item>
+        <item quantity="other">%d karakters of voorwerpe uitgepak.</item>
+    </plurals>
+    <plurals name="unpacked_looks">
+        <item quantity="one">%d kostuum uitgepak.</item>
+        <item quantity="other">%d kostuums uitgepak.</item>
+    </plurals>
+    <plurals name="unpacked_sounds">
+        <item quantity="one">%d klank uitgepak.</item>
+        <item quantity="other">%d klanke uitgepak.</item>
+    </plurals>
+    <plurals name="unpacked_scripts">
+        <item quantity="one">%d skrip uitgepak.</item>
+        <item quantity="other">%d skripte uitgepak.</item>
+    </plurals>
+    <!-- Copy -->
+    <plurals name="copied_scenes">
+        <item quantity="one">%d toneel gekopieer.</item>
+        <item quantity="other">%d tonele gekopieer.</item>
+    </plurals>
+    <plurals name="copied_sprites">
+        <item quantity="one">%d karakter of voorwerp gekopieer.</item>
+        <item quantity="other">%d karakters of voorwerpe gekopieer.</item>
+    </plurals>
+    <plurals name="copied_looks">
+        <item quantity="one">%d kostuum gekopieer.</item>
+        <item quantity="other">%d kostuums gekopieer.</item>
+    </plurals>
+    <plurals name="copied_sounds">
+        <item quantity="one">%d klank gekopieer.</item>
+        <item quantity="other">%d klanke gekopieer.</item>
+    </plurals>
+    <plurals name="copied_nfc_tags">
+        <item quantity="one">%d NFC-merker gekopieer.</item>
+        <item quantity="other">%d NFC-merkers gekopieer.</item>
+    </plurals>
+    <!-- Delete -->
+    <plurals name="deleted_projects">
+        <item quantity="one">%d projek uitgevee.</item>
+        <item quantity="other">%d projekte uitgevee.</item>
+    </plurals>
+    <plurals name="deleted_scenes">
+        <item quantity="one">%d toneel uitgevee.</item>
+        <item quantity="other">%d tonele uitgevee.</item>
+    </plurals>
+    <plurals name="deleted_sprites">
+        <item quantity="one">%d karakter of voorwerp uitgevee.</item>
+        <item quantity="other">%d karakters of voorwerpe uitgevee.</item>
+    </plurals>
+    <plurals name="deleted_looks">
+        <item quantity="one">%d kostuum uitgevee.</item>
+        <item quantity="other">%d kostuums uitgevee.</item>
+    </plurals>
+    <plurals name="deleted_sounds">
+        <item quantity="one">%d klank uitgevee.</item>
+        <item quantity="other">%d klanke uitgevee.</item>
+    </plurals>
+    <plurals name="deleted_nfc_tags">
+        <item quantity="one">%d NFC-merker uitgevee.</item>
+        <item quantity="other">%d NFC-merkers uitgevee.</item>
+    </plurals>
+    <plurals name="deleted_scripts">
+        <item quantity="one">%d skrip uitgevee.</item>
+        <item quantity="other">%d skripte uitgevee.</item>
+    </plurals>
+    <plurals name="deleted_Items">
+        <item quantity="one">%d item uitgevee.</item>
+        <item quantity="other">%d items uitgevee.</item>
+    </plurals>
+    <!-- Imported -->
+    <plurals name="imported_projects">
+        <item quantity="one">%d projek ingevoer.</item>
+        <item quantity="other">%d projekte ingevoer.</item>
+    </plurals>
+    <!-- Renamed -->
+    <string formatted="false" name="renamed_project">Projek hernoem</string>
+    <!--  -->
+    <!-- ProjectListActivity and ProjectListFragment -->
+    <string formatted="false" name="project_list_title">Projekte</string>
+    <string formatted="false" name="last_used">Laaste toegang:</string>
+    <string formatted="false" name="size">Grootte:</string>
+    <string formatted="false" name="description">Beskrywing:</string>
+    <string formatted="false" name="set_description">Stel beskrywing</string>
+    <string formatted="false" name="notes_and_credits_title">Notas en erkennings:</string>
+    <string formatted="false" name="set_notes_and_credits">Stel notas en erkennings</string>
+    <string formatted="false" name="details_date_today">Vandag</string>
+    <string formatted="false" name="import_project">Voer projek in</string>
+    <string formatted="false" name="export_project">Voer projek uit</string>
+    <string formatted="false" name="error_import_project">Iets het verkeerd geloop tydens die invoer van projekte.</string>
+    <string formatted="false" name="no_projects_selected">Geen projekte vir invoer gekies nie</string>
+    <string formatted="false" name="only_select_catrobat_files">Kies net projeklêers</string>
+    <string formatted="false" name="error_no_files_found">Geen projeklêers gevind nie.</string>
+    <string formatted="false" name="import_sprite_from_project_launcher">Voer voorwerp in uit plaaslike projek</string>
+    <!-- ProjectOptionsFragment -->
+    <string formatted="false" name="project_options_description">Beskrywing</string>
+    <string formatted="false" name="project_options_notes_and_credits">Notas en erkennings</string>
+    <string formatted="false" name="project_options_tags">Etikette</string>
+    <string formatted="false" name="project_options_aspect_ratio">Behou oorspronklike aspekverhouding</string>
+    <string formatted="false" name="project_options_more_details">Projekeienskappe</string>
+    <string formatted="false" name="project_options_delete_project">Vee projek uit</string>
+    <!-- ScriptListFragment -->
+    <string formatted="false" name="fragment_script_text_description">Tik \"+\" om skripte by te voeg</string>
+    <!--  -->
+    <!-- SpriteListFragment -->
+    <string formatted="false" name="fragment_sprite_text_description">Tik \"+\" om karakters of voorwerpe by te voeg</string>
+    <string formatted="false" name="default_sprite_name">My karakter of voorwerp</string>
+    <!--  -->
+    <!-- LookListFragment -->
+    <string formatted="false" name="fragment_look_text_description">Tik \"+\" om kostuums by te voeg</string>
+    <string formatted="false" name="select_look_from_gallery">Kies prent</string>
+    <string formatted="false" name="select_look_from_camera">Kies foto</string>
+    <!--  -->
+    <!-- SoundListFragment -->
+    <string formatted="false" name="fragment_sound_text_description">Tik \"+\" om klanke by te voeg</string>
+    <string formatted="false" name="sound_select_source">Kies ’n klank</string>
+    <!--  -->
+    <!-- NfcTagListFragment -->
+    <string formatted="false" name="fragment_nfctag_text_description">Skandeer NFC-merkers om hulle by te voeg</string>
+    <string formatted="false" name="ndef_record_label">as rekordtipe</string>
+    <string formatted="false" name="brick_set_nfc_tag">Wag vir volgende NFC-merker om te skryf</string>
+    <string formatted="false" name="brick_set_nfc_tag_default_value">www.catrobat.org</string>
+    <string formatted="false" name="default_tag_name">NFC-merker</string>
+    <string formatted="false" name="tnf_empty">Leeg</string>
+    <string formatted="false" name="tnf_external_type">Eksterne tipe</string>
+    <string formatted="false" name="tnf_mime_media">Teks</string>
+    <string formatted="false" name="tnf_well_known_http">HTTP</string>
+    <string formatted="false" name="tnf_well_known_https">HTTPS</string>
+    <string formatted="false" name="tnf_well_known_tel">Telefoonnommer</string>
+    <string formatted="false" name="tnf_well_known_sms">SMS</string>
+    <string formatted="false" name="tnf_well_known_mailto">E-pos</string>
+    <!--  -->
+    <!-- DataListFragment -->
+    <string formatted="false" name="multiplayer_vars_headline">Veranderlikes vir gekoppelde toestelle</string>
+    <string formatted="false" name="global_vars_headline">Veranderlikes vir alle karakters en voorwerpe</string>
+    <string formatted="false" name="local_vars_headline">Veranderlikes net vir hierdie karakter of voorwerp</string>
+    <string formatted="false" name="global_lists_headline">Lyste vir alle karakters en voorwerpe</string>
+    <string formatted="false" name="local_lists_headline">Lyste net vir hierdie karakter of voorwerp</string>
+    <string formatted="false" name="fragment_data_text_description">Tik \"+\" om\nveranderlikes of lyste by te voeg</string>
+    <plurals name="user_defined_brick_input_headline">
+        <item quantity="one">Invoer vir hierdie blok</item>
+        <item quantity="other">Invoere vir hierdie blok</item>
+    </plurals>
+    <!-- NewDataDialog -->
+    <string formatted="false" name="new_data_for_all_sprites">Vir alle karakters, voorwerpe en klone in alle tonele</string>
+    <string formatted="false" name="new_data_for_this_sprite_only">Net vir hierdie karakter, voorwerp of een van sy klone</string>
+    <string formatted="false" name="new_data_for_connected_devices">Vir alle karakters, voorwerpe en klone in alle tonele van projekte op gekoppelde meerspelertoestelle</string>
+    <!-- Backpack -->
+    <string formatted="false" name="backpack_title">Jou rugsak</string>
+    <string formatted="false" name="actor_object_title">Karakters en voorwerpe</string>
+    <string formatted="false" name="pack">Pak in</string>
+    <string formatted="false" name="unpack">Pak uit</string>
+    <!--  -->
+    <!-- NewProjectDialog -->
+    <string name="new_project_title">Skep projek</string>
+    <string formatted="false" name="new_project_dialog_example_project">Voorbeeldprojek</string>
+    <string name="new_project_dialog_portrait">Portret</string>
+    <string name="new_project_dialog_landscape">Landskap</string>
+    <string name="new_project_dialog_cast">Uitsaai</string>
+    <!--  -->
+    <!-- NewMergedProjectDialog -->
+    <string formatted="false" name="new_merge_project_dialog_title">Saamgevoegde projek</string>
+    <string formatted="false" name="merging_project_text">Hierdie twee projekte kan nog nie saamgevoeg word nie</string>
+    <!--  -->
+    <!-- NewSpriteDialog -->
+    <string formatted="false" name="new_sprite_dialog_title">Nuwe karakter of voorwerp</string>
+    <!--  -->
+    <!-- NewLookDialog -->
+    <string formatted="false" name="new_look_dialog_title">Voeg kostuum by</string>
+    <string formatted="false" name="add_look_from_camera">Kamera</string>
+    <string formatted="false" name="add_look_object_library">Biblioteek</string>
+    <string formatted="false" name="add_look_draw_new_image">Teken</string>
+    <string formatted="false" name="add_look_choose_image">Galery</string>
+    <string formatted="false" name="add_look_media_library">Kostuums</string>
+    <string formatted="false" name="add_look_from_local_project">Plaaslike projekte</string>
+    <string name="add_look_empty_object">Leë voorwerp</string>
+    <string name="add_look_actors_and_object">Plaaslike karakters en voorwerpe</string>
+    <!--  -->
+    <!-- NewSoundDialog -->
+    <string formatted="false" name="new_sound_dialog_title">Voeg klank by</string>
+    <string formatted="false" name="add_sound_from_recorder">Neem klank op</string>
+    <string formatted="false" name="add_sound_choose_file">Kies lêer</string>
+    <string formatted="false" name="add_sound_music">Musiekkomponis</string>
+    <string formatted="false" name="add_sound_choose_sound">Klanke</string>
+    <!-- NotePickerDialog -->
+    <string formatted="false" name="note_picker_title">Nootkieser</string>
+    <!--  -->
+    <!-- Rating Dialog -->
+    <string formatted="false" name="rating_dialog_title">Gradeer app</string>
+    <string formatted="false" name="rating_google_play_dialog_text">As jy van hierdie app hou, gradeer ons asseblief in die App-winkel.</string>
+    <string formatted="false" name="rating_dialog_rate_now">Nou</string>
+    <string formatted="false" name="rating_dialog_rate_later">Later</string>
+    <string formatted="false" name="rating_dialog_rate_never">Nooit</string>
+    <!--  -->
+    <!-- Terms of Use Dialog -->
+    <string formatted="false" name="dialog_terms_of_use_title">Gebruiksvoorwaardes</string>
+    <string formatted="false" name="dialog_terms_of_use_info">Om die apps en ander dienste van die Catrobat-projek te mag gebruik, moet jy instem tot ons gebruiksvoorwaardes. Jy moet hierdie voorwaardes streng nakom wanneer jy ons apps en ander dienste gebruik. Kyk asseblief by die skakel hieronder vir die presiese bewoording.\n</string>
+    <string formatted="false" name="dialog_terms_of_use_link_text">Gebruiksvoorwaardes</string>
+    <!--  -->
+    <!-- Privacy Policy -->
+    <string formatted="false" name="disclaimer_privacy_police_header_headline">Welkom!</string>
+    <string formatted="false" name="disclaimer_privacy_policy_header">Om hierdie app te gebruik, aanvaar asseblief ons</string>
+    <!-- -->
+    <!-- About Dialog -->
+    <string formatted="false" name="dialog_about_title">Oor hierdie app</string>
+    <string formatted="false" name="dialog_about_license_info">Hierdie app bied ’n programmeeromgewing en tolk vir die visuele programmeertaal Catrobat.\n Die bronkode van hierdie app is hoofsaaklik onder die GNU AGPL v3-lisensie gelisensieer. Kyk by die skakel hieronder vir meer besonderhede oor die lisensie.\n</string>
+    <string formatted="false" name="dialog_about_license_link_text">Bronkodelisensie</string>
+    <string formatted="false" name="dialog_about_catrobat_link_text">Oor Catrobat</string>
+    <string formatted="false" name="dialog_about_catrobat_language_version">Catrobat-taalweergawe</string>
+    <string formatted="false" name="dialog_about_version">weergawe:</string>
+    <!--  -->
+    <!-- NetworkAlertDialog -->
+    <string formatted="false" name="error_no_network_title">Geen netwerk nie</string>
+    <!-- UploadProjectDialog -->
+    <string formatted="false" name="upload_project_dialog_title">Laai projek op</string>
+    <string formatted="false" name="upload_description">Beskrywing:</string>
+    <string formatted="false" name="upload_notes_and_credits">Notas en erkennings:</string>
+    <string formatted="false" name="upload_notes_and_credits_explanation">Hoe het jy hierdie projek geskep? Het jy idees, skripte of kunswerk van ander mense gebruik? Bedank hulle hier.</string>
+    <string formatted="false" name="upload_tag_dialog_title">Kies asseblief tot drie kategorieë</string>
+    <string formatted="false" name="upload_tags_maximum_error">Jy kan nie meer as 3 etikette kies nie.</string>
+    <!-- Save Project to External Storage -->
+    <string formatted="false" name="save_to_external_storage_button">Voer projek uit</string>
+    <string formatted="false" name="notification_save_project_to_external_storage_title_pending">" "</string>
+    <string formatted="false" name="notification_save_project_to_external_storage_pending">Stoor tans projek in eksterne berging.</string>
+    <string formatted="false" name="notification_save_project_to_external_storage_title_open">" "</string>
+    <string formatted="false" name="notification_save_project_to_external_storage_open">"Projek gestoor in %1$s"</string>
+    <string formatted="false" name="save_project_to_external_storage_io_exception_message">Kon nie die projek stoor nie, daar is nie genoeg geheue beskikbaar nie!</string>
+    <!--  -->
+    <!-- SoundRecorderActivity -->
+    <string formatted="false" name="soundrecorder_name">Klankopnemer</string>
+    <string formatted="false" name="soundrecorder_error">Klankopname het misluk</string>
+    <string formatted="false" name="soundrecorder_recorded_filename">opname</string>
+    <string formatted="false" name="soundrecorder_text_view">Tik die ikoon hierbo om opname te begin en te stop.</string>
+    <!--  -->
+    <!-- Brick context dialog -->
+    <string formatted="false" name="brick_context_dialog_move_brick">Skuif blok</string>
+    <string formatted="false" name="brick_context_dialog_move_script">Skuif skrip</string>
+    <string formatted="false" name="brick_context_dialog_move_definition">Skuif hierdie definisie</string>
+    <string formatted="false" name="brick_context_dialog_delete_brick">Vee blok uit</string>
+    <string formatted="false" name="brick_context_dialog_copy_brick">Kopieer blok</string>
+    <string formatted="false" name="brick_context_dialog_copy_script">Kopieer skrip</string>
+    <string formatted="false" name="brick_context_dialog_formula_edit_brick">Wysig formule</string>
+    <string formatted="false" name="brick_context_dialog_delete_script">Vee skrip uit</string>
+    <string formatted="false" name="brick_context_dialog_delete_definition">Vee hierdie definisie uit</string>
+    <string formatted="false" name="brick_context_dialog_comment_in">Aktiveer blok</string>
+    <string formatted="false" name="brick_context_dialog_comment_out">Deaktiveer blok</string>
+    <string formatted="false" name="brick_context_dialog_highlight_brick_parts">Lig blokdele uit</string>
+    <string formatted="false" name="brick_context_dialog_comment_in_script">Aktiveer skrip</string>
+    <string formatted="false" name="brick_context_dialog_comment_out_script">Deaktiveer skrip</string>
+    <string formatted="false" name="brick_context_dialog_help">Hulp</string>
+    <string formatted="false" name="comment_in_out">Deaktiveer/aktiveer</string>
+    <!--  -->
+    <!-- Play scene dialog -->
+    <string formatted="false" name="play_scene_dialog_title">Speel toneel:</string>
+    <string formatted="false" name="play_scene_dialog_default">Eerste toneel (%1$s)</string>
+    <string formatted="false" name="play_scene_dialog_current">Huidige toneel (%1$s)</string>
+    <!--  -->
+    <!-- Sign In dialogs -->
+    <string formatted="false" name="sign_in_dialog_title">Meld aan</string>
+    <string formatted="false" name="username">Gebruikernaam</string>
+    <string formatted="false" name="password">Wagwoord</string>
+    <string formatted="false" name="reset_password">Stel wagwoord terug</string>
+    <string formatted="false" name="new_user_registered">Nuwe rekening geskep</string>
+    <string formatted="false" name="user_logged_in">Suksesvol aangemeld</string>
+    <string formatted="false" name="register_error">Ongeldige aanmelding</string>
+    <string formatted="false" name="register_terms">Deur te registreer, stem jy in tot ons</string>
+    <string formatted="false" name="register_code_terms_of_use_text">Gebruiksvoorwaardes</string>
+    <string formatted="false" name="login">Meld aan</string>
+    <string formatted="false" name="register">Registreer</string>
+    <string formatted="false" name="password_confirm">Bevestig wagwoord</string>
+    <string formatted="false" name="accountName">E-pos</string>
+    <string formatted="false" name="signin_thanks">Dankie dat jy aangesluit het!</string>
+    <string formatted="false" name="signin_choose_username">Kies asseblief jou gebruikernaam:</string>
+    <string formatted="false" name="signin_choose_username_empty">Voer asseblief ’n gebruikernaam in.</string>
+    <string formatted="false" name="signin_choose_username_hint">Die gebruikernaam moet nie jou regte naam of ’n e-posadres wees nie.</string>
+    <string formatted="false" name="oauth_username_taken">Iemand anders gebruik reeds hierdie naam. Kies asseblief ’n ander een!</string>
+    <string formatted="false" name="show_password">Wys wagwoord</string>
+    <string formatted="false" name="sign_in_error">Iets het verkeerd geloop tydens aanmelding.</string>
+    <string formatted="false" name="error_google_plus_sign_in">Google-aanmeldfout. Status: %s</string>
+    <string formatted="false" name="error_session_expired">Sessie het verval, meld asseblief aan.</string>
+    <string formatted="false" name="error_register_empty_username">Leë gebruikernaam</string>
+    <string formatted="false" name="error_register_username_as_email">’n E-posadres kan nie as gebruikernaam gebruik word nie</string>
+    <string formatted="false" name="error_register_invalid_username">Die gebruikernaam mag net letters (a–z), syfers (0–9), koppeltekens (-), onderstrepe (_) en punte (.) bevat.</string>
+    <string formatted="false" name="error_register_username_start_with">Die gebruikernaam mag nie met koppeltekens (-), onderstrepe (_) of punte (.) begin nie.</string>
+    <string formatted="false" name="error_register_invalid_email_format">Ongeldige e-posformaat</string>
+    <string formatted="false" name="error_register_empty_password">Wagwoordveld is leeg</string>
+    <string formatted="false" name="error_register_password_at_least_6_characters">Die wagwoord moet minstens 6 karakters lank wees</string>
+    <string formatted="false" name="error_register_passwords_mismatch">Wagwoorde stem nie ooreen nie</string>
+    <string formatted="false" name="error_register_empty_confirm_password">Veld vir wagwoordbevestiging is leeg</string>
+    <string formatted="false" name="error_register_username_already_exists">Gebruikernaam bestaan reeds</string>
+    <string formatted="false" name="error_register_email_exists">E-posadres bestaan reeds</string>
+    <!--  -->
+    <!-- OverwriteRenameDialog Strings -->
+    <string formatted="false" name="overwrite_title">Projek bestaan.</string>
+    <string formatted="false" name="overwrite_text">’n Projek met hierdie naam bestaan reeds.</string>
+    <string formatted="false" name="overwrite_replace">Oorskryf projek</string>
+    <string formatted="false" name="overwrite_rename">Kies ’n nuwe naam</string>
+    <!--  -->
+    <!-- Music activity -->
+    <string formatted="false" name="pocket_music_default_project_name">Liedjie sonder titel</string>
+    <string formatted="false" name="pocket_music_default_track_name">Snit 1</string>
+    <!--  -->
+    <!-- Resource initialization fka PrestageActivity -->
+    <string formatted="false" name="prestage_text_to_speech_engine_not_installed">Teks-na-spraak-enjin is nie geïnstalleer nie!\nWil jy dit installeer?</string>
+    <string formatted="false" name="prestage_resource_not_available_title">Komponent nie beskikbaar nie</string>
+    <string formatted="false" name="prestage_resource_not_available_text">Ongelukkig werk hierdie projek nie op jou toestel nie. Die volgende komponente is nie beskikbaar nie:\n\n</string>
+    <string formatted="false" name="prestage_no_vibration_available">\u2022 Vibrasie\n</string>
+    <string formatted="false" name="prestage_no_acceleration_sensor_available">\u2022 Versnellingsensor\n</string>
+    <string formatted="false" name="prestage_no_inclination_sensor_available">\u2022 Hellingsensor\n</string>
+    <string formatted="false" name="prestage_no_compass_sensor_available">\u2022 Kompas\n</string>
+    <string formatted="false" name="prestage_no_gps_sensor_available">\u2022 Geoligging\n</string>
+    <string formatted="false" name="prestage_text_to_speech_error">\u2022 Teks-na-spraak-enjin\n</string>
+    <string formatted="false" name="prestage_no_back_camera_available">\u2022 Agterkamera\n</string>
+    <string formatted="false" name="prestage_no_face_detection_available">\u2022 Gesigsbespeuring\n</string>
+    <string formatted="false" name="prestage_no_object_detection_available">\u2022 Voorwerpherkenning\n</string>
+    <string formatted="false" name="prestage_no_pose_detection_available">\u2022 Houdingbespeuring\n</string>
+    <string formatted="false" name="prestage_no_text_detection_available">\u2022 Teksbespeuring\n</string>
+    <string formatted="false" name="prestage_no_front_camera_available">\u2022 Voorkamera\n</string>
+    <string formatted="false" name="prestage_no_camera_available">\u2022 Kamera\n</string>
+    <string formatted="false" name="prestage_no_flash_available">\u2022 Flitslig\n</string>
+    <string formatted="false" name="prestage_default_resource_not_available">\u2022 Onbekende komponent\n</string>
+    <string formatted="false" name="no_nfc_available">NFC nie beskikbaar nie</string>
+    <string formatted="false" name="nfc_not_activated">Aktiveer asseblief NFC en druk Terug om na die app terug te keer.</string>
+    <string formatted="false" name="nfc_facedetection_support">As jy NFC en gesigsbespeuring gelyktydig gebruik, kan dit die werkverrigting benadeel.</string>
+    <!--  -->
+    <!-- Stage menu dialog -->
+    <string formatted="false" name="stage_dialog_back">Terug</string>
+    <string formatted="false" name="stage_dialog_resume">Hervat</string>
+    <string formatted="false" name="stage_dialog_restart">Herbegin</string>
+    <string formatted="false" name="stage_dialog_axes_on">Asse aan</string>
+    <string formatted="false" name="stage_dialog_axes_off">Asse af</string>
+    <string formatted="false" name="stage_dialog_maximize">Maksimeer/\nrek</string>
+    <string formatted="false" name="stage_dialog_screenshot">Voorskou</string>
+    <string formatted="false" name="stage_dialog_embroidery">Borduurwerk</string>
+    <!--  -->
+    <!-- Broadcast spinner -->
+    <string formatted="false" name="dialog_new_broadcast_message_title">Nuwe boodskap</string>
+    <string formatted="false" name="dialog_broadcast_message_name">boodskap:</string>
+    <string formatted="false" name="dialog_edit_broadcast_message_title">Wysig boodskap</string>
+    <!--  -->
+    <!-- NFC spinner -->
+    <string formatted="false" name="brick_when_nfc_edit_list_of_nfc_tags">Wysig lys van NFC-merkers</string>
+    <string formatted="false" name="brick_when_nfc_default_all">alle</string>
+    <!-- -->
+    <!-- Brick categories -->
+    <string formatted="false" name="categories">Kategorieë</string>
+    <string formatted="false" name="category_embroidery">Borduurwerk</string>
+    <string formatted="false" name="category_motion">Beweging</string>
+    <string formatted="false" name="category_looks">Voorkoms</string>
+    <string formatted="false" name="category_pen">Pen</string>
+    <string formatted="false" name="category_plot">Plotter</string>
+    <string formatted="false" name="category_laser">Lasersnyer</string>
+    <string formatted="false" name="category_sound">Klank</string>
+    <string formatted="false" name="category_control">Beheer</string>
+    <string formatted="false" name="category_event">Gebeurtenis</string>
+    <string formatted="false" name="category_user_bricks">Jou blokke</string>
+    <string formatted="false" name="category_data">Data</string>
+    <string formatted="false" name="category_device">Toestel</string>
+    <string formatted="false" name="category_lego_nxt">Lego NXT</string>
+    <string formatted="false" name="category_lego_ev3">Lego EV3</string>
+    <string formatted="false" name="category_drone">AR.Drone 2.0</string>
+    <string formatted="false" name="category_jumping_sumo">Jumping Sumo</string>
+    <string formatted="false" name="category_phiro">Phiro</string>
+    <string formatted="false" name="category_arduino">Arduino</string>
+    <string formatted="false" name="category_cast">Chromecast</string>
+    <string formatted="false" name="category_raspi">Raspberry Pi</string>
+    <string formatted="false" name="category_assertions">Toetse</string>
+    <string formatted="false" name="category_search_bricks">Soek blokke</string>
+    <!--  -->
+    <!-- User Defined Bricks -->
+    <string formatted="false" name="brick_user_defined_add_label">Voeg etiket by</string>
+    <string formatted="false" name="brick_user_defined_add_input">Voeg invoer by</string>
+    <string formatted="false" name="brick_user_defined_add_input_description">Voeg invoer vir hierdie blok by:</string>
+    <string formatted="false" name="brick_user_defined_add_label_description">Voeg etiket vir hierdie blok by:</string>
+    <string formatted="false" name="brick_user_defined_default_input_name">Naam van invoer</string>
+    <string formatted="false" name="brick_user_defined_default_label">Etiketteks</string>
+    <string formatted="false" name="brick_user_defined_already_exists">’n Blok met hierdie etikette bestaan reeds. Voeg asseblief meer etikette of invoere by.</string>
+    <string formatted="false" name="brick_user_defined_script_define">Definieer</string>
+    <string formatted="false" name="brick_user_defined_script_screen_refresh_as">skermverversing as</string>
+    <string formatted="false" name="brick_user_defined_with_screen_refreshing">met</string>
+    <string formatted="false" name="brick_user_defined_without_screen_refreshing">sonder</string>
+    <string formatted="false" name="brick_user_defined_list_empty">Tik \"+\" om jou eie nuwe blokke by te voeg.</string>
+    <string formatted="false" name="brick_report">Gee terug</string>
+    <!--  -->
+    <!-- Motion bricks -->
+    <string formatted="false" name="brick_place_at">"Plaas by"</string>
+    <string formatted="false" name="brick_option_place_visually">Plaas visueel</string>
+    <string formatted="false" name="x_label">"x:"</string>
+    <string formatted="false" name="y_label">"y:"</string>
+    <string formatted="false" name="brick_set_x">"Stel x op"</string>
+    <string formatted="false" name="brick_set_y">"Stel y op"</string>
+    <string formatted="false" name="brick_change_x_by">"Verander x met"</string>
+    <string formatted="false" name="brick_change_y_by">"Verander y met"</string>
+    <string formatted="false" name="brick_go_back">Gaan</string>
+    <string formatted="false" name="brick_set_rotation_style">"Stel rotasiestyl"</string>
+    <string formatted="false" name="brick_set_rotation_style_lr">net links-regs</string>
+    <string formatted="false" name="brick_set_rotation_style_normal">heeltemal rond</string>
+    <string formatted="false" name="brick_set_rotation_style_no">moenie draai nie</string>
+    <plurals name="brick_go_back_layer_plural">
+        <item quantity="one">laag terug</item>
+        <item quantity="other">lae terug</item>
+    </plurals>
+    <string formatted="false" name="brick_come_to_front">Gaan na voor</string>
+    <string formatted="false" name="brick_if_on_edge_bounce">As op rand, bons</string>
+    <string formatted="false" name="brick_move">Beweeg</string>
+    <plurals name="brick_move_n_step_plural">
+        <item quantity="one">tree</item>
+        <item quantity="other">treë</item>
+    </plurals>
+    <string formatted="false" name="brick_turn_left">Draai links</string>
+    <string formatted="false" name="brick_turn_right">Draai regs</string>
+    <string formatted="false" name="brick_point_in_direction">Wys in rigting</string>
+    <string formatted="false" name="brick_point_to">Wys na</string>
+    <string formatted="false" name="brick_glide">Gly</string>
+    <string formatted="false" name="brick_glide_to_x">na x:</string>
+    <string formatted="false" name="brick_go_to">Gaan na</string>
+    <string formatted="false" name="brick_go_to_touch_position">aanraakposisie</string>
+    <string formatted="false" name="brick_go_to_random_position">ewekansige posisie</string>
+    <!--  -->
+    <!-- Physics -->
+    <string formatted="false" name="brick_set_physics_object_type">Stel jou bewegingstipe op</string>
+    <string formatted="false" name="brick_set_physics_object_type_dynamic">beweeg en bons onder swaartekrag</string>
+    <string formatted="false" name="brick_set_physics_object_type_fixed">beweeg nie onder swaartekrag nie, maar ander bons van jou af onder swaartekrag</string>
+    <string formatted="false" name="brick_set_physics_object_type_no">beweeg of bons nie onder swaartekrag nie (verstek)</string>
+    <string formatted="false" name="brick_set_mass">"Stel massa op"</string>
+    <string formatted="false" name="brick_set_mass_unit">kilogram</string>
+    <string formatted="false" name="brick_set_gravity_to">"Stel swaartekrag vir alle karakters en voorwerpe op"</string>
+    <string formatted="false" name="brick_set_gravity_unit">treë/sekonde²</string>
+    <string formatted="false" name="brick_set_velocity_to">"Stel snelheid op"</string>
+    <string formatted="false" name="brick_set_velocity_unit">treë/sekonde</string>
+    <string formatted="false" name="brick_turn_speed_unit">grade/sekonde</string>
+    <string formatted="false" name="brick_set_friction">"Stel wrywing op"</string>
+    <string formatted="false" name="brick_set_bounce_factor">"Stel bonsfaktor op"</string>
+    <string formatted="false" name="brick_rotate_left">"Tol links"</string>
+    <string formatted="false" name="brick_rotate_right">"Tol regs"</string>
+    <!-- Look bricks -->
+    <string formatted="false" name="brick_set_look">Wissel na kostuum</string>
+    <string formatted="false" name="brick_set_look_by_index">Wissel na kostuum met nommer</string>
+    <string formatted="false" name="brick_and_wait">en wag</string>
+    <string formatted="false" name="brick_set_background">Stel agtergrond</string>
+    <string formatted="false" name="brick_set_background_and_wait">Stel agtergrond en wag</string>
+    <string formatted="false" name="brick_set_background_by_index">Stel agtergrond op nommer</string>
+    <string formatted="false" name="brick_when_background">Wanneer agtergrond verander na</string>
+    <string formatted="false" name="brick_set_size_to">Stel grootte op</string>
+    <string formatted="false" name="brick_change_size_by">Verander grootte met</string>
+    <string formatted="false" name="brick_hide">Versteek</string>
+    <string formatted="false" name="brick_show">Wys</string>
+    <string formatted="false" name="brick_set_transparency">"Stel deursigtigheid"</string>
+    <string formatted="false" name="brick_change_ghost_effect">"Verander deursigtigheid"</string>
+    <string formatted="false" name="brick_set_brightness">"Stel helderheid"</string>
+    <string formatted="false" name="brick_change_brightness">"Verander helderheid"</string>
+    <string formatted="false" name="brick_set_color">"Stel kleur"</string>
+    <string formatted="false" name="brick_change_color">"Verander kleur"</string>
+    <string formatted="false" name="by_label">met</string>
+    <string formatted="false" name="to_label">op</string>
+    <string formatted="false" name="brick_clear_graphic_effect">Verwyder grafiese effekte</string>
+    <string formatted="false" name="brick_next_look">Volgende kostuum</string>
+    <string formatted="false" name="brick_next_background">Volgende agtergrond</string>
+    <string formatted="false" name="brick_previous_look">Vorige kostuum</string>
+    <string formatted="false" name="brick_previous_background">Vorige agtergrond</string>
+    <string formatted="false" name="brick_edit_look">Wysig kostuum</string>
+    <string formatted="false" name="brick_edit_background">Wysig agtergrond</string>
+    <string formatted="false" name="brick_delete_look">Vee kostuum uit</string>
+    <string formatted="false" name="brick_delete_background">Vee agtergrond uit</string>
+    <string formatted="false" name="brick_flash">Skakel flitslig</string>
+    <string formatted="false" name="brick_flash_on">aan</string>
+    <string formatted="false" name="brick_flash_off">af</string>
+    <string formatted="false" name="brick_vibration">Vibreer vir</string>
+    <string formatted="false" name="brick_ask_label">Vra</string>
+    <string formatted="false" name="brick_ask_store">en stoor geskrewe antwoord in</string>
+    <string formatted="false" name="brick_ask_default_question">Wat is jou naam?</string>
+    <string formatted="false" name="brick_ask_dialog_hint">"Tik jou antwoord in:"</string>
+    <string formatted="false" name="brick_ask_dialog_submit">Stuur antwoord</string>
+    <string formatted="false" name="brick_ask_speech_label">Vra</string>
+    <string formatted="false" name="brick_ask_speech_store">en stoor gesproke antwoord in</string>
+    <string formatted="false" name="brick_ask_speech_default_question">Wat is jou naam?</string>
+    <string formatted="false" name="brick_paint_new_look">Verf nuwe kostuum</string>
+    <string formatted="false" name="brick_paint_new_background">Verf nuwe agtergrond</string>
+    <string formatted="false" name="brick_paint_new_look_name">"naam van nuwe kostuum"</string>
+    <string formatted="false" name="brick_copy_look">Kopieer kostuum en noem dit</string>
+    <string formatted="false" name="brick_copy_look_name">naam van gekopieerde kostuum</string>
+    <string formatted="false" name="brick_copy_background">Kopieer agtergrond en noem dit</string>
+    <string formatted="false" name="brick_focus_point">Word fokuspunt met</string>
+    <string formatted="false" name="brick_horizontal_and">horisontale en</string>
+    <string formatted="false" name="brick_vertical_flex">vertikale buigsaamheid</string>
+    <!--  -->
+    <!-- Pen bricks -->
+    <string formatted="false" name="brick_pen_down">Pen neer</string>
+    <string formatted="false" name="brick_pen_up">Pen op</string>
+    <string formatted="false" name="brick_pen_size">Stel pengrootte op</string>
+    <string formatted="false" name="brick_pen_color">Stel penkleur op</string>
+    <string formatted="false" name="brick_clear_background">Maak skoon</string>
+    <string formatted="false" name="brick_stamp">Stempel</string>
+    <!--  -->
+    <!-- Sound bricks -->
+    <string formatted="false" name="brick_play_sound">Begin klank</string>
+    <string formatted="false" name="brick_play_sound_and_wait">Begin klank en wag</string>
+    <string formatted="false" name="brick_stop_sound">Stop klank</string>
+    <string formatted="false" name="brick_stop_all_sounds">Stop alle klanke</string>
+    <string formatted="false" name="brick_set_volume_to">Stel volume op</string>
+    <string formatted="false" name="brick_change_volume_by">Verander volume met</string>
+    <string formatted="false" name="brick_speak">Praat</string>
+    <string formatted="false" name="brick_speak_default_value">Hallo!</string>
+    <string formatted="false" name="brick_speak_and_wait">en wag</string>
+    <string formatted="false" name="brick_start_listening_to_voice">Begin na stem luister en stoor gesproke woorde in</string>
+    <string formatted="false" name="speech_recognition_not_available">Spraakherkenning is nie beskikbaar nie.</string>
+    <string formatted="false" name="speech_recognition_offline_mode_error_dialog_title">Vanlyn-data ontbreek</string>
+    <string formatted="false" name="speech_recognition_offline_mode_missing_data_error_dialog_msg">Vanlyn-spraakherkenning vir %s ontbreek of moet opgedateer word. Wil jy dit nou aflaai of opdateer?</string>
+    <string formatted="false" name="brick_set_listening_language">Stel luistertaal op</string>
+    <string formatted="false" name="set_instrument_to">Stel instrument op</string>
+    <string formatted="false" name="set_tempo_to">Stel tempo op</string>
+    <string formatted="false" name="change_tempo_by">Verander tempo met</string>
+    <string formatted="false" name="pause_for">Rus vir</string>
+    <string formatted="false" name="play_drum">Speel drom</string>
+    <string formatted="false" name="beats">slae</string>
+    <string formatted="false" name="play_note">Speel noot</string>
+    <string formatted="false" name="for_string">vir</string>
+    <string formatted="false" name="at_string">by</string>
+    <string formatted="false" name="seconds_string">sekondes</string>
+    <!--  -->
+    <!-- Plot bricks -->
+    <string formatted="false" name="brick_save_plot">Stoor plot as SVG</string>
+    <string formatted="false" name="brick_share_plot">Deel plot as SVG</string>
+    <string formatted="false" name="brick_stop_plot">Stop plot</string>
+    <string formatted="false" name="brick_start_plot">Begin plot</string>
+    <string formatted="false" name="brick_stop_cut">Stop sny</string>
+    <string formatted="false" name="brick_start_cut">Begin sny</string>
+    <string formatted="false" name="brick_save_laser">Stoor lasersnyerdata as SVG</string>
+    <string formatted="false" name="brick_stop_engrave">Stop graveer</string>
+    <string formatted="false" name="brick_start_engrave">Begin graveer</string>
+    <string formatted="false" name="brick_default_plot_file">plot.svg</string>
+    <string formatted="false" name="brick_share">Deel</string>
+    <string formatted="false" name="brick_share_laser">Deel lasersnyerdata as SVG</string>
+    <string formatted="false" name="brick_default_laser_file">laser.svg</string>
+    <!-- Embroidery bricks -->
+    <string formatted="false" name="brick_stitch">Steek</string>
+    <string formatted="false" name="brick_running_stitch">Begin rygsteek met lengte</string>
+    <string formatted="false" name="brick_zigzag_stitch">Begin sigsagsteek met lengte</string>
+    <string formatted="false" name="brick_zigzag_stitch_width">en breedte</string>
+    <string formatted="false" name="brick_triple_stitch">Begin drievoudige steek met lengte</string>
+    <string formatted="false" name="brick_stop_stitch">Stop huidige steek</string>
+    <string formatted="false" name="brick_write_embroidery">Skryf borduurdata na lêer</string>
+    <string formatted="false" name="brick_default_embroidery_file">embroidery.dst</string>
+    <string formatted="false" name="brick_sew_up">Werk af</string>
+    <string formatted="false" name="brick_thread_color">Stel garekleur op</string>
+    <string formatted="false" name="embroider_arc_direction">Steek boog in rigting</string>
+    <string formatted="false" name="embroidery_through">Skep boog deur</string>
+    <!--  -->
+    <!-- Device bricks -->
+    <string formatted="false" name="brick_reset_timer">Stel tydhouer terug</string>
+    <string formatted="false" name="brick_open">Maak</string>
+    <string formatted="false" name="brick_in_browser">in blaaier oop</string>
+    <!-- Control bricks -->
+    <string formatted="false" name="brick_when_started">Wanneer toneel begin</string>
+    <string formatted="false" name="brick_when">Wanneer getik</string>
+    <string formatted="false" name="brick_when_condition_when">Wanneer</string>
+    <string formatted="false" name="brick_when_becomes_true">waar word</string>
+    <string formatted="false" name="brick_wait">Wag</string>
+    <string formatted="false" name="brick_wait_until">Wag totdat</string>
+    <string formatted="false" name="brick_wait_until_second_part">waar is</string>
+    <string formatted="false" name="brick_when_gamepad_button">Wanneer spelbeheerderknoppie</string>
+    <string formatted="false" name="brick_when_gamepad_button_tapped">getik word</string>
+    <string formatted="false" name="brick_when_nfc">Wanneer NFC</string>
+    <string formatted="false" name="brick_stop_script">Stop</string>
+    <string formatted="false" name="brick_stop_this_script">hierdie skrip</string>
+    <string formatted="false" name="brick_stop_all_scripts">alle skripte</string>
+    <string formatted="false" name="brick_stop_other_scripts">ander skripte van hierdie karakter of voorwerp</string>
+    <plurals name="second_plural">
+        <item quantity="one">"sekonde"</item>
+        <item quantity="other">"sekondes"</item>
+    </plurals>
+    <string formatted="false" name="brick_collision_receive">Wanneer jy bons teen</string>
+    <string formatted="false" name="collision_with_anything">enige rand, karakter of voorwerp</string>
+    <string formatted="false" name="brick_broadcast_receive">Wanneer jy ontvang</string>
+    <string formatted="false" name="brick_broadcast">Saai uit</string>
+    <string formatted="false" name="brick_broadcast_wait">Saai uit en wag</string>
+    <string formatted="false" name="brick_scene_transition">Gaan voort met toneel</string>
+    <string formatted="false" name="brick_scene_start">Begin toneel</string>
+    <string formatted="false" name="brick_note">Nota</string>
+    <string formatted="false" name="brick_think_bubble">Dink</string>
+    <string formatted="false" name="brick_say_bubble">Sê</string>
+    <string formatted="false" name="brick_think_say_for_text">vir</string>
+    <string formatted="false" name="brick_forever">Vir altyd</string>
+    <string formatted="false" name="brick_loop_for_values_from">Vir waardes van</string>
+    <string formatted="false" name="brick_loop_for_each_value_from">Vir elke waarde uit</string>
+    <string formatted="false" name="brick_loop_in">in</string>
+    <string formatted="false" name="brick_loop_to">tot</string>
+    <string formatted="false" name="brick_repeat">Herhaal</string>
+    <string formatted="false" name="brick_repeat_until">Herhaal totdat</string>
+    <string formatted="false" name="brick_when_touched">Wanneer verhoog getik word</string>
+    <string formatted="false" name="brick_clone">Skep kloon van</string>
+    <string formatted="false" name="brick_clone_this">jouself</string>
+    <string formatted="false" name="brick_when_cloned">Wanneer jy as kloon begin</string>
+    <string formatted="false" name="brick_delete_this_clone">Vee hierdie kloon uit</string>
+    <string formatted="false" name="brick_assert_that">Verseker</string>
+    <string formatted="false" name="brick_is_equal_to">is gelyk aan verwagte</string>
+    <string formatted="false" name="brick_wait_till_idle">Wag totdat alle ander skripte gestop het</string>
+    <string formatted="false" name="brick_tap_at">"Tik een keer by"</string>
+    <string formatted="false" name="brick_touch_at">"Raak aan by"</string>
+    <string formatted="false" name="brick_tap_for">"vir"</string>
+    <string formatted="false" name="brick_touch_slide">"Raak aan en skuif"</string>
+    <string formatted="false" name="brick_touch_from_x">"van x:"</string>
+    <string formatted="false" name="brick_finish_stage">Beëindig verhoog</string>
+    <string formatted="false" name="brick_finish_tests">Beëindig toetse</string>
+    <string formatted="false" name="brick_assert_lists">Verseker lyste</string>
+    <string formatted="false" name="brick_assert_actual">Werklik:</string>
+    <string formatted="false" name="brick_assert_expected">Verwag:</string>
+    <string formatted="false" name="brick_parameterized_assert">verseker</string>
+    <string formatted="false" name="brick_parameterized_equals">is gelyk aan verwagte item van</string>
+    <plurals name="brick_parameterized_foreach_plural">
+        <item quantity="one">Vir elke item van</item>
+        <item quantity="other">Vir elke tupel van items van</item>
+    </plurals>
+    <plurals name="brick_parameterized_stored_plural">
+        <item quantity="one">gestoor in veranderlike met dieselfde naam</item>
+        <item quantity="other">gestoor in veranderlikes met dieselfde name</item>
+    </plurals>
+    <plurals name="list_selection_plural">
+        <item quantity="one">%d lys gekies</item>
+        <item quantity="other">%d lyste gekies</item>
+    </plurals>
+    <plurals name="time_plural">
+        <item quantity="one">keer</item>
+        <item quantity="other">keer</item>
+    </plurals>
+    <string formatted="false" name="brick_loop_end">Einde van lus</string>
+    <string formatted="false" name="brick_if_begin">As</string>
+    <string formatted="false" name="brick_if_begin_second_part">waar is, dan</string>
+    <string formatted="false" name="brick_if_else">Anders</string>
+    <string formatted="false" name="brick_if_end">Einde van as</string>
+    <string formatted="false" name="brick_set_variable">Stel veranderlike</string>
+    <string formatted="false" name="brick_change_variable">Verander veranderlike</string>
+    <string formatted="false" name="brick_write_variable_on_device">Skryf veranderlike op toestel</string>
+    <string formatted="false" name="brick_read_variable_from_device">Lees veranderlike van toestel</string>
+    <string formatted="false" name="brick_write_variable_to_file_top">Skryf veranderlike</string>
+    <string formatted="false" name="brick_write_variable_to_file_bottom">na lêer</string>
+    <string formatted="false" name="brick_write_variable_to_file_default_value">variable.txt</string>
+    <string formatted="false" name="brick_write_variable_to_file_success">"Data suksesvol na %1$s geskryf"</string>
+    <string formatted="false" name="brick_read_variable_from_file_top">Lees veranderlike</string>
+    <string formatted="false" name="brick_read_variable_from_file_center">uit lêer</string>
+    <string formatted="false" name="brick_read_variable_from_file_bottom">en</string>
+    <string formatted="false" name="brick_read_variable_from_file_keep">behou die lêer</string>
+    <string formatted="false" name="brick_read_variable_from_file_delete">vee die lêer uit</string>
+    <string formatted="false" name="brick_write_list_on_device">Skryf lys op toestel</string>
+    <string formatted="false" name="brick_read_list_from_device">Lees lys van toestel</string>
+    <string formatted="false" name="brick_note_default_value">voeg kommentaar hier by…</string>
+    <string formatted="false" name="brick_think_bubble_default_value">Hmmmm!</string>
+    <string formatted="false" name="brick_say_bubble_default_value">Hallo!</string>
+    <string formatted="false" name="brick_broadcast_default_value">"nuwe boodskap"</string>
+    <string formatted="false" name="brick_add_item_to_userlist_add">Voeg</string>
+    <string formatted="false" name="brick_add_item_to_userlist">by lys</string>
+    <string formatted="false" name="brick_clear_userlist">Verwyder alle items uit lys</string>
+    <string formatted="false" name="brick_delete_item_from_userlist_delete">Verwyder item uit lys</string>
+    <string formatted="false" name="brick_delete_item_from_userlist">op posisie</string>
+    <string formatted="false" name="brick_insert_item_into_userlist_insert_into">Plaas</string>
+    <string formatted="false" name="brick_insert_item_into_userlist_into_list">in lys</string>
+    <string formatted="false" name="brick_insert_item_into_userlist_at_position">op posisie</string>
+    <string formatted="false" name="brick_replace_item_in_userlist_replace_in_list">Vervang item in lys</string>
+    <string formatted="false" name="brick_replace_item_in_userlist_item_at_index">op posisie</string>
+    <string formatted="false" name="brick_replace_item_in_userlist_with_value">met</string>
+    <string formatted="false" name="brick_web_request">Stuur webversoek na</string>
+    <string formatted="false" name="brick_web_request_default_value">https://catrob.at/joke</string>
+    <string formatted="false" name="brick_web_request_result">en stoor antwoord in</string>
+    <string formatted="false" name="web_request_warning_title">Laat webtoegang toe?</string>
+    <string formatted="false" name="web_request_warning_message">Wees baie versigtig voordat jy toegang toelaat, want die skakel kan jou persoonlike inligting, soos jou presiese geografiese ligging of enige teks wat jy ingetik het, aan kwaadwillige mense of aan die publiek blootstel. Kyk na ons &lt;a href=%1s&gt;wiki&lt;/a&gt; vir meer inligting oor waarom dit uiters gevaarlik kan wees.</string>
+    <string formatted="false" name="web_request_trust_domain_warning_title">Laat webtoegang altyd toe?</string>
+    <string formatted="false" name="web_request_trust_domain_warning_message">As jy toegang altyd toelaat, sal jy nie weer gevra word om webadresse van hierdie domein te bevestig nie.</string>
+    <string formatted="false" name="trusted_domains_edit_hint">As jy hierdie toestemming later wil terugtrek, kan jy die inskrywing uit die lys van vertroude domeine in die instellings van hierdie app verwyder.</string>
+    <string formatted="false" name="brick_look_request">Kry prent van</string>
+    <string formatted="false" name="brick_look_request_result">en gebruik as huidige kostuum</string>
+    <string formatted="false" name="brick_background_request_result">en gebruik as huidige agtergrond</string>
+    <string formatted="false" name="look_request_http_error_message">"Kry prent van %1$s het HTTP-fout %2$s teruggegee"</string>
+    <string formatted="false" name="look_request_type_error_message">"Kry prent van %1$s kon nie ’n herkende beeldformaat kry nie"</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_store">Stoor kolom</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_of">van die</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_csv">kommageskeide waardes</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_into">in lys</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_data">katjie,oulik\nhondjie,stout\nseekat,intelligent</string>
+    <!--  -->
+    <!--Instruments-->
+    <string formatted="false" name="piano">klavier</string>
+    <string formatted="false" name="electric_piano">elektriese klavier</string>
+    <string formatted="false" name="cello">tjello</string>
+    <string formatted="false" name="flute">fluit</string>
+    <string formatted="false" name="vibraphone">vibrafoon</string>
+    <string formatted="false" name="organ">orrel</string>
+    <string formatted="false" name="guitar">kitaar</string>
+    <string formatted="false" name="electric_guitar">elektriese kitaar</string>
+    <string formatted="false" name="bass">bas</string>
+    <string formatted="false" name="pizzicato">pizzicato</string>
+    <string formatted="false" name="synth_pad">sintetiseerder-pad</string>
+    <string formatted="false" name="choir">koor</string>
+    <string formatted="false" name="synth_lead">sintetiseerder-lead</string>
+    <string formatted="false" name="wooden_flute">houtfluit</string>
+    <string formatted="false" name="trombone">tromboon</string>
+    <string formatted="false" name="saxophone">saksofoon</string>
+    <string formatted="false" name="bassoon">fagot</string>
+    <string formatted="false" name="clarinet">klarinet</string>
+    <string formatted="false" name="music_box">musiekdoos</string>
+    <string formatted="false" name="steel_drum">staaldrom</string>
+    <string formatted="false" name="marimba">marimba</string>
+    <!--  -->
+    <!--Drums-->
+    <string formatted="false" name="snare_drum">strikdrom</string>
+    <string formatted="false" name="bass_drum">basdrom</string>
+    <string formatted="false" name="side_stick">randslag</string>
+    <string formatted="false" name="crash_cymbal">crash-simbaal</string>
+    <string formatted="false" name="open_hi_hat">oop hi-hat</string>
+    <string formatted="false" name="closed_hi_hat">toe hi-hat</string>
+    <string formatted="false" name="tambourine">tamboeryn</string>
+    <string formatted="false" name="hand_clap">handeklap</string>
+    <string formatted="false" name="claves">claves</string>
+    <string formatted="false" name="wood_block">houtblok</string>
+    <string formatted="false" name="cowbell">koeiklok</string>
+    <string formatted="false" name="triangle">driehoek</string>
+    <string formatted="false" name="bongo">bongo</string>
+    <string formatted="false" name="conga">conga</string>
+    <string formatted="false" name="cabasa">cabasa</string>
+    <string formatted="false" name="guiro">güiro</string>
+    <string formatted="false" name="vibraslap">vibraslap</string>
+    <string formatted="false" name="open_cuica">oop cuíca</string>
+    <!--  -->
+    <!-- Default Values -->
+    <string formatted="false" name="default_project_name">My projek</string>
+    <string formatted="false" name="default_variable_name">Veranderlike</string>
+    <string formatted="false" name="default_scene_name">Toneel</string>
+    <string formatted="false" name="default_script_group_name">Skripgroep</string>
+    <string formatted="false" name="default_broadcast_message_name">Boodskap</string>
+    <string formatted="false" name="default_list_name">Lys</string>
+    <string formatted="false" name="default_project_background_name">Agtergrond</string>
+    <string formatted="false" name="default_project_cloud_name">Wolke</string>
+    <string formatted="false" name="default_project_cloud_sprite_name_1">Wolke1</string>
+    <string formatted="false" name="default_project_cloud_sprite_name_2">Wolke2</string>
+    <string formatted="false" name="default_project_sprites_animal_name">Dier</string>
+    <string formatted="false" name="default_project_sprites_animal_wings_up">Vlerke op</string>
+    <string formatted="false" name="default_project_sprites_animal_wings_down">Vlerke af</string>
+    <string formatted="false" name="default_project_sprites_tweet_1">Tjirp1</string>
+    <string formatted="false" name="default_project_sprites_tweet_2">Tjirp2</string>
+    <!--suppress UnusedResources -->
+    <string formatted="false" name="default_project_needle_name">Naald</string>
+    <!--suppress UnusedResources -->
+    <string formatted="false" name="default_project_outer_loop">Buitelus</string>
+    <!--suppress UnusedResources -->
+    <string formatted="false" name="default_project_inner_loop">Binnelus</string>
+    <!-- Default ChromeCast Values -->
+    <string formatted="false" name="default_cast_project_background_name">Agtergrond</string>
+    <string formatted="false" name="default_cast_project_cloud_name">Wolke</string>
+    <string formatted="false" name="default_cast_project_cloud_sprite_name1">Wolke1</string>
+    <string formatted="false" name="default_cast_project_cloud_sprite_name2">Wolke2</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name">Voël</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name_wing_up">Voël vlerke op</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name_wing_down">Voël vlerke af</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name_wing_up_left">Voël vlerke op links</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name_wing_down_left">Voël vlerke af links</string>
+    <string formatted="false" name="default_cast_project_sprites_tweet_1">Tjirp1</string>
+    <string formatted="false" name="default_cast_project_sprites_tweet_2">Tjirp2</string>
+    <string formatted="false" name="default_cast_project_var_direction">rigting</string>
+    <string formatted="false" name="default_cast_project_name">My eerste Chromecast-projek</string>
+    <!-- Default Drone Values -->
+    <string formatted="false" name="drone_brick_set_text">Teks</string>
+    <string formatted="false" name="drone_brick_set_x">X:</string>
+    <!--  -->
+    <!-- Drone config spinner values  -->
+    <string formatted="false" name="drone_config_indoor_with_hull">binne met romp</string>
+    <string formatted="false" name="drone_config_indoor_without_hull">binne sonder romp</string>
+    <string formatted="false" name="drone_config_outdoor_with_hull">buite met romp</string>
+    <string formatted="false" name="drone_config_outdoor_without_hull">buite sonder romp</string>
+    <!-- Drone altitude limit values  -->
+    <string formatted="false" name="drone_set_altitude_max_3m">3 meter</string>
+    <string formatted="false" name="drone_set_altitude_max_5m">5 meter</string>
+    <string formatted="false" name="drone_set_altitude_max_10m">10 meter</string>
+    <string formatted="false" name="drone_set_altitude_max_100m">100 meter</string>
+    <!-- Drone max vertical speed limit values  -->
+    <string formatted="false" name="drone_set_vertical_min">200 mm/s</string>
+    <string formatted="false" name="drone_set_vertical_indoor">700 mm/s</string>
+    <string formatted="false" name="drone_set_vertical_outdoor">1000 mm/s</string>
+    <string formatted="false" name="drone_set_vertical_max">2000 mm/s</string>
+    <!-- Drone max rotation speed limit values  -->
+    <string formatted="false" name="drone_set_rotation_min">40 grade/s</string>
+    <string formatted="false" name="drone_set_rotation_indoor">100 grade/s</string>
+    <string formatted="false" name="drone_set_rotation_outdoor">200 grade/s</string>
+    <string formatted="false" name="drone_set_rotation_max">350 grade/s</string>
+    <!-- Drone max tilt limit values  -->
+    <string formatted="false" name="drone_set_tilt_min">5 grade</string>
+    <string formatted="false" name="drone_set_tilt_indoor">12 grade</string>
+    <string formatted="false" name="drone_set_tilt_outdoor">20 grade</string>
+    <string formatted="false" name="drone_set_tilt_max">30 grade</string>
+    <!-- Notification Channel -->
+    <string formatted="false" name="channel_description">%1$s-kennisgewingkanaal</string>
+    <!--  -->
+    <!-- Notifications -->
+    <string formatted="false" name="notification_screenshot_ok">Voorskoubeeld gestoor</string>
+    <string formatted="false" name="notification_download_project_cancel">Kanselleer aflaai van projek</string>
+    <string formatted="false" name="notification_reconvert_download_program_cancel">Aflaai/heromskakeling van projek gekanselleer</string>
+    <string formatted="false" name="notification_upload_title_pending">"Laai tans op"</string>
+    <string formatted="false" name="notification_upload_title_finished">"Kyk na"</string>
+    <string formatted="false" name="notification_upload_pending">Besig met oplaai</string>
+    <string formatted="false" name="notification_upload_finished">Oplaai suksesvol</string>
+    <string formatted="false" name="notification_upload_rejected">Opgelaaide projek is afgekeur</string>
+    <string formatted="false" name="notification_upload_retry">Probeer weer</string>
+    <string formatted="false" name="notification_open_play_store">Maak App-winkel oop</string>
+    <string formatted="false" name="notification_download_title_pending">"Laai tans af"</string>
+    <string formatted="false" name="notification_download_pending">Besig met aflaai</string>
+    <string formatted="false" name="notification_download_finished">Aflaai suksesvol</string>
+    <string formatted="false" name="notification_title_open">"Maak oop"</string>
+    <string formatted="false" name="size_of_project">Grootte:</string>
+    <!--  -->
+    <!-- Runtime permission messages -->
+    <string formatted="false" name="runtime_permission_general">Hierdie app het die gevraagde toestemmings nodig om reg te werk. Byvoorbeeld: die Kamera-blok het toegang tot die toestel se kamera nodig, die formule-element \"ligging\" het toegang tot die toestel se geoliggingsensor nodig, en om projekte na en van die plaaslike geheue in en uit te voer, het die app lees- en skryftoegang daartoe nodig. Jy kan toestemmings altyd in jou toestel se instellings verander.</string>
+    <!-- Error messages -->
+    <string formatted="false" name="error_project_upload">Iets het verkeerd geloop tydens die oplaai van die projek.</string>
+    <string formatted="false" name="error_project_download">Iets het verkeerd geloop tydens die aflaai van die projek.</string>
+    <string formatted="false" name="error_project_already_in_queue">"Projek %s is reeds in die tou."</string>
+    <string formatted="false" name="error_could_not_decode_project_name_from_url">"Jou aflaai kon nie begin word nie, dit lyk of daar ’n probleem met ons bediener is."</string>
+    <string formatted="false" name="error_new_project">Iets het verkeerd geloop tydens die skep van ’n nuwe projek.</string>
+    <string formatted="false" name="error_rename_scene">Iets het verkeerd geloop tydens die hernoem van die toneel.</string>
+    <string formatted="false" name="error_load_project">Iets het verkeerd geloop tydens die laai van die projek.</string>
+    <string formatted="false" name="error_screenshot_failed">Iets het verkeerd geloop tydens die stoor van die voorskoubeeld.</string>
+    <string formatted="false" name="error_internet_connection">’n Onbekende fout het voorgekom. Kontroleer jou internetverbinding.</string>
+    <string formatted="false" name="error_project_compatibility">Die projek is nie versoenbaar met hierdie weergawe van die app nie.</string>
+    <string formatted="false" name="error_outdated_version">Hierdie weergawe van die app is verouderd. Dateer nou op?</string>
+    <string formatted="false" name="error_upload_project_with_default_name">Jy kan nie ’n projek met die naam \"%s\" oplaai nie. Hernoem asseblief die projek.</string>
+    <string formatted="false" name="error_upload_default_project">Jy kan nie ’n onveranderde voorbeeldprojek oplaai nie. Verander asseblief iets en probeer weer.</string>
+    <string formatted="false" name="error_adding_brick">Iets het verkeerd geloop tydens die byvoeg van hierdie blok.</string>
+    <string formatted="false" name="error_copying_brick">Iets het verkeerd geloop tydens die kopieer van hierdie blok.</string>
+    <string formatted="false" name="error_rename_incompatible_project">Dit is nie moontlik om ’n onversoenbare projek te hernoem nie.</string>
+    <string formatted="false" name="error_embroidery_file_export">Iets het verkeerd geloop tydens die deel van die borduurlêer.</string>
+    <string formatted="false" name="error_embroidery_file_write">Iets het verkeerd geloop tydens die skryf van die borduurlêer.</string>
+    <string formatted="false" name="error_embroidery_data_not_found">Borduurwerk ontbreek.</string>
+    <string formatted="false" name="error_plot_file_write">Iets het verkeerd geloop tydens die skryf van die SVG-plotlêer.</string>
+    <string formatted="false" name="error_plot_data_not_found">Plot ontbreek.</string>
+    <string formatted="false" name="error_unknown_error">Iets het verkeerd geloop.</string>
+    <string formatted="false" name="error_gps_not_available">Geoliggingsdata is nie beskikbaar nie.</string>
+    <string formatted="false" name="error_set_description">Iets het verkeerd geloop tydens die stoor van die nuwe beskrywing.</string>
+    <string formatted="false" name="error_set_notes_and_credits">Iets het verkeerd geloop tydens die stoor van die nuwe notas en erkennings.</string>
+    <string formatted="false" name="error_no_whatsapp">WhatsApp is nie geïnstalleer nie</string>
+    <string formatted="false" name="error_unsupported_bricks_chromecast">Hierdie skrip kan nie by ’n Chromecast-projek gevoeg word nie.</string>
+    <!--  -->
+    <!-- Bluetooth Connection Strings -->
+    <string formatted="false" name="notification_blueth_err">Kan nie Bluetooth aanskakel nie, probeer asseblief om dit af en weer aan te skakel.</string>
+    <string formatted="false" name="title_paired_devices">Gepaarde toestelle</string>
+    <string formatted="false" name="title_other_devices">Beskikbare toestelle</string>
+    <string formatted="false" name="bluetooth_connection_title">Bluetooth-verbinding</string>
+    <string formatted="false" name="skip_bluetooth_connection">Slaan oor</string>
+    <string formatted="false" name="connecting_please_wait">Koppel tans aan jou toestel.\nWag asseblief…</string>
+    <string formatted="false" name="bt_connection_failed">Verbinding met toestel het misluk!</string>
+    <string formatted="false" name="none_found">Geen ongepaarde toestelle gevind nie</string>
+    <string formatted="false" name="multiplayer_bluetooth_connection_information_title">Bluetooth-verbinding nodig!</string>
+    <string formatted="false" name="multiplayer_bluetooth_connection_information">Om hierdie speletjie in meerspelermodus te speel, is ’n Bluetooth-verbinding nodig. Albei spelers moet die speletjie begin en op hierdie skerm wees sodat die verbinding reg werk!</string>
+    <!--  -->
+    <!-- Arduino Bricks -->
+    <string formatted="false" name="brick_arduino_select_digital_value">Stel Arduino se digitale pen</string>
+    <string formatted="false" name="brick_arduino_select_analog_value">Stel Arduino se PWM~-pen</string>
+    <string formatted="false" name="brick_arduino_set_pin_value_to">op</string>
+    <!--  -->
+    <!-- Raspi Bricks -->
+    <string formatted="false" name="brick_raspi_select_digital_value">Stel Raspberry Pi-pen</string>
+    <string formatted="false" name="brick_raspi_set_pin_value_to">op</string>
+    <string formatted="false" name="brick_raspi_if_begin">As Raspberry Pi-pen</string>
+    <string formatted="false" name="brick_raspi_if_begin_second_part">waar is, dan</string>
+    <string formatted="false" name="brick_raspi_when_begin">Wanneer Raspberry Pi-pen</string>
+    <string formatted="false" name="brick_raspi_when_equals">verander na</string>
+    <string formatted="false" name="brick_raspi_pressed_text">hoog</string>
+    <string formatted="false" name="brick_raspi_released_text">laag</string>
+    <string formatted="false" name="brick_raspi_set_pwm">Stel Raspberry Pi-PWM-pen</string>
+    <!--  -->
+    <!-- Raspi Settings -->
+    <string formatted="false" name="raspi_settings_title_name">Raspberry Pi-instellings</string>
+    <string formatted="false" name="raspi_settings_gpio_version">GPIO-weergawe</string>
+    <string formatted="false" name="error_connecting_to">Fout: Kon nie aan %s : %d koppel nie</string>
+    <!--  -->
+    <!-- MQTT Settings -->
+    <string formatted="false" name="preference_title_enable_mqtt_bricks">Uitbreiding MQTT</string>
+    <string formatted="false" name="preference_description_mqtt_bricks">Laat die app toe om aan MQTT-makelaars te koppel</string>
+    <string formatted="false" name="preference_title_mqtt_enabled">Aktiveer MQTT-blokke</string>
+    <string formatted="false" name="preference_description_mqtt_enabled">Aktiveer blokke en sensors vir MQTT</string>
+    <string formatted="false" name="preference_title_mqtt_category">MQTT-instellings</string>
+    <string formatted="false" name="preference_title_mqtt_broker_host">Makelaargasheer</string>
+    <string formatted="false" name="preference_description_mqtt_broker_host">IP-adres of gasheernaam van die MQTT-makelaar</string>
+    <string formatted="false" name="preference_title_mqtt_broker_port">Makelaarpoort</string>
+    <string formatted="false" name="preference_description_mqtt_broker_port">Poortnommer van die MQTT-makelaar (1–65535)</string>
+    <string formatted="false" name="preference_title_mqtt_use_tls">Gebruik TLS</string>
+    <string formatted="false" name="preference_title_mqtt_username">Gebruikernaam</string>
+    <string formatted="false" name="preference_title_mqtt_password">Wagwoord</string>
+    <string formatted="false" name="preference_title_mqtt_client_id">Kliënt-ID</string>
+    <string formatted="false" name="preference_mqtt_port_invalid">Die poort moet ’n getal tussen 1 en 65535 wees</string>
+    <!--  -->
+    <!-- Lego Mindstorms Strings -->
+    <string formatted="false" name="nxt_brick_motor_move">Stel NXT-motor</string>
+    <string formatted="false" name="nxt_motor_speed_to">op</string>
+    <string formatted="false" name="nxt_motor_speed">spoed</string>
+    <string formatted="false" name="nxt_brick_motor_turn_angle">Draai NXT-motor</string>
+    <string formatted="false" name="nxt_motor_move_by">met</string>
+    <string formatted="false" name="nxt_motor_stop">Stop NXT-motor</string>
+    <string formatted="false" name="nxt_play_tone">Speel NXT-toon</string>
+    <string formatted="false" name="nxt_tone_duration">Duur</string>
+    <string formatted="false" name="nxt_tone_frequency">Frekwensie</string>
+    <string formatted="false" name="nxt_tone_hundred_hz">×100Hz</string>
+    <string formatted="false" name="nxt_motor_a">A</string>
+    <string formatted="false" name="nxt_motor_b">B</string>
+    <string formatted="false" name="nxt_motor_c">C</string>
+    <string formatted="false" name="nxt_motor_b_and_c">B+C</string>
+    <string formatted="false" name="nxt_motor_all">Alle</string>
+    <string formatted="false" name="nxt_choose_sensor_1">Sensor aan poort 1 gekoppel</string>
+    <string formatted="false" name="nxt_choose_sensor_2">Sensor aan poort 2 gekoppel</string>
+    <string formatted="false" name="nxt_choose_sensor_3">Sensor aan poort 3 gekoppel</string>
+    <string formatted="false" name="nxt_choose_sensor_4">Sensor aan poort 4 gekoppel</string>
+    <string formatted="false" name="nxt_no_sensor">geen</string>
+    <string formatted="false" name="nxt_sensor_touch">NXT-aanraaksensor</string>
+    <string formatted="false" name="nxt_sensor_sound">NXT-klanksensor</string>
+    <string formatted="false" name="nxt_sensor_light">NXT-ligsensor</string>
+    <string formatted="false" name="nxt_sensor_light_active">NXT-ligsensor aktief</string>
+    <string formatted="false" name="nxt_sensor_ultrasonic">NXT-ultrasoniese sensor</string>
+    <string formatted="false" name="nxt_sensor_not_found">Sensor nie gevind nie!</string>
+    <string formatted="false" name="lego_nxt_sensor_config_info_title">NXT-sensorkonfigurasie</string>
+    <string formatted="false" name="preference_disable_nxt_info_dialog">Deaktiveer inligtingsdialoog</string>
+    <string formatted="false" name="preference_disable_nxt_info_dialog_description">Projekspesifieke NXT-instellings word nie gewys wanneer ’n projek oopgemaak word nie.</string>
+    <string formatted="false" name="preference_title_mindstorms_nxt_sensors_description">Die toewysing van NXT-sensors aan poorte is projekspesifiek en kan net vir oop projekte gekonfigureer word.</string>
+    <string formatted="false" name="lego_nxt_sensor_config_info_text">Die huidige projek gebruik Lego Mindstorms NXT-blokke of -sensors. Koppel asseblief die sensors soos volg aan die robot sodat alles reg werk</string>
+    <string formatted="false" name="lego_port_1">Poort 1</string>
+    <string formatted="false" name="lego_port_2">Poort 2</string>
+    <string formatted="false" name="lego_port_3">Poort 3</string>
+    <string formatted="false" name="lego_port_4">Poort 4</string>
+    <string formatted="false" name="lego_sensor_config_dont_show_again">Moenie hierdie boodskap weer wys nie.</string>
+    <string formatted="false" name="lego_sensor_port_config_dialog_title">Kies ’n poort om aan %1$s te koppel.</string>
+    <string formatted="false" name="lego_ev3_sensor_config_info_title">EV3-sensorkonfigurasie</string>
+    <string formatted="false" name="preference_disable_ev3_info_dialog_description">Projekspesifieke EV3-instellings word nie gewys wanneer ’n projek oopgemaak word nie.</string>
+    <string formatted="false" name="preference_title_mindstorms_ev3_sensors_description">Die toewysing van EV3-sensors aan poorte is projekspesifiek en kan net vir oop projekte gekonfigureer word.</string>
+    <string formatted="false" name="lego_ev3_sensor_config_info_text">Die huidige projek gebruik Lego Mindstorms EV3-blokke of -sensors. Koppel asseblief die sensors soos volg aan die robot sodat alles reg werk</string>
+    <string formatted="false" name="ev3_choose_sensor_1">Sensor aan poort 1 gekoppel</string>
+    <string formatted="false" name="ev3_choose_sensor_2">Sensor aan poort 2 gekoppel</string>
+    <string formatted="false" name="ev3_choose_sensor_3">Sensor aan poort 3 gekoppel</string>
+    <string formatted="false" name="ev3_choose_sensor_4">Sensor aan poort 4 gekoppel</string>
+    <string formatted="false" name="ev3_no_sensor">geen</string>
+    <string formatted="false" name="ev3_sensor_touch">EV3-aanraaksensor</string>
+    <string formatted="false" name="ev3_sensor_infrared">EV3-infrarooisensor</string>
+    <string formatted="false" name="ev3_sensor_color">EV3-kleursensor</string>
+    <string formatted="false" name="ev3_sensor_color_ambient">EV3-kleursensor omgewingslig</string>
+    <string formatted="false" name="ev3_sensor_color_reflected">EV3-kleursensor weerkaatste lig</string>
+    <string formatted="false" name="ev3_sensor_hitechnic_color">HiTechnic-kleursensor</string>
+    <string formatted="false" name="ev3_sensor_nxt_temperature_c">NXT-temperatuursensor (°C)</string>
+    <string formatted="false" name="ev3_sensor_nxt_temperature_f">NXT-temperatuursensor (°F)</string>
+    <string formatted="false" name="ev3_sensor_nxt_light">NXT-ligsensor</string>
+    <string formatted="false" name="ev3_sensor_nxt_light_active">NXT-ligsensor aktief</string>
+    <string formatted="false" name="ev3_sensor_nxt_sound">NXT-klanksensor</string>
+    <string formatted="false" name="ev3_sensor_nxt_ultrasonic">NXT-ultrasoniese sensor</string>
+    <string formatted="false" name="ev3_motor_a">A</string>
+    <string formatted="false" name="ev3_motor_b">B</string>
+    <string formatted="false" name="ev3_motor_c">C</string>
+    <string formatted="false" name="ev3_motor_d">D</string>
+    <string formatted="false" name="ev3_motor_b_and_c">B+C</string>
+    <string formatted="false" name="ev3_motor_all">Alle</string>
+    <string formatted="false" name="ev3_play_tone">Speel EV3-toon</string>
+    <string formatted="false" name="ev3_tone_duration_for">vir</string>
+    <string formatted="false" name="ev3_tone_volume">Volume</string>
+    <string formatted="false" name="ev3_tone_percent">%</string>
+    <string formatted="false" name="ev3_motor_stop">Stop EV3-motor</string>
+    <string formatted="false" name="ev3_motor_move">Stel EV3-motor</string>
+    <string formatted="false" name="ev3_brick_motor_turn_angle">Draai EV3-motor</string>
+    <string formatted="false" name="ev3_motor_move_by">met</string>
+    <string formatted="false" name="ev3_set_led_status">Stel EV3-LED-status</string>
+    <string formatted="false" name="ev3_led_status_off">Af</string>
+    <string formatted="false" name="ev3_led_status_green">Groen</string>
+    <string formatted="false" name="ev3_led_status_red">Rooi</string>
+    <string formatted="false" name="ev3_led_status_orange">Oranje</string>
+    <string formatted="false" name="ev3_led_status_green_flashing">Groen flikkerend</string>
+    <string formatted="false" name="ev3_led_status_red_flashing">Rooi flikkerend</string>
+    <string formatted="false" name="ev3_led_status_orange_flashing">Oranje flikkerend</string>
+    <string formatted="false" name="ev3_led_status_green_pulse">Groen pulserend</string>
+    <string formatted="false" name="ev3_led_status_red_pulse">Rooi pulserend</string>
+    <string formatted="false" name="ev3_led_status_orange_pulse">Oranje pulserend</string>
+    <!--  -->
+    <!-- Drone Bricks -->
+    <string formatted="false" name="brick_drone_takeoff_land">Styg op / land AR.Drone 2.0</string>
+    <string formatted="false" name="brick_drone_play_led_animation">Speel AR.Drone 2.0-flitsanimasie</string>
+    <string formatted="false" name="brick_drone_flip">Rol AR.Drone 2.0 om</string>
+    <string formatted="false" name="brick_drone_move_left">Beweeg AR.Drone 2.0 links</string>
+    <string formatted="false" name="brick_drone_move_right">Beweeg AR.Drone 2.0 regs</string>
+    <string formatted="false" name="brick_drone_move_forward">Beweeg AR.Drone 2.0 vorentoe</string>
+    <string formatted="false" name="brick_drone_move_backward">Beweeg AR.Drone 2.0 agtertoe</string>
+    <string formatted="false" name="brick_drone_move_up">Beweeg AR.Drone 2.0 op</string>
+    <string formatted="false" name="brick_drone_move_down">Beweeg AR.Drone 2.0 af</string>
+    <string formatted="false" name="brick_drone_emergency">Noodstop AR.Drone 2.0</string>
+    <string formatted="false" name="brick_drone_turn_right">Draai AR.Drone 2.0 regs</string>
+    <string formatted="false" name="brick_drone_turn_left">Draai AR.Drone 2.0 links</string>
+    <string formatted="false" name="brick_drone_set_config">Stel konfigurasie van AR.Drone 2.0</string>
+    <string formatted="false" name="brick_drone_switch_camera">Wissel AR.Drone 2.0-kamera</string>
+    <string formatted="false" name="brick_drone_set_altitude">Hoogtelimiet</string>
+    <string formatted="false" name="brick_drone_set_vertical_speed">Limiet vir vertikale spoed</string>
+    <string formatted="false" name="brick_drone_set_rotation_speed">Limiet vir rotasiespoed</string>
+    <string formatted="false" name="brick_drone_set_tilt_limit">Kantellimiet</string>
+    <string formatted="false" name="brick_drone_with.">met</string>
+    <string formatted="false" name="brick_drone_power">krag</string>
+    <!--  -->
+    <!-- Drone play led animation strings -->
+    <string formatted="false" name="drone_animation_blinkgreenred">Flikker groen rooi</string>
+    <string formatted="false" name="drone_animation_blinkgreen">Flikker groen</string>
+    <string formatted="false" name="drone_animation_blinkred">Flikker rooi</string>
+    <string formatted="false" name="drone_animation_blinkorange">Flikker oranje</string>
+    <string formatted="false" name="drone_animation_snakegreenred">Slang groen rooi</string>
+    <string formatted="false" name="drone_animation_fire">Vuur</string>
+    <string formatted="false" name="drone_animation_standard">Standaard</string>
+    <string formatted="false" name="drone_animation_red">Rooi</string>
+    <string formatted="false" name="drone_animation_green">Groen</string>
+    <string formatted="false" name="drone_animation_redsnake">Rooi slang</string>
+    <string formatted="false" name="drone_animation_blank">Leeg</string>
+    <string formatted="false" name="drone_animation_rightmissile">Regtermissiel</string>
+    <string formatted="false" name="drone_animation_leftmissile">Linkermissiel</string>
+    <string formatted="false" name="drone_animation_doublemissile">Dubbele missiel</string>
+    <string formatted="false" name="drone_animation_frontleftgreenothersred">Voor links groen, ander rooi</string>
+    <string formatted="false" name="drone_animation_frontrightgreenothersred">Voor regs groen, ander rooi</string>
+    <string formatted="false" name="drone_animation_rearrightgreenothersred">Agter regs groen, ander rooi</string>
+    <string formatted="false" name="drone_animation_rearleftgreenothersred">Agter links groen, ander rooi</string>
+    <string formatted="false" name="drone_animation_leftgreenrightred">Links groen, regs rooi</string>
+    <string formatted="false" name="drone_animation_leftredrightgreen">Links rooi, regs groen</string>
+    <string formatted="false" name="drone_animation_blinkstandard">Flikker standaard</string>
+    <!-- Jumping Sumo Bricks -->
+    <string formatted="false" name="brick_jumping_sumo_move_forward">Beweeg Jumping Sumo vorentoe</string>
+    <string formatted="false" name="brick_jumping_sumo_move_backward">Beweeg Jumping Sumo agtertoe</string>
+    <string formatted="false" name="brick_jumping_sumo_animation">Animasies Jumping Sumo</string>
+    <string formatted="false" name="brick_jumping_sumo_no_sound">Geen Jumping Sumo-klank</string>
+    <string formatted="false" name="brick_jumping_sumo_jump_long">Laat Jumping Sumo ver spring</string>
+    <string formatted="false" name="brick_jumping_sumo_jump_high">Laat Jumping Sumo hoog spring</string>
+    <string formatted="false" name="brick_jumping_sumo_rotate_left">Draai Jumping Sumo links</string>
+    <string formatted="false" name="brick_jumping_sumo_rotate_right">Draai Jumping Sumo regs</string>
+    <string formatted="false" name="brick_jumping_sumo_rotate_text">grade</string>
+    <string formatted="false" name="brick_jumping_sumo_turn">Rol Jumping Sumo om</string>
+    <string formatted="false" name="brick_jumping_sumo_taking_picture">Neem foto met Jumping Sumo</string>
+    <!--  -->
+    <!-- defaultJumpingSumoValues -->
+    <string formatted="false" name="default_jumping_sumo_project_sprites_sound">Klank</string>
+    <!--  -->
+    <!-- Jumping Sumo animation strings -->
+    <string formatted="false" name="animation_spin">Tol</string>
+    <string formatted="false" name="animation_tab">Tik</string>
+    <string formatted="false" name="animation_slowshake">Stadige skud</string>
+    <string formatted="false" name="animation_metronome">Metronoom</string>
+    <string formatted="false" name="animation_ondulation">Golwing</string>
+    <string formatted="false" name="animation_spinjump">Tolsprong</string>
+    <string formatted="false" name="animation_spiral">Spiraal</string>
+    <string formatted="false" name="animation_slalom">Slalom</string>
+    <!-- Jumping Sumo sound strings -->
+    <string formatted="false" name="jumping_sumo_volume">Volume</string>
+    <string formatted="false" name="sound_default">Normaal</string>
+    <string formatted="false" name="sound_robot">Robot</string>
+    <string formatted="false" name="sound_insect">Insek</string>
+    <string formatted="false" name="sound_monster">Monster</string>
+    <!--  -->
+    <!-- Shared arc and go-through strings -->
+    <string formatted="false" name="direction_left">links</string>
+    <string formatted="false" name="direction_right">regs</string>
+    <string formatted="false" name="arc_direction">Gaan in boog</string>
+    <string formatted="false" name="go_through">Gaan deur</string>
+    <string formatted="false" name="go_through_target">dan na</string>
+    <string formatted="false" name="arc_with_radius">met radius</string>
+    <string formatted="false" name="arc_for_degrees">oor</string>
+    <!--  -->
+    <!-- Phiro bricks -->
+    <!-- motor -->
+    <string formatted="false" name="phiro_motor_stop">Stop Phiro-motor</string>
+    <string formatted="false" name="brick_phiro_motor_forward_action">Beweeg Phiro-motor vorentoe</string>
+    <string formatted="false" name="brick_phiro_motor_backward_action">Beweeg Phiro-motor agtertoe</string>
+    <string formatted="false" name="phiro_motor_speed">Spoed</string>
+    <!-- sensor -->
+    <string formatted="false" name="brick_phiro_sensor_begin">As Phiro</string>
+    <string formatted="false" name="brick_phiro_sensor_second_part">geaktiveer is</string>
+    <!-- tone -->
+    <string formatted="false" name="phiro_play_tone">Speel Phiro-musiek\n</string>
+    <string formatted="false" name="phiro_tone_duration">Duur</string>
+    <string formatted="false" name="brick_phiro_select_tone">toon</string>
+    <string formatted="false" name="phiro_seconds">sekondes</string>
+    <!-- light -->
+    <string formatted="false" name="brick_phiro_rgb_led_action">Stel Phiro-lig</string>
+    <string formatted="false" name="phiro_rgb_led_red">Rooi</string>
+    <string formatted="false" name="phiro_rgb_led_green">Groen</string>
+    <string formatted="false" name="phiro_rgb_led_blue">Blou</string>
+    <!--  -->
+    <!-- Phiro tone strings -->
+    <string formatted="false" name="phiro_tone_do">Do</string>
+    <string formatted="false" name="phiro_tone_re">Re</string>
+    <string formatted="false" name="phiro_tone_mi">Mi</string>
+    <string formatted="false" name="phiro_tone_fa">Fa</string>
+    <string formatted="false" name="phiro_tone_so">So</string>
+    <string formatted="false" name="phiro_tone_la">La</string>
+    <string formatted="false" name="phiro_tone_ti">Ti</string>
+    <!--  -->
+    <!-- Phiro motor strings -->
+    <string formatted="false" name="phiro_motor_left">Links</string>
+    <string formatted="false" name="phiro_motor_right">Regs</string>
+    <string formatted="false" name="phiro_motor_both">Albei</string>
+    <!--  -->
+    <!-- Phiro light strings -->
+    <string formatted="false" name="phiro_light_left">Links</string>
+    <string formatted="false" name="phiro_light_right">Regs</string>
+    <string formatted="false" name="phiro_light_both">Albei</string>
+    <!--  -->
+    <!-- Phiro sensor strings -->
+    <string formatted="false" name="phiro_sensor_front_left">Voorste linkersensor</string>
+    <string formatted="false" name="phiro_sensor_front_right">Voorste regtersensor</string>
+    <string formatted="false" name="phiro_sensor_side_left">Linker sysensor</string>
+    <string formatted="false" name="phiro_sensor_side_right">Regter sysensor</string>
+    <string formatted="false" name="phiro_sensor_bottom_left">Onderste linkersensor</string>
+    <string formatted="false" name="phiro_sensor_bottom_right">Onderste regtersensor</string>
+    <!--  -->
+    <string formatted="false" name="color_red">rooi</string>
+    <string formatted="false" name="color_green">groen</string>
+    <string formatted="false" name="color_blue">blou</string>
+    <!-- -->
+    <!-- Formula editor strings -->
+    <string formatted="false" name="formula_editor_data">Data</string>
+    <string formatted="false" name="formula_editor_true">waar</string>
+    <string formatted="false" name="formula_editor_false">onwaar</string>
+    <string formatted="false" name="formula_editor_decimal_mark">.</string>
+    <string formatted="false" name="formula_editor_title">Formule-redigeerder</string>
+    <string formatted="false" name="formula_editor_changes_discarded">Veranderinge weggegooi!</string>
+    <string formatted="false" name="formula_editor_parse_fail">Formule is ongeldig!</string>
+    <string formatted="false" name="formula_nothing_selected">Definieer invoerwaarde</string>
+    <string formatted="false" name="formula_editor_parse_fail_formula_too_long">Formule is te lank!</string>
+    <string formatted="false" name="formula_editor_choose_object_variable">Eienskappe van hierdie karakter of voorwerp</string>
+    <string formatted="false" name="formula_editor_bracket_open">(</string>
+    <string formatted="false" name="formula_editor_bracket_close">)</string>
+    <string formatted="false" name="formula_editor_function_sin">sinus</string>
+    <string formatted="false" name="formula_editor_function_sin_parameter">(90)</string>
+    <string formatted="false" name="formula_editor_function_cos">kosinus</string>
+    <string formatted="false" name="formula_editor_function_cos_parameter">(360)</string>
+    <string formatted="false" name="formula_editor_function_tan">tangens</string>
+    <string formatted="false" name="formula_editor_function_tan_parameter">(45)</string>
+    <string formatted="false" name="formula_editor_function_ln">natuurlike logaritme</string>
+    <string formatted="false" name="formula_editor_function_ln_parameter">(2.718281828459)</string>
+    <string formatted="false" name="formula_editor_function_log">desimale logaritme</string>
+    <string formatted="false" name="formula_editor_function_log_parameter">(10)</string>
+    <string formatted="false" name="formula_editor_function_pi">pi</string>
+    <string formatted="false" name="formula_editor_function_pi_parameter"></string>
+    <string formatted="false" name="formula_editor_object_color">kleur</string>
+    <string formatted="false" name="formula_editor_function_sqrt">vierkantswortel</string>
+    <string formatted="false" name="formula_editor_function_sqrt_parameter">(4)</string>
+    <string formatted="false" name="formula_editor_function_rand">ewekansige waarde van tot</string>
+    <string formatted="false" name="formula_editor_function_rand_parameter">(1,6)</string>
+    <string formatted="false" name="formula_editor_function_abs">absolute waarde</string>
+    <string formatted="false" name="formula_editor_function_abs_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_round">afrond</string>
+    <string formatted="false" name="formula_editor_function_round_parameter">(1.6)</string>
+    <string formatted="false" name="formula_editor_function_mod">modulo</string>
+    <string formatted="false" name="formula_editor_function_mod_parameter">(3,2)</string>
+    <string formatted="false" name="formula_editor_function_arcsin">arksinus</string>
+    <string formatted="false" name="formula_editor_function_arcsin_parameter">(0.5)</string>
+    <string formatted="false" name="formula_editor_function_arccos">arkkosinus</string>
+    <string formatted="false" name="formula_editor_function_arccos_parameter">(0)</string>
+    <string formatted="false" name="formula_editor_function_arctan">arktangens</string>
+    <string formatted="false" name="formula_editor_function_arctan_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_arctan2">arktangens2</string>
+    <string formatted="false" name="formula_editor_function_arctan2_parameter">(-1, 0)</string>
+    <string formatted="false" name="formula_editor_function_exp">eksponent</string>
+    <string formatted="false" name="formula_editor_function_exp_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_power">mag</string>
+    <string formatted="false" name="formula_editor_function_power_parameter">(2,3)</string>
+    <string formatted="false" name="formula_editor_function_floor">afrond na onder</string>
+    <string formatted="false" name="formula_editor_function_floor_parameter">(0.7)</string>
+    <string formatted="false" name="formula_editor_function_ceil">afrond na bo</string>
+    <string formatted="false" name="formula_editor_function_ceil_parameter">(0.3)</string>
+    <string formatted="false" name="formula_editor_function_max">maksimum van</string>
+    <string formatted="false" name="formula_editor_function_max_parameter">(5,4)</string>
+    <string formatted="false" name="formula_editor_function_min">minimum van</string>
+    <string formatted="false" name="formula_editor_function_min_parameter">(7,2)</string>
+    <string formatted="false" name="formula_editor_function_if_then_else">as dan anders</string>
+    <string formatted="false" name="formula_editor_function_if_then_else_parameter">(onwaar, 2, 3)</string>
+    <string formatted="false" name="formula_editor_function_true">waar</string>
+    <string formatted="false" name="formula_editor_function_false">onwaar</string>
+    <string formatted="false" name="formula_editor_function_length">lengte</string>
+    <string formatted="false" name="formula_editor_function_length_parameter">(\'hello world\')</string>
+    <string formatted="false" name="formula_editor_function_letter">letter</string>
+    <string formatted="false" name="formula_editor_function_letter_parameter">(1,\'hello world\')</string>
+    <string formatted="false" name="formula_editor_function_subtext">subteks</string>
+    <string formatted="false" name="formula_editor_function_subtext_parameter">(3,5,\'hello world\')</string>
+    <string formatted="false" name="formula_editor_function_join">voeg saam</string>
+    <string formatted="false" name="formula_editor_function_join_parameter">(\'hello\',\' world\')</string>
+    <string formatted="false" name="formula_editor_function_join3">voeg saam</string>
+    <string formatted="false" name="formula_editor_function_join3_parameter">(\'hello\',\' world\',\'!\')</string>
+    <string formatted="false" name="formula_editor_function_regex">reguliere uitdrukking</string>
+    <string formatted="false" name="formula_editor_function_regex_parameter">(\' an? ([^ .]+)\',\'I am a panda.\')</string>
+    <string formatted="false" name="formula_editor_function_regex_assistant">Assistent vir reguliere uitdrukkings</string>
+    <string formatted="false" name="formula_editor_dialog_regular_expression_assistant_title">Assistent vir reguliere uitdrukkings</string>
+    <string formatted="false" name="formula_editor_function_regex_html_extractor_not_found">Die sleutelwoord kon nie gevind word nie.</string>
+    <string formatted="false" name="formula_editor_function_regex_json_extractor_title">JSON-uittrekker</string>
+    <string formatted="false" name="formula_editor_function_arduino_read_pin_value_digital">arduino digitale pen</string>
+    <string formatted="false" name="formula_editor_function_arduino_read_pin_value_analog">arduino analoë pen</string>
+    <string formatted="false" name="formula_editor_function_raspi_read_pin_value_digital">raspberry pi-pen</string>
+    <string formatted="false" name="formula_editor_function_pin_default_parameter">(0)</string>
+    <string formatted="false" name="formula_editor_function_finger_x">verhoog-aanraking x</string>
+    <string formatted="false" name="formula_editor_function_finger_y">verhoog-aanraking y</string>
+    <string formatted="false" name="formula_editor_function_is_finger_touching">verhoog word aangeraak</string>
+    <string formatted="false" name="formula_editor_function_multi_finger_x">verhoog-aanraking x</string>
+    <string formatted="false" name="formula_editor_function_multi_finger_y">verhoog-aanraking y</string>
+    <string formatted="false" name="formula_editor_function_is_multi_finger_touching">verhoog word aangeraak</string>
+    <string formatted="false" name="formula_editor_function_index_of_last_finger">indeks van laaste verhoog-aanraking</string>
+    <string formatted="false" name="formula_editor_function_number_of_current_touches">aantal huidige aanrakings</string>
+    <string formatted="false" name="formula_editor_function_index_of_current_touch">indeks van huidige aanraking</string>
+    <string formatted="false" name="formula_editor_function_no_parameter"></string>
+    <string formatted="false" name="formula_editor_function_touch_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_list_item">item</string>
+    <string formatted="false" name="formula_editor_function_list_item_parameter">(1,*list name*)</string>
+    <string formatted="false" name="formula_editor_function_contains">bevat</string>
+    <string formatted="false" name="formula_editor_function_contains_parameter">(*list name*,1)</string>
+    <string formatted="false" name="formula_editor_function_index_of_item">indeks van item</string>
+    <string formatted="false" name="formula_editor_function_index_of_item_parameter">(1,*list name*)</string>
+    <string formatted="false" name="formula_editor_function_number_of_items">aantal items</string>
+    <string formatted="false" name="formula_editor_function_number_of_items_parameter">(*list name*)</string>
+    <string formatted="false" name="formula_editor_function_flatten">maak plat</string>
+    <string formatted="false" name="formula_editor_function_flatten_parameter">(*list name*)</string>
+    <string formatted="false" name="formula_editor_function_collision">raak karakter of voorwerp</string>
+    <string formatted="false" name="formula_editor_function_collides_with_edge">raak rand</string>
+    <string formatted="false" name="formula_editor_function_touched">raak vinger</string>
+    <string formatted="false" name="formula_editor_function_collides_with_color">raak kleur</string>
+    <string formatted="false" name="formula_editor_function_color_touches_color">kleur raak kleur</string>
+    <string formatted="false" name="formula_editor_sensor_color_at_x_y">kleur by x y</string>
+    <string formatted="false" name="formula_editor_sensor_color_equals_color">kleur is gelyk aan kleur met % toleransie</string>
+    <string formatted="false" name="formula_editor_sensor_x_acceleration">versnelling x</string>
+    <string formatted="false" name="formula_editor_sensor_y_acceleration">versnelling y</string>
+    <string formatted="false" name="formula_editor_sensor_z_acceleration">versnelling z</string>
+    <string formatted="false" name="formula_editor_sensor_compass_direction">kompasrigting</string>
+    <string formatted="false" name="formula_editor_sensor_latitude">breedtegraad</string>
+    <string formatted="false" name="formula_editor_sensor_longitude">lengtegraad</string>
+    <string formatted="false" name="formula_editor_sensor_location_accuracy">liggingsakkuraatheid</string>
+    <string formatted="false" name="formula_editor_sensor_altitude">hoogte bo seespieël</string>
+    <string formatted="false" name="formula_editor_sensor_user_language">gebruikerstaal</string>
+    <string formatted="false" name="formula_editor_sensor_x_inclination">helling x</string>
+    <string formatted="false" name="formula_editor_sensor_y_inclination">helling y</string>
+    <string formatted="false" name="formula_editor_sensor_loudness">luidheid</string>
+    <string formatted="false" name="formula_editor_sensor_timer">tydhouer</string>
+    <string formatted="false" name="formula_editor_sensor_date_year">jaar</string>
+    <string formatted="false" name="formula_editor_sensor_date_month">maand</string>
+    <string formatted="false" name="formula_editor_sensor_date_day">dag</string>
+    <string formatted="false" name="formula_editor_sensor_date_weekday">weekdag</string>
+    <string formatted="false" name="formula_editor_sensor_time_hour">uur</string>
+    <string formatted="false" name="formula_editor_sensor_time_minute">minuut</string>
+    <string formatted="false" name="formula_editor_sensor_time_second">sekonde</string>
+    <string formatted="false" name="formula_editor_sensor_drone_battery_status">hommeltuig: batterystatus</string>
+    <string formatted="false" name="formula_editor_sensor_drone_emergency_state">hommeltuig: noodtoestand</string>
+    <string formatted="false" name="formula_editor_sensor_drone_flying">hommeltuig: vlieg</string>
+    <string formatted="false" name="formula_editor_sensor_drone_initialized">hommeltuig: geïnisialiseer</string>
+    <string formatted="false" name="formula_editor_sensor_drone_usb_active">hommeltuig: USB aktief</string>
+    <string formatted="false" name="formula_editor_sensor_drone_usb_remaining_time">hommeltuig: oorblywende USB-tyd</string>
+    <string formatted="false" name="formula_editor_sensor_drone_camera_ready">hommeltuig: kamera gereed</string>
+    <string formatted="false" name="formula_editor_sensor_drone_record_ready">hommeltuig: opname gereed</string>
+    <string formatted="false" name="formula_editor_sensor_drone_recording">hommeltuig: kamera neem op</string>
+    <string formatted="false" name="formula_editor_sensor_drone_num_frames">hommeltuig: aantal kamerarame</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_1">NXT-sensor 1</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_2">NXT-sensor 2</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_3">NXT-sensor 3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_4">NXT-sensor 4</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_1">EV3-sensor 1</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_2">EV3-sensor 2</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_3">EV3-sensor 3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_4">EV3-sensor 4</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_touch">NXT-aanraking</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_sound">NXT-klank</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_light">NXT-lig</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_light_active">NXT-lig aktief</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_ultrasonic">NXT-ultrasonies</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_touch">EV3-aanraking</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_infrared">EV3-infrarooi</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_color">EV3-kleur</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_color_ambient">EV3-omgewingskleur</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_color_reflected">EV3-weerkaatste kleur</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_hitechnic_color">EV3 HiTechnic-kleur</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_temperature_c">EV3 NXT-temperatuur in °C</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_temperature_f">EV3 NXT-temperatuur in °F</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_light">EV3 NXT-lig</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_light_active">EV3 NXT-lig aktief</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_sound">EV3 NXT-klank</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_ultrasonic">EV3 NXT-ultrasonies</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_a_pressed">spelbeheerder A gedruk</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_b_pressed">spelbeheerder B gedruk</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_up_pressed">spelbeheerder op gedruk</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_down_pressed">spelbeheerder af gedruk</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_left_pressed">spelbeheerder links gedruk</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_right_pressed">spelbeheerder regs gedruk</string>
+    <string formatted="false" name="formula_editor_sensor_stage_width">verhoogwydte</string>
+    <string formatted="false" name="formula_editor_sensor_stage_height">verhooghoogte</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_front_left">phiro voorste linkersensor</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_front_right">phiro voorste regtersensor</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_side_left">phiro linker sysensor</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_side_right">phiro regter sysensor</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_bottom_left">phiro onderste linkersensor</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_bottom_right">phiro onderste regtersensor</string>
+    <string formatted="false" name="formula_editor_nfc_tag_id">NFC-merker-ID</string>
+    <string formatted="false" name="formula_editor_nfc_tag_message">NFC-merkerboodskap</string>
+    <string formatted="false" name="formula_editor_object_x">posisie x</string>
+    <string formatted="false" name="formula_editor_object_y">posisie y</string>
+    <string formatted="false" name="formula_editor_object_transparency">deursigtigheid</string>
+    <string formatted="false" name="formula_editor_object_brightness">helderheid</string>
+    <string formatted="false" name="formula_editor_object_size">grootte</string>
+    <string formatted="false" name="formula_editor_object_rotation">bewegingsrigting</string>
+    <string formatted="false" name="formula_editor_object_rotation_look">kostuumrigting</string>
+    <string formatted="false" name="formula_editor_object_layer">laag</string>
+    <string formatted="false" name="formula_editor_object_x_velocity">x-snelheid</string>
+    <string formatted="false" name="formula_editor_object_y_velocity">y-snelheid</string>
+    <string formatted="false" name="formula_editor_object_angular_velocity">hoeksnelheid</string>
+    <string formatted="false" name="formula_editor_object_look_number">kostuumnommer</string>
+    <string formatted="false" name="formula_editor_object_look_name">kostuumnaam</string>
+    <string formatted="false" name="formula_editor_object_number_of_looks">aantal kostuums</string>
+    <string formatted="false" name="formula_editor_object_background_number">agtergrondnommer</string>
+    <string formatted="false" name="formula_editor_object_background_name">agtergrondnaam</string>
+    <string formatted="false" name="formula_editor_object_number_of_backgrounds">aantal agtergronde</string>
+    <string formatted="false" name="formula_editor_object_distance_to">afstand tot aanraakposisie</string>
+    <string formatted="false" name="formula_editor_confirm">Bevestig</string>
+    <string formatted="false" name="formula_editor_object">Eienskappe</string>
+    <string formatted="false" name="formula_editor_functions">Funksies</string>
+    <string formatted="false" name="formula_editor_logic">Logika</string>
+    <string formatted="false" name="formula_editor_device">Sensors</string>
+    <string formatted="false" name="formula_editor_device_sensors">Toestelsensors</string>
+    <string formatted="false" name="formula_editor_functions_maths">Wiskunde</string>
+    <string formatted="false" name="formula_editor_functions_strings">Teks</string>
+    <string formatted="false" name="formula_editor_functions_lists">Lyste</string>
+    <string formatted="false" name="formula_editor_logic_boolean">Logiese (Boolese) operatore en konstantes</string>
+    <string formatted="false" name="formula_editor_logic_comparison">Vergelykingsoperatore</string>
+    <string formatted="false" name="formula_editor_object_look">Kostuumeienskappe</string>
+    <string formatted="false" name="formula_editor_object_movement">Bewegingseienskappe</string>
+    <string formatted="false" name="formula_editor_device_face_detection">Gesigsbespeuring</string>
+    <string formatted="false" name="formula_editor_device_pose_detection">Houdingbespeuring</string>
+    <string formatted="false" name="formula_editor_device_text_recognition">Teksherkenning</string>
+    <string formatted="false" name="formula_editor_device_object_recognition">Voorwerpherkenning</string>
+    <string formatted="false" name="formula_editor_device_date_and_time">Datum en tyd</string>
+    <string formatted="false" name="formula_editor_device_touch_detection">Aanraakbespeuring</string>
+    <string formatted="false" name="formula_editor_device_lego_nxt">Lego Mindstorms NXT</string>
+    <string formatted="false" name="formula_editor_device_lego_ev3">Lego Mindstorms EV3</string>
+    <string formatted="false" name="formula_editor_device_arduino">Arduino</string>
+    <string formatted="false" name="formula_editor_device_phiro">Phiro</string>
+    <string formatted="false" name="formula_editor_device_raspberry">Raspberry Pi</string>
+    <string formatted="false" name="formula_editor_device_drone">Hommeltuig</string>
+    <string formatted="false" name="formula_editor_device_nfc">NFC</string>
+    <string formatted="false" name="formula_editor_device_cast">Chromecast</string>
+    <string formatted="false" name="formula_editor_string">Abc</string>
+    <string formatted="false" name="formula_editor_logic_notequal">≠</string>
+    <string formatted="false" name="formula_editor_logic_lesserthan">&lt;</string>
+    <string formatted="false" name="formula_editor_logic_greaterthan">&gt;</string>
+    <string formatted="false" name="formula_editor_logic_and">en</string>
+    <string formatted="false" name="formula_editor_logic_or">of</string>
+    <string formatted="false" name="formula_editor_logic_not">nie</string>
+    <string formatted="false" name="formula_editor_logic_greaterequal">≥</string>
+    <string formatted="false" name="formula_editor_logic_leserequal">≤</string>
+    <string formatted="false" name="formula_editor_logic_equal">=</string>
+    <string formatted="false" name="formula_editor_operator_mult">×</string>
+    <string formatted="false" name="formula_editor_operator_plus">+</string>
+    <string formatted="false" name="formula_editor_operator_minus">-</string>
+    <string formatted="false" name="formula_editor_operator_divide">÷</string>
+    <string formatted="false" name="formula_editor_operator_power">^</string>
+    <string formatted="false" name="formula_editor_image_button_description_delete">vee uit</string>
+    <string formatted="false" name="formula_editor_image_button_description_calculate">bereken</string>
+    <string formatted="false" name="formula_editor_image_button_description_confirm">bevestig</string>
+    <string formatted="false" name="formula_editor_image_button_description_color_picker">kleurkieser</string>
+    <string formatted="false" name="formula_editor_image_button_description_functions_toggle">wys/versteek funksies</string>
+    <string formatted="false" name="formula_editor_variable_dialog_title">Nuwe veranderlike</string>
+    <string formatted="false" name="formula_editor_list_dialog_title">Nuwe lys</string>
+    <string formatted="false" name="formula_editor_regex_html_extractor_dialog_title">HTML-uittrekker</string>
+    <string formatted="false" name="formula_editor_discard_changes_dialog_message">Wil jy jou veranderinge stoor?</string>
+    <string formatted="false" name="formula_editor_discard_changes_dialog_title">Stoor veranderinge?</string>
+    <string formatted="false" name="formula_editor_new_string_name">Nuwe teks</string>
+    <string formatted="false" name="formula_editor_dialog_change_text">Verander teks</string>
+    <string formatted="false" name="formula_editor_dialog_change_regular_expression">Verander reguliere uitdrukking</string>
+    <string formatted="false" name="formula_editor_fragment_data_current_items">huidige items</string>
+    <string formatted="false" name="formula_editor_data_dialog_is_list">Maak dit ’n lys</string>
+    <string formatted="false" name="formula_editor_sensor_face_detected">eerste gesig is sigbaar</string>
+    <string formatted="false" name="formula_editor_sensor_face_size">grootte van eerste gesig</string>
+    <string formatted="false" name="formula_editor_sensor_face_x_position">x-posisie van eerste gesig</string>
+    <string formatted="false" name="formula_editor_sensor_face_y_position">y-posisie van eerste gesig</string>
+    <string formatted="false" name="formula_editor_sensor_second_face_detected">tweede gesig is sigbaar</string>
+    <string formatted="false" name="formula_editor_sensor_second_face_size">grootte van tweede gesig</string>
+    <string formatted="false" name="formula_editor_sensor_second_face_x_position">x-posisie van tweede gesig</string>
+    <string formatted="false" name="formula_editor_sensor_second_face_y_position">y-posisie van tweede gesig</string>
+    <string formatted="false" name="formula_editor_sensor_head_top_x">bokant van kop x</string>
+    <string formatted="false" name="formula_editor_sensor_head_top_y">bokant van kop y</string>
+    <string formatted="false" name="formula_editor_sensor_neck_x">nek x</string>
+    <string formatted="false" name="formula_editor_sensor_neck_y">nek y</string>
+    <string formatted="false" name="formula_editor_sensor_nose_x">neus x</string>
+    <string formatted="false" name="formula_editor_sensor_nose_y">neus y</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_inner_x">linkeroog binnekant x</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_inner_y">linkeroog binnekant y</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_center_x">linkeroog middel x</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_center_y">linkeroog middel y</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_outer_x">linkeroog buitekant x</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_outer_y">linkeroog buitekant y</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_inner_x">regteroog binnekant x</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_inner_y">regteroog binnekant y</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_center_x">regteroog middel x</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_center_y">regteroog middel y</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_outer_x">regteroog buitekant x</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_outer_y">regteroog buitekant y</string>
+    <string formatted="false" name="formula_editor_sensor_left_ear_x">linkeroor x</string>
+    <string formatted="false" name="formula_editor_sensor_left_ear_y">linkeroor y</string>
+    <string formatted="false" name="formula_editor_sensor_right_ear_x">regteroor x</string>
+    <string formatted="false" name="formula_editor_sensor_right_ear_y">regteroor y</string>
+    <string formatted="false" name="formula_editor_sensor_mouth_left_corner_x">linkermondhoek x</string>
+    <string formatted="false" name="formula_editor_sensor_mouth_left_corner_y">linkermondhoek y</string>
+    <string formatted="false" name="formula_editor_sensor_mouth_right_corner_x">regtermondhoek x</string>
+    <string formatted="false" name="formula_editor_sensor_mouth_right_corner_y">regtermondhoek y</string>
+    <string formatted="false" name="formula_editor_sensor_left_shoulder_x">linkerskouer x</string>
+    <string formatted="false" name="formula_editor_sensor_left_shoulder_y">linkerskouer y</string>
+    <string formatted="false" name="formula_editor_sensor_right_shoulder_x">regterskouer x</string>
+    <string formatted="false" name="formula_editor_sensor_right_shoulder_y">regterskouer y</string>
+    <string formatted="false" name="formula_editor_sensor_left_elbow_x">linkerelmboog x</string>
+    <string formatted="false" name="formula_editor_sensor_left_elbow_y">linkerelmboog y</string>
+    <string formatted="false" name="formula_editor_sensor_right_elbow_x">regterelmboog x</string>
+    <string formatted="false" name="formula_editor_sensor_right_elbow_y">regterelmboog y</string>
+    <string formatted="false" name="formula_editor_sensor_left_wrist_x">linkerpols x</string>
+    <string formatted="false" name="formula_editor_sensor_left_wrist_y">linkerpols y</string>
+    <string formatted="false" name="formula_editor_sensor_right_wrist_x">regterpols x</string>
+    <string formatted="false" name="formula_editor_sensor_right_wrist_y">regterpols y</string>
+    <string formatted="false" name="formula_editor_sensor_left_pinky_knuckle_x">linkerpinkie-kneukel x</string>
+    <string formatted="false" name="formula_editor_sensor_left_pinky_knuckle_y">linkerpinkie-kneukel y</string>
+    <string formatted="false" name="formula_editor_sensor_right_pinky_knuckle_x">regterpinkie-kneukel x</string>
+    <string formatted="false" name="formula_editor_sensor_right_pinky_knuckle_y">regterpinkie-kneukel y</string>
+    <string formatted="false" name="formula_editor_sensor_left_index_knuckle_x">linkerwysvinger-kneukel x</string>
+    <string formatted="false" name="formula_editor_sensor_left_index_knuckle_y">linkerwysvinger-kneukel y</string>
+    <string formatted="false" name="formula_editor_sensor_right_index_knuckle_x">regterwysvinger-kneukel x</string>
+    <string formatted="false" name="formula_editor_sensor_right_index_knuckle_y">regterwysvinger-kneukel y</string>
+    <string formatted="false" name="formula_editor_sensor_left_thumb_knuckle_x">linkerduim-kneukel x</string>
+    <string formatted="false" name="formula_editor_sensor_left_thumb_knuckle_y">linkerduim-kneukel y</string>
+    <string formatted="false" name="formula_editor_sensor_right_thumb_knuckle_x">regterduim-kneukel x</string>
+    <string formatted="false" name="formula_editor_sensor_right_thumb_knuckle_y">regterduim-kneukel y</string>
+    <string formatted="false" name="formula_editor_sensor_left_hip_x">linkerheup x</string>
+    <string formatted="false" name="formula_editor_sensor_left_hip_y">linkerheup y</string>
+    <string formatted="false" name="formula_editor_sensor_right_hip_x">regterheup x</string>
+    <string formatted="false" name="formula_editor_sensor_right_hip_y">regterheup y</string>
+    <string formatted="false" name="formula_editor_sensor_left_knee_x">linkerknie x</string>
+    <string formatted="false" name="formula_editor_sensor_left_knee_y">linkerknie y</string>
+    <string formatted="false" name="formula_editor_sensor_right_knee_x">regterknie x</string>
+    <string formatted="false" name="formula_editor_sensor_right_knee_y">regterknie y</string>
+    <string formatted="false" name="formula_editor_sensor_left_ankle_x">linkerenkel x</string>
+    <string formatted="false" name="formula_editor_sensor_left_ankle_y">linkerenkel y</string>
+    <string formatted="false" name="formula_editor_sensor_right_ankle_x">regterenkel x</string>
+    <string formatted="false" name="formula_editor_sensor_right_ankle_y">regterenkel y</string>
+    <string formatted="false" name="formula_editor_sensor_left_heel_x">linkerhakskeen x</string>
+    <string formatted="false" name="formula_editor_sensor_left_heel_y">linkerhakskeen y</string>
+    <string formatted="false" name="formula_editor_sensor_right_heel_x">regterhakskeen x</string>
+    <string formatted="false" name="formula_editor_sensor_right_heel_y">regterhakskeen y</string>
+    <string formatted="false" name="formula_editor_sensor_left_foot_index_x">linkertoon x</string>
+    <string formatted="false" name="formula_editor_sensor_left_foot_index_y">linkertoon y</string>
+    <string formatted="false" name="formula_editor_sensor_right_foot_index_x">regtertoon x</string>
+    <string formatted="false" name="formula_editor_sensor_right_foot_index_y">regtertoon y</string>
+    <string formatted="false" name="formula_editor_sensor_text_from_camera">teks van kamera</string>
+    <string formatted="false" name="formula_editor_sensor_text_blocks_number">aantal teksblokke</string>
+    <string formatted="false" name="formula_editor_function_text_block_x">teksblok x van kamera</string>
+    <string formatted="false" name="formula_editor_function_text_block_y">teksblok y van kamera</string>
+    <string formatted="false" name="formula_editor_function_text_block_size">teksblokgrootte van kamera</string>
+    <string formatted="false" name="formula_editor_function_text_block_from_camera">teksblok van kamera</string>
+    <string formatted="false" name="formula_editor_function_text_block_language_from_camera">teksbloktaal van kamera</string>
+    <string formatted="false" name="formula_editor_function_text_block_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_get_id_of_detected_object">ID van bespeurde voorwerp</string>
+    <string formatted="false" name="formula_editor_function_object_with_id_visible">voorwerp met ID sigbaar</string>
+    <string formatted="false" name="formula_editor_intro_title_formula_editor">Formule-redigeerder</string>
+    <string formatted="false" name="formula_editor_intro_summary_formula_editor">Met die formule-redigeerder kan jy wiskundige en logiese formules skep wat jy in jou blokke kan gebruik.\n\nGaan voort deur op “VOLGENDE” te tik of verlaat met “SLAAN OOR”.</string>
+    <string formatted="false" name="formula_editor_intro_title_input_field">Invoerveld</string>
+    <string formatted="false" name="formula_editor_intro_summary_input_field">Hier kan jy jou formule sien en wysig.</string>
+    <string formatted="false" name="formula_editor_intro_title_keyboard">Sleutelbord</string>
+    <string formatted="false" name="formula_editor_intro_summary_keyboard">Hier kan jy jou formule skep, net soos op ’n sakrekenaar.</string>
+    <string formatted="false" name="formula_editor_intro_title_compute">Bereken</string>
+    <string formatted="false" name="formula_editor_intro_summary_compute">Om jou formule se huidige resultaat te wys, kan jy \"Bereken\" gebruik.</string>
+    <string formatted="false" name="formula_editor_intro_title_object">Eienskappe</string>
+    <string formatted="false" name="formula_editor_intro_summary_object">Dit is ’n versameling waardes wat die eienskappe van jou huidige karakter of voorwerp beskryf. Voorbeelde is die x- en y-koördinate of die huidige spoed.</string>
+    <string formatted="false" name="formula_editor_intro_title_functions">Funksies</string>
+    <string formatted="false" name="formula_editor_intro_summary_functions">Soos ’n sakrekenaar bied die formule-redigeerder baie wiskundige funksies.\nJy vind trigonometriese funksies soos \"sin\" en \"cos\", ’n ewekansige-getal-generator en teks- en lysfunksies.</string>
+    <string formatted="false" name="formula_editor_intro_title_logic">Logika</string>
+    <string formatted="false" name="formula_editor_intro_summary_logic">Logika word gebruik om waardes te vergelyk en logiese formules te kombineer.\nOm waardes te vergelyk, kan jy logiese bewerkings soos \"&gt;\" (groter as) of \"=\" (gelyk aan) gebruik.\nOm logiese formules te kombineer, kan jy logiese bewerkings soos \"EN\", \"OF\" en \"NIE\" gebruik.</string>
+    <string formatted="false" name="formula_editor_intro_title_device">Sensors</string>
+    <string formatted="false" name="formula_editor_intro_summary_device">Onder \"Sensors\" vind jy inligting wat jou toestel opneem.\nByvoorbeeld die helling van jou toestel of hoe luid dit om jou is.</string>
+    <string formatted="false" name="formula_editor_intro_title_data">Data</string>
+    <string formatted="false" name="formula_editor_intro_summary_data">Veranderlikes en lyste wat in jou projek gebruik word, vind jy hier. \nJy kan dit eenvoudig in jou formule invoeg of nuwes byvoeg.</string>
+    <string formatted="false" name="formula_editor_listening_language_sensor">luistertaal</string>
+    <string formatted="false" name="formula_editor_speech_recognition">Spraakherkenning</string>
+    <string formatted="false" name="camera_error_text_detection">Daar was ’n probleem met teksbespeuring. Sommige komponente word dalk nog in die agtergrond afgelaai. Maak asseblief seker dat jy aan die internet gekoppel is en probeer later weer.</string>
+    <string formatted="false" name="warning_formula_recognized">Jy het ’n teks ingevoer wat soos ’n formule lyk. As jy funksies, sensors, veranderlikes en ander formule-elemente wil gebruik, kies hulle eerder met die knoppies in die formule-redigeerder.</string>
+    <!--  -->
+    <!-- Brick Data Editor Strings -->
+    <string formatted="false" name="brick_show_variable">Wys veranderlike</string>
+    <string formatted="false" name="brick_hide_variable">Versteek veranderlike</string>
+    <string formatted="false" name="brick_show_variable_position">by</string>
+    <string formatted="false" name="brick_show_variable_size">grootte:</string>
+    <string formatted="false" name="brick_show_variable_color">kleur:</string>
+    <string formatted="false" name="brick_show_variable_aligned">belyning</string>
+    <string formatted="false" name="brick_show_variable_aligned_centered">gesentreer</string>
+    <string formatted="false" name="brick_show_variable_aligned_left">links</string>
+    <string formatted="false" name="brick_show_variable_aligned_right">regs</string>
+    <string formatted="false" name="brick_context_dialog_pick_color">Kies kleur</string>
+    <string formatted="false" name="brick_context_dialog_pick_note">Kies noot</string>
+    <!-- -->
+    <!-- Camera related strings -->
+    <string formatted="false" name="brick_video">Skakel kamera</string>
+    <string formatted="false" name="video_brick_camera_on">aan</string>
+    <string formatted="false" name="video_brick_camera_off">af</string>
+    <string formatted="false" name="brick_choose_camera">Gebruik kamera</string>
+    <string formatted="false" name="choose_camera_front">voor</string>
+    <string formatted="false" name="choose_camera_back">agter</string>
+    <string formatted="false" name="camera_error_generic">Iets het verkeerd geloop met die gebruik van die kamera.</string>
+    <string formatted="false" name="camera_error_face_detection">Daar was ’n probleem met gesigsbespeuring. Sommige komponente word dalk nog in die agtergrond afgelaai. Maak asseblief seker dat jy aan die internet gekoppel is en probeer later weer.</string>
+    <!-- -->
+    <!-- Cast strings -->
+    <string formatted="false" name="cast_gamepad_A">A</string>
+    <string formatted="false" name="cast_gamepad_B">B</string>
+    <string formatted="false" name="cast_gamepad_up">op</string>
+    <string formatted="false" name="cast_gamepad_down">af</string>
+    <string formatted="false" name="cast_gamepad_left">links</string>
+    <string formatted="false" name="cast_gamepad_right">regs</string>
+    <string formatted="false" name="cast_error_not_connected_msg">Koppel asseblief eers aan jou Chromecast</string>
+    <string formatted="false" name="cast_error_cast_bricks_in_no_cast_project">Jou projek gebruik Chromecast-blokke en kan nie plaaslik begin word nie</string>
+    <string formatted="false" name="cast_device_selector_dialog_title">Saai uit na</string>
+    <string formatted="false" name="cast_button_menu_item_title">Uitsaaiknoppie</string>
+    <string formatted="false" name="cast_ready_to_cast">Gereed om uit te saai na</string>
+    <string formatted="false" name="cast_enable_cast_feature">Chromecast-funksies is gedeaktiveer. Aktiveer asseblief uitsaaifunksies in die instellings.</string>
+    <string formatted="false" name="cast_searching_for_cast_devices">Soek tans na Chromecast-toestelle</string>
+    <string formatted="false" name="cast_trouble_finding_devices_tip">.\nSien jy nie jou toestel nie? Probeer om jou toestel se wi-fi af en weer aan te skakel.</string>
+    <string formatted="false" name="cast_connection_timout_msg">Verbinding het uitgetel. Probeer asseblief weer.</string>
+    <string formatted="false" name="cast_screen_pause_text">Onderbreek</string>
+    <!-- -->
+    <string formatted="false" name="deletion_alert_title">Vee uit?</string>
+    <string formatted="false" name="deletion_alert_text">As jy ’n veranderlike of lys uitvee wat nog gebruik word, kan dit foute veroorsaak. Jy kan dit nie ontdoen nie!</string>
+    <!-- Upload progress dialog -->
+    <string formatted="false" name="progress_upload_dialog_message">Jou projek word opgelaai na die app se deelwebwerf, waar ander dit kan gebruik en aflaai. Jy kan jou projek ook as ’n selfstandige app aflaai.</string>
+    <string formatted="false" name="progress_upload_dialog_failed">Oplaai het misluk. Die oplaaifunksie is tans nie beskikbaar nie. Probeer asseblief later weer.</string>
+    <string formatted="false" name="progress_upload_dialog_show_program">Wys projek</string>
+    <!--  -->
+    <!-- unchanged upload dialog -->
+    <string formatted="false" name="unchanged_upload_warning">Die projek wat jy probeer oplaai, bestaan reeds presies so op die gemeenskapsplatform. Verander asseblief jou projek, verkieslik deur dit te verbeter, voordat jy jou hermengde projek oplaai.</string>
+    <string formatted="false" name="unchanged_upload_info">Oorweeg dit asseblief om ’n paar vriendelike woorde vir die oorspronklike outeur by die erkennings op die gemeenskapswebwerf of in die projekopsies te skryf. Let daarop dat die gebruiker ’n kennisgewing sal kry nadat jy suksesvol opgelaai het.</string>
+    <string formatted="false" name="unchanged_upload_url">Besoek %1s om meer oor hermengsels te leer.</string>
+    <!-- -->
+    <!-- Snackbar hints -->
+    <string formatted="false" name="got_it">Verstaan</string>
+    <string formatted="false" name="preference_description_hints">Aktiveer om wenke te wys</string>
+    <string formatted="false" name="preference_title_enable_hints">Wys wenke</string>
+    <string formatted="false" name="hint_category">Alle blokke is in kategorieë gesorteer. Kies die kategorie wat jy soek.</string>
+    <string formatted="false" name="hint_bricks">Tik op die blok wat jy wil gebruik om dit by jou skrip te voeg.</string>
+    <string formatted="false" name="hint_scripts">Die skrip bepaal hoe jou karakter of voorwerp optree. Tik op die \"+\"-simbool om blokke by die skrip te voeg.</string>
+    <string formatted="false" name="hint_looks">Hier vind jy die verskillende kostuums van jou karakter of voorwerp. Tik op die \"+\"-simbool om ’n nuwe kostuum by te voeg.</string>
+    <string formatted="false" name="hint_sounds">Hier kan jy nuwe klanke by jou karakter of voorwerp voeg. Onthou om ’n blok uit die klankkategorie te gebruik.</string>
+    <string formatted="false" name="hint_objects">Jou projek bestaan uit verskillende karakters en voorwerpe wat met mekaar kan wisselwerk. Tik op die \"+\"-simbool om ’n nuwe karakter of voorwerp by te voeg.</string>
+    <!--  -->
+    <!-- Dialog Disable hints -->
+    <string formatted="false" name="dialog_disable_hints_title">Wys wenke?</string>
+    <string formatted="false" name="dialog_disable_hints_text">Wenke gee jou nuttige inligting terwyl jy jou eerste projek maak.\n\nJy kan in die instellings verander of wenke gewys word.</string>
+    <string formatted="false" name="dialog_disable_hints_button_hide">VERSTEEK</string>
+    <string formatted="false" name="dialog_disable_hints_button_show">WYS</string>
+    <!--  -->
+    <!-- Crash report dialog -->
+    <!--  -->
+    <!-- Multilingual List -->
+    <string formatted="false" name="device_language">Jou toestel se taal</string>
+    <!-- Symbols -->
+    <string formatted="false" name="percent_symbol">%</string>
+    <string formatted="false" name="hertz_symbol">㎐</string>
+    <string formatted="false" name="no_internet_connection">Geen internetverbinding nie. Maak seker dat wi-fi of mobiele data aangeskakel is.</string>
+    <string formatted="false" name="edit">Wysig</string>
+    <string formatted="false" name="data_value">Waarde</string>
+    <string formatted="false" name="category_recently_used">Onlangs gebruik</string>
+    <string formatted="false" name="new_sprite_dialog_place_visually">Plaas visueel</string>
+    <string formatted="false" name="place_visually_text">Jy sal gevra word om die nuwe karakter of voorwerp op die verhoog te plaas.</string>
+    <string formatted="false" name="new_empty_sprite_note">Let wel: Die karakter of voorwerp sal sonder ’n kostuum geskep word.</string>
+    <!-- Information -->
+    <string formatted="false" name="no_variable_selected">Geen veranderlike gekies nie</string>
+    <string formatted="false" name="search">Soek</string>
+    <string formatted="false" name="no_results_found">Geen resultate gevind nie</string>
+    <string formatted="false" name="query_field_is_empty">Soekveld is leeg</string>
+    <string formatted="false" name="paste">Plak</string>
+    <!-- Particle Effects -->
+    <string formatted="false" name="fade_particle_effect">Vervaag deeltjie-effek</string>
+    <string formatted="false" name="particle_effects_fade_in">in</string>
+    <string formatted="false" name="particle_effects_fade_out">uit</string>
+    <string formatted="false" name="turn_particle_effect_additivity">Skakel additiewe deeltjie-effek</string>
+    <string formatted="false" name="particle_effects_additive_on">aan</string>
+    <string formatted="false" name="particle_effects_additive_off">af</string>
+    <string formatted="false" name="set_particle_color_to">Stel deeltjiekleur op</string>
+    <string formatted="false" name="undo_sort">Ontdoen sortering</string>
+    <string formatted="false" name="sort">Sorteer</string>
+    <string formatted="false" name="checkbox">merkblokkie</string>
+    <!-- Shortcut strings -->
+    <string formatted="false" name="pin_to_home_screen">Speld vas op tuisskerm</string>
+    <string formatted="false" name="shortcut_not_supported">Kortpaaie word nie op hierdie toestel ondersteun nie</string>
+    <string formatted="false" name="project_busy_try_again">Projek is besig, probeer weer</string>
+    <string formatted="false" name="shortcut_project_not_found">Projek nie gevind nie, kortpad gedeaktiveer</string>
+    <string formatted="false" name="shortcut_permission_required_message">Hierdie toestel vereis dat toestemming vir kortpaaie verleen word voordat ’n kortpad op die tuisskerm gevoeg kan word. Verleen asseblief die toestemming in die instellings.</string>
+    <string formatted="false" name="miui_open_settings">Maak instellings oop</string>
+    <string formatted="false" name="shortcut_already_pinned">Hierdie projek is reeds op jou tuisskerm vasgespeld</string>
+</resources>
