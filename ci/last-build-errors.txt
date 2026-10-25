@@ -1,0 +1,6 @@
+BUILD ERRORS: 1 unique
+
+== Missing symbols (count) ==
+
+== First errors ==
+xcodebuild: error: Unable to read project 'Catroid.xcodeproj'.
