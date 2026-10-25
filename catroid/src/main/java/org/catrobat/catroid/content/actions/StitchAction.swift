@@ -7,9 +7,11 @@ open class StitchAction: TemporalAction {
 
     open override func update(_ delta: Float) {
         sprite.runningStitch.pause()
-        var x: Float = sprite.look.xInUserInterfaceDimensionUnit
-        var y: Float = sprite.look.yInUserInterfaceDimensionUnit
-        StageActivity.stageListener.embroideryPatternManager.addStitchCommand(DSTStitchCommand(x, y, sprite.look.zIndex, sprite, sprite.embroideryThreadColor))
+        let x: Float = sprite.look.xInUserInterfaceDimensionUnit
+        let y: Float = sprite.look.yInUserInterfaceDimensionUnit
+        if let stageListener = StageManager.shared.stageListener {
+            stageListener.embroideryPatternManager.addStitchCommand(DSTStitchCommand(x, y, sprite.look.zIndex, sprite, sprite.embroideryThreadColor))
+        }
         sprite.runningStitch.setStartCoordinates(x, y)
         sprite.runningStitch.resume()
     }
