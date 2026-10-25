@@ -2,7 +2,7 @@ import Foundation
 
 open class ThinkSayBubbleAction: TemporalAction {
     public static let TAG: String = String(describing: ThinkSayBubbleAction.self)
-    var androidStringProvider: AndroidStringProvider!
+    var androidStringProvider: StringProvider!
     var scope: Scope!
     var text: Formula!
     var type: Int = 0
@@ -10,30 +10,33 @@ open class ThinkSayBubbleAction: TemporalAction {
     public required init() { super.init() }
 
     open override func update(_ delta: Float) {
-        ShowBubbleActor showBubbleActor
+        let showBubbleActor: ShowBubbleActor?
         do {
-            showBubbleActor = createBubbleActor(androidStringProvider)
+            showBubbleActor = try createBubbleActor(androidStringProvider)
         } catch let e {
             Log.d(ThinkSayBubbleAction.TAG, "Failed to create Bubble Actor", e)
             return
         }
-        if StageActivity.stageListener.getBubbleActorForSprite(scope.sprite) != nil {
-            StageActivity.stageListener.removeBubbleActorForSprite(scope.sprite)
-        }
-        if showBubbleActor != nil {
-            StageActivity.stageListener.setBubbleActorForSprite(scope.sprite, showBubbleActor)
+        
+        if let stageListener = StageManager.shared.stageListener {
+            if stageListener.getBubbleActorForSprite(scope.sprite) != nil {
+                stageListener.removeBubbleActorForSprite(scope.sprite)
+            }
+            if let bubbleActor = showBubbleActor {
+                stageListener.setBubbleActorForSprite(scope.sprite, bubbleActor)
+            }
         }
     }
 
-    public func createBubbleActor(_ stringProvider: AndroidStringProvider) -> ShowBubbleActor {
-        var textToDisplay: String = text == nil ? "" : text.getUserFriendlyString(stringProvider, scope)
-        if textToDisplay.isEmpty() {
+    public func createBubbleActor(_ stringProvider: StringProvider) throws -> ShowBubbleActor? {
+        let textToDisplay: String = text == nil ? "" : try text.getUserFriendlyString(stringProvider, scope)
+        if textToDisplay.isEmpty {
             return nil
         }
         return ShowBubbleActor(textToDisplay, scope.sprite, type)
     }
 
-    public func setAndroidStringProvider(_ androidStringProvider: AndroidStringProvider) {
+    public func setAndroidStringProvider(_ androidStringProvider: StringProvider) {
         self.androidStringProvider = androidStringProvider
     }
 
