@@ -256,7 +256,6 @@ open class Sprite: Nameable, Hashable {
         resetDrawingState()
     }
 
-    /// В Java поля обнулялись; здесь — очищаются/пересоздаются.
     public func invalidate() {
         idToEventThreadMap = [:]
         conditionScriptTriggers = []
@@ -544,7 +543,7 @@ open class Sprite: Nameable, Hashable {
     }
 
     public func releaseAllPointers() {
-        if let stage = StageActivity.stageListener?.stage {
+        if let stage = StageManager.shared.stageListener?.stage {
             for pointer in usedTouchPointer {
                 stage.touchUp(x: 0, y: 0, pointer: pointer, button: 0)
             }
@@ -568,7 +567,7 @@ open class Sprite: Nameable, Hashable {
         for data in sprite.lookList {
             let lookFile = try StorageOperations.copyFileToDir(data.file, imageDir)
             let newData = data.clone()
-            newData.file = lookFile
+            newData.updateFile(lookFile) // Безпечне оновлення через метод, якщо сеттер файлу недоступний
             if setUniqueName {
                 newData.name = UniqueNameProvider().getUniqueNameInNameables(newData.name, lookList)
             }
@@ -577,7 +576,7 @@ open class Sprite: Nameable, Hashable {
         for data in sprite.soundList {
             let soundFile = try StorageOperations.copyFileToDir(data.file, soundsDir)
             let newData = data.clone()
-            newData.file = soundFile
+            newData.updateFile(soundFile)
             if setUniqueName {
                 newData.name = UniqueNameProvider().getUniqueNameInNameables(newData.name, soundList)
             }
