@@ -29,7 +29,6 @@ jobs:
           for z in $(printf '%s\n' "${zips[@]}" | sort -V); do
             echo "unzip $z"
             unzip -oq "$z"
-            git rm -q --cached "$z" || true
             rm -f "$z"
           done
           git config user.name "ios-build-bot"
