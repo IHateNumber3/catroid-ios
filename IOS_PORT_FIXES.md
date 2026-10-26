@@ -68,3 +68,10 @@ Important: parser success only verifies Swift syntax. It does not establish that
 
 - Updated `project.yml` to exclude `**/stagecore/StageActivity.swift` from the Catroid target, retaining `stage/StageActivity.swift`.
 - This addresses the reported duplicate Swift filename error at project source selection time. It does not claim a full Xcode build was run here.
+
+
+## Pass 10 — source filename collision audit
+
+- Excluded the legacy `stagecore/**` subtree from the iOS target. The active iOS implementation is under `stage/`; this prevents duplicate source basenames such as `StageActivity.swift` and `StageListener.swift` from entering the target together.
+- Audited all Swift files present in this archive: no duplicate Swift basenames remain within the archived source tree. The reported `stagecore` files were not present in the supplied archive itself, indicating they exist in the checkout or were left behind during overlay extraction.
+- Archive layout is flat at the repository root: `project.yml`, `catroid/`, `ios/`, etc. are at ZIP root, not wrapped in an extra folder.

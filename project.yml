@@ -29,8 +29,8 @@ targets:
           - "**/*.swift"
         excludes:
           - "**/ui/**"
-          # Avoid duplicate Swift source filename in the legacy stagecore folder.
-          - "**/stagecore/StageActivity.swift"
+          # Legacy stagecore contains duplicate filenames/classes; use the iOS stage implementation.
+          - "**/stagecore/**"
       - path: ios/App
       - path: ios-bridge
         excludes:
