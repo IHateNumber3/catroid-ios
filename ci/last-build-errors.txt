@@ -1,45 +1,7 @@
-BUILD ERRORS: 34 unique
+BUILD ERRORS: 2 unique
 
 == Missing symbols (count) ==
-   4  SoundFilePathWithSprite
-   3  recentlyStarted
-   3  recentlyStopped
-   2  SoundManager
-   1  EventAction
-   1  UserDefinedReceiverBrick
 
 == First errors ==
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:7:165: error: cannot find type 'EventAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/UserDefinedScript.swift:16:33: error: cannot find 'UserDefinedReceiverBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForBubbleBrickAction.swift:7:26: error: value of optional type 'StageListener?' must be unwrapped to refer to member 'getBubbleActorForSprite' of wrapped base type 'StageListener'
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForBubbleBrickAction.swift:8:27: error: value of optional type 'StageListener?' must be unwrapped to refer to member 'removeBubbleActorForSprite' of wrapped base type 'StageListener'
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:19:41: error: consecutive statements on a line must be separated by ';'
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:29:41: error: consecutive statements on a line must be separated by ';'
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:6:23: error: cannot find type 'SoundManager' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:53:49: error: cannot find type 'SoundManager' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:17:54: error: value of type 'MidiSoundManager' has no member 'startedSoundfilePaths'
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:18:39: error: cannot find 'SoundFilePathWithSprite' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:19:40: error: '>' is not a postfix unary operator
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:19:17: error: cannot find 'SoundFilePathWithSprite' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:19:16: error: binary operator '<' cannot be applied to operands of type 'Set<_>.Type' and '_'
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:19:13: error: generic parameter 'Element' could not be inferred
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:19:42: error: cannot find 'recentlyStarted' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:19:77: error: value of type 'MidiSoundManager' has no member 'startedSoundfilePaths'
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:20:16: error: cannot find 'recentlyStarted' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:20:83: error: value of type 'MidiSoundManager' has no member 'isSoundInSpritePlaying'
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:21:17: error: cannot find 'recentlyStarted' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:28:39: error: cannot find 'SoundFilePathWithSprite' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:29:40: error: '>' is not a postfix unary operator
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:29:17: error: cannot find 'SoundFilePathWithSprite' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:29:16: error: binary operator '<' cannot be applied to operands of type 'Set<_>.Type' and '_'
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:29:13: error: generic parameter 'Element' could not be inferred
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:29:42: error: cannot find 'recentlyStopped' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:30:16: error: cannot find 'recentlyStopped' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:31:17: error: cannot find 'recentlyStopped' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:45:44: error: value of type 'MidiSoundManager' has no member 'midiPlayers'
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitTillIdleAction.swift:18:26: error: consecutive statements on a line must be separated by ';'
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitTillIdleAction.swift:23:60: error: consecutive statements on a line must be separated by ';'
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitTillIdleAction.swift:11:49: error: value of optional type 'StageListener?' must be unwrapped to refer to member 'stage' of wrapped base type 'StageListener'
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitTillIdleAction.swift:11:76: error: value of type '[Actor]' has no member 'size'
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitTillIdleAction.swift:17:36: error: value of optional type 'StageListener?' must be unwrapped to refer to member 'stage' of wrapped base type 'StageListener'
-catroid/src/main/java/org/catrobat/catroid/content/actions/WaitTillIdleAction.swift:23:38: error: expected member name or initializer call after type name
+error: filename "StageActivity.swift" used twice: '/Users/runner/work/catroid-ios/catroid-ios/catroid/src/main/java/org/catrobat/catroid/stagecore/StageActivity.swift' and '/Users/runner/work/catroid-ios/catroid-ios/catroid/src/main/java/org/catrobat/catroid/stage/StageActivity.swift'
+error: Filename "StageActivity.swift" used twice: '/Users/runner/work/catroid-ios/catroid-ios/catroid/src/main/java/org/catrobat/catroid/stagecore/StageActivity.swift' and '/Users/runner/work/catroid-ios/catroid-ios/catroid/src/main/java/org/catrobat/catroid/stage/StageActivity.swift' (in target 'Catroid' from project 'Catroid')
