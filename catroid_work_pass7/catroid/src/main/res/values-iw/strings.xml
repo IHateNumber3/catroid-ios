@@ -1,0 +1,2051 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--
+  ~ Catroid: An on-device visual programming system for Android devices
+  ~ Copyright (C) 2010-2026 The Catrobat Team
+  ~ (<http://developer.catrobat.org/credits>)
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU Affero General Public License as
+  ~ published by the Free Software Foundation, either version 3 of the
+  ~ License, or (at your option) any later version.
+  ~
+  ~ An additional term exception under section 7 of the GNU Affero
+  ~ General Public License, version 3, is available at
+  ~ http://developer.catrobat.org/license_additional_term
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU Affero General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU Affero General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- General terms -->
+    <string formatted="false" name="stage">במה</string>
+    <string formatted="false" name="play">הפעלה</string>
+    <string formatted="false" name="settings">הגדרות</string>
+    <string formatted="false" name="redo">ביצוע חוזר</string>
+    <string formatted="false" name="undo">ביטול</string>
+    <string formatted="false" name="new_option">חדש…</string>
+    <string formatted="false" name="edit_option">עריכה…</string>
+    <string formatted="false" name="confirm">אישור</string>
+    <string formatted="false" name="ignore">התעלמות</string>
+    <string formatted="false" name="cancel">ביטול</string>
+    <string formatted="false" name="save">שמירה</string>
+    <string formatted="false" name="help">עזרה</string>
+    <string formatted="false" name="discard">ביטול השינויים</string>
+    <string formatted="false" name="next">קדימה</string>
+    <string formatted="false" name="ok">אישור</string>
+    <string formatted="false" name="done">סיום</string>
+    <string formatted="false" name="close">סגירה</string>
+    <string formatted="false" name="assistant">עוזר</string>
+    <string formatted="false" name="yes">כן</string>
+    <string formatted="false" name="no">לא</string>
+    <string formatted="false" name="once">פעם אחת</string>
+    <string formatted="false" name="always">תמיד</string>
+    <string formatted="false" name="deny">דחייה</string>
+    <string formatted="false" name="do_not_show_again">לא להציג שוב</string>
+    <string formatted="false" name="accept">הסכמה</string>
+    <string formatted="false" name="decline">סירוב</string>
+    <string formatted="false" name="select_all">בחירת הכול</string>
+    <string formatted="false" name="deselect_all">ביטול בחירת הכול</string>
+    <string formatted="false" name="skip">דילוג</string>
+    <string formatted="false" name="warning">אזהרה</string>
+    <string formatted="false" name="error">שגיאה</string>
+    <string formatted="false" name="loading">כעת בטעינה…</string>
+    <string formatted="false" name="please_wait">נא להמתין</string>
+    <string formatted="false" name="search_hint">חיפוש…</string>
+    <string formatted="false" name="backpack_add">הוספה לתרמיל</string>
+    <string formatted="false" name="share_website_text">share.catrob.at</string>
+    <!-- Security warning dialog -->
+    <string formatted="false" name="security_warning_dialog_msg">המיזם שהורדת מאזין לקול שלך ברקע וגם שולח נתונים לאינטרנט. ייתכן שזה לא מזיק ונחוץ לפעולה המתוכננת שלו. עם זאת, כדאי לוודא שמה שנאמר בזמן שהמיזם פועל הוא בטוח. במקרה של ספק, מומלץ למחוק את המיזם שהורד. אם ברור לך שהמיזם מזיק, אפשר גם לדווח עליו בעמוד שלו בפלטפורמת הקהילה של Catrobat.</string>
+    <!-- Replace Api dialog -->
+    <string formatted="false" name="api_replacement_dialog_neutral">העלאה ללא שינוי</string>
+    <string formatted="false" name="api_replacement_dialog_accept">העלאה עם החלפת המפתחות</string>
+    <string formatted="false" name="api_replacement_dialog_warning">המיזם מכיל לבנים שניגשות לאינטרנט, ונראה שהוא מכיל גם מפתחות API. ב־%1s מוסבר מדוע העלאת המפתחות האלה עלולה להיות מסוכנת.</string>
+    <string formatted="false" name="api_replacement">יש להכניס כאן מפתח API</string>
+    <!-- -->
+    <!-- Login/Logout Mechanism -->
+    <string formatted="false" name="loading_check_oauth_token">בדיקת נתוני ההתחברות…</string>
+    <string formatted="false" name="loading_google_exchange_code">החלפת נתוני ההתחברות של Google…</string>
+    <string formatted="false" name="loading_google_login">ההתחברות עם Google בשרת שלנו הושלמה…</string>
+    <string formatted="false" name="logout_successful">התנתקת בהצלחה</string>
+    <string formatted="false" name="degrees">מעלות</string>
+    <string formatted="false" name="background">רקע</string>
+    <string formatted="false" name="landscape">לרוחב</string>
+    <string formatted="false" name="portrait">לאורך</string>
+    <string formatted="false" name="unknown">לא ידוע</string>
+    <string formatted="false" name="disconnect">התנתקות</string>
+    <!--  -->
+    <!-- Main Menu -->
+    <string formatted="false" name="main_menu_continue">המשך המיזם</string>
+    <string formatted="false" name="main_menu_new">מיזם חדש</string>
+    <string formatted="false" name="main_menu_programs">מיזמים</string>
+    <string formatted="false" name="main_menu_help">עזרה</string>
+    <string formatted="false" name="main_menu_web">קהילת Catrobat</string>
+    <string formatted="false" name="main_menu_upload">העלאת מיזם</string>
+    <string formatted="false" name="main_menu_play">הפעלת המיזם</string>
+    <string formatted="false" name="main_menu_rate_app">דירוג היישום</string>
+    <string formatted="false" name="main_menu_terms_of_use">תנאי השימוש והשירות</string>
+    <string formatted="false" name="main_menu_privacy_policy">מדיניות פרטיות</string>
+    <string formatted="false" name="main_menu_about">אודות היישום</string>
+    <string formatted="false" name="main_menu_login">התחברות</string>
+    <string formatted="false" name="main_menu_logout">התנתקות</string>
+    <string formatted="false" name="main_menu_scratch_converter">ממיר Scratch</string>
+    <string formatted="false" name="main_menu_play_store_not_installed">לא נמצאה חנות יישומים</string>
+    <!--  -->
+    <!-- Marketing activity -->
+    <string formatted="false" name="marketing_created_with">נוצר בעזרת</string>
+    <string formatted="false" name="marketing_app_details">פרטים על היישום</string>
+    <string formatted="false" name="marketing_more_on_google_play">יישומים נוספים בחנות היישומים</string>
+    <string formatted="false" name="error_cannot_open_huawei_app_gallery">אופס! פתיחת Huawei AppGallery נכשלה, נא לנסות שוב מאוחר יותר.</string>
+    <string formatted="false" name="google_play_store_logo">חנות Google Play</string>
+    <string formatted="false" name="huawei_app_gallery">Huawei App Gallery</string>
+    <!-- NFC activity -->
+    <string formatted="false" name="nfc_activity_title">תגיות NFC</string>
+    <!-- Settings activity -->
+    <string formatted="false" name="preference_title">הגדרות</string>
+    <string formatted="false" name="preference_title_language">שפה</string>
+    <string formatted="false" name="preference_description_language">הגדרת שפת היישום</string>
+    <string formatted="false" name="preference_title_web_access">גישה לרשת</string>
+    <string formatted="false" name="preference_description_web_access">הוספה או הסרה של דומיינים מהימנים</string>
+    <string formatted="false" name="preference_screen_web_access_title">עריכת דומיינים מהימנים</string>
+    <string formatted="false" name="preference_title_ai">הרחבת בינה מלאכותית (AI)</string>
+    <string formatted="false" name="preference_description_ai">הפעלת לבנים וחיישנים של בינה מלאכותית</string>
+    <string formatted="false" name="preference_title_ai_speech_recognition">זיהוי דיבור</string>
+    <string formatted="false" name="preference_description_ai_speech_recognition">הפעלת לבנים וחיישנים של זיהוי דיבור</string>
+    <string formatted="false" name="preference_title_ai_speech_synthetization">סינתזת דיבור</string>
+    <string formatted="false" name="preference_description_ai_speech_synthetization">הפעלת לבנים וחיישנים של סינתזת דיבור</string>
+    <string formatted="false" name="preference_title_ai_face_detection">זיהוי פנים</string>
+    <string formatted="false" name="preference_description_ai_face_detection">הפעלת לבנים וחיישנים של זיהוי פנים</string>
+    <string formatted="false" name="preference_title_ai_pose_detection">זיהוי תנוחה</string>
+    <string formatted="false" name="preference_description_ai_pose_detection">הפעלת לבנים וחיישנים של זיהוי תנוחה</string>
+    <string formatted="false" name="preference_title_ai_text_recognition">זיהוי טקסט</string>
+    <string formatted="false" name="preference_description_ai_text_recognition">הפעלת לבנים וחיישנים של זיהוי טקסט</string>
+    <string formatted="false" name="preference_title_ai_object_recognition">זיהוי עצמים</string>
+    <string formatted="false" name="preference_description_ai_object_recognition">הפעלת חיישנים לזיהוי עצמים ולמעקב אחריהם</string>
+    <string formatted="false" name="preference_title_accessibility">נגישות</string>
+    <string formatted="false" name="preference_description_accessibility">שינוי התצוגה של היישום</string>
+    <string formatted="false" name="preference_title_accessibility_profiles">פרופילי נגישות</string>
+    <string formatted="false" name="preference_title_accessibility_profile">פרופילים מוגדרים מראש</string>
+    <string formatted="false" name="preference_title_accessibility_profile_headline">פרופילים</string>
+    <string formatted="false" name="preference_title_accessibility_predefined_profile_headline">פרופילים מוגדרים מראש</string>
+    <string formatted="false" name="preference_description_accessibility_profiles">בחירת פרופיל נגישות מוגדר מראש</string>
+    <string formatted="false" name="preference_title_accessibility_text_appearance">תצוגת טקסט</string>
+    <string formatted="false" name="preference_title_accessibility_handling">תפעול</string>
+    <string formatted="false" name="preference_title_accessibility_category_icons_big">סמלים גדולים</string>
+    <string formatted="false" name="preference_description_accessibility_category_icons_big">הגדלת הסמלים.</string>
+    <string formatted="false" name="preference_title_accessibility_category_icons_high_contrast">סמלים בניגודיות גבוהה</string>
+    <string formatted="false" name="preference_title_accessibility_Brick_icons">סמלים</string>
+    <string formatted="false" name="preference_title_accessibility_category_icons">הצגת סמלים</string>
+    <string formatted="false" name="preference_description_accessibility_category_icons">הוספת סמלים לקטגוריות וללבנים.</string>
+    <string formatted="false" name="preference_title_accessibility_high_contrast">ניגודיות גבוהה</string>
+    <string formatted="false" name="preference_description_accessibility_high_contrast">הגברת הניגודיות של הטקסט.</string>
+    <string formatted="false" name="preference_description_accessibility_large_text">הגדלת הטקסט.</string>
+    <string formatted="false" name="preference_title_accessibility_large_text">טקסט גדול</string>
+    <string formatted="false" name="preference_title_accessibility_element_spacing">מרווח גדול בין רכיבים</string>
+    <string formatted="false" name="preference_description_accessibility_element_spacing">הגדלת המרווח בין רכיבים ברשימות.</string>
+    <string formatted="false" name="preference_title_accessibility_dragndrop_delay">השהיית גרירה ושחרור</string>
+    <string formatted="false" name="preference_description_accessibility_dragndrop_delay">השהיית גרירה ושחרור של לבנים.</string>
+    <string formatted="false" name="preference_title_accessibility_beginner_bricks">מצב מתחילים</string>
+    <string formatted="false" name="preference_description_accessibility_beginner_bricks">הצגת אפשרויות פשוטות בלבד.</string>
+    <string formatted="false" name="preference_title_accessibility_font_style">בחירת סוג גופן</string>
+    <string formatted="false" name="accessibility_font_regular">רגיל</string>
+    <string formatted="false" name="accessibility_font_serif">סריף</string>
+    <string formatted="false" name="accessibility_font_dyslexic">דיסלקציה</string>
+    <string formatted="false" name="accessibility_settings_applied">השינויים הוחלו</string>
+    <string formatted="false" name="preference_access_title_profile_default">ברירת מחדל</string>
+    <string formatted="false" name="preference_access_summary_profile_default">הגדרות ברירת מחדל</string>
+    <string formatted="false" name="preference_access_title_profile_custom">הפרופיל המותאם שלי</string>
+    <string formatted="false" name="preference_access_summary_profile_custom">ההגדרות האישיות שלי</string>
+    <string formatted="false" name="preference_access_title_profile_argus">ארגוס</string>
+    <string formatted="false" name="preference_access_summary_profile_argus">ניגודיות גבוהה, סמלים נוספים</string>
+    <string formatted="false" name="preference_access_title_profile_odin">אודין</string>
+    <string formatted="false" name="preference_access_summary_profile_odin">טקסט גדול, סמלים גדולים, מרווח גדול בין רכיבים, ניגודיות גבוהה</string>
+    <string formatted="false" name="preference_access_title_profile_fenrir">פנריר</string>
+    <string formatted="false" name="preference_access_summary_profile_fenrir">מרווח גדול בין רכיבים, השהיית גרירה ושחרור</string>
+    <string formatted="false" name="preference_access_title_profile_tiro">טירו</string>
+    <string formatted="false" name="preference_access_summary_profile_tiro">מצב מתחילים</string>
+    <string name="preference_dialog_use_full_features">שימוש בכל האפשרויות</string>
+    <string name="preference_dialog_appgallery">AppGallery</string>
+    <string name="preference_dialog_google_play">Google Play</string>
+    <string name="preference_lego_dialog_text">כדי ליהנות מכל האפשרויות של הרחבות Lego Mindstorms, מומלץ להשתמש ביישום Mindstorms Code EV3 NXT של Catrobat.</string>
+    <string name="preference_embroidery_dialog_text">כדי ליהנות מכל האפשרויות של הרחבת הרקמה, מומלץ להשתמש ביישום Embroidery Designer של Catrobat.</string>
+    <string name="preference_phiro_dialog_text">כדי ליהנות מכל האפשרויות של הרחבת הרובוטיקה Phiro, מומלץ להשתמש ביישום Phiro Code של Catrobat.</string>
+    <!-- Lego/Drone/Raspi/Chromecast/Embroidery -->
+    <string formatted="false" name="preference_title_enable_quadcopter_bricks">הרחבת Parrot AR.Drone 2.0</string>
+    <string formatted="false" name="preference_description_quadcopter_bricks">מאפשר ליישום לשלוט ברחפנים מסוג Parrot AR.Drone 2.0</string>
+    <string formatted="false" name="preference_title_enable_jumpingsumo_bricks">הרחבת Parrot Jumping Sumo</string>
+    <string formatted="false" name="preference_description_jumpingsumo_bricks">מאפשר ליישום לשלוט ברובוטים מסוג Jumping Sumo של Parrot</string>
+    <string formatted="false" name="preference_title_enable_mindstorms_nxt_bricks">הרחבת Lego Mindstorms NXT</string>
+    <string formatted="false" name="preference_title_enable_mindstorms_ev3_bricks">הרחבת Lego Mindstorms EV3</string>
+    <string formatted="false" name="preference_description_mindstorms_nxt_bricks">מאפשר ליישום לשלוט ברובוטים מסוג Lego Mindstorms NXT</string>
+    <string formatted="false" name="preference_description_mindstorms_ev3_bricks">מאפשר ליישום לשלוט ברובוטים מסוג Lego Mindstorms EV3</string>
+    <string formatted="false" name="preference_title_mindstorms_nxt_sensors">חיישני Lego NXT</string>
+    <string formatted="false" name="preference_title_mindstorms_ev3_sensors">חיישני Lego EV3</string>
+    <string formatted="false" name="preference_title_drone_config_properties">תצורת Parrot AR.Drone 2.0</string>
+    <string formatted="false" name="preference_title_enable_phiro_bricks">הרחבת Phiro של RobotixEdu</string>
+    <string formatted="false" name="preference_description_phiro_bricks">מאפשר ליישום לשלוט ברובוטים מסוג Phiro של RobotixEdu</string>
+    <string formatted="false" name="preference_title_enable_arduino_bricks">הרחבת Arduino</string>
+    <string formatted="false" name="preference_description_arduino_bricks">מאפשר ליישום לשלוט בלוחות Arduino</string>
+    <string formatted="false" name="preference_title_enable_embroidery_bricks">הרחבת רקמה</string>
+    <string formatted="false" name="preference_description_embroidery_bricks">יצירת דוגמאות למכונות רקמה</string>
+    <string formatted="false" name="preference_title_cast_feature_globally_enabled">הרחבת Chromecast</string>
+    <string formatted="false" name="preference_description_cast_feature_globally_enabled">הצגת כפתור Cast והפעלת מיזמי Cast</string>
+    <string formatted="false" name="preference_title_enable_plot_bricks">הרחבת שרטוט ולייזר</string>
+    <string formatted="false" name="preference_description_plot_bricks">יצירת דוגמאות למכונות שרטוט (פלוטר) ולמכונות חיתוך בלייזר</string>
+    <string formatted="false" name="preference_title_enable_nfc_bricks">הרחבת תקשורת טווח קצר (NFC)</string>
+    <string formatted="false" name="preference_description_nfc_bricks">מאפשר ליישום להשתמש בתגיות NFC במיזמים</string>
+    <string formatted="false" name="preference_title_enable_crash_reports">שליחת דוחות קריסה אנונימיים</string>
+    <string formatted="false" name="preference_description_crash_reports">מאפשר ליישום לשלוח דוחות קריסה באופן אוטומטי</string>
+    <!-- -->
+    <string formatted="false" name="preference_title_enable_raspi_bricks">הרחבת Raspberry Pi</string>
+    <string formatted="false" name="preference_description_raspi_bricks">מאפשר ליישום לשלוט במחשבי Raspberry Pi</string>
+    <string formatted="false" name="preference_raspi_enable_bricks">הפעלת לבנים וחיישנים</string>
+    <string formatted="false" name="preference_raspi_help">עזרה / צעדים ראשונים</string>
+    <string formatted="false" name="preference_raspi_help_summary">עזרה בהגדרת החיבור</string>
+    <string formatted="false" name="preference_raspi_host">כתובת IP / שם מארח של Raspberry Pi</string>
+    <string formatted="false" name="preference_raspi_port">פורט של Raspberry Pi</string>
+    <!--  -->
+    <string formatted="false" name="preference_title_multiplayer_variables_enabled">הרחבת ריבוי משתתפים</string>
+    <string formatted="false" name="preference_description_multiplayer_variables_enabled">מאפשר ליישום להשתמש במשתני ריבוי משתתפים המשותפים דרך Bluetooth</string>
+    <string formatted="false" name="preference_title_enable_test_bricks">הרחבת בדיקות</string>
+    <string formatted="false" name="preference_description_test_bricks">מאפשר ליצור בדיקות</string>
+    <!-- Scratch Converter activity -->
+    <string formatted="false" name="beta">ביתא</string>
+    <string formatted="false" name="error_scratch_program_not_accessible_any_more">אופס! נראה שהמיזם נעלם או שאיבדת את הגישה אליו.</string>
+    <string formatted="false" name="error_scratch_project_data_not_available">אופס! נראה שחלקים מהמיזם חסרים, נא לנסות שוב מאוחר יותר.</string>
+    <string formatted="false" name="error_request_timeout">אופס! השרת שלנו לא הגיב בזמן, נא לנסות שוב מאוחר יותר.</string>
+    <string formatted="false" name="error_scratch_program_conversion_failed">אופס! המרת המיזם נכשלה, נא לנסות שוב מאוחר יותר.</string>
+    <string formatted="false" name="error_specific_scratch_program_conversion_failed_x">אופס! המרת %1$s נכשלה, נא לנסות שוב מאוחר יותר.</string>
+    <string formatted="false" name="error_scratch_converter_outdated_app_version">הגרסה שלך של היישום אינה עדכנית. ממיר ה־Scratch שלנו פועל רק בגרסה האחרונה. נא לעדכן את היישום.</string>
+    <string formatted="false" name="error_cannot_open_not_existing_scratch_program">לא הצלחתי לפתוח את מיזם ה־Scratch הזה. נראה שביטלת את ההמרה או ההורדה של מיזם ה־Scratch, או ששינית את שמו או מחקת אותו בינתיים.</string>
+    <string formatted="false" name="error_cannot_open_currently_downloading_scratch_program">עדיין אי אפשר לפתוח את המיזם. נא להמתין עד לסיום ההורדה.</string>
+    <string formatted="false" name="error_cannot_open_not_yet_downloaded_scratch_program">עדיין אי אפשר לפתוח את המיזם. יש להוריד אותו קודם ורק אז לפתוח אותו.</string>
+    <string formatted="false" name="error_cannot_convert_deprecated_scratch_program_x_x">לא הצלחתי להמיר את %1$s. נראה שזהו מיזם Scratch ישן מלפני %2$s. נא לנסות מיזם אחר.</string>
+    <plurals name="error_cannot_convert_more_than_x_programs">
+        <item quantity="one">אי אפשר להמיר יותר מ־%d מיזם בו־זמנית. נא להמתין קודם לסיום ההמרות הפעילות.</item>
+        <item quantity="two">אי אפשר להמיר יותר מ־%d מיזמים בו־זמנית. נא להמתין קודם לסיום ההמרות הפעילות.</item>
+        <item quantity="other">אי אפשר להמיר יותר מ־%d מיזמים בו־זמנית. נא להמתין קודם לסיום ההמרות הפעילות.</item>
+    </plurals>
+    <string formatted="false" name="error_cannot_open_failed_scratch_program">אי אפשר לפתוח את המיזם כי הוא לא הומר כראוי. נא לנסות להמיר אותו שוב.</string>
+    <string formatted="false" name="search_failed">לא נמצאו תוצאות, נא לנסות שוב מאוחר יותר.</string>
+    <string formatted="false" name="connection_lost_or_closed_by_server">החיבור לשרת אבד.</string>
+    <string formatted="false" name="connection_failed">אין לנו אפשרות לחבר אותך לשרת כרגע, נא לנסות שוב מאוחר יותר.</string>
+    <string formatted="false" name="authentication_failed">נראה שיש בעיה בחיבור שלך לשירות. נא לפנות לצוות Catrobat.</string>
+    <plurals name="scratch_conversion_scheduled_x">
+        <item quantity="one">נוסף %d מיזם Scratch לתור…</item>
+        <item quantity="two">נוספו %d מיזמי Scratch לתור…</item>
+        <item quantity="other">נוספו %d מיזמי Scratch לתור…</item>
+    </plurals>
+    <string formatted="false" name="scratch_conversion_started">המרת מיזם ה־Scratch החלה…</string>
+    <string formatted="false" name="convert">המרה</string>
+    <string formatted="false" name="converting">כעת בהמרה…</string>
+    <string formatted="false" name="status_scheduled">בתור</string>
+    <string formatted="false" name="status_waiting_for_worker">מתבצע חיפוש של שרת המרה פנוי… נא להמתין…</string>
+    <string formatted="false" name="status_started">החל…</string>
+    <string formatted="false" name="status_conversion_finished">ההמרה הסתיימה</string>
+    <plurals name="status_in_progress_x_jobs">
+        <item quantity="one">בתהליך: %d משימה</item>
+        <item quantity="two">בתהליך: %d משימות</item>
+        <item quantity="other">בתהליך: %d משימות</item>
+    </plurals>
+    <plurals name="status_completed_x_jobs">
+        <item quantity="one">הושלמה: %d משימה</item>
+        <item quantity="two">הושלמו: %d משימות</item>
+        <item quantity="other">הושלמו: %d משימות</item>
+    </plurals>
+    <string formatted="false" name="status_conversion_failed">ההמרה נכשלה!</string>
+    <string formatted="false" name="status_downloading">כעת בהורדה…</string>
+    <string formatted="false" name="status_download_finished">ההורדה הסתיימה.</string>
+    <string formatted="false" name="status_download_canceled">ההורדה בוטלה!</string>
+    <string formatted="false" name="scratch_programs_in_progress_title">בתהליך</string>
+    <string formatted="false" name="scratch_programs_finished_title">מיזמים שהומרו</string>
+    <string formatted="false" name="by_x">מאת %1$s</string>
+    <string formatted="false" name="warning_program_visibility">אזהרה:\nנראה שזהו מיזם פרטי. אפשר לנסות להמיר אותו, אבל ייתכן שזה לא יעבוד.</string>
+    <string formatted="false" name="instructions">הנחיות</string>
+    <string formatted="false" name="notes_and_credits">הערות ותודות</string>
+    <string formatted="false" name="shared_at_x">שותף: %1$s</string>
+    <string formatted="false" name="modified_at_x">שונה: %1$s</string>
+    <string formatted="false" name="remixes">רמיקסים</string>
+    <!--  -->
+    <string formatted="false" name="author">יוצר:</string>
+    <string formatted="false" name="screen_size">גודל הבמה:</string>
+    <string formatted="false" name="mode">מצב:</string>
+    <string formatted="false" name="remix_of">רמיקס של:</string>
+    <string formatted="false" name="description_hint">יש להקיש כדי להוסיף תיאור</string>
+    <string formatted="false" name="notes_and_credits_hint">יש להקיש כדי להוסיף הערות ותודות</string>
+    <!-- ScratchReconvertDialog Strings -->
+    <string formatted="false" name="reconvert_text">המרת את המיזם הזה לפני %1$s.</string>
+    <plurals name="minutes">
+        <item quantity="one">%d דקה</item>
+        <item quantity="two">%d דקות</item>
+        <item quantity="other">%d דקות</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%d שעה</item>
+        <item quantity="two">%d שעות</item>
+        <item quantity="other">%d שעות</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">%d יום</item>
+        <item quantity="two">%d ימים</item>
+        <item quantity="other">%d ימים</item>
+    </plurals>
+    <string formatted="false" name="reconvert_dialog_download">הורדת המיזם מחדש</string>
+    <string formatted="false" name="reconvert_dialog_reconvert">המרת המיזם מחדש</string>
+    <!--  -->
+    <!-- ERRORS -->
+    <!-- Terms of Use and Service Error -->
+    <string formatted="false" name="declined_terms_of_use_and_service_alert">כדי להשתמש ביישום שלנו, יש לאשר את תנאי השימוש והשירות. אם לא נוח לך לעשות זאת, אפשר להשתמש בשירותי הרשת החינמיים שלנו בכתובת</string>
+    <string formatted="false" name="wtf_error">אירעה שגיאה בלתי צפויה: לא הצלחתי לשחזר את מיזם הדוגמה.</string>
+    <!-- Project Handling Errors -->
+    <string formatted="false" name="error_copy_project">אירעה שגיאה בעת העתקת המיזם</string>
+    <!-- Dialog Errors -->
+    <string formatted="false" name="name_already_exists">השם הזה כבר בשימוש, נא לבחור שם אחר.</string>
+    <string formatted="false" name="name_consists_of_spaces_only">הוזנו רק רווחים בשדה הטקסט. נא להזין טקסט עם אותיות, מספרים או תווים מיוחדים אחרים.</string>
+    <string formatted="false" name="name_empty">נא להזין טקסט</string>
+    <!-- Recycler View -->
+    <string formatted="false" name="am_empty_list">אין עדיין פריטים ברשימה הזו. נא להוסיף פריטים קודם.</string>
+    <string formatted="false" name="reject_import">לא ניתן היה להוסיף את הדמות או האובייקט.</string>
+    <string formatted="false" name="am_merge_error">המיזוג לא בוצע. כדי למזג יש לבחור בדיוק 2 מיזמים.</string>
+    <string formatted="false" name="am_backpack">הכנסה לתרמיל</string>
+    <string formatted="false" name="am_unpack">הוצאה מהתרמיל</string>
+    <string formatted="false" name="am_copy">העתקה</string>
+    <string formatted="false" name="am_delete">מחיקה</string>
+    <string formatted="false" name="am_rename">שינוי שם</string>
+    <string formatted="false" name="am_convert">המרה</string>
+    <string formatted="false" name="am_merge">מיזוג</string>
+    <string formatted="false" name="dialog_confirm_delete">אי אפשר לבטל פעולה זו!</string>
+    <string formatted="false" name="list_headline_sprites">דמויות ואובייקטים</string>
+    <!-- Options Menu Options -->
+    <string formatted="false" name="backpack">תרמיל</string>
+    <string formatted="false" name="copy">העתקה</string>
+    <string formatted="false" name="delete">מחיקה</string>
+    <string formatted="false" name="rename">שינוי שם</string>
+    <string formatted="false" name="merge">מיזוג</string>
+    <string formatted="false" name="show_details">הצגת פרטים</string>
+    <string formatted="false" name="hide_details">הסתרת פרטים</string>
+    <string formatted="false" name="project_options">אפשרויות המיזם</string>
+    <string formatted="false" name="from_local">הוספה מהמכשיר</string>
+    <string formatted="false" name="sort_projects">מיון</string>
+    <string formatted="false" name="unsort_projects">ביטול המיון</string>
+    <string formatted="false" name="import_from_project">בחירת מיזם לייבוא ממנו</string>
+    <!-- New Dialog Titles -->
+    <string formatted="false" name="new_scene_dialog">סצנה חדשה</string>
+    <!-- Delete Dialog Titles -->
+    <plurals name="delete_projects">
+        <item quantity="one">למחוק את המיזם?</item>
+        <item quantity="two">למחוק את המיזמים?</item>
+        <item quantity="other">למחוק את המיזמים?</item>
+    </plurals>
+    <plurals name="delete_scenes">
+        <item quantity="one">למחוק את הסצנה?</item>
+        <item quantity="two">למחוק את הסצנות?</item>
+        <item quantity="other">למחוק את הסצנות?</item>
+    </plurals>
+    <plurals name="delete_sprites">
+        <item quantity="one">למחוק את הדמות או האובייקט?</item>
+        <item quantity="two">למחוק את הדמויות או האובייקטים?</item>
+        <item quantity="other">למחוק את הדמויות או האובייקטים?</item>
+    </plurals>
+    <plurals name="delete_looks">
+        <item quantity="one">למחוק את המראה?</item>
+        <item quantity="two">למחוק את המראות?</item>
+        <item quantity="other">למחוק את המראות?</item>
+    </plurals>
+    <plurals name="delete_sounds">
+        <item quantity="one">למחוק את הצליל?</item>
+        <item quantity="two">למחוק את הצלילים?</item>
+        <item quantity="other">למחוק את הצלילים?</item>
+    </plurals>
+    <plurals name="delete_nfc_tags">
+        <item quantity="one">למחוק את התגית?</item>
+        <item quantity="two">למחוק את התגיות?</item>
+        <item quantity="other">למחוק את התגיות?</item>
+    </plurals>
+    <plurals name="delete_scripts">
+        <item quantity="one">למחוק את התסריט?</item>
+        <item quantity="two">למחוק את התסריטים?</item>
+        <item quantity="other">למחוק את התסריטים?</item>
+    </plurals>
+    <!-- Dialog Labels -->
+    <string formatted="false" name="project_name_label">שם המיזם</string>
+    <string formatted="false" name="scene_name_label">שם הסצנה</string>
+    <string formatted="false" name="sprite_name_label">שם הדמות או האובייקט</string>
+    <string formatted="false" name="sprite_group_name_label">שם הקבוצה</string>
+    <string formatted="false" name="script_group_label">שם קבוצת התסריטים</string>
+    <string formatted="false" name="look_name_label">שם המראה</string>
+    <string formatted="false" name="sound_name_label">שם הצליל</string>
+    <string formatted="false" name="nfc_tag_name_label">שם תגית ה־NFC</string>
+    <string formatted="false" name="string_label">טקסט</string>
+    <string formatted="false" name="data_label">שם</string>
+    <string formatted="false" name="keyword_label">חיפוש…</string>
+    <string formatted="false" name="html_label">הכנסת טקסט HTML</string>
+    <string formatted="false" name="Image_format_not_supported">תבנית התמונה אינה נתמכת</string>
+    <string formatted="false" name="import_conflicting_variables">לא ניתן היה להוסיף את הדמות או האובייקט.</string>
+    <string formatted="false" name="import_conflicting_variables_reason">הסיבה היא שיש התנגשות בשמות של המשתנים או הרשימות הבאים: הם משמשים לכל הדמויות והאובייקטים, ואותו שם משמש גם לדמות או לאובייקט אחד בלבד:</string>
+    <string formatted="false" name="import_conflicting_variables_try_again">נא לשנות את השם של אחד מהמשתנים או מהרשימות האלה ולנסות שוב.</string>
+    <!-- Details -->
+    <string formatted="false" name="project_details">גישה אחרונה: %s, גודל: %s</string>
+    <string formatted="false" name="last_access_today">היום, ב־%s</string>
+    <string formatted="false" name="scene_details">דמויות ואובייקטים: %d, מראות: %d, צלילים: %d</string>
+    <string formatted="false" name="sprite_details">לבנים: %d, מראות: %d, צלילים: %d</string>
+    <string formatted="false" name="look_details">רזולוציה: %s, גודל: %s</string>
+    <string formatted="false" name="sound_duration">משך זמן: %s</string>
+    <string formatted="false" name="sound_details">משך זמן: %s, גודל: %s</string>
+    <!--  -->
+    <!-- Rename Dialog Titles -->
+    <string formatted="false" name="rename_project">שינוי שם המיזם</string>
+    <string formatted="false" name="rename_scene_dialog">שינוי שם הסצנה</string>
+    <string formatted="false" name="rename_sprite_dialog">שינוי שם הדמות או האובייקט</string>
+    <string formatted="false" name="rename_look_dialog">שינוי שם המראה</string>
+    <string formatted="false" name="rename_sound_dialog">שינוי שם הצליל</string>
+    <string formatted="false" name="rename_nfctag_dialog">שינוי שם תגית NFC</string>
+    <string formatted="false" name="rename_data_dialog">שינוי שם</string>
+    <!-- New Script Group Dialog -->
+    <string formatted="false" name="new_group">קבוצה חדשה</string>
+    <string formatted="false" name="default_group_name">קבוצה</string>
+    <!-- New Scene Menu -->
+    <string formatted="false" name="new_scene">סצנה חדשה</string>
+    <!-- Action Toasts -->
+    <!-- Backpack -->
+    <string formatted="false" name="backpack_empty">התרמיל ריק. אין מה להוציא ממנו.</string>
+    <plurals name="packed_scenes">
+        <item quantity="one">הוכנסה לתרמיל %d סצנה.</item>
+        <item quantity="two">הוכנסו לתרמיל %d סצנות.</item>
+        <item quantity="other">הוכנסו לתרמיל %d סצנות.</item>
+    </plurals>
+    <plurals name="packed_sprites">
+        <item quantity="one">הוכנסה לתרמיל %d דמות או אובייקט.</item>
+        <item quantity="two">הוכנסו לתרמיל %d דמויות או אובייקטים.</item>
+        <item quantity="other">הוכנסו לתרמיל %d דמויות או אובייקטים.</item>
+    </plurals>
+    <plurals name="packed_looks">
+        <item quantity="one">הוכנס לתרמיל %d מראה.</item>
+        <item quantity="two">הוכנסו לתרמיל %d מראות.</item>
+        <item quantity="other">הוכנסו לתרמיל %d מראות.</item>
+    </plurals>
+    <plurals name="packed_sounds">
+        <item quantity="one">הוכנס לתרמיל %d צליל.</item>
+        <item quantity="two">הוכנסו לתרמיל %d צלילים.</item>
+        <item quantity="other">הוכנסו לתרמיל %d צלילים.</item>
+    </plurals>
+    <string formatted="false" name="packed_script_group">קבוצת תסריטים אחת הוכנסה לתרמיל.</string>
+    <!-- Unpack -->
+    <plurals name="unpacked_scenes">
+        <item quantity="one">הוצאה מהתרמיל %d סצנה.</item>
+        <item quantity="two">הוצאו מהתרמיל %d סצנות.</item>
+        <item quantity="other">הוצאו מהתרמיל %d סצנות.</item>
+    </plurals>
+    <plurals name="unpacked_sprites">
+        <item quantity="one">הוצאה מהתרמיל %d דמות או אובייקט.</item>
+        <item quantity="two">הוצאו מהתרמיל %d דמויות או אובייקטים.</item>
+        <item quantity="other">הוצאו מהתרמיל %d דמויות או אובייקטים.</item>
+    </plurals>
+    <plurals name="unpacked_looks">
+        <item quantity="one">הוצא מהתרמיל %d מראה.</item>
+        <item quantity="two">הוצאו מהתרמיל %d מראות.</item>
+        <item quantity="other">הוצאו מהתרמיל %d מראות.</item>
+    </plurals>
+    <plurals name="unpacked_sounds">
+        <item quantity="one">הוצא מהתרמיל %d צליל.</item>
+        <item quantity="two">הוצאו מהתרמיל %d צלילים.</item>
+        <item quantity="other">הוצאו מהתרמיל %d צלילים.</item>
+    </plurals>
+    <plurals name="unpacked_scripts">
+        <item quantity="one">הוצא מהתרמיל %d תסריט.</item>
+        <item quantity="two">הוצאו מהתרמיל %d תסריטים.</item>
+        <item quantity="other">הוצאו מהתרמיל %d תסריטים.</item>
+    </plurals>
+    <!-- Copy -->
+    <plurals name="copied_scenes">
+        <item quantity="one">הועתקה %d סצנה.</item>
+        <item quantity="two">הועתקו %d סצנות.</item>
+        <item quantity="other">הועתקו %d סצנות.</item>
+    </plurals>
+    <plurals name="copied_sprites">
+        <item quantity="one">הועתקה %d דמות או אובייקט.</item>
+        <item quantity="two">הועתקו %d דמויות או אובייקטים.</item>
+        <item quantity="other">הועתקו %d דמויות או אובייקטים.</item>
+    </plurals>
+    <plurals name="copied_looks">
+        <item quantity="one">הועתק %d מראה.</item>
+        <item quantity="two">הועתקו %d מראות.</item>
+        <item quantity="other">הועתקו %d מראות.</item>
+    </plurals>
+    <plurals name="copied_sounds">
+        <item quantity="one">הועתק %d צליל.</item>
+        <item quantity="two">הועתקו %d צלילים.</item>
+        <item quantity="other">הועתקו %d צלילים.</item>
+    </plurals>
+    <plurals name="copied_nfc_tags">
+        <item quantity="one">הועתקה %d תגית NFC.</item>
+        <item quantity="two">הועתקו %d תגיות NFC.</item>
+        <item quantity="other">הועתקו %d תגיות NFC.</item>
+    </plurals>
+    <!-- Delete -->
+    <plurals name="deleted_projects">
+        <item quantity="one">נמחק %d מיזם.</item>
+        <item quantity="two">נמחקו %d מיזמים.</item>
+        <item quantity="other">נמחקו %d מיזמים.</item>
+    </plurals>
+    <plurals name="deleted_scenes">
+        <item quantity="one">נמחקה %d סצנה.</item>
+        <item quantity="two">נמחקו %d סצנות.</item>
+        <item quantity="other">נמחקו %d סצנות.</item>
+    </plurals>
+    <plurals name="deleted_sprites">
+        <item quantity="one">נמחקה %d דמות או אובייקט.</item>
+        <item quantity="two">נמחקו %d דמויות או אובייקטים.</item>
+        <item quantity="other">נמחקו %d דמויות או אובייקטים.</item>
+    </plurals>
+    <plurals name="deleted_looks">
+        <item quantity="one">נמחק %d מראה.</item>
+        <item quantity="two">נמחקו %d מראות.</item>
+        <item quantity="other">נמחקו %d מראות.</item>
+    </plurals>
+    <plurals name="deleted_sounds">
+        <item quantity="one">נמחק %d צליל.</item>
+        <item quantity="two">נמחקו %d צלילים.</item>
+        <item quantity="other">נמחקו %d צלילים.</item>
+    </plurals>
+    <plurals name="deleted_nfc_tags">
+        <item quantity="one">נמחקה %d תגית NFC.</item>
+        <item quantity="two">נמחקו %d תגיות NFC.</item>
+        <item quantity="other">נמחקו %d תגיות NFC.</item>
+    </plurals>
+    <plurals name="deleted_scripts">
+        <item quantity="one">נמחק %d תסריט.</item>
+        <item quantity="two">נמחקו %d תסריטים.</item>
+        <item quantity="other">נמחקו %d תסריטים.</item>
+    </plurals>
+    <plurals name="deleted_Items">
+        <item quantity="one">נמחק %d פריט.</item>
+        <item quantity="two">נמחקו %d פריטים.</item>
+        <item quantity="other">נמחקו %d פריטים.</item>
+    </plurals>
+    <!-- Imported -->
+    <plurals name="imported_projects">
+        <item quantity="one">יובא %d מיזם.</item>
+        <item quantity="two">יובאו %d מיזמים.</item>
+        <item quantity="other">יובאו %d מיזמים.</item>
+    </plurals>
+    <!-- Renamed -->
+    <string formatted="false" name="renamed_project">שם המיזם שונה</string>
+    <!--  -->
+    <!-- ProjectListActivity and ProjectListFragment -->
+    <string formatted="false" name="project_list_title">מיזמים</string>
+    <string formatted="false" name="last_used">גישה אחרונה:</string>
+    <string formatted="false" name="size">גודל:</string>
+    <string formatted="false" name="description">תיאור:</string>
+    <string formatted="false" name="set_description">הגדרת תיאור</string>
+    <string formatted="false" name="notes_and_credits_title">הערות ותודות:</string>
+    <string formatted="false" name="set_notes_and_credits">הגדרת הערות ותודות</string>
+    <string formatted="false" name="details_date_today">היום</string>
+    <string formatted="false" name="import_project">ייבוא מיזם</string>
+    <string formatted="false" name="export_project">ייצוא מיזם</string>
+    <string formatted="false" name="error_import_project">אירעה שגיאה בעת ייבוא המיזמים.</string>
+    <string formatted="false" name="no_projects_selected">לא נבחרו מיזמים לייבוא</string>
+    <string formatted="false" name="only_select_catrobat_files">יש לבחור קובצי מיזם בלבד</string>
+    <string formatted="false" name="error_no_files_found">לא נמצאו קובצי מיזם.</string>
+    <string formatted="false" name="import_sprite_from_project_launcher">ייבוא אובייקט ממיזם מקומי</string>
+    <!-- ProjectOptionsFragment -->
+    <string formatted="false" name="project_options_description">תיאור</string>
+    <string formatted="false" name="project_options_notes_and_credits">הערות ותודות</string>
+    <string formatted="false" name="project_options_tags">תגיות</string>
+    <string formatted="false" name="project_options_aspect_ratio">שמירה על יחס הגובה-רוחב המקורי</string>
+    <string formatted="false" name="project_options_more_details">מאפייני המיזם</string>
+    <string formatted="false" name="project_options_delete_project">מחיקת המיזם</string>
+    <!-- ScriptListFragment -->
+    <string formatted="false" name="fragment_script_text_description">יש להקיש על \"+\" כדי להוסיף תסריטים</string>
+    <!--  -->
+    <!-- SpriteListFragment -->
+    <string formatted="false" name="fragment_sprite_text_description">יש להקיש על \"+\" כדי להוסיף דמויות או אובייקטים</string>
+    <string formatted="false" name="default_sprite_name">הדמות או האובייקט שלי</string>
+    <!--  -->
+    <!-- LookListFragment -->
+    <string formatted="false" name="fragment_look_text_description">יש להקיש על \"+\" כדי להוסיף מראות</string>
+    <string formatted="false" name="select_look_from_gallery">בחירת תמונה</string>
+    <string formatted="false" name="select_look_from_camera">בחירת צילום</string>
+    <!--  -->
+    <!-- SoundListFragment -->
+    <string formatted="false" name="fragment_sound_text_description">יש להקיש על \"+\" כדי להוסיף צלילים</string>
+    <string formatted="false" name="sound_select_source">בחירת צליל</string>
+    <!--  -->
+    <!-- NfcTagListFragment -->
+    <string formatted="false" name="fragment_nfctag_text_description">יש לסרוק תגיות NFC כדי להוסיף אותן</string>
+    <string formatted="false" name="ndef_record_label">כסוג רשומה</string>
+    <string formatted="false" name="brick_set_nfc_tag">המתן לתגית ה־NFC הבאה כדי לכתוב</string>
+    <string formatted="false" name="brick_set_nfc_tag_default_value">www.catrobat.org</string>
+    <string formatted="false" name="default_tag_name">תגית NFC</string>
+    <string formatted="false" name="tnf_empty">ריק</string>
+    <string formatted="false" name="tnf_external_type">סוג חיצוני</string>
+    <string formatted="false" name="tnf_mime_media">טקסט</string>
+    <string formatted="false" name="tnf_well_known_http">HTTP</string>
+    <string formatted="false" name="tnf_well_known_https">HTTPS</string>
+    <string formatted="false" name="tnf_well_known_tel">מספר טלפון</string>
+    <string formatted="false" name="tnf_well_known_sms">SMS</string>
+    <string formatted="false" name="tnf_well_known_mailto">דוא״ל</string>
+    <!--  -->
+    <!-- DataListFragment -->
+    <string formatted="false" name="multiplayer_vars_headline">משתנים למכשירים מחוברים</string>
+    <string formatted="false" name="global_vars_headline">משתנים לכל הדמויות והאובייקטים</string>
+    <string formatted="false" name="local_vars_headline">משתנים לדמות או לאובייקט הזה בלבד</string>
+    <string formatted="false" name="global_lists_headline">רשימות לכל הדמויות והאובייקטים</string>
+    <string formatted="false" name="local_lists_headline">רשימות לדמות או לאובייקט הזה בלבד</string>
+    <string formatted="false" name="fragment_data_text_description">יש להקיש על \"+\" כדי להוסיף\nמשתנים או רשימות</string>
+    <plurals name="user_defined_brick_input_headline">
+        <item quantity="one">קלט ללבנה הזו</item>
+        <item quantity="two">קלטים ללבנה הזו</item>
+        <item quantity="other">קלטים ללבנה הזו</item>
+    </plurals>
+    <!-- NewDataDialog -->
+    <string formatted="false" name="new_data_for_all_sprites">לכל הדמויות, האובייקטים והשכפולים בכל הסצנות</string>
+    <string formatted="false" name="new_data_for_this_sprite_only">לדמות או לאובייקט הזה או לאחד השכפולים שלו בלבד</string>
+    <string formatted="false" name="new_data_for_connected_devices">לכל הדמויות, האובייקטים והשכפולים בכל הסצנות של מיזמים במכשירי ריבוי משתתפים מחוברים</string>
+    <!-- Backpack -->
+    <string formatted="false" name="backpack_title">התרמיל שלך</string>
+    <string formatted="false" name="actor_object_title">דמויות ואובייקטים</string>
+    <string formatted="false" name="pack">הכנסה לתרמיל</string>
+    <string formatted="false" name="unpack">הוצאה מהתרמיל</string>
+    <!--  -->
+    <!-- NewProjectDialog -->
+    <string name="new_project_title">יצירת מיזם</string>
+    <string formatted="false" name="new_project_dialog_example_project">מיזם לדוגמה</string>
+    <string name="new_project_dialog_portrait">לאורך</string>
+    <string name="new_project_dialog_landscape">לרוחב</string>
+    <string name="new_project_dialog_cast">Cast</string>
+    <!--  -->
+    <!-- NewMergedProjectDialog -->
+    <string formatted="false" name="new_merge_project_dialog_title">מיזם ממוזג</string>
+    <string formatted="false" name="merging_project_text">עדיין אי אפשר למזג את שני המיזמים האלה</string>
+    <!--  -->
+    <!-- NewSpriteDialog -->
+    <string formatted="false" name="new_sprite_dialog_title">דמות או אובייקט חדש</string>
+    <!--  -->
+    <!-- NewLookDialog -->
+    <string formatted="false" name="new_look_dialog_title">הוספת מראה</string>
+    <string formatted="false" name="add_look_from_camera">מצלמה</string>
+    <string formatted="false" name="add_look_object_library">ספרייה</string>
+    <string formatted="false" name="add_look_draw_new_image">ציור</string>
+    <string formatted="false" name="add_look_choose_image">גלריה</string>
+    <string formatted="false" name="add_look_media_library">מראות</string>
+    <string formatted="false" name="add_look_from_local_project">מיזמים מקומיים</string>
+    <string name="add_look_empty_object">אובייקט ריק</string>
+    <string name="add_look_actors_and_object">דמויות ואובייקטים מקומיים</string>
+    <!--  -->
+    <!-- NewSoundDialog -->
+    <string formatted="false" name="new_sound_dialog_title">הוספת צליל</string>
+    <string formatted="false" name="add_sound_from_recorder">הקלטת צליל</string>
+    <string formatted="false" name="add_sound_choose_file">בחירת קובץ</string>
+    <string formatted="false" name="add_sound_music">מלחין מוזיקה</string>
+    <string formatted="false" name="add_sound_choose_sound">צלילים</string>
+    <!-- NotePickerDialog -->
+    <string formatted="false" name="note_picker_title">בחירת תו</string>
+    <!--  -->
+    <!-- Rating Dialog -->
+    <string formatted="false" name="rating_dialog_title">דירוג היישום</string>
+    <string formatted="false" name="rating_google_play_dialog_text">אם היישום מוצא חן בעיניך, נשמח לדירוג בחנות היישומים.</string>
+    <string formatted="false" name="rating_dialog_rate_now">עכשיו</string>
+    <string formatted="false" name="rating_dialog_rate_later">מאוחר יותר</string>
+    <string formatted="false" name="rating_dialog_rate_never">אף פעם</string>
+    <!--  -->
+    <!-- Terms of Use Dialog -->
+    <string formatted="false" name="dialog_terms_of_use_title">תנאי השימוש והשירות</string>
+    <string formatted="false" name="dialog_terms_of_use_info">כדי לקבל רשות להשתמש ביישומים ובשירותים האחרים שמציע מיזם Catrobat, יש להסכים לתנאי השימוש והשירות שלנו. יש להקפיד על תנאים אלה בעת השימוש ביישומים ובשירותים האחרים שלנו. הנוסח המדויק שלהם זמין בקישור שלהלן.\n</string>
+    <string formatted="false" name="dialog_terms_of_use_link_text">תנאי השימוש והשירות</string>
+    <!--  -->
+    <!-- Privacy Policy -->
+    <string formatted="false" name="disclaimer_privacy_police_header_headline">ברוכים הבאים!</string>
+    <string formatted="false" name="disclaimer_privacy_policy_header">כדי להשתמש ביישום הזה, יש לאשר את</string>
+    <!-- -->
+    <!-- About Dialog -->
+    <string formatted="false" name="dialog_about_title">אודות היישום</string>
+    <string formatted="false" name="dialog_about_license_info">יישום זה מציע סביבת תכנות ומפרש עבור שפת התכנות החזותית Catrobat.\n קוד המקור של היישום מופץ בעיקר תחת רישיון GNU AGPL v3. לפרטים נוספים על הרישיון, ראו את הקישור שלהלן.\n</string>
+    <string formatted="false" name="dialog_about_license_link_text">רישיון קוד המקור</string>
+    <string formatted="false" name="dialog_about_catrobat_link_text">אודות Catrobat</string>
+    <string formatted="false" name="dialog_about_catrobat_language_version">גרסת שפת Catrobat</string>
+    <string formatted="false" name="dialog_about_version">גרסה:</string>
+    <!--  -->
+    <!-- NetworkAlertDialog -->
+    <string formatted="false" name="error_no_network_title">אין רשת</string>
+    <!-- UploadProjectDialog -->
+    <string formatted="false" name="upload_project_dialog_title">העלאת מיזם</string>
+    <string formatted="false" name="upload_description">תיאור:</string>
+    <string formatted="false" name="upload_notes_and_credits">הערות ותודות:</string>
+    <string formatted="false" name="upload_notes_and_credits_explanation">איך יצרת את המיזם הזה? האם השתמשת ברעיונות, בתסריטים או ביצירות אמנות של אחרים? זה המקום להודות להם.</string>
+    <string formatted="false" name="upload_tag_dialog_title">נא לבחור עד שלוש קטגוריות</string>
+    <string formatted="false" name="upload_tags_maximum_error">אי אפשר לבחור יותר מ־3 תגיות.</string>
+    <!-- Save Project to External Storage -->
+    <string formatted="false" name="save_to_external_storage_button">ייצוא מיזם</string>
+    <string formatted="false" name="notification_save_project_to_external_storage_title_pending">" "</string>
+    <string formatted="false" name="notification_save_project_to_external_storage_pending">המיזם נשמר באחסון החיצוני.</string>
+    <string formatted="false" name="notification_save_project_to_external_storage_title_open">" "</string>
+    <string formatted="false" name="notification_save_project_to_external_storage_open">"המיזם נשמר ב־%1$s"</string>
+    <string formatted="false" name="save_project_to_external_storage_io_exception_message">שמירת המיזם נכשלה, אין מספיק זיכרון פנוי!</string>
+    <!--  -->
+    <!-- SoundRecorderActivity -->
+    <string formatted="false" name="soundrecorder_name">מקליט צלילים</string>
+    <string formatted="false" name="soundrecorder_error">הקלטת הצליל נכשלה</string>
+    <string formatted="false" name="soundrecorder_recorded_filename">הקלטה</string>
+    <string formatted="false" name="soundrecorder_text_view">יש להקיש על הסמל שלמעלה כדי להתחיל ולעצור את ההקלטה.</string>
+    <!--  -->
+    <!-- Brick context dialog -->
+    <string formatted="false" name="brick_context_dialog_move_brick">הזזת הלבנה</string>
+    <string formatted="false" name="brick_context_dialog_move_script">הזזת התסריט</string>
+    <string formatted="false" name="brick_context_dialog_move_definition">הזזת ההגדרה הזו</string>
+    <string formatted="false" name="brick_context_dialog_delete_brick">מחיקת הלבנה</string>
+    <string formatted="false" name="brick_context_dialog_copy_brick">העתקת הלבנה</string>
+    <string formatted="false" name="brick_context_dialog_copy_script">העתקת התסריט</string>
+    <string formatted="false" name="brick_context_dialog_formula_edit_brick">עריכת הנוסחה</string>
+    <string formatted="false" name="brick_context_dialog_delete_script">מחיקת התסריט</string>
+    <string formatted="false" name="brick_context_dialog_delete_definition">מחיקת ההגדרה הזו</string>
+    <string formatted="false" name="brick_context_dialog_comment_in">הפעלת הלבנה</string>
+    <string formatted="false" name="brick_context_dialog_comment_out">השבתת הלבנה</string>
+    <string formatted="false" name="brick_context_dialog_highlight_brick_parts">הדגשת חלקי הלבנה</string>
+    <string formatted="false" name="brick_context_dialog_comment_in_script">הפעלת התסריט</string>
+    <string formatted="false" name="brick_context_dialog_comment_out_script">השבתת התסריט</string>
+    <string formatted="false" name="brick_context_dialog_help">עזרה</string>
+    <string formatted="false" name="comment_in_out">השבתה/הפעלה</string>
+    <!--  -->
+    <!-- Play scene dialog -->
+    <string formatted="false" name="play_scene_dialog_title">הפעלת סצנה:</string>
+    <string formatted="false" name="play_scene_dialog_default">הסצנה הראשונה (%1$s)</string>
+    <string formatted="false" name="play_scene_dialog_current">הסצנה הנוכחית (%1$s)</string>
+    <!--  -->
+    <!-- Sign In dialogs -->
+    <string formatted="false" name="sign_in_dialog_title">כניסה</string>
+    <string formatted="false" name="username">שם משתמש</string>
+    <string formatted="false" name="password">סיסמה</string>
+    <string formatted="false" name="reset_password">איפוס סיסמה</string>
+    <string formatted="false" name="new_user_registered">חשבון חדש נוצר</string>
+    <string formatted="false" name="user_logged_in">התחברת בהצלחה</string>
+    <string formatted="false" name="register_error">פרטי ההתחברות שגויים</string>
+    <string formatted="false" name="register_terms">בהרשמה, ההסכמה שלך ניתנת ל</string>
+    <string formatted="false" name="register_code_terms_of_use_text">תנאי השימוש והשירות</string>
+    <string formatted="false" name="login">התחברות</string>
+    <string formatted="false" name="register">הרשמה</string>
+    <string formatted="false" name="password_confirm">אימות סיסמה</string>
+    <string formatted="false" name="accountName">דוא״ל</string>
+    <string formatted="false" name="signin_thanks">תודה על ההרשמה!</string>
+    <string formatted="false" name="signin_choose_username">נא לבחור שם משתמש:</string>
+    <string formatted="false" name="signin_choose_username_empty">נא להזין שם משתמש.</string>
+    <string formatted="false" name="signin_choose_username_hint">שם המשתמש לא אמור להיות השם האמיתי שלך ולא כתובת דוא״ל.</string>
+    <string formatted="false" name="oauth_username_taken">מישהו אחר כבר משתמש בשם הזה. נא לבחור שם אחר!</string>
+    <string formatted="false" name="show_password">הצגת הסיסמה</string>
+    <string formatted="false" name="sign_in_error">אירעה שגיאה במהלך הכניסה.</string>
+    <string formatted="false" name="error_google_plus_sign_in">שגיאה בכניסה עם Google. מצב: %s</string>
+    <string formatted="false" name="error_session_expired">תוקף ההפעלה פג, נא להתחבר.</string>
+    <string formatted="false" name="error_register_empty_username">שם המשתמש ריק</string>
+    <string formatted="false" name="error_register_username_as_email">אי אפשר להשתמש בכתובת דוא״ל כשם משתמש</string>
+    <string formatted="false" name="error_register_invalid_username">שם המשתמש יכול להכיל רק אותיות (a–z), ספרות (0–9), מקפים (-), קווים תחתונים (_) ונקודות (.).</string>
+    <string formatted="false" name="error_register_username_start_with">שם המשתמש לא יכול להתחיל במקף (-), בקו תחתון (_) או בנקודה (.).</string>
+    <string formatted="false" name="error_register_invalid_email_format">תבנית הדוא״ל אינה תקינה</string>
+    <string formatted="false" name="error_register_empty_password">שדה הסיסמה ריק</string>
+    <string formatted="false" name="error_register_password_at_least_6_characters">הסיסמה צריכה להכיל לפחות 6 תווים</string>
+    <string formatted="false" name="error_register_passwords_mismatch">הסיסמאות לא תואמות</string>
+    <string formatted="false" name="error_register_empty_confirm_password">שדה אימות הסיסמה ריק</string>
+    <string formatted="false" name="error_register_username_already_exists">שם המשתמש כבר קיים</string>
+    <string formatted="false" name="error_register_email_exists">כתובת הדוא״ל כבר קיימת</string>
+    <!--  -->
+    <!-- OverwriteRenameDialog Strings -->
+    <string formatted="false" name="overwrite_title">המיזם קיים.</string>
+    <string formatted="false" name="overwrite_text">כבר קיים מיזם בשם הזה.</string>
+    <string formatted="false" name="overwrite_replace">החלפת המיזם</string>
+    <string formatted="false" name="overwrite_rename">בחירת שם חדש</string>
+    <!--  -->
+    <!-- Music activity -->
+    <string formatted="false" name="pocket_music_default_project_name">שיר ללא שם</string>
+    <string formatted="false" name="pocket_music_default_track_name">רצועה 1</string>
+    <!--  -->
+    <!-- Resource initialization fka PrestageActivity -->
+    <string formatted="false" name="prestage_text_to_speech_engine_not_installed">מנוע ההמרה של טקסט לדיבור אינו מותקן!\nלהתקין אותו?</string>
+    <string formatted="false" name="prestage_resource_not_available_title">הרכיב אינו זמין</string>
+    <string formatted="false" name="prestage_resource_not_available_text">לצערנו המיזם הזה לא פועל במכשיר שלך. הרכיבים הבאים אינם זמינים:\n\n</string>
+    <string formatted="false" name="prestage_no_vibration_available">\u2022 רטט\n</string>
+    <string formatted="false" name="prestage_no_acceleration_sensor_available">\u2022 חיישן תאוצה\n</string>
+    <string formatted="false" name="prestage_no_inclination_sensor_available">\u2022 חיישן הטיה\n</string>
+    <string formatted="false" name="prestage_no_compass_sensor_available">\u2022 מצפן\n</string>
+    <string formatted="false" name="prestage_no_gps_sensor_available">\u2022 מיקום גאוגרפי\n</string>
+    <string formatted="false" name="prestage_text_to_speech_error">\u2022 מנוע המרת טקסט לדיבור\n</string>
+    <string formatted="false" name="prestage_no_back_camera_available">\u2022 מצלמה אחורית\n</string>
+    <string formatted="false" name="prestage_no_face_detection_available">\u2022 זיהוי פנים\n</string>
+    <string formatted="false" name="prestage_no_object_detection_available">\u2022 זיהוי עצמים\n</string>
+    <string formatted="false" name="prestage_no_pose_detection_available">\u2022 זיהוי תנוחה\n</string>
+    <string formatted="false" name="prestage_no_text_detection_available">\u2022 זיהוי טקסט\n</string>
+    <string formatted="false" name="prestage_no_front_camera_available">\u2022 מצלמה קדמית\n</string>
+    <string formatted="false" name="prestage_no_camera_available">\u2022 מצלמה\n</string>
+    <string formatted="false" name="prestage_no_flash_available">\u2022 פנס\n</string>
+    <string formatted="false" name="prestage_default_resource_not_available">\u2022 רכיב לא ידוע\n</string>
+    <string formatted="false" name="no_nfc_available">NFC אינו זמין</string>
+    <string formatted="false" name="nfc_not_activated">נא להפעיל NFC וללחוץ על „חזרה“ כדי לחזור ליישום.</string>
+    <string formatted="false" name="nfc_facedetection_support">שימוש ב־NFC ובזיהוי פנים בו־זמנית עלול לפגוע בביצועים.</string>
+    <!--  -->
+    <!-- Stage menu dialog -->
+    <string formatted="false" name="stage_dialog_back">חזרה</string>
+    <string formatted="false" name="stage_dialog_resume">המשך</string>
+    <string formatted="false" name="stage_dialog_restart">הפעלה מחדש</string>
+    <string formatted="false" name="stage_dialog_axes_on">הצגת צירים</string>
+    <string formatted="false" name="stage_dialog_axes_off">הסתרת צירים</string>
+    <string formatted="false" name="stage_dialog_maximize">הגדלה/\nמתיחה</string>
+    <string formatted="false" name="stage_dialog_screenshot">תצוגה מקדימה</string>
+    <string formatted="false" name="stage_dialog_embroidery">רקמה</string>
+    <!--  -->
+    <!-- Broadcast spinner -->
+    <string formatted="false" name="dialog_new_broadcast_message_title">מסר חדש</string>
+    <string formatted="false" name="dialog_broadcast_message_name">מסר:</string>
+    <string formatted="false" name="dialog_edit_broadcast_message_title">עריכת מסר</string>
+    <!--  -->
+    <!-- NFC spinner -->
+    <string formatted="false" name="brick_when_nfc_edit_list_of_nfc_tags">עריכת רשימת תגיות ה־NFC</string>
+    <string formatted="false" name="brick_when_nfc_default_all">הכול</string>
+    <!-- -->
+    <!-- Brick categories -->
+    <string formatted="false" name="categories">קטגוריות</string>
+    <string formatted="false" name="category_embroidery">רקמה</string>
+    <string formatted="false" name="category_motion">תנועה</string>
+    <string formatted="false" name="category_looks">מראה</string>
+    <string formatted="false" name="category_pen">עט</string>
+    <string formatted="false" name="category_plot">שרטוט</string>
+    <string formatted="false" name="category_laser">חותך לייזר</string>
+    <string formatted="false" name="category_sound">צליל</string>
+    <string formatted="false" name="category_control">שליטה</string>
+    <string formatted="false" name="category_event">אירועים</string>
+    <string formatted="false" name="category_user_bricks">הלבנים שלך</string>
+    <string formatted="false" name="category_data">נתונים</string>
+    <string formatted="false" name="category_device">מכשיר</string>
+    <string formatted="false" name="category_lego_nxt">Lego NXT</string>
+    <string formatted="false" name="category_lego_ev3">Lego EV3</string>
+    <string formatted="false" name="category_drone">AR.Drone 2.0</string>
+    <string formatted="false" name="category_jumping_sumo">Jumping Sumo</string>
+    <string formatted="false" name="category_phiro">Phiro</string>
+    <string formatted="false" name="category_arduino">Arduino</string>
+    <string formatted="false" name="category_cast">Chromecast</string>
+    <string formatted="false" name="category_raspi">Raspberry Pi</string>
+    <string formatted="false" name="category_assertions">בדיקות</string>
+    <string formatted="false" name="category_search_bricks">חיפוש לבנים</string>
+    <!--  -->
+    <!-- User Defined Bricks -->
+    <string formatted="false" name="brick_user_defined_add_label">הוספת תווית</string>
+    <string formatted="false" name="brick_user_defined_add_input">הוספת קלט</string>
+    <string formatted="false" name="brick_user_defined_add_input_description">הוספת קלט ללבנה הזו:</string>
+    <string formatted="false" name="brick_user_defined_add_label_description">הוספת תווית ללבנה הזו:</string>
+    <string formatted="false" name="brick_user_defined_default_input_name">שם הקלט</string>
+    <string formatted="false" name="brick_user_defined_default_label">טקסט התווית</string>
+    <string formatted="false" name="brick_user_defined_already_exists">כבר קיימת לבנה עם התוויות האלה. נא להוסיף עוד תוויות או קלטים.</string>
+    <string formatted="false" name="brick_user_defined_script_define">הגדר</string>
+    <string formatted="false" name="brick_user_defined_script_screen_refresh_as">רענון מסך בתור</string>
+    <string formatted="false" name="brick_user_defined_with_screen_refreshing">עם</string>
+    <string formatted="false" name="brick_user_defined_without_screen_refreshing">בלי</string>
+    <string formatted="false" name="brick_user_defined_list_empty">יש להקיש על \"+\" כדי להוסיף לבנים חדשות משלך.</string>
+    <string formatted="false" name="brick_report">דווח</string>
+    <!--  -->
+    <!-- Motion bricks -->
+    <string formatted="false" name="brick_place_at">"מקם במיקום"</string>
+    <string formatted="false" name="brick_option_place_visually">מיקום חזותי</string>
+    <string formatted="false" name="x_label">"x:"</string>
+    <string formatted="false" name="y_label">"y:"</string>
+    <string formatted="false" name="brick_set_x">"קבע x ל־"</string>
+    <string formatted="false" name="brick_set_y">"קבע y ל־"</string>
+    <string formatted="false" name="brick_change_x_by">"שנה x ב־"</string>
+    <string formatted="false" name="brick_change_y_by">"שנה y ב־"</string>
+    <string formatted="false" name="brick_go_back">זוז אחורה</string>
+    <string formatted="false" name="brick_set_rotation_style">"קבע סגנון סיבוב"</string>
+    <string formatted="false" name="brick_set_rotation_style_lr">שמאל-ימין בלבד</string>
+    <string formatted="false" name="brick_set_rotation_style_normal">סיבוב מלא</string>
+    <string formatted="false" name="brick_set_rotation_style_no">ללא סיבוב</string>
+    <plurals name="brick_go_back_layer_plural">
+        <item quantity="one">שכבה</item>
+        <item quantity="two">שכבות</item>
+        <item quantity="other">שכבות</item>
+    </plurals>
+    <string formatted="false" name="brick_come_to_front">עבור לשכבה הקדמית</string>
+    <string formatted="false" name="brick_if_on_edge_bounce">אם בקצה, קפוץ חזרה</string>
+    <string formatted="false" name="brick_move">זוז</string>
+    <plurals name="brick_move_n_step_plural">
+        <item quantity="one">צעד</item>
+        <item quantity="two">צעדים</item>
+        <item quantity="other">צעדים</item>
+    </plurals>
+    <string formatted="false" name="brick_turn_left">הסתובב שמאלה</string>
+    <string formatted="false" name="brick_turn_right">הסתובב ימינה</string>
+    <string formatted="false" name="brick_point_in_direction">פנה לכיוון</string>
+    <string formatted="false" name="brick_point_to">פנה אל</string>
+    <string formatted="false" name="brick_glide">גלוש</string>
+    <string formatted="false" name="brick_glide_to_x">אל x:</string>
+    <string formatted="false" name="brick_go_to">עבור אל</string>
+    <string formatted="false" name="brick_go_to_touch_position">מיקום הנגיעה</string>
+    <string formatted="false" name="brick_go_to_random_position">מיקום אקראי</string>
+    <!--  -->
+    <!-- Physics -->
+    <string formatted="false" name="brick_set_physics_object_type">קבע את סוג התנועה שלך ל־</string>
+    <string formatted="false" name="brick_set_physics_object_type_dynamic">נע וקופץ תחת כוח הכבידה</string>
+    <string formatted="false" name="brick_set_physics_object_type_fixed">לא נע תחת כוח הכבידה, אבל אחרים קופצים ממך תחת כוח הכבידה</string>
+    <string formatted="false" name="brick_set_physics_object_type_no">לא נע ולא קופץ תחת כוח הכבידה (ברירת מחדל)</string>
+    <string formatted="false" name="brick_set_mass">"קבע מסה ל־"</string>
+    <string formatted="false" name="brick_set_mass_unit">קילוגרם</string>
+    <string formatted="false" name="brick_set_gravity_to">"קבע כוח כבידה לכל הדמויות והאובייקטים ל־"</string>
+    <string formatted="false" name="brick_set_gravity_unit">צעדים/שנייה²</string>
+    <string formatted="false" name="brick_set_velocity_to">"קבע מהירות ל־"</string>
+    <string formatted="false" name="brick_set_velocity_unit">צעדים/שנייה</string>
+    <string formatted="false" name="brick_turn_speed_unit">מעלות/שנייה</string>
+    <string formatted="false" name="brick_set_friction">"קבע חיכוך ל־"</string>
+    <string formatted="false" name="brick_set_bounce_factor">"קבע מקדם קפיצה ל־"</string>
+    <string formatted="false" name="brick_rotate_left">"הסתחרר שמאלה"</string>
+    <string formatted="false" name="brick_rotate_right">"הסתחרר ימינה"</string>
+    <!-- Look bricks -->
+    <string formatted="false" name="brick_set_look">עבור למראה</string>
+    <string formatted="false" name="brick_set_look_by_index">עבור למראה מספר</string>
+    <string formatted="false" name="brick_and_wait">והמתן</string>
+    <string formatted="false" name="brick_set_background">קבע רקע</string>
+    <string formatted="false" name="brick_set_background_and_wait">קבע רקע והמתן</string>
+    <string formatted="false" name="brick_set_background_by_index">קבע רקע מספר</string>
+    <string formatted="false" name="brick_when_background">כאשר הרקע מתחלף ל־</string>
+    <string formatted="false" name="brick_set_size_to">קבע גודל ל־</string>
+    <string formatted="false" name="brick_change_size_by">שנה גודל ב־</string>
+    <string formatted="false" name="brick_hide">הסתר</string>
+    <string formatted="false" name="brick_show">הצג</string>
+    <string formatted="false" name="brick_set_transparency">"קבע שקיפות"</string>
+    <string formatted="false" name="brick_change_ghost_effect">"שנה שקיפות"</string>
+    <string formatted="false" name="brick_set_brightness">"קבע בהירות"</string>
+    <string formatted="false" name="brick_change_brightness">"שנה בהירות"</string>
+    <string formatted="false" name="brick_set_color">"קבע צבע"</string>
+    <string formatted="false" name="brick_change_color">"שנה צבע"</string>
+    <string formatted="false" name="by_label">ב־</string>
+    <string formatted="false" name="to_label">ל־</string>
+    <string formatted="false" name="brick_clear_graphic_effect">נקה אפקטים גרפיים</string>
+    <string formatted="false" name="brick_next_look">המראה הבא</string>
+    <string formatted="false" name="brick_next_background">הרקע הבא</string>
+    <string formatted="false" name="brick_previous_look">המראה הקודם</string>
+    <string formatted="false" name="brick_previous_background">הרקע הקודם</string>
+    <string formatted="false" name="brick_edit_look">ערוך מראה</string>
+    <string formatted="false" name="brick_edit_background">ערוך רקע</string>
+    <string formatted="false" name="brick_delete_look">מחק מראה</string>
+    <string formatted="false" name="brick_delete_background">מחק רקע</string>
+    <string formatted="false" name="brick_flash">העבר את הפנס למצב</string>
+    <string formatted="false" name="brick_flash_on">מופעל</string>
+    <string formatted="false" name="brick_flash_off">כבוי</string>
+    <string formatted="false" name="brick_vibration">הפעל רטט למשך</string>
+    <string formatted="false" name="brick_ask_label">שאל</string>
+    <string formatted="false" name="brick_ask_store">ושמור את התשובה הכתובה ב־</string>
+    <string formatted="false" name="brick_ask_default_question">מה שמך?</string>
+    <string formatted="false" name="brick_ask_dialog_hint">"יש להזין את התשובה שלך:"</string>
+    <string formatted="false" name="brick_ask_dialog_submit">שליחת התשובה</string>
+    <string formatted="false" name="brick_ask_speech_label">שאל</string>
+    <string formatted="false" name="brick_ask_speech_store">ושמור את התשובה המדוברת ב־</string>
+    <string formatted="false" name="brick_ask_speech_default_question">מה שמך?</string>
+    <string formatted="false" name="brick_paint_new_look">צייר מראה חדש</string>
+    <string formatted="false" name="brick_paint_new_background">צייר רקע חדש</string>
+    <string formatted="false" name="brick_paint_new_look_name">"שם המראה החדש"</string>
+    <string formatted="false" name="brick_copy_look">העתק מראה ותן לו את השם</string>
+    <string formatted="false" name="brick_copy_look_name">שם המראה המועתק</string>
+    <string formatted="false" name="brick_copy_background">העתק רקע ותן לו את השם</string>
+    <string formatted="false" name="brick_focus_point">הפוך לנקודת המיקוד עם גמישות של</string>
+    <string formatted="false" name="brick_horizontal_and">אופקית ו־</string>
+    <string formatted="false" name="brick_vertical_flex">אנכית</string>
+    <!--  -->
+    <!-- Pen bricks -->
+    <string formatted="false" name="brick_pen_down">הורד עט</string>
+    <string formatted="false" name="brick_pen_up">הרם עט</string>
+    <string formatted="false" name="brick_pen_size">קבע גודל עט ל־</string>
+    <string formatted="false" name="brick_pen_color">קבע צבע עט ל־</string>
+    <string formatted="false" name="brick_clear_background">נקה</string>
+    <string formatted="false" name="brick_stamp">החתם</string>
+    <!--  -->
+    <!-- Sound bricks -->
+    <string formatted="false" name="brick_play_sound">התחל צליל</string>
+    <string formatted="false" name="brick_play_sound_and_wait">התחל צליל והמתן</string>
+    <string formatted="false" name="brick_stop_sound">עצור צליל</string>
+    <string formatted="false" name="brick_stop_all_sounds">עצור את כל הצלילים</string>
+    <string formatted="false" name="brick_set_volume_to">קבע עוצמת קול ל־</string>
+    <string formatted="false" name="brick_change_volume_by">שנה עוצמת קול ב־</string>
+    <string formatted="false" name="brick_speak">דבר</string>
+    <string formatted="false" name="brick_speak_default_value">שלום!</string>
+    <string formatted="false" name="brick_speak_and_wait">והמתן</string>
+    <string formatted="false" name="brick_start_listening_to_voice">התחל להאזין לקול ושמור את המילים שנאמרו ב־</string>
+    <string formatted="false" name="speech_recognition_not_available">זיהוי דיבור אינו זמין.</string>
+    <string formatted="false" name="speech_recognition_offline_mode_error_dialog_title">חסרים נתונים לשימוש לא מקוון</string>
+    <string formatted="false" name="speech_recognition_offline_mode_missing_data_error_dialog_msg">זיהוי הדיבור הלא מקוון עבור %s חסר או שיש לעדכן אותו. להוריד או לעדכן אותו עכשיו?</string>
+    <string formatted="false" name="brick_set_listening_language">קבע את שפת ההאזנה ל־</string>
+    <string formatted="false" name="set_instrument_to">קבע כלי נגינה ל־</string>
+    <string formatted="false" name="set_tempo_to">קבע קצב ל־</string>
+    <string formatted="false" name="change_tempo_by">שנה קצב ב־</string>
+    <string formatted="false" name="pause_for">השהה למשך</string>
+    <string formatted="false" name="play_drum">נגן בתוף</string>
+    <string formatted="false" name="beats">פעימות</string>
+    <string formatted="false" name="play_note">נגן תו</string>
+    <string formatted="false" name="for_string">למשך</string>
+    <string formatted="false" name="at_string">החל מ־</string>
+    <string formatted="false" name="seconds_string">שניות</string>
+    <!--  -->
+    <!-- Plot bricks -->
+    <string formatted="false" name="brick_save_plot">שמור שרטוט כ־SVG</string>
+    <string formatted="false" name="brick_share_plot">שתף שרטוט כ־SVG</string>
+    <string formatted="false" name="brick_stop_plot">הפסק לשרטט</string>
+    <string formatted="false" name="brick_start_plot">התחל לשרטט</string>
+    <string formatted="false" name="brick_stop_cut">הפסק לחתוך</string>
+    <string formatted="false" name="brick_start_cut">התחל לחתוך</string>
+    <string formatted="false" name="brick_save_laser">שמור את נתוני חותך הלייזר ל־SVG</string>
+    <string formatted="false" name="brick_stop_engrave">הפסק לחרוט</string>
+    <string formatted="false" name="brick_start_engrave">התחל לחרוט</string>
+    <string formatted="false" name="brick_default_plot_file">plot.svg</string>
+    <string formatted="false" name="brick_share">שתף</string>
+    <string formatted="false" name="brick_share_laser">שתף את נתוני חותך הלייזר כ־SVG</string>
+    <string formatted="false" name="brick_default_laser_file">laser.svg</string>
+    <!-- Embroidery bricks -->
+    <string formatted="false" name="brick_stitch">תפור תך</string>
+    <string formatted="false" name="brick_running_stitch">התחל תפר ישר באורך</string>
+    <string formatted="false" name="brick_zigzag_stitch">התחל תפר זיגזג באורך</string>
+    <string formatted="false" name="brick_zigzag_stitch_width">וברוחב</string>
+    <string formatted="false" name="brick_triple_stitch">התחל תפר משולש באורך</string>
+    <string formatted="false" name="brick_stop_stitch">עצור את התפר הנוכחי</string>
+    <string formatted="false" name="brick_write_embroidery">כתוב את נתוני הרקמה לקובץ</string>
+    <string formatted="false" name="brick_default_embroidery_file">embroidery.dst</string>
+    <string formatted="false" name="brick_sew_up">סגור את התפר</string>
+    <string formatted="false" name="brick_thread_color">קבע צבע חוט ל־</string>
+    <string formatted="false" name="embroider_arc_direction">תפור קשת לכיוון</string>
+    <string formatted="false" name="embroidery_through">צור קשת העוברת דרך</string>
+    <!--  -->
+    <!-- Device bricks -->
+    <string formatted="false" name="brick_reset_timer">אפס את שעון העצר</string>
+    <string formatted="false" name="brick_open">פתח</string>
+    <string formatted="false" name="brick_in_browser">בדפדפן</string>
+    <!-- Control bricks -->
+    <string formatted="false" name="brick_when_started">כאשר הסצנה מתחילה</string>
+    <string formatted="false" name="brick_when">כאשר מקישים עליך</string>
+    <string formatted="false" name="brick_when_condition_when">כאשר</string>
+    <string formatted="false" name="brick_when_becomes_true">הופך לאמת</string>
+    <string formatted="false" name="brick_wait">המתן</string>
+    <string formatted="false" name="brick_wait_until">המתן עד ש־</string>
+    <string formatted="false" name="brick_wait_until_second_part">מתקיים</string>
+    <string formatted="false" name="brick_when_gamepad_button">כאשר כפתור השלט</string>
+    <string formatted="false" name="brick_when_gamepad_button_tapped">נלחץ</string>
+    <string formatted="false" name="brick_when_nfc">כאשר נסרקת תגית NFC</string>
+    <string formatted="false" name="brick_stop_script">עצור</string>
+    <string formatted="false" name="brick_stop_this_script">את התסריט הזה</string>
+    <string formatted="false" name="brick_stop_all_scripts">את כל התסריטים</string>
+    <string formatted="false" name="brick_stop_other_scripts">את שאר התסריטים של הדמות או האובייקט הזה</string>
+    <plurals name="second_plural">
+        <item quantity="one">"שנייה"</item>
+        <item quantity="two">"שניות"</item>
+        <item quantity="other">"שניות"</item>
+    </plurals>
+    <string formatted="false" name="brick_collision_receive">כאשר אתה מתנגש ב־</string>
+    <string formatted="false" name="collision_with_anything">קצה, דמות או אובייקט כלשהם</string>
+    <string formatted="false" name="brick_broadcast_receive">כאשר אתה מקבל</string>
+    <string formatted="false" name="brick_broadcast">שדר מסר</string>
+    <string formatted="false" name="brick_broadcast_wait">שדר מסר והמתן</string>
+    <string formatted="false" name="brick_scene_transition">המשך לסצנה</string>
+    <string formatted="false" name="brick_scene_start">התחל סצנה</string>
+    <string formatted="false" name="brick_note">הערה</string>
+    <string formatted="false" name="brick_think_bubble">חשוב</string>
+    <string formatted="false" name="brick_say_bubble">אמור</string>
+    <string formatted="false" name="brick_think_say_for_text">למשך</string>
+    <string formatted="false" name="brick_forever">לעולמים</string>
+    <string formatted="false" name="brick_loop_for_values_from">עבור ערכים מ־</string>
+    <string formatted="false" name="brick_loop_for_each_value_from">לכל ערך מתוך</string>
+    <string formatted="false" name="brick_loop_in">ב־</string>
+    <string formatted="false" name="brick_loop_to">עד</string>
+    <string formatted="false" name="brick_repeat">חזור</string>
+    <string formatted="false" name="brick_repeat_until">חזור עד ש־</string>
+    <string formatted="false" name="brick_when_touched">כאשר מקישים על הבמה</string>
+    <string formatted="false" name="brick_clone">צור שכפול של</string>
+    <string formatted="false" name="brick_clone_this">עצמך</string>
+    <string formatted="false" name="brick_when_cloned">כאשר אתה מתחיל כשכפול</string>
+    <string formatted="false" name="brick_delete_this_clone">מחק את השכפול הזה</string>
+    <string formatted="false" name="brick_assert_that">ודא ש־</string>
+    <string formatted="false" name="brick_is_equal_to">שווה לערך הצפוי</string>
+    <string formatted="false" name="brick_wait_till_idle">המתן עד שכל שאר התסריטים ייעצרו</string>
+    <string formatted="false" name="brick_tap_at">"הקש פעם אחת ב־"</string>
+    <string formatted="false" name="brick_touch_at">"גע ב־"</string>
+    <string formatted="false" name="brick_tap_for">"למשך"</string>
+    <string formatted="false" name="brick_touch_slide">"גע והחלק"</string>
+    <string formatted="false" name="brick_touch_from_x">"מ־x:"</string>
+    <string formatted="false" name="brick_finish_stage">סגור את הבמה</string>
+    <string formatted="false" name="brick_finish_tests">סיים את הבדיקות</string>
+    <string formatted="false" name="brick_assert_lists">ודא רשימות</string>
+    <string formatted="false" name="brick_assert_actual">בפועל:</string>
+    <string formatted="false" name="brick_assert_expected">צפוי:</string>
+    <string formatted="false" name="brick_parameterized_assert">ודא ש־</string>
+    <string formatted="false" name="brick_parameterized_equals">שווה לפריט הצפוי של</string>
+    <plurals name="brick_parameterized_foreach_plural">
+        <item quantity="one">לכל פריט של</item>
+        <item quantity="two">לכל צירוף פריטים של</item>
+        <item quantity="other">לכל צירוף פריטים של</item>
+    </plurals>
+    <plurals name="brick_parameterized_stored_plural">
+        <item quantity="one">מאוחסן במשתנה בעל אותו שם</item>
+        <item quantity="two">מאוחסנים במשתנים בעלי אותם שמות</item>
+        <item quantity="other">מאוחסנים במשתנים בעלי אותם שמות</item>
+    </plurals>
+    <plurals name="list_selection_plural">
+        <item quantity="one">נבחרה %d רשימה</item>
+        <item quantity="two">נבחרו %d רשימות</item>
+        <item quantity="other">נבחרו %d רשימות</item>
+    </plurals>
+    <plurals name="time_plural">
+        <item quantity="one">פעם</item>
+        <item quantity="two">פעמים</item>
+        <item quantity="other">פעמים</item>
+    </plurals>
+    <string formatted="false" name="brick_loop_end">סוף הלולאה</string>
+    <string formatted="false" name="brick_if_begin">אם</string>
+    <string formatted="false" name="brick_if_begin_second_part">מתקיים אז</string>
+    <string formatted="false" name="brick_if_else">אחרת</string>
+    <string formatted="false" name="brick_if_end">סוף אם</string>
+    <string formatted="false" name="brick_set_variable">קבע משתנה</string>
+    <string formatted="false" name="brick_change_variable">שנה משתנה</string>
+    <string formatted="false" name="brick_write_variable_on_device">כתוב משתנה למכשיר</string>
+    <string formatted="false" name="brick_read_variable_from_device">קרא משתנה מהמכשיר</string>
+    <string formatted="false" name="brick_write_variable_to_file_top">כתוב משתנה</string>
+    <string formatted="false" name="brick_write_variable_to_file_bottom">לקובץ</string>
+    <string formatted="false" name="brick_write_variable_to_file_default_value">variable.txt</string>
+    <string formatted="false" name="brick_write_variable_to_file_success">"הנתונים נכתבו בהצלחה אל %1$s"</string>
+    <string formatted="false" name="brick_read_variable_from_file_top">קרא משתנה</string>
+    <string formatted="false" name="brick_read_variable_from_file_center">מהקובץ</string>
+    <string formatted="false" name="brick_read_variable_from_file_bottom">ו־</string>
+    <string formatted="false" name="brick_read_variable_from_file_keep">שמור את הקובץ</string>
+    <string formatted="false" name="brick_read_variable_from_file_delete">מחק את הקובץ</string>
+    <string formatted="false" name="brick_write_list_on_device">כתוב רשימה למכשיר</string>
+    <string formatted="false" name="brick_read_list_from_device">קרא רשימה מהמכשיר</string>
+    <string formatted="false" name="brick_note_default_value">כאן אפשר להוסיף הערה…</string>
+    <string formatted="false" name="brick_think_bubble_default_value">הממממ!</string>
+    <string formatted="false" name="brick_say_bubble_default_value">שלום!</string>
+    <string formatted="false" name="brick_broadcast_default_value">"מסר חדש"</string>
+    <string formatted="false" name="brick_add_item_to_userlist_add">הוסף</string>
+    <string formatted="false" name="brick_add_item_to_userlist">לרשימה</string>
+    <string formatted="false" name="brick_clear_userlist">מחק את כל הפריטים מהרשימה</string>
+    <string formatted="false" name="brick_delete_item_from_userlist_delete">מחק פריט מהרשימה</string>
+    <string formatted="false" name="brick_delete_item_from_userlist">במיקום</string>
+    <string formatted="false" name="brick_insert_item_into_userlist_insert_into">הכנס</string>
+    <string formatted="false" name="brick_insert_item_into_userlist_into_list">לרשימה</string>
+    <string formatted="false" name="brick_insert_item_into_userlist_at_position">במיקום</string>
+    <string formatted="false" name="brick_replace_item_in_userlist_replace_in_list">החלף פריט ברשימה</string>
+    <string formatted="false" name="brick_replace_item_in_userlist_item_at_index">במיקום</string>
+    <string formatted="false" name="brick_replace_item_in_userlist_with_value">ב־</string>
+    <string formatted="false" name="brick_web_request">שלח בקשת רשת אל</string>
+    <string formatted="false" name="brick_web_request_default_value">https://catrob.at/joke</string>
+    <string formatted="false" name="brick_web_request_result">ושמור את התשובה ב־</string>
+    <string formatted="false" name="web_request_warning_title">לאפשר גישה לרשת?</string>
+    <string formatted="false" name="web_request_warning_message">יש לנקוט זהירות רבה לפני מתן הגישה, כי הקישור עלול לחשוף את המידע האישי שלך, כמו המיקום הגאוגרפי המדויק שלך או כל טקסט שהזנת, לגורמים זדוניים או לציבור. מידע נוסף על הסיבות לכך שזה עלול להיות מסוכן מאוד זמין ב&lt;a href=%1s&gt;ויקי&lt;/a&gt; שלנו.</string>
+    <string formatted="false" name="web_request_trust_domain_warning_title">לאפשר תמיד גישה לרשת?</string>
+    <string formatted="false" name="web_request_trust_domain_warning_message">אם הגישה תאופשר תמיד, לא תופיע שוב בקשה לאשר כתובות אינטרנט מהדומיין הזה.</string>
+    <string formatted="false" name="trusted_domains_edit_hint">כדי לבטל את ההרשאה הזו בהמשך, אפשר להסיר את הרשומה מרשימת הדומיינים המהימנים בהגדרות היישום.</string>
+    <string formatted="false" name="brick_look_request">קבל תמונה מ־</string>
+    <string formatted="false" name="brick_look_request_result">והשתמש בה כמראה הנוכחי</string>
+    <string formatted="false" name="brick_background_request_result">והשתמש בה כרקע הנוכחי</string>
+    <string formatted="false" name="look_request_http_error_message">"קבלת תמונה מ־%1$s החזירה שגיאת HTTP %2$s"</string>
+    <string formatted="false" name="look_request_type_error_message">"קבלת תמונה מ־%1$s לא החזירה תבנית תמונה מוכרת"</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_store">שמור עמודה</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_of">מתוך</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_csv">הערכים המופרדים בפסיקים</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_into">ברשימה</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_data">חתלתול,חמוד\nגור כלבים,שובב\nתמנון,נבון</string>
+    <!--  -->
+    <!--Instruments-->
+    <string formatted="false" name="piano">פסנתר</string>
+    <string formatted="false" name="electric_piano">פסנתר חשמלי</string>
+    <string formatted="false" name="cello">צ׳לו</string>
+    <string formatted="false" name="flute">חליל</string>
+    <string formatted="false" name="vibraphone">ויברפון</string>
+    <string formatted="false" name="organ">עוגב</string>
+    <string formatted="false" name="guitar">גיטרה</string>
+    <string formatted="false" name="electric_guitar">גיטרה חשמלית</string>
+    <string formatted="false" name="bass">בס</string>
+    <string formatted="false" name="pizzicato">פיציקטו</string>
+    <string formatted="false" name="synth_pad">סינתיסייזר – משטח</string>
+    <string formatted="false" name="choir">מקהלה</string>
+    <string formatted="false" name="synth_lead">סינתיסייזר – מוביל</string>
+    <string formatted="false" name="wooden_flute">חליל עץ</string>
+    <string formatted="false" name="trombone">טרומבון</string>
+    <string formatted="false" name="saxophone">סקסופון</string>
+    <string formatted="false" name="bassoon">בסון</string>
+    <string formatted="false" name="clarinet">קלרינט</string>
+    <string formatted="false" name="music_box">תיבת נגינה</string>
+    <string formatted="false" name="steel_drum">תוף פלדה</string>
+    <string formatted="false" name="marimba">מרימבה</string>
+    <!--  -->
+    <!--Drums-->
+    <string formatted="false" name="snare_drum">תוף סנר</string>
+    <string formatted="false" name="bass_drum">תוף בס</string>
+    <string formatted="false" name="side_stick">מקל על שפת התוף</string>
+    <string formatted="false" name="crash_cymbal">מצילת קראש</string>
+    <string formatted="false" name="open_hi_hat">היי-האט פתוח</string>
+    <string formatted="false" name="closed_hi_hat">היי-האט סגור</string>
+    <string formatted="false" name="tambourine">טמבורין</string>
+    <string formatted="false" name="hand_clap">מחיאת כף</string>
+    <string formatted="false" name="claves">קלאבס</string>
+    <string formatted="false" name="wood_block">בלוק עץ</string>
+    <string formatted="false" name="cowbell">פעמון פרה</string>
+    <string formatted="false" name="triangle">משולש</string>
+    <string formatted="false" name="bongo">בונגו</string>
+    <string formatted="false" name="conga">קונגה</string>
+    <string formatted="false" name="cabasa">קבסה</string>
+    <string formatted="false" name="guiro">גואירו</string>
+    <string formatted="false" name="vibraslap">ויברסלאפ</string>
+    <string formatted="false" name="open_cuica">קואיקה פתוחה</string>
+    <!--  -->
+    <!-- Default Values -->
+    <string formatted="false" name="default_project_name">המיזם שלי</string>
+    <string formatted="false" name="default_variable_name">משתנה</string>
+    <string formatted="false" name="default_scene_name">סצנה</string>
+    <string formatted="false" name="default_script_group_name">קבוצת תסריטים</string>
+    <string formatted="false" name="default_broadcast_message_name">מסר</string>
+    <string formatted="false" name="default_list_name">רשימה</string>
+    <string formatted="false" name="default_project_background_name">רקע</string>
+    <string formatted="false" name="default_project_cloud_name">עננים</string>
+    <string formatted="false" name="default_project_cloud_sprite_name_1">עננים1</string>
+    <string formatted="false" name="default_project_cloud_sprite_name_2">עננים2</string>
+    <string formatted="false" name="default_project_sprites_animal_name">חיה</string>
+    <string formatted="false" name="default_project_sprites_animal_wings_up">כנפיים למעלה</string>
+    <string formatted="false" name="default_project_sprites_animal_wings_down">כנפיים למטה</string>
+    <string formatted="false" name="default_project_sprites_tweet_1">ציוץ1</string>
+    <string formatted="false" name="default_project_sprites_tweet_2">ציוץ2</string>
+    <!--suppress UnusedResources -->
+    <string formatted="false" name="default_project_needle_name">מחט</string>
+    <!--suppress UnusedResources -->
+    <string formatted="false" name="default_project_outer_loop">לולאה חיצונית</string>
+    <!--suppress UnusedResources -->
+    <string formatted="false" name="default_project_inner_loop">לולאה פנימית</string>
+    <!-- Default ChromeCast Values -->
+    <string formatted="false" name="default_cast_project_background_name">רקע</string>
+    <string formatted="false" name="default_cast_project_cloud_name">עננים</string>
+    <string formatted="false" name="default_cast_project_cloud_sprite_name1">עננים1</string>
+    <string formatted="false" name="default_cast_project_cloud_sprite_name2">עננים2</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name">ציפור</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name_wing_up">ציפור כנפיים למעלה</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name_wing_down">ציפור כנפיים למטה</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name_wing_up_left">ציפור כנפיים למעלה שמאלה</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name_wing_down_left">ציפור כנפיים למטה שמאלה</string>
+    <string formatted="false" name="default_cast_project_sprites_tweet_1">ציוץ1</string>
+    <string formatted="false" name="default_cast_project_sprites_tweet_2">ציוץ2</string>
+    <string formatted="false" name="default_cast_project_var_direction">כיוון</string>
+    <string formatted="false" name="default_cast_project_name">מיזם ה־Chromecast הראשון שלי</string>
+    <!-- Default Drone Values -->
+    <string formatted="false" name="drone_brick_set_text">טקסט</string>
+    <string formatted="false" name="drone_brick_set_x">X:</string>
+    <!--  -->
+    <!-- Drone config spinner values  -->
+    <string formatted="false" name="drone_config_indoor_with_hull">בפנים עם מעטפת</string>
+    <string formatted="false" name="drone_config_indoor_without_hull">בפנים בלי מעטפת</string>
+    <string formatted="false" name="drone_config_outdoor_with_hull">בחוץ עם מעטפת</string>
+    <string formatted="false" name="drone_config_outdoor_without_hull">בחוץ בלי מעטפת</string>
+    <!-- Drone altitude limit values  -->
+    <string formatted="false" name="drone_set_altitude_max_3m">3 מטרים</string>
+    <string formatted="false" name="drone_set_altitude_max_5m">5 מטרים</string>
+    <string formatted="false" name="drone_set_altitude_max_10m">10 מטרים</string>
+    <string formatted="false" name="drone_set_altitude_max_100m">100 מטרים</string>
+    <!-- Drone max vertical speed limit values  -->
+    <string formatted="false" name="drone_set_vertical_min">200 מ״מ/שנייה</string>
+    <string formatted="false" name="drone_set_vertical_indoor">700 מ״מ/שנייה</string>
+    <string formatted="false" name="drone_set_vertical_outdoor">1000 מ״מ/שנייה</string>
+    <string formatted="false" name="drone_set_vertical_max">2000 מ״מ/שנייה</string>
+    <!-- Drone max rotation speed limit values  -->
+    <string formatted="false" name="drone_set_rotation_min">40 מעלות/שנייה</string>
+    <string formatted="false" name="drone_set_rotation_indoor">100 מעלות/שנייה</string>
+    <string formatted="false" name="drone_set_rotation_outdoor">200 מעלות/שנייה</string>
+    <string formatted="false" name="drone_set_rotation_max">350 מעלות/שנייה</string>
+    <!-- Drone max tilt limit values  -->
+    <string formatted="false" name="drone_set_tilt_min">5 מעלות</string>
+    <string formatted="false" name="drone_set_tilt_indoor">12 מעלות</string>
+    <string formatted="false" name="drone_set_tilt_outdoor">20 מעלות</string>
+    <string formatted="false" name="drone_set_tilt_max">30 מעלות</string>
+    <!-- Notification Channel -->
+    <string formatted="false" name="channel_description">ערוץ ההתראות %1$s</string>
+    <!--  -->
+    <!-- Notifications -->
+    <string formatted="false" name="notification_screenshot_ok">תמונת התצוגה המקדימה נשמרה</string>
+    <string formatted="false" name="notification_download_project_cancel">ביטול הורדת המיזם</string>
+    <string formatted="false" name="notification_reconvert_download_program_cancel">ההורדה או ההמרה מחדש של המיזם בוטלה</string>
+    <string formatted="false" name="notification_upload_title_pending">"העלאת"</string>
+    <string formatted="false" name="notification_upload_title_finished">"לצפייה במיזם"</string>
+    <string formatted="false" name="notification_upload_pending">ההעלאה מתבצעת</string>
+    <string formatted="false" name="notification_upload_finished">העלאה הסתיימה בהצלחה</string>
+    <string formatted="false" name="notification_upload_rejected">המיזם שהועלה נדחה</string>
+    <string formatted="false" name="notification_upload_retry">ניסיון חוזר</string>
+    <string formatted="false" name="notification_open_play_store">פתיחת חנות היישומים</string>
+    <string formatted="false" name="notification_download_title_pending">"הורדת"</string>
+    <string formatted="false" name="notification_download_pending">ההורדה מתבצעת</string>
+    <string formatted="false" name="notification_download_finished">ההורדה הושלמה</string>
+    <string formatted="false" name="notification_title_open">"פתיחת"</string>
+    <string formatted="false" name="size_of_project">גודל:</string>
+    <!--  -->
+    <!-- Runtime permission messages -->
+    <string formatted="false" name="runtime_permission_general">כדי לפעול כראוי, היישום זקוק להרשאות המבוקשות. לדוגמה, לבנת המצלמה זקוקה לגישה למצלמת המכשיר, רכיב הנוסחה \"מיקום\" זקוק לגישה לחיישן המיקום הגאוגרפי של המכשיר, וכדי לייבא ולייצא מיזמים מהזיכרון המקומי ואליו, היישום זקוק לגישת קריאה וכתיבה אליו. תמיד אפשר לשנות את ההרשאות בהגדרות המכשיר.</string>
+    <!-- Error messages -->
+    <string formatted="false" name="error_project_upload">אירעה שגיאה בעת העלאת המיזם.</string>
+    <string formatted="false" name="error_project_download">אירעה שגיאה בעת הורדת המיזם.</string>
+    <string formatted="false" name="error_project_already_in_queue">"המיזם %s כבר נמצא בתור."</string>
+    <string formatted="false" name="error_could_not_decode_project_name_from_url">"לא ניתן היה להתחיל את ההורדה, נראה שיש בעיה בשרת שלנו."</string>
+    <string formatted="false" name="error_new_project">אירעה שגיאה בעת יצירת מיזם חדש.</string>
+    <string formatted="false" name="error_rename_scene">אירעה שגיאה בעת שינוי שם הסצנה.</string>
+    <string formatted="false" name="error_load_project">אירעה שגיאה בעת טעינת המיזם.</string>
+    <string formatted="false" name="error_screenshot_failed">אירעה שגיאה בעת שמירת תמונת התצוגה המקדימה.</string>
+    <string formatted="false" name="error_internet_connection">אירעה שגיאה לא ידועה. יש לבדוק את החיבור לאינטרנט.</string>
+    <string formatted="false" name="error_project_compatibility">המיזם אינו תואם לגרסה זו של היישום.</string>
+    <string formatted="false" name="error_outdated_version">גרסת היישום הזו אינה עדכנית. לעדכן עכשיו?</string>
+    <string formatted="false" name="error_upload_project_with_default_name">אי אפשר להעלות מיזם בשם \"%s\". נא לשנות את שם המיזם.</string>
+    <string formatted="false" name="error_upload_default_project">אי אפשר להעלות מיזם לדוגמה שלא שונה. נא לשנות משהו ולנסות שוב.</string>
+    <string formatted="false" name="error_adding_brick">אירעה שגיאה בעת הוספת הלבנה הזו.</string>
+    <string formatted="false" name="error_copying_brick">אירעה שגיאה בעת העתקת הלבנה הזו.</string>
+    <string formatted="false" name="error_rename_incompatible_project">אי אפשר לשנות שם של מיזם לא תואם.</string>
+    <string formatted="false" name="error_embroidery_file_export">אירעה שגיאה בעת שיתוף קובץ הרקמה.</string>
+    <string formatted="false" name="error_embroidery_file_write">אירעה שגיאה בעת כתיבת קובץ הרקמה.</string>
+    <string formatted="false" name="error_embroidery_data_not_found">הרקמה חסרה.</string>
+    <string formatted="false" name="error_plot_file_write">אירעה שגיאה בעת כתיבת קובץ השרטוט (SVG).</string>
+    <string formatted="false" name="error_plot_data_not_found">השרטוט חסר.</string>
+    <string formatted="false" name="error_unknown_error">אירעה שגיאה.</string>
+    <string formatted="false" name="error_gps_not_available">נתוני המיקום הגאוגרפי אינם זמינים.</string>
+    <string formatted="false" name="error_set_description">אירעה שגיאה בעת שמירת התיאור החדש.</string>
+    <string formatted="false" name="error_set_notes_and_credits">אירעה שגיאה בעת שמירת ההערות והתודות החדשות.</string>
+    <string formatted="false" name="error_no_whatsapp">WhatsApp אינו מותקן</string>
+    <string formatted="false" name="error_unsupported_bricks_chromecast">אי אפשר להוסיף את התסריט הזה למיזם Chromecast.</string>
+    <!--  -->
+    <!-- Bluetooth Connection Strings -->
+    <string formatted="false" name="notification_blueth_err">לא ניתן להפעיל Bluetooth, נא לנסות לכבות ולהדליק אותו שוב.</string>
+    <string formatted="false" name="title_paired_devices">מכשירים מותאמים</string>
+    <string formatted="false" name="title_other_devices">מכשירים זמינים</string>
+    <string formatted="false" name="bluetooth_connection_title">חיבור Bluetooth</string>
+    <string formatted="false" name="skip_bluetooth_connection">דילוג</string>
+    <string formatted="false" name="connecting_please_wait">מתבצע חיבור למכשיר שלך.\nנא להמתין…</string>
+    <string formatted="false" name="bt_connection_failed">החיבור למכשיר נכשל!</string>
+    <string formatted="false" name="none_found">לא נמצאו מכשירים שאינם מותאמים</string>
+    <string formatted="false" name="multiplayer_bluetooth_connection_information_title">נדרש חיבור Bluetooth!</string>
+    <string formatted="false" name="multiplayer_bluetooth_connection_information">כדי לשחק במשחק הזה במצב ריבוי משתתפים נדרש חיבור Bluetooth. כדי שהחיבור יפעל כראוי, שני השחקנים צריכים להפעיל את המשחק ולהיות במסך הזה!</string>
+    <!--  -->
+    <!-- Arduino Bricks -->
+    <string formatted="false" name="brick_arduino_select_digital_value">קבע פין דיגיטלי של Arduino</string>
+    <string formatted="false" name="brick_arduino_select_analog_value">קבע פין PWM~ של Arduino</string>
+    <string formatted="false" name="brick_arduino_set_pin_value_to">ל־</string>
+    <!--  -->
+    <!-- Raspi Bricks -->
+    <string formatted="false" name="brick_raspi_select_digital_value">קבע פין של Raspberry Pi</string>
+    <string formatted="false" name="brick_raspi_set_pin_value_to">ל־</string>
+    <string formatted="false" name="brick_raspi_if_begin">אם פין Raspberry Pi</string>
+    <string formatted="false" name="brick_raspi_if_begin_second_part">פעיל אז</string>
+    <string formatted="false" name="brick_raspi_when_begin">כאשר פין Raspberry Pi</string>
+    <string formatted="false" name="brick_raspi_when_equals">משתנה ל־</string>
+    <string formatted="false" name="brick_raspi_pressed_text">גבוה</string>
+    <string formatted="false" name="brick_raspi_released_text">נמוך</string>
+    <string formatted="false" name="brick_raspi_set_pwm">קבע פין PWM של Raspberry Pi</string>
+    <!--  -->
+    <!-- Raspi Settings -->
+    <string formatted="false" name="raspi_settings_title_name">הגדרות Raspberry Pi</string>
+    <string formatted="false" name="raspi_settings_gpio_version">גרסת GPIO</string>
+    <string formatted="false" name="error_connecting_to">שגיאה: לא ניתן להתחבר אל %s : %d</string>
+    <!--  -->
+    <!-- MQTT Settings -->
+    <string formatted="false" name="preference_title_enable_mqtt_bricks">הרחבת MQTT</string>
+    <string formatted="false" name="preference_description_mqtt_bricks">מאפשר ליישום להתחבר למתווכי MQTT</string>
+    <string formatted="false" name="preference_title_mqtt_enabled">הפעלת לבני MQTT</string>
+    <string formatted="false" name="preference_description_mqtt_enabled">הפעלת לבנים וחיישנים של MQTT</string>
+    <string formatted="false" name="preference_title_mqtt_category">הגדרות MQTT</string>
+    <string formatted="false" name="preference_title_mqtt_broker_host">מארח המתווך</string>
+    <string formatted="false" name="preference_description_mqtt_broker_host">כתובת IP או שם מארח של מתווך ה־MQTT</string>
+    <string formatted="false" name="preference_title_mqtt_broker_port">פורט המתווך</string>
+    <string formatted="false" name="preference_description_mqtt_broker_port">מספר הפורט של מתווך ה־MQTT (1–65535)</string>
+    <string formatted="false" name="preference_title_mqtt_use_tls">שימוש ב־TLS</string>
+    <string formatted="false" name="preference_title_mqtt_username">שם משתמש</string>
+    <string formatted="false" name="preference_title_mqtt_password">סיסמה</string>
+    <string formatted="false" name="preference_title_mqtt_client_id">מזהה לקוח</string>
+    <string formatted="false" name="preference_mqtt_port_invalid">הפורט חייב להיות מספר בין 1 ל־65535</string>
+    <!--  -->
+    <!-- Lego Mindstorms Strings -->
+    <string formatted="false" name="nxt_brick_motor_move">קבע את מנוע ה־NXT</string>
+    <string formatted="false" name="nxt_motor_speed_to">ל־</string>
+    <string formatted="false" name="nxt_motor_speed">מהירות</string>
+    <string formatted="false" name="nxt_brick_motor_turn_angle">סובב את מנוע ה־NXT</string>
+    <string formatted="false" name="nxt_motor_move_by">ב־</string>
+    <string formatted="false" name="nxt_motor_stop">עצור את מנוע ה־NXT</string>
+    <string formatted="false" name="nxt_play_tone">נגן צליל ב־NXT</string>
+    <string formatted="false" name="nxt_tone_duration">משך</string>
+    <string formatted="false" name="nxt_tone_frequency">תדר</string>
+    <string formatted="false" name="nxt_tone_hundred_hz">×100Hz</string>
+    <string formatted="false" name="nxt_motor_a">A</string>
+    <string formatted="false" name="nxt_motor_b">B</string>
+    <string formatted="false" name="nxt_motor_c">C</string>
+    <string formatted="false" name="nxt_motor_b_and_c">B+C</string>
+    <string formatted="false" name="nxt_motor_all">הכול</string>
+    <string formatted="false" name="nxt_choose_sensor_1">חיישן המחובר לפורט 1</string>
+    <string formatted="false" name="nxt_choose_sensor_2">חיישן המחובר לפורט 2</string>
+    <string formatted="false" name="nxt_choose_sensor_3">חיישן המחובר לפורט 3</string>
+    <string formatted="false" name="nxt_choose_sensor_4">חיישן המחובר לפורט 4</string>
+    <string formatted="false" name="nxt_no_sensor">ללא</string>
+    <string formatted="false" name="nxt_sensor_touch">חיישן מגע NXT</string>
+    <string formatted="false" name="nxt_sensor_sound">חיישן קול NXT</string>
+    <string formatted="false" name="nxt_sensor_light">חיישן אור NXT</string>
+    <string formatted="false" name="nxt_sensor_light_active">חיישן אור NXT פעיל</string>
+    <string formatted="false" name="nxt_sensor_ultrasonic">חיישן על־קולי NXT</string>
+    <string formatted="false" name="nxt_sensor_not_found">החיישן לא נמצא!</string>
+    <string formatted="false" name="lego_nxt_sensor_config_info_title">תצורת חיישני NXT</string>
+    <string formatted="false" name="preference_disable_nxt_info_dialog">השבתת חלון המידע</string>
+    <string formatted="false" name="preference_disable_nxt_info_dialog_description">הגדרות ה־NXT של המיזם לא יוצגו בעת פתיחת מיזם.</string>
+    <string formatted="false" name="preference_title_mindstorms_nxt_sensors_description">שיוך חיישני ה־NXT לפורטים נקבע לכל מיזם בנפרד, ואפשר להגדיר אותו רק כשהמיזם פתוח.</string>
+    <string formatted="false" name="lego_nxt_sensor_config_info_text">המיזם הנוכחי משתמש בלבנים או בחיישנים של Lego Mindstorms NXT. כדי שהכול יפעל כראוי, יש לחבר את החיישנים לרובוט כך</string>
+    <string formatted="false" name="lego_port_1">פורט 1</string>
+    <string formatted="false" name="lego_port_2">פורט 2</string>
+    <string formatted="false" name="lego_port_3">פורט 3</string>
+    <string formatted="false" name="lego_port_4">פורט 4</string>
+    <string formatted="false" name="lego_sensor_config_dont_show_again">לא להציג את ההודעה הזו שוב.</string>
+    <string formatted="false" name="lego_sensor_port_config_dialog_title">בחירת פורט לחיבור %1$s.</string>
+    <string formatted="false" name="lego_ev3_sensor_config_info_title">תצורת חיישני EV3</string>
+    <string formatted="false" name="preference_disable_ev3_info_dialog_description">הגדרות ה־EV3 של המיזם לא יוצגו בעת פתיחת מיזם.</string>
+    <string formatted="false" name="preference_title_mindstorms_ev3_sensors_description">שיוך חיישני ה־EV3 לפורטים נקבע לכל מיזם בנפרד, ואפשר להגדיר אותו רק כשהמיזם פתוח.</string>
+    <string formatted="false" name="lego_ev3_sensor_config_info_text">המיזם הנוכחי משתמש בלבנים או בחיישנים של Lego Mindstorms EV3. כדי שהכול יפעל כראוי, יש לחבר את החיישנים לרובוט כך</string>
+    <string formatted="false" name="ev3_choose_sensor_1">חיישן המחובר לפורט 1</string>
+    <string formatted="false" name="ev3_choose_sensor_2">חיישן המחובר לפורט 2</string>
+    <string formatted="false" name="ev3_choose_sensor_3">חיישן המחובר לפורט 3</string>
+    <string formatted="false" name="ev3_choose_sensor_4">חיישן המחובר לפורט 4</string>
+    <string formatted="false" name="ev3_no_sensor">ללא</string>
+    <string formatted="false" name="ev3_sensor_touch">חיישן מגע EV3</string>
+    <string formatted="false" name="ev3_sensor_infrared">חיישן אינפרה־אדום EV3</string>
+    <string formatted="false" name="ev3_sensor_color">חיישן צבע EV3</string>
+    <string formatted="false" name="ev3_sensor_color_ambient">חיישן צבע EV3 – אור סביבה</string>
+    <string formatted="false" name="ev3_sensor_color_reflected">חיישן צבע EV3 – אור מוחזר</string>
+    <string formatted="false" name="ev3_sensor_hitechnic_color">חיישן צבע HiTechnic</string>
+    <string formatted="false" name="ev3_sensor_nxt_temperature_c">חיישן טמפרטורה NXT (°C)</string>
+    <string formatted="false" name="ev3_sensor_nxt_temperature_f">חיישן טמפרטורה NXT (°F)</string>
+    <string formatted="false" name="ev3_sensor_nxt_light">חיישן אור NXT</string>
+    <string formatted="false" name="ev3_sensor_nxt_light_active">חיישן אור NXT פעיל</string>
+    <string formatted="false" name="ev3_sensor_nxt_sound">חיישן קול NXT</string>
+    <string formatted="false" name="ev3_sensor_nxt_ultrasonic">חיישן על־קולי NXT</string>
+    <string formatted="false" name="ev3_motor_a">A</string>
+    <string formatted="false" name="ev3_motor_b">B</string>
+    <string formatted="false" name="ev3_motor_c">C</string>
+    <string formatted="false" name="ev3_motor_d">D</string>
+    <string formatted="false" name="ev3_motor_b_and_c">B+C</string>
+    <string formatted="false" name="ev3_motor_all">הכול</string>
+    <string formatted="false" name="ev3_play_tone">נגן צליל ב־EV3</string>
+    <string formatted="false" name="ev3_tone_duration_for">למשך</string>
+    <string formatted="false" name="ev3_tone_volume">עוצמת קול</string>
+    <string formatted="false" name="ev3_tone_percent">%</string>
+    <string formatted="false" name="ev3_motor_stop">עצור את מנוע ה־EV3</string>
+    <string formatted="false" name="ev3_motor_move">קבע את מנוע ה־EV3</string>
+    <string formatted="false" name="ev3_brick_motor_turn_angle">סובב את מנוע ה־EV3</string>
+    <string formatted="false" name="ev3_motor_move_by">ב־</string>
+    <string formatted="false" name="ev3_set_led_status">קבע את מצב נורית ה־LED של EV3</string>
+    <string formatted="false" name="ev3_led_status_off">כבויה</string>
+    <string formatted="false" name="ev3_led_status_green">ירוק</string>
+    <string formatted="false" name="ev3_led_status_red">אדום</string>
+    <string formatted="false" name="ev3_led_status_orange">כתום</string>
+    <string formatted="false" name="ev3_led_status_green_flashing">ירוק מהבהב</string>
+    <string formatted="false" name="ev3_led_status_red_flashing">אדום מהבהב</string>
+    <string formatted="false" name="ev3_led_status_orange_flashing">כתום מהבהב</string>
+    <string formatted="false" name="ev3_led_status_green_pulse">ירוק פועם</string>
+    <string formatted="false" name="ev3_led_status_red_pulse">אדום פועם</string>
+    <string formatted="false" name="ev3_led_status_orange_pulse">כתום פועם</string>
+    <!--  -->
+    <!-- Drone Bricks -->
+    <string formatted="false" name="brick_drone_takeoff_land">המרא / נחת עם AR.Drone 2.0</string>
+    <string formatted="false" name="brick_drone_play_led_animation">הפעל אנימציית אורות ב־AR.Drone 2.0</string>
+    <string formatted="false" name="brick_drone_flip">בצע היפוך עם AR.Drone 2.0</string>
+    <string formatted="false" name="brick_drone_move_left">הזז את AR.Drone 2.0 שמאלה</string>
+    <string formatted="false" name="brick_drone_move_right">הזז את AR.Drone 2.0 ימינה</string>
+    <string formatted="false" name="brick_drone_move_forward">הזז את AR.Drone 2.0 קדימה</string>
+    <string formatted="false" name="brick_drone_move_backward">הזז את AR.Drone 2.0 אחורה</string>
+    <string formatted="false" name="brick_drone_move_up">הזז את AR.Drone 2.0 למעלה</string>
+    <string formatted="false" name="brick_drone_move_down">הזז את AR.Drone 2.0 למטה</string>
+    <string formatted="false" name="brick_drone_emergency">עצירת חירום של AR.Drone 2.0</string>
+    <string formatted="false" name="brick_drone_turn_right">סובב את AR.Drone 2.0 ימינה</string>
+    <string formatted="false" name="brick_drone_turn_left">סובב את AR.Drone 2.0 שמאלה</string>
+    <string formatted="false" name="brick_drone_set_config">קבע תצורה של AR.Drone 2.0</string>
+    <string formatted="false" name="brick_drone_switch_camera">החלף מצלמה ב־AR.Drone 2.0</string>
+    <string formatted="false" name="brick_drone_set_altitude">מגבלת גובה</string>
+    <string formatted="false" name="brick_drone_set_vertical_speed">מגבלת מהירות אנכית</string>
+    <string formatted="false" name="brick_drone_set_rotation_speed">מגבלת מהירות סיבוב</string>
+    <string formatted="false" name="brick_drone_set_tilt_limit">מגבלת הטיה</string>
+    <string formatted="false" name="brick_drone_with.">עם</string>
+    <string formatted="false" name="brick_drone_power">עוצמה</string>
+    <!--  -->
+    <!-- Drone play led animation strings -->
+    <string formatted="false" name="drone_animation_blinkgreenred">הבהוב ירוק ואדום</string>
+    <string formatted="false" name="drone_animation_blinkgreen">הבהוב ירוק</string>
+    <string formatted="false" name="drone_animation_blinkred">הבהוב אדום</string>
+    <string formatted="false" name="drone_animation_blinkorange">הבהוב כתום</string>
+    <string formatted="false" name="drone_animation_snakegreenred">נחש ירוק ואדום</string>
+    <string formatted="false" name="drone_animation_fire">אש</string>
+    <string formatted="false" name="drone_animation_standard">רגיל</string>
+    <string formatted="false" name="drone_animation_red">אדום</string>
+    <string formatted="false" name="drone_animation_green">ירוק</string>
+    <string formatted="false" name="drone_animation_redsnake">נחש אדום</string>
+    <string formatted="false" name="drone_animation_blank">כבוי</string>
+    <string formatted="false" name="drone_animation_rightmissile">טיל ימני</string>
+    <string formatted="false" name="drone_animation_leftmissile">טיל שמאלי</string>
+    <string formatted="false" name="drone_animation_doublemissile">טיל כפול</string>
+    <string formatted="false" name="drone_animation_frontleftgreenothersred">קדמי שמאלי ירוק, השאר אדומים</string>
+    <string formatted="false" name="drone_animation_frontrightgreenothersred">קדמי ימני ירוק, השאר אדומים</string>
+    <string formatted="false" name="drone_animation_rearrightgreenothersred">אחורי ימני ירוק, השאר אדומים</string>
+    <string formatted="false" name="drone_animation_rearleftgreenothersred">אחורי שמאלי ירוק, השאר אדומים</string>
+    <string formatted="false" name="drone_animation_leftgreenrightred">שמאל ירוק, ימין אדום</string>
+    <string formatted="false" name="drone_animation_leftredrightgreen">שמאל אדום, ימין ירוק</string>
+    <string formatted="false" name="drone_animation_blinkstandard">הבהוב רגיל</string>
+    <!-- Jumping Sumo Bricks -->
+    <string formatted="false" name="brick_jumping_sumo_move_forward">הזז את Jumping Sumo קדימה</string>
+    <string formatted="false" name="brick_jumping_sumo_move_backward">הזז את Jumping Sumo אחורה</string>
+    <string formatted="false" name="brick_jumping_sumo_animation">אנימציות של Jumping Sumo</string>
+    <string formatted="false" name="brick_jumping_sumo_no_sound">השתק את Jumping Sumo</string>
+    <string formatted="false" name="brick_jumping_sumo_jump_long">Jumping Sumo: קפוץ למרחק</string>
+    <string formatted="false" name="brick_jumping_sumo_jump_high">Jumping Sumo: קפוץ לגובה</string>
+    <string formatted="false" name="brick_jumping_sumo_rotate_left">סובב את Jumping Sumo שמאלה</string>
+    <string formatted="false" name="brick_jumping_sumo_rotate_right">סובב את Jumping Sumo ימינה</string>
+    <string formatted="false" name="brick_jumping_sumo_rotate_text">מעלות</string>
+    <string formatted="false" name="brick_jumping_sumo_turn">הפוך את Jumping Sumo</string>
+    <string formatted="false" name="brick_jumping_sumo_taking_picture">צלם תמונה עם Jumping Sumo</string>
+    <!--  -->
+    <!-- defaultJumpingSumoValues -->
+    <string formatted="false" name="default_jumping_sumo_project_sprites_sound">צליל</string>
+    <!--  -->
+    <!-- Jumping Sumo animation strings -->
+    <string formatted="false" name="animation_spin">סחרור</string>
+    <string formatted="false" name="animation_tab">טפיחה</string>
+    <string formatted="false" name="animation_slowshake">ניעור איטי</string>
+    <string formatted="false" name="animation_metronome">מטרונום</string>
+    <string formatted="false" name="animation_ondulation">גלים</string>
+    <string formatted="false" name="animation_spinjump">קפיצה בסחרור</string>
+    <string formatted="false" name="animation_spiral">ספירלה</string>
+    <string formatted="false" name="animation_slalom">סלאלום</string>
+    <!-- Jumping Sumo sound strings -->
+    <string formatted="false" name="jumping_sumo_volume">עוצמת קול</string>
+    <string formatted="false" name="sound_default">רגיל</string>
+    <string formatted="false" name="sound_robot">רובוט</string>
+    <string formatted="false" name="sound_insect">חרק</string>
+    <string formatted="false" name="sound_monster">מפלצת</string>
+    <!--  -->
+    <!-- Shared arc and go-through strings -->
+    <string formatted="false" name="direction_left">שמאלה</string>
+    <string formatted="false" name="direction_right">ימינה</string>
+    <string formatted="false" name="arc_direction">נוע בקשת</string>
+    <string formatted="false" name="go_through">עבור דרך</string>
+    <string formatted="false" name="go_through_target">ואז אל</string>
+    <string formatted="false" name="arc_with_radius">ברדיוס</string>
+    <string formatted="false" name="arc_for_degrees">לאורך</string>
+    <!--  -->
+    <!-- Phiro bricks -->
+    <!-- motor -->
+    <string formatted="false" name="phiro_motor_stop">עצור מנוע Phiro:</string>
+    <string formatted="false" name="brick_phiro_motor_forward_action">הנע קדימה מנוע Phiro:</string>
+    <string formatted="false" name="brick_phiro_motor_backward_action">הנע אחורה מנוע Phiro:</string>
+    <string formatted="false" name="phiro_motor_speed">מהירות</string>
+    <!-- sensor -->
+    <string formatted="false" name="brick_phiro_sensor_begin">אם ב־Phiro</string>
+    <string formatted="false" name="brick_phiro_sensor_second_part">מופעל אז</string>
+    <!-- tone -->
+    <string formatted="false" name="phiro_play_tone">נגן מוזיקה ב־Phiro\n</string>
+    <string formatted="false" name="phiro_tone_duration">משך</string>
+    <string formatted="false" name="brick_phiro_select_tone">צליל</string>
+    <string formatted="false" name="phiro_seconds">שניות</string>
+    <!-- light -->
+    <string formatted="false" name="brick_phiro_rgb_led_action">קבע נורית Phiro:</string>
+    <string formatted="false" name="phiro_rgb_led_red">אדום</string>
+    <string formatted="false" name="phiro_rgb_led_green">ירוק</string>
+    <string formatted="false" name="phiro_rgb_led_blue">כחול</string>
+    <!--  -->
+    <!-- Phiro tone strings -->
+    <string formatted="false" name="phiro_tone_do">דו</string>
+    <string formatted="false" name="phiro_tone_re">רה</string>
+    <string formatted="false" name="phiro_tone_mi">מי</string>
+    <string formatted="false" name="phiro_tone_fa">פה</string>
+    <string formatted="false" name="phiro_tone_so">סול</string>
+    <string formatted="false" name="phiro_tone_la">לה</string>
+    <string formatted="false" name="phiro_tone_ti">סי</string>
+    <!--  -->
+    <!-- Phiro motor strings -->
+    <string formatted="false" name="phiro_motor_left">שמאלי</string>
+    <string formatted="false" name="phiro_motor_right">ימני</string>
+    <string formatted="false" name="phiro_motor_both">שניהם</string>
+    <!--  -->
+    <!-- Phiro light strings -->
+    <string formatted="false" name="phiro_light_left">שמאלית</string>
+    <string formatted="false" name="phiro_light_right">ימנית</string>
+    <string formatted="false" name="phiro_light_both">שתיהן</string>
+    <!--  -->
+    <!-- Phiro sensor strings -->
+    <string formatted="false" name="phiro_sensor_front_left">חיישן קדמי שמאלי</string>
+    <string formatted="false" name="phiro_sensor_front_right">חיישן קדמי ימני</string>
+    <string formatted="false" name="phiro_sensor_side_left">חיישן צד שמאלי</string>
+    <string formatted="false" name="phiro_sensor_side_right">חיישן צד ימני</string>
+    <string formatted="false" name="phiro_sensor_bottom_left">חיישן תחתון שמאלי</string>
+    <string formatted="false" name="phiro_sensor_bottom_right">חיישן תחתון ימני</string>
+    <!--  -->
+    <string formatted="false" name="color_red">אדום</string>
+    <string formatted="false" name="color_green">ירוק</string>
+    <string formatted="false" name="color_blue">כחול</string>
+    <!-- -->
+    <!-- Formula editor strings -->
+    <string formatted="false" name="formula_editor_data">נתונים</string>
+    <string formatted="false" name="formula_editor_true">אמת</string>
+    <string formatted="false" name="formula_editor_false">שקר</string>
+    <string formatted="false" name="formula_editor_decimal_mark">.</string>
+    <string formatted="false" name="formula_editor_title">עורך הנוסחאות</string>
+    <string formatted="false" name="formula_editor_changes_discarded">השינויים בוטלו!</string>
+    <string formatted="false" name="formula_editor_parse_fail">הנוסחה אינה תקינה!</string>
+    <string formatted="false" name="formula_nothing_selected">יש להגדיר ערך קלט</string>
+    <string formatted="false" name="formula_editor_parse_fail_formula_too_long">הנוסחה ארוכה מדי!</string>
+    <string formatted="false" name="formula_editor_choose_object_variable">מאפיינים של הדמות או האובייקט הזה</string>
+    <string formatted="false" name="formula_editor_bracket_open">(</string>
+    <string formatted="false" name="formula_editor_bracket_close">)</string>
+    <string formatted="false" name="formula_editor_function_sin">סינוס</string>
+    <string formatted="false" name="formula_editor_function_sin_parameter">(90)</string>
+    <string formatted="false" name="formula_editor_function_cos">קוסינוס</string>
+    <string formatted="false" name="formula_editor_function_cos_parameter">(360)</string>
+    <string formatted="false" name="formula_editor_function_tan">טנגנס</string>
+    <string formatted="false" name="formula_editor_function_tan_parameter">(45)</string>
+    <string formatted="false" name="formula_editor_function_ln">לוגריתם טבעי</string>
+    <string formatted="false" name="formula_editor_function_ln_parameter">(2.718281828459)</string>
+    <string formatted="false" name="formula_editor_function_log">לוגריתם עשרוני</string>
+    <string formatted="false" name="formula_editor_function_log_parameter">(10)</string>
+    <string formatted="false" name="formula_editor_function_pi">פאי</string>
+    <string formatted="false" name="formula_editor_function_pi_parameter"></string>
+    <string formatted="false" name="formula_editor_object_color">צבע</string>
+    <string formatted="false" name="formula_editor_function_sqrt">שורש ריבועי</string>
+    <string formatted="false" name="formula_editor_function_sqrt_parameter">(4)</string>
+    <string formatted="false" name="formula_editor_function_rand">ערך אקראי מ־ עד</string>
+    <string formatted="false" name="formula_editor_function_rand_parameter">(1,6)</string>
+    <string formatted="false" name="formula_editor_function_abs">ערך מוחלט</string>
+    <string formatted="false" name="formula_editor_function_abs_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_round">עיגול</string>
+    <string formatted="false" name="formula_editor_function_round_parameter">(1.6)</string>
+    <string formatted="false" name="formula_editor_function_mod">מודולו</string>
+    <string formatted="false" name="formula_editor_function_mod_parameter">(3,2)</string>
+    <string formatted="false" name="formula_editor_function_arcsin">ארקסינוס</string>
+    <string formatted="false" name="formula_editor_function_arcsin_parameter">(0.5)</string>
+    <string formatted="false" name="formula_editor_function_arccos">ארקקוסינוס</string>
+    <string formatted="false" name="formula_editor_function_arccos_parameter">(0)</string>
+    <string formatted="false" name="formula_editor_function_arctan">ארקטנגנס</string>
+    <string formatted="false" name="formula_editor_function_arctan_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_arctan2">ארקטנגנס2</string>
+    <string formatted="false" name="formula_editor_function_arctan2_parameter">(-1, 0)</string>
+    <string formatted="false" name="formula_editor_function_exp">אקספוננט</string>
+    <string formatted="false" name="formula_editor_function_exp_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_power">חזקה</string>
+    <string formatted="false" name="formula_editor_function_power_parameter">(2,3)</string>
+    <string formatted="false" name="formula_editor_function_floor">עיגול כלפי מטה</string>
+    <string formatted="false" name="formula_editor_function_floor_parameter">(0.7)</string>
+    <string formatted="false" name="formula_editor_function_ceil">עיגול כלפי מעלה</string>
+    <string formatted="false" name="formula_editor_function_ceil_parameter">(0.3)</string>
+    <string formatted="false" name="formula_editor_function_max">המקסימום מבין</string>
+    <string formatted="false" name="formula_editor_function_max_parameter">(5,4)</string>
+    <string formatted="false" name="formula_editor_function_min">המינימום מבין</string>
+    <string formatted="false" name="formula_editor_function_min_parameter">(7,2)</string>
+    <string formatted="false" name="formula_editor_function_if_then_else">אם אז אחרת</string>
+    <string formatted="false" name="formula_editor_function_if_then_else_parameter">(שקר, 2, 3)</string>
+    <string formatted="false" name="formula_editor_function_true">אמת</string>
+    <string formatted="false" name="formula_editor_function_false">שקר</string>
+    <string formatted="false" name="formula_editor_function_length">אורך</string>
+    <string formatted="false" name="formula_editor_function_length_parameter">(\'hello world\')</string>
+    <string formatted="false" name="formula_editor_function_letter">אות</string>
+    <string formatted="false" name="formula_editor_function_letter_parameter">(1,\'hello world\')</string>
+    <string formatted="false" name="formula_editor_function_subtext">תת־טקסט</string>
+    <string formatted="false" name="formula_editor_function_subtext_parameter">(3,5,\'hello world\')</string>
+    <string formatted="false" name="formula_editor_function_join">צירוף</string>
+    <string formatted="false" name="formula_editor_function_join_parameter">(\'hello\',\' world\')</string>
+    <string formatted="false" name="formula_editor_function_join3">צירוף</string>
+    <string formatted="false" name="formula_editor_function_join3_parameter">(\'hello\',\' world\',\'!\')</string>
+    <string formatted="false" name="formula_editor_function_regex">ביטוי רגולרי</string>
+    <string formatted="false" name="formula_editor_function_regex_parameter">(\' an? ([^ .]+)\',\'I am a panda.\')</string>
+    <string formatted="false" name="formula_editor_function_regex_assistant">עוזר ביטויים רגולריים</string>
+    <string formatted="false" name="formula_editor_dialog_regular_expression_assistant_title">עוזר ביטויים רגולריים</string>
+    <string formatted="false" name="formula_editor_function_regex_html_extractor_not_found">מילת המפתח לא נמצאה.</string>
+    <string formatted="false" name="formula_editor_function_regex_json_extractor_title">מחלץ JSON</string>
+    <string formatted="false" name="formula_editor_function_arduino_read_pin_value_digital">פין דיגיטלי של Arduino</string>
+    <string formatted="false" name="formula_editor_function_arduino_read_pin_value_analog">פין אנלוגי של Arduino</string>
+    <string formatted="false" name="formula_editor_function_raspi_read_pin_value_digital">פין של Raspberry Pi</string>
+    <string formatted="false" name="formula_editor_function_pin_default_parameter">(0)</string>
+    <string formatted="false" name="formula_editor_function_finger_x">x של נגיעה בבמה</string>
+    <string formatted="false" name="formula_editor_function_finger_y">y של נגיעה בבמה</string>
+    <string formatted="false" name="formula_editor_function_is_finger_touching">נוגעים בבמה</string>
+    <string formatted="false" name="formula_editor_function_multi_finger_x">x של נגיעה בבמה</string>
+    <string formatted="false" name="formula_editor_function_multi_finger_y">y של נגיעה בבמה</string>
+    <string formatted="false" name="formula_editor_function_is_multi_finger_touching">נוגעים בבמה</string>
+    <string formatted="false" name="formula_editor_function_index_of_last_finger">מספר הנגיעה האחרונה בבמה</string>
+    <string formatted="false" name="formula_editor_function_number_of_current_touches">מספר הנגיעות הנוכחיות</string>
+    <string formatted="false" name="formula_editor_function_index_of_current_touch">מספר הנגיעה הנוכחית</string>
+    <string formatted="false" name="formula_editor_function_no_parameter"></string>
+    <string formatted="false" name="formula_editor_function_touch_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_list_item">פריט</string>
+    <string formatted="false" name="formula_editor_function_list_item_parameter">(1,*list name*)</string>
+    <string formatted="false" name="formula_editor_function_contains">מכיל</string>
+    <string formatted="false" name="formula_editor_function_contains_parameter">(*list name*,1)</string>
+    <string formatted="false" name="formula_editor_function_index_of_item">מיקום הפריט</string>
+    <string formatted="false" name="formula_editor_function_index_of_item_parameter">(1,*list name*)</string>
+    <string formatted="false" name="formula_editor_function_number_of_items">מספר הפריטים</string>
+    <string formatted="false" name="formula_editor_function_number_of_items_parameter">(*list name*)</string>
+    <string formatted="false" name="formula_editor_function_flatten">השטחה</string>
+    <string formatted="false" name="formula_editor_function_flatten_parameter">(*list name*)</string>
+    <string formatted="false" name="formula_editor_function_collision">נוגע בדמות או באובייקט</string>
+    <string formatted="false" name="formula_editor_function_collides_with_edge">נוגע בקצה</string>
+    <string formatted="false" name="formula_editor_function_touched">נוגע באצבע</string>
+    <string formatted="false" name="formula_editor_function_collides_with_color">נוגע בצבע</string>
+    <string formatted="false" name="formula_editor_function_color_touches_color">צבע נוגע בצבע</string>
+    <string formatted="false" name="formula_editor_sensor_color_at_x_y">צבע בנקודה x y</string>
+    <string formatted="false" name="formula_editor_sensor_color_equals_color">צבע שווה לצבע עם % סטייה</string>
+    <string formatted="false" name="formula_editor_sensor_x_acceleration">תאוצה x</string>
+    <string formatted="false" name="formula_editor_sensor_y_acceleration">תאוצה y</string>
+    <string formatted="false" name="formula_editor_sensor_z_acceleration">תאוצה z</string>
+    <string formatted="false" name="formula_editor_sensor_compass_direction">כיוון המצפן</string>
+    <string formatted="false" name="formula_editor_sensor_latitude">קו רוחב</string>
+    <string formatted="false" name="formula_editor_sensor_longitude">קו אורך</string>
+    <string formatted="false" name="formula_editor_sensor_location_accuracy">דיוק המיקום</string>
+    <string formatted="false" name="formula_editor_sensor_altitude">גובה</string>
+    <string formatted="false" name="formula_editor_sensor_user_language">שפת המשתמש</string>
+    <string formatted="false" name="formula_editor_sensor_x_inclination">הטיה x</string>
+    <string formatted="false" name="formula_editor_sensor_y_inclination">הטיה y</string>
+    <string formatted="false" name="formula_editor_sensor_loudness">עוצמת הקול</string>
+    <string formatted="false" name="formula_editor_sensor_timer">שעון עצר</string>
+    <string formatted="false" name="formula_editor_sensor_date_year">שנה</string>
+    <string formatted="false" name="formula_editor_sensor_date_month">חודש</string>
+    <string formatted="false" name="formula_editor_sensor_date_day">יום</string>
+    <string formatted="false" name="formula_editor_sensor_date_weekday">יום בשבוע</string>
+    <string formatted="false" name="formula_editor_sensor_time_hour">שעה</string>
+    <string formatted="false" name="formula_editor_sensor_time_minute">דקה</string>
+    <string formatted="false" name="formula_editor_sensor_time_second">שנייה</string>
+    <string formatted="false" name="formula_editor_sensor_drone_battery_status">מצב סוללת הרחפן</string>
+    <string formatted="false" name="formula_editor_sensor_drone_emergency_state">מצב חירום של הרחפן</string>
+    <string formatted="false" name="formula_editor_sensor_drone_flying">הרחפן בטיסה</string>
+    <string formatted="false" name="formula_editor_sensor_drone_initialized">הרחפן מוכן</string>
+    <string formatted="false" name="formula_editor_sensor_drone_usb_active">USB של הרחפן פעיל</string>
+    <string formatted="false" name="formula_editor_sensor_drone_usb_remaining_time">זמן שנותר ב־USB של הרחפן</string>
+    <string formatted="false" name="formula_editor_sensor_drone_camera_ready">מצלמת הרחפן מוכנה</string>
+    <string formatted="false" name="formula_editor_sensor_drone_record_ready">הרחפן מוכן להקלטה</string>
+    <string formatted="false" name="formula_editor_sensor_drone_recording">מצלמת הרחפן מקליטה</string>
+    <string formatted="false" name="formula_editor_sensor_drone_num_frames">מספר הפריימים במצלמת הרחפן</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_1">חיישן NXT 1</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_2">חיישן NXT 2</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_3">חיישן NXT 3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_4">חיישן NXT 4</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_1">חיישן EV3 1</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_2">חיישן EV3 2</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_3">חיישן EV3 3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_4">חיישן EV3 4</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_touch">NXT מגע</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_sound">NXT קול</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_light">NXT אור</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_light_active">NXT אור פעיל</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_ultrasonic">NXT על־קולי</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_touch">EV3 מגע</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_infrared">EV3 אינפרה־אדום</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_color">EV3 צבע</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_color_ambient">EV3 צבע אור הסביבה</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_color_reflected">EV3 צבע אור מוחזר</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_hitechnic_color">EV3 צבע HiTechnic</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_temperature_c">EV3 NXT טמפרטורה ב־°C</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_temperature_f">EV3 NXT טמפרטורה ב־°F</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_light">EV3 NXT אור</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_light_active">EV3 NXT אור פעיל</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_sound">EV3 NXT קול</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_ultrasonic">EV3 NXT על־קולי</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_a_pressed">כפתור A בשלט נלחץ</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_b_pressed">כפתור B בשלט נלחץ</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_up_pressed">כפתור למעלה בשלט נלחץ</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_down_pressed">כפתור למטה בשלט נלחץ</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_left_pressed">כפתור שמאלה בשלט נלחץ</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_right_pressed">כפתור ימינה בשלט נלחץ</string>
+    <string formatted="false" name="formula_editor_sensor_stage_width">רוחב הבמה</string>
+    <string formatted="false" name="formula_editor_sensor_stage_height">גובה הבמה</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_front_left">חיישן קדמי שמאלי של Phiro</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_front_right">חיישן קדמי ימני של Phiro</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_side_left">חיישן צד שמאלי של Phiro</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_side_right">חיישן צד ימני של Phiro</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_bottom_left">חיישן תחתון שמאלי של Phiro</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_bottom_right">חיישן תחתון ימני של Phiro</string>
+    <string formatted="false" name="formula_editor_nfc_tag_id">מזהה תגית NFC</string>
+    <string formatted="false" name="formula_editor_nfc_tag_message">הודעת תגית NFC</string>
+    <string formatted="false" name="formula_editor_object_x">מיקום x</string>
+    <string formatted="false" name="formula_editor_object_y">מיקום y</string>
+    <string formatted="false" name="formula_editor_object_transparency">שקיפות</string>
+    <string formatted="false" name="formula_editor_object_brightness">בהירות</string>
+    <string formatted="false" name="formula_editor_object_size">גודל</string>
+    <string formatted="false" name="formula_editor_object_rotation">כיוון התנועה</string>
+    <string formatted="false" name="formula_editor_object_rotation_look">כיוון המראה</string>
+    <string formatted="false" name="formula_editor_object_layer">שכבה</string>
+    <string formatted="false" name="formula_editor_object_x_velocity">מהירות x</string>
+    <string formatted="false" name="formula_editor_object_y_velocity">מהירות y</string>
+    <string formatted="false" name="formula_editor_object_angular_velocity">מהירות זוויתית</string>
+    <string formatted="false" name="formula_editor_object_look_number">מספר המראה</string>
+    <string formatted="false" name="formula_editor_object_look_name">שם המראה</string>
+    <string formatted="false" name="formula_editor_object_number_of_looks">מספר המראות</string>
+    <string formatted="false" name="formula_editor_object_background_number">מספר הרקע</string>
+    <string formatted="false" name="formula_editor_object_background_name">שם הרקע</string>
+    <string formatted="false" name="formula_editor_object_number_of_backgrounds">מספר הרקעים</string>
+    <string formatted="false" name="formula_editor_object_distance_to">מרחק ממיקום הנגיעה</string>
+    <string formatted="false" name="formula_editor_confirm">אישור</string>
+    <string formatted="false" name="formula_editor_object">מאפיינים</string>
+    <string formatted="false" name="formula_editor_functions">פונקציות</string>
+    <string formatted="false" name="formula_editor_logic">לוגיקה</string>
+    <string formatted="false" name="formula_editor_device">חיישנים</string>
+    <string formatted="false" name="formula_editor_device_sensors">חיישני המכשיר</string>
+    <string formatted="false" name="formula_editor_functions_maths">מתמטיקה</string>
+    <string formatted="false" name="formula_editor_functions_strings">טקסט</string>
+    <string formatted="false" name="formula_editor_functions_lists">רשימות</string>
+    <string formatted="false" name="formula_editor_logic_boolean">אופרטורים וקבועים לוגיים (בוליאניים)</string>
+    <string formatted="false" name="formula_editor_logic_comparison">אופרטורי השוואה</string>
+    <string formatted="false" name="formula_editor_object_look">מאפייני מראה</string>
+    <string formatted="false" name="formula_editor_object_movement">מאפייני תנועה</string>
+    <string formatted="false" name="formula_editor_device_face_detection">זיהוי פנים</string>
+    <string formatted="false" name="formula_editor_device_pose_detection">זיהוי תנוחה</string>
+    <string formatted="false" name="formula_editor_device_text_recognition">זיהוי טקסט</string>
+    <string formatted="false" name="formula_editor_device_object_recognition">זיהוי עצמים</string>
+    <string formatted="false" name="formula_editor_device_date_and_time">תאריך ושעה</string>
+    <string formatted="false" name="formula_editor_device_touch_detection">זיהוי נגיעה</string>
+    <string formatted="false" name="formula_editor_device_lego_nxt">Lego Mindstorms NXT</string>
+    <string formatted="false" name="formula_editor_device_lego_ev3">Lego Mindstorms EV3</string>
+    <string formatted="false" name="formula_editor_device_arduino">Arduino</string>
+    <string formatted="false" name="formula_editor_device_phiro">Phiro</string>
+    <string formatted="false" name="formula_editor_device_raspberry">Raspberry Pi</string>
+    <string formatted="false" name="formula_editor_device_drone">רחפן</string>
+    <string formatted="false" name="formula_editor_device_nfc">NFC</string>
+    <string formatted="false" name="formula_editor_device_cast">Chromecast</string>
+    <string formatted="false" name="formula_editor_string">אבג</string>
+    <string formatted="false" name="formula_editor_logic_notequal">≠</string>
+    <string formatted="false" name="formula_editor_logic_lesserthan">&lt;</string>
+    <string formatted="false" name="formula_editor_logic_greaterthan">&gt;</string>
+    <string formatted="false" name="formula_editor_logic_and">וגם</string>
+    <string formatted="false" name="formula_editor_logic_or">או</string>
+    <string formatted="false" name="formula_editor_logic_not">לא</string>
+    <string formatted="false" name="formula_editor_logic_greaterequal">≥</string>
+    <string formatted="false" name="formula_editor_logic_leserequal">≤</string>
+    <string formatted="false" name="formula_editor_logic_equal">=</string>
+    <string formatted="false" name="formula_editor_operator_mult">×</string>
+    <string formatted="false" name="formula_editor_operator_plus">+</string>
+    <string formatted="false" name="formula_editor_operator_minus">-</string>
+    <string formatted="false" name="formula_editor_operator_divide">÷</string>
+    <string formatted="false" name="formula_editor_operator_power">^</string>
+    <string formatted="false" name="formula_editor_image_button_description_delete">מחיקה</string>
+    <string formatted="false" name="formula_editor_image_button_description_calculate">חישוב</string>
+    <string formatted="false" name="formula_editor_image_button_description_confirm">אישור</string>
+    <string formatted="false" name="formula_editor_image_button_description_color_picker">בוחר צבעים</string>
+    <string formatted="false" name="formula_editor_image_button_description_functions_toggle">הצגה או הסתרה של פונקציות</string>
+    <string formatted="false" name="formula_editor_variable_dialog_title">משתנה חדש</string>
+    <string formatted="false" name="formula_editor_list_dialog_title">רשימה חדשה</string>
+    <string formatted="false" name="formula_editor_regex_html_extractor_dialog_title">מחלץ HTML</string>
+    <string formatted="false" name="formula_editor_discard_changes_dialog_message">האם לשמור את השינויים שביצעת?</string>
+    <string formatted="false" name="formula_editor_discard_changes_dialog_title">לשמור את השינויים?</string>
+    <string formatted="false" name="formula_editor_new_string_name">טקסט חדש</string>
+    <string formatted="false" name="formula_editor_dialog_change_text">שינוי טקסט</string>
+    <string formatted="false" name="formula_editor_dialog_change_regular_expression">שינוי ביטוי רגולרי</string>
+    <string formatted="false" name="formula_editor_fragment_data_current_items">הפריטים הנוכחיים</string>
+    <string formatted="false" name="formula_editor_data_dialog_is_list">הפיכה לרשימה</string>
+    <string formatted="false" name="formula_editor_sensor_face_detected">הפנים הראשונות נראות</string>
+    <string formatted="false" name="formula_editor_sensor_face_size">גודל הפנים הראשונות</string>
+    <string formatted="false" name="formula_editor_sensor_face_x_position">מיקום x של הפנים הראשונות</string>
+    <string formatted="false" name="formula_editor_sensor_face_y_position">מיקום y של הפנים הראשונות</string>
+    <string formatted="false" name="formula_editor_sensor_second_face_detected">הפנים השניות נראות</string>
+    <string formatted="false" name="formula_editor_sensor_second_face_size">גודל הפנים השניות</string>
+    <string formatted="false" name="formula_editor_sensor_second_face_x_position">מיקום x של הפנים השניות</string>
+    <string formatted="false" name="formula_editor_sensor_second_face_y_position">מיקום y של הפנים השניות</string>
+    <string formatted="false" name="formula_editor_sensor_head_top_x">קודקוד הראש x</string>
+    <string formatted="false" name="formula_editor_sensor_head_top_y">קודקוד הראש y</string>
+    <string formatted="false" name="formula_editor_sensor_neck_x">צוואר x</string>
+    <string formatted="false" name="formula_editor_sensor_neck_y">צוואר y</string>
+    <string formatted="false" name="formula_editor_sensor_nose_x">אף x</string>
+    <string formatted="false" name="formula_editor_sensor_nose_y">אף y</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_inner_x">זווית פנימית של העין השמאלית x</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_inner_y">זווית פנימית של העין השמאלית y</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_center_x">מרכז העין השמאלית x</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_center_y">מרכז העין השמאלית y</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_outer_x">זווית חיצונית של העין השמאלית x</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_outer_y">זווית חיצונית של העין השמאלית y</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_inner_x">זווית פנימית של העין הימנית x</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_inner_y">זווית פנימית של העין הימנית y</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_center_x">מרכז העין הימנית x</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_center_y">מרכז העין הימנית y</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_outer_x">זווית חיצונית של העין הימנית x</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_outer_y">זווית חיצונית של העין הימנית y</string>
+    <string formatted="false" name="formula_editor_sensor_left_ear_x">אוזן שמאלית x</string>
+    <string formatted="false" name="formula_editor_sensor_left_ear_y">אוזן שמאלית y</string>
+    <string formatted="false" name="formula_editor_sensor_right_ear_x">אוזן ימנית x</string>
+    <string formatted="false" name="formula_editor_sensor_right_ear_y">אוזן ימנית y</string>
+    <string formatted="false" name="formula_editor_sensor_mouth_left_corner_x">זווית הפה השמאלית x</string>
+    <string formatted="false" name="formula_editor_sensor_mouth_left_corner_y">זווית הפה השמאלית y</string>
+    <string formatted="false" name="formula_editor_sensor_mouth_right_corner_x">זווית הפה הימנית x</string>
+    <string formatted="false" name="formula_editor_sensor_mouth_right_corner_y">זווית הפה הימנית y</string>
+    <string formatted="false" name="formula_editor_sensor_left_shoulder_x">כתף שמאלית x</string>
+    <string formatted="false" name="formula_editor_sensor_left_shoulder_y">כתף שמאלית y</string>
+    <string formatted="false" name="formula_editor_sensor_right_shoulder_x">כתף ימנית x</string>
+    <string formatted="false" name="formula_editor_sensor_right_shoulder_y">כתף ימנית y</string>
+    <string formatted="false" name="formula_editor_sensor_left_elbow_x">מרפק שמאלי x</string>
+    <string formatted="false" name="formula_editor_sensor_left_elbow_y">מרפק שמאלי y</string>
+    <string formatted="false" name="formula_editor_sensor_right_elbow_x">מרפק ימני x</string>
+    <string formatted="false" name="formula_editor_sensor_right_elbow_y">מרפק ימני y</string>
+    <string formatted="false" name="formula_editor_sensor_left_wrist_x">שורש כף יד שמאל x</string>
+    <string formatted="false" name="formula_editor_sensor_left_wrist_y">שורש כף יד שמאל y</string>
+    <string formatted="false" name="formula_editor_sensor_right_wrist_x">שורש כף יד ימין x</string>
+    <string formatted="false" name="formula_editor_sensor_right_wrist_y">שורש כף יד ימין y</string>
+    <string formatted="false" name="formula_editor_sensor_left_pinky_knuckle_x">מפרק הזרת ביד שמאל x</string>
+    <string formatted="false" name="formula_editor_sensor_left_pinky_knuckle_y">מפרק הזרת ביד שמאל y</string>
+    <string formatted="false" name="formula_editor_sensor_right_pinky_knuckle_x">מפרק הזרת ביד ימין x</string>
+    <string formatted="false" name="formula_editor_sensor_right_pinky_knuckle_y">מפרק הזרת ביד ימין y</string>
+    <string formatted="false" name="formula_editor_sensor_left_index_knuckle_x">מפרק האצבע המורה ביד שמאל x</string>
+    <string formatted="false" name="formula_editor_sensor_left_index_knuckle_y">מפרק האצבע המורה ביד שמאל y</string>
+    <string formatted="false" name="formula_editor_sensor_right_index_knuckle_x">מפרק האצבע המורה ביד ימין x</string>
+    <string formatted="false" name="formula_editor_sensor_right_index_knuckle_y">מפרק האצבע המורה ביד ימין y</string>
+    <string formatted="false" name="formula_editor_sensor_left_thumb_knuckle_x">מפרק האגודל ביד שמאל x</string>
+    <string formatted="false" name="formula_editor_sensor_left_thumb_knuckle_y">מפרק האגודל ביד שמאל y</string>
+    <string formatted="false" name="formula_editor_sensor_right_thumb_knuckle_x">מפרק האגודל ביד ימין x</string>
+    <string formatted="false" name="formula_editor_sensor_right_thumb_knuckle_y">מפרק האגודל ביד ימין y</string>
+    <string formatted="false" name="formula_editor_sensor_left_hip_x">מותן שמאלית x</string>
+    <string formatted="false" name="formula_editor_sensor_left_hip_y">מותן שמאלית y</string>
+    <string formatted="false" name="formula_editor_sensor_right_hip_x">מותן ימנית x</string>
+    <string formatted="false" name="formula_editor_sensor_right_hip_y">מותן ימנית y</string>
+    <string formatted="false" name="formula_editor_sensor_left_knee_x">ברך שמאלית x</string>
+    <string formatted="false" name="formula_editor_sensor_left_knee_y">ברך שמאלית y</string>
+    <string formatted="false" name="formula_editor_sensor_right_knee_x">ברך ימנית x</string>
+    <string formatted="false" name="formula_editor_sensor_right_knee_y">ברך ימנית y</string>
+    <string formatted="false" name="formula_editor_sensor_left_ankle_x">קרסול שמאלי x</string>
+    <string formatted="false" name="formula_editor_sensor_left_ankle_y">קרסול שמאלי y</string>
+    <string formatted="false" name="formula_editor_sensor_right_ankle_x">קרסול ימני x</string>
+    <string formatted="false" name="formula_editor_sensor_right_ankle_y">קרסול ימני y</string>
+    <string formatted="false" name="formula_editor_sensor_left_heel_x">עקב שמאלי x</string>
+    <string formatted="false" name="formula_editor_sensor_left_heel_y">עקב שמאלי y</string>
+    <string formatted="false" name="formula_editor_sensor_right_heel_x">עקב ימני x</string>
+    <string formatted="false" name="formula_editor_sensor_right_heel_y">עקב ימני y</string>
+    <string formatted="false" name="formula_editor_sensor_left_foot_index_x">בוהן ברגל שמאל x</string>
+    <string formatted="false" name="formula_editor_sensor_left_foot_index_y">בוהן ברגל שמאל y</string>
+    <string formatted="false" name="formula_editor_sensor_right_foot_index_x">בוהן ברגל ימין x</string>
+    <string formatted="false" name="formula_editor_sensor_right_foot_index_y">בוהן ברגל ימין y</string>
+    <string formatted="false" name="formula_editor_sensor_text_from_camera">טקסט מהמצלמה</string>
+    <string formatted="false" name="formula_editor_sensor_text_blocks_number">מספר קטעי הטקסט</string>
+    <string formatted="false" name="formula_editor_function_text_block_x">x של קטע טקסט מהמצלמה</string>
+    <string formatted="false" name="formula_editor_function_text_block_y">y של קטע טקסט מהמצלמה</string>
+    <string formatted="false" name="formula_editor_function_text_block_size">גודל קטע טקסט מהמצלמה</string>
+    <string formatted="false" name="formula_editor_function_text_block_from_camera">קטע טקסט מהמצלמה</string>
+    <string formatted="false" name="formula_editor_function_text_block_language_from_camera">שפת קטע טקסט מהמצלמה</string>
+    <string formatted="false" name="formula_editor_function_text_block_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_get_id_of_detected_object">מזהה העצם שזוהה</string>
+    <string formatted="false" name="formula_editor_function_object_with_id_visible">העצם עם המזהה נראה</string>
+    <string formatted="false" name="formula_editor_intro_title_formula_editor">עורך הנוסחאות</string>
+    <string formatted="false" name="formula_editor_intro_summary_formula_editor">בעזרת עורך הנוסחאות אפשר ליצור נוסחאות מתמטיות ולוגיות ולהשתמש בהן בלבנים.\n\nכדי להמשיך יש להקיש על “קדימה”, וכדי לצאת – על “דילוג”.</string>
+    <string formatted="false" name="formula_editor_intro_title_input_field">שדה הקלט</string>
+    <string formatted="false" name="formula_editor_intro_summary_input_field">כאן אפשר לראות ולערוך את הנוסחה.</string>
+    <string formatted="false" name="formula_editor_intro_title_keyboard">מקלדת</string>
+    <string formatted="false" name="formula_editor_intro_summary_keyboard">כאן יוצרים את הנוסחה, בדיוק כמו במחשבון.</string>
+    <string formatted="false" name="formula_editor_intro_title_compute">חישוב</string>
+    <string formatted="false" name="formula_editor_intro_summary_compute">כדי להציג את התוצאה הנוכחית של הנוסחה, אפשר להשתמש ב„חישוב“.</string>
+    <string formatted="false" name="formula_editor_intro_title_object">מאפיינים</string>
+    <string formatted="false" name="formula_editor_intro_summary_object">כאן מרוכזים ערכים שמתארים את המאפיינים של הדמות או האובייקט הנוכחיים, למשל קואורדינטות x ו־y או המהירות הנוכחית.</string>
+    <string formatted="false" name="formula_editor_intro_title_functions">פונקציות</string>
+    <string formatted="false" name="formula_editor_intro_summary_functions">כמו מחשבון, עורך הנוסחאות מציע פונקציות מתמטיות רבות.\nיש בו פונקציות טריגונומטריות כמו \"sin\" ו־\"cos\", מחולל מספרים אקראיים ופונקציות של טקסט ורשימות.</string>
+    <string formatted="false" name="formula_editor_intro_title_logic">לוגיקה</string>
+    <string formatted="false" name="formula_editor_intro_summary_logic">לוגיקה משמשת להשוואת ערכים ולצירוף נוסחאות לוגיות.\nכדי להשוות ערכים אפשר להשתמש בפעולות לוגיות כמו \"&gt;\" (גדול מ־) או \"=\" (שווה).\nכדי לצרף נוסחאות לוגיות אפשר להשתמש בפעולות לוגיות כמו \"וגם\", \"או\" ו־\"לא\".</string>
+    <string formatted="false" name="formula_editor_intro_title_device">חיישנים</string>
+    <string formatted="false" name="formula_editor_intro_summary_device">ב־\"חיישנים\" אפשר למצוא מידע שהמכשיר שלך מודד.\nלמשל, את ההטיה של המכשיר או את עוצמת הקול בסביבה.</string>
+    <string formatted="false" name="formula_editor_intro_title_data">נתונים</string>
+    <string formatted="false" name="formula_editor_intro_summary_data">כאן נמצאים המשתנים והרשימות שבשימוש במיזם. \nאפשר פשוט להכניס אותם לנוסחה או להוסיף חדשים.</string>
+    <string formatted="false" name="formula_editor_listening_language_sensor">שפת ההאזנה</string>
+    <string formatted="false" name="formula_editor_speech_recognition">זיהוי דיבור</string>
+    <string formatted="false" name="camera_error_text_detection">אירעה בעיה בזיהוי הטקסט. ייתכן שחלק מהרכיבים עדיין יורדים ברקע. יש לוודא שיש חיבור לאינטרנט ולנסות שוב מאוחר יותר.</string>
+    <string formatted="false" name="warning_formula_recognized">הטקסט שהוזן נראה כמו נוסחה. כדי להשתמש בפונקציות, בחיישנים, במשתנים וברכיבי נוסחה אחרים, יש לבחור אותם בעזרת הכפתורים בעורך הנוסחאות.</string>
+    <!--  -->
+    <!-- Brick Data Editor Strings -->
+    <string formatted="false" name="brick_show_variable">הצג משתנה</string>
+    <string formatted="false" name="brick_hide_variable">הסתר משתנה</string>
+    <string formatted="false" name="brick_show_variable_position">במיקום</string>
+    <string formatted="false" name="brick_show_variable_size">גודל:</string>
+    <string formatted="false" name="brick_show_variable_color">צבע:</string>
+    <string formatted="false" name="brick_show_variable_aligned">יישור</string>
+    <string formatted="false" name="brick_show_variable_aligned_centered">למרכז</string>
+    <string formatted="false" name="brick_show_variable_aligned_left">לשמאל</string>
+    <string formatted="false" name="brick_show_variable_aligned_right">לימין</string>
+    <string formatted="false" name="brick_context_dialog_pick_color">בחירת צבע</string>
+    <string formatted="false" name="brick_context_dialog_pick_note">בחירת תו</string>
+    <!-- -->
+    <!-- Camera related strings -->
+    <string formatted="false" name="brick_video">העבר את המצלמה למצב</string>
+    <string formatted="false" name="video_brick_camera_on">מופעל</string>
+    <string formatted="false" name="video_brick_camera_off">כבוי</string>
+    <string formatted="false" name="brick_choose_camera">השתמש במצלמה</string>
+    <string formatted="false" name="choose_camera_front">הקדמית</string>
+    <string formatted="false" name="choose_camera_back">האחורית</string>
+    <string formatted="false" name="camera_error_generic">משהו השתבש בניסיון להשתמש במצלמה.</string>
+    <string formatted="false" name="camera_error_face_detection">אירעה בעיה בזיהוי הפנים. ייתכן שחלק מהרכיבים עדיין יורדים ברקע. יש לוודא שיש חיבור לאינטרנט ולנסות שוב מאוחר יותר.</string>
+    <!-- -->
+    <!-- Cast strings -->
+    <string formatted="false" name="cast_gamepad_A">A</string>
+    <string formatted="false" name="cast_gamepad_B">B</string>
+    <string formatted="false" name="cast_gamepad_up">למעלה</string>
+    <string formatted="false" name="cast_gamepad_down">למטה</string>
+    <string formatted="false" name="cast_gamepad_left">שמאלה</string>
+    <string formatted="false" name="cast_gamepad_right">ימינה</string>
+    <string formatted="false" name="cast_error_not_connected_msg">נא להתחבר קודם ל־Chromecast</string>
+    <string formatted="false" name="cast_error_cast_bricks_in_no_cast_project">המיזם משתמש בלבני Chromecast ולא ניתן להפעיל אותו במכשיר</string>
+    <string formatted="false" name="cast_device_selector_dialog_title">שידור אל</string>
+    <string formatted="false" name="cast_button_menu_item_title">כפתור Cast</string>
+    <string formatted="false" name="cast_ready_to_cast">מוכן לשידור אל</string>
+    <string formatted="false" name="cast_enable_cast_feature">תכונות Chromecast מושבתות. נא להפעיל אותן בהגדרות.</string>
+    <string formatted="false" name="cast_searching_for_cast_devices">מתבצע חיפוש של מכשירי Chromecast</string>
+    <string formatted="false" name="cast_trouble_finding_devices_tip">.\nהמכשיר לא מופיע? כדאי לנסות לכבות ולהדליק את ה־Wi-Fi במכשיר.</string>
+    <string formatted="false" name="cast_connection_timout_msg">תם הזמן הקצוב לחיבור. נא לנסות שוב.</string>
+    <string formatted="false" name="cast_screen_pause_text">מושהה</string>
+    <!-- -->
+    <string formatted="false" name="deletion_alert_title">למחוק?</string>
+    <string formatted="false" name="deletion_alert_text">מחיקת משתנה או רשימה שעדיין בשימוש עלולה לגרום לשגיאות. אי אפשר לבטל פעולה זו!</string>
+    <!-- Upload progress dialog -->
+    <string formatted="false" name="progress_upload_dialog_message">המיזם מועלה לאתר השיתוף של היישום, שבו אחרים יכולים להשתמש בו ולהוריד אותו. אפשר גם להוריד את המיזם כיישום עצמאי.</string>
+    <string formatted="false" name="progress_upload_dialog_failed">ההעלאה נכשלה. אפשרות ההעלאה אינה זמינה כרגע. נא לנסות שוב מאוחר יותר.</string>
+    <string formatted="false" name="progress_upload_dialog_show_program">הצגת המיזם</string>
+    <!--  -->
+    <!-- unchanged upload dialog -->
+    <string formatted="false" name="unchanged_upload_warning">המיזם שמנסים להעלות כבר קיים בפלטפורמת הקהילה בדיוק באותה צורה. נא לשנות את המיזם, רצוי לשפר אותו, לפני שמעלים את הרמיקס.</string>
+    <string formatted="false" name="unchanged_upload_info">כדאי להוסיף כמה מילים טובות ליוצר המקורי בקטע התודות באתר הקהילה או באפשרויות המיזם. לתשומת לבך: המשתמש יקבל הודעה לאחר שההעלאה שלך תצליח.</string>
+    <string formatted="false" name="unchanged_upload_url">מידע נוסף על רמיקסים זמין ב־%1s.</string>
+    <!-- -->
+    <!-- Snackbar hints -->
+    <string formatted="false" name="got_it">הבנתי</string>
+    <string formatted="false" name="preference_description_hints">הפעלה להצגת רמזים</string>
+    <string formatted="false" name="preference_title_enable_hints">הצגת רמזים</string>
+    <string formatted="false" name="hint_category">כל הלבנים ממוינות לקטגוריות. יש לבחור את הקטגוריה המבוקשת.</string>
+    <string formatted="false" name="hint_bricks">כדי להוסיף לבנה לתסריט, יש להקיש על הלבנה הרצויה.</string>
+    <string formatted="false" name="hint_scripts">התסריט מגדיר את ההתנהגות של הדמות או האובייקט. כדי להוסיף לבנים לתסריט, יש להקיש על הסמל \"+\".</string>
+    <string formatted="false" name="hint_looks">כאן נמצאים המראות השונים של הדמות או האובייקט. כדי להוסיף מראה חדש, יש להקיש על הסמל \"+\".</string>
+    <string formatted="false" name="hint_sounds">כאן אפשר להוסיף צלילים חדשים לדמות או לאובייקט. כדי להשמיע אותם, יש להשתמש בלבנה מקטגוריית הצליל.</string>
+    <string formatted="false" name="hint_objects">המיזם מורכב מדמויות ומאובייקטים שונים שיכולים לפעול זה עם זה. כדי להוסיף דמות או אובייקט חדשים, יש להקיש על הסמל \"+\".</string>
+    <!--  -->
+    <!-- Dialog Disable hints -->
+    <string formatted="false" name="dialog_disable_hints_title">להציג רמזים?</string>
+    <string formatted="false" name="dialog_disable_hints_text">רמזים מספקים מידע מועיל בזמן יצירת המיזם הראשון.\n\nאפשר לשנות את הצגת הרמזים בהגדרות.</string>
+    <string formatted="false" name="dialog_disable_hints_button_hide">הסתרה</string>
+    <string formatted="false" name="dialog_disable_hints_button_show">הצגה</string>
+    <!--  -->
+    <!-- Crash report dialog -->
+    <!--  -->
+    <!-- Multilingual List -->
+    <string formatted="false" name="device_language">שפת המכשיר</string>
+    <!-- Symbols -->
+    <string formatted="false" name="percent_symbol">%</string>
+    <string formatted="false" name="hertz_symbol">㎐</string>
+    <string formatted="false" name="no_internet_connection">אין חיבור לאינטרנט. יש לוודא שה־Wi-Fi או חבילת הגלישה מופעלים.</string>
+    <string formatted="false" name="edit">עריכה</string>
+    <string formatted="false" name="data_value">ערך</string>
+    <string formatted="false" name="category_recently_used">בשימוש לאחרונה</string>
+    <string formatted="false" name="new_sprite_dialog_place_visually">מיקום חזותי</string>
+    <string formatted="false" name="place_visually_text">תופיע בקשה למקם את הדמות או האובייקט החדשים על הבמה.</string>
+    <string formatted="false" name="new_empty_sprite_note">הערה: הדמות או האובייקט ייווצרו ללא מראה.</string>
+    <!-- Information -->
+    <string formatted="false" name="no_variable_selected">לא נבחר משתנה</string>
+    <string formatted="false" name="search">חיפוש</string>
+    <string formatted="false" name="no_results_found">לא נמצאו תוצאות</string>
+    <string formatted="false" name="query_field_is_empty">שדה החיפוש ריק</string>
+    <string formatted="false" name="paste">הדבקה</string>
+    <!-- Particle Effects -->
+    <string formatted="false" name="fade_particle_effect">אפקט חלקיקים:</string>
+    <string formatted="false" name="particle_effects_fade_in">הופעה הדרגתית</string>
+    <string formatted="false" name="particle_effects_fade_out">היעלמות הדרגתית</string>
+    <string formatted="false" name="turn_particle_effect_additivity">העבר את חיבוריות אפקט החלקיקים למצב</string>
+    <string formatted="false" name="particle_effects_additive_on">מופעל</string>
+    <string formatted="false" name="particle_effects_additive_off">כבוי</string>
+    <string formatted="false" name="set_particle_color_to">קבע את צבע החלקיקים ל־</string>
+    <string formatted="false" name="undo_sort">ביטול המיון</string>
+    <string formatted="false" name="sort">מיון</string>
+    <string formatted="false" name="checkbox">תיבת סימון</string>
+    <!-- Shortcut strings -->
+    <string formatted="false" name="pin_to_home_screen">הצמדה למסך הבית</string>
+    <string formatted="false" name="shortcut_not_supported">המכשיר הזה לא תומך בקיצורי דרך</string>
+    <string formatted="false" name="project_busy_try_again">המיזם עסוק, נא לנסות שוב</string>
+    <string formatted="false" name="shortcut_project_not_found">המיזם לא נמצא, קיצור הדרך הושבת</string>
+    <string formatted="false" name="shortcut_permission_required_message">במכשיר הזה יש לתת הרשאה לקיצורי דרך לפני שמוסיפים קיצור דרך למסך הבית. נא לתת את ההרשאה בהגדרות.</string>
+    <string formatted="false" name="miui_open_settings">פתיחת ההגדרות</string>
+    <string formatted="false" name="shortcut_already_pinned">המיזם הזה כבר מוצמד למסך הבית</string>
+</resources>

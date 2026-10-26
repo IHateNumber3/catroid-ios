@@ -1,0 +1,2006 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--
+  ~ Catroid: An on-device visual programming system for Android devices
+  ~ Copyright (C) 2010-2026 The Catrobat Team
+  ~ (<http://developer.catrobat.org/credits>)
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU Affero General Public License as
+  ~ published by the Free Software Foundation, either version 3 of the
+  ~ License, or (at your option) any later version.
+  ~
+  ~ An additional term exception under section 7 of the GNU Affero
+  ~ General Public License, version 3, is available at
+  ~ http://developer.catrobat.org/license_additional_term
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU Affero General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU Affero General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- General terms -->
+    <string formatted="false" name="stage">ਸਟੇਜ</string>
+    <string formatted="false" name="play">ਚਲਾਓ</string>
+    <string formatted="false" name="settings">ਸੈਟਿੰਗਾਂ</string>
+    <string formatted="false" name="redo">ਦੁਬਾਰਾ ਕਰੋ</string>
+    <string formatted="false" name="undo">ਵਾਪਸ ਕਰੋ</string>
+    <string formatted="false" name="new_option">ਨਵਾਂ…</string>
+    <string formatted="false" name="edit_option">ਸੋਧੋ…</string>
+    <string formatted="false" name="confirm">ਪੁਸ਼ਟੀ ਕਰੋ</string>
+    <string formatted="false" name="ignore">ਅਣਡਿੱਠ ਕਰੋ</string>
+    <string formatted="false" name="cancel">ਰੱਦ ਕਰੋ</string>
+    <string formatted="false" name="save">ਸੇਵ ਕਰੋ</string>
+    <string formatted="false" name="help">ਮਦਦ</string>
+    <string formatted="false" name="discard">ਛੱਡ ਦਿਓ</string>
+    <string formatted="false" name="next">ਅਗਲਾ</string>
+    <string formatted="false" name="ok">ਠੀਕ ਹੈ</string>
+    <string formatted="false" name="done">ਹੋ ਗਿਆ</string>
+    <string formatted="false" name="close">ਬੰਦ ਕਰੋ</string>
+    <string formatted="false" name="assistant">ਸਹਾਇਕ</string>
+    <string formatted="false" name="yes">ਹਾਂ</string>
+    <string formatted="false" name="no">ਨਹੀਂ</string>
+    <string formatted="false" name="once">ਇੱਕ ਵਾਰ</string>
+    <string formatted="false" name="always">ਹਮੇਸ਼ਾ</string>
+    <string formatted="false" name="deny">ਇਨਕਾਰ ਕਰੋ</string>
+    <string formatted="false" name="do_not_show_again">ਦੁਬਾਰਾ ਨਾ ਦਿਖਾਓ</string>
+    <string formatted="false" name="accept">ਸਵੀਕਾਰ ਕਰੋ</string>
+    <string formatted="false" name="decline">ਅਸਵੀਕਾਰ ਕਰੋ</string>
+    <string formatted="false" name="select_all">ਸਾਰੇ ਚੁਣੋ</string>
+    <string formatted="false" name="deselect_all">ਸਾਰਿਆਂ ਦੀ ਚੋਣ ਹਟਾਓ</string>
+    <string formatted="false" name="skip">ਛੱਡੋ</string>
+    <string formatted="false" name="warning">ਚੇਤਾਵਨੀ</string>
+    <string formatted="false" name="error">ਗ਼ਲਤੀ</string>
+    <string formatted="false" name="loading">ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ…</string>
+    <string formatted="false" name="please_wait">ਕਿਰਪਾ ਕਰਕੇ ਉਡੀਕ ਕਰੋ</string>
+    <string formatted="false" name="search_hint">ਖੋਜੋ</string>
+    <string formatted="false" name="backpack_add">ਬੈਕਪੈਕ ਵਿੱਚ ਪਾਓ</string>
+    <string formatted="false" name="share_website_text">share.catrob.at</string>
+    <!-- Security warning dialog -->
+    <string formatted="false" name="security_warning_dialog_msg">ਤੁਹਾਡੇ ਵੱਲੋਂ ਡਾਊਨਲੋਡ ਕੀਤਾ ਪ੍ਰੋਜੈਕਟ ਪਿਛੋਕੜ ਵਿੱਚ ਤੁਹਾਡੀ ਆਵਾਜ਼ ਸੁਣਦਾ ਹੈ ਅਤੇ ਇੰਟਰਨੈੱਟ ਨੂੰ ਡਾਟਾ ਵੀ ਭੇਜਦਾ ਹੈ। ਹੋ ਸਕਦਾ ਹੈ ਕਿ ਇਹ ਨੁਕਸਾਨ ਰਹਿਤ ਹੋਵੇ ਅਤੇ ਪ੍ਰੋਜੈਕਟ ਦੇ ਕੰਮ ਲਈ ਜ਼ਰੂਰੀ ਹੋਵੇ। ਫਿਰ ਵੀ, ਕਿਰਪਾ ਕਰਕੇ ਧਿਆਨ ਰੱਖੋ ਕਿ ਪ੍ਰੋਜੈਕਟ ਚੱਲਦੇ ਸਮੇਂ ਤੁਸੀਂ ਜੋ ਬੋਲਦੇ ਹੋ, ਉਹ ਸੁਰੱਖਿਅਤ ਹੋਵੇ। ਸ਼ੱਕ ਹੋਣ \'ਤੇ ਕਿਰਪਾ ਕਰਕੇ ਡਾਊਨਲੋਡ ਕੀਤਾ ਪ੍ਰੋਜੈਕਟ ਮਿਟਾ ਦਿਓ। ਜੇ ਤੁਹਾਨੂੰ ਪੱਕਾ ਯਕੀਨ ਹੈ ਕਿ ਇਹ ਨੁਕਸਾਨਦੇਹ ਹੈ, ਤਾਂ ਤੁਸੀਂ Catrobat ਕਮਿਊਨਿਟੀ ਪਲੇਟਫਾਰਮ \'ਤੇ ਪ੍ਰੋਜੈਕਟ ਦੇ ਪੰਨੇ ਤੋਂ ਇਸ ਦੀ ਰਿਪੋਰਟ ਵੀ ਕਰ ਸਕਦੇ ਹੋ।</string>
+    <!-- Replace Api dialog -->
+    <string formatted="false" name="api_replacement_dialog_neutral">ਬਿਨਾਂ ਬਦਲਾਅ ਦੇ ਅੱਪਲੋਡ ਕਰੋ</string>
+    <string formatted="false" name="api_replacement_dialog_accept">ਕੁੰਜੀਆਂ ਬਦਲ ਕੇ ਅੱਪਲੋਡ ਕਰੋ</string>
+    <string formatted="false" name="api_replacement_dialog_warning">ਇਸ ਪ੍ਰੋਜੈਕਟ ਵਿੱਚ ਵੈੱਬ ਤੱਕ ਪਹੁੰਚ ਕਰਨ ਵਾਲੇ ਬਲਾਕ ਹਨ ਅਤੇ ਲੱਗਦਾ ਹੈ ਕਿ ਇਸ ਵਿੱਚ API ਕੁੰਜੀਆਂ ਵੀ ਹਨ। ਇਹ ਕੁੰਜੀਆਂ ਅੱਪਲੋਡ ਕਰਨਾ ਖ਼ਤਰਨਾਕ ਕਿਉਂ ਹੋ ਸਕਦਾ ਹੈ, ਇਹ ਜਾਣਨ ਲਈ ਕਿਰਪਾ ਕਰਕੇ %1s ਦੇਖੋ।</string>
+    <string formatted="false" name="api_replacement">ਇੱਥੇ API ਕੁੰਜੀ ਪਾਓ</string>
+    <!-- -->
+    <!-- Login/Logout Mechanism -->
+    <string formatted="false" name="loading_check_oauth_token">ਲੌਗ ਇਨ ਡਾਟਾ ਦੀ ਜਾਂਚ ਹੋ ਰਹੀ ਹੈ…</string>
+    <string formatted="false" name="loading_google_exchange_code">Google ਲੌਗ ਇਨ ਡਾਟਾ ਦਾ ਵਟਾਂਦਰਾ ਹੋ ਰਿਹਾ ਹੈ…</string>
+    <string formatted="false" name="loading_google_login">ਸਾਡੇ ਸਰਵਰ \'ਤੇ Google ਲੌਗ ਇਨ ਪੂਰਾ ਹੋ ਗਿਆ ਹੈ…</string>
+    <string formatted="false" name="logout_successful">ਲੌਗ ਆਉਟ ਹੋ ਗਿਆ</string>
+    <string formatted="false" name="degrees">ਡਿਗਰੀ</string>
+    <string formatted="false" name="background">ਪਿਛੋਕੜ</string>
+    <string formatted="false" name="landscape">ਲੈਂਡਸਕੇਪ</string>
+    <string formatted="false" name="portrait">ਪੋਰਟਰੇਟ</string>
+    <string formatted="false" name="unknown">ਅਣਜਾਣ</string>
+    <string formatted="false" name="disconnect">ਡਿਸਕਨੈਕਟ ਕਰੋ</string>
+    <!--  -->
+    <!-- Main Menu -->
+    <string formatted="false" name="main_menu_continue">ਪ੍ਰੋਜੈਕਟ ਜਾਰੀ ਰੱਖੋ</string>
+    <string formatted="false" name="main_menu_new">ਨਵਾਂ ਪ੍ਰੋਜੈਕਟ</string>
+    <string formatted="false" name="main_menu_programs">ਪ੍ਰੋਜੈਕਟ</string>
+    <string formatted="false" name="main_menu_help">ਮਦਦ</string>
+    <string formatted="false" name="main_menu_web">Catrobat</string>
+    <string formatted="false" name="main_menu_upload">ਪ੍ਰੋਜੈਕਟ ਅੱਪਲੋਡ ਕਰੋ</string>
+    <string formatted="false" name="main_menu_play">ਪ੍ਰੋਜੈਕਟ ਚਲਾਓ</string>
+    <string formatted="false" name="main_menu_rate_app">ਸਾਨੂੰ ਦਰਜਾ ਦਿਓ!</string>
+    <string formatted="false" name="main_menu_terms_of_use">ਵਰਤੋਂ ਅਤੇ ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ</string>
+    <string formatted="false" name="main_menu_privacy_policy">ਪਰਦੇਦਾਰੀ ਨੀਤੀ</string>
+    <string formatted="false" name="main_menu_about">ਇਸ ਐਪ ਬਾਰੇ</string>
+    <string formatted="false" name="main_menu_login">ਲੌਗ ਇਨ</string>
+    <string formatted="false" name="main_menu_logout">ਲੌਗ ਆਉਟ</string>
+    <string formatted="false" name="main_menu_scratch_converter">Scratch ਕਨਵਰਟਰ</string>
+    <string formatted="false" name="main_menu_play_store_not_installed">ਐਪ ਸਟੋਰ ਨਹੀਂ ਮਿਲਿਆ</string>
+    <!--  -->
+    <!-- Marketing activity -->
+    <string formatted="false" name="marketing_created_with">ਇਸ ਨਾਲ ਬਣਾਇਆ ਗਿਆ:</string>
+    <string formatted="false" name="marketing_app_details">ਇਸ ਐਪ ਬਾਰੇ ਵੇਰਵਾ</string>
+    <string formatted="false" name="marketing_more_on_google_play">ਐਪ ਸਟੋਰ \'ਤੇ ਹੋਰ ਐਪਾਂ</string>
+    <string formatted="false" name="error_cannot_open_huawei_app_gallery">ਓਹੋ! Huawei AppGallery ਨਹੀਂ ਖੁੱਲ੍ਹ ਸਕੀ, ਕਿਰਪਾ ਕਰਕੇ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <string formatted="false" name="google_play_store_logo">Google Play Store</string>
+    <string formatted="false" name="huawei_app_gallery">Huawei App Gallery</string>
+    <!-- NFC activity -->
+    <string formatted="false" name="nfc_activity_title">NFC ਟੈਗ</string>
+    <!-- Settings activity -->
+    <string formatted="false" name="preference_title">ਸੈਟਿੰਗਾਂ</string>
+    <string formatted="false" name="preference_title_language">ਭਾਸ਼ਾ</string>
+    <string formatted="false" name="preference_description_language">ਐਪ ਦੀ ਭਾਸ਼ਾ ਚੁਣੋ</string>
+    <string formatted="false" name="preference_title_web_access">ਵੈੱਬ ਪਹੁੰਚ</string>
+    <string formatted="false" name="preference_description_web_access">ਭਰੋਸੇਯੋਗ ਡੋਮੇਨ ਜੋੜਨ ਜਾਂ ਹਟਾਉਣ ਲਈ ਸੋਧੋ</string>
+    <string formatted="false" name="preference_screen_web_access_title">ਭਰੋਸੇਯੋਗ ਡੋਮੇਨ ਸੋਧੋ</string>
+    <string formatted="false" name="preference_title_ai">ਬਣਾਉਟੀ ਬੁੱਧੀ (AI) ਐਕਸਟੈਂਸ਼ਨ</string>
+    <string formatted="false" name="preference_description_ai">AI ਬਲਾਕ ਅਤੇ ਸੈਂਸਰ ਚਾਲੂ ਕਰੋ</string>
+    <string formatted="false" name="preference_title_ai_speech_recognition">ਬੋਲੀ ਦੀ ਪਛਾਣ</string>
+    <string formatted="false" name="preference_description_ai_speech_recognition">ਬੋਲੀ ਦੀ ਪਛਾਣ ਵਾਲੇ ਬਲਾਕ ਅਤੇ ਸੈਂਸਰ ਚਾਲੂ ਕਰੋ</string>
+    <string formatted="false" name="preference_title_ai_speech_synthetization">ਬੋਲੀ ਬਣਾਉਣਾ</string>
+    <string formatted="false" name="preference_description_ai_speech_synthetization">ਬੋਲੀ ਬਣਾਉਣ ਵਾਲੇ ਬਲਾਕ ਅਤੇ ਸੈਂਸਰ ਚਾਲੂ ਕਰੋ</string>
+    <string formatted="false" name="preference_title_ai_face_detection">ਚਿਹਰੇ ਦੀ ਪਛਾਣ</string>
+    <string formatted="false" name="preference_description_ai_face_detection">ਚਿਹਰੇ ਦੀ ਪਛਾਣ ਵਾਲੇ ਬਲਾਕ ਅਤੇ ਸੈਂਸਰ ਚਾਲੂ ਕਰੋ</string>
+    <string formatted="false" name="preference_title_ai_pose_detection">ਸਰੀਰਕ ਮੁਦਰਾ ਦੀ ਪਛਾਣ</string>
+    <string formatted="false" name="preference_description_ai_pose_detection">ਸਰੀਰਕ ਮੁਦਰਾ ਦੀ ਪਛਾਣ ਵਾਲੇ ਬਲਾਕ ਅਤੇ ਸੈਂਸਰ ਚਾਲੂ ਕਰੋ</string>
+    <string formatted="false" name="preference_title_ai_text_recognition">ਟੈਕਸਟ ਦੀ ਪਛਾਣ</string>
+    <string formatted="false" name="preference_description_ai_text_recognition">ਟੈਕਸਟ ਦੀ ਪਛਾਣ ਵਾਲੇ ਬਲਾਕ ਅਤੇ ਸੈਂਸਰ ਚਾਲੂ ਕਰੋ</string>
+    <string formatted="false" name="preference_title_ai_object_recognition">ਚੀਜ਼ਾਂ ਦੀ ਪਛਾਣ</string>
+    <string formatted="false" name="preference_description_ai_object_recognition">ਚੀਜ਼ਾਂ ਦੀ ਪਛਾਣ ਅਤੇ ਟਰੈਕਿੰਗ ਵਾਲੇ ਸੈਂਸਰ ਚਾਲੂ ਕਰੋ</string>
+    <string formatted="false" name="preference_title_accessibility">ਪਹੁੰਚਯੋਗਤਾ</string>
+    <string formatted="false" name="preference_description_accessibility">ਐਪ ਦੀ ਦਿੱਖ ਬਦਲੋ</string>
+    <string formatted="false" name="preference_title_accessibility_profiles">ਪਹੁੰਚਯੋਗਤਾ ਪ੍ਰੋਫਾਈਲ</string>
+    <string formatted="false" name="preference_title_accessibility_profile">ਪਹਿਲਾਂ ਤੋਂ ਬਣੇ ਪ੍ਰੋਫਾਈਲ</string>
+    <string formatted="false" name="preference_title_accessibility_profile_headline">ਪ੍ਰੋਫਾਈਲ</string>
+    <string formatted="false" name="preference_title_accessibility_predefined_profile_headline">ਪਹਿਲਾਂ ਤੋਂ ਬਣੇ ਪ੍ਰੋਫਾਈਲ</string>
+    <string formatted="false" name="preference_description_accessibility_profiles">ਪਹਿਲਾਂ ਤੋਂ ਬਣਿਆ ਕੋਈ ਪਹੁੰਚਯੋਗਤਾ ਪ੍ਰੋਫਾਈਲ ਚੁਣੋ</string>
+    <string formatted="false" name="preference_title_accessibility_text_appearance">ਟੈਕਸਟ ਦੀ ਦਿੱਖ</string>
+    <string formatted="false" name="preference_title_accessibility_handling">ਵਰਤੋਂ</string>
+    <string formatted="false" name="preference_title_accessibility_category_icons_big">ਵੱਡੇ ਆਈਕਾਨ</string>
+    <string formatted="false" name="preference_description_accessibility_category_icons_big">ਆਈਕਾਨਾਂ ਦਾ ਆਕਾਰ ਵਧਾਓ।</string>
+    <string formatted="false" name="preference_title_accessibility_category_icons_high_contrast">ਉੱਚ ਕੰਟ੍ਰਾਸਟ ਵਾਲੇ ਆਈਕਾਨ</string>
+    <string formatted="false" name="preference_title_accessibility_Brick_icons">ਆਈਕਾਨ</string>
+    <string formatted="false" name="preference_title_accessibility_category_icons">ਆਈਕਾਨ ਦਿਖਾਓ</string>
+    <string formatted="false" name="preference_description_accessibility_category_icons">ਸ਼੍ਰੇਣੀਆਂ ਅਤੇ ਬਲਾਕਾਂ ਵਿੱਚ ਆਈਕਾਨ ਜੋੜੋ।</string>
+    <string formatted="false" name="preference_title_accessibility_high_contrast">ਉੱਚ ਕੰਟ੍ਰਾਸਟ</string>
+    <string formatted="false" name="preference_description_accessibility_high_contrast">ਟੈਕਸਟ ਦਾ ਕੰਟ੍ਰਾਸਟ ਵਧਾਓ।</string>
+    <string formatted="false" name="preference_description_accessibility_large_text">ਟੈਕਸਟ ਦਾ ਆਕਾਰ ਵਧਾਓ।</string>
+    <string formatted="false" name="preference_title_accessibility_large_text">ਵੱਡਾ ਟੈਕਸਟ</string>
+    <string formatted="false" name="preference_title_accessibility_element_spacing">ਤੱਤਾਂ ਵਿਚਕਾਰ ਵੱਧ ਥਾਂ</string>
+    <string formatted="false" name="preference_description_accessibility_element_spacing">ਸੂਚੀਆਂ ਵਿੱਚ ਤੱਤਾਂ ਵਿਚਕਾਰ ਥਾਂ ਵਧਾਓ।</string>
+    <string formatted="false" name="preference_title_accessibility_dragndrop_delay">ਖਿੱਚ ਕੇ ਛੱਡਣ ਵਿੱਚ ਦੇਰੀ</string>
+    <string formatted="false" name="preference_description_accessibility_dragndrop_delay">ਬਲਾਕਾਂ ਨੂੰ ਖਿੱਚ ਕੇ ਛੱਡਣ ਵਿੱਚ ਦੇਰੀ।</string>
+    <string formatted="false" name="preference_title_accessibility_beginner_bricks">ਸ਼ੁਰੂਆਤੀ ਮੋਡ</string>
+    <string formatted="false" name="preference_description_accessibility_beginner_bricks">ਸਿਰਫ਼ ਸਰਲ ਸੁਵਿਧਾਵਾਂ ਦਿਖਾਓ।</string>
+    <string formatted="false" name="preference_title_accessibility_font_style">ਟੈਕਸਟ ਦੀ ਕਿਸਮ ਚੁਣੋ</string>
+    <string formatted="false" name="accessibility_font_regular">ਸਧਾਰਨ</string>
+    <string formatted="false" name="accessibility_font_serif">ਸੈਰਿਫ਼</string>
+    <string formatted="false" name="accessibility_font_dyslexic">ਡਿਸਲੈਕਸਿਕ</string>
+    <string formatted="false" name="accessibility_settings_applied">ਤਬਦੀਲੀਆਂ ਲਾਗੂ ਹੋ ਗਈਆਂ</string>
+    <string formatted="false" name="preference_access_title_profile_default">ਡਿਫ਼ਾਲਟ</string>
+    <string formatted="false" name="preference_access_summary_profile_default">ਡਿਫ਼ਾਲਟ ਸੈਟਿੰਗਾਂ</string>
+    <string formatted="false" name="preference_access_title_profile_custom">ਮੇਰਾ ਆਪਣਾ ਪ੍ਰੋਫਾਈਲ</string>
+    <string formatted="false" name="preference_access_summary_profile_custom">ਮੇਰੀਆਂ ਨਿੱਜੀ ਸੈਟਿੰਗਾਂ</string>
+    <string formatted="false" name="preference_access_title_profile_argus">Argus</string>
+    <string formatted="false" name="preference_access_summary_profile_argus">ਉੱਚ ਕੰਟ੍ਰਾਸਟ, ਵਾਧੂ ਆਈਕਾਨ</string>
+    <string formatted="false" name="preference_access_title_profile_odin">Odin</string>
+    <string formatted="false" name="preference_access_summary_profile_odin">ਵੱਡਾ ਟੈਕਸਟ, ਵੱਡੇ ਆਈਕਾਨ, ਤੱਤਾਂ ਵਿਚਕਾਰ ਵੱਧ ਥਾਂ, ਉੱਚ ਕੰਟ੍ਰਾਸਟ</string>
+    <string formatted="false" name="preference_access_title_profile_fenrir">Fenrir</string>
+    <string formatted="false" name="preference_access_summary_profile_fenrir">ਤੱਤਾਂ ਵਿਚਕਾਰ ਵੱਧ ਥਾਂ, ਖਿੱਚ ਕੇ ਛੱਡਣ ਵਿੱਚ ਦੇਰੀ</string>
+    <string formatted="false" name="preference_access_title_profile_tiro">Tiro</string>
+    <string formatted="false" name="preference_access_summary_profile_tiro">ਸ਼ੁਰੂਆਤੀ ਮੋਡ</string>
+    <string name="preference_dialog_use_full_features">ਪੂਰੀਆਂ ਸੁਵਿਧਾਵਾਂ ਵਰਤੋ</string>
+    <string name="preference_dialog_appgallery">AppGallery</string>
+    <string name="preference_dialog_google_play">Google Play</string>
+    <string name="preference_lego_dialog_text">LEGO Mindstorms ਐਕਸਟੈਂਸ਼ਨਾਂ ਦੀਆਂ ਸਾਰੀਆਂ ਸੁਵਿਧਾਵਾਂ ਦਾ ਲਾਭ ਲੈਣ ਲਈ ਕਿਰਪਾ ਕਰਕੇ Catrobat ਦੀ Mindstorms Code EV3 NXT ਐਪ ਵਰਤੋ।</string>
+    <string name="preference_embroidery_dialog_text">ਕਢਾਈ ਐਕਸਟੈਂਸ਼ਨ ਦੀਆਂ ਸਾਰੀਆਂ ਸੁਵਿਧਾਵਾਂ ਦਾ ਲਾਭ ਲੈਣ ਲਈ ਕਿਰਪਾ ਕਰਕੇ Catrobat ਦੀ Embroidery Designer ਐਪ ਵਰਤੋ।</string>
+    <string name="preference_phiro_dialog_text">Phiro ਰੋਬੋਟਿਕਸ ਐਕਸਟੈਂਸ਼ਨ ਦੀਆਂ ਸਾਰੀਆਂ ਸੁਵਿਧਾਵਾਂ ਦਾ ਲਾਭ ਲੈਣ ਲਈ ਕਿਰਪਾ ਕਰਕੇ Catrobat ਦੀ Phiro Code ਐਪ ਵਰਤੋ।</string>
+    <!-- Lego/Drone/Raspi/Chromecast/Embroidery -->
+    <string formatted="false" name="preference_title_enable_quadcopter_bricks">Parrot AR.Drone 2.0 ਐਕਸਟੈਂਸ਼ਨ</string>
+    <string formatted="false" name="preference_description_quadcopter_bricks">ਐਪ ਨੂੰ Parrot AR.Drone 2.0 ਕਵਾਡਕਾਪਟਰ ਕੰਟਰੋਲ ਕਰਨ ਦਿਓ</string>
+    <string formatted="false" name="preference_title_enable_jumpingsumo_bricks">Parrot Jumping Sumo ਐਕਸਟੈਂਸ਼ਨ</string>
+    <string formatted="false" name="preference_description_jumpingsumo_bricks">ਐਪ ਨੂੰ Parrot ਦੇ Jumping Sumo ਰੋਬੋਟ ਕੰਟਰੋਲ ਕਰਨ ਦਿਓ</string>
+    <string formatted="false" name="preference_title_enable_mindstorms_nxt_bricks">LEGO Mindstorms NXT ਐਕਸਟੈਂਸ਼ਨ</string>
+    <string formatted="false" name="preference_title_enable_mindstorms_ev3_bricks">LEGO Mindstorms EV3 ਐਕਸਟੈਂਸ਼ਨ</string>
+    <string formatted="false" name="preference_description_mindstorms_nxt_bricks">ਐਪ ਨੂੰ LEGO Mindstorms NXT ਰੋਬੋਟ ਕੰਟਰੋਲ ਕਰਨ ਦਿਓ</string>
+    <string formatted="false" name="preference_description_mindstorms_ev3_bricks">ਐਪ ਨੂੰ LEGO Mindstorms EV3 ਰੋਬੋਟ ਕੰਟਰੋਲ ਕਰਨ ਦਿਓ</string>
+    <string formatted="false" name="preference_title_mindstorms_nxt_sensors">LEGO NXT ਸੈਂਸਰ</string>
+    <string formatted="false" name="preference_title_mindstorms_ev3_sensors">LEGO EV3 ਸੈਂਸਰ</string>
+    <string formatted="false" name="preference_title_drone_config_properties">Parrot AR.Drone 2.0 ਕੌਂਫਿਗਰੇਸ਼ਨ</string>
+    <string formatted="false" name="preference_title_enable_phiro_bricks">RobotixEdu ਦੀ Phiro ਐਕਸਟੈਂਸ਼ਨ</string>
+    <string formatted="false" name="preference_description_phiro_bricks">ਐਪ ਨੂੰ RobotixEdu ਦੇ Phiro ਰੋਬੋਟ ਕੰਟਰੋਲ ਕਰਨ ਦਿਓ</string>
+    <string formatted="false" name="preference_title_enable_arduino_bricks">Arduino ਐਕਸਟੈਂਸ਼ਨ</string>
+    <string formatted="false" name="preference_description_arduino_bricks">ਐਪ ਨੂੰ Arduino ਬੋਰਡ ਕੰਟਰੋਲ ਕਰਨ ਦਿਓ</string>
+    <string formatted="false" name="preference_title_enable_embroidery_bricks">ਕਢਾਈ ਐਕਸਟੈਂਸ਼ਨ</string>
+    <string formatted="false" name="preference_description_embroidery_bricks">ਸਿਲਾਈ ਮਸ਼ੀਨਾਂ ਲਈ ਨਮੂਨੇ ਬਣਾਓ</string>
+    <string formatted="false" name="preference_title_cast_feature_globally_enabled">Chromecast ਐਕਸਟੈਂਸ਼ਨ</string>
+    <string formatted="false" name="preference_description_cast_feature_globally_enabled">ਕਾਸਟ ਬਟਨ ਦਿਖਾਓ ਅਤੇ ਪ੍ਰੋਜੈਕਟਾਂ ਨੂੰ ਕਾਸਟ ਕਰਨਾ ਚਾਲੂ ਕਰੋ</string>
+    <string formatted="false" name="preference_title_enable_plot_bricks">ਪਲਾਟ ਅਤੇ ਲੇਜ਼ਰ ਐਕਸਟੈਂਸ਼ਨ</string>
+    <string formatted="false" name="preference_description_plot_bricks">ਪਲਾਟਰ ਅਤੇ ਲੇਜ਼ਰ ਕਟਰ ਮਸ਼ੀਨਾਂ ਲਈ ਨਮੂਨੇ ਬਣਾਓ</string>
+    <string formatted="false" name="preference_title_enable_nfc_bricks">ਨਿਅਰ ਫ਼ੀਲਡ ਕਮਿਊਨੀਕੇਸ਼ਨ (NFC) ਐਕਸਟੈਂਸ਼ਨ</string>
+    <string formatted="false" name="preference_description_nfc_bricks">ਐਪ ਨੂੰ ਪ੍ਰੋਜੈਕਟਾਂ ਵਿੱਚ NFC ਟੈਗ ਵਰਤਣ ਦਿਓ</string>
+    <string formatted="false" name="preference_title_enable_crash_reports">ਗੁਮਨਾਮ ਕ੍ਰੈਸ਼ ਰਿਪੋਰਟਾਂ ਭੇਜਣਾ</string>
+    <string formatted="false" name="preference_description_crash_reports">ਐਪ ਨੂੰ ਕ੍ਰੈਸ਼ ਰਿਪੋਰਟਾਂ ਆਪਣੇ ਆਪ ਭੇਜਣ ਦਿਓ</string>
+    <!-- -->
+    <string formatted="false" name="preference_title_enable_raspi_bricks">Raspberry Pi ਐਕਸਟੈਂਸ਼ਨ</string>
+    <string formatted="false" name="preference_description_raspi_bricks">ਐਪ ਨੂੰ Raspberry Pi ਕੰਪਿਊਟਰ ਕੰਟਰੋਲ ਕਰਨ ਦਿਓ</string>
+    <string formatted="false" name="preference_raspi_enable_bricks">ਬਲਾਕ ਅਤੇ ਸੈਂਸਰ ਚਾਲੂ ਕਰੋ</string>
+    <string formatted="false" name="preference_raspi_help">ਮਦਦ / ਸ਼ੁਰੂਆਤ</string>
+    <string formatted="false" name="preference_raspi_help_summary">ਕਨੈਕਸ਼ਨ ਸੈਟਿੰਗਾਂ ਕੌਂਫਿਗਰ ਕਰਨ ਬਾਰੇ ਮਦਦ ਲਓ</string>
+    <string formatted="false" name="preference_raspi_host">Raspberry Pi ਦਾ IP-/ਹੋਸਟ-ਪਤਾ</string>
+    <string formatted="false" name="preference_raspi_port">Raspberry Pi ਪੋਰਟ</string>
+    <!--  -->
+    <string formatted="false" name="preference_title_multiplayer_variables_enabled">ਮਲਟੀਪਲੇਅਰ ਐਕਸਟੈਂਸ਼ਨ</string>
+    <string formatted="false" name="preference_description_multiplayer_variables_enabled">ਐਪ ਨੂੰ Bluetooth ਰਾਹੀਂ ਸਾਂਝੇ ਕੀਤੇ ਮਲਟੀਪਲੇਅਰ ਵੇਰੀਏਬਲ ਵਰਤਣ ਦਿਓ</string>
+    <string formatted="false" name="preference_title_enable_test_bricks">ਟੈਸਟਿੰਗ ਐਕਸਟੈਂਸ਼ਨ</string>
+    <string formatted="false" name="preference_description_test_bricks">ਟੈਸਟ ਬਣਾਉਣ ਦਿੰਦਾ ਹੈ</string>
+    <!-- Scratch Converter activity -->
+    <string formatted="false" name="beta">ਬੀਟਾ</string>
+    <string formatted="false" name="error_scratch_program_not_accessible_any_more">ਓਹੋ! ਲੱਗਦਾ ਹੈ ਕਿ ਪ੍ਰੋਜੈਕਟ ਗਾਇਬ ਹੋ ਗਿਆ ਹੈ ਜਾਂ ਹੁਣ ਤੁਹਾਡੀ ਇਸ ਤੱਕ ਪਹੁੰਚ ਨਹੀਂ ਰਹੀ।</string>
+    <string formatted="false" name="error_scratch_project_data_not_available">ਓਹੋ! ਲੱਗਦਾ ਹੈ ਕਿ ਪ੍ਰੋਜੈਕਟ ਦੇ ਕੁਝ ਹਿੱਸੇ ਮੌਜੂਦ ਨਹੀਂ ਹਨ, ਕਿਰਪਾ ਕਰਕੇ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <string formatted="false" name="error_request_timeout">ਓਹੋ! ਸਾਡੇ ਸਰਵਰ ਨੇ ਸਮੇਂ ਸਿਰ ਜਵਾਬ ਨਹੀਂ ਦਿੱਤਾ, ਕਿਰਪਾ ਕਰਕੇ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <string formatted="false" name="error_scratch_program_conversion_failed">ਓਹੋ! ਪ੍ਰੋਜੈਕਟ ਕਨਵਰਟ ਨਹੀਂ ਹੋ ਸਕਿਆ, ਕਿਰਪਾ ਕਰਕੇ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <string formatted="false" name="error_specific_scratch_program_conversion_failed_x">ਓਹੋ! %1$s ਕਨਵਰਟ ਨਹੀਂ ਹੋ ਸਕਿਆ, ਕਿਰਪਾ ਕਰਕੇ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <string formatted="false" name="error_scratch_converter_outdated_app_version">ਤੁਹਾਡਾ ਇਸ ਐਪ ਦਾ ਸੰਸਕਰਨ ਪੁਰਾਣਾ ਹੈ। ਸਾਡਾ Scratch ਕਨਵਰਟਰ ਸਿਰਫ਼ ਨਵੇਂ ਸੰਸਕਰਨ \'ਤੇ ਕੰਮ ਕਰਦਾ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਐਪ ਅੱਪਡੇਟ ਕਰੋ।</string>
+    <string formatted="false" name="error_cannot_open_not_existing_scratch_program">ਮੈਂ ਇਹ Scratch ਪ੍ਰੋਜੈਕਟ ਨਹੀਂ ਖੋਲ੍ਹ ਸਕਿਆ। ਲੱਗਦਾ ਹੈ ਕਿ ਤੁਸੀਂ Scratch ਪ੍ਰੋਜੈਕਟ ਦਾ ਕਨਵਰਜ਼ਨ/ਡਾਊਨਲੋਡ ਰੱਦ ਕਰ ਦਿੱਤਾ ਹੈ, ਜਾਂ ਇਸ ਦੌਰਾਨ ਪ੍ਰੋਜੈਕਟ ਦਾ ਨਾਮ ਬਦਲ ਦਿੱਤਾ ਹੈ/ਇਸ ਨੂੰ ਮਿਟਾ ਦਿੱਤਾ ਹੈ।</string>
+    <string formatted="false" name="error_cannot_open_currently_downloading_scratch_program">ਤੁਸੀਂ ਅਜੇ ਇਹ ਪ੍ਰੋਜੈਕਟ ਨਹੀਂ ਖੋਲ੍ਹ ਸਕਦੇ। ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਦੇ ਡਾਊਨਲੋਡ ਹੋਣ ਤੱਕ ਉਡੀਕ ਕਰੋ।</string>
+    <string formatted="false" name="error_cannot_open_not_yet_downloaded_scratch_program">ਤੁਸੀਂ ਅਜੇ ਇਹ ਪ੍ਰੋਜੈਕਟ ਨਹੀਂ ਖੋਲ੍ਹ ਸਕਦੇ। ਕਿਰਪਾ ਕਰਕੇ ਪਹਿਲਾਂ ਇਸ ਨੂੰ ਡਾਊਨਲੋਡ ਕਰੋ ਅਤੇ ਫਿਰ ਖੋਲ੍ਹੋ।</string>
+    <string formatted="false" name="error_cannot_convert_deprecated_scratch_program_x_x">ਮੈਂ %1$s ਨੂੰ ਕਨਵਰਟ ਨਹੀਂ ਕਰ ਸਕਿਆ। ਲੱਗਦਾ ਹੈ ਕਿ ਇਹ %2$s ਤੋਂ ਪਹਿਲਾਂ ਦਾ ਪੁਰਾਣਾ Scratch ਪ੍ਰੋਜੈਕਟ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਕੋਈ ਹੋਰ ਅਜ਼ਮਾਓ।</string>
+    <plurals name="error_cannot_convert_more_than_x_programs">
+        <item quantity="one">ਤੁਸੀਂ ਇੱਕੋ ਸਮੇਂ %d ਤੋਂ ਵੱਧ ਪ੍ਰੋਜੈਕਟ ਕਨਵਰਟ ਨਹੀਂ ਕਰ ਸਕਦੇ। ਕਿਰਪਾ ਕਰਕੇ ਪਹਿਲਾਂ ਚੱਲ ਰਹੇ ਕਨਵਰਜ਼ਨ ਪੂਰੇ ਹੋਣ ਦੀ ਉਡੀਕ ਕਰੋ।</item>
+        <item quantity="other">ਤੁਸੀਂ ਇੱਕੋ ਸਮੇਂ %d ਤੋਂ ਵੱਧ ਪ੍ਰੋਜੈਕਟ ਕਨਵਰਟ ਨਹੀਂ ਕਰ ਸਕਦੇ। ਕਿਰਪਾ ਕਰਕੇ ਪਹਿਲਾਂ ਚੱਲ ਰਹੇ ਕਨਵਰਜ਼ਨ ਪੂਰੇ ਹੋਣ ਦੀ ਉਡੀਕ ਕਰੋ।</item>
+    </plurals>
+    <string formatted="false" name="error_cannot_open_failed_scratch_program">ਤੁਸੀਂ ਇਹ ਪ੍ਰੋਜੈਕਟ ਨਹੀਂ ਖੋਲ੍ਹ ਸਕਦੇ, ਕਿਉਂਕਿ ਇਹ ਠੀਕ ਤਰ੍ਹਾਂ ਕਨਵਰਟ ਨਹੀਂ ਹੋਇਆ ਸੀ। ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਨੂੰ ਦੁਬਾਰਾ ਕਨਵਰਟ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <string formatted="false" name="search_failed">ਕੁਝ ਨਹੀਂ ਮਿਲਿਆ, ਕਿਰਪਾ ਕਰਕੇ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <string formatted="false" name="connection_lost_or_closed_by_server">ਸਰਵਰ ਨਾਲ ਕਨੈਕਸ਼ਨ ਟੁੱਟ ਗਿਆ।</string>
+    <string formatted="false" name="connection_failed">ਅਸੀਂ ਤੁਹਾਨੂੰ ਹੁਣੇ ਸਰਵਰ ਨਾਲ ਨਹੀਂ ਜੋੜ ਸਕਦੇ, ਕਿਰਪਾ ਕਰਕੇ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <string formatted="false" name="authentication_failed">ਲੱਗਦਾ ਹੈ ਕਿ ਸੇਵਾ ਨਾਲ ਤੁਹਾਡੇ ਕਨੈਕਸ਼ਨ ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ Catrobat ਟੀਮ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।</string>
+    <plurals name="scratch_conversion_scheduled_x">
+        <item quantity="one">%d Scratch ਪ੍ਰੋਜੈਕਟ ਕਤਾਰ ਵਿੱਚ ਜੋੜਿਆ ਗਿਆ…</item>
+        <item quantity="other">%d Scratch ਪ੍ਰੋਜੈਕਟ ਕਤਾਰ ਵਿੱਚ ਜੋੜੇ ਗਏ…</item>
+    </plurals>
+    <string formatted="false" name="scratch_conversion_started">Scratch ਪ੍ਰੋਜੈਕਟ ਦਾ ਕਨਵਰਜ਼ਨ ਸ਼ੁਰੂ ਹੋ ਗਿਆ…</string>
+    <string formatted="false" name="convert">ਕਨਵਰਟ ਕਰੋ</string>
+    <string formatted="false" name="converting">ਕਨਵਰਟ ਹੋ ਰਿਹਾ ਹੈ…</string>
+    <string formatted="false" name="status_scheduled">ਕਤਾਰ ਵਿੱਚ</string>
+    <string formatted="false" name="status_waiting_for_worker">ਖਾਲੀ ਵਰਕਰ ਲੱਭਿਆ ਜਾ ਰਿਹਾ ਹੈ… ਕਿਰਪਾ ਕਰਕੇ ਉਡੀਕ ਕਰੋ…</string>
+    <string formatted="false" name="status_started">ਸ਼ੁਰੂ ਹੋ ਗਿਆ…</string>
+    <string formatted="false" name="status_conversion_finished">ਕਨਵਰਜ਼ਨ ਪੂਰਾ ਹੋਇਆ</string>
+    <plurals name="status_in_progress_x_jobs">
+        <item quantity="one">ਜਾਰੀ: %d ਕੰਮ</item>
+        <item quantity="other">ਜਾਰੀ: %d ਕੰਮ</item>
+    </plurals>
+    <plurals name="status_completed_x_jobs">
+        <item quantity="one">ਪੂਰੇ ਹੋਏ: %d ਕੰਮ</item>
+        <item quantity="other">ਪੂਰੇ ਹੋਏ: %d ਕੰਮ</item>
+    </plurals>
+    <string formatted="false" name="status_conversion_failed">ਕਨਵਰਜ਼ਨ ਅਸਫਲ ਰਿਹਾ!</string>
+    <string formatted="false" name="status_downloading">ਡਾਊਨਲੋਡ ਹੋ ਰਿਹਾ ਹੈ…</string>
+    <string formatted="false" name="status_download_finished">ਡਾਊਨਲੋਡ ਪੂਰਾ ਹੋਇਆ।</string>
+    <string formatted="false" name="status_download_canceled">ਡਾਊਨਲੋਡ ਰੱਦ ਹੋ ਗਿਆ!</string>
+    <string formatted="false" name="scratch_programs_in_progress_title">ਜਾਰੀ</string>
+    <string formatted="false" name="scratch_programs_finished_title">ਕਨਵਰਟ ਕੀਤੇ ਪ੍ਰੋਜੈਕਟ</string>
+    <string formatted="false" name="by_x">%1$s ਦੁਆਰਾ</string>
+    <string formatted="false" name="warning_program_visibility">ਚੇਤਾਵਨੀ:\nਇਹ ਇੱਕ ਨਿੱਜੀ ਪ੍ਰੋਜੈਕਟ ਜਾਪਦਾ ਹੈ। ਤੁਸੀਂ ਇਸ ਨੂੰ ਕਨਵਰਟ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰ ਸਕਦੇ ਹੋ, ਪਰ ਹੋ ਸਕਦਾ ਹੈ ਇਹ ਕੰਮ ਨਾ ਕਰੇ।</string>
+    <string formatted="false" name="instructions">ਹਿਦਾਇਤਾਂ</string>
+    <string formatted="false" name="notes_and_credits">ਨੋਟ ਅਤੇ ਕ੍ਰੈਡਿਟ</string>
+    <string formatted="false" name="shared_at_x">ਸਾਂਝਾ ਕੀਤਾ: %1$s</string>
+    <string formatted="false" name="modified_at_x">ਸੋਧਿਆ: %1$s</string>
+    <string formatted="false" name="remixes">ਰੀਮਿਕਸ</string>
+    <!--  -->
+    <string formatted="false" name="author">ਲੇਖਕ:</string>
+    <string formatted="false" name="screen_size">ਸਟੇਜ ਦਾ ਆਕਾਰ:</string>
+    <string formatted="false" name="mode">ਮੋਡ:</string>
+    <string formatted="false" name="remix_of">ਇਸ ਦਾ ਰੀਮਿਕਸ:</string>
+    <string formatted="false" name="description_hint">ਵੇਰਵਾ ਜੋੜਨ ਲਈ ਦਬਾਓ</string>
+    <string formatted="false" name="notes_and_credits_hint">ਨੋਟ ਅਤੇ ਕ੍ਰੈਡਿਟ ਜੋੜਨ ਲਈ ਦਬਾਓ</string>
+    <!-- ScratchReconvertDialog Strings -->
+    <string formatted="false" name="reconvert_text">ਤੁਸੀਂ ਇਹ ਪ੍ਰੋਜੈਕਟ %1$s ਪਹਿਲਾਂ ਕਨਵਰਟ ਕੀਤਾ ਸੀ।</string>
+    <plurals name="minutes">
+        <item quantity="one">%d ਮਿੰਟ</item>
+        <item quantity="other">%d ਮਿੰਟ</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%d ਘੰਟਾ</item>
+        <item quantity="other">%d ਘੰਟੇ</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">%d ਦਿਨ</item>
+        <item quantity="other">%d ਦਿਨ</item>
+    </plurals>
+    <string formatted="false" name="reconvert_dialog_download">ਪ੍ਰੋਜੈਕਟ ਦੁਬਾਰਾ ਡਾਊਨਲੋਡ ਕਰੋ</string>
+    <string formatted="false" name="reconvert_dialog_reconvert">ਇਹ ਪ੍ਰੋਜੈਕਟ ਦੁਬਾਰਾ ਕਨਵਰਟ ਕਰੋ</string>
+    <!--  -->
+    <!-- ERRORS -->
+    <!-- Terms of Use and Service Error -->
+    <string formatted="false" name="declined_terms_of_use_and_service_alert">ਸਾਡੀ ਐਪ ਵਰਤਣ ਲਈ ਸਾਡੀਆਂ ਵਰਤੋਂ ਅਤੇ ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ ਸਵੀਕਾਰ ਕਰਨੀਆਂ ਜ਼ਰੂਰੀ ਹਨ। ਪਰ ਜੇ ਤੁਸੀਂ ਅਜਿਹਾ ਨਹੀਂ ਕਰਨਾ ਚਾਹੁੰਦੇ, ਤਾਂ ਤੁਸੀਂ ਸਾਡੀਆਂ ਮੁਫ਼ਤ ਵੈੱਬ ਸੇਵਾਵਾਂ ਇੱਥੇ ਵਰਤ ਸਕਦੇ ਹੋ:</string>
+    <string formatted="false" name="wtf_error">ਇੱਕ ਅਣਕਿਆਸੀ ਗ਼ਲਤੀ ਹੋਈ: ਮੈਂ ਨਮੂਨਾ ਪ੍ਰੋਜੈਕਟ ਮੁੜ ਬਹਾਲ ਨਹੀਂ ਕਰ ਸਕਿਆ।</string>
+    <!-- Project Handling Errors -->
+    <string formatted="false" name="error_copy_project">ਪ੍ਰੋਜੈਕਟ ਕਾਪੀ ਕਰਦੇ ਸਮੇਂ ਇੱਕ ਗ਼ਲਤੀ ਹੋਈ</string>
+    <!-- Dialog Errors -->
+    <string formatted="false" name="name_already_exists">ਇਹ ਨਾਮ ਪਹਿਲਾਂ ਹੀ ਵਰਤਿਆ ਜਾ ਰਿਹਾ ਹੈ, ਕਿਰਪਾ ਕਰਕੇ ਕੋਈ ਹੋਰ ਨਾਮ ਚੁਣੋ।</string>
+    <string formatted="false" name="name_consists_of_spaces_only">ਤੁਸੀਂ ਟੈਕਸਟ ਖੇਤਰ ਵਿੱਚ ਸਿਰਫ਼ ਖਾਲੀ ਥਾਂਵਾਂ ਪਾਈਆਂ ਹਨ, ਕਿਰਪਾ ਕਰਕੇ ਅੱਖਰਾਂ, ਅੰਕਾਂ ਜਾਂ ਹੋਰ ਖ਼ਾਸ ਚਿੰਨ੍ਹਾਂ ਵਾਲਾ ਟੈਕਸਟ ਲਿਖੋ।</string>
+    <string formatted="false" name="name_empty">ਕਿਰਪਾ ਕਰਕੇ ਕੋਈ ਟੈਕਸਟ ਲਿਖੋ</string>
+    <!-- Recycler View -->
+    <string formatted="false" name="am_empty_list">ਇਸ ਸੂਚੀ ਵਿੱਚ ਅਜੇ ਕੋਈ ਆਈਟਮ ਨਹੀਂ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਪਹਿਲਾਂ ਕੁਝ ਜੋੜੋ।</string>
+    <string formatted="false" name="reject_import">ਪਾਤਰ ਜਾਂ ਵਸਤੂ ਜੋੜੀ ਨਹੀਂ ਜਾ ਸਕੀ।</string>
+    <string formatted="false" name="am_merge_error">ਕੁਝ ਵੀ ਮਿਲਾਇਆ ਨਹੀਂ ਗਿਆ। ਮਿਲਾਉਣ ਲਈ ਠੀਕ 2 ਪ੍ਰੋਜੈਕਟ ਚੁਣਨੇ ਜ਼ਰੂਰੀ ਹਨ।</string>
+    <string formatted="false" name="am_backpack">ਬੈਕਪੈਕ ਵਿੱਚ ਪਾਓ</string>
+    <string formatted="false" name="am_unpack">ਬੈਕਪੈਕ ਵਿੱਚੋਂ ਕੱਢੋ</string>
+    <string formatted="false" name="am_copy">ਕਾਪੀ ਕਰੋ</string>
+    <string formatted="false" name="am_delete">ਮਿਟਾਓ</string>
+    <string formatted="false" name="am_rename">ਨਾਮ ਬਦਲੋ</string>
+    <string formatted="false" name="am_convert">ਕਨਵਰਟ ਕਰੋ</string>
+    <string formatted="false" name="am_merge">ਮਿਲਾਓ</string>
+    <string formatted="false" name="dialog_confirm_delete">ਇਸ ਨੂੰ ਵਾਪਸ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ!</string>
+    <string formatted="false" name="list_headline_sprites">ਪਾਤਰ ਅਤੇ ਵਸਤੂਆਂ</string>
+    <!-- Options Menu Options -->
+    <string formatted="false" name="backpack">ਬੈਕਪੈਕ</string>
+    <string formatted="false" name="copy">ਕਾਪੀ ਕਰੋ</string>
+    <string formatted="false" name="delete">ਮਿਟਾਓ</string>
+    <string formatted="false" name="rename">ਨਾਮ ਬਦਲੋ</string>
+    <string formatted="false" name="merge">ਮਿਲਾਓ</string>
+    <string formatted="false" name="show_details">ਵੇਰਵੇ ਦਿਖਾਓ</string>
+    <string formatted="false" name="hide_details">ਵੇਰਵੇ ਲੁਕਾਓ</string>
+    <string formatted="false" name="project_options">ਪ੍ਰੋਜੈਕਟ ਦੇ ਵਿਕਲਪ</string>
+    <string formatted="false" name="from_local">ਡਿਵਾਈਸ ਤੋਂ ਜੋੜੋ</string>
+    <string formatted="false" name="sort_projects">ਕ੍ਰਮਬੱਧ ਕਰੋ</string>
+    <string formatted="false" name="unsort_projects">ਕ੍ਰਮ ਹਟਾਓ</string>
+    <string formatted="false" name="import_from_project">ਜਿਸ ਪ੍ਰੋਜੈਕਟ ਤੋਂ ਇੰਪੋਰਟ ਕਰਨਾ ਹੈ, ਉਹ ਚੁਣੋ</string>
+    <!-- New Dialog Titles -->
+    <string formatted="false" name="new_scene_dialog">ਨਵਾਂ ਦ੍ਰਿਸ਼</string>
+    <!-- Delete Dialog Titles -->
+    <plurals name="delete_projects">
+        <item quantity="one">ਕੀ ਇਹ ਪ੍ਰੋਜੈਕਟ ਮਿਟਾਉਣਾ ਹੈ?</item>
+        <item quantity="other">ਕੀ ਇਹ ਪ੍ਰੋਜੈਕਟ ਮਿਟਾਉਣੇ ਹਨ?</item>
+    </plurals>
+    <plurals name="delete_scenes">
+        <item quantity="one">ਕੀ ਇਹ ਦ੍ਰਿਸ਼ ਮਿਟਾਉਣਾ ਹੈ?</item>
+        <item quantity="other">ਕੀ ਇਹ ਦ੍ਰਿਸ਼ ਮਿਟਾਉਣੇ ਹਨ?</item>
+    </plurals>
+    <plurals name="delete_sprites">
+        <item quantity="one">ਕੀ ਇਹ ਪਾਤਰ ਜਾਂ ਵਸਤੂ ਮਿਟਾਉਣੀ ਹੈ?</item>
+        <item quantity="other">ਕੀ ਇਹ ਪਾਤਰ ਜਾਂ ਵਸਤੂਆਂ ਮਿਟਾਉਣੀਆਂ ਹਨ?</item>
+    </plurals>
+    <plurals name="delete_looks">
+        <item quantity="one">ਕੀ ਇਹ ਦਿੱਖ ਮਿਟਾਉਣੀ ਹੈ?</item>
+        <item quantity="other">ਕੀ ਇਹ ਦਿੱਖਾਂ ਮਿਟਾਉਣੀਆਂ ਹਨ?</item>
+    </plurals>
+    <plurals name="delete_sounds">
+        <item quantity="one">ਕੀ ਇਹ ਆਵਾਜ਼ ਮਿਟਾਉਣੀ ਹੈ?</item>
+        <item quantity="other">ਕੀ ਇਹ ਆਵਾਜ਼ਾਂ ਮਿਟਾਉਣੀਆਂ ਹਨ?</item>
+    </plurals>
+    <plurals name="delete_nfc_tags">
+        <item quantity="one">ਕੀ ਇਹ ਟੈਗ ਮਿਟਾਉਣਾ ਹੈ?</item>
+        <item quantity="other">ਕੀ ਇਹ ਟੈਗ ਮਿਟਾਉਣੇ ਹਨ?</item>
+    </plurals>
+    <plurals name="delete_scripts">
+        <item quantity="one">ਕੀ ਇਹ ਸਕ੍ਰਿਪਟ ਮਿਟਾਉਣੀ ਹੈ?</item>
+        <item quantity="other">ਕੀ ਇਹ ਸਕ੍ਰਿਪਟਾਂ ਮਿਟਾਉਣੀਆਂ ਹਨ?</item>
+    </plurals>
+    <!-- Dialog Labels -->
+    <string formatted="false" name="project_name_label">ਪ੍ਰੋਜੈਕਟ ਦਾ ਨਾਮ</string>
+    <string formatted="false" name="scene_name_label">ਦ੍ਰਿਸ਼ ਦਾ ਨਾਮ</string>
+    <string formatted="false" name="sprite_name_label">ਪਾਤਰ ਜਾਂ ਵਸਤੂ ਦਾ ਨਾਮ</string>
+    <string formatted="false" name="sprite_group_name_label">ਸਮੂਹ ਦਾ ਨਾਮ</string>
+    <string formatted="false" name="script_group_label">ਸਕ੍ਰਿਪਟ ਸਮੂਹ ਦਾ ਨਾਮ</string>
+    <string formatted="false" name="look_name_label">ਦਿੱਖ ਦਾ ਨਾਮ</string>
+    <string formatted="false" name="sound_name_label">ਆਵਾਜ਼ ਦਾ ਨਾਮ</string>
+    <string formatted="false" name="nfc_tag_name_label">NFC ਟੈਗ ਦਾ ਨਾਮ</string>
+    <string formatted="false" name="string_label">ਟੈਕਸਟ</string>
+    <string formatted="false" name="data_label">ਨਾਮ</string>
+    <string formatted="false" name="keyword_label">ਖੋਜੋ</string>
+    <string formatted="false" name="html_label">HTML ਟੈਕਸਟ ਪਾਓ</string>
+    <string formatted="false" name="Image_format_not_supported">ਇਹ ਚਿੱਤਰ ਫ਼ਾਰਮੈਟ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ</string>
+    <string formatted="false" name="import_conflicting_variables">ਪਾਤਰ ਜਾਂ ਵਸਤੂ ਜੋੜੀ ਨਹੀਂ ਜਾ ਸਕੀ।</string>
+    <string formatted="false" name="import_conflicting_variables_reason">ਕਾਰਨ ਇਹ ਹੈ ਕਿ ਹੇਠ ਲਿਖੇ ਵੇਰੀਏਬਲ ਜਾਂ ਸੂਚੀ ਦੇ ਨਾਮ ਆਪਸ ਵਿੱਚ ਟਕਰਾਉਂਦੇ ਹਨ, ਕਿਉਂਕਿ ਇਹ ਸਾਰੇ ਪਾਤਰਾਂ ਅਤੇ ਵਸਤੂਆਂ ਲਈ ਵਰਤੇ ਜਾਂਦੇ ਹਨ ਅਤੇ ਇਸੇ ਨਾਮ ਨਾਲ ਸਿਰਫ਼ ਕਿਸੇ ਇੱਕ ਪਾਤਰ ਜਾਂ ਵਸਤੂ ਲਈ ਵੀ:</string>
+    <string formatted="false" name="import_conflicting_variables_try_again">ਕਿਰਪਾ ਕਰਕੇ ਇਹਨਾਂ ਵਿੱਚੋਂ ਕਿਸੇ ਇੱਕ ਵੇਰੀਏਬਲ ਜਾਂ ਸੂਚੀ ਦਾ ਨਾਮ ਬਦਲੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <!-- Details -->
+    <string formatted="false" name="project_details">ਆਖਰੀ ਵਰਤੋਂ: %s, ਆਕਾਰ: %s</string>
+    <string formatted="false" name="last_access_today">ਅੱਜ, %s</string>
+    <string formatted="false" name="scene_details">ਪਾਤਰ ਅਤੇ ਵਸਤੂਆਂ: %d, ਦਿੱਖਾਂ: %d, ਆਵਾਜ਼ਾਂ: %d</string>
+    <string formatted="false" name="sprite_details">ਬਲਾਕ: %d, ਦਿੱਖਾਂ: %d, ਆਵਾਜ਼ਾਂ: %d</string>
+    <string formatted="false" name="look_details">ਰੈਜ਼ੋਲਿਊਸ਼ਨ: %s, ਆਕਾਰ: %s</string>
+    <string formatted="false" name="sound_duration">ਸਮਾਂ: %s</string>
+    <string formatted="false" name="sound_details">ਸਮਾਂ: %s, ਆਕਾਰ: %s</string>
+    <!--  -->
+    <!-- Rename Dialog Titles -->
+    <string formatted="false" name="rename_project">ਪ੍ਰੋਜੈਕਟ ਦਾ ਨਾਮ ਬਦਲੋ</string>
+    <string formatted="false" name="rename_scene_dialog">ਦ੍ਰਿਸ਼ ਦਾ ਨਾਮ ਬਦਲੋ</string>
+    <string formatted="false" name="rename_sprite_dialog">ਪਾਤਰ ਜਾਂ ਵਸਤੂ ਦਾ ਨਾਮ ਬਦਲੋ</string>
+    <string formatted="false" name="rename_look_dialog">ਦਿੱਖ ਦਾ ਨਾਮ ਬਦਲੋ</string>
+    <string formatted="false" name="rename_sound_dialog">ਆਵਾਜ਼ ਦਾ ਨਾਮ ਬਦਲੋ</string>
+    <string formatted="false" name="rename_nfctag_dialog">NFC ਟੈਗ ਦਾ ਨਾਮ ਬਦਲੋ</string>
+    <string formatted="false" name="rename_data_dialog">ਨਾਮ ਬਦਲੋ</string>
+    <!-- New Script Group Dialog -->
+    <string formatted="false" name="new_group">ਨਵਾਂ ਸਮੂਹ</string>
+    <string formatted="false" name="default_group_name">ਸਮੂਹ</string>
+    <!-- New Scene Menu -->
+    <string formatted="false" name="new_scene">ਨਵਾਂ ਦ੍ਰਿਸ਼</string>
+    <!-- Action Toasts -->
+    <!-- Backpack -->
+    <string formatted="false" name="backpack_empty">ਬੈਕਪੈਕ ਖਾਲੀ ਹੈ। ਕੱਢਣ ਲਈ ਕੁਝ ਨਹੀਂ ਹੈ।</string>
+    <plurals name="packed_scenes">
+        <item quantity="one">%d ਦ੍ਰਿਸ਼ ਬੈਕਪੈਕ ਵਿੱਚ ਪਾਇਆ ਗਿਆ।</item>
+        <item quantity="other">%d ਦ੍ਰਿਸ਼ ਬੈਕਪੈਕ ਵਿੱਚ ਪਾਏ ਗਏ।</item>
+    </plurals>
+    <plurals name="packed_sprites">
+        <item quantity="one">%d ਪਾਤਰ ਜਾਂ ਵਸਤੂ ਬੈਕਪੈਕ ਵਿੱਚ ਪਾਈ ਗਈ।</item>
+        <item quantity="other">%d ਪਾਤਰ ਜਾਂ ਵਸਤੂਆਂ ਬੈਕਪੈਕ ਵਿੱਚ ਪਾਈਆਂ ਗਈਆਂ।</item>
+    </plurals>
+    <plurals name="packed_looks">
+        <item quantity="one">%d ਦਿੱਖ ਬੈਕਪੈਕ ਵਿੱਚ ਪਾਈ ਗਈ।</item>
+        <item quantity="other">%d ਦਿੱਖਾਂ ਬੈਕਪੈਕ ਵਿੱਚ ਪਾਈਆਂ ਗਈਆਂ।</item>
+    </plurals>
+    <plurals name="packed_sounds">
+        <item quantity="one">%d ਆਵਾਜ਼ ਬੈਕਪੈਕ ਵਿੱਚ ਪਾਈ ਗਈ।</item>
+        <item quantity="other">%d ਆਵਾਜ਼ਾਂ ਬੈਕਪੈਕ ਵਿੱਚ ਪਾਈਆਂ ਗਈਆਂ।</item>
+    </plurals>
+    <string formatted="false" name="packed_script_group">ਇੱਕ ਸਕ੍ਰਿਪਟ ਸਮੂਹ ਬੈਕਪੈਕ ਵਿੱਚ ਪਾਇਆ ਗਿਆ।</string>
+    <!-- Unpack -->
+    <plurals name="unpacked_scenes">
+        <item quantity="one">%d ਦ੍ਰਿਸ਼ ਬੈਕਪੈਕ ਵਿੱਚੋਂ ਕੱਢਿਆ ਗਿਆ।</item>
+        <item quantity="other">%d ਦ੍ਰਿਸ਼ ਬੈਕਪੈਕ ਵਿੱਚੋਂ ਕੱਢੇ ਗਏ।</item>
+    </plurals>
+    <plurals name="unpacked_sprites">
+        <item quantity="one">%d ਪਾਤਰ ਜਾਂ ਵਸਤੂ ਬੈਕਪੈਕ ਵਿੱਚੋਂ ਕੱਢੀ ਗਈ।</item>
+        <item quantity="other">%d ਪਾਤਰ ਜਾਂ ਵਸਤੂਆਂ ਬੈਕਪੈਕ ਵਿੱਚੋਂ ਕੱਢੀਆਂ ਗਈਆਂ।</item>
+    </plurals>
+    <plurals name="unpacked_looks">
+        <item quantity="one">%d ਦਿੱਖ ਬੈਕਪੈਕ ਵਿੱਚੋਂ ਕੱਢੀ ਗਈ।</item>
+        <item quantity="other">%d ਦਿੱਖਾਂ ਬੈਕਪੈਕ ਵਿੱਚੋਂ ਕੱਢੀਆਂ ਗਈਆਂ।</item>
+    </plurals>
+    <plurals name="unpacked_sounds">
+        <item quantity="one">%d ਆਵਾਜ਼ ਬੈਕਪੈਕ ਵਿੱਚੋਂ ਕੱਢੀ ਗਈ।</item>
+        <item quantity="other">%d ਆਵਾਜ਼ਾਂ ਬੈਕਪੈਕ ਵਿੱਚੋਂ ਕੱਢੀਆਂ ਗਈਆਂ।</item>
+    </plurals>
+    <plurals name="unpacked_scripts">
+        <item quantity="one">%d ਸਕ੍ਰਿਪਟ ਬੈਕਪੈਕ ਵਿੱਚੋਂ ਕੱਢੀ ਗਈ।</item>
+        <item quantity="other">%d ਸਕ੍ਰਿਪਟਾਂ ਬੈਕਪੈਕ ਵਿੱਚੋਂ ਕੱਢੀਆਂ ਗਈਆਂ।</item>
+    </plurals>
+    <!-- Copy -->
+    <plurals name="copied_scenes">
+        <item quantity="one">%d ਦ੍ਰਿਸ਼ ਕਾਪੀ ਕੀਤਾ ਗਿਆ।</item>
+        <item quantity="other">%d ਦ੍ਰਿਸ਼ ਕਾਪੀ ਕੀਤੇ ਗਏ।</item>
+    </plurals>
+    <plurals name="copied_sprites">
+        <item quantity="one">%d ਪਾਤਰ ਜਾਂ ਵਸਤੂ ਕਾਪੀ ਕੀਤੀ ਗਈ।</item>
+        <item quantity="other">%d ਪਾਤਰ ਜਾਂ ਵਸਤੂਆਂ ਕਾਪੀ ਕੀਤੀਆਂ ਗਈਆਂ।</item>
+    </plurals>
+    <plurals name="copied_looks">
+        <item quantity="one">%d ਦਿੱਖ ਕਾਪੀ ਕੀਤੀ ਗਈ।</item>
+        <item quantity="other">%d ਦਿੱਖਾਂ ਕਾਪੀ ਕੀਤੀਆਂ ਗਈਆਂ।</item>
+    </plurals>
+    <plurals name="copied_sounds">
+        <item quantity="one">%d ਆਵਾਜ਼ ਕਾਪੀ ਕੀਤੀ ਗਈ।</item>
+        <item quantity="other">%d ਆਵਾਜ਼ਾਂ ਕਾਪੀ ਕੀਤੀਆਂ ਗਈਆਂ।</item>
+    </plurals>
+    <plurals name="copied_nfc_tags">
+        <item quantity="one">%d NFC ਟੈਗ ਕਾਪੀ ਕੀਤਾ ਗਿਆ।</item>
+        <item quantity="other">%d NFC ਟੈਗ ਕਾਪੀ ਕੀਤੇ ਗਏ।</item>
+    </plurals>
+    <!-- Delete -->
+    <plurals name="deleted_projects">
+        <item quantity="one">%d ਪ੍ਰੋਜੈਕਟ ਮਿਟਾਇਆ ਗਿਆ।</item>
+        <item quantity="other">%d ਪ੍ਰੋਜੈਕਟ ਮਿਟਾਏ ਗਏ।</item>
+    </plurals>
+    <plurals name="deleted_scenes">
+        <item quantity="one">%d ਦ੍ਰਿਸ਼ ਮਿਟਾਇਆ ਗਿਆ।</item>
+        <item quantity="other">%d ਦ੍ਰਿਸ਼ ਮਿਟਾਏ ਗਏ।</item>
+    </plurals>
+    <plurals name="deleted_sprites">
+        <item quantity="one">%d ਪਾਤਰ ਜਾਂ ਵਸਤੂ ਮਿਟਾਈ ਗਈ।</item>
+        <item quantity="other">%d ਪਾਤਰ ਜਾਂ ਵਸਤੂਆਂ ਮਿਟਾਈਆਂ ਗਈਆਂ।</item>
+    </plurals>
+    <plurals name="deleted_looks">
+        <item quantity="one">%d ਦਿੱਖ ਮਿਟਾਈ ਗਈ।</item>
+        <item quantity="other">%d ਦਿੱਖਾਂ ਮਿਟਾਈਆਂ ਗਈਆਂ।</item>
+    </plurals>
+    <plurals name="deleted_sounds">
+        <item quantity="one">%d ਆਵਾਜ਼ ਮਿਟਾਈ ਗਈ।</item>
+        <item quantity="other">%d ਆਵਾਜ਼ਾਂ ਮਿਟਾਈਆਂ ਗਈਆਂ।</item>
+    </plurals>
+    <plurals name="deleted_nfc_tags">
+        <item quantity="one">%d NFC ਟੈਗ ਮਿਟਾਇਆ ਗਿਆ।</item>
+        <item quantity="other">%d NFC ਟੈਗ ਮਿਟਾਏ ਗਏ।</item>
+    </plurals>
+    <plurals name="deleted_scripts">
+        <item quantity="one">%d ਸਕ੍ਰਿਪਟ ਮਿਟਾਈ ਗਈ।</item>
+        <item quantity="other">%d ਸਕ੍ਰਿਪਟਾਂ ਮਿਟਾਈਆਂ ਗਈਆਂ।</item>
+    </plurals>
+    <plurals name="deleted_Items">
+        <item quantity="one">%d ਆਈਟਮ ਮਿਟਾਈ ਗਈ।</item>
+        <item quantity="other">%d ਆਈਟਮਾਂ ਮਿਟਾਈਆਂ ਗਈਆਂ।</item>
+    </plurals>
+    <!-- Imported -->
+    <plurals name="imported_projects">
+        <item quantity="one">%d ਪ੍ਰੋਜੈਕਟ ਇੰਪੋਰਟ ਕੀਤਾ ਗਿਆ।</item>
+        <item quantity="other">%d ਪ੍ਰੋਜੈਕਟ ਇੰਪੋਰਟ ਕੀਤੇ ਗਏ।</item>
+    </plurals>
+    <!-- Renamed -->
+    <string formatted="false" name="renamed_project">ਪ੍ਰੋਜੈਕਟ ਦਾ ਨਾਮ ਬਦਲਿਆ ਗਿਆ</string>
+    <!--  -->
+    <!-- ProjectListActivity and ProjectListFragment -->
+    <string formatted="false" name="project_list_title">ਪ੍ਰੋਜੈਕਟ</string>
+    <string formatted="false" name="last_used">ਆਖਰੀ ਵਰਤੋਂ:</string>
+    <string formatted="false" name="size">ਆਕਾਰ:</string>
+    <string formatted="false" name="description">ਵੇਰਵਾ:</string>
+    <string formatted="false" name="set_description">ਵੇਰਵਾ ਲਿਖੋ</string>
+    <string formatted="false" name="notes_and_credits_title">ਨੋਟ ਅਤੇ ਕ੍ਰੈਡਿਟ:</string>
+    <string formatted="false" name="set_notes_and_credits">ਨੋਟ ਅਤੇ ਕ੍ਰੈਡਿਟ ਲਿਖੋ</string>
+    <string formatted="false" name="details_date_today">ਅੱਜ</string>
+    <string formatted="false" name="import_project">ਪ੍ਰੋਜੈਕਟ ਇੰਪੋਰਟ ਕਰੋ</string>
+    <string formatted="false" name="export_project">ਪ੍ਰੋਜੈਕਟ ਐਕਸਪੋਰਟ ਕਰੋ</string>
+    <string formatted="false" name="error_import_project">ਪ੍ਰੋਜੈਕਟ ਇੰਪੋਰਟ ਕਰਦੇ ਸਮੇਂ ਕੁਝ ਗ਼ਲਤ ਹੋ ਗਿਆ।</string>
+    <string formatted="false" name="no_projects_selected">ਇੰਪੋਰਟ ਲਈ ਕੋਈ ਪ੍ਰੋਜੈਕਟ ਨਹੀਂ ਚੁਣਿਆ ਗਿਆ</string>
+    <string formatted="false" name="only_select_catrobat_files">ਸਿਰਫ਼ ਪ੍ਰੋਜੈਕਟ ਫ਼ਾਈਲਾਂ ਚੁਣੋ</string>
+    <string formatted="false" name="error_no_files_found">ਕੋਈ ਪ੍ਰੋਜੈਕਟ ਫ਼ਾਈਲ ਨਹੀਂ ਮਿਲੀ।</string>
+    <string formatted="false" name="import_sprite_from_project_launcher">ਡਿਵਾਈਸ ਦੇ ਪ੍ਰੋਜੈਕਟ ਤੋਂ ਵਸਤੂ ਇੰਪੋਰਟ ਕਰੋ</string>
+    <!-- ProjectOptionsFragment -->
+    <string formatted="false" name="project_options_description">ਵੇਰਵਾ</string>
+    <string formatted="false" name="project_options_notes_and_credits">ਨੋਟ ਅਤੇ ਕ੍ਰੈਡਿਟ</string>
+    <string formatted="false" name="project_options_tags">ਟੈਗ</string>
+    <string formatted="false" name="project_options_aspect_ratio">ਅਸਲ ਆਕਾਰ ਅਨੁਪਾਤ ਰੱਖੋ</string>
+    <string formatted="false" name="project_options_more_details">ਪ੍ਰੋਜੈਕਟ ਦੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ</string>
+    <string formatted="false" name="project_options_delete_project">ਪ੍ਰੋਜੈਕਟ ਮਿਟਾਓ</string>
+    <!-- ScriptListFragment -->
+    <string formatted="false" name="fragment_script_text_description">ਸਕ੍ਰਿਪਟਾਂ ਜੋੜਨ ਲਈ \"+\" ਦਬਾਓ</string>
+    <!--  -->
+    <!-- SpriteListFragment -->
+    <string formatted="false" name="fragment_sprite_text_description">ਪਾਤਰ ਜਾਂ ਵਸਤੂਆਂ ਜੋੜਨ ਲਈ \"+\" ਦਬਾਓ</string>
+    <string formatted="false" name="default_sprite_name">ਮੇਰਾ ਪਾਤਰ ਜਾਂ ਵਸਤੂ</string>
+    <!--  -->
+    <!-- LookListFragment -->
+    <string formatted="false" name="fragment_look_text_description">ਦਿੱਖਾਂ ਜੋੜਨ ਲਈ \"+\" ਦਬਾਓ</string>
+    <string formatted="false" name="select_look_from_gallery">ਚਿੱਤਰ ਚੁਣੋ</string>
+    <string formatted="false" name="select_look_from_camera">ਫ਼ੋਟੋ ਚੁਣੋ</string>
+    <!--  -->
+    <!-- SoundListFragment -->
+    <string formatted="false" name="fragment_sound_text_description">ਆਵਾਜ਼ਾਂ ਜੋੜਨ ਲਈ \"+\" ਦਬਾਓ</string>
+    <string formatted="false" name="sound_select_source">ਇੱਕ ਆਵਾਜ਼ ਚੁਣੋ</string>
+    <!--  -->
+    <!-- NfcTagListFragment -->
+    <string formatted="false" name="fragment_nfctag_text_description">NFC ਟੈਗ ਜੋੜਨ ਲਈ ਉਹਨਾਂ ਨੂੰ ਸਕੈਨ ਕਰੋ</string>
+    <string formatted="false" name="ndef_record_label">ਰਿਕਾਰਡ ਦੀ ਕਿਸਮ ਵਜੋਂ</string>
+    <string formatted="false" name="brick_set_nfc_tag">ਲਿਖਣ ਲਈ ਅਗਲੇ NFC ਟੈਗ ਦੀ ਉਡੀਕ ਕਰੋ</string>
+    <string formatted="false" name="brick_set_nfc_tag_default_value">www.catrobat.org</string>
+    <string formatted="false" name="default_tag_name">NFC ਟੈਗ</string>
+    <string formatted="false" name="tnf_empty">ਖਾਲੀ</string>
+    <string formatted="false" name="tnf_external_type">ਬਾਹਰੀ ਕਿਸਮ</string>
+    <string formatted="false" name="tnf_mime_media">ਟੈਕਸਟ</string>
+    <string formatted="false" name="tnf_well_known_http">HTTP</string>
+    <string formatted="false" name="tnf_well_known_https">HTTPS</string>
+    <string formatted="false" name="tnf_well_known_tel">ਫ਼ੋਨ ਨੰਬਰ</string>
+    <string formatted="false" name="tnf_well_known_sms">SMS</string>
+    <string formatted="false" name="tnf_well_known_mailto">ਈ-ਮੇਲ</string>
+    <!--  -->
+    <!-- DataListFragment -->
+    <string formatted="false" name="multiplayer_vars_headline">ਕਨੈਕਟ ਕੀਤੀਆਂ ਡਿਵਾਈਸਾਂ ਲਈ ਵੇਰੀਏਬਲ</string>
+    <string formatted="false" name="global_vars_headline">ਸਾਰੇ ਪਾਤਰਾਂ ਅਤੇ ਵਸਤੂਆਂ ਲਈ ਵੇਰੀਏਬਲ</string>
+    <string formatted="false" name="local_vars_headline">ਸਿਰਫ਼ ਇਸ ਪਾਤਰ ਜਾਂ ਵਸਤੂ ਲਈ ਵੇਰੀਏਬਲ</string>
+    <string formatted="false" name="global_lists_headline">ਸਾਰੇ ਪਾਤਰਾਂ ਅਤੇ ਵਸਤੂਆਂ ਲਈ ਸੂਚੀਆਂ</string>
+    <string formatted="false" name="local_lists_headline">ਸਿਰਫ਼ ਇਸ ਪਾਤਰ ਜਾਂ ਵਸਤੂ ਲਈ ਸੂਚੀਆਂ</string>
+    <string formatted="false" name="fragment_data_text_description">ਵੇਰੀਏਬਲ ਜਾਂ ਸੂਚੀਆਂ ਜੋੜਨ ਲਈ\n\"+\" ਦਬਾਓ</string>
+    <plurals name="user_defined_brick_input_headline">
+        <item quantity="one">ਇਸ ਬਲਾਕ ਲਈ ਇਨਪੁੱਟ</item>
+        <item quantity="other">ਇਸ ਬਲਾਕ ਲਈ ਇਨਪੁੱਟ</item>
+    </plurals>
+    <!-- NewDataDialog -->
+    <string formatted="false" name="new_data_for_all_sprites">ਸਾਰੇ ਦ੍ਰਿਸ਼ਾਂ ਦੇ ਸਾਰੇ ਪਾਤਰਾਂ, ਵਸਤੂਆਂ ਅਤੇ ਕਲੋਨਾਂ ਲਈ</string>
+    <string formatted="false" name="new_data_for_this_sprite_only">ਸਿਰਫ਼ ਇਸ ਪਾਤਰ, ਵਸਤੂ ਜਾਂ ਇਸ ਦੇ ਕਿਸੇ ਇੱਕ ਕਲੋਨ ਲਈ</string>
+    <string formatted="false" name="new_data_for_connected_devices">ਕਨੈਕਟ ਕੀਤੀਆਂ ਮਲਟੀਪਲੇਅਰ ਡਿਵਾਈਸਾਂ \'ਤੇ ਪ੍ਰੋਜੈਕਟਾਂ ਦੇ ਸਾਰੇ ਦ੍ਰਿਸ਼ਾਂ ਦੇ ਸਾਰੇ ਪਾਤਰਾਂ, ਵਸਤੂਆਂ ਅਤੇ ਕਲੋਨਾਂ ਲਈ</string>
+    <!-- Backpack -->
+    <string formatted="false" name="backpack_title">ਤੁਹਾਡਾ ਬੈਕਪੈਕ</string>
+    <string formatted="false" name="actor_object_title">ਪਾਤਰ ਅਤੇ ਵਸਤੂਆਂ</string>
+    <string formatted="false" name="pack">ਬੈਕਪੈਕ ਵਿੱਚ ਪਾਓ</string>
+    <string formatted="false" name="unpack">ਬੈਕਪੈਕ ਵਿੱਚੋਂ ਕੱਢੋ</string>
+    <!--  -->
+    <!-- NewProjectDialog -->
+    <string name="new_project_title">ਪ੍ਰੋਜੈਕਟ ਬਣਾਓ</string>
+    <string formatted="false" name="new_project_dialog_example_project">ਨਮੂਨਾ ਪ੍ਰੋਜੈਕਟ</string>
+    <string name="new_project_dialog_portrait">ਪੋਰਟਰੇਟ</string>
+    <string name="new_project_dialog_landscape">ਲੈਂਡਸਕੇਪ</string>
+    <string name="new_project_dialog_cast">ਕਾਸਟ</string>
+    <!--  -->
+    <!-- NewMergedProjectDialog -->
+    <string formatted="false" name="new_merge_project_dialog_title">ਮਿਲਾਇਆ ਗਿਆ ਪ੍ਰੋਜੈਕਟ</string>
+    <string formatted="false" name="merging_project_text">ਇਹ ਦੋਵੇਂ ਪ੍ਰੋਜੈਕਟ ਅਜੇ ਮਿਲਾਏ ਨਹੀਂ ਜਾ ਸਕਦੇ</string>
+    <!--  -->
+    <!-- NewSpriteDialog -->
+    <string formatted="false" name="new_sprite_dialog_title">ਨਵਾਂ ਪਾਤਰ ਜਾਂ ਵਸਤੂ</string>
+    <!--  -->
+    <!-- NewLookDialog -->
+    <string formatted="false" name="new_look_dialog_title">ਦਿੱਖ ਜੋੜੋ</string>
+    <string formatted="false" name="add_look_from_camera">ਕੈਮਰਾ</string>
+    <string formatted="false" name="add_look_object_library">ਲਾਇਬ੍ਰੇਰੀ</string>
+    <string formatted="false" name="add_look_draw_new_image">ਚਿੱਤਰ ਬਣਾਓ</string>
+    <string formatted="false" name="add_look_choose_image">ਗੈਲਰੀ</string>
+    <string formatted="false" name="add_look_media_library">ਦਿੱਖਾਂ</string>
+    <string formatted="false" name="add_look_from_local_project">ਡਿਵਾਈਸ ਦੇ ਪ੍ਰੋਜੈਕਟ</string>
+    <string name="add_look_empty_object">ਖਾਲੀ ਵਸਤੂ</string>
+    <string name="add_look_actors_and_object">ਡਿਵਾਈਸ ਦੇ ਪਾਤਰ ਅਤੇ ਵਸਤੂਆਂ</string>
+    <!--  -->
+    <!-- NewSoundDialog -->
+    <string formatted="false" name="new_sound_dialog_title">ਆਵਾਜ਼ ਜੋੜੋ</string>
+    <string formatted="false" name="add_sound_from_recorder">ਆਵਾਜ਼ ਰਿਕਾਰਡ ਕਰੋ</string>
+    <string formatted="false" name="add_sound_choose_file">ਫਾਈਲ ਚੁਣੋ</string>
+    <string formatted="false" name="add_sound_music">ਸੰਗੀਤ ਰਚਨਾਕਾਰ</string>
+    <string formatted="false" name="add_sound_choose_sound">ਆਵਾਜ਼ਾਂ</string>
+    <!-- NotePickerDialog -->
+    <string formatted="false" name="note_picker_title">ਸੁਰ ਚੋਣਕਾਰ</string>
+    <!--  -->
+    <!-- Rating Dialog -->
+    <string formatted="false" name="rating_dialog_title">ਐਪ ਨੂੰ ਦਰਜਾ ਦਿਓ</string>
+    <string formatted="false" name="rating_google_play_dialog_text">ਜੇ ਤੁਹਾਨੂੰ ਇਹ ਐਪ ਪਸੰਦ ਹੈ, ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਸਾਨੂੰ ਐਪ ਸਟੋਰ \'ਤੇ ਦਰਜਾ ਦਿਓ।</string>
+    <string formatted="false" name="rating_dialog_rate_now">ਹੁਣ</string>
+    <string formatted="false" name="rating_dialog_rate_later">ਬਾਅਦ ਵਿੱਚ</string>
+    <string formatted="false" name="rating_dialog_rate_never">ਕਦੇ ਨਹੀਂ</string>
+    <!--  -->
+    <!-- Terms of Use Dialog -->
+    <string formatted="false" name="dialog_terms_of_use_title">ਵਰਤੋਂ ਅਤੇ ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ</string>
+    <string formatted="false" name="dialog_terms_of_use_info">Catrobat ਪ੍ਰੋਜੈਕਟ ਵੱਲੋਂ ਦਿੱਤੀਆਂ ਐਪਾਂ ਅਤੇ ਹੋਰ ਸੇਵਾਵਾਂ ਵਰਤਣ ਦੀ ਇਜਾਜ਼ਤ ਲੈਣ ਲਈ, ਤੁਹਾਨੂੰ ਸਾਡੀਆਂ ਵਰਤੋਂ ਅਤੇ ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ ਨਾਲ ਸਹਿਮਤ ਹੋਣਾ ਪਵੇਗਾ। ਸਾਡੀਆਂ ਐਪਾਂ ਅਤੇ ਹੋਰ ਸੇਵਾਵਾਂ ਵਰਤਦੇ ਸਮੇਂ ਤੁਹਾਨੂੰ ਇਹਨਾਂ ਸ਼ਰਤਾਂ ਦੀ ਸਖ਼ਤੀ ਨਾਲ ਪਾਲਣਾ ਕਰਨੀ ਪਵੇਗੀ। ਇਹਨਾਂ ਦੀ ਪੂਰੀ ਸ਼ਬਦਾਵਲੀ ਲਈ ਕਿਰਪਾ ਕਰਕੇ ਹੇਠਾਂ ਦਿੱਤਾ ਲਿੰਕ ਦੇਖੋ।\n</string>
+    <string formatted="false" name="dialog_terms_of_use_link_text">ਵਰਤੋਂ ਅਤੇ ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ</string>
+    <!--  -->
+    <!-- Privacy Policy -->
+    <string formatted="false" name="disclaimer_privacy_police_header_headline">ਜੀ ਆਇਆਂ ਨੂੰ!</string>
+    <string formatted="false" name="disclaimer_privacy_policy_header">ਇਹ ਐਪ ਵਰਤਣ ਲਈ, ਕਿਰਪਾ ਕਰਕੇ ਸਵੀਕਾਰ ਕਰੋ ਸਾਡੀ</string>
+    <!-- -->
+    <!-- About Dialog -->
+    <string formatted="false" name="dialog_about_title">ਇਸ ਐਪ ਬਾਰੇ</string>
+    <string formatted="false" name="dialog_about_license_info">ਇਹ ਐਪ ਵਿਜ਼ੂਅਲ ਪ੍ਰੋਗਰਾਮਿੰਗ ਭਾਸ਼ਾ Catrobat ਲਈ ਕੋਡਿੰਗ ਵਾਤਾਵਰਨ ਅਤੇ ਇੰਟਰਪ੍ਰੈਟਰ ਦਿੰਦੀ ਹੈ।\n ਇਸ ਐਪ ਦਾ ਸਰੋਤ ਕੋਡ ਮੁੱਖ ਤੌਰ \'ਤੇ GNU AGPL v3 ਲਾਇਸੈਂਸ ਅਧੀਨ ਹੈ। ਲਾਇਸੈਂਸ ਬਾਰੇ ਹੋਰ ਵੇਰਵਿਆਂ ਲਈ ਹੇਠਾਂ ਦਿੱਤਾ ਲਿੰਕ ਦੇਖੋ।\n</string>
+    <string formatted="false" name="dialog_about_license_link_text">ਸਰੋਤ ਕੋਡ ਲਾਇਸੈਂਸ</string>
+    <string formatted="false" name="dialog_about_catrobat_link_text">Catrobat ਬਾਰੇ</string>
+    <string formatted="false" name="dialog_about_catrobat_language_version">Catrobat ਭਾਸ਼ਾ ਦਾ ਸੰਸਕਰਨ</string>
+    <string formatted="false" name="dialog_about_version">ਸੰਸਕਰਨ:</string>
+    <!--  -->
+    <!-- NetworkAlertDialog -->
+    <string formatted="false" name="error_no_network_title">ਕੋਈ ਨੈੱਟਵਰਕ ਨਹੀਂ</string>
+    <!-- UploadProjectDialog -->
+    <string formatted="false" name="upload_project_dialog_title">ਪ੍ਰੋਜੈਕਟ ਅੱਪਲੋਡ ਕਰੋ</string>
+    <string formatted="false" name="upload_description">ਵੇਰਵਾ:</string>
+    <string formatted="false" name="upload_notes_and_credits">ਨੋਟ ਅਤੇ ਕ੍ਰੈਡਿਟ:</string>
+    <string formatted="false" name="upload_notes_and_credits_explanation">ਤੁਸੀਂ ਇਹ ਪ੍ਰੋਜੈਕਟ ਕਿਵੇਂ ਬਣਾਇਆ? ਕੀ ਤੁਸੀਂ ਦੂਜੇ ਲੋਕਾਂ ਦੇ ਵਿਚਾਰ, ਸਕ੍ਰਿਪਟਾਂ ਜਾਂ ਕਲਾਕਾਰੀ ਵਰਤੀ? ਇੱਥੇ ਉਹਨਾਂ ਦਾ ਧੰਨਵਾਦ ਕਰੋ।</string>
+    <string formatted="false" name="upload_tag_dialog_title">ਕਿਰਪਾ ਕਰਕੇ ਵੱਧ ਤੋਂ ਵੱਧ ਤਿੰਨ ਸ਼੍ਰੇਣੀਆਂ ਚੁਣੋ</string>
+    <string formatted="false" name="upload_tags_maximum_error">3 ਤੋਂ ਵੱਧ ਟੈਗ ਚੁਣਨਾ ਸੰਭਵ ਨਹੀਂ ਹੈ।</string>
+    <!-- Save Project to External Storage -->
+    <string formatted="false" name="save_to_external_storage_button">ਪ੍ਰੋਜੈਕਟ ਐਕਸਪੋਰਟ ਕਰੋ</string>
+    <string formatted="false" name="notification_save_project_to_external_storage_title_pending">" "</string>
+    <string formatted="false" name="notification_save_project_to_external_storage_pending">ਪ੍ਰੋਜੈਕਟ ਬਾਹਰੀ ਸਟੋਰੇਜ ਵਿੱਚ ਸੇਵ ਹੋ ਰਿਹਾ ਹੈ।</string>
+    <string formatted="false" name="notification_save_project_to_external_storage_title_open">" "</string>
+    <string formatted="false" name="notification_save_project_to_external_storage_open">"ਪ੍ਰੋਜੈਕਟ %1$s ਵਿੱਚ ਸੇਵ ਹੋ ਗਿਆ"</string>
+    <string formatted="false" name="save_project_to_external_storage_io_exception_message">ਪ੍ਰੋਜੈਕਟ ਸੇਵ ਨਹੀਂ ਹੋ ਸਕਿਆ, ਲੋੜੀਂਦੀ ਮੈਮਰੀ ਉਪਲਬਧ ਨਹੀਂ ਹੈ!</string>
+    <!--  -->
+    <!-- SoundRecorderActivity -->
+    <string formatted="false" name="soundrecorder_name">ਆਵਾਜ਼ ਰਿਕਾਰਡਰ</string>
+    <string formatted="false" name="soundrecorder_error">ਆਵਾਜ਼ ਰਿਕਾਰਡ ਨਹੀਂ ਹੋ ਸਕੀ</string>
+    <string formatted="false" name="soundrecorder_recorded_filename">ਰਿਕਾਰਡਿੰਗ</string>
+    <string formatted="false" name="soundrecorder_text_view">ਰਿਕਾਰਡਿੰਗ ਸ਼ੁਰੂ ਕਰਨ ਅਤੇ ਰੋਕਣ ਲਈ ਉੱਪਰ ਦਿੱਤਾ ਆਈਕਾਨ ਦਬਾਓ।</string>
+    <!--  -->
+    <!-- Brick context dialog -->
+    <string formatted="false" name="brick_context_dialog_move_brick">ਬਲਾਕ ਹਿਲਾਓ</string>
+    <string formatted="false" name="brick_context_dialog_move_script">ਸਕ੍ਰਿਪਟ ਹਿਲਾਓ</string>
+    <string formatted="false" name="brick_context_dialog_move_definition">ਇਹ ਪਰਿਭਾਸ਼ਾ ਹਿਲਾਓ</string>
+    <string formatted="false" name="brick_context_dialog_delete_brick">ਬਲਾਕ ਮਿਟਾਓ</string>
+    <string formatted="false" name="brick_context_dialog_copy_brick">ਬਲਾਕ ਕਾਪੀ ਕਰੋ</string>
+    <string formatted="false" name="brick_context_dialog_copy_script">ਸਕ੍ਰਿਪਟ ਕਾਪੀ ਕਰੋ</string>
+    <string formatted="false" name="brick_context_dialog_formula_edit_brick">ਫ਼ਾਰਮੂਲਾ ਸੋਧੋ</string>
+    <string formatted="false" name="brick_context_dialog_delete_script">ਸਕ੍ਰਿਪਟ ਮਿਟਾਓ</string>
+    <string formatted="false" name="brick_context_dialog_delete_definition">ਇਹ ਪਰਿਭਾਸ਼ਾ ਮਿਟਾਓ</string>
+    <string formatted="false" name="brick_context_dialog_comment_in">ਬਲਾਕ ਚਾਲੂ ਕਰੋ</string>
+    <string formatted="false" name="brick_context_dialog_comment_out">ਬਲਾਕ ਬੰਦ ਕਰੋ</string>
+    <string formatted="false" name="brick_context_dialog_highlight_brick_parts">ਬਲਾਕ ਦੇ ਹਿੱਸੇ ਉਜਾਗਰ ਕਰੋ</string>
+    <string formatted="false" name="brick_context_dialog_comment_in_script">ਸਕ੍ਰਿਪਟ ਚਾਲੂ ਕਰੋ</string>
+    <string formatted="false" name="brick_context_dialog_comment_out_script">ਸਕ੍ਰਿਪਟ ਬੰਦ ਕਰੋ</string>
+    <string formatted="false" name="brick_context_dialog_help">ਮਦਦ</string>
+    <string formatted="false" name="comment_in_out">ਬੰਦ/ਚਾਲੂ ਕਰੋ</string>
+    <!--  -->
+    <!-- Play scene dialog -->
+    <string formatted="false" name="play_scene_dialog_title">ਦ੍ਰਿਸ਼ ਚਲਾਓ:</string>
+    <string formatted="false" name="play_scene_dialog_default">ਪਹਿਲਾ ਦ੍ਰਿਸ਼ (%1$s)</string>
+    <string formatted="false" name="play_scene_dialog_current">ਮੌਜੂਦਾ ਦ੍ਰਿਸ਼ (%1$s)</string>
+    <!--  -->
+    <!-- Sign In dialogs -->
+    <string formatted="false" name="sign_in_dialog_title">ਸਾਈਨ ਇਨ</string>
+    <string formatted="false" name="username">ਵਰਤੋਂਕਾਰ ਨਾਮ</string>
+    <string formatted="false" name="password">ਪਾਸਵਰਡ</string>
+    <string formatted="false" name="reset_password">ਪਾਸਵਰਡ ਰੀਸੈਟ ਕਰੋ</string>
+    <string formatted="false" name="new_user_registered">ਨਵਾਂ ਖਾਤਾ ਬਣ ਗਿਆ</string>
+    <string formatted="false" name="user_logged_in">ਲੌਗ ਇਨ ਹੋ ਗਿਆ</string>
+    <string formatted="false" name="register_error">ਲੌਗ ਇਨ ਜਾਣਕਾਰੀ ਗ਼ਲਤ ਹੈ</string>
+    <string formatted="false" name="register_terms">ਰਜਿਸਟਰ ਕਰਕੇ ਤੁਸੀਂ ਇਹਨਾਂ ਨਾਲ ਸਹਿਮਤ ਹੁੰਦੇ ਹੋ:</string>
+    <string formatted="false" name="register_code_terms_of_use_text">ਵਰਤੋਂ ਅਤੇ ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ</string>
+    <string formatted="false" name="login">ਲੌਗ ਇਨ</string>
+    <string formatted="false" name="register">ਰਜਿਸਟਰ ਕਰੋ</string>
+    <string formatted="false" name="password_confirm">ਪਾਸਵਰਡ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ</string>
+    <string formatted="false" name="accountName">ਈ-ਮੇਲ</string>
+    <string formatted="false" name="signin_thanks">ਸਾਈਨ ਅੱਪ ਕਰਨ ਲਈ ਤੁਹਾਡਾ ਧੰਨਵਾਦ!</string>
+    <string formatted="false" name="signin_choose_username">ਕਿਰਪਾ ਕਰਕੇ ਆਪਣਾ ਵਰਤੋਂਕਾਰ ਨਾਮ ਚੁਣੋ:</string>
+    <string formatted="false" name="signin_choose_username_empty">ਕਿਰਪਾ ਕਰਕੇ ਵਰਤੋਂਕਾਰ ਨਾਮ ਲਿਖੋ।</string>
+    <string formatted="false" name="signin_choose_username_hint">ਵਰਤੋਂਕਾਰ ਨਾਮ ਤੁਹਾਡਾ ਅਸਲੀ ਨਾਮ ਨਹੀਂ ਹੋਣਾ ਚਾਹੀਦਾ ਅਤੇ ਨਾ ਹੀ ਕੋਈ ਈ-ਮੇਲ ਪਤਾ।</string>
+    <string formatted="false" name="oauth_username_taken">ਇਹ ਨਾਮ ਪਹਿਲਾਂ ਹੀ ਕੋਈ ਹੋਰ ਵਰਤ ਰਿਹਾ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਕੋਈ ਹੋਰ ਨਾਮ ਚੁਣੋ!</string>
+    <string formatted="false" name="show_password">ਪਾਸਵਰਡ ਦਿਖਾਓ</string>
+    <string formatted="false" name="sign_in_error">ਸਾਈਨ ਇਨ ਦੌਰਾਨ ਕੁਝ ਗ਼ਲਤ ਹੋ ਗਿਆ।</string>
+    <string formatted="false" name="error_google_plus_sign_in">Google ਸਾਈਨ ਇਨ ਗ਼ਲਤੀ। ਸਥਿਤੀ: %s</string>
+    <string formatted="false" name="error_session_expired">ਸੈਸ਼ਨ ਦੀ ਮਿਆਦ ਖ਼ਤਮ ਹੋ ਗਈ, ਕਿਰਪਾ ਕਰਕੇ ਲੌਗ ਇਨ ਕਰੋ।</string>
+    <string formatted="false" name="error_register_empty_username">ਵਰਤੋਂਕਾਰ ਨਾਮ ਖਾਲੀ ਹੈ</string>
+    <string formatted="false" name="error_register_username_as_email">ਈ-ਮੇਲ ਪਤਾ ਵਰਤੋਂਕਾਰ ਨਾਮ ਵਜੋਂ ਨਹੀਂ ਵਰਤਿਆ ਜਾ ਸਕਦਾ</string>
+    <string formatted="false" name="error_register_invalid_username">ਵਰਤੋਂਕਾਰ ਨਾਮ ਵਿੱਚ ਸਿਰਫ਼ ਅੱਖਰ (a–z), ਅੰਕ (0–9), ਡੈਸ਼ (-), ਅੰਡਰਸਕੋਰ (_) ਅਤੇ ਬਿੰਦੂ (.) ਹੋਣੇ ਚਾਹੀਦੇ ਹਨ।</string>
+    <string formatted="false" name="error_register_username_start_with">ਵਰਤੋਂਕਾਰ ਨਾਮ ਡੈਸ਼ (-), ਅੰਡਰਸਕੋਰ (_) ਜਾਂ ਬਿੰਦੂ (.) ਨਾਲ ਸ਼ੁਰੂ ਨਹੀਂ ਹੋਣਾ ਚਾਹੀਦਾ।</string>
+    <string formatted="false" name="error_register_invalid_email_format">ਈ-ਮੇਲ ਦਾ ਫ਼ਾਰਮੈਟ ਗ਼ਲਤ ਹੈ</string>
+    <string formatted="false" name="error_register_empty_password">ਪਾਸਵਰਡ ਖੇਤਰ ਖਾਲੀ ਹੈ</string>
+    <string formatted="false" name="error_register_password_at_least_6_characters">ਪਾਸਵਰਡ ਘੱਟੋ-ਘੱਟ 6 ਅੱਖਰਾਂ ਦਾ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ</string>
+    <string formatted="false" name="error_register_passwords_mismatch">ਪਾਸਵਰਡ ਮੇਲ ਨਹੀਂ ਖਾਂਦੇ</string>
+    <string formatted="false" name="error_register_empty_confirm_password">ਪਾਸਵਰਡ ਪੁਸ਼ਟੀ ਖੇਤਰ ਖਾਲੀ ਹੈ</string>
+    <string formatted="false" name="error_register_username_already_exists">ਇਹ ਵਰਤੋਂਕਾਰ ਨਾਮ ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ</string>
+    <string formatted="false" name="error_register_email_exists">ਇਹ ਈ-ਮੇਲ ਪਤਾ ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ</string>
+    <!--  -->
+    <!-- OverwriteRenameDialog Strings -->
+    <string formatted="false" name="overwrite_title">ਪ੍ਰੋਜੈਕਟ ਮੌਜੂਦ ਹੈ।</string>
+    <string formatted="false" name="overwrite_text">ਇਸ ਨਾਮ ਦਾ ਪ੍ਰੋਜੈਕਟ ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ।</string>
+    <string formatted="false" name="overwrite_replace">ਪ੍ਰੋਜੈਕਟ ਓਵਰਰਾਈਟ ਕਰੋ</string>
+    <string formatted="false" name="overwrite_rename">ਨਵਾਂ ਨਾਮ ਚੁਣੋ</string>
+    <!--  -->
+    <!-- Music activity -->
+    <string formatted="false" name="pocket_music_default_project_name">ਬਿਨਾਂ ਸਿਰਲੇਖ ਗੀਤ</string>
+    <string formatted="false" name="pocket_music_default_track_name">ਟਰੈਕ 1</string>
+    <!--  -->
+    <!-- Resource initialization fka PrestageActivity -->
+    <string formatted="false" name="prestage_text_to_speech_engine_not_installed">ਟੈਕਸਟ-ਤੋਂ-ਬੋਲੀ ਇੰਜਣ ਇੰਸਟਾਲ ਨਹੀਂ ਹੈ!\nਕੀ ਤੁਸੀਂ ਇਸ ਨੂੰ ਇੰਸਟਾਲ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
+    <string formatted="false" name="prestage_resource_not_available_title">ਹਿੱਸਾ ਉਪਲਬਧ ਨਹੀਂ ਹੈ</string>
+    <string formatted="false" name="prestage_resource_not_available_text">ਅਫ਼ਸੋਸ, ਇਹ ਪ੍ਰੋਜੈਕਟ ਤੁਹਾਡੀ ਡਿਵਾਈਸ \'ਤੇ ਕੰਮ ਨਹੀਂ ਕਰਦਾ। ਇਹ ਹਿੱਸੇ ਉਪਲਬਧ ਨਹੀਂ ਹਨ:\n\n</string>
+    <string formatted="false" name="prestage_no_vibration_available">\u2022 ਵਾਈਬ੍ਰੇਸ਼ਨ\n</string>
+    <string formatted="false" name="prestage_no_acceleration_sensor_available">\u2022 ਐਕਸੀਲਰੇਸ਼ਨ ਸੈਂਸਰ\n</string>
+    <string formatted="false" name="prestage_no_inclination_sensor_available">\u2022 ਝੁਕਾਅ ਸੈਂਸਰ\n</string>
+    <string formatted="false" name="prestage_no_compass_sensor_available">\u2022 ਕੰਪਾਸ\n</string>
+    <string formatted="false" name="prestage_no_gps_sensor_available">\u2022 ਭੂਗੋਲਿਕ ਟਿਕਾਣਾ\n</string>
+    <string formatted="false" name="prestage_text_to_speech_error">\u2022 ਟੈਕਸਟ-ਤੋਂ-ਬੋਲੀ ਇੰਜਣ\n</string>
+    <string formatted="false" name="prestage_no_back_camera_available">\u2022 ਪਿਛਲਾ ਕੈਮਰਾ\n</string>
+    <string formatted="false" name="prestage_no_face_detection_available">\u2022 ਚਿਹਰੇ ਦੀ ਪਛਾਣ\n</string>
+    <string formatted="false" name="prestage_no_object_detection_available">\u2022 ਚੀਜ਼ਾਂ ਦੀ ਪਛਾਣ\n</string>
+    <string formatted="false" name="prestage_no_pose_detection_available">\u2022 ਸਰੀਰਕ ਮੁਦਰਾ ਦੀ ਪਛਾਣ\n</string>
+    <string formatted="false" name="prestage_no_text_detection_available">\u2022 ਟੈਕਸਟ ਦੀ ਪਛਾਣ\n</string>
+    <string formatted="false" name="prestage_no_front_camera_available">\u2022 ਅਗਲਾ ਕੈਮਰਾ\n</string>
+    <string formatted="false" name="prestage_no_camera_available">\u2022 ਕੈਮਰਾ\n</string>
+    <string formatted="false" name="prestage_no_flash_available">\u2022 ਫ਼ਲੈਸ਼ਲਾਈਟ\n</string>
+    <string formatted="false" name="prestage_default_resource_not_available">\u2022 ਅਣਜਾਣ ਹਿੱਸਾ\n</string>
+    <string formatted="false" name="no_nfc_available">NFC ਉਪਲਬਧ ਨਹੀਂ ਹੈ</string>
+    <string formatted="false" name="nfc_not_activated">ਕਿਰਪਾ ਕਰਕੇ NFC ਚਾਲੂ ਕਰੋ ਅਤੇ ਐਪ \'ਤੇ ਵਾਪਸ ਆਉਣ ਲਈ \'ਵਾਪਸ\' ਦਬਾਓ।</string>
+    <string formatted="false" name="nfc_facedetection_support">NFC ਅਤੇ ਚਿਹਰੇ ਦੀ ਪਛਾਣ ਇੱਕੋ ਸਮੇਂ ਵਰਤਣ ਨਾਲ ਐਪ ਹੌਲੀ ਹੋ ਸਕਦੀ ਹੈ।</string>
+    <!--  -->
+    <!-- Stage menu dialog -->
+    <string formatted="false" name="stage_dialog_back">ਵਾਪਸ</string>
+    <string formatted="false" name="stage_dialog_resume">ਜਾਰੀ ਰੱਖੋ</string>
+    <string formatted="false" name="stage_dialog_restart">ਮੁੜ ਸ਼ੁਰੂ ਕਰੋ</string>
+    <string formatted="false" name="stage_dialog_axes_on">ਧੁਰੇ ਦਿਖਾਓ</string>
+    <string formatted="false" name="stage_dialog_axes_off">ਧੁਰੇ ਲੁਕਾਓ</string>
+    <string formatted="false" name="stage_dialog_maximize">ਵੱਡਾ ਕਰੋ/\nਖਿੱਚੋ</string>
+    <string formatted="false" name="stage_dialog_screenshot">ਝਲਕ</string>
+    <string formatted="false" name="stage_dialog_embroidery">ਕਢਾਈ</string>
+    <!--  -->
+    <!-- Broadcast spinner -->
+    <string formatted="false" name="dialog_new_broadcast_message_title">ਨਵਾਂ ਸੁਨੇਹਾ</string>
+    <string formatted="false" name="dialog_broadcast_message_name">ਸੁਨੇਹਾ:</string>
+    <string formatted="false" name="dialog_edit_broadcast_message_title">ਸੁਨੇਹਾ ਸੋਧੋ</string>
+    <!--  -->
+    <!-- NFC spinner -->
+    <string formatted="false" name="brick_when_nfc_edit_list_of_nfc_tags">NFC ਟੈਗਾਂ ਦੀ ਸੂਚੀ ਸੋਧੋ</string>
+    <string formatted="false" name="brick_when_nfc_default_all">ਸਾਰੇ</string>
+    <!-- -->
+    <!-- Brick categories -->
+    <string formatted="false" name="categories">ਸ਼੍ਰੇਣੀਆਂ</string>
+    <string formatted="false" name="category_embroidery">ਕਢਾਈ</string>
+    <string formatted="false" name="category_motion">ਗਤੀ</string>
+    <string formatted="false" name="category_looks">ਦਿੱਖ</string>
+    <string formatted="false" name="category_pen">ਪੈੱਨ</string>
+    <string formatted="false" name="category_plot">ਪਲਾਟ</string>
+    <string formatted="false" name="category_laser">ਲੇਜ਼ਰ ਕਟਰ</string>
+    <string formatted="false" name="category_sound">ਆਵਾਜ਼</string>
+    <string formatted="false" name="category_control">ਕੰਟਰੋਲ</string>
+    <string formatted="false" name="category_event">ਘਟਨਾਵਾਂ</string>
+    <string formatted="false" name="category_user_bricks">ਤੁਹਾਡੇ ਬਲਾਕ</string>
+    <string formatted="false" name="category_data">ਡਾਟਾ</string>
+    <string formatted="false" name="category_device">ਡਿਵਾਈਸ</string>
+    <string formatted="false" name="category_lego_nxt">Lego NXT</string>
+    <string formatted="false" name="category_lego_ev3">Lego EV3</string>
+    <string formatted="false" name="category_drone">AR.Drone 2.0</string>
+    <string formatted="false" name="category_jumping_sumo">Jumping Sumo</string>
+    <string formatted="false" name="category_phiro">Phiro</string>
+    <string formatted="false" name="category_arduino">Arduino</string>
+    <string formatted="false" name="category_cast">Chromecast</string>
+    <string formatted="false" name="category_raspi">Raspberry Pi</string>
+    <string formatted="false" name="category_assertions">ਟੈਸਟਿੰਗ</string>
+    <string formatted="false" name="category_search_bricks">ਬਲਾਕ ਖੋਜੋ</string>
+    <!--  -->
+    <!-- User Defined Bricks -->
+    <string formatted="false" name="brick_user_defined_add_label">ਲੇਬਲ ਜੋੜੋ</string>
+    <string formatted="false" name="brick_user_defined_add_input">ਇਨਪੁੱਟ ਜੋੜੋ</string>
+    <string formatted="false" name="brick_user_defined_add_input_description">ਇਸ ਬਲਾਕ ਲਈ ਇਨਪੁੱਟ ਜੋੜੋ:</string>
+    <string formatted="false" name="brick_user_defined_add_label_description">ਇਸ ਬਲਾਕ ਲਈ ਲੇਬਲ ਜੋੜੋ:</string>
+    <string formatted="false" name="brick_user_defined_default_input_name">ਇਨਪੁੱਟ ਦਾ ਨਾਮ</string>
+    <string formatted="false" name="brick_user_defined_default_label">ਲੇਬਲ ਟੈਕਸਟ</string>
+    <string formatted="false" name="brick_user_defined_already_exists">ਇਹਨਾਂ ਲੇਬਲਾਂ ਵਾਲਾ ਬਲਾਕ ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਹੋਰ ਲੇਬਲ ਜਾਂ ਇਨਪੁੱਟ ਜੋੜੋ।</string>
+    <string formatted="false" name="brick_user_defined_script_define">ਪਰਿਭਾਸ਼ਿਤ ਕਰੋ</string>
+    <string formatted="false" name="brick_user_defined_script_screen_refresh_as">ਸਕ੍ਰੀਨ ਰਿਫ੍ਰੈਸ਼</string>
+    <string formatted="false" name="brick_user_defined_with_screen_refreshing">ਨਾਲ</string>
+    <string formatted="false" name="brick_user_defined_without_screen_refreshing">ਬਿਨਾਂ</string>
+    <string formatted="false" name="brick_user_defined_list_empty">ਆਪਣੇ ਨਵੇਂ ਬਲਾਕ ਜੋੜਨ ਲਈ \"+\" ਦਬਾਓ।</string>
+    <string formatted="false" name="brick_report">ਰਿਪੋਰਟ ਕਰੋ</string>
+    <!--  -->
+    <!-- Motion bricks -->
+    <string formatted="false" name="brick_place_at">"ਇੱਥੇ ਰੱਖੋ:"</string>
+    <string formatted="false" name="brick_option_place_visually">ਦੇਖ ਕੇ ਰੱਖੋ</string>
+    <string formatted="false" name="x_label">"x:"</string>
+    <string formatted="false" name="y_label">"y:"</string>
+    <string formatted="false" name="brick_set_x">"x ਨੂੰ ਇਸ \'ਤੇ ਸੈੱਟ ਕਰੋ:"</string>
+    <string formatted="false" name="brick_set_y">"y ਨੂੰ ਇਸ \'ਤੇ ਸੈੱਟ ਕਰੋ:"</string>
+    <string formatted="false" name="brick_change_x_by">"x ਨੂੰ ਇੰਨਾ ਬਦਲੋ:"</string>
+    <string formatted="false" name="brick_change_y_by">"y ਨੂੰ ਇੰਨਾ ਬਦਲੋ:"</string>
+    <string formatted="false" name="brick_go_back">ਪਿੱਛੇ ਜਾਓ:</string>
+    <string formatted="false" name="brick_set_rotation_style">"ਘੁੰਮਣ ਦਾ ਢੰਗ ਸੈੱਟ ਕਰੋ:"</string>
+    <string formatted="false" name="brick_set_rotation_style_lr">ਸਿਰਫ਼ ਖੱਬੇ-ਸੱਜੇ</string>
+    <string formatted="false" name="brick_set_rotation_style_normal">ਚਾਰੇ ਪਾਸੇ</string>
+    <string formatted="false" name="brick_set_rotation_style_no">ਨਾ ਘੁੰਮੋ</string>
+    <plurals name="brick_go_back_layer_plural">
+        <item quantity="one">ਪਰਤ</item>
+        <item quantity="other">ਪਰਤਾਂ</item>
+    </plurals>
+    <string formatted="false" name="brick_come_to_front">ਸਭ ਤੋਂ ਅੱਗੇ ਆਓ</string>
+    <string formatted="false" name="brick_if_on_edge_bounce">ਜੇ ਕਿਨਾਰੇ \'ਤੇ ਹੋ, ਤਾਂ ਟੱਪਾ ਖਾਓ</string>
+    <string formatted="false" name="brick_move">ਅੱਗੇ ਵਧੋ:</string>
+    <plurals name="brick_move_n_step_plural">
+        <item quantity="one">ਕਦਮ</item>
+        <item quantity="other">ਕਦਮ</item>
+    </plurals>
+    <string formatted="false" name="brick_turn_left">ਖੱਬੇ ਮੁੜੋ:</string>
+    <string formatted="false" name="brick_turn_right">ਸੱਜੇ ਮੁੜੋ:</string>
+    <string formatted="false" name="brick_point_in_direction">ਇਸ ਦਿਸ਼ਾ ਵੱਲ ਮੂੰਹ ਕਰੋ:</string>
+    <string formatted="false" name="brick_point_to">ਇਸ ਵੱਲ ਮੂੰਹ ਕਰੋ:</string>
+    <string formatted="false" name="brick_glide">ਖਿਸਕੋ:</string>
+    <string formatted="false" name="brick_glide_to_x">ਇੱਥੇ ਤੱਕ, x:</string>
+    <string formatted="false" name="brick_go_to">ਇੱਥੇ ਜਾਓ:</string>
+    <string formatted="false" name="brick_go_to_touch_position">ਛੂਹਣ ਵਾਲੀ ਥਾਂ</string>
+    <string formatted="false" name="brick_go_to_random_position">ਬੇਤਰਤੀਬ ਥਾਂ</string>
+    <!--  -->
+    <!-- Physics -->
+    <string formatted="false" name="brick_set_physics_object_type">ਆਪਣੀ ਗਤੀ ਦੀ ਕਿਸਮ ਇਹ ਰੱਖੋ:</string>
+    <string formatted="false" name="brick_set_physics_object_type_dynamic">ਗੁਰੂਤਾ ਹੇਠ ਹਿੱਲਣਾ ਅਤੇ ਟੱਪੇ ਖਾਣਾ</string>
+    <string formatted="false" name="brick_set_physics_object_type_fixed">ਗੁਰੂਤਾ ਹੇਠ ਨਾ ਹਿੱਲਣਾ, ਪਰ ਦੂਜੇ ਗੁਰੂਤਾ ਹੇਠ ਤੁਹਾਡੇ ਨਾਲ ਟਕਰਾ ਕੇ ਟੱਪਾ ਖਾਂਦੇ ਹਨ</string>
+    <string formatted="false" name="brick_set_physics_object_type_no">ਗੁਰੂਤਾ ਹੇਠ ਨਾ ਹਿੱਲਣਾ ਅਤੇ ਨਾ ਟੱਪਾ ਖਾਣਾ (ਡਿਫ਼ਾਲਟ)</string>
+    <string formatted="false" name="brick_set_mass">"ਪੁੰਜ ਨੂੰ ਇਸ \'ਤੇ ਸੈੱਟ ਕਰੋ:"</string>
+    <string formatted="false" name="brick_set_mass_unit">ਕਿਲੋਗ੍ਰਾਮ</string>
+    <string formatted="false" name="brick_set_gravity_to">"ਸਾਰੇ ਪਾਤਰਾਂ ਅਤੇ ਵਸਤੂਆਂ ਲਈ ਗੁਰੂਤਾ ਇਸ \'ਤੇ ਸੈੱਟ ਕਰੋ:"</string>
+    <string formatted="false" name="brick_set_gravity_unit">ਕਦਮ/ਸਕਿੰਟ²</string>
+    <string formatted="false" name="brick_set_velocity_to">"ਵੇਗ ਨੂੰ ਇਸ \'ਤੇ ਸੈੱਟ ਕਰੋ:"</string>
+    <string formatted="false" name="brick_set_velocity_unit">ਕਦਮ/ਸਕਿੰਟ</string>
+    <string formatted="false" name="brick_turn_speed_unit">ਡਿਗਰੀ/ਸਕਿੰਟ</string>
+    <string formatted="false" name="brick_set_friction">"ਰਗੜ ਨੂੰ ਇਸ \'ਤੇ ਸੈੱਟ ਕਰੋ:"</string>
+    <string formatted="false" name="brick_set_bounce_factor">"ਉਛਾਲ ਗੁਣਾਂਕ ਨੂੰ ਇਸ \'ਤੇ ਸੈੱਟ ਕਰੋ:"</string>
+    <string formatted="false" name="brick_rotate_left">"ਖੱਬੇ ਘੁੰਮੋ:"</string>
+    <string formatted="false" name="brick_rotate_right">"ਸੱਜੇ ਘੁੰਮੋ:"</string>
+    <!-- Look bricks -->
+    <string formatted="false" name="brick_set_look">ਇਸ ਦਿੱਖ \'ਤੇ ਜਾਓ:</string>
+    <string formatted="false" name="brick_set_look_by_index">ਇਸ ਨੰਬਰ ਵਾਲੀ ਦਿੱਖ \'ਤੇ ਜਾਓ:</string>
+    <string formatted="false" name="brick_and_wait">ਅਤੇ ਉਡੀਕ ਕਰੋ</string>
+    <string formatted="false" name="brick_set_background">ਪਿਛੋਕੜ ਸੈੱਟ ਕਰੋ:</string>
+    <string formatted="false" name="brick_set_background_and_wait">ਪਿਛੋਕੜ ਸੈੱਟ ਕਰੋ ਅਤੇ ਉਡੀਕ ਕਰੋ:</string>
+    <string formatted="false" name="brick_set_background_by_index">ਇਸ ਨੰਬਰ ਵਾਲਾ ਪਿਛੋਕੜ ਸੈੱਟ ਕਰੋ:</string>
+    <string formatted="false" name="brick_when_background">ਜਦੋਂ ਪਿਛੋਕੜ ਇਸ ਵਿੱਚ ਬਦਲੇ:</string>
+    <string formatted="false" name="brick_set_size_to">ਆਕਾਰ ਨੂੰ ਇਸ \'ਤੇ ਸੈੱਟ ਕਰੋ:</string>
+    <string formatted="false" name="brick_change_size_by">ਆਕਾਰ ਨੂੰ ਇੰਨਾ ਬਦਲੋ:</string>
+    <string formatted="false" name="brick_hide">ਲੁਕਾਓ</string>
+    <string formatted="false" name="brick_show">ਦਿਖਾਓ</string>
+    <string formatted="false" name="brick_set_transparency">"ਪਾਰਦਰਸ਼ਤਾ"</string>
+    <string formatted="false" name="brick_change_ghost_effect">"ਪਾਰਦਰਸ਼ਤਾ"</string>
+    <string formatted="false" name="brick_set_brightness">"ਚਮਕ"</string>
+    <string formatted="false" name="brick_change_brightness">"ਚਮਕ"</string>
+    <string formatted="false" name="brick_set_color">"ਰੰਗ"</string>
+    <string formatted="false" name="brick_change_color">"ਰੰਗ"</string>
+    <string formatted="false" name="by_label">ਨੂੰ ਇੰਨਾ ਬਦਲੋ:</string>
+    <string formatted="false" name="to_label">ਨੂੰ ਇਸ \'ਤੇ ਸੈੱਟ ਕਰੋ:</string>
+    <string formatted="false" name="brick_clear_graphic_effect">ਗ੍ਰਾਫ਼ਿਕ ਪ੍ਰਭਾਵ ਹਟਾਓ</string>
+    <string formatted="false" name="brick_next_look">ਅਗਲੀ ਦਿੱਖ</string>
+    <string formatted="false" name="brick_next_background">ਅਗਲਾ ਪਿਛੋਕੜ</string>
+    <string formatted="false" name="brick_previous_look">ਪਿਛਲੀ ਦਿੱਖ</string>
+    <string formatted="false" name="brick_previous_background">ਪਿਛਲਾ ਪਿਛੋਕੜ</string>
+    <string formatted="false" name="brick_edit_look">ਦਿੱਖ ਸੋਧੋ</string>
+    <string formatted="false" name="brick_edit_background">ਪਿਛੋਕੜ ਸੋਧੋ</string>
+    <string formatted="false" name="brick_delete_look">ਦਿੱਖ ਮਿਟਾਓ</string>
+    <string formatted="false" name="brick_delete_background">ਪਿਛੋਕੜ ਮਿਟਾਓ</string>
+    <string formatted="false" name="brick_flash">ਫ਼ਲੈਸ਼ਲਾਈਟ ਚਾਲੂ/ਬੰਦ ਕਰੋ:</string>
+    <string formatted="false" name="brick_flash_on">ਚਾਲੂ</string>
+    <string formatted="false" name="brick_flash_off">ਬੰਦ</string>
+    <string formatted="false" name="brick_vibration">ਵਾਈਬ੍ਰੇਟ ਕਰੋ:</string>
+    <string formatted="false" name="brick_ask_label">ਪੁੱਛੋ:</string>
+    <string formatted="false" name="brick_ask_store">ਅਤੇ ਲਿਖਿਆ ਜਵਾਬ ਇਸ ਵਿੱਚ ਰੱਖੋ:</string>
+    <string formatted="false" name="brick_ask_default_question">ਤੁਹਾਡਾ ਨਾਮ ਕੀ ਹੈ?</string>
+    <string formatted="false" name="brick_ask_dialog_hint">"ਆਪਣਾ ਜਵਾਬ ਲਿਖੋ:"</string>
+    <string formatted="false" name="brick_ask_dialog_submit">ਜਵਾਬ ਭੇਜੋ</string>
+    <string formatted="false" name="brick_ask_speech_label">ਪੁੱਛੋ:</string>
+    <string formatted="false" name="brick_ask_speech_store">ਅਤੇ ਬੋਲਿਆ ਜਵਾਬ ਇਸ ਵਿੱਚ ਰੱਖੋ:</string>
+    <string formatted="false" name="brick_ask_speech_default_question">ਤੁਹਾਡਾ ਨਾਮ ਕੀ ਹੈ?</string>
+    <string formatted="false" name="brick_paint_new_look">ਨਵੀਂ ਦਿੱਖ ਬਣਾਓ</string>
+    <string formatted="false" name="brick_paint_new_background">ਨਵਾਂ ਪਿਛੋਕੜ ਬਣਾਓ</string>
+    <string formatted="false" name="brick_paint_new_look_name">"ਨਵੀਂ ਦਿੱਖ ਦਾ ਨਾਮ"</string>
+    <string formatted="false" name="brick_copy_look">ਦਿੱਖ ਕਾਪੀ ਕਰੋ ਅਤੇ ਇਹ ਨਾਮ ਦਿਓ:</string>
+    <string formatted="false" name="brick_copy_look_name">ਕਾਪੀ ਕੀਤੀ ਦਿੱਖ ਦਾ ਨਾਮ</string>
+    <string formatted="false" name="brick_copy_background">ਪਿਛੋਕੜ ਕਾਪੀ ਕਰੋ ਅਤੇ ਇਹ ਨਾਮ ਦਿਓ:</string>
+    <string formatted="false" name="brick_focus_point">ਫੋਕਸ ਬਿੰਦੂ ਬਣੋ, ਇੰਨੀ</string>
+    <string formatted="false" name="brick_horizontal_and">ਲੇਟਵੀਂ ਅਤੇ</string>
+    <string formatted="false" name="brick_vertical_flex">ਖੜ੍ਹਵੀਂ ਲਚਕ ਨਾਲ</string>
+    <!--  -->
+    <!-- Pen bricks -->
+    <string formatted="false" name="brick_pen_down">ਪੈੱਨ ਹੇਠਾਂ</string>
+    <string formatted="false" name="brick_pen_up">ਪੈੱਨ ਉੱਪਰ</string>
+    <string formatted="false" name="brick_pen_size">ਪੈੱਨ ਦਾ ਆਕਾਰ ਇਸ \'ਤੇ ਸੈੱਟ ਕਰੋ:</string>
+    <string formatted="false" name="brick_pen_color">ਪੈੱਨ ਦਾ ਰੰਗ ਇਸ \'ਤੇ ਸੈੱਟ ਕਰੋ:</string>
+    <string formatted="false" name="brick_clear_background">ਸਾਫ਼ ਕਰੋ</string>
+    <string formatted="false" name="brick_stamp">ਛਾਪ ਲਗਾਓ</string>
+    <!--  -->
+    <!-- Sound bricks -->
+    <string formatted="false" name="brick_play_sound">ਆਵਾਜ਼ ਸ਼ੁਰੂ ਕਰੋ:</string>
+    <string formatted="false" name="brick_play_sound_and_wait">ਆਵਾਜ਼ ਸ਼ੁਰੂ ਕਰੋ ਅਤੇ ਉਡੀਕ ਕਰੋ:</string>
+    <string formatted="false" name="brick_stop_sound">ਆਵਾਜ਼ ਰੋਕੋ:</string>
+    <string formatted="false" name="brick_stop_all_sounds">ਸਾਰੀਆਂ ਆਵਾਜ਼ਾਂ ਰੋਕੋ</string>
+    <string formatted="false" name="brick_set_volume_to">ਵਾਲੀਅਮ ਨੂੰ ਇਸ \'ਤੇ ਸੈੱਟ ਕਰੋ:</string>
+    <string formatted="false" name="brick_change_volume_by">ਵਾਲੀਅਮ ਨੂੰ ਇੰਨਾ ਬਦਲੋ:</string>
+    <string formatted="false" name="brick_speak">ਬੋਲੋ:</string>
+    <string formatted="false" name="brick_speak_default_value">ਸਤ ਸ੍ਰੀ ਅਕਾਲ!</string>
+    <string formatted="false" name="brick_speak_and_wait">ਅਤੇ ਉਡੀਕ ਕਰੋ</string>
+    <string formatted="false" name="brick_start_listening_to_voice">ਆਵਾਜ਼ ਸੁਣਨਾ ਸ਼ੁਰੂ ਕਰੋ ਅਤੇ ਬੋਲੇ ਗਏ ਸ਼ਬਦ ਇਸ ਵਿੱਚ ਰੱਖੋ:</string>
+    <string formatted="false" name="speech_recognition_not_available">ਬੋਲੀ ਦੀ ਪਛਾਣ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।</string>
+    <string formatted="false" name="speech_recognition_offline_mode_error_dialog_title">ਆਫ਼ਲਾਈਨ ਡਾਟਾ ਮੌਜੂਦ ਨਹੀਂ ਹੈ</string>
+    <string formatted="false" name="speech_recognition_offline_mode_missing_data_error_dialog_msg">%s ਲਈ ਆਫ਼ਲਾਈਨ ਬੋਲੀ ਦੀ ਪਛਾਣ ਮੌਜੂਦ ਨਹੀਂ ਹੈ ਜਾਂ ਇਸ ਨੂੰ ਅੱਪਡੇਟ ਕਰਨ ਦੀ ਲੋੜ ਹੈ। ਕੀ ਤੁਸੀਂ ਇਸ ਨੂੰ ਹੁਣੇ ਡਾਊਨਲੋਡ ਜਾਂ ਅੱਪਡੇਟ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
+    <string formatted="false" name="brick_set_listening_language">ਸੁਣਨ ਦੀ ਭਾਸ਼ਾ ਇਹ ਸੈੱਟ ਕਰੋ:</string>
+    <string formatted="false" name="set_instrument_to">ਸਾਜ਼ ਇਹ ਸੈੱਟ ਕਰੋ:</string>
+    <string formatted="false" name="set_tempo_to">ਟੈਂਪੋ ਨੂੰ ਇਸ \'ਤੇ ਸੈੱਟ ਕਰੋ:</string>
+    <string formatted="false" name="change_tempo_by">ਟੈਂਪੋ ਨੂੰ ਇੰਨਾ ਬਦਲੋ:</string>
+    <string formatted="false" name="pause_for">ਰੁਕੋ:</string>
+    <string formatted="false" name="play_drum">ਢੋਲ ਵਜਾਓ:</string>
+    <string formatted="false" name="beats">ਬੀਟ</string>
+    <string formatted="false" name="play_note">ਸੁਰ ਵਜਾਓ:</string>
+    <string formatted="false" name="for_string">ਇੰਨੀ ਦੇਰ ਲਈ:</string>
+    <string formatted="false" name="at_string">ਇੱਥੋਂ:</string>
+    <string formatted="false" name="seconds_string">ਸਕਿੰਟ</string>
+    <!--  -->
+    <!-- Plot bricks -->
+    <string formatted="false" name="brick_save_plot">ਪਲਾਟ ਨੂੰ SVG ਵਜੋਂ ਸੇਵ ਕਰੋ</string>
+    <string formatted="false" name="brick_share_plot">ਪਲਾਟ ਨੂੰ SVG ਵਜੋਂ ਸਾਂਝਾ ਕਰੋ</string>
+    <string formatted="false" name="brick_stop_plot">ਪਲਾਟ ਕਰਨਾ ਬੰਦ ਕਰੋ</string>
+    <string formatted="false" name="brick_start_plot">ਪਲਾਟ ਕਰਨਾ ਸ਼ੁਰੂ ਕਰੋ</string>
+    <string formatted="false" name="brick_stop_cut">ਕੱਟਣਾ ਬੰਦ ਕਰੋ</string>
+    <string formatted="false" name="brick_start_cut">ਕੱਟਣਾ ਸ਼ੁਰੂ ਕਰੋ</string>
+    <string formatted="false" name="brick_save_laser">ਲੇਜ਼ਰ ਕਟਰ ਡਾਟਾ SVG ਵਿੱਚ ਸੇਵ ਕਰੋ</string>
+    <string formatted="false" name="brick_stop_engrave">ਉੱਕਰਨਾ ਬੰਦ ਕਰੋ</string>
+    <string formatted="false" name="brick_start_engrave">ਉੱਕਰਨਾ ਸ਼ੁਰੂ ਕਰੋ</string>
+    <string formatted="false" name="brick_default_plot_file">plot.svg</string>
+    <string formatted="false" name="brick_share">ਸਾਂਝਾ ਕਰੋ</string>
+    <string formatted="false" name="brick_share_laser">ਲੇਜ਼ਰ ਕਟਰ ਡਾਟਾ SVG ਵਜੋਂ ਸਾਂਝਾ ਕਰੋ</string>
+    <string formatted="false" name="brick_default_laser_file">laser.svg</string>
+    <!-- Embroidery bricks -->
+    <string formatted="false" name="brick_stitch">ਟਾਂਕਾ ਲਗਾਓ</string>
+    <string formatted="false" name="brick_running_stitch">ਇਸ ਲੰਬਾਈ ਨਾਲ ਕੱਚਾ ਟਾਂਕਾ ਸ਼ੁਰੂ ਕਰੋ:</string>
+    <string formatted="false" name="brick_zigzag_stitch">ਇਸ ਲੰਬਾਈ ਨਾਲ ਜ਼ਿਗਜ਼ੈਗ ਟਾਂਕਾ ਸ਼ੁਰੂ ਕਰੋ:</string>
+    <string formatted="false" name="brick_zigzag_stitch_width">ਅਤੇ ਚੌੜਾਈ:</string>
+    <string formatted="false" name="brick_triple_stitch">ਇਸ ਲੰਬਾਈ ਨਾਲ ਤੀਹਰਾ ਟਾਂਕਾ ਸ਼ੁਰੂ ਕਰੋ:</string>
+    <string formatted="false" name="brick_stop_stitch">ਮੌਜੂਦਾ ਟਾਂਕਾ ਰੋਕੋ</string>
+    <string formatted="false" name="brick_write_embroidery">ਕਢਾਈ ਡਾਟਾ ਇਸ ਫ਼ਾਈਲ ਵਿੱਚ ਲਿਖੋ:</string>
+    <string formatted="false" name="brick_default_embroidery_file">embroidery.dst</string>
+    <string formatted="false" name="brick_sew_up">ਸਿਲਾਈ ਪੱਕੀ ਕਰੋ</string>
+    <string formatted="false" name="brick_thread_color">ਧਾਗੇ ਦਾ ਰੰਗ ਇਸ \'ਤੇ ਸੈੱਟ ਕਰੋ:</string>
+    <string formatted="false" name="embroider_arc_direction">ਚਾਪ ਵਿੱਚ ਟਾਂਕੇ ਲਗਾਓ:</string>
+    <string formatted="false" name="embroidery_through">ਇਸ ਵਿੱਚੋਂ ਲੰਘਦਾ ਚਾਪ ਬਣਾਓ:</string>
+    <!--  -->
+    <!-- Device bricks -->
+    <string formatted="false" name="brick_reset_timer">ਟਾਈਮਰ ਰੀਸੈੱਟ ਕਰੋ</string>
+    <string formatted="false" name="brick_open">ਖੋਲ੍ਹੋ:</string>
+    <string formatted="false" name="brick_in_browser">ਬ੍ਰਾਊਜ਼ਰ ਵਿੱਚ</string>
+    <!-- Control bricks -->
+    <string formatted="false" name="brick_when_started">ਜਦੋਂ ਦ੍ਰਿਸ਼ ਸ਼ੁਰੂ ਹੋਵੇ</string>
+    <string formatted="false" name="brick_when">ਜਦੋਂ ਦਬਾਇਆ ਜਾਵੇ</string>
+    <string formatted="false" name="brick_when_condition_when">ਜਦੋਂ</string>
+    <string formatted="false" name="brick_when_becomes_true">ਸੱਚ ਹੋ ਜਾਵੇ</string>
+    <string formatted="false" name="brick_wait">ਉਡੀਕ ਕਰੋ:</string>
+    <string formatted="false" name="brick_wait_until">ਉਡੀਕ ਕਰੋ ਜਦੋਂ ਤੱਕ</string>
+    <string formatted="false" name="brick_wait_until_second_part">ਸੱਚ ਨਹੀਂ ਹੁੰਦਾ</string>
+    <string formatted="false" name="brick_when_gamepad_button">ਜਦੋਂ ਗੇਮਪੈਡ ਬਟਨ</string>
+    <string formatted="false" name="brick_when_gamepad_button_tapped">ਦਬਾਇਆ ਜਾਵੇ</string>
+    <string formatted="false" name="brick_when_nfc">ਜਦੋਂ ਇਹ NFC ਟੈਗ ਸਕੈਨ ਹੋਵੇ:</string>
+    <string formatted="false" name="brick_stop_script">ਰੋਕੋ:</string>
+    <string formatted="false" name="brick_stop_this_script">ਇਹ ਸਕ੍ਰਿਪਟ</string>
+    <string formatted="false" name="brick_stop_all_scripts">ਸਾਰੀਆਂ ਸਕ੍ਰਿਪਟਾਂ</string>
+    <string formatted="false" name="brick_stop_other_scripts">ਇਸ ਪਾਤਰ ਜਾਂ ਵਸਤੂ ਦੀਆਂ ਹੋਰ ਸਕ੍ਰਿਪਟਾਂ</string>
+    <plurals name="second_plural">
+        <item quantity="one">"ਸਕਿੰਟ"</item>
+        <item quantity="other">"ਸਕਿੰਟ"</item>
+    </plurals>
+    <string formatted="false" name="brick_collision_receive">ਜਦੋਂ ਤੁਸੀਂ ਇਸ ਨਾਲ ਟਕਰਾ ਕੇ ਟੱਪਾ ਖਾਓ:</string>
+    <string formatted="false" name="collision_with_anything">ਕੋਈ ਵੀ ਕਿਨਾਰਾ, ਪਾਤਰ ਜਾਂ ਵਸਤੂ</string>
+    <string formatted="false" name="brick_broadcast_receive">ਜਦੋਂ ਤੁਹਾਨੂੰ ਇਹ ਸੁਨੇਹਾ ਮਿਲੇ:</string>
+    <string formatted="false" name="brick_broadcast">ਸਾਰਿਆਂ ਨੂੰ ਸੁਨੇਹਾ ਭੇਜੋ:</string>
+    <string formatted="false" name="brick_broadcast_wait">ਸਾਰਿਆਂ ਨੂੰ ਸੁਨੇਹਾ ਭੇਜੋ ਅਤੇ ਉਡੀਕ ਕਰੋ:</string>
+    <string formatted="false" name="brick_scene_transition">ਦ੍ਰਿਸ਼ ਜਾਰੀ ਰੱਖੋ:</string>
+    <string formatted="false" name="brick_scene_start">ਦ੍ਰਿਸ਼ ਸ਼ੁਰੂ ਕਰੋ:</string>
+    <string formatted="false" name="brick_note">ਨੋਟ</string>
+    <string formatted="false" name="brick_think_bubble">ਸੋਚੋ:</string>
+    <string formatted="false" name="brick_say_bubble">ਕਹੋ:</string>
+    <string formatted="false" name="brick_think_say_for_text">ਇੰਨੀ ਦੇਰ ਲਈ:</string>
+    <string formatted="false" name="brick_forever">ਹਮੇਸ਼ਾ ਦੁਹਰਾਓ</string>
+    <string formatted="false" name="brick_loop_for_values_from">ਮੁੱਲਾਂ ਲਈ ਦੁਹਰਾਓ, ਤੋਂ:</string>
+    <string formatted="false" name="brick_loop_for_each_value_from">ਹਰ ਮੁੱਲ ਲਈ ਦੁਹਰਾਓ, ਸੂਚੀ:</string>
+    <string formatted="false" name="brick_loop_in">ਵਿੱਚ:</string>
+    <string formatted="false" name="brick_loop_to">ਤੱਕ:</string>
+    <string formatted="false" name="brick_repeat">ਦੁਹਰਾਓ:</string>
+    <string formatted="false" name="brick_repeat_until">ਦੁਹਰਾਓ ਜਦੋਂ ਤੱਕ</string>
+    <string formatted="false" name="brick_when_touched">ਜਦੋਂ ਸਟੇਜ ਨੂੰ ਦਬਾਇਆ ਜਾਵੇ</string>
+    <string formatted="false" name="brick_clone">ਇਸ ਦਾ ਕਲੋਨ ਬਣਾਓ:</string>
+    <string formatted="false" name="brick_clone_this">ਖ਼ੁਦ</string>
+    <string formatted="false" name="brick_when_cloned">ਜਦੋਂ ਤੁਸੀਂ ਕਲੋਨ ਵਜੋਂ ਸ਼ੁਰੂ ਹੋਵੋ</string>
+    <string formatted="false" name="brick_delete_this_clone">ਇਹ ਕਲੋਨ ਮਿਟਾਓ</string>
+    <string formatted="false" name="brick_assert_that">ਜਾਂਚੋ:</string>
+    <string formatted="false" name="brick_is_equal_to">ਉਮੀਦ ਕੀਤੇ ਮੁੱਲ ਦੇ ਬਰਾਬਰ ਹੈ:</string>
+    <string formatted="false" name="brick_wait_till_idle">ਉਡੀਕ ਕਰੋ ਜਦੋਂ ਤੱਕ ਬਾਕੀ ਸਾਰੀਆਂ ਸਕ੍ਰਿਪਟਾਂ ਰੁਕ ਨਾ ਜਾਣ</string>
+    <string formatted="false" name="brick_tap_at">"ਇੱਥੇ ਇੱਕ ਵਾਰ ਦਬਾਓ:"</string>
+    <string formatted="false" name="brick_touch_at">"ਇੱਥੇ ਛੂਹੋ:"</string>
+    <string formatted="false" name="brick_tap_for">"ਇੰਨੀ ਦੇਰ ਲਈ:"</string>
+    <string formatted="false" name="brick_touch_slide">"ਛੂਹ ਕੇ ਖਿਸਕਾਓ"</string>
+    <string formatted="false" name="brick_touch_from_x">"ਇੱਥੋਂ, x:"</string>
+    <string formatted="false" name="brick_finish_stage">ਸਟੇਜ ਬੰਦ ਕਰੋ</string>
+    <string formatted="false" name="brick_finish_tests">ਟੈਸਟ ਪੂਰੇ ਕਰੋ</string>
+    <string formatted="false" name="brick_assert_lists">ਸੂਚੀਆਂ ਜਾਂਚੋ</string>
+    <string formatted="false" name="brick_assert_actual">ਅਸਲ:</string>
+    <string formatted="false" name="brick_assert_expected">ਉਮੀਦ ਕੀਤਾ:</string>
+    <string formatted="false" name="brick_parameterized_assert">ਜਾਂਚੋ:</string>
+    <string formatted="false" name="brick_parameterized_equals">ਇਸ ਦੀ ਉਮੀਦ ਕੀਤੀ ਆਈਟਮ ਦੇ ਬਰਾਬਰ ਹੈ:</string>
+    <plurals name="brick_parameterized_foreach_plural">
+        <item quantity="one">ਇਸ ਦੀ ਹਰ ਆਈਟਮ ਲਈ:</item>
+        <item quantity="other">ਇਹਨਾਂ ਦੀਆਂ ਆਈਟਮਾਂ ਦੇ ਹਰ ਸਮੂਹ ਲਈ:</item>
+    </plurals>
+    <plurals name="brick_parameterized_stored_plural">
+        <item quantity="one">ਇਸੇ ਨਾਮ ਵਾਲੇ ਵੇਰੀਏਬਲ ਵਿੱਚ ਰੱਖੀ</item>
+        <item quantity="other">ਇਹਨਾਂ ਹੀ ਨਾਮਾਂ ਵਾਲੇ ਵੇਰੀਏਬਲਾਂ ਵਿੱਚ ਰੱਖੀਆਂ</item>
+    </plurals>
+    <plurals name="list_selection_plural">
+        <item quantity="one">%d ਸੂਚੀ ਚੁਣੀ ਗਈ</item>
+        <item quantity="other">%d ਸੂਚੀਆਂ ਚੁਣੀਆਂ ਗਈਆਂ</item>
+    </plurals>
+    <plurals name="time_plural">
+        <item quantity="one">ਵਾਰ</item>
+        <item quantity="other">ਵਾਰ</item>
+    </plurals>
+    <string formatted="false" name="brick_loop_end">ਲੂਪ ਦਾ ਅੰਤ</string>
+    <string formatted="false" name="brick_if_begin">ਜੇ</string>
+    <string formatted="false" name="brick_if_begin_second_part">ਸੱਚ ਹੈ, ਤਾਂ</string>
+    <string formatted="false" name="brick_if_else">ਨਹੀਂ ਤਾਂ</string>
+    <string formatted="false" name="brick_if_end">ਜੇ ਦਾ ਅੰਤ</string>
+    <string formatted="false" name="brick_set_variable">ਵੇਰੀਏਬਲ</string>
+    <string formatted="false" name="brick_change_variable">ਵੇਰੀਏਬਲ</string>
+    <string formatted="false" name="brick_write_variable_on_device">ਵੇਰੀਏਬਲ ਡਿਵਾਈਸ \'ਤੇ ਲਿਖੋ:</string>
+    <string formatted="false" name="brick_read_variable_from_device">ਵੇਰੀਏਬਲ ਡਿਵਾਈਸ ਤੋਂ ਪੜ੍ਹੋ:</string>
+    <string formatted="false" name="brick_write_variable_to_file_top">ਵੇਰੀਏਬਲ</string>
+    <string formatted="false" name="brick_write_variable_to_file_bottom">ਨੂੰ ਇਸ ਫ਼ਾਈਲ ਵਿੱਚ ਲਿਖੋ:</string>
+    <string formatted="false" name="brick_write_variable_to_file_default_value">variable.txt</string>
+    <string formatted="false" name="brick_write_variable_to_file_success">"ਡਾਟਾ %1$s ਵਿੱਚ ਲਿਖਿਆ ਗਿਆ"</string>
+    <string formatted="false" name="brick_read_variable_from_file_top">ਵੇਰੀਏਬਲ</string>
+    <string formatted="false" name="brick_read_variable_from_file_center">ਵਿੱਚ ਇਸ ਫ਼ਾਈਲ ਤੋਂ ਪੜ੍ਹੋ:</string>
+    <string formatted="false" name="brick_read_variable_from_file_bottom">ਅਤੇ</string>
+    <string formatted="false" name="brick_read_variable_from_file_keep">ਫ਼ਾਈਲ ਰੱਖੋ</string>
+    <string formatted="false" name="brick_read_variable_from_file_delete">ਫ਼ਾਈਲ ਮਿਟਾਓ</string>
+    <string formatted="false" name="brick_write_list_on_device">ਸੂਚੀ ਡਿਵਾਈਸ \'ਤੇ ਲਿਖੋ:</string>
+    <string formatted="false" name="brick_read_list_from_device">ਸੂਚੀ ਡਿਵਾਈਸ ਤੋਂ ਪੜ੍ਹੋ:</string>
+    <string formatted="false" name="brick_note_default_value">ਇੱਥੇ ਟਿੱਪਣੀ ਲਿਖੋ…</string>
+    <string formatted="false" name="brick_think_bubble_default_value">ਹੰਮਮ!</string>
+    <string formatted="false" name="brick_say_bubble_default_value">ਸਤ ਸ੍ਰੀ ਅਕਾਲ!</string>
+    <string formatted="false" name="brick_broadcast_default_value">"ਨਵਾਂ ਸੁਨੇਹਾ"</string>
+    <string formatted="false" name="brick_add_item_to_userlist_add">ਜੋੜੋ:</string>
+    <string formatted="false" name="brick_add_item_to_userlist">ਇਸ ਸੂਚੀ ਵਿੱਚ:</string>
+    <string formatted="false" name="brick_clear_userlist">ਸੂਚੀ ਦੀਆਂ ਸਾਰੀਆਂ ਆਈਟਮਾਂ ਮਿਟਾਓ:</string>
+    <string formatted="false" name="brick_delete_item_from_userlist_delete">ਸੂਚੀ ਵਿੱਚੋਂ ਆਈਟਮ ਮਿਟਾਓ:</string>
+    <string formatted="false" name="brick_delete_item_from_userlist">ਸਥਾਨ:</string>
+    <string formatted="false" name="brick_insert_item_into_userlist_insert_into">ਪਾਓ:</string>
+    <string formatted="false" name="brick_insert_item_into_userlist_into_list">ਇਸ ਸੂਚੀ ਵਿੱਚ:</string>
+    <string formatted="false" name="brick_insert_item_into_userlist_at_position">ਸਥਾਨ:</string>
+    <string formatted="false" name="brick_replace_item_in_userlist_replace_in_list">ਸੂਚੀ ਵਿੱਚ ਆਈਟਮ ਬਦਲੋ:</string>
+    <string formatted="false" name="brick_replace_item_in_userlist_item_at_index">ਸਥਾਨ:</string>
+    <string formatted="false" name="brick_replace_item_in_userlist_with_value">ਇਸ ਨਾਲ:</string>
+    <string formatted="false" name="brick_web_request">ਇਸ ਪਤੇ \'ਤੇ ਵੈੱਬ ਬੇਨਤੀ ਭੇਜੋ:</string>
+    <string formatted="false" name="brick_web_request_default_value">https://catrob.at/joke</string>
+    <string formatted="false" name="brick_web_request_result">ਅਤੇ ਜਵਾਬ ਇਸ ਵਿੱਚ ਰੱਖੋ:</string>
+    <string formatted="false" name="web_request_warning_title">ਕੀ ਵੈੱਬ ਪਹੁੰਚ ਦੀ ਇਜਾਜ਼ਤ ਦੇਣੀ ਹੈ?</string>
+    <string formatted="false" name="web_request_warning_message">ਪਹੁੰਚ ਦੀ ਇਜਾਜ਼ਤ ਦੇਣ ਤੋਂ ਪਹਿਲਾਂ ਬਹੁਤ ਸਾਵਧਾਨ ਰਹੋ, ਕਿਉਂਕਿ ਇਹ ਲਿੰਕ ਤੁਹਾਡੀ ਨਿੱਜੀ ਜਾਣਕਾਰੀ, ਜਿਵੇਂ ਤੁਹਾਡਾ ਸਹੀ ਭੂਗੋਲਿਕ ਟਿਕਾਣਾ ਜਾਂ ਤੁਹਾਡੇ ਵੱਲੋਂ ਲਿਖਿਆ ਕੋਈ ਵੀ ਟੈਕਸਟ, ਬੁਰੀ ਨੀਅਤ ਵਾਲੇ ਲੋਕਾਂ ਜਾਂ ਸਾਰਿਆਂ ਸਾਹਮਣੇ ਜ਼ਾਹਰ ਕਰ ਸਕਦਾ ਹੈ। ਇਹ ਬਹੁਤ ਖ਼ਤਰਨਾਕ ਕਿਉਂ ਹੋ ਸਕਦਾ ਹੈ, ਇਸ ਬਾਰੇ ਹੋਰ ਜਾਣਕਾਰੀ ਲਈ ਸਾਡੀ &lt;a href=%1s&gt;ਵਿਕੀ&lt;/a&gt; ਦੇਖੋ।</string>
+    <string formatted="false" name="web_request_trust_domain_warning_title">ਕੀ ਹਮੇਸ਼ਾ ਵੈੱਬ ਪਹੁੰਚ ਦੀ ਇਜਾਜ਼ਤ ਦੇਣੀ ਹੈ?</string>
+    <string formatted="false" name="web_request_trust_domain_warning_message">ਹਮੇਸ਼ਾ ਪਹੁੰਚ ਦੀ ਇਜਾਜ਼ਤ ਦੇਣ ਨਾਲ, ਤੁਹਾਨੂੰ ਇਸ ਡੋਮੇਨ ਦੇ ਵੈੱਬ ਪਤਿਆਂ ਦੀ ਪੁਸ਼ਟੀ ਕਰਨ ਲਈ ਦੁਬਾਰਾ ਨਹੀਂ ਪੁੱਛਿਆ ਜਾਵੇਗਾ।</string>
+    <string formatted="false" name="trusted_domains_edit_hint">ਜੇ ਤੁਸੀਂ ਬਾਅਦ ਵਿੱਚ ਇਹ ਇਜਾਜ਼ਤ ਵਾਪਸ ਲੈਣਾ ਚਾਹੁੰਦੇ ਹੋ, ਤਾਂ ਤੁਸੀਂ ਇਸ ਐਪ ਦੀਆਂ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਭਰੋਸੇਯੋਗ ਡੋਮੇਨਾਂ ਦੀ ਸੂਚੀ ਵਿੱਚੋਂ ਇਹ ਐਂਟਰੀ ਹਟਾ ਸਕਦੇ ਹੋ।</string>
+    <string formatted="false" name="brick_look_request">ਇਸ ਪਤੇ ਤੋਂ ਚਿੱਤਰ ਲਓ:</string>
+    <string formatted="false" name="brick_look_request_result">ਅਤੇ ਇਸ ਨੂੰ ਮੌਜੂਦਾ ਦਿੱਖ ਵਜੋਂ ਵਰਤੋ</string>
+    <string formatted="false" name="brick_background_request_result">ਅਤੇ ਇਸ ਨੂੰ ਮੌਜੂਦਾ ਪਿਛੋਕੜ ਵਜੋਂ ਵਰਤੋ</string>
+    <string formatted="false" name="look_request_http_error_message">"%1$s ਤੋਂ ਚਿੱਤਰ ਲੈਂਦੇ ਸਮੇਂ HTTP ਗ਼ਲਤੀ %2$s ਮਿਲੀ"</string>
+    <string formatted="false" name="look_request_type_error_message">"%1$s ਤੋਂ ਕਿਸੇ ਪਛਾਣੇ ਜਾਣ ਵਾਲੇ ਫ਼ਾਰਮੈਟ ਦਾ ਚਿੱਤਰ ਨਹੀਂ ਮਿਲ ਸਕਿਆ"</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_store">ਕਾਲਮ</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_of">ਨੂੰ</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_csv">ਇਹਨਾਂ ਕਾਮੇ ਨਾਲ ਵੱਖ ਕੀਤੇ ਮੁੱਲਾਂ ਵਿੱਚੋਂ</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_into">ਇਸ ਸੂਚੀ ਵਿੱਚ ਰੱਖੋ:</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_data">ਬਿੱਲੀ,ਪਿਆਰੀ\nਕਤੂਰਾ,ਸ਼ਰਾਰਤੀ\nਆਕਟੋਪਸ,ਸਮਝਦਾਰ</string>
+    <!--  -->
+    <!--Instruments-->
+    <string formatted="false" name="piano">ਪਿਆਨੋ</string>
+    <string formatted="false" name="electric_piano">ਇਲੈਕਟ੍ਰਿਕ ਪਿਆਨੋ</string>
+    <string formatted="false" name="cello">ਚੈਲੋ</string>
+    <string formatted="false" name="flute">ਬੰਸਰੀ</string>
+    <string formatted="false" name="vibraphone">ਵਾਈਬ੍ਰਾਫ਼ੋਨ</string>
+    <string formatted="false" name="organ">ਆਰਗਨ</string>
+    <string formatted="false" name="guitar">ਗਿਟਾਰ</string>
+    <string formatted="false" name="electric_guitar">ਇਲੈਕਟ੍ਰਿਕ ਗਿਟਾਰ</string>
+    <string formatted="false" name="bass">ਬੇਸ</string>
+    <string formatted="false" name="pizzicato">ਪਿਜ਼ੀਕਾਟੋ</string>
+    <string formatted="false" name="synth_pad">ਸਿੰਥ ਪੈਡ</string>
+    <string formatted="false" name="choir">ਕੋਆਇਰ</string>
+    <string formatted="false" name="synth_lead">ਸਿੰਥ ਲੀਡ</string>
+    <string formatted="false" name="wooden_flute">ਲੱਕੜ ਦੀ ਬੰਸਰੀ</string>
+    <string formatted="false" name="trombone">ਟ੍ਰੋਂਬੋਨ</string>
+    <string formatted="false" name="saxophone">ਸੈਕਸੋਫ਼ੋਨ</string>
+    <string formatted="false" name="bassoon">ਬੈਸੂਨ</string>
+    <string formatted="false" name="clarinet">ਕਲੈਰੀਨੈੱਟ</string>
+    <string formatted="false" name="music_box">ਮਿਊਜ਼ਿਕ ਬਾਕਸ</string>
+    <string formatted="false" name="steel_drum">ਸਟੀਲ ਡਰੱਮ</string>
+    <string formatted="false" name="marimba">ਮਰਿੰਬਾ</string>
+    <!--  -->
+    <!--Drums-->
+    <string formatted="false" name="snare_drum">ਸਨੇਅਰ ਡਰੱਮ</string>
+    <string formatted="false" name="bass_drum">ਬੇਸ ਡਰੱਮ</string>
+    <string formatted="false" name="side_stick">ਸਾਈਡ ਸਟਿੱਕ</string>
+    <string formatted="false" name="crash_cymbal">ਕ੍ਰੈਸ਼ ਛੈਣਾ</string>
+    <string formatted="false" name="open_hi_hat">ਖੁੱਲ੍ਹੀ ਹਾਈ-ਹੈਟ</string>
+    <string formatted="false" name="closed_hi_hat">ਬੰਦ ਹਾਈ-ਹੈਟ</string>
+    <string formatted="false" name="tambourine">ਡਫਲੀ</string>
+    <string formatted="false" name="hand_clap">ਤਾੜੀ</string>
+    <string formatted="false" name="claves">ਕਲੇਵਜ਼</string>
+    <string formatted="false" name="wood_block">ਵੁੱਡਬਲਾਕ</string>
+    <string formatted="false" name="cowbell">ਕਾਊਬੈੱਲ</string>
+    <string formatted="false" name="triangle">ਟ੍ਰਾਇਐਂਗਲ</string>
+    <string formatted="false" name="bongo">ਬੋਂਗੋ</string>
+    <string formatted="false" name="conga">ਕੋਂਗਾ</string>
+    <string formatted="false" name="cabasa">ਕਬਾਸਾ</string>
+    <string formatted="false" name="guiro">ਗੁਈਰੋ</string>
+    <string formatted="false" name="vibraslap">ਵਾਈਬ੍ਰਾਸਲੈਪ</string>
+    <string formatted="false" name="open_cuica">ਖੁੱਲ੍ਹੀ ਕੁਈਕਾ</string>
+    <!--  -->
+    <!-- Default Values -->
+    <string formatted="false" name="default_project_name">ਮੇਰਾ ਪ੍ਰੋਜੈਕਟ</string>
+    <string formatted="false" name="default_variable_name">ਵੇਰੀਏਬਲ</string>
+    <string formatted="false" name="default_scene_name">ਦ੍ਰਿਸ਼</string>
+    <string formatted="false" name="default_script_group_name">ਸਕ੍ਰਿਪਟ ਸਮੂਹ</string>
+    <string formatted="false" name="default_broadcast_message_name">ਸੁਨੇਹਾ</string>
+    <string formatted="false" name="default_list_name">ਸੂਚੀ</string>
+    <string formatted="false" name="default_project_background_name">ਪਿਛੋਕੜ</string>
+    <string formatted="false" name="default_project_cloud_name">ਬੱਦਲ</string>
+    <string formatted="false" name="default_project_cloud_sprite_name_1">ਬੱਦਲ1</string>
+    <string formatted="false" name="default_project_cloud_sprite_name_2">ਬੱਦਲ2</string>
+    <string formatted="false" name="default_project_sprites_animal_name">ਜਾਨਵਰ</string>
+    <string formatted="false" name="default_project_sprites_animal_wings_up">ਖੰਭ ਉੱਪਰ</string>
+    <string formatted="false" name="default_project_sprites_animal_wings_down">ਖੰਭ ਹੇਠਾਂ</string>
+    <string formatted="false" name="default_project_sprites_tweet_1">ਚੀਂ-ਚੀਂ1</string>
+    <string formatted="false" name="default_project_sprites_tweet_2">ਚੀਂ-ਚੀਂ2</string>
+    <!--suppress UnusedResources -->
+    <string formatted="false" name="default_project_needle_name">ਸੂਈ</string>
+    <!--suppress UnusedResources -->
+    <string formatted="false" name="default_project_outer_loop">ਬਾਹਰੀ ਲੂਪ</string>
+    <!--suppress UnusedResources -->
+    <string formatted="false" name="default_project_inner_loop">ਅੰਦਰੂਨੀ ਲੂਪ</string>
+    <!-- Default ChromeCast Values -->
+    <string formatted="false" name="default_cast_project_background_name">ਪਿਛੋਕੜ</string>
+    <string formatted="false" name="default_cast_project_cloud_name">ਬੱਦਲ</string>
+    <string formatted="false" name="default_cast_project_cloud_sprite_name1">ਬੱਦਲ1</string>
+    <string formatted="false" name="default_cast_project_cloud_sprite_name2">ਬੱਦਲ2</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name">ਪੰਛੀ</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name_wing_up">ਪੰਛੀ ਖੰਭ ਉੱਪਰ</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name_wing_down">ਪੰਛੀ ਖੰਭ ਹੇਠਾਂ</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name_wing_up_left">ਪੰਛੀ ਖੰਭ ਉੱਪਰ ਖੱਬੇ</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name_wing_down_left">ਪੰਛੀ ਖੰਭ ਹੇਠਾਂ ਖੱਬੇ</string>
+    <string formatted="false" name="default_cast_project_sprites_tweet_1">ਚੀਂ-ਚੀਂ1</string>
+    <string formatted="false" name="default_cast_project_sprites_tweet_2">ਚੀਂ-ਚੀਂ2</string>
+    <string formatted="false" name="default_cast_project_var_direction">ਦਿਸ਼ਾ</string>
+    <string formatted="false" name="default_cast_project_name">ਮੇਰਾ ਪਹਿਲਾ Chromecast ਪ੍ਰੋਜੈਕਟ</string>
+    <!-- Default Drone Values -->
+    <string formatted="false" name="drone_brick_set_text">ਟੈਕਸਟ</string>
+    <string formatted="false" name="drone_brick_set_x">X:</string>
+    <!--  -->
+    <!-- Drone config spinner values  -->
+    <string formatted="false" name="drone_config_indoor_with_hull">ਅੰਦਰ, ਹਲ ਸਮੇਤ</string>
+    <string formatted="false" name="drone_config_indoor_without_hull">ਅੰਦਰ, ਹਲ ਤੋਂ ਬਿਨਾਂ</string>
+    <string formatted="false" name="drone_config_outdoor_with_hull">ਬਾਹਰ, ਹਲ ਸਮੇਤ</string>
+    <string formatted="false" name="drone_config_outdoor_without_hull">ਬਾਹਰ, ਹਲ ਤੋਂ ਬਿਨਾਂ</string>
+    <!-- Drone altitude limit values  -->
+    <string formatted="false" name="drone_set_altitude_max_3m">3 ਮੀਟਰ</string>
+    <string formatted="false" name="drone_set_altitude_max_5m">5 ਮੀਟਰ</string>
+    <string formatted="false" name="drone_set_altitude_max_10m">10 ਮੀਟਰ</string>
+    <string formatted="false" name="drone_set_altitude_max_100m">100 ਮੀਟਰ</string>
+    <!-- Drone max vertical speed limit values  -->
+    <string formatted="false" name="drone_set_vertical_min">200 mm/s</string>
+    <string formatted="false" name="drone_set_vertical_indoor">700 mm/s</string>
+    <string formatted="false" name="drone_set_vertical_outdoor">1000 mm/s</string>
+    <string formatted="false" name="drone_set_vertical_max">2000 mm/s</string>
+    <!-- Drone max rotation speed limit values  -->
+    <string formatted="false" name="drone_set_rotation_min">40 ਡਿਗਰੀ/ਸਕਿੰਟ</string>
+    <string formatted="false" name="drone_set_rotation_indoor">100 ਡਿਗਰੀ/ਸਕਿੰਟ</string>
+    <string formatted="false" name="drone_set_rotation_outdoor">200 ਡਿਗਰੀ/ਸਕਿੰਟ</string>
+    <string formatted="false" name="drone_set_rotation_max">350 ਡਿਗਰੀ/ਸਕਿੰਟ</string>
+    <!-- Drone max tilt limit values  -->
+    <string formatted="false" name="drone_set_tilt_min">5 ਡਿਗਰੀ</string>
+    <string formatted="false" name="drone_set_tilt_indoor">12 ਡਿਗਰੀ</string>
+    <string formatted="false" name="drone_set_tilt_outdoor">20 ਡਿਗਰੀ</string>
+    <string formatted="false" name="drone_set_tilt_max">30 ਡਿਗਰੀ</string>
+    <!-- Notification Channel -->
+    <string formatted="false" name="channel_description">%1$s ਸੂਚਨਾ ਚੈਨਲ</string>
+    <!--  -->
+    <!-- Notifications -->
+    <string formatted="false" name="notification_screenshot_ok">ਝਲਕ ਚਿੱਤਰ ਸੇਵ ਹੋ ਗਿਆ</string>
+    <string formatted="false" name="notification_download_project_cancel">ਪ੍ਰੋਜੈਕਟ ਦਾ ਡਾਊਨਲੋਡ ਰੱਦ ਕਰੋ</string>
+    <string formatted="false" name="notification_reconvert_download_program_cancel">ਪ੍ਰੋਜੈਕਟ ਦਾ ਡਾਊਨਲੋਡ/ਦੁਬਾਰਾ ਕਨਵਰਜ਼ਨ ਰੱਦ ਕਰ ਦਿੱਤਾ ਗਿਆ</string>
+    <string formatted="false" name="notification_upload_title_pending">"ਅੱਪਲੋਡ ਹੋ ਰਿਹਾ ਹੈ:"</string>
+    <string formatted="false" name="notification_upload_title_finished">"ਦੇਖੋ:"</string>
+    <string formatted="false" name="notification_upload_pending">ਅੱਪਲੋਡ ਜਾਰੀ ਹੈ</string>
+    <string formatted="false" name="notification_upload_finished">ਅੱਪਲੋਡ ਹੋ ਗਿਆ</string>
+    <string formatted="false" name="notification_upload_rejected">ਅੱਪਲੋਡ ਕੀਤਾ ਪ੍ਰੋਜੈਕਟ ਅਸਵੀਕਾਰ ਕਰ ਦਿੱਤਾ ਗਿਆ</string>
+    <string formatted="false" name="notification_upload_retry">ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ</string>
+    <string formatted="false" name="notification_open_play_store">ਐਪ ਸਟੋਰ ਖੋਲ੍ਹੋ</string>
+    <string formatted="false" name="notification_download_title_pending">"ਡਾਊਨਲੋਡ ਹੋ ਰਿਹਾ ਹੈ:"</string>
+    <string formatted="false" name="notification_download_pending">ਡਾਊਨਲੋਡ ਜਾਰੀ ਹੈ</string>
+    <string formatted="false" name="notification_download_finished">ਡਾਊਨਲੋਡ ਹੋ ਗਿਆ</string>
+    <string formatted="false" name="notification_title_open">"ਖੋਲ੍ਹੋ:"</string>
+    <string formatted="false" name="size_of_project">ਆਕਾਰ:</string>
+    <!--  -->
+    <!-- Runtime permission messages -->
+    <string formatted="false" name="runtime_permission_general">ਸਹੀ ਤਰ੍ਹਾਂ ਕੰਮ ਕਰਨ ਲਈ ਇਸ ਐਪ ਨੂੰ ਮੰਗੀਆਂ ਗਈਆਂ ਇਜਾਜ਼ਤਾਂ ਦੀ ਲੋੜ ਹੈ। ਉਦਾਹਰਨ ਲਈ, ਕੈਮਰਾ ਬਲਾਕ ਨੂੰ ਡਿਵਾਈਸ ਦੇ ਕੈਮਰੇ ਤੱਕ ਪਹੁੰਚ ਚਾਹੀਦੀ ਹੈ, \"ਟਿਕਾਣਾ\" ਫ਼ਾਰਮੂਲਾ ਤੱਤ ਨੂੰ ਡਿਵਾਈਸ ਦੇ ਭੂਗੋਲਿਕ ਟਿਕਾਣਾ ਸੈਂਸਰ ਤੱਕ ਪਹੁੰਚ ਚਾਹੀਦੀ ਹੈ, ਅਤੇ ਡਿਵਾਈਸ ਦੀ ਮੈਮਰੀ ਤੋਂ ਪ੍ਰੋਜੈਕਟ ਇੰਪੋਰਟ ਕਰਨ ਅਤੇ ਉਸ ਵਿੱਚ ਐਕਸਪੋਰਟ ਕਰਨ ਲਈ ਐਪ ਨੂੰ ਉਸ ਨੂੰ ਪੜ੍ਹਨ ਅਤੇ ਲਿਖਣ ਦੀ ਪਹੁੰਚ ਚਾਹੀਦੀ ਹੈ। ਤੁਸੀਂ ਆਪਣੀ ਡਿਵਾਈਸ ਦੀਆਂ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਕਦੇ ਵੀ ਇਜਾਜ਼ਤਾਂ ਬਦਲ ਸਕਦੇ ਹੋ।</string>
+    <!-- Error messages -->
+    <string formatted="false" name="error_project_upload">ਪ੍ਰੋਜੈਕਟ ਅੱਪਲੋਡ ਕਰਦੇ ਸਮੇਂ ਕੁਝ ਗ਼ਲਤ ਹੋ ਗਿਆ।</string>
+    <string formatted="false" name="error_project_download">ਪ੍ਰੋਜੈਕਟ ਡਾਊਨਲੋਡ ਕਰਦੇ ਸਮੇਂ ਕੁਝ ਗ਼ਲਤ ਹੋ ਗਿਆ।</string>
+    <string formatted="false" name="error_project_already_in_queue">"ਪ੍ਰੋਜੈਕਟ %s ਪਹਿਲਾਂ ਹੀ ਕਤਾਰ ਵਿੱਚ ਹੈ।"</string>
+    <string formatted="false" name="error_could_not_decode_project_name_from_url">"ਤੁਹਾਡਾ ਡਾਊਨਲੋਡ ਸ਼ੁਰੂ ਨਹੀਂ ਹੋ ਸਕਿਆ, ਲੱਗਦਾ ਹੈ ਕਿ ਸਾਡੇ ਸਰਵਰ ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਹੈ।"</string>
+    <string formatted="false" name="error_new_project">ਨਵਾਂ ਪ੍ਰੋਜੈਕਟ ਬਣਾਉਂਦੇ ਸਮੇਂ ਕੁਝ ਗ਼ਲਤ ਹੋ ਗਿਆ।</string>
+    <string formatted="false" name="error_rename_scene">ਦ੍ਰਿਸ਼ ਦਾ ਨਾਮ ਬਦਲਦੇ ਸਮੇਂ ਕੁਝ ਗ਼ਲਤ ਹੋ ਗਿਆ।</string>
+    <string formatted="false" name="error_load_project">ਪ੍ਰੋਜੈਕਟ ਲੋਡ ਕਰਦੇ ਸਮੇਂ ਕੁਝ ਗ਼ਲਤ ਹੋ ਗਿਆ।</string>
+    <string formatted="false" name="error_screenshot_failed">ਝਲਕ ਚਿੱਤਰ ਸੇਵ ਕਰਦੇ ਸਮੇਂ ਕੁਝ ਗ਼ਲਤ ਹੋ ਗਿਆ।</string>
+    <string formatted="false" name="error_internet_connection">ਇੱਕ ਅਣਜਾਣ ਗ਼ਲਤੀ ਹੋਈ। ਆਪਣੇ ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਦੀ ਜਾਂਚ ਕਰੋ।</string>
+    <string formatted="false" name="error_project_compatibility">ਇਹ ਪ੍ਰੋਜੈਕਟ ਐਪ ਦੇ ਇਸ ਸੰਸਕਰਨ ਦੇ ਅਨੁਕੂਲ ਨਹੀਂ ਹੈ।</string>
+    <string formatted="false" name="error_outdated_version">ਐਪ ਦਾ ਇਹ ਸੰਸਕਰਨ ਪੁਰਾਣਾ ਹੈ। ਕੀ ਹੁਣੇ ਅੱਪਡੇਟ ਕਰਨਾ ਹੈ?</string>
+    <string formatted="false" name="error_upload_project_with_default_name">ਤੁਸੀਂ \"%s\" ਨਾਮ ਵਾਲਾ ਪ੍ਰੋਜੈਕਟ ਅੱਪਲੋਡ ਨਹੀਂ ਕਰ ਸਕਦੇ। ਕਿਰਪਾ ਕਰਕੇ ਪ੍ਰੋਜੈਕਟ ਦਾ ਨਾਮ ਬਦਲੋ।</string>
+    <string formatted="false" name="error_upload_default_project">ਤੁਸੀਂ ਬਿਨਾਂ ਬਦਲਾਅ ਵਾਲਾ ਨਮੂਨਾ ਪ੍ਰੋਜੈਕਟ ਅੱਪਲੋਡ ਨਹੀਂ ਕਰ ਸਕਦੇ। ਕਿਰਪਾ ਕਰਕੇ ਕੁਝ ਬਦਲੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <string formatted="false" name="error_adding_brick">ਇਹ ਬਲਾਕ ਜੋੜਦੇ ਸਮੇਂ ਕੁਝ ਗ਼ਲਤ ਹੋ ਗਿਆ।</string>
+    <string formatted="false" name="error_copying_brick">ਇਹ ਬਲਾਕ ਕਾਪੀ ਕਰਦੇ ਸਮੇਂ ਕੁਝ ਗ਼ਲਤ ਹੋ ਗਿਆ।</string>
+    <string formatted="false" name="error_rename_incompatible_project">ਅਨੁਕੂਲ ਨਾ ਹੋਣ ਵਾਲੇ ਪ੍ਰੋਜੈਕਟ ਦਾ ਨਾਮ ਬਦਲਣਾ ਸੰਭਵ ਨਹੀਂ ਹੈ।</string>
+    <string formatted="false" name="error_embroidery_file_export">ਕਢਾਈ ਫ਼ਾਈਲ ਸਾਂਝੀ ਕਰਦੇ ਸਮੇਂ ਕੁਝ ਗ਼ਲਤ ਹੋ ਗਿਆ।</string>
+    <string formatted="false" name="error_embroidery_file_write">ਕਢਾਈ ਫ਼ਾਈਲ ਲਿਖਦੇ ਸਮੇਂ ਕੁਝ ਗ਼ਲਤ ਹੋ ਗਿਆ।</string>
+    <string formatted="false" name="error_embroidery_data_not_found">ਕਢਾਈ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।</string>
+    <string formatted="false" name="error_plot_file_write">SVG ਪਲਾਟ ਫ਼ਾਈਲ ਲਿਖਦੇ ਸਮੇਂ ਕੁਝ ਗ਼ਲਤ ਹੋ ਗਿਆ।</string>
+    <string formatted="false" name="error_plot_data_not_found">ਪਲਾਟ ਮੌਜੂਦ ਨਹੀਂ ਹੈ।</string>
+    <string formatted="false" name="error_unknown_error">ਕੁਝ ਗ਼ਲਤ ਹੋ ਗਿਆ।</string>
+    <string formatted="false" name="error_gps_not_available">ਭੂਗੋਲਿਕ ਟਿਕਾਣੇ ਦਾ ਡਾਟਾ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।</string>
+    <string formatted="false" name="error_set_description">ਨਵਾਂ ਵੇਰਵਾ ਸੇਵ ਕਰਦੇ ਸਮੇਂ ਕੁਝ ਗ਼ਲਤ ਹੋ ਗਿਆ।</string>
+    <string formatted="false" name="error_set_notes_and_credits">ਨਵੇਂ ਨੋਟ ਅਤੇ ਕ੍ਰੈਡਿਟ ਸੇਵ ਕਰਦੇ ਸਮੇਂ ਕੁਝ ਗ਼ਲਤ ਹੋ ਗਿਆ।</string>
+    <string formatted="false" name="error_no_whatsapp">WhatsApp ਇੰਸਟਾਲ ਨਹੀਂ ਹੈ</string>
+    <string formatted="false" name="error_unsupported_bricks_chromecast">ਇਹ ਸਕ੍ਰਿਪਟ Chromecast ਪ੍ਰੋਜੈਕਟ ਵਿੱਚ ਨਹੀਂ ਜੋੜੀ ਜਾ ਸਕਦੀ।</string>
+    <!--  -->
+    <!-- Bluetooth Connection Strings -->
+    <string formatted="false" name="notification_blueth_err">Bluetooth ਚਾਲੂ ਨਹੀਂ ਹੋ ਸਕਿਆ, ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਨੂੰ ਬੰਦ ਕਰਕੇ ਦੁਬਾਰਾ ਚਾਲੂ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <string formatted="false" name="title_paired_devices">ਪੇਅਰ ਕੀਤੀਆਂ ਡਿਵਾਈਸਾਂ</string>
+    <string formatted="false" name="title_other_devices">ਉਪਲਬਧ ਡਿਵਾਈਸਾਂ</string>
+    <string formatted="false" name="bluetooth_connection_title">Bluetooth ਕਨੈਕਸ਼ਨ</string>
+    <string formatted="false" name="skip_bluetooth_connection">ਛੱਡੋ</string>
+    <string formatted="false" name="connecting_please_wait">ਤੁਹਾਡੀ ਡਿਵਾਈਸ ਨਾਲ ਕਨੈਕਟ ਹੋ ਰਿਹਾ ਹੈ।\nਕਿਰਪਾ ਕਰਕੇ ਉਡੀਕ ਕਰੋ…</string>
+    <string formatted="false" name="bt_connection_failed">ਡਿਵਾਈਸ ਨਾਲ ਕਨੈਕਸ਼ਨ ਨਹੀਂ ਹੋ ਸਕਿਆ!</string>
+    <string formatted="false" name="none_found">ਕੋਈ ਬਿਨਾਂ ਪੇਅਰ ਕੀਤੀ ਡਿਵਾਈਸ ਨਹੀਂ ਮਿਲੀ</string>
+    <string formatted="false" name="multiplayer_bluetooth_connection_information_title">Bluetooth ਕਨੈਕਸ਼ਨ ਜ਼ਰੂਰੀ ਹੈ!</string>
+    <string formatted="false" name="multiplayer_bluetooth_connection_information">ਇਹ ਗੇਮ ਮਲਟੀਪਲੇਅਰ ਵਿੱਚ ਖੇਡਣ ਲਈ Bluetooth ਕਨੈਕਸ਼ਨ ਜ਼ਰੂਰੀ ਹੈ। ਕਨੈਕਸ਼ਨ ਠੀਕ ਤਰ੍ਹਾਂ ਕੰਮ ਕਰੇ, ਇਸ ਲਈ ਦੋਵਾਂ ਖਿਡਾਰੀਆਂ ਨੂੰ ਗੇਮ ਸ਼ੁਰੂ ਕਰਨੀ ਪਵੇਗੀ ਅਤੇ ਇਸੇ ਸਕ੍ਰੀਨ \'ਤੇ ਹੋਣਾ ਪਵੇਗਾ!</string>
+    <!--  -->
+    <!-- Arduino Bricks -->
+    <string formatted="false" name="brick_arduino_select_digital_value">Arduino ਡਿਜੀਟਲ ਪਿੰਨ</string>
+    <string formatted="false" name="brick_arduino_select_analog_value">Arduino PWM~ ਪਿੰਨ</string>
+    <string formatted="false" name="brick_arduino_set_pin_value_to">ਨੂੰ ਇਸ \'ਤੇ ਸੈੱਟ ਕਰੋ:</string>
+    <!--  -->
+    <!-- Raspi Bricks -->
+    <string formatted="false" name="brick_raspi_select_digital_value">Raspberry Pi ਪਿੰਨ</string>
+    <string formatted="false" name="brick_raspi_set_pin_value_to">ਨੂੰ ਇਸ \'ਤੇ ਸੈੱਟ ਕਰੋ:</string>
+    <string formatted="false" name="brick_raspi_if_begin">ਜੇ Raspberry Pi ਪਿੰਨ</string>
+    <string formatted="false" name="brick_raspi_if_begin_second_part">ਸੱਚ ਹੈ, ਤਾਂ</string>
+    <string formatted="false" name="brick_raspi_when_begin">ਜਦੋਂ Raspberry Pi ਪਿੰਨ</string>
+    <string formatted="false" name="brick_raspi_when_equals">ਇਸ ਵਿੱਚ ਬਦਲੇ:</string>
+    <string formatted="false" name="brick_raspi_pressed_text">ਉੱਚਾ</string>
+    <string formatted="false" name="brick_raspi_released_text">ਨੀਵਾਂ</string>
+    <string formatted="false" name="brick_raspi_set_pwm">Raspberry Pi PWM ਪਿੰਨ</string>
+    <!--  -->
+    <!-- Raspi Settings -->
+    <string formatted="false" name="raspi_settings_title_name">Raspberry Pi ਸੈਟਿੰਗਾਂ</string>
+    <string formatted="false" name="raspi_settings_gpio_version">GPIO ਸੰਸਕਰਨ</string>
+    <string formatted="false" name="error_connecting_to">ਗ਼ਲਤੀ: %s : %d ਨਾਲ ਕਨੈਕਟ ਨਹੀਂ ਹੋ ਸਕਿਆ</string>
+    <!--  -->
+    <!-- MQTT Settings -->
+    <string formatted="false" name="preference_title_enable_mqtt_bricks">MQTT ਐਕਸਟੈਂਸ਼ਨ</string>
+    <string formatted="false" name="preference_description_mqtt_bricks">ਐਪ ਨੂੰ MQTT ਬ੍ਰੋਕਰਾਂ ਨਾਲ ਕਨੈਕਟ ਹੋਣ ਦਿਓ</string>
+    <string formatted="false" name="preference_title_mqtt_enabled">MQTT ਬਲਾਕ ਚਾਲੂ ਕਰੋ</string>
+    <string formatted="false" name="preference_description_mqtt_enabled">MQTT ਲਈ ਬਲਾਕ ਅਤੇ ਸੈਂਸਰ ਚਾਲੂ ਕਰੋ</string>
+    <string formatted="false" name="preference_title_mqtt_category">MQTT ਸੈਟਿੰਗਾਂ</string>
+    <string formatted="false" name="preference_title_mqtt_broker_host">ਬ੍ਰੋਕਰ ਹੋਸਟ</string>
+    <string formatted="false" name="preference_description_mqtt_broker_host">MQTT ਬ੍ਰੋਕਰ ਦਾ IP ਪਤਾ ਜਾਂ ਹੋਸਟ ਨਾਮ</string>
+    <string formatted="false" name="preference_title_mqtt_broker_port">ਬ੍ਰੋਕਰ ਪੋਰਟ</string>
+    <string formatted="false" name="preference_description_mqtt_broker_port">MQTT ਬ੍ਰੋਕਰ ਦਾ ਪੋਰਟ ਨੰਬਰ (1–65535)</string>
+    <string formatted="false" name="preference_title_mqtt_use_tls">TLS ਵਰਤੋ</string>
+    <string formatted="false" name="preference_title_mqtt_username">ਵਰਤੋਂਕਾਰ ਨਾਮ</string>
+    <string formatted="false" name="preference_title_mqtt_password">ਪਾਸਵਰਡ</string>
+    <string formatted="false" name="preference_title_mqtt_client_id">ਕਲਾਇੰਟ ID</string>
+    <string formatted="false" name="preference_mqtt_port_invalid">ਪੋਰਟ 1 ਅਤੇ 65535 ਦੇ ਵਿਚਕਾਰ ਦਾ ਨੰਬਰ ਹੋਣਾ ਚਾਹੀਦਾ ਹੈ</string>
+    <!--  -->
+    <!-- Lego Mindstorms Strings -->
+    <string formatted="false" name="nxt_brick_motor_move">NXT ਮੋਟਰ</string>
+    <string formatted="false" name="nxt_motor_speed_to">ਨੂੰ ਇਸ \'ਤੇ ਸੈੱਟ ਕਰੋ:</string>
+    <string formatted="false" name="nxt_motor_speed">ਗਤੀ</string>
+    <string formatted="false" name="nxt_brick_motor_turn_angle">NXT ਮੋਟਰ ਘੁਮਾਓ:</string>
+    <string formatted="false" name="nxt_motor_move_by">ਇੰਨਾ:</string>
+    <string formatted="false" name="nxt_motor_stop">NXT ਮੋਟਰ ਰੋਕੋ:</string>
+    <string formatted="false" name="nxt_play_tone">NXT ਟੋਨ ਵਜਾਓ</string>
+    <string formatted="false" name="nxt_tone_duration">ਸਮਾਂ</string>
+    <string formatted="false" name="nxt_tone_frequency">ਫ਼੍ਰੀਕੁਐਂਸੀ</string>
+    <string formatted="false" name="nxt_tone_hundred_hz">×100Hz</string>
+    <string formatted="false" name="nxt_motor_a">A</string>
+    <string formatted="false" name="nxt_motor_b">B</string>
+    <string formatted="false" name="nxt_motor_c">C</string>
+    <string formatted="false" name="nxt_motor_b_and_c">B+C</string>
+    <string formatted="false" name="nxt_motor_all">ਸਾਰੀਆਂ</string>
+    <string formatted="false" name="nxt_choose_sensor_1">ਪੋਰਟ 1 \'ਤੇ ਜੁੜਿਆ ਸੈਂਸਰ</string>
+    <string formatted="false" name="nxt_choose_sensor_2">ਪੋਰਟ 2 \'ਤੇ ਜੁੜਿਆ ਸੈਂਸਰ</string>
+    <string formatted="false" name="nxt_choose_sensor_3">ਪੋਰਟ 3 \'ਤੇ ਜੁੜਿਆ ਸੈਂਸਰ</string>
+    <string formatted="false" name="nxt_choose_sensor_4">ਪੋਰਟ 4 \'ਤੇ ਜੁੜਿਆ ਸੈਂਸਰ</string>
+    <string formatted="false" name="nxt_no_sensor">ਕੋਈ ਨਹੀਂ</string>
+    <string formatted="false" name="nxt_sensor_touch">NXT ਛੋਹ ਸੈਂਸਰ</string>
+    <string formatted="false" name="nxt_sensor_sound">NXT ਆਵਾਜ਼ ਸੈਂਸਰ</string>
+    <string formatted="false" name="nxt_sensor_light">NXT ਰੌਸ਼ਨੀ ਸੈਂਸਰ</string>
+    <string formatted="false" name="nxt_sensor_light_active">NXT ਰੌਸ਼ਨੀ ਸੈਂਸਰ (ਸਰਗਰਮ)</string>
+    <string formatted="false" name="nxt_sensor_ultrasonic">NXT ਅਲਟਰਾਸੋਨਿਕ ਸੈਂਸਰ</string>
+    <string formatted="false" name="nxt_sensor_not_found">ਸੈਂਸਰ ਨਹੀਂ ਮਿਲਿਆ!</string>
+    <string formatted="false" name="lego_nxt_sensor_config_info_title">NXT ਸੈਂਸਰ ਕੌਂਫਿਗਰੇਸ਼ਨ</string>
+    <string formatted="false" name="preference_disable_nxt_info_dialog">ਜਾਣਕਾਰੀ ਡਾਇਲਾਗ ਬੰਦ ਕਰੋ</string>
+    <string formatted="false" name="preference_disable_nxt_info_dialog_description">ਪ੍ਰੋਜੈਕਟ ਖੋਲ੍ਹਣ \'ਤੇ ਪ੍ਰੋਜੈਕਟ ਦੀਆਂ ਆਪਣੀਆਂ NXT ਸੈਟਿੰਗਾਂ ਨਹੀਂ ਦਿਖਾਈਆਂ ਜਾਂਦੀਆਂ।</string>
+    <string formatted="false" name="preference_title_mindstorms_nxt_sensors_description">ਕਿਹੜਾ NXT ਸੈਂਸਰ ਕਿਸ ਪੋਰਟ \'ਤੇ ਹੈ, ਇਹ ਹਰ ਪ੍ਰੋਜੈਕਟ ਦਾ ਆਪਣਾ ਹੁੰਦਾ ਹੈ ਅਤੇ ਸਿਰਫ਼ ਖੁੱਲ੍ਹੇ ਪ੍ਰੋਜੈਕਟਾਂ ਲਈ ਹੀ ਕੌਂਫਿਗਰ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।</string>
+    <string formatted="false" name="lego_nxt_sensor_config_info_text">ਮੌਜੂਦਾ ਪ੍ਰੋਜੈਕਟ LEGO Mindstorms NXT ਬਲਾਕ ਜਾਂ ਸੈਂਸਰ ਵਰਤਦਾ ਹੈ। ਠੀਕ ਤਰ੍ਹਾਂ ਕੰਮ ਕਰਨ ਲਈ ਕਿਰਪਾ ਕਰਕੇ ਸੈਂਸਰਾਂ ਨੂੰ ਰੋਬੋਟ ਨਾਲ ਇਸ ਤਰ੍ਹਾਂ ਜੋੜੋ</string>
+    <string formatted="false" name="lego_port_1">ਪੋਰਟ 1</string>
+    <string formatted="false" name="lego_port_2">ਪੋਰਟ 2</string>
+    <string formatted="false" name="lego_port_3">ਪੋਰਟ 3</string>
+    <string formatted="false" name="lego_port_4">ਪੋਰਟ 4</string>
+    <string formatted="false" name="lego_sensor_config_dont_show_again">ਇਹ ਸੁਨੇਹਾ ਦੁਬਾਰਾ ਨਾ ਦਿਖਾਓ।</string>
+    <string formatted="false" name="lego_sensor_port_config_dialog_title">%1$s ਨਾਲ ਜੋੜਨ ਲਈ ਇੱਕ ਪੋਰਟ ਚੁਣੋ।</string>
+    <string formatted="false" name="lego_ev3_sensor_config_info_title">EV3 ਸੈਂਸਰ ਕੌਂਫਿਗਰੇਸ਼ਨ</string>
+    <string formatted="false" name="preference_disable_ev3_info_dialog_description">ਪ੍ਰੋਜੈਕਟ ਖੋਲ੍ਹਣ \'ਤੇ ਪ੍ਰੋਜੈਕਟ ਦੀਆਂ ਆਪਣੀਆਂ EV3 ਸੈਟਿੰਗਾਂ ਨਹੀਂ ਦਿਖਾਈਆਂ ਜਾਂਦੀਆਂ।</string>
+    <string formatted="false" name="preference_title_mindstorms_ev3_sensors_description">ਕਿਹੜਾ EV3 ਸੈਂਸਰ ਕਿਸ ਪੋਰਟ \'ਤੇ ਹੈ, ਇਹ ਹਰ ਪ੍ਰੋਜੈਕਟ ਦਾ ਆਪਣਾ ਹੁੰਦਾ ਹੈ ਅਤੇ ਸਿਰਫ਼ ਖੁੱਲ੍ਹੇ ਪ੍ਰੋਜੈਕਟਾਂ ਲਈ ਹੀ ਕੌਂਫਿਗਰ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ।</string>
+    <string formatted="false" name="lego_ev3_sensor_config_info_text">ਮੌਜੂਦਾ ਪ੍ਰੋਜੈਕਟ LEGO Mindstorms EV3 ਬਲਾਕ ਜਾਂ ਸੈਂਸਰ ਵਰਤਦਾ ਹੈ। ਠੀਕ ਤਰ੍ਹਾਂ ਕੰਮ ਕਰਨ ਲਈ ਕਿਰਪਾ ਕਰਕੇ ਸੈਂਸਰਾਂ ਨੂੰ ਰੋਬੋਟ ਨਾਲ ਇਸ ਤਰ੍ਹਾਂ ਜੋੜੋ</string>
+    <string formatted="false" name="ev3_choose_sensor_1">ਪੋਰਟ 1 \'ਤੇ ਜੁੜਿਆ ਸੈਂਸਰ</string>
+    <string formatted="false" name="ev3_choose_sensor_2">ਪੋਰਟ 2 \'ਤੇ ਜੁੜਿਆ ਸੈਂਸਰ</string>
+    <string formatted="false" name="ev3_choose_sensor_3">ਪੋਰਟ 3 \'ਤੇ ਜੁੜਿਆ ਸੈਂਸਰ</string>
+    <string formatted="false" name="ev3_choose_sensor_4">ਪੋਰਟ 4 \'ਤੇ ਜੁੜਿਆ ਸੈਂਸਰ</string>
+    <string formatted="false" name="ev3_no_sensor">ਕੋਈ ਨਹੀਂ</string>
+    <string formatted="false" name="ev3_sensor_touch">EV3 ਛੋਹ ਸੈਂਸਰ</string>
+    <string formatted="false" name="ev3_sensor_infrared">EV3 ਇਨਫ਼ਰਾਰੈੱਡ ਸੈਂਸਰ</string>
+    <string formatted="false" name="ev3_sensor_color">EV3 ਰੰਗ ਸੈਂਸਰ</string>
+    <string formatted="false" name="ev3_sensor_color_ambient">EV3 ਰੰਗ ਸੈਂਸਰ (ਆਲੇ-ਦੁਆਲੇ ਦੀ ਰੌਸ਼ਨੀ)</string>
+    <string formatted="false" name="ev3_sensor_color_reflected">EV3 ਰੰਗ ਸੈਂਸਰ (ਪਰਾਵਰਤਿਤ ਰੌਸ਼ਨੀ)</string>
+    <string formatted="false" name="ev3_sensor_hitechnic_color">HiTechnic ਰੰਗ ਸੈਂਸਰ</string>
+    <string formatted="false" name="ev3_sensor_nxt_temperature_c">NXT ਤਾਪਮਾਨ ਸੈਂਸਰ (°C)</string>
+    <string formatted="false" name="ev3_sensor_nxt_temperature_f">NXT ਤਾਪਮਾਨ ਸੈਂਸਰ (°F)</string>
+    <string formatted="false" name="ev3_sensor_nxt_light">NXT ਰੌਸ਼ਨੀ ਸੈਂਸਰ</string>
+    <string formatted="false" name="ev3_sensor_nxt_light_active">NXT ਰੌਸ਼ਨੀ ਸੈਂਸਰ (ਸਰਗਰਮ)</string>
+    <string formatted="false" name="ev3_sensor_nxt_sound">NXT ਆਵਾਜ਼ ਸੈਂਸਰ</string>
+    <string formatted="false" name="ev3_sensor_nxt_ultrasonic">NXT ਅਲਟਰਾਸੋਨਿਕ ਸੈਂਸਰ</string>
+    <string formatted="false" name="ev3_motor_a">A</string>
+    <string formatted="false" name="ev3_motor_b">B</string>
+    <string formatted="false" name="ev3_motor_c">C</string>
+    <string formatted="false" name="ev3_motor_d">D</string>
+    <string formatted="false" name="ev3_motor_b_and_c">B+C</string>
+    <string formatted="false" name="ev3_motor_all">ਸਾਰੀਆਂ</string>
+    <string formatted="false" name="ev3_play_tone">EV3 ਟੋਨ ਵਜਾਓ</string>
+    <string formatted="false" name="ev3_tone_duration_for">ਇੰਨੀ ਦੇਰ ਲਈ:</string>
+    <string formatted="false" name="ev3_tone_volume">ਵਾਲੀਅਮ</string>
+    <string formatted="false" name="ev3_tone_percent">%</string>
+    <string formatted="false" name="ev3_motor_stop">EV3 ਮੋਟਰ ਰੋਕੋ:</string>
+    <string formatted="false" name="ev3_motor_move">EV3 ਮੋਟਰ</string>
+    <string formatted="false" name="ev3_brick_motor_turn_angle">EV3 ਮੋਟਰ ਘੁਮਾਓ:</string>
+    <string formatted="false" name="ev3_motor_move_by">ਇੰਨਾ:</string>
+    <string formatted="false" name="ev3_set_led_status">EV3 LED ਸਥਿਤੀ ਸੈੱਟ ਕਰੋ:</string>
+    <string formatted="false" name="ev3_led_status_off">ਬੰਦ</string>
+    <string formatted="false" name="ev3_led_status_green">ਹਰਾ</string>
+    <string formatted="false" name="ev3_led_status_red">ਲਾਲ</string>
+    <string formatted="false" name="ev3_led_status_orange">ਸੰਤਰੀ</string>
+    <string formatted="false" name="ev3_led_status_green_flashing">ਹਰਾ ਜਗਦਾ-ਬੁਝਦਾ</string>
+    <string formatted="false" name="ev3_led_status_red_flashing">ਲਾਲ ਜਗਦਾ-ਬੁਝਦਾ</string>
+    <string formatted="false" name="ev3_led_status_orange_flashing">ਸੰਤਰੀ ਜਗਦਾ-ਬੁਝਦਾ</string>
+    <string formatted="false" name="ev3_led_status_green_pulse">ਹਰਾ ਧੜਕਦਾ</string>
+    <string formatted="false" name="ev3_led_status_red_pulse">ਲਾਲ ਧੜਕਦਾ</string>
+    <string formatted="false" name="ev3_led_status_orange_pulse">ਸੰਤਰੀ ਧੜਕਦਾ</string>
+    <!--  -->
+    <!-- Drone Bricks -->
+    <string formatted="false" name="brick_drone_takeoff_land">AR.Drone 2.0 ਨੂੰ ਉਡਾਓ / ਉਤਾਰੋ</string>
+    <string formatted="false" name="brick_drone_play_led_animation">AR.Drone 2.0 ਦੀ ਫ਼ਲੈਸ਼ ਐਨੀਮੇਸ਼ਨ ਚਲਾਓ:</string>
+    <string formatted="false" name="brick_drone_flip">AR.Drone 2.0 ਨੂੰ ਪਲਟਾਓ</string>
+    <string formatted="false" name="brick_drone_move_left">AR.Drone 2.0 ਨੂੰ ਖੱਬੇ ਲਿਜਾਓ:</string>
+    <string formatted="false" name="brick_drone_move_right">AR.Drone 2.0 ਨੂੰ ਸੱਜੇ ਲਿਜਾਓ:</string>
+    <string formatted="false" name="brick_drone_move_forward">AR.Drone 2.0 ਨੂੰ ਅੱਗੇ ਲਿਜਾਓ:</string>
+    <string formatted="false" name="brick_drone_move_backward">AR.Drone 2.0 ਨੂੰ ਪਿੱਛੇ ਲਿਜਾਓ:</string>
+    <string formatted="false" name="brick_drone_move_up">AR.Drone 2.0 ਨੂੰ ਉੱਪਰ ਲਿਜਾਓ:</string>
+    <string formatted="false" name="brick_drone_move_down">AR.Drone 2.0 ਨੂੰ ਹੇਠਾਂ ਲਿਜਾਓ:</string>
+    <string formatted="false" name="brick_drone_emergency">AR.Drone 2.0 ਐਮਰਜੈਂਸੀ ਸਟਾਪ</string>
+    <string formatted="false" name="brick_drone_turn_right">AR.Drone 2.0 ਨੂੰ ਸੱਜੇ ਮੋੜੋ:</string>
+    <string formatted="false" name="brick_drone_turn_left">AR.Drone 2.0 ਨੂੰ ਖੱਬੇ ਮੋੜੋ:</string>
+    <string formatted="false" name="brick_drone_set_config">AR.Drone 2.0 ਕੌਂਫਿਗਰੇਸ਼ਨ ਸੈੱਟ ਕਰੋ:</string>
+    <string formatted="false" name="brick_drone_switch_camera">AR.Drone 2.0 ਦਾ ਕੈਮਰਾ ਬਦਲੋ</string>
+    <string formatted="false" name="brick_drone_set_altitude">ਉਚਾਈ ਦੀ ਸੀਮਾ</string>
+    <string formatted="false" name="brick_drone_set_vertical_speed">ਖੜ੍ਹਵੀਂ ਗਤੀ ਦੀ ਸੀਮਾ</string>
+    <string formatted="false" name="brick_drone_set_rotation_speed">ਘੁੰਮਣ ਦੀ ਗਤੀ ਦੀ ਸੀਮਾ</string>
+    <string formatted="false" name="brick_drone_set_tilt_limit">ਝੁਕਾਅ ਦੀ ਸੀਮਾ</string>
+    <string formatted="false" name="brick_drone_with.">ਅਤੇ</string>
+    <string formatted="false" name="brick_drone_power">ਤਾਕਤ ਨਾਲ</string>
+    <!--  -->
+    <!-- Drone play led animation strings -->
+    <string formatted="false" name="drone_animation_blinkgreenred">ਹਰਾ-ਲਾਲ ਝਪਕਣਾ</string>
+    <string formatted="false" name="drone_animation_blinkgreen">ਹਰਾ ਝਪਕਣਾ</string>
+    <string formatted="false" name="drone_animation_blinkred">ਲਾਲ ਝਪਕਣਾ</string>
+    <string formatted="false" name="drone_animation_blinkorange">ਸੰਤਰੀ ਝਪਕਣਾ</string>
+    <string formatted="false" name="drone_animation_snakegreenred">ਹਰਾ-ਲਾਲ ਸੱਪ</string>
+    <string formatted="false" name="drone_animation_fire">ਅੱਗ</string>
+    <string formatted="false" name="drone_animation_standard">ਸਟੈਂਡਰਡ</string>
+    <string formatted="false" name="drone_animation_red">ਲਾਲ</string>
+    <string formatted="false" name="drone_animation_green">ਹਰਾ</string>
+    <string formatted="false" name="drone_animation_redsnake">ਲਾਲ ਸੱਪ</string>
+    <string formatted="false" name="drone_animation_blank">ਖਾਲੀ</string>
+    <string formatted="false" name="drone_animation_rightmissile">ਸੱਜੀ ਮਿਜ਼ਾਈਲ</string>
+    <string formatted="false" name="drone_animation_leftmissile">ਖੱਬੀ ਮਿਜ਼ਾਈਲ</string>
+    <string formatted="false" name="drone_animation_doublemissile">ਦੋਹਰੀ ਮਿਜ਼ਾਈਲ</string>
+    <string formatted="false" name="drone_animation_frontleftgreenothersred">ਅੱਗੇ ਖੱਬਾ ਹਰਾ, ਬਾਕੀ ਲਾਲ</string>
+    <string formatted="false" name="drone_animation_frontrightgreenothersred">ਅੱਗੇ ਸੱਜਾ ਹਰਾ, ਬਾਕੀ ਲਾਲ</string>
+    <string formatted="false" name="drone_animation_rearrightgreenothersred">ਪਿੱਛੇ ਸੱਜਾ ਹਰਾ, ਬਾਕੀ ਲਾਲ</string>
+    <string formatted="false" name="drone_animation_rearleftgreenothersred">ਪਿੱਛੇ ਖੱਬਾ ਹਰਾ, ਬਾਕੀ ਲਾਲ</string>
+    <string formatted="false" name="drone_animation_leftgreenrightred">ਖੱਬਾ ਹਰਾ, ਸੱਜਾ ਲਾਲ</string>
+    <string formatted="false" name="drone_animation_leftredrightgreen">ਖੱਬਾ ਲਾਲ, ਸੱਜਾ ਹਰਾ</string>
+    <string formatted="false" name="drone_animation_blinkstandard">ਸਟੈਂਡਰਡ ਝਪਕਣਾ</string>
+    <!-- Jumping Sumo Bricks -->
+    <string formatted="false" name="brick_jumping_sumo_move_forward">Jumping Sumo ਨੂੰ ਅੱਗੇ ਲਿਜਾਓ:</string>
+    <string formatted="false" name="brick_jumping_sumo_move_backward">Jumping Sumo ਨੂੰ ਪਿੱਛੇ ਲਿਜਾਓ:</string>
+    <string formatted="false" name="brick_jumping_sumo_animation">Jumping Sumo ਐਨੀਮੇਸ਼ਨ:</string>
+    <string formatted="false" name="brick_jumping_sumo_no_sound">Jumping Sumo ਦੀ ਆਵਾਜ਼ ਬੰਦ ਕਰੋ</string>
+    <string formatted="false" name="brick_jumping_sumo_jump_long">Jumping Sumo ਲੰਬੀ ਛਾਲ</string>
+    <string formatted="false" name="brick_jumping_sumo_jump_high">Jumping Sumo ਉੱਚੀ ਛਾਲ</string>
+    <string formatted="false" name="brick_jumping_sumo_rotate_left">Jumping Sumo ਨੂੰ ਖੱਬੇ ਮੋੜੋ:</string>
+    <string formatted="false" name="brick_jumping_sumo_rotate_right">Jumping Sumo ਨੂੰ ਸੱਜੇ ਮੋੜੋ:</string>
+    <string formatted="false" name="brick_jumping_sumo_rotate_text">ਡਿਗਰੀ</string>
+    <string formatted="false" name="brick_jumping_sumo_turn">Jumping Sumo ਨੂੰ ਪਲਟਾਓ</string>
+    <string formatted="false" name="brick_jumping_sumo_taking_picture">Jumping Sumo ਨਾਲ ਫ਼ੋਟੋ ਲਓ</string>
+    <!--  -->
+    <!-- defaultJumpingSumoValues -->
+    <string formatted="false" name="default_jumping_sumo_project_sprites_sound">ਆਵਾਜ਼</string>
+    <!--  -->
+    <!-- Jumping Sumo animation strings -->
+    <string formatted="false" name="animation_spin">ਘੁੰਮਣਾ</string>
+    <string formatted="false" name="animation_tab">ਟੈਪ</string>
+    <string formatted="false" name="animation_slowshake">ਹੌਲੀ ਹਿੱਲਣਾ</string>
+    <string formatted="false" name="animation_metronome">ਮੈਟਰੋਨੋਮ</string>
+    <string formatted="false" name="animation_ondulation">ਲਹਿਰਾਉਣਾ</string>
+    <string formatted="false" name="animation_spinjump">ਘੁੰਮ ਕੇ ਛਾਲ</string>
+    <string formatted="false" name="animation_spiral">ਚੱਕਰਦਾਰ</string>
+    <string formatted="false" name="animation_slalom">ਸਲੈਲਮ</string>
+    <!-- Jumping Sumo sound strings -->
+    <string formatted="false" name="jumping_sumo_volume">ਵਾਲੀਅਮ</string>
+    <string formatted="false" name="sound_default">ਸਧਾਰਨ</string>
+    <string formatted="false" name="sound_robot">ਰੋਬੋਟ</string>
+    <string formatted="false" name="sound_insect">ਕੀੜਾ</string>
+    <string formatted="false" name="sound_monster">ਦੈਂਤ</string>
+    <!--  -->
+    <!-- Shared arc and go-through strings -->
+    <string formatted="false" name="direction_left">ਖੱਬੇ</string>
+    <string formatted="false" name="direction_right">ਸੱਜੇ</string>
+    <string formatted="false" name="arc_direction">ਚਾਪ ਵਿੱਚ ਜਾਓ:</string>
+    <string formatted="false" name="go_through">ਇਸ ਵਿੱਚੋਂ ਲੰਘੋ:</string>
+    <string formatted="false" name="go_through_target">ਫਿਰ ਇੱਥੇ ਜਾਓ:</string>
+    <string formatted="false" name="arc_with_radius">ਅਰਧ-ਵਿਆਸ:</string>
+    <string formatted="false" name="arc_for_degrees">ਕੋਣ:</string>
+    <!--  -->
+    <!-- Phiro bricks -->
+    <!-- motor -->
+    <string formatted="false" name="phiro_motor_stop">Phiro ਮੋਟਰ ਰੋਕੋ:</string>
+    <string formatted="false" name="brick_phiro_motor_forward_action">Phiro ਮੋਟਰ ਅੱਗੇ ਚਲਾਓ:</string>
+    <string formatted="false" name="brick_phiro_motor_backward_action">Phiro ਮੋਟਰ ਪਿੱਛੇ ਚਲਾਓ:</string>
+    <string formatted="false" name="phiro_motor_speed">ਗਤੀ</string>
+    <!-- sensor -->
+    <string formatted="false" name="brick_phiro_sensor_begin">ਜੇ Phiro</string>
+    <string formatted="false" name="brick_phiro_sensor_second_part">ਸਰਗਰਮ ਹੈ, ਤਾਂ</string>
+    <!-- tone -->
+    <string formatted="false" name="phiro_play_tone">Phiro ਸੰਗੀਤ ਵਜਾਓ\n</string>
+    <string formatted="false" name="phiro_tone_duration">ਸਮਾਂ</string>
+    <string formatted="false" name="brick_phiro_select_tone">ਸੁਰ</string>
+    <string formatted="false" name="phiro_seconds">ਸਕਿੰਟ</string>
+    <!-- light -->
+    <string formatted="false" name="brick_phiro_rgb_led_action">Phiro ਲਾਈਟ ਸੈੱਟ ਕਰੋ:</string>
+    <string formatted="false" name="phiro_rgb_led_red">ਲਾਲ</string>
+    <string formatted="false" name="phiro_rgb_led_green">ਹਰਾ</string>
+    <string formatted="false" name="phiro_rgb_led_blue">ਨੀਲਾ</string>
+    <!--  -->
+    <!-- Phiro tone strings -->
+    <string formatted="false" name="phiro_tone_do">ਡੋ</string>
+    <string formatted="false" name="phiro_tone_re">ਰੇ</string>
+    <string formatted="false" name="phiro_tone_mi">ਮੀ</string>
+    <string formatted="false" name="phiro_tone_fa">ਫ਼ਾ</string>
+    <string formatted="false" name="phiro_tone_so">ਸੋ</string>
+    <string formatted="false" name="phiro_tone_la">ਲਾ</string>
+    <string formatted="false" name="phiro_tone_ti">ਟੀ</string>
+    <!--  -->
+    <!-- Phiro motor strings -->
+    <string formatted="false" name="phiro_motor_left">ਖੱਬੀ</string>
+    <string formatted="false" name="phiro_motor_right">ਸੱਜੀ</string>
+    <string formatted="false" name="phiro_motor_both">ਦੋਵੇਂ</string>
+    <!--  -->
+    <!-- Phiro light strings -->
+    <string formatted="false" name="phiro_light_left">ਖੱਬੀ</string>
+    <string formatted="false" name="phiro_light_right">ਸੱਜੀ</string>
+    <string formatted="false" name="phiro_light_both">ਦੋਵੇਂ</string>
+    <!--  -->
+    <!-- Phiro sensor strings -->
+    <string formatted="false" name="phiro_sensor_front_left">ਅਗਲਾ ਖੱਬਾ ਸੈਂਸਰ</string>
+    <string formatted="false" name="phiro_sensor_front_right">ਅਗਲਾ ਸੱਜਾ ਸੈਂਸਰ</string>
+    <string formatted="false" name="phiro_sensor_side_left">ਪਾਸੇ ਵਾਲਾ ਖੱਬਾ ਸੈਂਸਰ</string>
+    <string formatted="false" name="phiro_sensor_side_right">ਪਾਸੇ ਵਾਲਾ ਸੱਜਾ ਸੈਂਸਰ</string>
+    <string formatted="false" name="phiro_sensor_bottom_left">ਹੇਠਲਾ ਖੱਬਾ ਸੈਂਸਰ</string>
+    <string formatted="false" name="phiro_sensor_bottom_right">ਹੇਠਲਾ ਸੱਜਾ ਸੈਂਸਰ</string>
+    <!--  -->
+    <string formatted="false" name="color_red">ਲਾਲ</string>
+    <string formatted="false" name="color_green">ਹਰਾ</string>
+    <string formatted="false" name="color_blue">ਨੀਲਾ</string>
+    <!-- -->
+    <!-- Formula editor strings -->
+    <string formatted="false" name="formula_editor_data">ਡਾਟਾ</string>
+    <string formatted="false" name="formula_editor_true">ਸੱਚ</string>
+    <string formatted="false" name="formula_editor_false">ਝੂਠ</string>
+    <string formatted="false" name="formula_editor_decimal_mark">.</string>
+    <string formatted="false" name="formula_editor_title">ਫ਼ਾਰਮੂਲਾ ਐਡੀਟਰ</string>
+    <string formatted="false" name="formula_editor_changes_discarded">ਤਬਦੀਲੀਆਂ ਛੱਡ ਦਿੱਤੀਆਂ ਗਈਆਂ!</string>
+    <string formatted="false" name="formula_editor_parse_fail">ਫ਼ਾਰਮੂਲਾ ਸਹੀ ਨਹੀਂ ਹੈ!</string>
+    <string formatted="false" name="formula_nothing_selected">ਇਨਪੁੱਟ ਮੁੱਲ ਲਿਖੋ</string>
+    <string formatted="false" name="formula_editor_parse_fail_formula_too_long">ਫ਼ਾਰਮੂਲਾ ਬਹੁਤ ਲੰਮਾ ਹੈ!</string>
+    <string formatted="false" name="formula_editor_choose_object_variable">ਇਸ ਪਾਤਰ ਜਾਂ ਵਸਤੂ ਦੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ</string>
+    <string formatted="false" name="formula_editor_bracket_open">(</string>
+    <string formatted="false" name="formula_editor_bracket_close">)</string>
+    <string formatted="false" name="formula_editor_function_sin">ਸਾਈਨ</string>
+    <string formatted="false" name="formula_editor_function_sin_parameter">(90)</string>
+    <string formatted="false" name="formula_editor_function_cos">ਕੋਸਾਈਨ</string>
+    <string formatted="false" name="formula_editor_function_cos_parameter">(360)</string>
+    <string formatted="false" name="formula_editor_function_tan">ਟੈਂਜੈਂਟ</string>
+    <string formatted="false" name="formula_editor_function_tan_parameter">(45)</string>
+    <string formatted="false" name="formula_editor_function_ln">ਕੁਦਰਤੀ ਲਘੂਗਣਕ</string>
+    <string formatted="false" name="formula_editor_function_ln_parameter">(2.718281828459)</string>
+    <string formatted="false" name="formula_editor_function_log">ਦਸ਼ਮਲਵ ਲਘੂਗਣਕ</string>
+    <string formatted="false" name="formula_editor_function_log_parameter">(10)</string>
+    <string formatted="false" name="formula_editor_function_pi">ਪਾਈ</string>
+    <string formatted="false" name="formula_editor_function_pi_parameter"></string>
+    <string formatted="false" name="formula_editor_object_color">ਰੰਗ</string>
+    <string formatted="false" name="formula_editor_function_sqrt">ਵਰਗਮੂਲ</string>
+    <string formatted="false" name="formula_editor_function_sqrt_parameter">(4)</string>
+    <string formatted="false" name="formula_editor_function_rand">ਬੇਤਰਤੀਬ ਮੁੱਲ ਤੋਂ ਤੱਕ</string>
+    <string formatted="false" name="formula_editor_function_rand_parameter">(1,6)</string>
+    <string formatted="false" name="formula_editor_function_abs">ਨਿਰਪੇਖ ਮੁੱਲ</string>
+    <string formatted="false" name="formula_editor_function_abs_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_round">ਗੋਲ ਕਰੋ</string>
+    <string formatted="false" name="formula_editor_function_round_parameter">(1.6)</string>
+    <string formatted="false" name="formula_editor_function_mod">ਮੋਡਿਊਲੋ</string>
+    <string formatted="false" name="formula_editor_function_mod_parameter">(3,2)</string>
+    <string formatted="false" name="formula_editor_function_arcsin">ਆਰਕਸਾਈਨ</string>
+    <string formatted="false" name="formula_editor_function_arcsin_parameter">(0.5)</string>
+    <string formatted="false" name="formula_editor_function_arccos">ਆਰਕਕੋਸਾਈਨ</string>
+    <string formatted="false" name="formula_editor_function_arccos_parameter">(0)</string>
+    <string formatted="false" name="formula_editor_function_arctan">ਆਰਕਟੈਂਜੈਂਟ</string>
+    <string formatted="false" name="formula_editor_function_arctan_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_arctan2">ਆਰਕਟੈਂਜੈਂਟ2</string>
+    <string formatted="false" name="formula_editor_function_arctan2_parameter">(-1, 0)</string>
+    <string formatted="false" name="formula_editor_function_exp">ਘਾਤ ਅੰਕ</string>
+    <string formatted="false" name="formula_editor_function_exp_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_power">ਘਾਤ</string>
+    <string formatted="false" name="formula_editor_function_power_parameter">(2,3)</string>
+    <string formatted="false" name="formula_editor_function_floor">ਹੇਠਲਾ ਪੂਰਨ ਅੰਕ</string>
+    <string formatted="false" name="formula_editor_function_floor_parameter">(0.7)</string>
+    <string formatted="false" name="formula_editor_function_ceil">ਉੱਪਰਲਾ ਪੂਰਨ ਅੰਕ</string>
+    <string formatted="false" name="formula_editor_function_ceil_parameter">(0.3)</string>
+    <string formatted="false" name="formula_editor_function_max">ਵੱਧ ਤੋਂ ਵੱਧ</string>
+    <string formatted="false" name="formula_editor_function_max_parameter">(5,4)</string>
+    <string formatted="false" name="formula_editor_function_min">ਘੱਟ ਤੋਂ ਘੱਟ</string>
+    <string formatted="false" name="formula_editor_function_min_parameter">(7,2)</string>
+    <string formatted="false" name="formula_editor_function_if_then_else">ਜੇ ਤਾਂ ਨਹੀਂ ਤਾਂ</string>
+    <string formatted="false" name="formula_editor_function_if_then_else_parameter">(ਝੂਠ, 2, 3)</string>
+    <string formatted="false" name="formula_editor_function_true">ਸੱਚ</string>
+    <string formatted="false" name="formula_editor_function_false">ਝੂਠ</string>
+    <string formatted="false" name="formula_editor_function_length">ਲੰਬਾਈ</string>
+    <string formatted="false" name="formula_editor_function_length_parameter">(\'hello world\')</string>
+    <string formatted="false" name="formula_editor_function_letter">ਅੱਖਰ</string>
+    <string formatted="false" name="formula_editor_function_letter_parameter">(1,\'hello world\')</string>
+    <string formatted="false" name="formula_editor_function_subtext">ਉਪ-ਟੈਕਸਟ</string>
+    <string formatted="false" name="formula_editor_function_subtext_parameter">(3,5,\'hello world\')</string>
+    <string formatted="false" name="formula_editor_function_join">ਜੋੜੋ</string>
+    <string formatted="false" name="formula_editor_function_join_parameter">(\'hello\',\' world\')</string>
+    <string formatted="false" name="formula_editor_function_join3">ਜੋੜੋ</string>
+    <string formatted="false" name="formula_editor_function_join3_parameter">(\'hello\',\' world\',\'!\')</string>
+    <string formatted="false" name="formula_editor_function_regex">ਰੈਗੂਲਰ ਐਕਸਪ੍ਰੈਸ਼ਨ</string>
+    <string formatted="false" name="formula_editor_function_regex_parameter">(\' an? ([^ .]+)\',\'I am a panda.\')</string>
+    <string formatted="false" name="formula_editor_function_regex_assistant">ਰੈਗੂਲਰ ਐਕਸਪ੍ਰੈਸ਼ਨ ਸਹਾਇਕ</string>
+    <string formatted="false" name="formula_editor_dialog_regular_expression_assistant_title">ਰੈਗੂਲਰ ਐਕਸਪ੍ਰੈਸ਼ਨ ਸਹਾਇਕ</string>
+    <string formatted="false" name="formula_editor_function_regex_html_extractor_not_found">ਕੀਵਰਡ ਨਹੀਂ ਮਿਲਿਆ।</string>
+    <string formatted="false" name="formula_editor_function_regex_json_extractor_title">JSON ਐਕਸਟਰੈਕਟਰ</string>
+    <string formatted="false" name="formula_editor_function_arduino_read_pin_value_digital">Arduino ਡਿਜੀਟਲ ਪਿੰਨ</string>
+    <string formatted="false" name="formula_editor_function_arduino_read_pin_value_analog">Arduino ਐਨਾਲਾਗ ਪਿੰਨ</string>
+    <string formatted="false" name="formula_editor_function_raspi_read_pin_value_digital">Raspberry Pi ਪਿੰਨ</string>
+    <string formatted="false" name="formula_editor_function_pin_default_parameter">(0)</string>
+    <string formatted="false" name="formula_editor_function_finger_x">ਸਟੇਜ ਛੋਹ x</string>
+    <string formatted="false" name="formula_editor_function_finger_y">ਸਟੇਜ ਛੋਹ y</string>
+    <string formatted="false" name="formula_editor_function_is_finger_touching">ਸਟੇਜ ਨੂੰ ਛੂਹਿਆ ਗਿਆ</string>
+    <string formatted="false" name="formula_editor_function_multi_finger_x">ਸਟੇਜ ਛੋਹ x</string>
+    <string formatted="false" name="formula_editor_function_multi_finger_y">ਸਟੇਜ ਛੋਹ y</string>
+    <string formatted="false" name="formula_editor_function_is_multi_finger_touching">ਸਟੇਜ ਨੂੰ ਛੂਹਿਆ ਗਿਆ</string>
+    <string formatted="false" name="formula_editor_function_index_of_last_finger">ਆਖਰੀ ਸਟੇਜ ਛੋਹ ਦਾ ਨੰਬਰ</string>
+    <string formatted="false" name="formula_editor_function_number_of_current_touches">ਮੌਜੂਦਾ ਛੋਹਾਂ ਦੀ ਗਿਣਤੀ</string>
+    <string formatted="false" name="formula_editor_function_index_of_current_touch">ਮੌਜੂਦਾ ਛੋਹ ਦਾ ਨੰਬਰ</string>
+    <string formatted="false" name="formula_editor_function_no_parameter"></string>
+    <string formatted="false" name="formula_editor_function_touch_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_list_item">ਆਈਟਮ</string>
+    <string formatted="false" name="formula_editor_function_list_item_parameter">(1,*list name*)</string>
+    <string formatted="false" name="formula_editor_function_contains">ਵਿੱਚ ਸ਼ਾਮਲ ਹੈ</string>
+    <string formatted="false" name="formula_editor_function_contains_parameter">(*list name*,1)</string>
+    <string formatted="false" name="formula_editor_function_index_of_item">ਆਈਟਮ ਦਾ ਸਥਾਨ</string>
+    <string formatted="false" name="formula_editor_function_index_of_item_parameter">(1,*list name*)</string>
+    <string formatted="false" name="formula_editor_function_number_of_items">ਆਈਟਮਾਂ ਦੀ ਗਿਣਤੀ</string>
+    <string formatted="false" name="formula_editor_function_number_of_items_parameter">(*list name*)</string>
+    <string formatted="false" name="formula_editor_function_flatten">ਸਮਤਲ ਕਰੋ</string>
+    <string formatted="false" name="formula_editor_function_flatten_parameter">(*list name*)</string>
+    <string formatted="false" name="formula_editor_function_collision">ਪਾਤਰ ਜਾਂ ਵਸਤੂ ਨੂੰ ਛੂੰਹਦਾ ਹੈ</string>
+    <string formatted="false" name="formula_editor_function_collides_with_edge">ਕਿਨਾਰੇ ਨੂੰ ਛੂੰਹਦਾ ਹੈ</string>
+    <string formatted="false" name="formula_editor_function_touched">ਉਂਗਲ ਨੂੰ ਛੂੰਹਦਾ ਹੈ</string>
+    <string formatted="false" name="formula_editor_function_collides_with_color">ਰੰਗ ਨੂੰ ਛੂੰਹਦਾ ਹੈ</string>
+    <string formatted="false" name="formula_editor_function_color_touches_color">ਰੰਗ ਰੰਗ ਨੂੰ ਛੂੰਹਦਾ ਹੈ</string>
+    <string formatted="false" name="formula_editor_sensor_color_at_x_y">x y \'ਤੇ ਰੰਗ</string>
+    <string formatted="false" name="formula_editor_sensor_color_equals_color">ਰੰਗ ਰੰਗ ਦੇ ਬਰਾਬਰ ਹੈ, % ਛੋਟ ਨਾਲ</string>
+    <string formatted="false" name="formula_editor_sensor_x_acceleration">ਪ੍ਰਵੇਗ x</string>
+    <string formatted="false" name="formula_editor_sensor_y_acceleration">ਪ੍ਰਵੇਗ y</string>
+    <string formatted="false" name="formula_editor_sensor_z_acceleration">ਪ੍ਰਵੇਗ z</string>
+    <string formatted="false" name="formula_editor_sensor_compass_direction">ਕੰਪਾਸ ਦਿਸ਼ਾ</string>
+    <string formatted="false" name="formula_editor_sensor_latitude">ਵਿਥਕਾਰ</string>
+    <string formatted="false" name="formula_editor_sensor_longitude">ਲੰਬਕਾਰ</string>
+    <string formatted="false" name="formula_editor_sensor_location_accuracy">ਟਿਕਾਣੇ ਦੀ ਸ਼ੁੱਧਤਾ</string>
+    <string formatted="false" name="formula_editor_sensor_altitude">ਉਚਾਈ</string>
+    <string formatted="false" name="formula_editor_sensor_user_language">ਵਰਤੋਂਕਾਰ ਦੀ ਭਾਸ਼ਾ</string>
+    <string formatted="false" name="formula_editor_sensor_x_inclination">ਝੁਕਾਅ x</string>
+    <string formatted="false" name="formula_editor_sensor_y_inclination">ਝੁਕਾਅ y</string>
+    <string formatted="false" name="formula_editor_sensor_loudness">ਆਵਾਜ਼ ਦਾ ਪੱਧਰ</string>
+    <string formatted="false" name="formula_editor_sensor_timer">ਟਾਈਮਰ</string>
+    <string formatted="false" name="formula_editor_sensor_date_year">ਸਾਲ</string>
+    <string formatted="false" name="formula_editor_sensor_date_month">ਮਹੀਨਾ</string>
+    <string formatted="false" name="formula_editor_sensor_date_day">ਦਿਨ</string>
+    <string formatted="false" name="formula_editor_sensor_date_weekday">ਹਫ਼ਤੇ ਦਾ ਦਿਨ</string>
+    <string formatted="false" name="formula_editor_sensor_time_hour">ਘੰਟਾ</string>
+    <string formatted="false" name="formula_editor_sensor_time_minute">ਮਿੰਟ</string>
+    <string formatted="false" name="formula_editor_sensor_time_second">ਸਕਿੰਟ</string>
+    <string formatted="false" name="formula_editor_sensor_drone_battery_status">ਡਰੋਨ ਬੈਟਰੀ ਸਥਿਤੀ</string>
+    <string formatted="false" name="formula_editor_sensor_drone_emergency_state">ਡਰੋਨ ਐਮਰਜੈਂਸੀ ਸਥਿਤੀ</string>
+    <string formatted="false" name="formula_editor_sensor_drone_flying">ਡਰੋਨ ਉੱਡ ਰਿਹਾ ਹੈ</string>
+    <string formatted="false" name="formula_editor_sensor_drone_initialized">ਡਰੋਨ ਤਿਆਰ ਹੈ</string>
+    <string formatted="false" name="formula_editor_sensor_drone_usb_active">ਡਰੋਨ USB ਸਰਗਰਮ</string>
+    <string formatted="false" name="formula_editor_sensor_drone_usb_remaining_time">ਡਰੋਨ USB ਬਾਕੀ ਸਮਾਂ</string>
+    <string formatted="false" name="formula_editor_sensor_drone_camera_ready">ਡਰੋਨ ਕੈਮਰਾ ਤਿਆਰ</string>
+    <string formatted="false" name="formula_editor_sensor_drone_record_ready">ਡਰੋਨ ਰਿਕਾਰਡਿੰਗ ਲਈ ਤਿਆਰ</string>
+    <string formatted="false" name="formula_editor_sensor_drone_recording">ਡਰੋਨ ਕੈਮਰਾ ਰਿਕਾਰਡ ਕਰ ਰਿਹਾ ਹੈ</string>
+    <string formatted="false" name="formula_editor_sensor_drone_num_frames">ਡਰੋਨ ਕੈਮਰਾ ਫ਼ਰੇਮਾਂ ਦੀ ਗਿਣਤੀ</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_1">NXT ਸੈਂਸਰ 1</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_2">NXT ਸੈਂਸਰ 2</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_3">NXT ਸੈਂਸਰ 3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_4">NXT ਸੈਂਸਰ 4</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_1">EV3 ਸੈਂਸਰ 1</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_2">EV3 ਸੈਂਸਰ 2</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_3">EV3 ਸੈਂਸਰ 3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_4">EV3 ਸੈਂਸਰ 4</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_touch">NXT ਛੋਹ</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_sound">NXT ਆਵਾਜ਼</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_light">NXT ਰੌਸ਼ਨੀ</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_light_active">NXT ਰੌਸ਼ਨੀ (ਸਰਗਰਮ)</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_ultrasonic">NXT ਅਲਟਰਾਸੋਨਿਕ</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_touch">EV3 ਛੋਹ</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_infrared">EV3 ਇਨਫ਼ਰਾਰੈੱਡ</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_color">EV3 ਰੰਗ</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_color_ambient">EV3 ਆਲੇ-ਦੁਆਲੇ ਦਾ ਰੰਗ</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_color_reflected">EV3 ਪਰਾਵਰਤਿਤ ਰੰਗ</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_hitechnic_color">EV3 HiTechnic ਰੰਗ</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_temperature_c">EV3 NXT ਤਾਪਮਾਨ °C ਵਿੱਚ</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_temperature_f">EV3 NXT ਤਾਪਮਾਨ °F ਵਿੱਚ</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_light">EV3 NXT ਰੌਸ਼ਨੀ</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_light_active">EV3 NXT ਰੌਸ਼ਨੀ (ਸਰਗਰਮ)</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_sound">EV3 NXT ਆਵਾਜ਼</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_ultrasonic">EV3 NXT ਅਲਟਰਾਸੋਨਿਕ</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_a_pressed">ਗੇਮਪੈਡ A ਦਬਾਇਆ ਗਿਆ</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_b_pressed">ਗੇਮਪੈਡ B ਦਬਾਇਆ ਗਿਆ</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_up_pressed">ਗੇਮਪੈਡ ਉੱਪਰ ਦਬਾਇਆ ਗਿਆ</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_down_pressed">ਗੇਮਪੈਡ ਹੇਠਾਂ ਦਬਾਇਆ ਗਿਆ</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_left_pressed">ਗੇਮਪੈਡ ਖੱਬੇ ਦਬਾਇਆ ਗਿਆ</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_right_pressed">ਗੇਮਪੈਡ ਸੱਜੇ ਦਬਾਇਆ ਗਿਆ</string>
+    <string formatted="false" name="formula_editor_sensor_stage_width">ਸਟੇਜ ਦੀ ਚੌੜਾਈ</string>
+    <string formatted="false" name="formula_editor_sensor_stage_height">ਸਟੇਜ ਦੀ ਉਚਾਈ</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_front_left">Phiro ਅਗਲਾ ਖੱਬਾ ਸੈਂਸਰ</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_front_right">Phiro ਅਗਲਾ ਸੱਜਾ ਸੈਂਸਰ</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_side_left">Phiro ਪਾਸੇ ਵਾਲਾ ਖੱਬਾ ਸੈਂਸਰ</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_side_right">Phiro ਪਾਸੇ ਵਾਲਾ ਸੱਜਾ ਸੈਂਸਰ</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_bottom_left">Phiro ਹੇਠਲਾ ਖੱਬਾ ਸੈਂਸਰ</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_bottom_right">Phiro ਹੇਠਲਾ ਸੱਜਾ ਸੈਂਸਰ</string>
+    <string formatted="false" name="formula_editor_nfc_tag_id">NFC ਟੈਗ ID</string>
+    <string formatted="false" name="formula_editor_nfc_tag_message">NFC ਟੈਗ ਸੁਨੇਹਾ</string>
+    <string formatted="false" name="formula_editor_object_x">ਸਥਿਤੀ x</string>
+    <string formatted="false" name="formula_editor_object_y">ਸਥਿਤੀ y</string>
+    <string formatted="false" name="formula_editor_object_transparency">ਪਾਰਦਰਸ਼ਤਾ</string>
+    <string formatted="false" name="formula_editor_object_brightness">ਚਮਕ</string>
+    <string formatted="false" name="formula_editor_object_size">ਆਕਾਰ</string>
+    <string formatted="false" name="formula_editor_object_rotation">ਗਤੀ ਦੀ ਦਿਸ਼ਾ</string>
+    <string formatted="false" name="formula_editor_object_rotation_look">ਦਿੱਖ ਦੀ ਦਿਸ਼ਾ</string>
+    <string formatted="false" name="formula_editor_object_layer">ਪਰਤ</string>
+    <string formatted="false" name="formula_editor_object_x_velocity">x ਵੇਗ</string>
+    <string formatted="false" name="formula_editor_object_y_velocity">y ਵੇਗ</string>
+    <string formatted="false" name="formula_editor_object_angular_velocity">ਕੋਣੀ ਵੇਗ</string>
+    <string formatted="false" name="formula_editor_object_look_number">ਦਿੱਖ ਦਾ ਨੰਬਰ</string>
+    <string formatted="false" name="formula_editor_object_look_name">ਦਿੱਖ ਦਾ ਨਾਮ</string>
+    <string formatted="false" name="formula_editor_object_number_of_looks">ਦਿੱਖਾਂ ਦੀ ਗਿਣਤੀ</string>
+    <string formatted="false" name="formula_editor_object_background_number">ਪਿਛੋਕੜ ਦਾ ਨੰਬਰ</string>
+    <string formatted="false" name="formula_editor_object_background_name">ਪਿਛੋਕੜ ਦਾ ਨਾਮ</string>
+    <string formatted="false" name="formula_editor_object_number_of_backgrounds">ਪਿਛੋਕੜਾਂ ਦੀ ਗਿਣਤੀ</string>
+    <string formatted="false" name="formula_editor_object_distance_to">ਛੂਹਣ ਵਾਲੀ ਥਾਂ ਤੱਕ ਦੂਰੀ</string>
+    <string formatted="false" name="formula_editor_confirm">ਪੁਸ਼ਟੀ ਕਰੋ</string>
+    <string formatted="false" name="formula_editor_object">ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ</string>
+    <string formatted="false" name="formula_editor_functions">ਫੰਕਸ਼ਨ</string>
+    <string formatted="false" name="formula_editor_logic">ਤਰਕ</string>
+    <string formatted="false" name="formula_editor_device">ਸੈਂਸਰ</string>
+    <string formatted="false" name="formula_editor_device_sensors">ਡਿਵਾਈਸ ਸੈਂਸਰ</string>
+    <string formatted="false" name="formula_editor_functions_maths">ਗਣਿਤ</string>
+    <string formatted="false" name="formula_editor_functions_strings">ਟੈਕਸਟ</string>
+    <string formatted="false" name="formula_editor_functions_lists">ਸੂਚੀਆਂ</string>
+    <string formatted="false" name="formula_editor_logic_boolean">ਤਰਕੀ (ਬੂਲੀਅਨ) ਓਪਰੇਟਰ ਅਤੇ ਸਥਿਰ ਮੁੱਲ</string>
+    <string formatted="false" name="formula_editor_logic_comparison">ਤੁਲਨਾ ਓਪਰੇਟਰ</string>
+    <string formatted="false" name="formula_editor_object_look">ਦਿੱਖ ਦੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ</string>
+    <string formatted="false" name="formula_editor_object_movement">ਗਤੀ ਦੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ</string>
+    <string formatted="false" name="formula_editor_device_face_detection">ਚਿਹਰੇ ਦੀ ਪਛਾਣ</string>
+    <string formatted="false" name="formula_editor_device_pose_detection">ਸਰੀਰਕ ਮੁਦਰਾ ਦੀ ਪਛਾਣ</string>
+    <string formatted="false" name="formula_editor_device_text_recognition">ਟੈਕਸਟ ਦੀ ਪਛਾਣ</string>
+    <string formatted="false" name="formula_editor_device_object_recognition">ਚੀਜ਼ਾਂ ਦੀ ਪਛਾਣ</string>
+    <string formatted="false" name="formula_editor_device_date_and_time">ਤਾਰੀਖ਼ ਅਤੇ ਸਮਾਂ</string>
+    <string formatted="false" name="formula_editor_device_touch_detection">ਛੋਹ ਦੀ ਪਛਾਣ</string>
+    <string formatted="false" name="formula_editor_device_lego_nxt">LEGO Mindstorms NXT</string>
+    <string formatted="false" name="formula_editor_device_lego_ev3">LEGO Mindstorms EV3</string>
+    <string formatted="false" name="formula_editor_device_arduino">Arduino</string>
+    <string formatted="false" name="formula_editor_device_phiro">Phiro</string>
+    <string formatted="false" name="formula_editor_device_raspberry">Raspberry Pi</string>
+    <string formatted="false" name="formula_editor_device_drone">ਡਰੋਨ</string>
+    <string formatted="false" name="formula_editor_device_nfc">NFC</string>
+    <string formatted="false" name="formula_editor_device_cast">Chromecast</string>
+    <string formatted="false" name="formula_editor_string">Abc</string>
+    <string formatted="false" name="formula_editor_logic_notequal">≠</string>
+    <string formatted="false" name="formula_editor_logic_lesserthan">&lt;</string>
+    <string formatted="false" name="formula_editor_logic_greaterthan">&gt;</string>
+    <string formatted="false" name="formula_editor_logic_and">ਅਤੇ</string>
+    <string formatted="false" name="formula_editor_logic_or">ਜਾਂ</string>
+    <string formatted="false" name="formula_editor_logic_not">ਨਹੀਂ</string>
+    <string formatted="false" name="formula_editor_logic_greaterequal">≥</string>
+    <string formatted="false" name="formula_editor_logic_leserequal">≤</string>
+    <string formatted="false" name="formula_editor_logic_equal">=</string>
+    <string formatted="false" name="formula_editor_operator_mult">×</string>
+    <string formatted="false" name="formula_editor_operator_plus">+</string>
+    <string formatted="false" name="formula_editor_operator_minus">-</string>
+    <string formatted="false" name="formula_editor_operator_divide">÷</string>
+    <string formatted="false" name="formula_editor_operator_power">^</string>
+    <string formatted="false" name="formula_editor_image_button_description_delete">ਮਿਟਾਓ</string>
+    <string formatted="false" name="formula_editor_image_button_description_calculate">ਗਣਨਾ ਕਰੋ</string>
+    <string formatted="false" name="formula_editor_image_button_description_confirm">ਪੁਸ਼ਟੀ ਕਰੋ</string>
+    <string formatted="false" name="formula_editor_image_button_description_color_picker">ਰੰਗ ਚੋਣਕਾਰ</string>
+    <string formatted="false" name="formula_editor_image_button_description_functions_toggle">ਫੰਕਸ਼ਨ ਦਿਖਾਓ/ਲੁਕਾਓ</string>
+    <string formatted="false" name="formula_editor_variable_dialog_title">ਨਵਾਂ ਵੇਰੀਏਬਲ</string>
+    <string formatted="false" name="formula_editor_list_dialog_title">ਨਵੀਂ ਸੂਚੀ</string>
+    <string formatted="false" name="formula_editor_regex_html_extractor_dialog_title">HTML ਐਕਸਟਰੈਕਟਰ</string>
+    <string formatted="false" name="formula_editor_discard_changes_dialog_message">ਕੀ ਤੁਸੀਂ ਆਪਣੀਆਂ ਤਬਦੀਲੀਆਂ ਸੇਵ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?</string>
+    <string formatted="false" name="formula_editor_discard_changes_dialog_title">ਕੀ ਤਬਦੀਲੀਆਂ ਸੇਵ ਕਰਨੀਆਂ ਹਨ?</string>
+    <string formatted="false" name="formula_editor_new_string_name">ਨਵਾਂ ਟੈਕਸਟ</string>
+    <string formatted="false" name="formula_editor_dialog_change_text">ਟੈਕਸਟ ਬਦਲੋ</string>
+    <string formatted="false" name="formula_editor_dialog_change_regular_expression">ਰੈਗੂਲਰ ਐਕਸਪ੍ਰੈਸ਼ਨ ਬਦਲੋ</string>
+    <string formatted="false" name="formula_editor_fragment_data_current_items">ਮੌਜੂਦਾ ਆਈਟਮਾਂ</string>
+    <string formatted="false" name="formula_editor_data_dialog_is_list">ਇਸ ਨੂੰ ਸੂਚੀ ਬਣਾਓ</string>
+    <string formatted="false" name="formula_editor_sensor_face_detected">ਪਹਿਲਾ ਚਿਹਰਾ ਦਿਸਦਾ ਹੈ</string>
+    <string formatted="false" name="formula_editor_sensor_face_size">ਪਹਿਲੇ ਚਿਹਰੇ ਦਾ ਆਕਾਰ</string>
+    <string formatted="false" name="formula_editor_sensor_face_x_position">ਪਹਿਲੇ ਚਿਹਰੇ ਦੀ x ਸਥਿਤੀ</string>
+    <string formatted="false" name="formula_editor_sensor_face_y_position">ਪਹਿਲੇ ਚਿਹਰੇ ਦੀ y ਸਥਿਤੀ</string>
+    <string formatted="false" name="formula_editor_sensor_second_face_detected">ਦੂਜਾ ਚਿਹਰਾ ਦਿਸਦਾ ਹੈ</string>
+    <string formatted="false" name="formula_editor_sensor_second_face_size">ਦੂਜੇ ਚਿਹਰੇ ਦਾ ਆਕਾਰ</string>
+    <string formatted="false" name="formula_editor_sensor_second_face_x_position">ਦੂਜੇ ਚਿਹਰੇ ਦੀ x ਸਥਿਤੀ</string>
+    <string formatted="false" name="formula_editor_sensor_second_face_y_position">ਦੂਜੇ ਚਿਹਰੇ ਦੀ y ਸਥਿਤੀ</string>
+    <string formatted="false" name="formula_editor_sensor_head_top_x">ਸਿਰ ਦਾ ਸਿਖਰ x</string>
+    <string formatted="false" name="formula_editor_sensor_head_top_y">ਸਿਰ ਦਾ ਸਿਖਰ y</string>
+    <string formatted="false" name="formula_editor_sensor_neck_x">ਗਰਦਨ x</string>
+    <string formatted="false" name="formula_editor_sensor_neck_y">ਗਰਦਨ y</string>
+    <string formatted="false" name="formula_editor_sensor_nose_x">ਨੱਕ x</string>
+    <string formatted="false" name="formula_editor_sensor_nose_y">ਨੱਕ y</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_inner_x">ਖੱਬੀ ਅੱਖ ਦਾ ਅੰਦਰਲਾ ਕੋਨਾ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_inner_y">ਖੱਬੀ ਅੱਖ ਦਾ ਅੰਦਰਲਾ ਕੋਨਾ y</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_center_x">ਖੱਬੀ ਅੱਖ ਦਾ ਕੇਂਦਰ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_center_y">ਖੱਬੀ ਅੱਖ ਦਾ ਕੇਂਦਰ y</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_outer_x">ਖੱਬੀ ਅੱਖ ਦਾ ਬਾਹਰਲਾ ਕੋਨਾ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_outer_y">ਖੱਬੀ ਅੱਖ ਦਾ ਬਾਹਰਲਾ ਕੋਨਾ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_inner_x">ਸੱਜੀ ਅੱਖ ਦਾ ਅੰਦਰਲਾ ਕੋਨਾ x</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_inner_y">ਸੱਜੀ ਅੱਖ ਦਾ ਅੰਦਰਲਾ ਕੋਨਾ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_center_x">ਸੱਜੀ ਅੱਖ ਦਾ ਕੇਂਦਰ x</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_center_y">ਸੱਜੀ ਅੱਖ ਦਾ ਕੇਂਦਰ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_outer_x">ਸੱਜੀ ਅੱਖ ਦਾ ਬਾਹਰਲਾ ਕੋਨਾ x</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_outer_y">ਸੱਜੀ ਅੱਖ ਦਾ ਬਾਹਰਲਾ ਕੋਨਾ y</string>
+    <string formatted="false" name="formula_editor_sensor_left_ear_x">ਖੱਬਾ ਕੰਨ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_ear_y">ਖੱਬਾ ਕੰਨ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_ear_x">ਸੱਜਾ ਕੰਨ x</string>
+    <string formatted="false" name="formula_editor_sensor_right_ear_y">ਸੱਜਾ ਕੰਨ y</string>
+    <string formatted="false" name="formula_editor_sensor_mouth_left_corner_x">ਮੂੰਹ ਦਾ ਖੱਬਾ ਕੋਨਾ x</string>
+    <string formatted="false" name="formula_editor_sensor_mouth_left_corner_y">ਮੂੰਹ ਦਾ ਖੱਬਾ ਕੋਨਾ y</string>
+    <string formatted="false" name="formula_editor_sensor_mouth_right_corner_x">ਮੂੰਹ ਦਾ ਸੱਜਾ ਕੋਨਾ x</string>
+    <string formatted="false" name="formula_editor_sensor_mouth_right_corner_y">ਮੂੰਹ ਦਾ ਸੱਜਾ ਕੋਨਾ y</string>
+    <string formatted="false" name="formula_editor_sensor_left_shoulder_x">ਖੱਬਾ ਮੋਢਾ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_shoulder_y">ਖੱਬਾ ਮੋਢਾ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_shoulder_x">ਸੱਜਾ ਮੋਢਾ x</string>
+    <string formatted="false" name="formula_editor_sensor_right_shoulder_y">ਸੱਜਾ ਮੋਢਾ y</string>
+    <string formatted="false" name="formula_editor_sensor_left_elbow_x">ਖੱਬੀ ਕੂਹਣੀ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_elbow_y">ਖੱਬੀ ਕੂਹਣੀ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_elbow_x">ਸੱਜੀ ਕੂਹਣੀ x</string>
+    <string formatted="false" name="formula_editor_sensor_right_elbow_y">ਸੱਜੀ ਕੂਹਣੀ y</string>
+    <string formatted="false" name="formula_editor_sensor_left_wrist_x">ਖੱਬਾ ਗੁੱਟ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_wrist_y">ਖੱਬਾ ਗੁੱਟ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_wrist_x">ਸੱਜਾ ਗੁੱਟ x</string>
+    <string formatted="false" name="formula_editor_sensor_right_wrist_y">ਸੱਜਾ ਗੁੱਟ y</string>
+    <string formatted="false" name="formula_editor_sensor_left_pinky_knuckle_x">ਖੱਬੀ ਚੀਚੀ ਦੀ ਗੰਢ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_pinky_knuckle_y">ਖੱਬੀ ਚੀਚੀ ਦੀ ਗੰਢ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_pinky_knuckle_x">ਸੱਜੀ ਚੀਚੀ ਦੀ ਗੰਢ x</string>
+    <string formatted="false" name="formula_editor_sensor_right_pinky_knuckle_y">ਸੱਜੀ ਚੀਚੀ ਦੀ ਗੰਢ y</string>
+    <string formatted="false" name="formula_editor_sensor_left_index_knuckle_x">ਖੱਬੀ ਪਹਿਲੀ ਉਂਗਲ ਦੀ ਗੰਢ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_index_knuckle_y">ਖੱਬੀ ਪਹਿਲੀ ਉਂਗਲ ਦੀ ਗੰਢ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_index_knuckle_x">ਸੱਜੀ ਪਹਿਲੀ ਉਂਗਲ ਦੀ ਗੰਢ x</string>
+    <string formatted="false" name="formula_editor_sensor_right_index_knuckle_y">ਸੱਜੀ ਪਹਿਲੀ ਉਂਗਲ ਦੀ ਗੰਢ y</string>
+    <string formatted="false" name="formula_editor_sensor_left_thumb_knuckle_x">ਖੱਬੇ ਅੰਗੂਠੇ ਦੀ ਗੰਢ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_thumb_knuckle_y">ਖੱਬੇ ਅੰਗੂਠੇ ਦੀ ਗੰਢ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_thumb_knuckle_x">ਸੱਜੇ ਅੰਗੂਠੇ ਦੀ ਗੰਢ x</string>
+    <string formatted="false" name="formula_editor_sensor_right_thumb_knuckle_y">ਸੱਜੇ ਅੰਗੂਠੇ ਦੀ ਗੰਢ y</string>
+    <string formatted="false" name="formula_editor_sensor_left_hip_x">ਖੱਬਾ ਕੁੱਲ੍ਹਾ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_hip_y">ਖੱਬਾ ਕੁੱਲ੍ਹਾ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_hip_x">ਸੱਜਾ ਕੁੱਲ੍ਹਾ x</string>
+    <string formatted="false" name="formula_editor_sensor_right_hip_y">ਸੱਜਾ ਕੁੱਲ੍ਹਾ y</string>
+    <string formatted="false" name="formula_editor_sensor_left_knee_x">ਖੱਬਾ ਗੋਡਾ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_knee_y">ਖੱਬਾ ਗੋਡਾ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_knee_x">ਸੱਜਾ ਗੋਡਾ x</string>
+    <string formatted="false" name="formula_editor_sensor_right_knee_y">ਸੱਜਾ ਗੋਡਾ y</string>
+    <string formatted="false" name="formula_editor_sensor_left_ankle_x">ਖੱਬਾ ਗਿੱਟਾ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_ankle_y">ਖੱਬਾ ਗਿੱਟਾ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_ankle_x">ਸੱਜਾ ਗਿੱਟਾ x</string>
+    <string formatted="false" name="formula_editor_sensor_right_ankle_y">ਸੱਜਾ ਗਿੱਟਾ y</string>
+    <string formatted="false" name="formula_editor_sensor_left_heel_x">ਖੱਬੀ ਅੱਡੀ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_heel_y">ਖੱਬੀ ਅੱਡੀ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_heel_x">ਸੱਜੀ ਅੱਡੀ x</string>
+    <string formatted="false" name="formula_editor_sensor_right_heel_y">ਸੱਜੀ ਅੱਡੀ y</string>
+    <string formatted="false" name="formula_editor_sensor_left_foot_index_x">ਖੱਬੇ ਪੈਰ ਦੀਆਂ ਉਂਗਲਾਂ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_foot_index_y">ਖੱਬੇ ਪੈਰ ਦੀਆਂ ਉਂਗਲਾਂ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_foot_index_x">ਸੱਜੇ ਪੈਰ ਦੀਆਂ ਉਂਗਲਾਂ x</string>
+    <string formatted="false" name="formula_editor_sensor_right_foot_index_y">ਸੱਜੇ ਪੈਰ ਦੀਆਂ ਉਂਗਲਾਂ y</string>
+    <string formatted="false" name="formula_editor_sensor_text_from_camera">ਕੈਮਰੇ ਤੋਂ ਟੈਕਸਟ</string>
+    <string formatted="false" name="formula_editor_sensor_text_blocks_number">ਟੈਕਸਟ ਬਲਾਕਾਂ ਦੀ ਗਿਣਤੀ</string>
+    <string formatted="false" name="formula_editor_function_text_block_x">ਕੈਮਰੇ ਤੋਂ ਟੈਕਸਟ ਬਲਾਕ x</string>
+    <string formatted="false" name="formula_editor_function_text_block_y">ਕੈਮਰੇ ਤੋਂ ਟੈਕਸਟ ਬਲਾਕ y</string>
+    <string formatted="false" name="formula_editor_function_text_block_size">ਕੈਮਰੇ ਤੋਂ ਟੈਕਸਟ ਬਲਾਕ ਦਾ ਆਕਾਰ</string>
+    <string formatted="false" name="formula_editor_function_text_block_from_camera">ਕੈਮਰੇ ਤੋਂ ਟੈਕਸਟ ਬਲਾਕ</string>
+    <string formatted="false" name="formula_editor_function_text_block_language_from_camera">ਕੈਮਰੇ ਤੋਂ ਟੈਕਸਟ ਬਲਾਕ ਦੀ ਭਾਸ਼ਾ</string>
+    <string formatted="false" name="formula_editor_function_text_block_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_get_id_of_detected_object">ਪਛਾਣੀ ਗਈ ਚੀਜ਼ ਦੀ ID</string>
+    <string formatted="false" name="formula_editor_function_object_with_id_visible">ਇਸ ID ਵਾਲੀ ਚੀਜ਼ ਦਿਸਦੀ ਹੈ</string>
+    <string formatted="false" name="formula_editor_intro_title_formula_editor">ਫ਼ਾਰਮੂਲਾ ਐਡੀਟਰ</string>
+    <string formatted="false" name="formula_editor_intro_summary_formula_editor">ਫ਼ਾਰਮੂਲਾ ਐਡੀਟਰ ਨਾਲ ਤੁਸੀਂ ਗਣਿਤ ਅਤੇ ਤਰਕ ਵਾਲੇ ਫ਼ਾਰਮੂਲੇ ਬਣਾ ਸਕਦੇ ਹੋ, ਜਿਨ੍ਹਾਂ ਨੂੰ ਤੁਸੀਂ ਆਪਣੇ ਬਲਾਕਾਂ ਵਿੱਚ ਵਰਤ ਸਕਦੇ ਹੋ।\n\n“ਅਗਲਾ” ਦਬਾ ਕੇ ਜਾਰੀ ਰੱਖੋ ਜਾਂ “ਛੱਡੋ” ਨਾਲ ਬਾਹਰ ਨਿਕਲੋ।</string>
+    <string formatted="false" name="formula_editor_intro_title_input_field">ਇਨਪੁੱਟ ਖੇਤਰ</string>
+    <string formatted="false" name="formula_editor_intro_summary_input_field">ਇੱਥੇ ਤੁਸੀਂ ਆਪਣਾ ਫ਼ਾਰਮੂਲਾ ਦੇਖ ਅਤੇ ਸੋਧ ਸਕਦੇ ਹੋ।</string>
+    <string formatted="false" name="formula_editor_intro_title_keyboard">ਕੀਬੋਰਡ</string>
+    <string formatted="false" name="formula_editor_intro_summary_keyboard">ਇੱਥੇ ਤੁਸੀਂ ਆਪਣਾ ਫ਼ਾਰਮੂਲਾ ਬਣਾ ਸਕਦੇ ਹੋ, ਬਿਲਕੁਲ ਕੈਲਕੁਲੇਟਰ ਵਾਂਗ।</string>
+    <string formatted="false" name="formula_editor_intro_title_compute">ਗਣਨਾ</string>
+    <string formatted="false" name="formula_editor_intro_summary_compute">ਆਪਣੇ ਫ਼ਾਰਮੂਲੇ ਦਾ ਮੌਜੂਦਾ ਨਤੀਜਾ ਦੇਖਣ ਲਈ ਤੁਸੀਂ \"ਗਣਨਾ\" ਵਰਤ ਸਕਦੇ ਹੋ।</string>
+    <string formatted="false" name="formula_editor_intro_title_object">ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ</string>
+    <string formatted="false" name="formula_editor_intro_summary_object">ਇਹ ਉਹਨਾਂ ਮੁੱਲਾਂ ਦਾ ਸੰਗ੍ਰਹਿ ਹੈ ਜੋ ਤੁਹਾਡੇ ਮੌਜੂਦਾ ਪਾਤਰ ਜਾਂ ਵਸਤੂ ਦੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ ਦੱਸਦੇ ਹਨ। ਉਦਾਹਰਨ ਲਈ x- ਅਤੇ y-ਨਿਰਦੇਸ਼ਾਂਕ, ਜਾਂ ਮੌਜੂਦਾ ਗਤੀ।</string>
+    <string formatted="false" name="formula_editor_intro_title_functions">ਫੰਕਸ਼ਨ</string>
+    <string formatted="false" name="formula_editor_intro_summary_functions">ਕੈਲਕੁਲੇਟਰ ਵਾਂਗ, ਫ਼ਾਰਮੂਲਾ ਐਡੀਟਰ ਬਹੁਤ ਸਾਰੇ ਗਣਿਤਕ ਫੰਕਸ਼ਨ ਦਿੰਦਾ ਹੈ।\nਇੱਥੇ ਤੁਹਾਨੂੰ \"sin\" ਅਤੇ \"cos\" ਵਰਗੇ ਤਿਕੋਣਮਿਤੀ ਫੰਕਸ਼ਨ, ਬੇਤਰਤੀਬ ਸੰਖਿਆ ਬਣਾਉਣ ਵਾਲਾ ਫੰਕਸ਼ਨ, ਅਤੇ ਟੈਕਸਟ ਅਤੇ ਸੂਚੀ ਫੰਕਸ਼ਨ ਮਿਲਣਗੇ।</string>
+    <string formatted="false" name="formula_editor_intro_title_logic">ਤਰਕ</string>
+    <string formatted="false" name="formula_editor_intro_summary_logic">ਤਰਕ ਦੀ ਵਰਤੋਂ ਮੁੱਲਾਂ ਦੀ ਤੁਲਨਾ ਕਰਨ ਅਤੇ ਤਰਕੀ ਫ਼ਾਰਮੂਲਿਆਂ ਨੂੰ ਜੋੜਨ ਲਈ ਕੀਤੀ ਜਾਂਦੀ ਹੈ।\nਮੁੱਲਾਂ ਦੀ ਤੁਲਨਾ ਕਰਨ ਲਈ ਤੁਸੀਂ \"&gt;\" (ਇਸ ਤੋਂ ਵੱਡਾ) ਜਾਂ \"=\" (ਬਰਾਬਰ) ਵਰਗੇ ਤਰਕੀ ਓਪਰੇਟਰ ਵਰਤ ਸਕਦੇ ਹੋ।\nਤਰਕੀ ਫ਼ਾਰਮੂਲਿਆਂ ਨੂੰ ਜੋੜਨ ਲਈ ਤੁਸੀਂ \"ਅਤੇ\", \"ਜਾਂ\" ਅਤੇ \"ਨਹੀਂ\" ਵਰਗੇ ਤਰਕੀ ਓਪਰੇਟਰ ਵਰਤ ਸਕਦੇ ਹੋ।</string>
+    <string formatted="false" name="formula_editor_intro_title_device">ਸੈਂਸਰ</string>
+    <string formatted="false" name="formula_editor_intro_summary_device">\"ਸੈਂਸਰ\" ਵਿੱਚ ਤੁਹਾਨੂੰ ਉਹ ਜਾਣਕਾਰੀ ਮਿਲਦੀ ਹੈ ਜੋ ਤੁਹਾਡੀ ਡਿਵਾਈਸ ਰਿਕਾਰਡ ਕਰਦੀ ਹੈ।\nਉਦਾਹਰਨ ਲਈ, ਤੁਹਾਡੀ ਡਿਵਾਈਸ ਦਾ ਝੁਕਾਅ, ਜਾਂ ਤੁਹਾਡੇ ਆਲੇ-ਦੁਆਲੇ ਦੀ ਆਵਾਜ਼ ਦਾ ਪੱਧਰ।</string>
+    <string formatted="false" name="formula_editor_intro_title_data">ਡਾਟਾ</string>
+    <string formatted="false" name="formula_editor_intro_summary_data">ਤੁਹਾਡੇ ਪ੍ਰੋਜੈਕਟ ਵਿੱਚ ਵਰਤੇ ਗਏ ਵੇਰੀਏਬਲ ਅਤੇ ਸੂਚੀਆਂ ਇੱਥੇ ਮਿਲਦੀਆਂ ਹਨ। \nਤੁਸੀਂ ਇਹਨਾਂ ਨੂੰ ਸਿੱਧਾ ਆਪਣੇ ਫ਼ਾਰਮੂਲੇ ਵਿੱਚ ਪਾ ਸਕਦੇ ਹੋ, ਜਾਂ ਨਵੇਂ ਜੋੜ ਸਕਦੇ ਹੋ।</string>
+    <string formatted="false" name="formula_editor_listening_language_sensor">ਸੁਣਨ ਦੀ ਭਾਸ਼ਾ</string>
+    <string formatted="false" name="formula_editor_speech_recognition">ਬੋਲੀ ਦੀ ਪਛਾਣ</string>
+    <string formatted="false" name="camera_error_text_detection">ਟੈਕਸਟ ਦੀ ਪਛਾਣ ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਆਈ। ਹੋ ਸਕਦਾ ਹੈ ਕਿ ਕੁਝ ਹਿੱਸੇ ਅਜੇ ਵੀ ਪਿਛੋਕੜ ਵਿੱਚ ਡਾਊਨਲੋਡ ਹੋ ਰਹੇ ਹੋਣ। ਕਿਰਪਾ ਕਰਕੇ ਪੱਕਾ ਕਰੋ ਕਿ ਤੁਸੀਂ ਇੰਟਰਨੈੱਟ ਨਾਲ ਕਨੈਕਟ ਹੋ ਅਤੇ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਦੇਖੋ।</string>
+    <string formatted="false" name="warning_formula_recognized">ਤੁਸੀਂ ਅਜਿਹਾ ਟੈਕਸਟ ਲਿਖਿਆ ਹੈ ਜੋ ਫ਼ਾਰਮੂਲੇ ਵਰਗਾ ਲੱਗਦਾ ਹੈ। ਜੇ ਤੁਸੀਂ ਫੰਕਸ਼ਨ, ਸੈਂਸਰ, ਵੇਰੀਏਬਲ ਅਤੇ ਹੋਰ ਫ਼ਾਰਮੂਲਾ ਤੱਤ ਵਰਤਣਾ ਚਾਹੁੰਦੇ ਹੋ, ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਉਹਨਾਂ ਨੂੰ ਫ਼ਾਰਮੂਲਾ ਐਡੀਟਰ ਦੇ ਬਟਨਾਂ ਨਾਲ ਚੁਣੋ।</string>
+    <!--  -->
+    <!-- Brick Data Editor Strings -->
+    <string formatted="false" name="brick_show_variable">ਵੇਰੀਏਬਲ ਦਿਖਾਓ:</string>
+    <string formatted="false" name="brick_hide_variable">ਵੇਰੀਏਬਲ ਲੁਕਾਓ:</string>
+    <string formatted="false" name="brick_show_variable_position">ਇੱਥੇ</string>
+    <string formatted="false" name="brick_show_variable_size">ਆਕਾਰ:</string>
+    <string formatted="false" name="brick_show_variable_color">ਰੰਗ:</string>
+    <string formatted="false" name="brick_show_variable_aligned">ਇਕਸਾਰਤਾ:</string>
+    <string formatted="false" name="brick_show_variable_aligned_centered">ਵਿਚਕਾਰ</string>
+    <string formatted="false" name="brick_show_variable_aligned_left">ਖੱਬੇ</string>
+    <string formatted="false" name="brick_show_variable_aligned_right">ਸੱਜੇ</string>
+    <string formatted="false" name="brick_context_dialog_pick_color">ਰੰਗ ਚੁਣੋ</string>
+    <string formatted="false" name="brick_context_dialog_pick_note">ਸੁਰ ਚੁਣੋ</string>
+    <!-- -->
+    <!-- Camera related strings -->
+    <string formatted="false" name="brick_video">ਕੈਮਰਾ ਚਾਲੂ/ਬੰਦ ਕਰੋ:</string>
+    <string formatted="false" name="video_brick_camera_on">ਚਾਲੂ</string>
+    <string formatted="false" name="video_brick_camera_off">ਬੰਦ</string>
+    <string formatted="false" name="brick_choose_camera">ਇਹ ਕੈਮਰਾ ਵਰਤੋ:</string>
+    <string formatted="false" name="choose_camera_front">ਅਗਲਾ</string>
+    <string formatted="false" name="choose_camera_back">ਪਿਛਲਾ</string>
+    <string formatted="false" name="camera_error_generic">ਕੈਮਰਾ ਵਰਤਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਦੌਰਾਨ ਕੁਝ ਗ਼ਲਤ ਹੋ ਗਿਆ।</string>
+    <string formatted="false" name="camera_error_face_detection">ਚਿਹਰੇ ਦੀ ਪਛਾਣ ਵਿੱਚ ਕੋਈ ਸਮੱਸਿਆ ਆਈ। ਹੋ ਸਕਦਾ ਹੈ ਕਿ ਕੁਝ ਹਿੱਸੇ ਅਜੇ ਵੀ ਪਿਛੋਕੜ ਵਿੱਚ ਡਾਊਨਲੋਡ ਹੋ ਰਹੇ ਹੋਣ। ਕਿਰਪਾ ਕਰਕੇ ਪੱਕਾ ਕਰੋ ਕਿ ਤੁਸੀਂ ਇੰਟਰਨੈੱਟ ਨਾਲ ਕਨੈਕਟ ਹੋ ਅਤੇ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਦੇਖੋ।</string>
+    <!-- -->
+    <!-- Cast strings -->
+    <string formatted="false" name="cast_gamepad_A">A</string>
+    <string formatted="false" name="cast_gamepad_B">B</string>
+    <string formatted="false" name="cast_gamepad_up">ਉੱਪਰ</string>
+    <string formatted="false" name="cast_gamepad_down">ਹੇਠਾਂ</string>
+    <string formatted="false" name="cast_gamepad_left">ਖੱਬੇ</string>
+    <string formatted="false" name="cast_gamepad_right">ਸੱਜੇ</string>
+    <string formatted="false" name="cast_error_not_connected_msg">ਕਿਰਪਾ ਕਰਕੇ ਪਹਿਲਾਂ ਆਪਣੇ Chromecast ਨਾਲ ਕਨੈਕਟ ਕਰੋ</string>
+    <string formatted="false" name="cast_error_cast_bricks_in_no_cast_project">ਤੁਹਾਡਾ ਪ੍ਰੋਜੈਕਟ Chromecast ਬਲਾਕ ਵਰਤਦਾ ਹੈ, ਇਸ ਲਈ ਇਸ ਨੂੰ ਇਸ ਡਿਵਾਈਸ \'ਤੇ ਸ਼ੁਰੂ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ</string>
+    <string formatted="false" name="cast_device_selector_dialog_title">ਕਾਸਟ ਕਰੋ</string>
+    <string formatted="false" name="cast_button_menu_item_title">ਕਾਸਟ ਬਟਨ</string>
+    <string formatted="false" name="cast_ready_to_cast">ਇਸ \'ਤੇ ਕਾਸਟ ਕਰਨ ਲਈ ਤਿਆਰ:</string>
+    <string formatted="false" name="cast_enable_cast_feature">Chromecast ਸੁਵਿਧਾਵਾਂ ਬੰਦ ਹਨ। ਕਿਰਪਾ ਕਰਕੇ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਕਾਸਟ ਸੁਵਿਧਾਵਾਂ ਚਾਲੂ ਕਰੋ।</string>
+    <string formatted="false" name="cast_searching_for_cast_devices">Chromecast ਡਿਵਾਈਸਾਂ ਦੀ ਖੋਜ ਹੋ ਰਹੀ ਹੈ</string>
+    <string formatted="false" name="cast_trouble_finding_devices_tip">.\nਤੁਹਾਡੀ ਡਿਵਾਈਸ ਨਹੀਂ ਦਿਸ ਰਹੀ? ਆਪਣੀ ਡਿਵਾਈਸ ਦਾ Wi-Fi ਬੰਦ ਕਰਕੇ ਦੁਬਾਰਾ ਚਾਲੂ ਕਰੋ।</string>
+    <string formatted="false" name="cast_connection_timout_msg">ਕਨੈਕਸ਼ਨ ਦਾ ਸਮਾਂ ਖ਼ਤਮ ਹੋ ਗਿਆ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <string formatted="false" name="cast_screen_pause_text">ਰੁਕਿਆ ਹੋਇਆ</string>
+    <!-- -->
+    <string formatted="false" name="deletion_alert_title">ਮਿਟਾਉਣਾ ਹੈ?</string>
+    <string formatted="false" name="deletion_alert_text">ਅਜਿਹਾ ਵੇਰੀਏਬਲ ਜਾਂ ਸੂਚੀ ਮਿਟਾਉਣ ਨਾਲ, ਜੋ ਅਜੇ ਵਰਤੋਂ ਵਿੱਚ ਹੈ, ਗ਼ਲਤੀਆਂ ਹੋ ਸਕਦੀਆਂ ਹਨ। ਤੁਸੀਂ ਇਸ ਨੂੰ ਵਾਪਸ ਨਹੀਂ ਕਰ ਸਕਦੇ!</string>
+    <!-- Upload progress dialog -->
+    <string formatted="false" name="progress_upload_dialog_message">ਤੁਹਾਡਾ ਪ੍ਰੋਜੈਕਟ ਐਪ ਦੀ ਸਾਂਝ ਵਾਲੀ ਸਾਈਟ \'ਤੇ ਅੱਪਲੋਡ ਹੁੰਦਾ ਹੈ, ਜਿੱਥੇ ਦੂਜੇ ਲੋਕ ਇਸ ਨੂੰ ਵਰਤ ਅਤੇ ਡਾਊਨਲੋਡ ਕਰ ਸਕਦੇ ਹਨ। ਤੁਸੀਂ ਆਪਣੇ ਪ੍ਰੋਜੈਕਟ ਨੂੰ ਇੱਕ ਵੱਖਰੀ ਐਪ ਵਜੋਂ ਵੀ ਡਾਊਨਲੋਡ ਕਰ ਸਕਦੇ ਹੋ।</string>
+    <string formatted="false" name="progress_upload_dialog_failed">ਅੱਪਲੋਡ ਨਹੀਂ ਹੋ ਸਕਿਆ। ਅੱਪਲੋਡ ਸੁਵਿਧਾ ਇਸ ਵੇਲੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।</string>
+    <string formatted="false" name="progress_upload_dialog_show_program">ਪ੍ਰੋਜੈਕਟ ਦਿਖਾਓ</string>
+    <!--  -->
+    <!-- unchanged upload dialog -->
+    <string formatted="false" name="unchanged_upload_warning">ਜੋ ਪ੍ਰੋਜੈਕਟ ਤੁਸੀਂ ਅੱਪਲੋਡ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰ ਰਹੇ ਹੋ, ਉਹ ਬਿਲਕੁਲ ਇਸੇ ਰੂਪ ਵਿੱਚ ਕਮਿਊਨਿਟੀ ਪਲੇਟਫਾਰਮ \'ਤੇ ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ। ਆਪਣਾ ਰੀਮਿਕਸ ਕੀਤਾ ਪ੍ਰੋਜੈਕਟ ਅੱਪਲੋਡ ਕਰਨ ਤੋਂ ਪਹਿਲਾਂ ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਵਿੱਚ ਬਦਲਾਅ ਕਰੋ, ਅਤੇ ਬਿਹਤਰ ਹੋਵੇਗਾ ਜੇ ਤੁਸੀਂ ਇਸ ਨੂੰ ਹੋਰ ਵਧੀਆ ਬਣਾਓ।</string>
+    <string formatted="false" name="unchanged_upload_info">ਕਿਰਪਾ ਕਰਕੇ ਕਮਿਊਨਿਟੀ ਸਾਈਟ ਦੇ ਕ੍ਰੈਡਿਟ ਭਾਗ ਵਿੱਚ ਜਾਂ ਪ੍ਰੋਜੈਕਟ ਦੇ ਵਿਕਲਪਾਂ ਵਿੱਚ ਮੂਲ ਲੇਖਕ ਲਈ ਕੁਝ ਚੰਗੇ ਸ਼ਬਦ ਲਿਖਣ ਬਾਰੇ ਸੋਚੋ। ਧਿਆਨ ਦਿਓ ਕਿ ਤੁਹਾਡੇ ਸਫਲਤਾਪੂਰਵਕ ਅੱਪਲੋਡ ਕਰਨ ਤੋਂ ਬਾਅਦ ਉਸ ਵਰਤੋਂਕਾਰ ਨੂੰ ਸੂਚਨਾ ਮਿਲੇਗੀ।</string>
+    <string formatted="false" name="unchanged_upload_url">ਰੀਮਿਕਸ ਬਾਰੇ ਹੋਰ ਜਾਣਨ ਲਈ, ਕਿਰਪਾ ਕਰਕੇ %1s \'ਤੇ ਜਾਓ।</string>
+    <!-- -->
+    <!-- Snackbar hints -->
+    <string formatted="false" name="got_it">ਸਮਝ ਆ ਗਈ</string>
+    <string formatted="false" name="preference_description_hints">ਸੰਕੇਤ ਦਿਖਾਉਣ ਲਈ ਚਾਲੂ ਕਰੋ</string>
+    <string formatted="false" name="preference_title_enable_hints">ਸੰਕੇਤ ਦਿਖਾਓ</string>
+    <string formatted="false" name="hint_category">ਸਾਰੇ ਬਲਾਕ ਸ਼੍ਰੇਣੀਆਂ ਵਿੱਚ ਵੰਡੇ ਹੋਏ ਹਨ। ਜਿਹੜੀ ਸ਼੍ਰੇਣੀ ਤੁਸੀਂ ਲੱਭ ਰਹੇ ਹੋ, ਉਹ ਚੁਣੋ।</string>
+    <string formatted="false" name="hint_bricks">ਆਪਣੀ ਸਕ੍ਰਿਪਟ ਵਿੱਚ ਬਲਾਕ ਜੋੜਨ ਲਈ, ਜਿਹੜਾ ਬਲਾਕ ਤੁਸੀਂ ਵਰਤਣਾ ਚਾਹੁੰਦੇ ਹੋ ਉਸ ਨੂੰ ਦਬਾਓ।</string>
+    <string formatted="false" name="hint_scripts">ਸਕ੍ਰਿਪਟ ਤੁਹਾਡੇ ਪਾਤਰ ਜਾਂ ਵਸਤੂ ਦਾ ਵਿਹਾਰ ਤੈਅ ਕਰਦੀ ਹੈ। ਸਕ੍ਰਿਪਟ ਵਿੱਚ ਬਲਾਕ ਜੋੜਨ ਲਈ \"+\" ਚਿੰਨ੍ਹ ਦਬਾਓ।</string>
+    <string formatted="false" name="hint_looks">ਇੱਥੇ ਤੁਹਾਨੂੰ ਤੁਹਾਡੇ ਪਾਤਰ ਜਾਂ ਵਸਤੂ ਦੀਆਂ ਵੱਖ-ਵੱਖ ਦਿੱਖਾਂ ਮਿਲਦੀਆਂ ਹਨ। ਨਵੀਂ ਦਿੱਖ ਜੋੜਨ ਲਈ \"+\" ਚਿੰਨ੍ਹ ਦਬਾਓ।</string>
+    <string formatted="false" name="hint_sounds">ਇੱਥੇ ਤੁਸੀਂ ਆਪਣੇ ਪਾਤਰ ਜਾਂ ਵਸਤੂ ਵਿੱਚ ਨਵੀਆਂ ਆਵਾਜ਼ਾਂ ਜੋੜ ਸਕਦੇ ਹੋ। \"ਆਵਾਜ਼\" ਸ਼੍ਰੇਣੀ ਦਾ ਬਲਾਕ ਵਰਤਣਾ ਯਾਦ ਰੱਖੋ।</string>
+    <string formatted="false" name="hint_objects">ਤੁਹਾਡੇ ਪ੍ਰੋਜੈਕਟ ਵਿੱਚ ਵੱਖ-ਵੱਖ ਪਾਤਰ ਅਤੇ ਵਸਤੂਆਂ ਹੁੰਦੀਆਂ ਹਨ, ਜੋ ਇੱਕ-ਦੂਜੇ ਨਾਲ ਤਾਲਮੇਲ ਕਰ ਸਕਦੀਆਂ ਹਨ। ਨਵਾਂ ਪਾਤਰ ਜਾਂ ਵਸਤੂ ਜੋੜਨ ਲਈ \"+\" ਚਿੰਨ੍ਹ ਦਬਾਓ।</string>
+    <!--  -->
+    <!-- Dialog Disable hints -->
+    <string formatted="false" name="dialog_disable_hints_title">ਸੰਕੇਤ ਦਿਖਾਉਣੇ ਹਨ?</string>
+    <string formatted="false" name="dialog_disable_hints_text">ਤੁਹਾਡਾ ਪਹਿਲਾ ਪ੍ਰੋਜੈਕਟ ਬਣਾਉਂਦੇ ਸਮੇਂ ਸੰਕੇਤ ਤੁਹਾਨੂੰ ਮਦਦਗਾਰ ਜਾਣਕਾਰੀ ਦਿੰਦੇ ਹਨ।\n\nਸੰਕੇਤ ਦਿਖਾਉਣੇ ਹਨ ਜਾਂ ਨਹੀਂ, ਇਹ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਬਦਲਿਆ ਜਾ ਸਕਦਾ ਹੈ।</string>
+    <string formatted="false" name="dialog_disable_hints_button_hide">ਲੁਕਾਓ</string>
+    <string formatted="false" name="dialog_disable_hints_button_show">ਦਿਖਾਓ</string>
+    <!--  -->
+    <!-- Crash report dialog -->
+    <!--  -->
+    <!-- Multilingual List -->
+    <string formatted="false" name="device_language">ਤੁਹਾਡੀ ਡਿਵਾਈਸ ਦੀ ਭਾਸ਼ਾ</string>
+    <!-- Symbols -->
+    <string formatted="false" name="percent_symbol">%</string>
+    <string formatted="false" name="hertz_symbol">㎐</string>
+    <string formatted="false" name="no_internet_connection">ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਨਹੀਂ ਹੈ। ਪੱਕਾ ਕਰੋ ਕਿ Wi-Fi ਜਾਂ ਮੋਬਾਈਲ ਡਾਟਾ ਚਾਲੂ ਹੈ।</string>
+    <string formatted="false" name="edit">ਸੋਧੋ</string>
+    <string formatted="false" name="data_value">ਮੁੱਲ</string>
+    <string formatted="false" name="category_recently_used">ਹਾਲ ਹੀ ਵਿੱਚ ਵਰਤੇ ਗਏ</string>
+    <string formatted="false" name="new_sprite_dialog_place_visually">ਦੇਖ ਕੇ ਰੱਖੋ</string>
+    <string formatted="false" name="place_visually_text">ਤੁਹਾਨੂੰ ਨਵੇਂ ਪਾਤਰ ਜਾਂ ਵਸਤੂ ਨੂੰ ਸਟੇਜ \'ਤੇ ਰੱਖਣ ਲਈ ਕਿਹਾ ਜਾਵੇਗਾ।</string>
+    <string formatted="false" name="new_empty_sprite_note">ਨੋਟ: ਪਾਤਰ ਜਾਂ ਵਸਤੂ ਬਿਨਾਂ ਦਿੱਖ ਦੇ ਬਣਾਈ ਜਾਵੇਗੀ।</string>
+    <!-- Information -->
+    <string formatted="false" name="no_variable_selected">ਕੋਈ ਵੇਰੀਏਬਲ ਨਹੀਂ ਚੁਣਿਆ ਗਿਆ</string>
+    <string formatted="false" name="search">ਖੋਜੋ</string>
+    <string formatted="false" name="no_results_found">ਕੋਈ ਨਤੀਜਾ ਨਹੀਂ ਮਿਲਿਆ</string>
+    <string formatted="false" name="query_field_is_empty">ਖੋਜ ਖੇਤਰ ਖਾਲੀ ਹੈ</string>
+    <string formatted="false" name="paste">ਚਿਪਕਾਓ</string>
+    <!-- Particle Effects -->
+    <string formatted="false" name="fade_particle_effect">ਕਣ ਪ੍ਰਭਾਵ ਨੂੰ ਹੌਲੀ-ਹੌਲੀ:</string>
+    <string formatted="false" name="particle_effects_fade_in">ਦਿਖਾਓ</string>
+    <string formatted="false" name="particle_effects_fade_out">ਲੁਕਾਓ</string>
+    <string formatted="false" name="turn_particle_effect_additivity">ਕਣ ਪ੍ਰਭਾਵ ਦਾ ਜੋੜਵਾਂ ਮਿਸ਼ਰਣ ਚਾਲੂ/ਬੰਦ ਕਰੋ:</string>
+    <string formatted="false" name="particle_effects_additive_on">ਚਾਲੂ</string>
+    <string formatted="false" name="particle_effects_additive_off">ਬੰਦ</string>
+    <string formatted="false" name="set_particle_color_to">ਕਣਾਂ ਦਾ ਰੰਗ ਇਸ \'ਤੇ ਸੈੱਟ ਕਰੋ:</string>
+    <string formatted="false" name="undo_sort">ਕ੍ਰਮਬੱਧ ਕਰਨਾ ਵਾਪਸ ਕਰੋ</string>
+    <string formatted="false" name="sort">ਕ੍ਰਮਬੱਧ ਕਰੋ</string>
+    <string formatted="false" name="checkbox">ਚੈੱਕਬਾਕਸ</string>
+    <!-- Shortcut strings -->
+    <string formatted="false" name="pin_to_home_screen">ਹੋਮ ਸਕ੍ਰੀਨ \'ਤੇ ਪਿੰਨ ਕਰੋ</string>
+    <string formatted="false" name="shortcut_not_supported">ਇਹ ਡਿਵਾਈਸ ਸ਼ਾਰਟਕੱਟਾਂ ਦਾ ਸਮਰਥਨ ਨਹੀਂ ਕਰਦੀ</string>
+    <string formatted="false" name="project_busy_try_again">ਪ੍ਰੋਜੈਕਟ ਰੁੱਝਿਆ ਹੋਇਆ ਹੈ, ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ</string>
+    <string formatted="false" name="shortcut_project_not_found">ਪ੍ਰੋਜੈਕਟ ਨਹੀਂ ਮਿਲਿਆ, ਸ਼ਾਰਟਕੱਟ ਬੰਦ ਕਰ ਦਿੱਤਾ ਗਿਆ</string>
+    <string formatted="false" name="shortcut_permission_required_message">ਹੋਮ ਸਕ੍ਰੀਨ \'ਤੇ ਸ਼ਾਰਟਕੱਟ ਜੋੜਨ ਤੋਂ ਪਹਿਲਾਂ ਇਸ ਡਿਵਾਈਸ \'ਤੇ ਸ਼ਾਰਟਕੱਟ ਦੀ ਇਜਾਜ਼ਤ ਦੇਣੀ ਜ਼ਰੂਰੀ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਇਜਾਜ਼ਤ ਦਿਓ।</string>
+    <string formatted="false" name="miui_open_settings">ਸੈਟਿੰਗਾਂ ਖੋਲ੍ਹੋ</string>
+    <string formatted="false" name="shortcut_already_pinned">ਇਹ ਪ੍ਰੋਜੈਕਟ ਪਹਿਲਾਂ ਹੀ ਤੁਹਾਡੀ ਹੋਮ ਸਕ੍ਰੀਨ \'ਤੇ ਪਿੰਨ ਕੀਤਾ ਹੋਇਆ ਹੈ</string>
+</resources>

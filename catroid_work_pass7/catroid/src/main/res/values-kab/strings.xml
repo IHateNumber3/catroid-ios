@@ -1,0 +1,2006 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--
+  ~ Catroid: An on-device visual programming system for Android devices
+  ~ Copyright (C) 2010-2026 The Catrobat Team
+  ~ (<http://developer.catrobat.org/credits>)
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU Affero General Public License as
+  ~ published by the Free Software Foundation, either version 3 of the
+  ~ License, or (at your option) any later version.
+  ~
+  ~ An additional term exception under section 7 of the GNU Affero
+  ~ General Public License, version 3, is available at
+  ~ http://developer.catrobat.org/license_additional_term
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU Affero General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU Affero General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- General terms -->
+    <string formatted="false" name="stage">Asayes</string>
+    <string formatted="false" name="play">Urar</string>
+    <string formatted="false" name="settings">Iɣewwaṛen</string>
+    <string formatted="false" name="redo">Err-d</string>
+    <string formatted="false" name="undo">Sefsex</string>
+    <string formatted="false" name="new_option">amaynut…</string>
+    <string formatted="false" name="edit_option">ẓreg…</string>
+    <string formatted="false" name="confirm">Sentem</string>
+    <string formatted="false" name="ignore">Anef</string>
+    <string formatted="false" name="cancel">Sefsex</string>
+    <string formatted="false" name="save">Sekles</string>
+    <string formatted="false" name="help">Tallelt</string>
+    <string formatted="false" name="discard">Sefsex</string>
+    <string formatted="false" name="next">Uḍfiṛ</string>
+    <string formatted="false" name="ok">Ih</string>
+    <string formatted="false" name="done">Yettwaxdem</string>
+    <string formatted="false" name="close">Mdel</string>
+    <string formatted="false" name="assistant">Amɛiwen</string>
+    <string formatted="false" name="yes">Ih</string>
+    <string formatted="false" name="no">Ala</string>
+    <string formatted="false" name="once">Tikkelt</string>
+    <string formatted="false" name="always">Yal tikkelt</string>
+    <string formatted="false" name="deny">Agi</string>
+    <string formatted="false" name="do_not_show_again">UR D-SSKAN ARA TIKKELT-NNIḌEN</string>
+    <string formatted="false" name="accept">Qbel</string>
+    <string formatted="false" name="decline">Agi</string>
+    <string formatted="false" name="select_all">Fren meṛṛa</string>
+    <string formatted="false" name="deselect_all">Kkes afran meṛṛa</string>
+    <string formatted="false" name="skip">zgel</string>
+    <string formatted="false" name="warning">Ḥader</string>
+    <string formatted="false" name="error">Tuccḍa</string>
+    <string formatted="false" name="loading">Yessalay-d…</string>
+    <string formatted="false" name="please_wait">Ma ulac aɣilif, rǧu</string>
+    <string formatted="false" name="search_hint">Anadi…</string>
+    <string formatted="false" name="backpack_add">Rnu ɣer uqrab</string>
+    <string formatted="false" name="share_website_text">share.catrob.at</string>
+    <!-- Security warning dialog -->
+    <string formatted="false" name="security_warning_dialog_msg">Asenfar i d-tsadreḍ yettḥessis i taɣect-ik·im deg ugilal yerna yettazen isefka ɣer Internet. Ahat ulac deg-s ugur, yerna yezmer ad yili d ayen ilaqen i tikli-ines. Maca, ma ulac aɣilif, ḥrez ad yili wayen i d-tettiniḍ mi ara iteddu usenfar d ayen ur nesɛi ugur. Ma tcukkeḍ, ma ulac aɣilif kkes asenfar i d-tsadreḍ. Tzemreḍ daɣen ad tcetkiḍ ɣef usenfar deg usebter-ines deg tɣerɣert n temɣiwant Catrobat ma tettḥeqqeḍ d akken yeẓẓi.</string>
+    <!-- Replace Api dialog -->
+    <string formatted="false" name="api_replacement_dialog_neutral">Sali war abeddel</string>
+    <string formatted="false" name="api_replacement_dialog_accept">Sali s tsura yettusemselsen</string>
+    <string formatted="false" name="api_replacement_dialog_warning">Asenfar-a yegber iblugen yeqqnen ɣer Web, yerna yettban-d yegber tisura API. Ma ulac aɣilif, wali %1s i wakken ad tẓreḍ acimi asali n tsura-a yezmer ad yili d aɣbel.</string>
+    <string formatted="false" name="api_replacement">sekcem tasarut API dagi</string>
+    <!-- -->
+    <!-- Login/Logout Mechanism -->
+    <string formatted="false" name="loading_check_oauth_token">Asenqed n yisefka n tuqqna…</string>
+    <string formatted="false" name="loading_google_exchange_code">Asemmeskel n yisefka n tuqqna Google…</string>
+    <string formatted="false" name="loading_google_login">Tuqqna s Google ɣer uqeddac-nneɣ temmed…</string>
+    <string formatted="false" name="logout_successful">Tuffɣa tedda akken iwata</string>
+    <string formatted="false" name="degrees">tiseddarin</string>
+    <string formatted="false" name="background">Agilal</string>
+    <string formatted="false" name="landscape">s tehri</string>
+    <string formatted="false" name="portrait">s teɣzi</string>
+    <string formatted="false" name="unknown">arussin</string>
+    <string formatted="false" name="disconnect">Ffeɣ seg tuqqna</string>
+    <!--  -->
+    <!-- Main Menu -->
+    <string formatted="false" name="main_menu_continue">Kemmel asenfar</string>
+    <string formatted="false" name="main_menu_new">Asenfar amaynut</string>
+    <string formatted="false" name="main_menu_programs">Isenfaren</string>
+    <string formatted="false" name="main_menu_help">Tallelt</string>
+    <string formatted="false" name="main_menu_web">Catrobat</string>
+    <string formatted="false" name="main_menu_upload">Sali asenfar</string>
+    <string formatted="false" name="main_menu_play">Urar asenfar</string>
+    <string formatted="false" name="main_menu_rate_app">Mudd-aɣ tazmilt!</string>
+    <string formatted="false" name="main_menu_terms_of_use">Tiwtilin n useqdec d tenfa</string>
+    <string formatted="false" name="main_menu_privacy_policy">Tasertit n tbaḍnit</string>
+    <string formatted="false" name="main_menu_about">Ɣef usnas-a</string>
+    <string formatted="false" name="main_menu_login">Qqen</string>
+    <string formatted="false" name="main_menu_logout">Ffeɣ</string>
+    <string formatted="false" name="main_menu_scratch_converter">Amselkat n Scratch</string>
+    <string formatted="false" name="main_menu_play_store_not_installed">Ulac taḥanut n yisnasen</string>
+    <!--  -->
+    <!-- Marketing activity -->
+    <string formatted="false" name="marketing_created_with">Yettwaxleq s</string>
+    <string formatted="false" name="marketing_app_details">Talqayt ɣef usnas-a</string>
+    <string formatted="false" name="marketing_more_on_google_play">Ugar n yisnasen deg tḥanut n yisnasen</string>
+    <string formatted="false" name="error_cannot_open_huawei_app_gallery">Ayhuh! Ur yezmir ara ad yeldi Huawei AppGallery, ma ulac aɣilif ɛreḍ tikkelt-nniḍen ticki.</string>
+    <string formatted="false" name="google_play_store_logo">Google Play Store</string>
+    <string formatted="false" name="huawei_app_gallery">Huawei App Gallery</string>
+    <!-- NFC activity -->
+    <string formatted="false" name="nfc_activity_title">Tibzimin NFC</string>
+    <!-- Settings activity -->
+    <string formatted="false" name="preference_title">Iɣewwaṛen</string>
+    <string formatted="false" name="preference_title_language">Tutlayt</string>
+    <string formatted="false" name="preference_description_language">Fren tutlayt n usnas</string>
+    <string formatted="false" name="preference_title_web_access">Anekcum ɣer Web</string>
+    <string formatted="false" name="preference_description_web_access">Ẓreg i wakken ad ternuḍ neɣ ad tekkseḍ taɣulin tuḍfirin</string>
+    <string formatted="false" name="preference_screen_web_access_title">Ẓreg taɣulin tuḍfirin</string>
+    <string formatted="false" name="preference_title_ai">Asiɣzef n tegzi tawurmant (AI)</string>
+    <string formatted="false" name="preference_description_ai">Rmed iblugen d imaṭṭafen n AI</string>
+    <string formatted="false" name="preference_title_ai_speech_recognition">Tiɣimit n wawal</string>
+    <string formatted="false" name="preference_description_ai_speech_recognition">Rmed iblugen d imaṭṭafen n tɣimit n wawal</string>
+    <string formatted="false" name="preference_title_ai_speech_synthetization">Asuddes n wawal</string>
+    <string formatted="false" name="preference_description_ai_speech_synthetization">Rmed iblugen d imaṭṭafen n usuddes n wawal</string>
+    <string formatted="false" name="preference_title_ai_face_detection">Tifin n wudem</string>
+    <string formatted="false" name="preference_description_ai_face_detection">Rmed iblugen d imaṭṭafen n tifin n wudem</string>
+    <string formatted="false" name="preference_title_ai_pose_detection">Tifin n tɣessa</string>
+    <string formatted="false" name="preference_description_ai_pose_detection">Rmed iblugen d imaṭṭafen n tifin n tɣessa</string>
+    <string formatted="false" name="preference_title_ai_text_recognition">Tiɣimit n uḍris</string>
+    <string formatted="false" name="preference_description_ai_text_recognition">Rmed iblugen d imaṭṭafen n tɣimit n uḍris</string>
+    <string formatted="false" name="preference_title_ai_object_recognition">Tiɣimit n tɣawsiwin</string>
+    <string formatted="false" name="preference_description_ai_object_recognition">Rmed imaṭṭafen n tɣimit d uḍfar n tɣawsiwin</string>
+    <string formatted="false" name="preference_title_accessibility">Tuffart</string>
+    <string formatted="false" name="preference_description_accessibility">Beddel udem n usnas</string>
+    <string formatted="false" name="preference_title_accessibility_profiles">Imuɣna n tuffart</string>
+    <string formatted="false" name="preference_title_accessibility_profile">Imuɣna yettwasbadun</string>
+    <string formatted="false" name="preference_title_accessibility_profile_headline">Imuɣna</string>
+    <string formatted="false" name="preference_title_accessibility_predefined_profile_headline">Imuɣna yettwasbadun</string>
+    <string formatted="false" name="preference_description_accessibility_profiles">Fren amaɣnu n tuffart yettwasbadun</string>
+    <string formatted="false" name="preference_title_accessibility_text_appearance">Udem n uḍris</string>
+    <string formatted="false" name="preference_title_accessibility_handling">Aseqdec</string>
+    <string formatted="false" name="preference_title_accessibility_category_icons_big">Tignitin timeqqranin</string>
+    <string formatted="false" name="preference_description_accessibility_category_icons_big">Sali tiddi n tignitin.</string>
+    <string formatted="false" name="preference_title_accessibility_category_icons_high_contrast">Tignitin s umgarad ameqqran</string>
+    <string formatted="false" name="preference_title_accessibility_Brick_icons">Tignitin</string>
+    <string formatted="false" name="preference_title_accessibility_category_icons">Sken tignitin</string>
+    <string formatted="false" name="preference_description_accessibility_category_icons">Rnu tignitin i taggayin d yiblugen.</string>
+    <string formatted="false" name="preference_title_accessibility_high_contrast">Amgarad ameqqran</string>
+    <string formatted="false" name="preference_description_accessibility_high_contrast">Sali amgarad n uḍris.</string>
+    <string formatted="false" name="preference_description_accessibility_large_text">Sali tiddi n uḍris.</string>
+    <string formatted="false" name="preference_title_accessibility_large_text">Aḍris ameqqran</string>
+    <string formatted="false" name="preference_title_accessibility_element_spacing">Tallunt meqqren gar yiferdisen</string>
+    <string formatted="false" name="preference_description_accessibility_element_spacing">Sali tallunt gar yiferdisen deg tebdarin.</string>
+    <string formatted="false" name="preference_title_accessibility_dragndrop_delay">Tanzagt n uzuɣer-sers</string>
+    <string formatted="false" name="preference_description_accessibility_dragndrop_delay">Tanzagt n uzuɣer-sers i yiblugen.</string>
+    <string formatted="false" name="preference_title_accessibility_beginner_bricks">Askar n yinebdi</string>
+    <string formatted="false" name="preference_description_accessibility_beginner_bricks">Sken kan timahilin fessusen.</string>
+    <string formatted="false" name="preference_title_accessibility_font_style">Fren anaw n uḍris</string>
+    <string formatted="false" name="accessibility_font_regular">Amagnu</string>
+    <string formatted="false" name="accessibility_font_serif">Serif</string>
+    <string formatted="false" name="accessibility_font_dyslexic">Dyslexic</string>
+    <string formatted="false" name="accessibility_settings_applied">Isnifal ttwasnasen</string>
+    <string formatted="false" name="preference_access_title_profile_default">Amezwer</string>
+    <string formatted="false" name="preference_access_summary_profile_default">Iɣewwaṛen imezwura</string>
+    <string formatted="false" name="preference_access_title_profile_custom">Amaɣnu-inu udmawan</string>
+    <string formatted="false" name="preference_access_summary_profile_custom">Iɣewwaṛen-inu udmawanen</string>
+    <string formatted="false" name="preference_access_title_profile_argus">Argus</string>
+    <string formatted="false" name="preference_access_summary_profile_argus">Amgarad ameqqran, tignitin-nniḍen</string>
+    <string formatted="false" name="preference_access_title_profile_odin">Odin</string>
+    <string formatted="false" name="preference_access_summary_profile_odin">Aḍris ameqqran, tignitin timeqqranin, tallunt meqqren gar yiferdisen, amgarad ameqqran</string>
+    <string formatted="false" name="preference_access_title_profile_fenrir">Fenrir</string>
+    <string formatted="false" name="preference_access_summary_profile_fenrir">Tallunt meqqren gar yiferdisen, tanzagt n uzuɣer-sers</string>
+    <string formatted="false" name="preference_access_title_profile_tiro">Tiro</string>
+    <string formatted="false" name="preference_access_summary_profile_tiro">Askar n yinebdi</string>
+    <string name="preference_dialog_use_full_features">Seqdec akk timahilin</string>
+    <string name="preference_dialog_appgallery">AppGallery</string>
+    <string name="preference_dialog_google_play">Google Play</string>
+    <string name="preference_lego_dialog_text">I wakken ad tesfaydeḍ seg akk timahilin n yisiɣzaf Lego Mindstorms, ma ulac aɣilif seqdec asnas Mindstorms Code EV3 NXT n Catrobat.</string>
+    <string name="preference_embroidery_dialog_text">I wakken ad tesfaydeḍ seg akk timahilin n usiɣzef n ṭṭerz, ma ulac aɣilif seqdec asnas Embroidery Designer n Catrobat.</string>
+    <string name="preference_phiro_dialog_text">I wakken ad tesfaydeḍ seg akk timahilin n usiɣzef n yiṛubuten Phiro, ma ulac aɣilif seqdec asnas Phiro Code n Catrobat.</string>
+    <!-- Lego/Drone/Raspi/Chromecast/Embroidery -->
+    <string formatted="false" name="preference_title_enable_quadcopter_bricks">Asiɣzef Parrot AR.Drone 2.0</string>
+    <string formatted="false" name="preference_description_quadcopter_bricks">Sireg asnas ad yesmenyif idrunen Parrot AR.Drone 2.0</string>
+    <string formatted="false" name="preference_title_enable_jumpingsumo_bricks">Asiɣzef Parrot Jumping Sumo</string>
+    <string formatted="false" name="preference_description_jumpingsumo_bricks">Sireg asnas ad yesmenyif iṛubuten Jumping Sumo n Parrot</string>
+    <string formatted="false" name="preference_title_enable_mindstorms_nxt_bricks">Asiɣzef Lego Mindstorms NXT</string>
+    <string formatted="false" name="preference_title_enable_mindstorms_ev3_bricks">Asiɣzef Lego Mindstorms EV3</string>
+    <string formatted="false" name="preference_description_mindstorms_nxt_bricks">Sireg asnas ad yesmenyif iṛubuten Lego Mindstorms NXT</string>
+    <string formatted="false" name="preference_description_mindstorms_ev3_bricks">Sireg asnas ad yesmenyif iṛubuten Lego Mindstorms EV3</string>
+    <string formatted="false" name="preference_title_mindstorms_nxt_sensors">Imaṭṭafen Lego NXT</string>
+    <string formatted="false" name="preference_title_mindstorms_ev3_sensors">Imaṭṭafen Lego EV3</string>
+    <string formatted="false" name="preference_title_drone_config_properties">Tawila n Parrot AR.Drone 2.0</string>
+    <string formatted="false" name="preference_title_enable_phiro_bricks">Asiɣzef Phiro n RobotixEdu</string>
+    <string formatted="false" name="preference_description_phiro_bricks">Sireg asnas ad yesmenyif iṛubuten Phiro n RobotixEdu</string>
+    <string formatted="false" name="preference_title_enable_arduino_bricks">Asiɣzef Arduino</string>
+    <string formatted="false" name="preference_description_arduino_bricks">Sireg asnas ad yesmenyif tifelwin Arduino</string>
+    <string formatted="false" name="preference_title_enable_embroidery_bricks">Asiɣzef n ṭṭerz</string>
+    <string formatted="false" name="preference_description_embroidery_bricks">Snulfu-d timudmin i tmacinin n ṭṭerz</string>
+    <string formatted="false" name="preference_title_cast_feature_globally_enabled">Asiɣzef Chromecast</string>
+    <string formatted="false" name="preference_description_cast_feature_globally_enabled">Sken taqeffalt n usiweḍ yerna rmed asiweḍ n yisenfaren</string>
+    <string formatted="false" name="preference_title_enable_plot_bricks">Asiɣzef n usuneɣ d laser</string>
+    <string formatted="false" name="preference_description_plot_bricks">Snulfu-d timudmin i tmacinin n usuneɣ d tmacinin n tegzemt s laser</string>
+    <string formatted="false" name="preference_title_enable_nfc_bricks">Asiɣzef Near Field Communication</string>
+    <string formatted="false" name="preference_description_nfc_bricks">Sireg asnas ad iseqdec tibzimin NFC deg yisenfaren</string>
+    <string formatted="false" name="preference_title_enable_crash_reports">Tuzna n yineqqisen n uɣelluy war isem</string>
+    <string formatted="false" name="preference_description_crash_reports">Sireg asnas ad yazen s wudem awurman ineqqisen n uɣelluy</string>
+    <!-- -->
+    <string formatted="false" name="preference_title_enable_raspi_bricks">Asiɣzef Raspberry Pi</string>
+    <string formatted="false" name="preference_description_raspi_bricks">Sireg asnas ad yesmenyif iselkimen Raspberry Pi</string>
+    <string formatted="false" name="preference_raspi_enable_bricks">Rmed iblugen d imaṭṭafen</string>
+    <string formatted="false" name="preference_raspi_help">Tallelt / bdu</string>
+    <string formatted="false" name="preference_raspi_help_summary">Awi-d tallelt ɣef wamek ara tesweldeḍ iɣewwaṛen n tuqqna</string>
+    <string formatted="false" name="preference_raspi_host">Tansa IP/tansa n usenneftaɣ n Raspberry Pi</string>
+    <string formatted="false" name="preference_raspi_port">Tawwurt n Raspberry Pi</string>
+    <!--  -->
+    <string formatted="false" name="preference_title_multiplayer_variables_enabled">Asiɣzef n waṭas n yimyuraren</string>
+    <string formatted="false" name="preference_description_multiplayer_variables_enabled">Sireg asnas ad iseqdec imuttiyen n waṭas n yimyuraren yettwabḍan s Bluetooth</string>
+    <string formatted="false" name="preference_title_enable_test_bricks">Asiɣzef n yisekyad</string>
+    <string formatted="false" name="preference_description_test_bricks">Ad yeǧǧ asnulfu n yisekyad</string>
+    <!-- Scratch Converter activity -->
+    <string formatted="false" name="beta">BETA</string>
+    <string formatted="false" name="error_scratch_program_not_accessible_any_more">Ayhuh! Yettban-d d akken asenfar yenṣer neɣ ahat tesruḥeḍ anekcum ɣur-s.</string>
+    <string formatted="false" name="error_scratch_project_data_not_available">Ayhuh! Yettban-d d akken kra n tgezmiwin n usenfar xuṣṣent, ma ulac aɣilif ɛreḍ tikkelt-nniḍen ticki.</string>
+    <string formatted="false" name="error_request_timeout">Ayhuh! Aqeddac-nneɣ ur d-yerri ara deg wakud, ma ulac aɣilif ɛreḍ tikkelt-nniḍen ticki.</string>
+    <string formatted="false" name="error_scratch_program_conversion_failed">Ayhuh! Aselket n usenfar ur yeddi ara, ma ulac aɣilif ɛreḍ tikkelt-nniḍen ticki.</string>
+    <string formatted="false" name="error_specific_scratch_program_conversion_failed_x">Ayhuh! Aselket n %1$s ur yeddi ara, ma ulac aɣilif ɛreḍ tikkelt-nniḍen ticki.</string>
+    <string formatted="false" name="error_scratch_converter_outdated_app_version">Lqem-ik·im n usnas-a yezri-t wakud. Amselkat-nneɣ n Scratch iteddu kan s lqem aneggaru. Ma ulac aɣilif, leqqem asnas.</string>
+    <string formatted="false" name="error_cannot_open_not_existing_scratch_program">Ur zmireɣ ara ad ldiɣ asenfar-a n Scratch. Yettban-d d akken tesfesxeḍ aselket/asader n usenfar n Scratch, neɣ tesnifleḍ isem/tekkseḍ asenfar deg leɛḍil.</string>
+    <string formatted="false" name="error_cannot_open_currently_downloading_scratch_program">Ur tezmireḍ ara ad teldiḍ asenfar akka tura. Ma ulac aɣilif, rǧu alamma yettwasader.</string>
+    <string formatted="false" name="error_cannot_open_not_yet_downloaded_scratch_program">Ur tezmireḍ ara ad teldiḍ asenfar akka tura. Ma ulac aɣilif, sader-it qbel, syin ldi-t.</string>
+    <string formatted="false" name="error_cannot_convert_deprecated_scratch_program_x_x">Ur zmireɣ ara ad selketeɣ %1$s. Yettban-d d asenfar aqbur n Scratch seg uqbel %2$s. Ma ulac aɣilif, ɛreḍ wayeḍ.</string>
+    <plurals name="error_cannot_convert_more_than_x_programs">
+        <item quantity="one">Ur tezmireḍ ara ad tselketeḍ ugar n %d n usenfar deg yiwen n wakud. Ma ulac aɣilif, rǧu ad fakken yiselkiten i iteddun qbel.</item>
+        <item quantity="other">Ur tezmireḍ ara ad tselketeḍ ugar n %d n yisenfaren deg yiwen n wakud. Ma ulac aɣilif, rǧu ad fakken yiselkiten i iteddun qbel.</item>
+    </plurals>
+    <string formatted="false" name="error_cannot_open_failed_scratch_program">Ur tezmireḍ ara ad teldiḍ asenfar acku ur yettwaselket ara akken iwata. Ma ulac aɣilif, ɛreḍ ad t-tselketeḍ tikkelt-nniḍen.</string>
+    <string formatted="false" name="search_failed">Ulac ayen yettwafen, ma ulac aɣilif ɛreḍ tikkelt-nniḍen ticki.</string>
+    <string formatted="false" name="connection_lost_or_closed_by_server">Tuqqna ɣer uqeddac tṛuḥ.</string>
+    <string formatted="false" name="connection_failed">Ur nezmir ara ad k·m-neqqen ɣer uqeddac akka tura, ma ulac aɣilif ɛreḍ tikkelt-nniḍen ticki.</string>
+    <string formatted="false" name="authentication_failed">Yettban-d yella wugur deg tuqqna-k·m ɣer umeẓlu. Ma ulac aɣilif, nermes tarbaɛt n Catrobat.</string>
+    <plurals name="scratch_conversion_scheduled_x">
+        <item quantity="one">Yettwarna %d n usenfar n Scratch ɣer udras…</item>
+        <item quantity="other">Ttwarnan %d n yisenfaren n Scratch ɣer udras…</item>
+    </plurals>
+    <string formatted="false" name="scratch_conversion_started">Aselket n usenfar n Scratch yebda…</string>
+    <string formatted="false" name="convert">Selket</string>
+    <string formatted="false" name="converting">Aselket…</string>
+    <string formatted="false" name="status_scheduled">Yettusɣiwes</string>
+    <string formatted="false" name="status_waiting_for_worker">Anadi ɣef umahil ilelli… Ma ulac aɣilif, rǧu…</string>
+    <string formatted="false" name="status_started">Yebda…</string>
+    <string formatted="false" name="status_conversion_finished">Aselket yemmed</string>
+    <plurals name="status_in_progress_x_jobs">
+        <item quantity="one">Itteddu: %d n twuri</item>
+        <item quantity="other">Itteddu: %d n twuriwin</item>
+    </plurals>
+    <plurals name="status_completed_x_jobs">
+        <item quantity="one">Immed: %d n twuri</item>
+        <item quantity="other">Immed: %d n twuriwin</item>
+    </plurals>
+    <string formatted="false" name="status_conversion_failed">Aselket ur yeddi ara!</string>
+    <string formatted="false" name="status_downloading">Asader…</string>
+    <string formatted="false" name="status_download_finished">Asader yemmed.</string>
+    <string formatted="false" name="status_download_canceled">Asader yettwasefsex!</string>
+    <string formatted="false" name="scratch_programs_in_progress_title">Itteddu</string>
+    <string formatted="false" name="scratch_programs_finished_title">Isenfaren yettwaselketen</string>
+    <string formatted="false" name="by_x">sɣur %1$s</string>
+    <string formatted="false" name="warning_program_visibility">ḤADER:\nYettban-d d asenfar uslig. Tzemreḍ ad t-tɛerḍeḍ ad t-tselketeḍ maca ahat ur iteddu ara.</string>
+    <string formatted="false" name="instructions">Iwellihen</string>
+    <string formatted="false" name="notes_and_credits">Tizmilin d yimttekkiyen</string>
+    <string formatted="false" name="shared_at_x">Yettwabḍa: %1$s</string>
+    <string formatted="false" name="modified_at_x">Yettwabeddel: %1$s</string>
+    <string formatted="false" name="remixes">Isenfaren yettwaɛawden</string>
+    <!--  -->
+    <string formatted="false" name="author">Ameskar:</string>
+    <string formatted="false" name="screen_size">Tiddi n usayes:</string>
+    <string formatted="false" name="mode">Askar:</string>
+    <string formatted="false" name="remix_of">Yettwaɛawed seg:</string>
+    <string formatted="false" name="description_hint">Sit i wakken ad ternuḍ aglam</string>
+    <string formatted="false" name="notes_and_credits_hint">Sit i wakken ad ternuḍ tizmilin d yimttekkiyen</string>
+    <!-- ScratchReconvertDialog Strings -->
+    <string formatted="false" name="reconvert_text">Tselketeḍ asenfar-a %1$s aya.</string>
+    <plurals name="minutes">
+        <item quantity="one">%d n tesdat</item>
+        <item quantity="other">%d n tesdatin</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%d n usrag</item>
+        <item quantity="other">%d n yisragen</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">%d n wass</item>
+        <item quantity="other">%d n wussan</item>
+    </plurals>
+    <string formatted="false" name="reconvert_dialog_download">Sader asenfar tikkelt-nniḍen</string>
+    <string formatted="false" name="reconvert_dialog_reconvert">Selket asenfar-a tikkelt-nniḍen</string>
+    <!--  -->
+    <!-- ERRORS -->
+    <!-- Terms of Use and Service Error -->
+    <string formatted="false" name="declined_terms_of_use_and_service_alert">I useqdec n usnas-nneɣ, yessefk ad tqebleḍ Tiwtilin-nneɣ n useqdec d tenfa. Maca, ma ur tebɣiḍ ara, tzemreḍ ad tesqedceḍ tinfa-nneɣ n Web tilelliyin deg</string>
+    <string formatted="false" name="wtf_error">Teḍra-d tuccḍa ur nettwarǧa ara: ur zmireɣ ara ad d-erreɣ asenfar n umedya.</string>
+    <!-- Project Handling Errors -->
+    <string formatted="false" name="error_copy_project">Teḍra-d tuccḍa deg unɣal n usenfar</string>
+    <!-- Dialog Errors -->
+    <string formatted="false" name="name_already_exists">Isem-a yettwaseqdec yakan, ma ulac aɣilif fren wayeḍ.</string>
+    <string formatted="false" name="name_consists_of_spaces_only">Teskecmeḍ kan tallunin deg wurti n uḍris, ma ulac aɣilif sekcem aḍris s yisekkilen, s wuṭṭunen neɣ s yizamulen-nniḍen.</string>
+    <string formatted="false" name="name_empty">Ma ulac aɣilif, sekcem aḍris</string>
+    <!-- Recycler View -->
+    <string formatted="false" name="am_empty_list">Ulac yiferdisen deg tebdart-a akka tura. Ma ulac aɣilif, rnu kra qbel.</string>
+    <string formatted="false" name="reject_import">Awadem neɣ taɣawsa ur yezmir ara ad yettwarnu.</string>
+    <string formatted="false" name="am_merge_error">Ulac asdukkel. Yessefk ad ttwafernen 2 n yisenfaren kan i usdukkel.</string>
+    <string formatted="false" name="am_backpack">Rnu ɣer uqrab</string>
+    <string formatted="false" name="am_unpack">Ssuffeɣ seg uqrab</string>
+    <string formatted="false" name="am_copy">Nɣel</string>
+    <string formatted="false" name="am_delete">Kkes</string>
+    <string formatted="false" name="am_rename">Snifel isem</string>
+    <string formatted="false" name="am_convert">Selket</string>
+    <string formatted="false" name="am_merge">Sdukkel</string>
+    <string formatted="false" name="dialog_confirm_delete">Ur tezmireḍ ara ad tesfesxeḍ aya!</string>
+    <string formatted="false" name="list_headline_sprites">Iwudam d tɣawsiwin</string>
+    <!-- Options Menu Options -->
+    <string formatted="false" name="backpack">Aqrab</string>
+    <string formatted="false" name="copy">Nɣel</string>
+    <string formatted="false" name="delete">Kkes</string>
+    <string formatted="false" name="rename">Snifel isem</string>
+    <string formatted="false" name="merge">Sdukkel</string>
+    <string formatted="false" name="show_details">Sken talqayt</string>
+    <string formatted="false" name="hide_details">Ffer talqayt</string>
+    <string formatted="false" name="project_options">Tixtiṛiyin n usenfar</string>
+    <string formatted="false" name="from_local">Rnu seg yibenk</string>
+    <string formatted="false" name="sort_projects">Smizzwer</string>
+    <string formatted="false" name="unsort_projects">Sefsex asmizzwer</string>
+    <string formatted="false" name="import_from_project">Fren asenfar ara d-tketreḍ seg-s</string>
+    <!-- New Dialog Titles -->
+    <string formatted="false" name="new_scene_dialog">Aḥric amaynut</string>
+    <!-- Delete Dialog Titles -->
+    <plurals name="delete_projects">
+        <item quantity="one">Kkes asenfar-a?</item>
+        <item quantity="other">Kkes isenfaren-a?</item>
+    </plurals>
+    <plurals name="delete_scenes">
+        <item quantity="one">Kkes aḥric-a?</item>
+        <item quantity="other">Kkes iḥricen-a?</item>
+    </plurals>
+    <plurals name="delete_sprites">
+        <item quantity="one">Kkes awadem-a neɣ taɣawsa-a?</item>
+        <item quantity="other">Kkes iwudam-a neɣ tiɣawsiwin-a?</item>
+    </plurals>
+    <plurals name="delete_looks">
+        <item quantity="one">Kkes talɣa-a?</item>
+        <item quantity="other">Kkes tilɣiwin-a?</item>
+    </plurals>
+    <plurals name="delete_sounds">
+        <item quantity="one">Kkes imesli-a?</item>
+        <item quantity="other">Kkes imeslan-a?</item>
+    </plurals>
+    <plurals name="delete_nfc_tags">
+        <item quantity="one">Kkes tabzimt-a?</item>
+        <item quantity="other">Kkes tibzimin-a?</item>
+    </plurals>
+    <plurals name="delete_scripts">
+        <item quantity="one">Kkes askript-a?</item>
+        <item quantity="other">Kkes iskripten-a?</item>
+    </plurals>
+    <!-- Dialog Labels -->
+    <string formatted="false" name="project_name_label">Isem n usenfar</string>
+    <string formatted="false" name="scene_name_label">Isem n uḥric</string>
+    <string formatted="false" name="sprite_name_label">Isem n uwadem neɣ n tɣawsa</string>
+    <string formatted="false" name="sprite_group_name_label">Isem n ugraw</string>
+    <string formatted="false" name="script_group_label">Isem n ugraw n yiskripten</string>
+    <string formatted="false" name="look_name_label">Isem n telɣa</string>
+    <string formatted="false" name="sound_name_label">Isem n yimesli</string>
+    <string formatted="false" name="nfc_tag_name_label">Isem n tebzimt NFC</string>
+    <string formatted="false" name="string_label">Aḍris</string>
+    <string formatted="false" name="data_label">Isem</string>
+    <string formatted="false" name="keyword_label">Anadi…</string>
+    <string formatted="false" name="html_label">Sekcem aḍris HTML</string>
+    <string formatted="false" name="Image_format_not_supported">Amasal n tugna ur yettusefrak ara</string>
+    <string formatted="false" name="import_conflicting_variables">Awadem neɣ taɣawsa ur yezmir ara ad yettwarnu.</string>
+    <string formatted="false" name="import_conflicting_variables_reason">Ssebba d akken ismawen-a n yimuttiyen neɣ n tebdarin myenzaɣen, acku ttwasqedcen i meṛṛa iwudam d tɣawsiwin, yerna s yiwen n yisem i yiwen kan seg yiwudam neɣ seg tɣawsiwin:</string>
+    <string formatted="false" name="import_conflicting_variables_try_again">Ma ulac aɣilif, snifel isem n yiwen seg yimuttiyen-a neɣ seg tebdarin-a syin ɛreḍ tikkelt-nniḍen.</string>
+    <!-- Details -->
+    <string formatted="false" name="project_details">Anekcum aneggaru: %s, tiddi: %s</string>
+    <string formatted="false" name="last_access_today">ass-a, %s</string>
+    <string formatted="false" name="scene_details">Iwudam d tɣawsiwin: %d, tilɣiwin: %d, imeslan: %d</string>
+    <string formatted="false" name="sprite_details">Iblugen: %d, tilɣiwin: %d, imeslan: %d</string>
+    <string formatted="false" name="look_details">Afray: %s, tiddi: %s</string>
+    <string formatted="false" name="sound_duration">Tanzagt: %s</string>
+    <string formatted="false" name="sound_details">Tanzagt: %s, tiddi: %s</string>
+    <!--  -->
+    <!-- Rename Dialog Titles -->
+    <string formatted="false" name="rename_project">Snifel isem n usenfar</string>
+    <string formatted="false" name="rename_scene_dialog">Snifel isem n uḥric</string>
+    <string formatted="false" name="rename_sprite_dialog">Snifel isem n uwadem neɣ n tɣawsa</string>
+    <string formatted="false" name="rename_look_dialog">Snifel isem n telɣa</string>
+    <string formatted="false" name="rename_sound_dialog">Snifel isem n yimesli</string>
+    <string formatted="false" name="rename_nfctag_dialog">Snifel isem n tebzimt NFC</string>
+    <string formatted="false" name="rename_data_dialog">Snifel isem</string>
+    <!-- New Script Group Dialog -->
+    <string formatted="false" name="new_group">Agraw amaynut</string>
+    <string formatted="false" name="default_group_name">Agraw</string>
+    <!-- New Scene Menu -->
+    <string formatted="false" name="new_scene">Aḥric amaynut</string>
+    <!-- Action Toasts -->
+    <!-- Backpack -->
+    <string formatted="false" name="backpack_empty">Aqrab d ilem. Ulac acu ara d-yeffeɣ.</string>
+    <plurals name="packed_scenes">
+        <item quantity="one">Yettwarna %d n uḥric ɣer uqrab.</item>
+        <item quantity="other">Ttwarnan %d n yiḥricen ɣer uqrab.</item>
+    </plurals>
+    <plurals name="packed_sprites">
+        <item quantity="one">Yettwarna %d n uwadem neɣ n tɣawsa ɣer uqrab.</item>
+        <item quantity="other">Ttwarnan %d n yiwudam neɣ n tɣawsiwin ɣer uqrab.</item>
+    </plurals>
+    <plurals name="packed_looks">
+        <item quantity="one">Tettwarna %d n telɣa ɣer uqrab.</item>
+        <item quantity="other">Ttwarnant %d n telɣiwin ɣer uqrab.</item>
+    </plurals>
+    <plurals name="packed_sounds">
+        <item quantity="one">Yettwarna %d n yimesli ɣer uqrab.</item>
+        <item quantity="other">Ttwarnan %d n yimeslan ɣer uqrab.</item>
+    </plurals>
+    <string formatted="false" name="packed_script_group">Yettwarna yiwen n ugraw n yiskripten ɣer uqrab.</string>
+    <!-- Unpack -->
+    <plurals name="unpacked_scenes">
+        <item quantity="one">Yeffeɣ-d %d n uḥric seg uqrab.</item>
+        <item quantity="other">Ffɣen-d %d n yiḥricen seg uqrab.</item>
+    </plurals>
+    <plurals name="unpacked_sprites">
+        <item quantity="one">Yeffeɣ-d %d n uwadem neɣ n tɣawsa seg uqrab.</item>
+        <item quantity="other">Ffɣen-d %d n yiwudam neɣ n tɣawsiwin seg uqrab.</item>
+    </plurals>
+    <plurals name="unpacked_looks">
+        <item quantity="one">Teffeɣ-d %d n telɣa seg uqrab.</item>
+        <item quantity="other">Ffɣent-d %d n telɣiwin seg uqrab.</item>
+    </plurals>
+    <plurals name="unpacked_sounds">
+        <item quantity="one">Yeffeɣ-d %d n yimesli seg uqrab.</item>
+        <item quantity="other">Ffɣen-d %d n yimeslan seg uqrab.</item>
+    </plurals>
+    <plurals name="unpacked_scripts">
+        <item quantity="one">Yeffeɣ-d %d n uskript seg uqrab.</item>
+        <item quantity="other">Ffɣen-d %d n yiskripten seg uqrab.</item>
+    </plurals>
+    <!-- Copy -->
+    <plurals name="copied_scenes">
+        <item quantity="one">Yettwanɣel %d n uḥric.</item>
+        <item quantity="other">Ttwanɣlen %d n yiḥricen.</item>
+    </plurals>
+    <plurals name="copied_sprites">
+        <item quantity="one">Yettwanɣel %d n uwadem neɣ n tɣawsa.</item>
+        <item quantity="other">Ttwanɣlen %d n yiwudam neɣ n tɣawsiwin.</item>
+    </plurals>
+    <plurals name="copied_looks">
+        <item quantity="one">Tettwanɣel %d n telɣa.</item>
+        <item quantity="other">Ttwanɣlent %d n telɣiwin.</item>
+    </plurals>
+    <plurals name="copied_sounds">
+        <item quantity="one">Yettwanɣel %d n yimesli.</item>
+        <item quantity="other">Ttwanɣlen %d n yimeslan.</item>
+    </plurals>
+    <plurals name="copied_nfc_tags">
+        <item quantity="one">Tettwanɣel %d n tebzimt NFC.</item>
+        <item quantity="other">Ttwanɣlent %d n tebzimin NFC.</item>
+    </plurals>
+    <!-- Delete -->
+    <plurals name="deleted_projects">
+        <item quantity="one">Yettwakkes %d n usenfar.</item>
+        <item quantity="other">Ttwakksen %d n yisenfaren.</item>
+    </plurals>
+    <plurals name="deleted_scenes">
+        <item quantity="one">Yettwakkes %d n uḥric.</item>
+        <item quantity="other">Ttwakksen %d n yiḥricen.</item>
+    </plurals>
+    <plurals name="deleted_sprites">
+        <item quantity="one">Yettwakkes %d n uwadem neɣ n tɣawsa.</item>
+        <item quantity="other">Ttwakksen %d n yiwudam neɣ n tɣawsiwin.</item>
+    </plurals>
+    <plurals name="deleted_looks">
+        <item quantity="one">Tettwakkes %d n telɣa.</item>
+        <item quantity="other">Ttwakksent %d n telɣiwin.</item>
+    </plurals>
+    <plurals name="deleted_sounds">
+        <item quantity="one">Yettwakkes %d n yimesli.</item>
+        <item quantity="other">Ttwakksen %d n yimeslan.</item>
+    </plurals>
+    <plurals name="deleted_nfc_tags">
+        <item quantity="one">Tettwakkes %d n tebzimt NFC.</item>
+        <item quantity="other">Ttwakksent %d n tebzimin NFC.</item>
+    </plurals>
+    <plurals name="deleted_scripts">
+        <item quantity="one">Yettwakkes %d n uskript.</item>
+        <item quantity="other">Ttwakksen %d n yiskripten.</item>
+    </plurals>
+    <plurals name="deleted_Items">
+        <item quantity="one">Yettwakkes %d n uferdis.</item>
+        <item quantity="other">Ttwakksen %d n yiferdisen.</item>
+    </plurals>
+    <!-- Imported -->
+    <plurals name="imported_projects">
+        <item quantity="one">Yettwakter %d n usenfar.</item>
+        <item quantity="other">Ttwaktren %d n yisenfaren.</item>
+    </plurals>
+    <!-- Renamed -->
+    <string formatted="false" name="renamed_project">Isem n usenfar yettwasnifel</string>
+    <!--  -->
+    <!-- ProjectListActivity and ProjectListFragment -->
+    <string formatted="false" name="project_list_title">Isenfaren</string>
+    <string formatted="false" name="last_used">Anekcum aneggaru:</string>
+    <string formatted="false" name="size">Tiddi:</string>
+    <string formatted="false" name="description">Aglam:</string>
+    <string formatted="false" name="set_description">Sbadu aglam</string>
+    <string formatted="false" name="notes_and_credits_title">Tizmilin d yimttekkiyen:</string>
+    <string formatted="false" name="set_notes_and_credits">Sbadu tizmilin d yimttekkiyen</string>
+    <string formatted="false" name="details_date_today">Ass-a</string>
+    <string formatted="false" name="import_project">Kter asenfar</string>
+    <string formatted="false" name="export_project">Sifeḍ asenfar</string>
+    <string formatted="false" name="error_import_project">Yella wayen ur neddi ara deg ukter n yisenfaren.</string>
+    <string formatted="false" name="no_projects_selected">Ulac isenfaren yettwafernen i ukter</string>
+    <string formatted="false" name="only_select_catrobat_files">Fren kan ifuyla n yisenfaren</string>
+    <string formatted="false" name="error_no_files_found">Ulac ifuyla n yisenfaren yettwafen.</string>
+    <string formatted="false" name="import_sprite_from_project_launcher">Kter taɣawsa seg usenfar adigan</string>
+    <!-- ProjectOptionsFragment -->
+    <string formatted="false" name="project_options_description">Aglam</string>
+    <string formatted="false" name="project_options_notes_and_credits">Tizmilin d yimttekkiyen</string>
+    <string formatted="false" name="project_options_tags">Tibzimin</string>
+    <string formatted="false" name="project_options_aspect_ratio">Ḥrez afmiḍi aɣbalu n tehri ɣef teɣzi</string>
+    <string formatted="false" name="project_options_more_details">Ayla n usenfar</string>
+    <string formatted="false" name="project_options_delete_project">Kkes asenfar</string>
+    <!-- ScriptListFragment -->
+    <string formatted="false" name="fragment_script_text_description">Sit ɣef \"+\" i wakken ad ternuḍ iskripten</string>
+    <!--  -->
+    <!-- SpriteListFragment -->
+    <string formatted="false" name="fragment_sprite_text_description">Sit ɣef \"+\" i wakken ad ternuḍ iwudam neɣ tiɣawsiwin</string>
+    <string formatted="false" name="default_sprite_name">Awadem-iw neɣ taɣawsa-w</string>
+    <!--  -->
+    <!-- LookListFragment -->
+    <string formatted="false" name="fragment_look_text_description">Sit ɣef \"+\" i wakken ad ternuḍ tilɣiwin</string>
+    <string formatted="false" name="select_look_from_gallery">Fren tugna</string>
+    <string formatted="false" name="select_look_from_camera">Fren tawlaft</string>
+    <!--  -->
+    <!-- SoundListFragment -->
+    <string formatted="false" name="fragment_sound_text_description">Sit ɣef \"+\" i wakken ad ternuḍ imeslan</string>
+    <string formatted="false" name="sound_select_source">Fren imesli</string>
+    <!--  -->
+    <!-- NfcTagListFragment -->
+    <string formatted="false" name="fragment_nfctag_text_description">Smiḍen tibzimin NFC i wakken ad tent-ternuḍ</string>
+    <string formatted="false" name="ndef_record_label">am wanaw n usekles</string>
+    <string formatted="false" name="brick_set_nfc_tag">Rǧu tabzimt NFC tuḍfirt i tira</string>
+    <string formatted="false" name="brick_set_nfc_tag_default_value">www.catrobat.org</string>
+    <string formatted="false" name="default_tag_name">Tabzimt NFC</string>
+    <string formatted="false" name="tnf_empty">D ilem</string>
+    <string formatted="false" name="tnf_external_type">Anaw azɣaray</string>
+    <string formatted="false" name="tnf_mime_media">Aḍris</string>
+    <string formatted="false" name="tnf_well_known_http">HTTP</string>
+    <string formatted="false" name="tnf_well_known_https">HTTPS</string>
+    <string formatted="false" name="tnf_well_known_tel">Uṭṭun n tiliɣri</string>
+    <string formatted="false" name="tnf_well_known_sms">SMS</string>
+    <string formatted="false" name="tnf_well_known_mailto">Imayl</string>
+    <!--  -->
+    <!-- DataListFragment -->
+    <string formatted="false" name="multiplayer_vars_headline">Imuttiyen i yibenkan yeqqnen</string>
+    <string formatted="false" name="global_vars_headline">Imuttiyen i meṛṛa iwudam d tɣawsiwin</string>
+    <string formatted="false" name="local_vars_headline">Imuttiyen i uwadem-a neɣ i tɣawsa-a kan</string>
+    <string formatted="false" name="global_lists_headline">Tibdarin i meṛṛa iwudam d tɣawsiwin</string>
+    <string formatted="false" name="local_lists_headline">Tibdarin i uwadem-a neɣ i tɣawsa-a kan</string>
+    <string formatted="false" name="fragment_data_text_description">Sit ɣef \"+\" i wakken ad ternuḍ\nimuttiyen neɣ tibdarin</string>
+    <plurals name="user_defined_brick_input_headline">
+        <item quantity="one">Anekcam i yiblug-a</item>
+        <item quantity="other">Inekcamen i yiblug-a</item>
+    </plurals>
+    <!-- NewDataDialog -->
+    <string formatted="false" name="new_data_for_all_sprites">I meṛṛa iwudam, tiɣawsiwin d yiklunen deg meṛṛa iḥricen</string>
+    <string formatted="false" name="new_data_for_this_sprite_only">I uwadem-a, i tɣawsa-a, neɣ i yiwen seg yiklunen-is kan</string>
+    <string formatted="false" name="new_data_for_connected_devices">I meṛṛa iwudam, tiɣawsiwin d yiklunen deg meṛṛa iḥricen n yisenfaren ɣef yibenkan n waṭas n yimyuraren yeqqnen</string>
+    <!-- Backpack -->
+    <string formatted="false" name="backpack_title">Aqrab-ik·im</string>
+    <string formatted="false" name="actor_object_title">Iwudam d tɣawsiwin</string>
+    <string formatted="false" name="pack">Rnu ɣer uqrab</string>
+    <string formatted="false" name="unpack">Ssuffeɣ seg uqrab</string>
+    <!--  -->
+    <!-- NewProjectDialog -->
+    <string name="new_project_title">Snulfu-d asenfar</string>
+    <string formatted="false" name="new_project_dialog_example_project">Asenfar n umedya</string>
+    <string name="new_project_dialog_portrait">S teɣzi</string>
+    <string name="new_project_dialog_landscape">S tehri</string>
+    <string name="new_project_dialog_cast">Chromecast</string>
+    <!--  -->
+    <!-- NewMergedProjectDialog -->
+    <string formatted="false" name="new_merge_project_dialog_title">Asenfar yettwasdukklen</string>
+    <string formatted="false" name="merging_project_text">Isenfaren-a ur zmiren ara ad ttwasdukklen akka tura</string>
+    <!--  -->
+    <!-- NewSpriteDialog -->
+    <string formatted="false" name="new_sprite_dialog_title">Awadem neɣ taɣawsa tamaynut</string>
+    <!--  -->
+    <!-- NewLookDialog -->
+    <string formatted="false" name="new_look_dialog_title">Rnu talɣa</string>
+    <string formatted="false" name="add_look_from_camera">Takamiṛat</string>
+    <string formatted="false" name="add_look_object_library">Tamkarḍit</string>
+    <string formatted="false" name="add_look_draw_new_image">Suneɣ</string>
+    <string formatted="false" name="add_look_choose_image">Tamidelt</string>
+    <string formatted="false" name="add_look_media_library">Tilɣiwin</string>
+    <string formatted="false" name="add_look_from_local_project">Isenfaren idiganen</string>
+    <string name="add_look_empty_object">Taɣawsa tilemt</string>
+    <string name="add_look_actors_and_object">Iwudam d tɣawsiwin idiganen</string>
+    <!--  -->
+    <!-- NewSoundDialog -->
+    <string formatted="false" name="new_sound_dialog_title">Rnu imesli</string>
+    <string formatted="false" name="add_sound_from_recorder">Sekles imesli</string>
+    <string formatted="false" name="add_sound_choose_file">Fren afaylu</string>
+    <string formatted="false" name="add_sound_music">Amsuddes n uẓawan</string>
+    <string formatted="false" name="add_sound_choose_sound">Imeslan</string>
+    <!-- NotePickerDialog -->
+    <string formatted="false" name="note_picker_title">Amefran n tzenẓunin</string>
+    <!--  -->
+    <!-- Rating Dialog -->
+    <string formatted="false" name="rating_dialog_title">Mudd tazmilt i usnas</string>
+    <string formatted="false" name="rating_google_play_dialog_text">Ma yeɛǧeb-ak·am usnas-a, ma ulac aɣilif mudd-aɣ tazmilt deg tḥanut n yisnasen.</string>
+    <string formatted="false" name="rating_dialog_rate_now">Tura</string>
+    <string formatted="false" name="rating_dialog_rate_later">Ticki</string>
+    <string formatted="false" name="rating_dialog_rate_never">Werǧin</string>
+    <!--  -->
+    <!-- Terms of Use Dialog -->
+    <string formatted="false" name="dialog_terms_of_use_title">Tiwtilin n useqdec d tenfa</string>
+    <string formatted="false" name="dialog_terms_of_use_info">I wakken ad tettusirgeḍ ad tesqedceḍ isnasen d tenfa-nniḍen i d-yettmuddu usenfar Catrobat, ilaq ad tqebleḍ Tiwtilin-nneɣ n useqdec d tenfa. Ilaq ad tḍefreḍ tiwtilin-a s telqayt mi ara tesqedceḍ isnasen-nneɣ d tenfa-nniḍen. Ma ulac aɣilif, wali aseɣwen ddaw-a i uḍris-nsent ummid.\n</string>
+    <string formatted="false" name="dialog_terms_of_use_link_text">Tiwtilin n useqdec d tenfa</string>
+    <!--  -->
+    <!-- Privacy Policy -->
+    <string formatted="false" name="disclaimer_privacy_police_header_headline">Ansuf!</string>
+    <string formatted="false" name="disclaimer_privacy_policy_header">I useqdec n usnas-a, ma ulac aɣilif qbel</string>
+    <!-- -->
+    <!-- About Dialog -->
+    <string formatted="false" name="dialog_about_title">Ɣef usnas-a</string>
+    <string formatted="false" name="dialog_about_license_info">Asnas-a yettmuddu-d tawennaḍt n usihel d usegzay i tutlayt n usihel tamuɣlant Catrobat.\n Tangalt taɣbalut n usnas-a s umata tettwasireg ddaw turagt GNU AGPL v3. I wugar n telqayt ɣef turagt, wali aseɣwen ddaw-a.\n</string>
+    <string formatted="false" name="dialog_about_license_link_text">Turagt n tengalt taɣbalut</string>
+    <string formatted="false" name="dialog_about_catrobat_link_text">Ɣef Catrobat</string>
+    <string formatted="false" name="dialog_about_catrobat_language_version">Lqem n tutlayt Catrobat</string>
+    <string formatted="false" name="dialog_about_version">lqem:</string>
+    <!--  -->
+    <!-- NetworkAlertDialog -->
+    <string formatted="false" name="error_no_network_title">Ulac aẓeḍḍa</string>
+    <!-- UploadProjectDialog -->
+    <string formatted="false" name="upload_project_dialog_title">Sali asenfar</string>
+    <string formatted="false" name="upload_description">Aglam:</string>
+    <string formatted="false" name="upload_notes_and_credits">Tizmilin d yimttekkiyen:</string>
+    <string formatted="false" name="upload_notes_and_credits_explanation">Amek i d-tesnulfaḍ asenfar-a? Tesqedceḍ tikta, iskripten neɣ tiɣawsiwin n tẓuri n yemdanen-nniḍen? Snemmer-iten dagi.</string>
+    <string formatted="false" name="upload_tag_dialog_title">Ma ulac aɣilif, fren armi d kraḍ n taggayin</string>
+    <string formatted="false" name="upload_tags_maximum_error">Ur yezmir ara ad tferneḍ ugar n 3 n tebzimin.</string>
+    <!-- Save Project to External Storage -->
+    <string formatted="false" name="save_to_external_storage_button">Sifeḍ asenfar</string>
+    <string formatted="false" name="notification_save_project_to_external_storage_title_pending">" "</string>
+    <string formatted="false" name="notification_save_project_to_external_storage_pending">Asekles n usenfar ɣer uḥraz azɣaray.</string>
+    <string formatted="false" name="notification_save_project_to_external_storage_title_open">" "</string>
+    <string formatted="false" name="notification_save_project_to_external_storage_open">"Asenfar yettwasekles deg %1$s"</string>
+    <string formatted="false" name="save_project_to_external_storage_io_exception_message">Asekles n usenfar ur yeddi ara, ulac tallunt i d-yeqqimen deg tkatut!</string>
+    <!--  -->
+    <!-- SoundRecorderActivity -->
+    <string formatted="false" name="soundrecorder_name">Amsekles n yimesli</string>
+    <string formatted="false" name="soundrecorder_error">Asekles n yimesli ur yeddi ara</string>
+    <string formatted="false" name="soundrecorder_recorded_filename">asekles</string>
+    <string formatted="false" name="soundrecorder_text_view">Sit ɣef tignit nnig-a i wakken ad tebduḍ neɣ ad tesḥebseḍ asekles.</string>
+    <!--  -->
+    <!-- Brick context dialog -->
+    <string formatted="false" name="brick_context_dialog_move_brick">Senkez ablug</string>
+    <string formatted="false" name="brick_context_dialog_move_script">Senkez askript</string>
+    <string formatted="false" name="brick_context_dialog_move_definition">Senkez tabadut-a</string>
+    <string formatted="false" name="brick_context_dialog_delete_brick">Kkes ablug</string>
+    <string formatted="false" name="brick_context_dialog_copy_brick">Nɣel ablug</string>
+    <string formatted="false" name="brick_context_dialog_copy_script">Nɣel askript</string>
+    <string formatted="false" name="brick_context_dialog_formula_edit_brick">Ẓreg tanfalit</string>
+    <string formatted="false" name="brick_context_dialog_delete_script">Kkes askript</string>
+    <string formatted="false" name="brick_context_dialog_delete_definition">Kkes tabadut-a</string>
+    <string formatted="false" name="brick_context_dialog_comment_in">Rmed ablug</string>
+    <string formatted="false" name="brick_context_dialog_comment_out">Sens ablug</string>
+    <string formatted="false" name="brick_context_dialog_highlight_brick_parts">Sebrureq tigezmiwin n ublug</string>
+    <string formatted="false" name="brick_context_dialog_comment_in_script">Rmed askript</string>
+    <string formatted="false" name="brick_context_dialog_comment_out_script">Sens askript</string>
+    <string formatted="false" name="brick_context_dialog_help">Tallelt</string>
+    <string formatted="false" name="comment_in_out">Sens/rmed</string>
+    <!--  -->
+    <!-- Play scene dialog -->
+    <string formatted="false" name="play_scene_dialog_title">Urar aḥric:</string>
+    <string formatted="false" name="play_scene_dialog_default">Aḥric amezwaru (%1$s)</string>
+    <string formatted="false" name="play_scene_dialog_current">Aḥric amiran (%1$s)</string>
+    <!--  -->
+    <!-- Sign In dialogs -->
+    <string formatted="false" name="sign_in_dialog_title">Qqen</string>
+    <string formatted="false" name="username">Isem n useqdac</string>
+    <string formatted="false" name="password">Awal uffir</string>
+    <string formatted="false" name="reset_password">Wennez awal uffir</string>
+    <string formatted="false" name="new_user_registered">Amiḍan amaynut yettwarna</string>
+    <string formatted="false" name="user_logged_in">Tuqqna tedda akken iwata</string>
+    <string formatted="false" name="register_error">Tuqqna d tarameɣtut</string>
+    <string formatted="false" name="register_terms">S ujerred, ad tqebleḍ</string>
+    <string formatted="false" name="register_code_terms_of_use_text">Tiwtilin n useqdec d tenfa</string>
+    <string formatted="false" name="login">Qqen</string>
+    <string formatted="false" name="register">Jerred</string>
+    <string formatted="false" name="password_confirm">Sentem awal uffir</string>
+    <string formatted="false" name="accountName">Imayl</string>
+    <string formatted="false" name="signin_thanks">Tanemmirt ɣef ujerred!</string>
+    <string formatted="false" name="signin_choose_username">Ma ulac aɣilif, fren isem-ik·im n useqdac:</string>
+    <string formatted="false" name="signin_choose_username_empty">Ma ulac aɣilif, sekcem isem n useqdac.</string>
+    <string formatted="false" name="signin_choose_username_hint">Isem n useqdac ur ilaq ara ad yili d isem-ik·im n tidet, ur ilaq ara daɣen ad yili d tansa n yimayl.</string>
+    <string formatted="false" name="oauth_username_taken">Yella win iseqdacen yakan isem-a. Ma ulac aɣilif, fren wayeḍ!</string>
+    <string formatted="false" name="show_password">Sken awal uffir</string>
+    <string formatted="false" name="sign_in_error">Yella wayen ur neddi ara deg tuqqna.</string>
+    <string formatted="false" name="error_google_plus_sign_in">Tuccḍa deg tuqqna s Google. Addad: %s</string>
+    <string formatted="false" name="error_session_expired">Tiɣimit temmut, ma ulac aɣilif qqen.</string>
+    <string formatted="false" name="error_register_empty_username">Isem n useqdac d ilem</string>
+    <string formatted="false" name="error_register_username_as_email">Tansa n yimayl ur tezmir ara ad tettwaseqdec d isem n useqdac</string>
+    <string formatted="false" name="error_register_invalid_username">Isem n useqdac ilaq ad yegber kan isekkilen (a–z), uṭṭunen (0–9), ijerriden (-), ijerriden n wadda (_), d tenqiḍin (.).</string>
+    <string formatted="false" name="error_register_username_start_with">Isem n useqdac ur ilaq ara ad yebdu s yijerriden (-), s yijerriden n wadda (_), neɣ s tenqiḍin (.).</string>
+    <string formatted="false" name="error_register_invalid_email_format">Amasal n yimayl d arameɣtu</string>
+    <string formatted="false" name="error_register_empty_password">Urti n wawal uffir d ilem</string>
+    <string formatted="false" name="error_register_password_at_least_6_characters">Awal uffir ilaq ad yesɛu ma drus 6 n yisekkilen</string>
+    <string formatted="false" name="error_register_passwords_mismatch">Awalen uffiren ur mṣadan ara</string>
+    <string formatted="false" name="error_register_empty_confirm_password">Urti n usentem n wawal uffir d ilem</string>
+    <string formatted="false" name="error_register_username_already_exists">Isem n useqdac yella yakan</string>
+    <string formatted="false" name="error_register_email_exists">Tansa n yimayl tella yakan</string>
+    <!--  -->
+    <!-- OverwriteRenameDialog Strings -->
+    <string formatted="false" name="overwrite_title">Asenfar yella.</string>
+    <string formatted="false" name="overwrite_text">Asenfar s yisem-a yella yakan.</string>
+    <string formatted="false" name="overwrite_replace">Semselsi asenfar</string>
+    <string formatted="false" name="overwrite_rename">Fren isem amaynut</string>
+    <!--  -->
+    <!-- Music activity -->
+    <string formatted="false" name="pocket_music_default_project_name">Tizlit war azwel</string>
+    <string formatted="false" name="pocket_music_default_track_name">Abrid 1</string>
+    <!--  -->
+    <!-- Resource initialization fka PrestageActivity -->
+    <string formatted="false" name="prestage_text_to_speech_engine_not_installed">Amsedday n usuddes n wawal ur yettwasbedd ara!\nTebɣiḍ ad t-tesbeddeḍ?</string>
+    <string formatted="false" name="prestage_resource_not_available_title">Asger ulac-it</string>
+    <string formatted="false" name="prestage_resource_not_available_text">Nesḥassef, asenfar-a ur iteddu ara ɣef yibenk-ik·im. Isegran-a ulac-iten:\n\n</string>
+    <string formatted="false" name="prestage_no_vibration_available">\u2022 Asergagi\n</string>
+    <string formatted="false" name="prestage_no_acceleration_sensor_available">\u2022 Amaṭṭaf n usɣiwel\n</string>
+    <string formatted="false" name="prestage_no_inclination_sensor_available">\u2022 Amaṭṭaf n uknaw\n</string>
+    <string formatted="false" name="prestage_no_compass_sensor_available">\u2022 Tasnamt\n</string>
+    <string formatted="false" name="prestage_no_gps_sensor_available">\u2022 Adig asiɣzan\n</string>
+    <string formatted="false" name="prestage_text_to_speech_error">\u2022 Amsedday n usuddes n wawal\n</string>
+    <string formatted="false" name="prestage_no_back_camera_available">\u2022 Takamiṛat n deffir\n</string>
+    <string formatted="false" name="prestage_no_face_detection_available">\u2022 Tifin n wudem\n</string>
+    <string formatted="false" name="prestage_no_object_detection_available">\u2022 Tiɣimit n tɣawsiwin\n</string>
+    <string formatted="false" name="prestage_no_pose_detection_available">\u2022 Tifin n tɣessa\n</string>
+    <string formatted="false" name="prestage_no_text_detection_available">\u2022 Tifin n uḍris\n</string>
+    <string formatted="false" name="prestage_no_front_camera_available">\u2022 Takamiṛat n zdat\n</string>
+    <string formatted="false" name="prestage_no_camera_available">\u2022 Takamiṛat\n</string>
+    <string formatted="false" name="prestage_no_flash_available">\u2022 Taftilt\n</string>
+    <string formatted="false" name="prestage_default_resource_not_available">\u2022 Asger arussin\n</string>
+    <string formatted="false" name="no_nfc_available">NFC ulac-it</string>
+    <string formatted="false" name="nfc_not_activated">Ma ulac aɣilif, rmed NFC syin sit ɣef Uɣal i wakken ad tuɣaleḍ ɣer usnas.</string>
+    <string formatted="false" name="nfc_facedetection_support">Aseqdec n NFC d tifin n wudem deg yiwen n wakud yezmer ad yessewḥel tikli n yibenk.</string>
+    <!--  -->
+    <!-- Stage menu dialog -->
+    <string formatted="false" name="stage_dialog_back">Uɣal</string>
+    <string formatted="false" name="stage_dialog_resume">Kemmel</string>
+    <string formatted="false" name="stage_dialog_restart">Ales asenker</string>
+    <string formatted="false" name="stage_dialog_axes_on">Sken igellusen</string>
+    <string formatted="false" name="stage_dialog_axes_off">Ffer igellusen</string>
+    <string formatted="false" name="stage_dialog_maximize">Semɣer/\nsuɣzef</string>
+    <string formatted="false" name="stage_dialog_screenshot">Taskant</string>
+    <string formatted="false" name="stage_dialog_embroidery">Ṭṭerz</string>
+    <!--  -->
+    <!-- Broadcast spinner -->
+    <string formatted="false" name="dialog_new_broadcast_message_title">Izen amaynut</string>
+    <string formatted="false" name="dialog_broadcast_message_name">izen:</string>
+    <string formatted="false" name="dialog_edit_broadcast_message_title">Ẓreg izen</string>
+    <!--  -->
+    <!-- NFC spinner -->
+    <string formatted="false" name="brick_when_nfc_edit_list_of_nfc_tags">Ẓreg tabdart n tebzimin NFC</string>
+    <string formatted="false" name="brick_when_nfc_default_all">akk</string>
+    <!-- -->
+    <!-- Brick categories -->
+    <string formatted="false" name="categories">Taggayin</string>
+    <string formatted="false" name="category_embroidery">Ṭṭerz</string>
+    <string formatted="false" name="category_motion">Amussu</string>
+    <string formatted="false" name="category_looks">Tilɣiwin</string>
+    <string formatted="false" name="category_pen">Imru</string>
+    <string formatted="false" name="category_plot">Asuneɣ</string>
+    <string formatted="false" name="category_laser">Tagzamt s laser</string>
+    <string formatted="false" name="category_sound">Imesli</string>
+    <string formatted="false" name="category_control">Asenqed</string>
+    <string formatted="false" name="category_event">Tidyanin</string>
+    <string formatted="false" name="category_user_bricks">Iblugen-ik·im</string>
+    <string formatted="false" name="category_data">Isefka</string>
+    <string formatted="false" name="category_device">Ibenk</string>
+    <string formatted="false" name="category_lego_nxt">Lego NXT</string>
+    <string formatted="false" name="category_lego_ev3">Lego EV3</string>
+    <string formatted="false" name="category_drone">AR.Drone 2.0</string>
+    <string formatted="false" name="category_jumping_sumo">Jumping Sumo</string>
+    <string formatted="false" name="category_phiro">Phiro</string>
+    <string formatted="false" name="category_arduino">Arduino</string>
+    <string formatted="false" name="category_cast">Chromecast</string>
+    <string formatted="false" name="category_raspi">Raspberry Pi</string>
+    <string formatted="false" name="category_assertions">Isekyad</string>
+    <string formatted="false" name="category_search_bricks">Nadi iblugen</string>
+    <!--  -->
+    <!-- User Defined Bricks -->
+    <string formatted="false" name="brick_user_defined_add_label">Rnu tacreḍt</string>
+    <string formatted="false" name="brick_user_defined_add_input">Rnu anekcam</string>
+    <string formatted="false" name="brick_user_defined_add_input_description">Rnu anekcam i yiblug-a:</string>
+    <string formatted="false" name="brick_user_defined_add_label_description">Rnu tacreḍt i yiblug-a:</string>
+    <string formatted="false" name="brick_user_defined_default_input_name">Isem n unekcam</string>
+    <string formatted="false" name="brick_user_defined_default_label">Aḍris n tecreḍt</string>
+    <string formatted="false" name="brick_user_defined_already_exists">Ablug s tecraḍ-a yella yakan. Ma ulac aɣilif, rnu ugar n tecraḍ neɣ n yinekcamen.</string>
+    <string formatted="false" name="brick_user_defined_script_define">Sefru</string>
+    <string formatted="false" name="brick_user_defined_script_screen_refresh_as">asmiren n ugdil am</string>
+    <string formatted="false" name="brick_user_defined_with_screen_refreshing">s</string>
+    <string formatted="false" name="brick_user_defined_without_screen_refreshing">war</string>
+    <string formatted="false" name="brick_user_defined_list_empty">Sit ɣef \"+\" i wakken ad ternuḍ iblugen-ik·im imaynuten.</string>
+    <string formatted="false" name="brick_report">Err-d</string>
+    <!--  -->
+    <!-- Motion bricks -->
+    <string formatted="false" name="brick_place_at">"Sers ɣer"</string>
+    <string formatted="false" name="brick_option_place_visually">Sers s tmuɣli</string>
+    <string formatted="false" name="x_label">"x:"</string>
+    <string formatted="false" name="y_label">"y:"</string>
+    <string formatted="false" name="brick_set_x">"Sbadu x ɣer"</string>
+    <string formatted="false" name="brick_set_y">"Sbadu y ɣer"</string>
+    <string formatted="false" name="brick_change_x_by">"Beddel x s"</string>
+    <string formatted="false" name="brick_change_y_by">"Beddel y s"</string>
+    <string formatted="false" name="brick_go_back">Ddu ɣer deffir s</string>
+    <string formatted="false" name="brick_set_rotation_style">"Sbadu aɣanib n tuzzya"</string>
+    <string formatted="false" name="brick_set_rotation_style_lr">zelmeḍ-ayeffus kan</string>
+    <string formatted="false" name="brick_set_rotation_style_normal">ɣef yal tama</string>
+    <string formatted="false" name="brick_set_rotation_style_no">ur ttezzi ara</string>
+    <plurals name="brick_go_back_layer_plural">
+        <item quantity="one">tissi</item>
+        <item quantity="other">tissiyin</item>
+    </plurals>
+    <string formatted="false" name="brick_come_to_front">Ddu ɣer zdat</string>
+    <string formatted="false" name="brick_if_on_edge_bounce">Ma yewweḍ ɣer yiri, uɣal-d</string>
+    <string formatted="false" name="brick_move">Ddu</string>
+    <plurals name="brick_move_n_step_plural">
+        <item quantity="one">asurif</item>
+        <item quantity="other">isurifen</item>
+    </plurals>
+    <string formatted="false" name="brick_turn_left">Zzi ɣer zelmeḍ</string>
+    <string formatted="false" name="brick_turn_right">Zzi ɣer yefus</string>
+    <string formatted="false" name="brick_point_in_direction">Wehhi ɣer tnila</string>
+    <string formatted="false" name="brick_point_to">Wehhi ɣer</string>
+    <string formatted="false" name="brick_glide">Ṣeḍreḍ deg</string>
+    <string formatted="false" name="brick_glide_to_x">ɣer x:</string>
+    <string formatted="false" name="brick_go_to">Ddu ɣer</string>
+    <string formatted="false" name="brick_go_to_touch_position">adeg n unnal</string>
+    <string formatted="false" name="brick_go_to_random_position">adeg agacuran</string>
+    <!--  -->
+    <!-- Physics -->
+    <string formatted="false" name="brick_set_physics_object_type">Sbadu anaw n umussu ɣer</string>
+    <string formatted="false" name="brick_set_physics_object_type_dynamic">yettmussu yerna yettneggiz s ujebbed</string>
+    <string formatted="false" name="brick_set_physics_object_type_fixed">ur yettmussu ara s ujebbed, maca wiyaḍ ttneggizen fell-as s ujebbed</string>
+    <string formatted="false" name="brick_set_physics_object_type_no">ur yettmussu ara, ur yettneggiz ara s ujebbed (amezwer)</string>
+    <string formatted="false" name="brick_set_mass">"Sbadu tazzayt ɣer"</string>
+    <string formatted="false" name="brick_set_mass_unit">kilugram</string>
+    <string formatted="false" name="brick_set_gravity_to">"Sbadu ajebbed i meṛṛa iwudam d tɣawsiwin ɣer"</string>
+    <string formatted="false" name="brick_set_gravity_unit">isurifen/tasint²</string>
+    <string formatted="false" name="brick_set_velocity_to">"Sbadu arured ɣer"</string>
+    <string formatted="false" name="brick_set_velocity_unit">isurifen/tasint</string>
+    <string formatted="false" name="brick_turn_speed_unit">tiseddarin/tasint</string>
+    <string formatted="false" name="brick_set_friction">"Sbadu aḥekku ɣer"</string>
+    <string formatted="false" name="brick_set_bounce_factor">"Sbadu tazmert n uneggez ɣer"</string>
+    <string formatted="false" name="brick_rotate_left">"Ttezzi ɣer zelmeḍ"</string>
+    <string formatted="false" name="brick_rotate_right">"Ttezzi ɣer yefus"</string>
+    <!-- Look bricks -->
+    <string formatted="false" name="brick_set_look">Beddel ɣer telɣa</string>
+    <string formatted="false" name="brick_set_look_by_index">Beddel ɣer telɣa s wuṭṭun</string>
+    <string formatted="false" name="brick_and_wait">yerna rǧu</string>
+    <string formatted="false" name="brick_set_background">Sbadu agilal</string>
+    <string formatted="false" name="brick_set_background_and_wait">Sbadu agilal yerna rǧu</string>
+    <string formatted="false" name="brick_set_background_by_index">Sbadu agilal ɣer wuṭṭun</string>
+    <string formatted="false" name="brick_when_background">Mi ara ibeddel ugilal ɣer</string>
+    <string formatted="false" name="brick_set_size_to">Sbadu tiddi ɣer</string>
+    <string formatted="false" name="brick_change_size_by">Beddel tiddi s</string>
+    <string formatted="false" name="brick_hide">Ffer</string>
+    <string formatted="false" name="brick_show">Sken</string>
+    <string formatted="false" name="brick_set_transparency">"Sbadu tafrawant"</string>
+    <string formatted="false" name="brick_change_ghost_effect">"Beddel tafrawant"</string>
+    <string formatted="false" name="brick_set_brightness">"Sbadu tafat"</string>
+    <string formatted="false" name="brick_change_brightness">"Beddel tafat"</string>
+    <string formatted="false" name="brick_set_color">"Sbadu ini"</string>
+    <string formatted="false" name="brick_change_color">"Beddel ini"</string>
+    <string formatted="false" name="by_label">s</string>
+    <string formatted="false" name="to_label">ɣer</string>
+    <string formatted="false" name="brick_clear_graphic_effect">Sfeḍ isemda udlifen</string>
+    <string formatted="false" name="brick_next_look">Talɣa tuḍfirt</string>
+    <string formatted="false" name="brick_next_background">Agilal uḍfir</string>
+    <string formatted="false" name="brick_previous_look">Talɣa yezrin</string>
+    <string formatted="false" name="brick_previous_background">Agilal yezrin</string>
+    <string formatted="false" name="brick_edit_look">Ẓreg talɣa</string>
+    <string formatted="false" name="brick_edit_background">Ẓreg agilal</string>
+    <string formatted="false" name="brick_delete_look">Kkes talɣa</string>
+    <string formatted="false" name="brick_delete_background">Kkes agilal</string>
+    <string formatted="false" name="brick_flash">Sbadu taftilt</string>
+    <string formatted="false" name="brick_flash_on">termed</string>
+    <string formatted="false" name="brick_flash_off">tensa</string>
+    <string formatted="false" name="brick_vibration">Sergagi i</string>
+    <string formatted="false" name="brick_ask_label">Steqsi</string>
+    <string formatted="false" name="brick_ask_store">yerna ḥrez tiririt yettwarun deg</string>
+    <string formatted="false" name="brick_ask_default_question">Acu i d isem-ik·im?</string>
+    <string formatted="false" name="brick_ask_dialog_hint">"Sekcem tiririt-ik·im:"</string>
+    <string formatted="false" name="brick_ask_dialog_submit">Azen tiririt</string>
+    <string formatted="false" name="brick_ask_speech_label">Steqsi</string>
+    <string formatted="false" name="brick_ask_speech_store">yerna ḥrez tiririt s yimeslay deg</string>
+    <string formatted="false" name="brick_ask_speech_default_question">Acu i d isem-ik·im?</string>
+    <string formatted="false" name="brick_paint_new_look">Suneɣ talɣa tamaynut</string>
+    <string formatted="false" name="brick_paint_new_background">Suneɣ agilal amaynut</string>
+    <string formatted="false" name="brick_paint_new_look_name">"isem n telɣa tamaynut"</string>
+    <string formatted="false" name="brick_copy_look">Nɣel talɣa syin semmi-tt</string>
+    <string formatted="false" name="brick_copy_look_name">isem n telɣa yettwanɣlen</string>
+    <string formatted="false" name="brick_copy_background">Nɣel agilal syin semmi-t</string>
+    <string formatted="false" name="brick_focus_point">Uɣal d tanqiḍt n tmuɣli s</string>
+    <string formatted="false" name="brick_horizontal_and">n tlellit s uglawan d</string>
+    <string formatted="false" name="brick_vertical_flex">n tlellit s ubdid</string>
+    <!--  -->
+    <!-- Pen bricks -->
+    <string formatted="false" name="brick_pen_down">Ssers imru</string>
+    <string formatted="false" name="brick_pen_up">Sali imru</string>
+    <string formatted="false" name="brick_pen_size">Sbadu tiddi n yimru ɣer</string>
+    <string formatted="false" name="brick_pen_color">Sbadu ini n yimru ɣer</string>
+    <string formatted="false" name="brick_clear_background">Sfeḍ</string>
+    <string formatted="false" name="brick_stamp">Ṭebbeɛ</string>
+    <!--  -->
+    <!-- Sound bricks -->
+    <string formatted="false" name="brick_play_sound">Bdu imesli</string>
+    <string formatted="false" name="brick_play_sound_and_wait">Bdu imesli yerna rǧu</string>
+    <string formatted="false" name="brick_stop_sound">Seḥbes imesli</string>
+    <string formatted="false" name="brick_stop_all_sounds">Seḥbes akk imeslan</string>
+    <string formatted="false" name="brick_set_volume_to">Sbadu ableɣ ɣer</string>
+    <string formatted="false" name="brick_change_volume_by">Beddel ableɣ s</string>
+    <string formatted="false" name="brick_speak">Mmeslay</string>
+    <string formatted="false" name="brick_speak_default_value">Azul!</string>
+    <string formatted="false" name="brick_speak_and_wait">yerna rǧu</string>
+    <string formatted="false" name="brick_start_listening_to_voice">Bdu tisliḍt i taɣect yerna ḥrez awalen yettwannan deg</string>
+    <string formatted="false" name="speech_recognition_not_available">Tiɣimit n wawal ulac-itt.</string>
+    <string formatted="false" name="speech_recognition_offline_mode_error_dialog_title">Isefka war tuqqna xuṣṣen</string>
+    <string formatted="false" name="speech_recognition_offline_mode_missing_data_error_dialog_msg">Tiɣimit n wawal war tuqqna i %s txuṣṣ neɣ tesra aleqqem. Tebɣiḍ ad tt-tsadreḍ neɣ ad tt-tleqqmeḍ tura?</string>
+    <string formatted="false" name="brick_set_listening_language">Sbadu tutlayt n tesliḍt ɣer</string>
+    <string formatted="false" name="set_instrument_to">Sbadu allal n uẓawan ɣer</string>
+    <string formatted="false" name="set_tempo_to">Sbadu arured n uẓawan ɣer</string>
+    <string formatted="false" name="change_tempo_by">Beddel arured n uẓawan s</string>
+    <string formatted="false" name="pause_for">Ḥbes i</string>
+    <string formatted="false" name="play_drum">Wwet ṭṭbel</string>
+    <string formatted="false" name="beats">tiyitin</string>
+    <string formatted="false" name="play_note">Urar tazenẓunt</string>
+    <string formatted="false" name="for_string">i</string>
+    <string formatted="false" name="at_string">ɣer</string>
+    <string formatted="false" name="seconds_string">tasinin</string>
+    <!--  -->
+    <!-- Plot bricks -->
+    <string formatted="false" name="brick_save_plot">Sekles asuneɣ s SVG</string>
+    <string formatted="false" name="brick_share_plot">Bḍu asuneɣ s SVG</string>
+    <string formatted="false" name="brick_stop_plot">Seḥbes asuneɣ</string>
+    <string formatted="false" name="brick_start_plot">Bdu asuneɣ</string>
+    <string formatted="false" name="brick_stop_cut">Seḥbes tagzemt</string>
+    <string formatted="false" name="brick_start_cut">Bdu tagzemt</string>
+    <string formatted="false" name="brick_save_laser">Sekles isefka n tegzamt s laser ɣer SVG</string>
+    <string formatted="false" name="brick_stop_engrave">Seḥbes anqac</string>
+    <string formatted="false" name="brick_start_engrave">Bdu anqac</string>
+    <string formatted="false" name="brick_default_plot_file">plot.svg</string>
+    <string formatted="false" name="brick_share">Bḍu</string>
+    <string formatted="false" name="brick_share_laser">Bḍu isefka n tegzamt s laser s SVG</string>
+    <string formatted="false" name="brick_default_laser_file">laser.svg</string>
+    <!-- Embroidery bricks -->
+    <string formatted="false" name="brick_stitch">Gnu</string>
+    <string formatted="false" name="brick_running_stitch">Bdu agnu usrid s teɣzi</string>
+    <string formatted="false" name="brick_zigzag_stitch">Bdu agnu zigzag s teɣzi</string>
+    <string formatted="false" name="brick_zigzag_stitch_width">d tehri</string>
+    <string formatted="false" name="brick_triple_stitch">Bdu agnu s tlata s teɣzi</string>
+    <string formatted="false" name="brick_stop_stitch">Seḥbes agnu amiran</string>
+    <string formatted="false" name="brick_write_embroidery">Aru isefka n ṭṭerz ɣer ufaylu</string>
+    <string formatted="false" name="brick_default_embroidery_file">embroidery.dst</string>
+    <string formatted="false" name="brick_sew_up">Kfu agnu</string>
+    <string formatted="false" name="brick_thread_color">Sbadu ini n yifili ɣer</string>
+    <string formatted="false" name="embroider_arc_direction">Gnu aqews ɣer</string>
+    <string formatted="false" name="embroidery_through">Snulfu-d aqews s</string>
+    <!--  -->
+    <!-- Device bricks -->
+    <string formatted="false" name="brick_reset_timer">Wennez amakud</string>
+    <string formatted="false" name="brick_open">Ldi</string>
+    <string formatted="false" name="brick_in_browser">deg yiminig</string>
+    <!-- Control bricks -->
+    <string formatted="false" name="brick_when_started">Mi ara yebdu uḥric</string>
+    <string formatted="false" name="brick_when">Mi ara yettwasit</string>
+    <string formatted="false" name="brick_when_condition_when">Mi ara</string>
+    <string formatted="false" name="brick_when_becomes_true">yuɣal d tidet</string>
+    <string formatted="false" name="brick_wait">Rǧu</string>
+    <string formatted="false" name="brick_wait_until">Rǧu alamma</string>
+    <string formatted="false" name="brick_wait_until_second_part">d tidet</string>
+    <string formatted="false" name="brick_when_gamepad_button">Mi ara taqeffalt n umsenqed n wurar</string>
+    <string formatted="false" name="brick_when_gamepad_button_tapped">tettwasit</string>
+    <string formatted="false" name="brick_when_nfc">Mi ara tettwaɣer NFC</string>
+    <string formatted="false" name="brick_stop_script">Seḥbes</string>
+    <string formatted="false" name="brick_stop_this_script">askript-a</string>
+    <string formatted="false" name="brick_stop_all_scripts">akk iskripten</string>
+    <string formatted="false" name="brick_stop_other_scripts">iskripten-nniḍen n uwadem-a neɣ n tɣawsa-a</string>
+    <plurals name="second_plural">
+        <item quantity="one">"tasint"</item>
+        <item quantity="other">"tasinin"</item>
+    </plurals>
+    <string formatted="false" name="brick_collision_receive">Mi ara tneggzeḍ seg</string>
+    <string formatted="false" name="collision_with_anything">yal iri, awadem neɣ taɣawsa</string>
+    <string formatted="false" name="brick_broadcast_receive">Mi ara d-tremseḍ</string>
+    <string formatted="false" name="brick_broadcast">Azen i meṛṛa</string>
+    <string formatted="false" name="brick_broadcast_wait">Azen i meṛṛa yerna rǧu</string>
+    <string formatted="false" name="brick_scene_transition">Kemmel aḥric</string>
+    <string formatted="false" name="brick_scene_start">Bdu aḥric</string>
+    <string formatted="false" name="brick_note">Tazmilt</string>
+    <string formatted="false" name="brick_think_bubble">Xemmem</string>
+    <string formatted="false" name="brick_say_bubble">Ini</string>
+    <string formatted="false" name="brick_think_say_for_text">i</string>
+    <string formatted="false" name="brick_forever">Ales i lebda</string>
+    <string formatted="false" name="brick_loop_for_values_from">I wazalen seg</string>
+    <string formatted="false" name="brick_loop_for_each_value_from">I yal azal seg</string>
+    <string formatted="false" name="brick_loop_in">deg</string>
+    <string formatted="false" name="brick_loop_to">ɣer</string>
+    <string formatted="false" name="brick_repeat">Ales</string>
+    <string formatted="false" name="brick_repeat_until">Ales alamma</string>
+    <string formatted="false" name="brick_when_touched">Mi ara yettwasit usayes</string>
+    <string formatted="false" name="brick_clone">Snulfu-d aklun n</string>
+    <string formatted="false" name="brick_clone_this">iman-ik·im</string>
+    <string formatted="false" name="brick_when_cloned">Mi ara tebduḍ d aklun</string>
+    <string formatted="false" name="brick_delete_this_clone">Kkes aklun-a</string>
+    <string formatted="false" name="brick_assert_that">Ssentem</string>
+    <string formatted="false" name="brick_is_equal_to">yegda ayen yettwarǧan</string>
+    <string formatted="false" name="brick_wait_till_idle">Rǧu alamma ḥebsen akk yiskripten-nniḍen</string>
+    <string formatted="false" name="brick_tap_at">"Sit yiwet n tikkelt ɣer"</string>
+    <string formatted="false" name="brick_touch_at">"Nnal ɣer"</string>
+    <string formatted="false" name="brick_tap_for">"i"</string>
+    <string formatted="false" name="brick_touch_slide">"Nnal syin ṣeḍreḍ"</string>
+    <string formatted="false" name="brick_touch_from_x">"seg x:"</string>
+    <string formatted="false" name="brick_finish_stage">Mdel asayes</string>
+    <string formatted="false" name="brick_finish_tests">Fak isekyad</string>
+    <string formatted="false" name="brick_assert_lists">Ssentem tibdarin</string>
+    <string formatted="false" name="brick_assert_actual">Ayen yellan:</string>
+    <string formatted="false" name="brick_assert_expected">Ayen yettwarǧan:</string>
+    <string formatted="false" name="brick_parameterized_assert">ssentem</string>
+    <string formatted="false" name="brick_parameterized_equals">yegda aferdis yettwarǧan n</string>
+    <plurals name="brick_parameterized_foreach_plural">
+        <item quantity="one">I yal aferdis n</item>
+        <item quantity="other">I yal agraw n yiferdisen n</item>
+    </plurals>
+    <plurals name="brick_parameterized_stored_plural">
+        <item quantity="one">yettwaḥrez deg umutti s yiwen n yisem</item>
+        <item quantity="other">ttwaḥerzen deg yimuttiyen s yiwen n yismawen</item>
+    </plurals>
+    <plurals name="list_selection_plural">
+        <item quantity="one">%d n tebdart tettwafren</item>
+        <item quantity="other">%d n tebdarin ttwafernent</item>
+    </plurals>
+    <plurals name="time_plural">
+        <item quantity="one">tikkelt</item>
+        <item quantity="other">tikkal</item>
+    </plurals>
+    <string formatted="false" name="brick_loop_end">Taggara n wallus</string>
+    <string formatted="false" name="brick_if_begin">Ma</string>
+    <string formatted="false" name="brick_if_begin_second_part">d tidet, ihi</string>
+    <string formatted="false" name="brick_if_else">Ma ulac</string>
+    <string formatted="false" name="brick_if_end">Taggara n ma</string>
+    <string formatted="false" name="brick_set_variable">Sbadu amutti</string>
+    <string formatted="false" name="brick_change_variable">Beddel amutti</string>
+    <string formatted="false" name="brick_write_variable_on_device">Aru amutti ɣef yibenk</string>
+    <string formatted="false" name="brick_read_variable_from_device">Ɣer amutti seg yibenk</string>
+    <string formatted="false" name="brick_write_variable_to_file_top">Aru amutti</string>
+    <string formatted="false" name="brick_write_variable_to_file_bottom">ɣer ufaylu</string>
+    <string formatted="false" name="brick_write_variable_to_file_default_value">variable.txt</string>
+    <string formatted="false" name="brick_write_variable_to_file_success">"Isefka ttwarun akken iwata ɣer %1$s"</string>
+    <string formatted="false" name="brick_read_variable_from_file_top">Ɣer amutti</string>
+    <string formatted="false" name="brick_read_variable_from_file_center">seg ufaylu</string>
+    <string formatted="false" name="brick_read_variable_from_file_bottom">syin</string>
+    <string formatted="false" name="brick_read_variable_from_file_keep">eǧǧ afaylu</string>
+    <string formatted="false" name="brick_read_variable_from_file_delete">kkes afaylu</string>
+    <string formatted="false" name="brick_write_list_on_device">Aru tabdart ɣef yibenk</string>
+    <string formatted="false" name="brick_read_list_from_device">Ɣer tabdart seg yibenk</string>
+    <string formatted="false" name="brick_note_default_value">rnu awennit dagi…</string>
+    <string formatted="false" name="brick_think_bubble_default_value">Hmmmm!</string>
+    <string formatted="false" name="brick_say_bubble_default_value">Azul!</string>
+    <string formatted="false" name="brick_broadcast_default_value">"izen amaynut"</string>
+    <string formatted="false" name="brick_add_item_to_userlist_add">Rnu</string>
+    <string formatted="false" name="brick_add_item_to_userlist">ɣer tebdart</string>
+    <string formatted="false" name="brick_clear_userlist">Kkes akk iferdisen seg tebdart</string>
+    <string formatted="false" name="brick_delete_item_from_userlist_delete">Kkes aferdis seg tebdart</string>
+    <string formatted="false" name="brick_delete_item_from_userlist">deg wadeg</string>
+    <string formatted="false" name="brick_insert_item_into_userlist_insert_into">Sekcem</string>
+    <string formatted="false" name="brick_insert_item_into_userlist_into_list">ɣer tebdart</string>
+    <string formatted="false" name="brick_insert_item_into_userlist_at_position">deg wadeg</string>
+    <string formatted="false" name="brick_replace_item_in_userlist_replace_in_list">Semselsi aferdis deg tebdart</string>
+    <string formatted="false" name="brick_replace_item_in_userlist_item_at_index">deg wadeg</string>
+    <string formatted="false" name="brick_replace_item_in_userlist_with_value">s</string>
+    <string formatted="false" name="brick_web_request">Azen asuter Web ɣer</string>
+    <string formatted="false" name="brick_web_request_default_value">https://catrob.at/joke</string>
+    <string formatted="false" name="brick_web_request_result">yerna ḥrez tiririt deg</string>
+    <string formatted="false" name="web_request_warning_title">Sireg anekcum ɣer Web?</string>
+    <string formatted="false" name="web_request_warning_message">Ḥader aṭas send ad tsirgeḍ anekcum, acku aseɣwen yezmer ad d-isbeggen talɣut-ik·im tudmawant, am wadeg-ik·im aɣeggaf neɣ yal aḍris i d-teskecmeḍ, i yemdanen n diri neɣ i yal yiwen. Wali &lt;a href=%1s&gt;wiki&lt;/a&gt;-nneɣ i wugar n telɣut ɣef wacimi aya yezmer ad yili d aɣbel ameqqran.</string>
+    <string formatted="false" name="web_request_trust_domain_warning_title">Sireg yal tikkelt anekcum ɣer Web?</string>
+    <string formatted="false" name="web_request_trust_domain_warning_message">Ma tsirgeḍ yal tikkelt anekcum, ur k·m-d-nettsuter ara tikkelt-nniḍen ad tsentmeḍ tansiwin Web n taɣult-a.</string>
+    <string formatted="false" name="trusted_domains_edit_hint">Ma tebɣiḍ ad tekkseḍ tasiregt-a ticki, tzemreḍ ad tekkseḍ anekcum seg tebdart n taɣulin tuḍfirin deg yiɣewwaṛen n usnas-a.</string>
+    <string formatted="false" name="brick_look_request">Awi-d tugna seg</string>
+    <string formatted="false" name="brick_look_request_result">yerna seqdec-itt d talɣa tamirant</string>
+    <string formatted="false" name="brick_background_request_result">yerna seqdec-itt d agilal amiran</string>
+    <string formatted="false" name="look_request_http_error_message">"Tugna seg %1$s terra-d tuccḍa HTTP %2$s"</string>
+    <string formatted="false" name="look_request_type_error_message">"Tugna seg %1$s ur d-tewwi ara amasal n tugna yettwassnen"</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_store">Ḥrez tagejdit</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_of">n</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_csv">wazalen yettwabḍan s tefrayin</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_into">ɣer tebdart</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_data">amcic,ifulki\naqjun,d amcum\nayaziḍ,d amusnaw</string>
+    <!--  -->
+    <!--Instruments-->
+    <string formatted="false" name="piano">piyanu</string>
+    <string formatted="false" name="electric_piano">piyanu aliktrunan</string>
+    <string formatted="false" name="cello">vyulunsil</string>
+    <string formatted="false" name="flute">tajewwaqt</string>
+    <string formatted="false" name="vibraphone">vibrafun</string>
+    <string formatted="false" name="organ">urg</string>
+    <string formatted="false" name="guitar">tagitaṛt</string>
+    <string formatted="false" name="electric_guitar">tagitaṛt taliktrunant</string>
+    <string formatted="false" name="bass">bas</string>
+    <string formatted="false" name="pizzicato">pizzicato</string>
+    <string formatted="false" name="synth_pad">synth pad</string>
+    <string formatted="false" name="choir">agraw n yicennayen</string>
+    <string formatted="false" name="synth_lead">synth lead</string>
+    <string formatted="false" name="wooden_flute">ajewwaq n wesɣar</string>
+    <string formatted="false" name="trombone">trumbun</string>
+    <string formatted="false" name="saxophone">saksufun</string>
+    <string formatted="false" name="bassoon">basun</string>
+    <string formatted="false" name="clarinet">klarinet</string>
+    <string formatted="false" name="music_box">tabwaṭ n uẓawan</string>
+    <string formatted="false" name="steel_drum">ṭṭbel n wuzzal</string>
+    <string formatted="false" name="marimba">marimba</string>
+    <!--  -->
+    <!--Drums-->
+    <string formatted="false" name="snare_drum">ṭṭbel amecṭuḥ</string>
+    <string formatted="false" name="bass_drum">ṭṭbel ameqqran</string>
+    <string formatted="false" name="side_stick">taɛekkazt ɣef yiri</string>
+    <string formatted="false" name="crash_cymbal">ṣṣnuj crash</string>
+    <string formatted="false" name="open_hi_hat">hi-hat yeldin</string>
+    <string formatted="false" name="closed_hi_hat">hi-hat yemdlen</string>
+    <string formatted="false" name="tambourine">abendir</string>
+    <string formatted="false" name="hand_clap">afeqqeɛ n yifassen</string>
+    <string formatted="false" name="claves">klavis</string>
+    <string formatted="false" name="wood_block">tabwaṭ n wesɣar</string>
+    <string formatted="false" name="cowbell">tanaqust n tfunast</string>
+    <string formatted="false" name="triangle">triyangul</string>
+    <string formatted="false" name="bongo">bongo</string>
+    <string formatted="false" name="conga">konga</string>
+    <string formatted="false" name="cabasa">kabasa</string>
+    <string formatted="false" name="guiro">giru</string>
+    <string formatted="false" name="vibraslap">vibraslap</string>
+    <string formatted="false" name="open_cuica">kwika yeldin</string>
+    <!--  -->
+    <!-- Default Values -->
+    <string formatted="false" name="default_project_name">Asenfar-iw</string>
+    <string formatted="false" name="default_variable_name">Amutti</string>
+    <string formatted="false" name="default_scene_name">Aḥric</string>
+    <string formatted="false" name="default_script_group_name">Agraw n yiskripten</string>
+    <string formatted="false" name="default_broadcast_message_name">Izen</string>
+    <string formatted="false" name="default_list_name">Tabdart</string>
+    <string formatted="false" name="default_project_background_name">Agilal</string>
+    <string formatted="false" name="default_project_cloud_name">Isignan</string>
+    <string formatted="false" name="default_project_cloud_sprite_name_1">Isignan1</string>
+    <string formatted="false" name="default_project_cloud_sprite_name_2">Isignan2</string>
+    <string formatted="false" name="default_project_sprites_animal_name">Aɣersiw</string>
+    <string formatted="false" name="default_project_sprites_animal_wings_up">Afriwen d asawen</string>
+    <string formatted="false" name="default_project_sprites_animal_wings_down">Afriwen d akessar</string>
+    <string formatted="false" name="default_project_sprites_tweet_1">Acewweq1</string>
+    <string formatted="false" name="default_project_sprites_tweet_2">Acewweq2</string>
+    <!--suppress UnusedResources -->
+    <string formatted="false" name="default_project_needle_name">Tissegnit</string>
+    <!--suppress UnusedResources -->
+    <string formatted="false" name="default_project_outer_loop">Allus n beṛṛa</string>
+    <!--suppress UnusedResources -->
+    <string formatted="false" name="default_project_inner_loop">Allus n daxel</string>
+    <!-- Default ChromeCast Values -->
+    <string formatted="false" name="default_cast_project_background_name">Agilal</string>
+    <string formatted="false" name="default_cast_project_cloud_name">Isignan</string>
+    <string formatted="false" name="default_cast_project_cloud_sprite_name1">Isignan1</string>
+    <string formatted="false" name="default_cast_project_cloud_sprite_name2">Isignan2</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name">Afrux</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name_wing_up">Afriwen n ufrux d asawen</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name_wing_down">Afriwen n ufrux d akessar</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name_wing_up_left">Afriwen n ufrux d asawen ɣer zelmeḍ</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name_wing_down_left">Afriwen n ufrux d akessar ɣer zelmeḍ</string>
+    <string formatted="false" name="default_cast_project_sprites_tweet_1">Acewweq1</string>
+    <string formatted="false" name="default_cast_project_sprites_tweet_2">Acewweq2</string>
+    <string formatted="false" name="default_cast_project_var_direction">tanila</string>
+    <string formatted="false" name="default_cast_project_name">Asenfar-iw amezwaru Chromecast</string>
+    <!-- Default Drone Values -->
+    <string formatted="false" name="drone_brick_set_text">Aḍris</string>
+    <string formatted="false" name="drone_brick_set_x">X:</string>
+    <!--  -->
+    <!-- Drone config spinner values  -->
+    <string formatted="false" name="drone_config_indoor_with_hull">daxel s tekmamt</string>
+    <string formatted="false" name="drone_config_indoor_without_hull">daxel war tikmamt</string>
+    <string formatted="false" name="drone_config_outdoor_with_hull">beṛṛa s tekmamt</string>
+    <string formatted="false" name="drone_config_outdoor_without_hull">beṛṛa war tikmamt</string>
+    <!-- Drone altitude limit values  -->
+    <string formatted="false" name="drone_set_altitude_max_3m">3 imitren</string>
+    <string formatted="false" name="drone_set_altitude_max_5m">5 imitren</string>
+    <string formatted="false" name="drone_set_altitude_max_10m">10 imitren</string>
+    <string formatted="false" name="drone_set_altitude_max_100m">100 imitren</string>
+    <!-- Drone max vertical speed limit values  -->
+    <string formatted="false" name="drone_set_vertical_min">200 mm/s</string>
+    <string formatted="false" name="drone_set_vertical_indoor">700 mm/s</string>
+    <string formatted="false" name="drone_set_vertical_outdoor">1000 mm/s</string>
+    <string formatted="false" name="drone_set_vertical_max">2000 mm/s</string>
+    <!-- Drone max rotation speed limit values  -->
+    <string formatted="false" name="drone_set_rotation_min">40 tiseddarin/s</string>
+    <string formatted="false" name="drone_set_rotation_indoor">100 tiseddarin/s</string>
+    <string formatted="false" name="drone_set_rotation_outdoor">200 tiseddarin/s</string>
+    <string formatted="false" name="drone_set_rotation_max">350 tiseddarin/s</string>
+    <!-- Drone max tilt limit values  -->
+    <string formatted="false" name="drone_set_tilt_min">5 tiseddarin</string>
+    <string formatted="false" name="drone_set_tilt_indoor">12 tiseddarin</string>
+    <string formatted="false" name="drone_set_tilt_outdoor">20 tiseddarin</string>
+    <string formatted="false" name="drone_set_tilt_max">30 tiseddarin</string>
+    <!-- Notification Channel -->
+    <string formatted="false" name="channel_description">Abadu n yilɣa n %1$s</string>
+    <!--  -->
+    <!-- Notifications -->
+    <string formatted="false" name="notification_screenshot_ok">Tugna n teskant tettwasekles</string>
+    <string formatted="false" name="notification_download_project_cancel">Sefsex asader n usenfar</string>
+    <string formatted="false" name="notification_reconvert_download_program_cancel">Asader/aselket tikkelt-nniḍen n usenfar yettwasefsex</string>
+    <string formatted="false" name="notification_upload_title_pending">"Asali"</string>
+    <string formatted="false" name="notification_upload_title_finished">"Wali"</string>
+    <string formatted="false" name="notification_upload_pending">Asali itteddu</string>
+    <string formatted="false" name="notification_upload_finished">Asali yedda akken iwata</string>
+    <string formatted="false" name="notification_upload_rejected">Asenfar yettwasalin yettwagi</string>
+    <string formatted="false" name="notification_upload_retry">Ɛreḍ tikkelt-nniḍen</string>
+    <string formatted="false" name="notification_open_play_store">Ldi taḥanut n yisnasen</string>
+    <string formatted="false" name="notification_download_title_pending">"Asader"</string>
+    <string formatted="false" name="notification_download_pending">Asader itteddu</string>
+    <string formatted="false" name="notification_download_finished">Asader yedda akken iwata</string>
+    <string formatted="false" name="notification_title_open">"Ldi"</string>
+    <string formatted="false" name="size_of_project">Tiddi:</string>
+    <!--  -->
+    <!-- Runtime permission messages -->
+    <string formatted="false" name="runtime_permission_general">Asnas-a yesra tisirag yettwasutren i wakken ad iteddu akken iwata. Amedya, ablug Takamiṛat yesra anekcum ɣer tkamiṛat n yibenk, aferdis n tenfalit \"adig\" yesra anekcum ɣer umaṭṭaf n wadig asiɣzan n yibenk, yerna i ukter d usifeḍ n yisenfaren seg tkatut tadigant d ɣur-s, asnas yesra anekcum n tɣuri d tira ɣur-s. Tzemreḍ yal tikkelt ad tbeddleḍ tisirag deg yiɣewwaṛen n yibenk-ik·im.</string>
+    <!-- Error messages -->
+    <string formatted="false" name="error_project_upload">Yella wayen ur neddi ara deg usali n usenfar.</string>
+    <string formatted="false" name="error_project_download">Yella wayen ur neddi ara deg usader n usenfar.</string>
+    <string formatted="false" name="error_project_already_in_queue">"Asenfar %s yella yakan deg udras."</string>
+    <string formatted="false" name="error_could_not_decode_project_name_from_url">"Asader-ik·im ur yezmir ara ad yebdu, yettban-d yella wugur deg uqeddac-nneɣ."</string>
+    <string formatted="false" name="error_new_project">Yella wayen ur neddi ara deg usnulfu n usenfar amaynut.</string>
+    <string formatted="false" name="error_rename_scene">Yella wayen ur neddi ara deg usnifel n yisem n uḥric.</string>
+    <string formatted="false" name="error_load_project">Yella wayen ur neddi ara deg ulday n usenfar.</string>
+    <string formatted="false" name="error_screenshot_failed">Yella wayen ur neddi ara deg usekles n tugna n teskant.</string>
+    <string formatted="false" name="error_internet_connection">Teḍra-d tuccḍa tarussint. Senqed tuqqna-k·m ɣer Internet.</string>
+    <string formatted="false" name="error_project_compatibility">Asenfar-a ur yemṣada ara d lqem-a n usnas.</string>
+    <string formatted="false" name="error_outdated_version">Lqem-a n usnas yezri-t wakud. Leqqem-it tura?</string>
+    <string formatted="false" name="error_upload_project_with_default_name">Ur tezmireḍ ara ad tsaliḍ asenfar s yisem \"%s\". Ma ulac aɣilif, snifel isem n usenfar.</string>
+    <string formatted="false" name="error_upload_default_project">Ur tezmireḍ ara ad tsaliḍ asenfar n umedya ur nettwabeddel ara. Ma ulac aɣilif, beddel kra syin ɛreḍ tikkelt-nniḍen.</string>
+    <string formatted="false" name="error_adding_brick">Yella wayen ur neddi ara deg tmerna n yiblug-a.</string>
+    <string formatted="false" name="error_copying_brick">Yella wayen ur neddi ara deg unɣal n yiblug-a.</string>
+    <string formatted="false" name="error_rename_incompatible_project">Ur yezmir ara ad yettwasnifel yisem n usenfar ur nemṣada ara.</string>
+    <string formatted="false" name="error_embroidery_file_export">Yella wayen ur neddi ara deg beṭṭu n ufaylu n ṭṭerz.</string>
+    <string formatted="false" name="error_embroidery_file_write">Yella wayen ur neddi ara deg tira n ufaylu n ṭṭerz.</string>
+    <string formatted="false" name="error_embroidery_data_not_found">Ṭṭerz ulac-it.</string>
+    <string formatted="false" name="error_plot_file_write">Yella wayen ur neddi ara deg tira n ufaylu n usuneɣ svg.</string>
+    <string formatted="false" name="error_plot_data_not_found">Asuneɣ ulac-it.</string>
+    <string formatted="false" name="error_unknown_error">Yella wayen ur neddi ara.</string>
+    <string formatted="false" name="error_gps_not_available">Isefka n wadig asiɣzan ulac-iten.</string>
+    <string formatted="false" name="error_set_description">Yella wayen ur neddi ara deg usekles n uglam amaynut.</string>
+    <string formatted="false" name="error_set_notes_and_credits">Yella wayen ur neddi ara deg usekles n tezmilin d yimttekkiyen imaynuten.</string>
+    <string formatted="false" name="error_no_whatsapp">WhatsApp ur yettwasbedd ara</string>
+    <string formatted="false" name="error_unsupported_bricks_chromecast">Askript-a ur yezmir ara ad yettwarnu ɣer usenfar Chromecast.</string>
+    <!--  -->
+    <!-- Bluetooth Connection Strings -->
+    <string formatted="false" name="notification_blueth_err">Ur yezmir ara ad yermed Bluetooth, ma ulac aɣilif ɛreḍ ad t-tsenseḍ syin ad t-tesremdeḍ tikkelt-nniḍen.</string>
+    <string formatted="false" name="title_paired_devices">Ibenkan yettwaqqnen</string>
+    <string formatted="false" name="title_other_devices">Ibenkan yellan</string>
+    <string formatted="false" name="bluetooth_connection_title">Tuqqna Bluetooth</string>
+    <string formatted="false" name="skip_bluetooth_connection">Zgel</string>
+    <string formatted="false" name="connecting_please_wait">Tuqqna ɣer yibenk-ik·im.\nMa ulac aɣilif, rǧu…</string>
+    <string formatted="false" name="bt_connection_failed">Tuqqna ɣer yibenk ur teddi ara!</string>
+    <string formatted="false" name="none_found">Ulac ibenkan ur nettwaqqen ara i yettwafen</string>
+    <string formatted="false" name="multiplayer_bluetooth_connection_information_title">Tuqqna Bluetooth tettwasra!</string>
+    <string formatted="false" name="multiplayer_bluetooth_connection_information">I wakken ad turareḍ urar-a s waṭas n yimyuraren, tettwasra tuqqna Bluetooth. Sin yimyuraren ilaq ad bdun urar yerna ad ilin ɣef ugdil-a i wakken tuqqna ad teddu akken iwata!</string>
+    <!--  -->
+    <!-- Arduino Bricks -->
+    <string formatted="false" name="brick_arduino_select_digital_value">Sbadu pin umḍin n Arduino</string>
+    <string formatted="false" name="brick_arduino_select_analog_value">Sbadu pin PWM~ n Arduino</string>
+    <string formatted="false" name="brick_arduino_set_pin_value_to">ɣer</string>
+    <!--  -->
+    <!-- Raspi Bricks -->
+    <string formatted="false" name="brick_raspi_select_digital_value">Sbadu pin n Raspberry Pi</string>
+    <string formatted="false" name="brick_raspi_set_pin_value_to">ɣer</string>
+    <string formatted="false" name="brick_raspi_if_begin">Ma pin n Raspberry Pi</string>
+    <string formatted="false" name="brick_raspi_if_begin_second_part">d tidet, ihi</string>
+    <string formatted="false" name="brick_raspi_when_begin">Mi ara pin n Raspberry Pi</string>
+    <string formatted="false" name="brick_raspi_when_equals">ibeddel ɣer</string>
+    <string formatted="false" name="brick_raspi_pressed_text">unnig</string>
+    <string formatted="false" name="brick_raspi_released_text">adday</string>
+    <string formatted="false" name="brick_raspi_set_pwm">Sbadu pin PWM n Raspberry Pi</string>
+    <!--  -->
+    <!-- Raspi Settings -->
+    <string formatted="false" name="raspi_settings_title_name">Iɣewwaṛen n Raspberry Pi</string>
+    <string formatted="false" name="raspi_settings_gpio_version">Lqem n GPIO</string>
+    <string formatted="false" name="error_connecting_to">Tuccḍa: Ur yezmir ara ad yeqqen ɣer %s : %d</string>
+    <!--  -->
+    <!-- MQTT Settings -->
+    <string formatted="false" name="preference_title_enable_mqtt_bricks">Asiɣzef MQTT</string>
+    <string formatted="false" name="preference_description_mqtt_bricks">Sireg asnas ad yeqqen ɣer yiqeddacen MQTT (brokers)</string>
+    <string formatted="false" name="preference_title_mqtt_enabled">Rmed iblugen MQTT</string>
+    <string formatted="false" name="preference_description_mqtt_enabled">Rmed iblugen d imaṭṭafen i MQTT</string>
+    <string formatted="false" name="preference_title_mqtt_category">Iɣewwaṛen n MQTT</string>
+    <string formatted="false" name="preference_title_mqtt_broker_host">Asenneftaɣ n uqeddac (broker)</string>
+    <string formatted="false" name="preference_description_mqtt_broker_host">Tansa IP neɣ isem n usenneftaɣ n uqeddac MQTT (broker)</string>
+    <string formatted="false" name="preference_title_mqtt_broker_port">Tawwurt n uqeddac (broker)</string>
+    <string formatted="false" name="preference_description_mqtt_broker_port">Uṭṭun n tewwurt n uqeddac MQTT (1–65535)</string>
+    <string formatted="false" name="preference_title_mqtt_use_tls">Seqdec TLS</string>
+    <string formatted="false" name="preference_title_mqtt_username">Isem n useqdac</string>
+    <string formatted="false" name="preference_title_mqtt_password">Awal uffir</string>
+    <string formatted="false" name="preference_title_mqtt_client_id">Asulay n umsaɣ</string>
+    <string formatted="false" name="preference_mqtt_port_invalid">Tawwurt ilaq ad tili d uṭṭun gar 1 d 65535</string>
+    <!--  -->
+    <!-- Lego Mindstorms Strings -->
+    <string formatted="false" name="nxt_brick_motor_move">Sbadu amutur NXT</string>
+    <string formatted="false" name="nxt_motor_speed_to">ɣer</string>
+    <string formatted="false" name="nxt_motor_speed">n urured</string>
+    <string formatted="false" name="nxt_brick_motor_turn_angle">Zzi amutur NXT</string>
+    <string formatted="false" name="nxt_motor_move_by">s</string>
+    <string formatted="false" name="nxt_motor_stop">Seḥbes amutur NXT</string>
+    <string formatted="false" name="nxt_play_tone">Urar aṣut NXT</string>
+    <string formatted="false" name="nxt_tone_duration">Tanzagt</string>
+    <string formatted="false" name="nxt_tone_frequency">Tafrekwensit</string>
+    <string formatted="false" name="nxt_tone_hundred_hz">×100Hz</string>
+    <string formatted="false" name="nxt_motor_a">A</string>
+    <string formatted="false" name="nxt_motor_b">B</string>
+    <string formatted="false" name="nxt_motor_c">C</string>
+    <string formatted="false" name="nxt_motor_b_and_c">B+C</string>
+    <string formatted="false" name="nxt_motor_all">Akk</string>
+    <string formatted="false" name="nxt_choose_sensor_1">Amaṭṭaf yeqqnen ɣer tewwurt 1</string>
+    <string formatted="false" name="nxt_choose_sensor_2">Amaṭṭaf yeqqnen ɣer tewwurt 2</string>
+    <string formatted="false" name="nxt_choose_sensor_3">Amaṭṭaf yeqqnen ɣer tewwurt 3</string>
+    <string formatted="false" name="nxt_choose_sensor_4">Amaṭṭaf yeqqnen ɣer tewwurt 4</string>
+    <string formatted="false" name="nxt_no_sensor">ulac</string>
+    <string formatted="false" name="nxt_sensor_touch">Amaṭṭaf n unnal NXT</string>
+    <string formatted="false" name="nxt_sensor_sound">Amaṭṭaf n yimesli NXT</string>
+    <string formatted="false" name="nxt_sensor_light">Amaṭṭaf n tafat NXT</string>
+    <string formatted="false" name="nxt_sensor_light_active">Amaṭṭaf n tafat NXT urmid</string>
+    <string formatted="false" name="nxt_sensor_ultrasonic">Amaṭṭaf ultrason NXT</string>
+    <string formatted="false" name="nxt_sensor_not_found">Amaṭṭaf ulac-it!</string>
+    <string formatted="false" name="lego_nxt_sensor_config_info_title">Tawila n yimaṭṭafen NXT</string>
+    <string formatted="false" name="preference_disable_nxt_info_dialog">Sens adiwenni n telɣut</string>
+    <string formatted="false" name="preference_disable_nxt_info_dialog_description">Iɣewwaṛen NXT uzzigen n usenfar ur d-ttbanen ara mi ara teldiḍ asenfar.</string>
+    <string formatted="false" name="preference_title_mindstorms_nxt_sensors_description">Tuqqna n yimaṭṭafen NXT ɣer tewwura d tin yettwasbadun i yal asenfar, yerna tettwaswal kan i yisenfaren yeldin.</string>
+    <string formatted="false" name="lego_nxt_sensor_config_info_text">Asenfar amiran iseqdac iblugen neɣ imaṭṭafen n Lego Mindstorms NXT. I wakken ad iteddu akken iwata, ma ulac aɣilif qqen imaṭṭafen ɣer uṛubu akka</string>
+    <string formatted="false" name="lego_port_1">Tawwurt 1</string>
+    <string formatted="false" name="lego_port_2">Tawwurt 2</string>
+    <string formatted="false" name="lego_port_3">Tawwurt 3</string>
+    <string formatted="false" name="lego_port_4">Tawwurt 4</string>
+    <string formatted="false" name="lego_sensor_config_dont_show_again">Ur d-sskan ara izen-a tikkelt-nniḍen.</string>
+    <string formatted="false" name="lego_sensor_port_config_dialog_title">Fren tawwurt i tuqqna ɣer %1$s.</string>
+    <string formatted="false" name="lego_ev3_sensor_config_info_title">Tawila n yimaṭṭafen EV3</string>
+    <string formatted="false" name="preference_disable_ev3_info_dialog_description">Iɣewwaṛen EV3 uzzigen n usenfar ur d-ttbanen ara mi ara teldiḍ asenfar.</string>
+    <string formatted="false" name="preference_title_mindstorms_ev3_sensors_description">Tuqqna n yimaṭṭafen EV3 ɣer tewwura d tin yettwasbadun i yal asenfar, yerna tettwaswal kan i yisenfaren yeldin.</string>
+    <string formatted="false" name="lego_ev3_sensor_config_info_text">Asenfar amiran iseqdac iblugen neɣ imaṭṭafen n Lego Mindstorms EV3. I wakken ad iteddu akken iwata, ma ulac aɣilif qqen imaṭṭafen ɣer uṛubu akka</string>
+    <string formatted="false" name="ev3_choose_sensor_1">Amaṭṭaf yeqqnen ɣer tewwurt 1</string>
+    <string formatted="false" name="ev3_choose_sensor_2">Amaṭṭaf yeqqnen ɣer tewwurt 2</string>
+    <string formatted="false" name="ev3_choose_sensor_3">Amaṭṭaf yeqqnen ɣer tewwurt 3</string>
+    <string formatted="false" name="ev3_choose_sensor_4">Amaṭṭaf yeqqnen ɣer tewwurt 4</string>
+    <string formatted="false" name="ev3_no_sensor">ulac</string>
+    <string formatted="false" name="ev3_sensor_touch">Amaṭṭaf n unnal EV3</string>
+    <string formatted="false" name="ev3_sensor_infrared">Amaṭṭaf infrared EV3</string>
+    <string formatted="false" name="ev3_sensor_color">Amaṭṭaf n yini EV3</string>
+    <string formatted="false" name="ev3_sensor_color_ambient">Amaṭṭaf n yini EV3 (tafat n twennaḍt)</string>
+    <string formatted="false" name="ev3_sensor_color_reflected">Amaṭṭaf n yini EV3 (tafat yettuɣalen)</string>
+    <string formatted="false" name="ev3_sensor_hitechnic_color">Amaṭṭaf n yini HiTechnic</string>
+    <string formatted="false" name="ev3_sensor_nxt_temperature_c">Amaṭṭaf n tezɣelt NXT (°C)</string>
+    <string formatted="false" name="ev3_sensor_nxt_temperature_f">Amaṭṭaf n tezɣelt NXT (°F)</string>
+    <string formatted="false" name="ev3_sensor_nxt_light">Amaṭṭaf n tafat NXT</string>
+    <string formatted="false" name="ev3_sensor_nxt_light_active">Amaṭṭaf n tafat NXT urmid</string>
+    <string formatted="false" name="ev3_sensor_nxt_sound">Amaṭṭaf n yimesli NXT</string>
+    <string formatted="false" name="ev3_sensor_nxt_ultrasonic">Amaṭṭaf ultrason NXT</string>
+    <string formatted="false" name="ev3_motor_a">A</string>
+    <string formatted="false" name="ev3_motor_b">B</string>
+    <string formatted="false" name="ev3_motor_c">C</string>
+    <string formatted="false" name="ev3_motor_d">D</string>
+    <string formatted="false" name="ev3_motor_b_and_c">B+C</string>
+    <string formatted="false" name="ev3_motor_all">Akk</string>
+    <string formatted="false" name="ev3_play_tone">Urar aṣut EV3</string>
+    <string formatted="false" name="ev3_tone_duration_for">i</string>
+    <string formatted="false" name="ev3_tone_volume">Ableɣ</string>
+    <string formatted="false" name="ev3_tone_percent">%</string>
+    <string formatted="false" name="ev3_motor_stop">Seḥbes amutur EV3</string>
+    <string formatted="false" name="ev3_motor_move">Sbadu amutur EV3</string>
+    <string formatted="false" name="ev3_brick_motor_turn_angle">Zzi amutur EV3</string>
+    <string formatted="false" name="ev3_motor_move_by">s</string>
+    <string formatted="false" name="ev3_set_led_status">Sbadu addad n LED EV3</string>
+    <string formatted="false" name="ev3_led_status_off">Yensa</string>
+    <string formatted="false" name="ev3_led_status_green">Azegzaw</string>
+    <string formatted="false" name="ev3_led_status_red">Azeggaɣ</string>
+    <string formatted="false" name="ev3_led_status_orange">Aččinawi</string>
+    <string formatted="false" name="ev3_led_status_green_flashing">Azegzaw yettbelbil</string>
+    <string formatted="false" name="ev3_led_status_red_flashing">Azeggaɣ yettbelbil</string>
+    <string formatted="false" name="ev3_led_status_orange_flashing">Aččinawi yettbelbil</string>
+    <string formatted="false" name="ev3_led_status_green_pulse">Azegzaw s tiyitin</string>
+    <string formatted="false" name="ev3_led_status_red_pulse">Azeggaɣ s tiyitin</string>
+    <string formatted="false" name="ev3_led_status_orange_pulse">Aččinawi s tiyitin</string>
+    <!--  -->
+    <!-- Drone Bricks -->
+    <string formatted="false" name="brick_drone_takeoff_land">Ffeg / ers AR.Drone 2.0</string>
+    <string formatted="false" name="brick_drone_play_led_animation">Urar asmussu n tftilt n AR.Drone 2.0</string>
+    <string formatted="false" name="brick_drone_flip">Qelleb AR.Drone 2.0</string>
+    <string formatted="false" name="brick_drone_move_left">Senkez AR.Drone 2.0 ɣer zelmeḍ</string>
+    <string formatted="false" name="brick_drone_move_right">Senkez AR.Drone 2.0 ɣer yefus</string>
+    <string formatted="false" name="brick_drone_move_forward">Senkez AR.Drone 2.0 ɣer zdat</string>
+    <string formatted="false" name="brick_drone_move_backward">Senkez AR.Drone 2.0 ɣer deffir</string>
+    <string formatted="false" name="brick_drone_move_up">Senkez AR.Drone 2.0 d asawen</string>
+    <string formatted="false" name="brick_drone_move_down">Senkez AR.Drone 2.0 d akessar</string>
+    <string formatted="false" name="brick_drone_emergency">Aḥbas n lɛejla AR.Drone 2.0</string>
+    <string formatted="false" name="brick_drone_turn_right">Zzi AR.Drone 2.0 ɣer yefus</string>
+    <string formatted="false" name="brick_drone_turn_left">Zzi AR.Drone 2.0 ɣer zelmeḍ</string>
+    <string formatted="false" name="brick_drone_set_config">Sbadu tawila n AR.Drone 2.0</string>
+    <string formatted="false" name="brick_drone_switch_camera">Beddel takamiṛat n AR.Drone 2.0</string>
+    <string formatted="false" name="brick_drone_set_altitude">Talast n uɛlay</string>
+    <string formatted="false" name="brick_drone_set_vertical_speed">Talast n urured s ubdid</string>
+    <string formatted="false" name="brick_drone_set_rotation_speed">Talast n urured n tuzzya</string>
+    <string formatted="false" name="brick_drone_set_tilt_limit">Talast n uknaw</string>
+    <string formatted="false" name="brick_drone_with.">s</string>
+    <string formatted="false" name="brick_drone_power">n tezmert</string>
+    <!--  -->
+    <!-- Drone play led animation strings -->
+    <string formatted="false" name="drone_animation_blinkgreenred">Belbel s uzegzaw d uzeggaɣ</string>
+    <string formatted="false" name="drone_animation_blinkgreen">Belbel s uzegzaw</string>
+    <string formatted="false" name="drone_animation_blinkred">Belbel s uzeggaɣ</string>
+    <string formatted="false" name="drone_animation_blinkorange">Belbel s waččinawi</string>
+    <string formatted="false" name="drone_animation_snakegreenred">Azrem azegzaw d azeggaɣ</string>
+    <string formatted="false" name="drone_animation_fire">Times</string>
+    <string formatted="false" name="drone_animation_standard">Amagnu</string>
+    <string formatted="false" name="drone_animation_red">Azeggaɣ</string>
+    <string formatted="false" name="drone_animation_green">Azegzaw</string>
+    <string formatted="false" name="drone_animation_redsnake">Azrem azeggaɣ</string>
+    <string formatted="false" name="drone_animation_blank">Ilem</string>
+    <string formatted="false" name="drone_animation_rightmissile">Aṣaruḵ ayeffus</string>
+    <string formatted="false" name="drone_animation_leftmissile">Aṣaruḵ azelmaḍ</string>
+    <string formatted="false" name="drone_animation_doublemissile">Sin n yiṣaruḵen</string>
+    <string formatted="false" name="drone_animation_frontleftgreenothersred">Zdat-zelmeḍ d azegzaw, wiyaḍ d izeggaɣen</string>
+    <string formatted="false" name="drone_animation_frontrightgreenothersred">Zdat-yefus d azegzaw, wiyaḍ d izeggaɣen</string>
+    <string formatted="false" name="drone_animation_rearrightgreenothersred">Deffir-yefus d azegzaw, wiyaḍ d izeggaɣen</string>
+    <string formatted="false" name="drone_animation_rearleftgreenothersred">Deffir-zelmeḍ d azegzaw, wiyaḍ d izeggaɣen</string>
+    <string formatted="false" name="drone_animation_leftgreenrightred">Zelmeḍ d azegzaw, yefus d azeggaɣ</string>
+    <string formatted="false" name="drone_animation_leftredrightgreen">Zelmeḍ d azeggaɣ, yefus d azegzaw</string>
+    <string formatted="false" name="drone_animation_blinkstandard">Belbel amagnu</string>
+    <!-- Jumping Sumo Bricks -->
+    <string formatted="false" name="brick_jumping_sumo_move_forward">Senkez Jumping Sumo ɣer zdat</string>
+    <string formatted="false" name="brick_jumping_sumo_move_backward">Senkez Jumping Sumo ɣer deffir</string>
+    <string formatted="false" name="brick_jumping_sumo_animation">Ismussuyen n Jumping Sumo</string>
+    <string formatted="false" name="brick_jumping_sumo_no_sound">Sens imesli n Jumping Sumo</string>
+    <string formatted="false" name="brick_jumping_sumo_jump_long">Neggez Jumping Sumo ɣer zdat</string>
+    <string formatted="false" name="brick_jumping_sumo_jump_high">Neggez Jumping Sumo d asawen</string>
+    <string formatted="false" name="brick_jumping_sumo_rotate_left">Zzi Jumping Sumo ɣer zelmeḍ</string>
+    <string formatted="false" name="brick_jumping_sumo_rotate_right">Zzi Jumping Sumo ɣer yefus</string>
+    <string formatted="false" name="brick_jumping_sumo_rotate_text">tiseddarin</string>
+    <string formatted="false" name="brick_jumping_sumo_turn">Qelleb Jumping Sumo</string>
+    <string formatted="false" name="brick_jumping_sumo_taking_picture">Ṭṭef tawlaft s Jumping Sumo</string>
+    <!--  -->
+    <!-- defaultJumpingSumoValues -->
+    <string formatted="false" name="default_jumping_sumo_project_sprites_sound">Imesli</string>
+    <!--  -->
+    <!-- Jumping Sumo animation strings -->
+    <string formatted="false" name="animation_spin">Tuzzya</string>
+    <string formatted="false" name="animation_tab">Asiti</string>
+    <string formatted="false" name="animation_slowshake">Asenhez s ttawil</string>
+    <string formatted="false" name="animation_metronome">Metronom</string>
+    <string formatted="false" name="animation_ondulation">Imawjen</string>
+    <string formatted="false" name="animation_spinjump">Aneggez s tuzzya</string>
+    <string formatted="false" name="animation_spiral">Aɛekkaz</string>
+    <string formatted="false" name="animation_slalom">Slalom</string>
+    <!-- Jumping Sumo sound strings -->
+    <string formatted="false" name="jumping_sumo_volume">Ableɣ</string>
+    <string formatted="false" name="sound_default">Amagnu</string>
+    <string formatted="false" name="sound_robot">Aṛubu</string>
+    <string formatted="false" name="sound_insect">Abeɛɛuc</string>
+    <string formatted="false" name="sound_monster">Awaɣzen</string>
+    <!--  -->
+    <!-- Shared arc and go-through strings -->
+    <string formatted="false" name="direction_left">ɣer zelmeḍ</string>
+    <string formatted="false" name="direction_right">ɣer yefus</string>
+    <string formatted="false" name="arc_direction">Ddu s uqews</string>
+    <string formatted="false" name="go_through">Ɛeddi seg</string>
+    <string formatted="false" name="go_through_target">syin ɣer</string>
+    <string formatted="false" name="arc_with_radius">s uqqar</string>
+    <string formatted="false" name="arc_for_degrees">ɣef</string>
+    <!--  -->
+    <!-- Phiro bricks -->
+    <!-- motor -->
+    <string formatted="false" name="phiro_motor_stop">Seḥbes amutur Phiro</string>
+    <string formatted="false" name="brick_phiro_motor_forward_action">Senkez amutur Phiro ɣer zdat</string>
+    <string formatted="false" name="brick_phiro_motor_backward_action">Senkez amutur Phiro ɣer deffir</string>
+    <string formatted="false" name="phiro_motor_speed">Arured</string>
+    <!-- sensor -->
+    <string formatted="false" name="brick_phiro_sensor_begin">Ma Phiro</string>
+    <string formatted="false" name="brick_phiro_sensor_second_part">yettwarmed</string>
+    <!-- tone -->
+    <string formatted="false" name="phiro_play_tone">Urar aẓawan Phiro\n</string>
+    <string formatted="false" name="phiro_tone_duration">Tanzagt</string>
+    <string formatted="false" name="brick_phiro_select_tone">aṣut</string>
+    <string formatted="false" name="phiro_seconds">tasinin</string>
+    <!-- light -->
+    <string formatted="false" name="brick_phiro_rgb_led_action">Sbadu tafat n Phiro</string>
+    <string formatted="false" name="phiro_rgb_led_red">Azeggaɣ</string>
+    <string formatted="false" name="phiro_rgb_led_green">Azegzaw</string>
+    <string formatted="false" name="phiro_rgb_led_blue">Anili</string>
+    <!--  -->
+    <!-- Phiro tone strings -->
+    <string formatted="false" name="phiro_tone_do">Do</string>
+    <string formatted="false" name="phiro_tone_re">Re</string>
+    <string formatted="false" name="phiro_tone_mi">Mi</string>
+    <string formatted="false" name="phiro_tone_fa">Fa</string>
+    <string formatted="false" name="phiro_tone_so">Sol</string>
+    <string formatted="false" name="phiro_tone_la">La</string>
+    <string formatted="false" name="phiro_tone_ti">Si</string>
+    <!--  -->
+    <!-- Phiro motor strings -->
+    <string formatted="false" name="phiro_motor_left">Zelmeḍ</string>
+    <string formatted="false" name="phiro_motor_right">Yefus</string>
+    <string formatted="false" name="phiro_motor_both">I sin</string>
+    <!--  -->
+    <!-- Phiro light strings -->
+    <string formatted="false" name="phiro_light_left">Zelmeḍ</string>
+    <string formatted="false" name="phiro_light_right">Yefus</string>
+    <string formatted="false" name="phiro_light_both">I sin</string>
+    <!--  -->
+    <!-- Phiro sensor strings -->
+    <string formatted="false" name="phiro_sensor_front_left">Amaṭṭaf n zdat ɣer zelmeḍ</string>
+    <string formatted="false" name="phiro_sensor_front_right">Amaṭṭaf n zdat ɣer yefus</string>
+    <string formatted="false" name="phiro_sensor_side_left">Amaṭṭaf n yidis ɣer zelmeḍ</string>
+    <string formatted="false" name="phiro_sensor_side_right">Amaṭṭaf n yidis ɣer yefus</string>
+    <string formatted="false" name="phiro_sensor_bottom_left">Amaṭṭaf n wadda ɣer zelmeḍ</string>
+    <string formatted="false" name="phiro_sensor_bottom_right">Amaṭṭaf n wadda ɣer yefus</string>
+    <!--  -->
+    <string formatted="false" name="color_red">azeggaɣ</string>
+    <string formatted="false" name="color_green">azegzaw</string>
+    <string formatted="false" name="color_blue">anili</string>
+    <!-- -->
+    <!-- Formula editor strings -->
+    <string formatted="false" name="formula_editor_data">Isefka</string>
+    <string formatted="false" name="formula_editor_true">tidet</string>
+    <string formatted="false" name="formula_editor_false">tikerkas</string>
+    <string formatted="false" name="formula_editor_decimal_mark">.</string>
+    <string formatted="false" name="formula_editor_title">Amaẓrag n tenfalit</string>
+    <string formatted="false" name="formula_editor_changes_discarded">Isnifal ttwasefsxen!</string>
+    <string formatted="false" name="formula_editor_parse_fail">Tanfalit d tarameɣtut!</string>
+    <string formatted="false" name="formula_nothing_selected">Sbadu azal n unekcam</string>
+    <string formatted="false" name="formula_editor_parse_fail_formula_too_long">Tanfalit teɣzef aṭas!</string>
+    <string formatted="false" name="formula_editor_choose_object_variable">Ayla n uwadem-a neɣ n tɣawsa-a</string>
+    <string formatted="false" name="formula_editor_bracket_open">(</string>
+    <string formatted="false" name="formula_editor_bracket_close">)</string>
+    <string formatted="false" name="formula_editor_function_sin">sinus</string>
+    <string formatted="false" name="formula_editor_function_sin_parameter">(90)</string>
+    <string formatted="false" name="formula_editor_function_cos">kusinus</string>
+    <string formatted="false" name="formula_editor_function_cos_parameter">(360)</string>
+    <string formatted="false" name="formula_editor_function_tan">tangent</string>
+    <string formatted="false" name="formula_editor_function_tan_parameter">(45)</string>
+    <string formatted="false" name="formula_editor_function_ln">logaritm agamawan</string>
+    <string formatted="false" name="formula_editor_function_ln_parameter">(2.718281828459)</string>
+    <string formatted="false" name="formula_editor_function_log">logaritm amrawan</string>
+    <string formatted="false" name="formula_editor_function_log_parameter">(10)</string>
+    <string formatted="false" name="formula_editor_function_pi">pi</string>
+    <string formatted="false" name="formula_editor_function_pi_parameter"></string>
+    <string formatted="false" name="formula_editor_object_color">ini</string>
+    <string formatted="false" name="formula_editor_function_sqrt">aẓar amkuẓ</string>
+    <string formatted="false" name="formula_editor_function_sqrt_parameter">(4)</string>
+    <string formatted="false" name="formula_editor_function_rand">azal agacuran seg ɣer</string>
+    <string formatted="false" name="formula_editor_function_rand_parameter">(1,6)</string>
+    <string formatted="false" name="formula_editor_function_abs">azal war tamatart</string>
+    <string formatted="false" name="formula_editor_function_abs_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_round">aqrib</string>
+    <string formatted="false" name="formula_editor_function_round_parameter">(1.6)</string>
+    <string formatted="false" name="formula_editor_function_mod">agra n beṭṭu</string>
+    <string formatted="false" name="formula_editor_function_mod_parameter">(3,2)</string>
+    <string formatted="false" name="formula_editor_function_arcsin">arksinus</string>
+    <string formatted="false" name="formula_editor_function_arcsin_parameter">(0.5)</string>
+    <string formatted="false" name="formula_editor_function_arccos">arkkusinus</string>
+    <string formatted="false" name="formula_editor_function_arccos_parameter">(0)</string>
+    <string formatted="false" name="formula_editor_function_arctan">arktangent</string>
+    <string formatted="false" name="formula_editor_function_arctan_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_arctan2">arktangent2</string>
+    <string formatted="false" name="formula_editor_function_arctan2_parameter">(-1, 0)</string>
+    <string formatted="false" name="formula_editor_function_exp">eksponent</string>
+    <string formatted="false" name="formula_editor_function_exp_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_power">tazmert</string>
+    <string formatted="false" name="formula_editor_function_power_parameter">(2,3)</string>
+    <string formatted="false" name="formula_editor_function_floor">aqrib s wadda</string>
+    <string formatted="false" name="formula_editor_function_floor_parameter">(0.7)</string>
+    <string formatted="false" name="formula_editor_function_ceil">aqrib s ufella</string>
+    <string formatted="false" name="formula_editor_function_ceil_parameter">(0.3)</string>
+    <string formatted="false" name="formula_editor_function_max">afellay n</string>
+    <string formatted="false" name="formula_editor_function_max_parameter">(5,4)</string>
+    <string formatted="false" name="formula_editor_function_min">adday n</string>
+    <string formatted="false" name="formula_editor_function_min_parameter">(7,2)</string>
+    <string formatted="false" name="formula_editor_function_if_then_else">ma ihi ma ulac</string>
+    <string formatted="false" name="formula_editor_function_if_then_else_parameter">(tikerkas, 2, 3)</string>
+    <string formatted="false" name="formula_editor_function_true">tidet</string>
+    <string formatted="false" name="formula_editor_function_false">tikerkas</string>
+    <string formatted="false" name="formula_editor_function_length">teɣzi</string>
+    <string formatted="false" name="formula_editor_function_length_parameter">(\'hello world\')</string>
+    <string formatted="false" name="formula_editor_function_letter">asekkil</string>
+    <string formatted="false" name="formula_editor_function_letter_parameter">(1,\'hello world\')</string>
+    <string formatted="false" name="formula_editor_function_subtext">tagezmi n uḍris</string>
+    <string formatted="false" name="formula_editor_function_subtext_parameter">(3,5,\'hello world\')</string>
+    <string formatted="false" name="formula_editor_function_join">sdukkel</string>
+    <string formatted="false" name="formula_editor_function_join_parameter">(\'hello\',\' world\')</string>
+    <string formatted="false" name="formula_editor_function_join3">sdukkel</string>
+    <string formatted="false" name="formula_editor_function_join3_parameter">(\'hello\',\' world\',\'!\')</string>
+    <string formatted="false" name="formula_editor_function_regex">tanfalit tamagnut</string>
+    <string formatted="false" name="formula_editor_function_regex_parameter">(\' an? ([^ .]+)\',\'I am a panda.\')</string>
+    <string formatted="false" name="formula_editor_function_regex_assistant">Amɛiwen n tenfalit tamagnut</string>
+    <string formatted="false" name="formula_editor_dialog_regular_expression_assistant_title">Amɛiwen n tenfalit tamagnut</string>
+    <string formatted="false" name="formula_editor_function_regex_html_extractor_not_found">Awal n tsarut ulac-it.</string>
+    <string formatted="false" name="formula_editor_function_regex_json_extractor_title">Amsuffeɣ n JSON</string>
+    <string formatted="false" name="formula_editor_function_arduino_read_pin_value_digital">pin umḍin n arduino</string>
+    <string formatted="false" name="formula_editor_function_arduino_read_pin_value_analog">pin anilug n arduino</string>
+    <string formatted="false" name="formula_editor_function_raspi_read_pin_value_digital">pin n raspberry pi</string>
+    <string formatted="false" name="formula_editor_function_pin_default_parameter">(0)</string>
+    <string formatted="false" name="formula_editor_function_finger_x">annal n usayes x</string>
+    <string formatted="false" name="formula_editor_function_finger_y">annal n usayes y</string>
+    <string formatted="false" name="formula_editor_function_is_finger_touching">asayes yettwannal</string>
+    <string formatted="false" name="formula_editor_function_multi_finger_x">annal n usayes x</string>
+    <string formatted="false" name="formula_editor_function_multi_finger_y">annal n usayes y</string>
+    <string formatted="false" name="formula_editor_function_is_multi_finger_touching">asayes yettwannal</string>
+    <string formatted="false" name="formula_editor_function_index_of_last_finger">amatar n unnal aneggaru n usayes</string>
+    <string formatted="false" name="formula_editor_function_number_of_current_touches">amḍan n yinnalen imiranen</string>
+    <string formatted="false" name="formula_editor_function_index_of_current_touch">amatar n unnal amiran</string>
+    <string formatted="false" name="formula_editor_function_no_parameter"></string>
+    <string formatted="false" name="formula_editor_function_touch_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_list_item">aferdis</string>
+    <string formatted="false" name="formula_editor_function_list_item_parameter">(1,*list name*)</string>
+    <string formatted="false" name="formula_editor_function_contains">yegber</string>
+    <string formatted="false" name="formula_editor_function_contains_parameter">(*list name*,1)</string>
+    <string formatted="false" name="formula_editor_function_index_of_item">amatar n uferdis</string>
+    <string formatted="false" name="formula_editor_function_index_of_item_parameter">(1,*list name*)</string>
+    <string formatted="false" name="formula_editor_function_number_of_items">amḍan n yiferdisen</string>
+    <string formatted="false" name="formula_editor_function_number_of_items_parameter">(*list name*)</string>
+    <string formatted="false" name="formula_editor_function_flatten">sseṭṭeḥ</string>
+    <string formatted="false" name="formula_editor_function_flatten_parameter">(*list name*)</string>
+    <string formatted="false" name="formula_editor_function_collision">yennal awadem neɣ taɣawsa</string>
+    <string formatted="false" name="formula_editor_function_collides_with_edge">yennal iri</string>
+    <string formatted="false" name="formula_editor_function_touched">yennal aḍad</string>
+    <string formatted="false" name="formula_editor_function_collides_with_color">yennal ini</string>
+    <string formatted="false" name="formula_editor_function_color_touches_color">ini yennal ini</string>
+    <string formatted="false" name="formula_editor_sensor_color_at_x_y">ini ɣer x y</string>
+    <string formatted="false" name="formula_editor_sensor_color_equals_color">ini yegda ini s % n tlellit</string>
+    <string formatted="false" name="formula_editor_sensor_x_acceleration">asɣiwel x</string>
+    <string formatted="false" name="formula_editor_sensor_y_acceleration">asɣiwel y</string>
+    <string formatted="false" name="formula_editor_sensor_z_acceleration">asɣiwel z</string>
+    <string formatted="false" name="formula_editor_sensor_compass_direction">tanila n tesnamt</string>
+    <string formatted="false" name="formula_editor_sensor_latitude">tarrut</string>
+    <string formatted="false" name="formula_editor_sensor_longitude">tazegrart</string>
+    <string formatted="false" name="formula_editor_sensor_location_accuracy">tiseddi n wadig</string>
+    <string formatted="false" name="formula_editor_sensor_altitude">aɛlay</string>
+    <string formatted="false" name="formula_editor_sensor_user_language">tutlayt n useqdac</string>
+    <string formatted="false" name="formula_editor_sensor_x_inclination">aknaw x</string>
+    <string formatted="false" name="formula_editor_sensor_y_inclination">aknaw y</string>
+    <string formatted="false" name="formula_editor_sensor_loudness">tazmert n yimesli</string>
+    <string formatted="false" name="formula_editor_sensor_timer">amakud</string>
+    <string formatted="false" name="formula_editor_sensor_date_year">aseggas</string>
+    <string formatted="false" name="formula_editor_sensor_date_month">ayyur</string>
+    <string formatted="false" name="formula_editor_sensor_date_day">ass</string>
+    <string formatted="false" name="formula_editor_sensor_date_weekday">ass n yimalas</string>
+    <string formatted="false" name="formula_editor_sensor_time_hour">asrag</string>
+    <string formatted="false" name="formula_editor_sensor_time_minute">tasdat</string>
+    <string formatted="false" name="formula_editor_sensor_time_second">tasint</string>
+    <string formatted="false" name="formula_editor_sensor_drone_battery_status">addad n tbaṭrit n udrun</string>
+    <string formatted="false" name="formula_editor_sensor_drone_emergency_state">addad n lɛejla n udrun</string>
+    <string formatted="false" name="formula_editor_sensor_drone_flying">adrun yettafeg</string>
+    <string formatted="false" name="formula_editor_sensor_drone_initialized">adrun yewjed</string>
+    <string formatted="false" name="formula_editor_sensor_drone_usb_active">usb n udrun yermed</string>
+    <string formatted="false" name="formula_editor_sensor_drone_usb_remaining_time">akud i d-yeqqimen n usb n udrun</string>
+    <string formatted="false" name="formula_editor_sensor_drone_camera_ready">takamiṛat n udrun theyya</string>
+    <string formatted="false" name="formula_editor_sensor_drone_record_ready">asekles n udrun yewjed</string>
+    <string formatted="false" name="formula_editor_sensor_drone_recording">takamiṛat n udrun tessekles</string>
+    <string formatted="false" name="formula_editor_sensor_drone_num_frames">amḍan n tugniwin n tkamiṛat n udrun</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_1">amaṭṭaf NXT 1</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_2">amaṭṭaf NXT 2</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_3">amaṭṭaf NXT 3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_4">amaṭṭaf NXT 4</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_1">amaṭṭaf EV3 1</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_2">amaṭṭaf EV3 2</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_3">amaṭṭaf EV3 3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_4">amaṭṭaf EV3 4</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_touch">annal NXT</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_sound">imesli NXT</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_light">tafat NXT</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_light_active">tafat NXT turmidt</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_ultrasonic">ultrason NXT</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_touch">annal EV3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_infrared">infrared EV3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_color">ini EV3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_color_ambient">ini n twennaḍt EV3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_color_reflected">ini yettuɣalen EV3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_hitechnic_color">ini hitechnic EV3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_temperature_c">tazɣelt NXT EV3 s °C</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_temperature_f">tazɣelt NXT EV3 s °F</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_light">tafat NXT EV3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_light_active">tafat NXT EV3 turmidt</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_sound">imesli NXT EV3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_ultrasonic">ultrason NXT EV3</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_a_pressed">A n umsenqed n wurar yettwasit</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_b_pressed">B n umsenqed n wurar yettwasit</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_up_pressed">asawen n umsenqed n wurar yettwasit</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_down_pressed">akessar n umsenqed n wurar yettwasit</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_left_pressed">zelmeḍ n umsenqed n wurar yettwasit</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_right_pressed">yefus n umsenqed n wurar yettwasit</string>
+    <string formatted="false" name="formula_editor_sensor_stage_width">tehri n usayes</string>
+    <string formatted="false" name="formula_editor_sensor_stage_height">teɣzi n usayes</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_front_left">amaṭṭaf n zdat ɣer zelmeḍ n phiro</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_front_right">amaṭṭaf n zdat ɣer yefus n phiro</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_side_left">amaṭṭaf n yidis ɣer zelmeḍ n phiro</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_side_right">amaṭṭaf n yidis ɣer yefus n phiro</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_bottom_left">amaṭṭaf n wadda ɣer zelmeḍ n phiro</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_bottom_right">amaṭṭaf n wadda ɣer yefus n phiro</string>
+    <string formatted="false" name="formula_editor_nfc_tag_id">asulay n tebzimt nfc</string>
+    <string formatted="false" name="formula_editor_nfc_tag_message">izen n tebzimt nfc</string>
+    <string formatted="false" name="formula_editor_object_x">adeg x</string>
+    <string formatted="false" name="formula_editor_object_y">adeg y</string>
+    <string formatted="false" name="formula_editor_object_transparency">tafrawant</string>
+    <string formatted="false" name="formula_editor_object_brightness">tafat</string>
+    <string formatted="false" name="formula_editor_object_size">tiddi</string>
+    <string formatted="false" name="formula_editor_object_rotation">tanila n umussu</string>
+    <string formatted="false" name="formula_editor_object_rotation_look">tanila n telɣa</string>
+    <string formatted="false" name="formula_editor_object_layer">tissi</string>
+    <string formatted="false" name="formula_editor_object_x_velocity">arured x</string>
+    <string formatted="false" name="formula_editor_object_y_velocity">arured y</string>
+    <string formatted="false" name="formula_editor_object_angular_velocity">arured n tuzzya</string>
+    <string formatted="false" name="formula_editor_object_look_number">uṭṭun n telɣa</string>
+    <string formatted="false" name="formula_editor_object_look_name">isem n telɣa</string>
+    <string formatted="false" name="formula_editor_object_number_of_looks">amḍan n telɣiwin</string>
+    <string formatted="false" name="formula_editor_object_background_number">uṭṭun n ugilal</string>
+    <string formatted="false" name="formula_editor_object_background_name">isem n ugilal</string>
+    <string formatted="false" name="formula_editor_object_number_of_backgrounds">amḍan n yigilalen</string>
+    <string formatted="false" name="formula_editor_object_distance_to">ameccaq ɣer wadeg n unnal</string>
+    <string formatted="false" name="formula_editor_confirm">Sentem</string>
+    <string formatted="false" name="formula_editor_object">Ayla</string>
+    <string formatted="false" name="formula_editor_functions">Tiwuriwin</string>
+    <string formatted="false" name="formula_editor_logic">Tameẓla</string>
+    <string formatted="false" name="formula_editor_device">Imaṭṭafen</string>
+    <string formatted="false" name="formula_editor_device_sensors">Imaṭṭafen n yibenk</string>
+    <string formatted="false" name="formula_editor_functions_maths">Tusnakt</string>
+    <string formatted="false" name="formula_editor_functions_strings">Aḍris</string>
+    <string formatted="false" name="formula_editor_functions_lists">Tibdarin</string>
+    <string formatted="false" name="formula_editor_logic_boolean">Imeskaren d yimezgiyen n tmeẓla (Boolean)</string>
+    <string formatted="false" name="formula_editor_logic_comparison">Imeskaren n userwes</string>
+    <string formatted="false" name="formula_editor_object_look">Ayla n telɣa</string>
+    <string formatted="false" name="formula_editor_object_movement">Ayla n umussu</string>
+    <string formatted="false" name="formula_editor_device_face_detection">Tifin n wudem</string>
+    <string formatted="false" name="formula_editor_device_pose_detection">Tifin n tɣessa</string>
+    <string formatted="false" name="formula_editor_device_text_recognition">Tiɣimit n uḍris</string>
+    <string formatted="false" name="formula_editor_device_object_recognition">Tiɣimit n tɣawsiwin</string>
+    <string formatted="false" name="formula_editor_device_date_and_time">Azemz d wakud</string>
+    <string formatted="false" name="formula_editor_device_touch_detection">Tifin n unnal</string>
+    <string formatted="false" name="formula_editor_device_lego_nxt">Lego Mindstorms NXT</string>
+    <string formatted="false" name="formula_editor_device_lego_ev3">Lego Mindstorms EV3</string>
+    <string formatted="false" name="formula_editor_device_arduino">Arduino</string>
+    <string formatted="false" name="formula_editor_device_phiro">Phiro</string>
+    <string formatted="false" name="formula_editor_device_raspberry">Raspberry Pi</string>
+    <string formatted="false" name="formula_editor_device_drone">Adrun</string>
+    <string formatted="false" name="formula_editor_device_nfc">NFC</string>
+    <string formatted="false" name="formula_editor_device_cast">Chromecast</string>
+    <string formatted="false" name="formula_editor_string">Abc</string>
+    <string formatted="false" name="formula_editor_logic_notequal">≠</string>
+    <string formatted="false" name="formula_editor_logic_lesserthan">&lt;</string>
+    <string formatted="false" name="formula_editor_logic_greaterthan">&gt;</string>
+    <string formatted="false" name="formula_editor_logic_and">akked</string>
+    <string formatted="false" name="formula_editor_logic_or">neɣ</string>
+    <string formatted="false" name="formula_editor_logic_not">mačči</string>
+    <string formatted="false" name="formula_editor_logic_greaterequal">≥</string>
+    <string formatted="false" name="formula_editor_logic_leserequal">≤</string>
+    <string formatted="false" name="formula_editor_logic_equal">=</string>
+    <string formatted="false" name="formula_editor_operator_mult">×</string>
+    <string formatted="false" name="formula_editor_operator_plus">+</string>
+    <string formatted="false" name="formula_editor_operator_minus">-</string>
+    <string formatted="false" name="formula_editor_operator_divide">÷</string>
+    <string formatted="false" name="formula_editor_operator_power">^</string>
+    <string formatted="false" name="formula_editor_image_button_description_delete">kkes</string>
+    <string formatted="false" name="formula_editor_image_button_description_calculate">siḍen</string>
+    <string formatted="false" name="formula_editor_image_button_description_confirm">sentem</string>
+    <string formatted="false" name="formula_editor_image_button_description_color_picker">amefran n yini</string>
+    <string formatted="false" name="formula_editor_image_button_description_functions_toggle">sken/ffer tiwuriwin</string>
+    <string formatted="false" name="formula_editor_variable_dialog_title">Amutti amaynut</string>
+    <string formatted="false" name="formula_editor_list_dialog_title">Tabdart tamaynut</string>
+    <string formatted="false" name="formula_editor_regex_html_extractor_dialog_title">Amsuffeɣ n HTML</string>
+    <string formatted="false" name="formula_editor_discard_changes_dialog_message">Tebɣiḍ ad teskelseḍ isnifal-ik·im?</string>
+    <string formatted="false" name="formula_editor_discard_changes_dialog_title">Sekles isnifal?</string>
+    <string formatted="false" name="formula_editor_new_string_name">Aḍris amaynut</string>
+    <string formatted="false" name="formula_editor_dialog_change_text">Beddel aḍris</string>
+    <string formatted="false" name="formula_editor_dialog_change_regular_expression">Beddel tanfalit tamagnut</string>
+    <string formatted="false" name="formula_editor_fragment_data_current_items">iferdisen imiranen</string>
+    <string formatted="false" name="formula_editor_data_dialog_is_list">Err-it d tabdart</string>
+    <string formatted="false" name="formula_editor_sensor_face_detected">udem amezwaru yettban</string>
+    <string formatted="false" name="formula_editor_sensor_face_size">tiddi n wudem amezwaru</string>
+    <string formatted="false" name="formula_editor_sensor_face_x_position">adeg x n wudem amezwaru</string>
+    <string formatted="false" name="formula_editor_sensor_face_y_position">adeg y n wudem amezwaru</string>
+    <string formatted="false" name="formula_editor_sensor_second_face_detected">udem wis sin yettban</string>
+    <string formatted="false" name="formula_editor_sensor_second_face_size">tiddi n wudem wis sin</string>
+    <string formatted="false" name="formula_editor_sensor_second_face_x_position">adeg x n wudem wis sin</string>
+    <string formatted="false" name="formula_editor_sensor_second_face_y_position">adeg y n wudem wis sin</string>
+    <string formatted="false" name="formula_editor_sensor_head_top_x">afella n uqerru x</string>
+    <string formatted="false" name="formula_editor_sensor_head_top_y">afella n uqerru y</string>
+    <string formatted="false" name="formula_editor_sensor_neck_x">amgerḍ x</string>
+    <string formatted="false" name="formula_editor_sensor_neck_y">amgerḍ y</string>
+    <string formatted="false" name="formula_editor_sensor_nose_x">tinzar x</string>
+    <string formatted="false" name="formula_editor_sensor_nose_y">tinzar y</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_inner_x">tiṭ n zelmeḍ n daxel x</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_inner_y">tiṭ n zelmeḍ n daxel y</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_center_x">tiṭ n zelmeḍ n tlemmast x</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_center_y">tiṭ n zelmeḍ n tlemmast y</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_outer_x">tiṭ n zelmeḍ n beṛṛa x</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_outer_y">tiṭ n zelmeḍ n beṛṛa y</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_inner_x">tiṭ n yefus n daxel x</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_inner_y">tiṭ n yefus n daxel y</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_center_x">tiṭ n yefus n tlemmast x</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_center_y">tiṭ n yefus n tlemmast y</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_outer_x">tiṭ n yefus n beṛṛa x</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_outer_y">tiṭ n yefus n beṛṛa y</string>
+    <string formatted="false" name="formula_editor_sensor_left_ear_x">ameẓẓuɣ n zelmeḍ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_ear_y">ameẓẓuɣ n zelmeḍ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_ear_x">ameẓẓuɣ n yefus x</string>
+    <string formatted="false" name="formula_editor_sensor_right_ear_y">ameẓẓuɣ n yefus y</string>
+    <string formatted="false" name="formula_editor_sensor_mouth_left_corner_x">tama n yimi n zelmeḍ x</string>
+    <string formatted="false" name="formula_editor_sensor_mouth_left_corner_y">tama n yimi n zelmeḍ y</string>
+    <string formatted="false" name="formula_editor_sensor_mouth_right_corner_x">tama n yimi n yefus x</string>
+    <string formatted="false" name="formula_editor_sensor_mouth_right_corner_y">tama n yimi n yefus y</string>
+    <string formatted="false" name="formula_editor_sensor_left_shoulder_x">tayett n zelmeḍ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_shoulder_y">tayett n zelmeḍ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_shoulder_x">tayett n yefus x</string>
+    <string formatted="false" name="formula_editor_sensor_right_shoulder_y">tayett n yefus y</string>
+    <string formatted="false" name="formula_editor_sensor_left_elbow_x">tiɣmert n zelmeḍ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_elbow_y">tiɣmert n zelmeḍ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_elbow_x">tiɣmert n yefus x</string>
+    <string formatted="false" name="formula_editor_sensor_right_elbow_y">tiɣmert n yefus y</string>
+    <string formatted="false" name="formula_editor_sensor_left_wrist_x">lmeɛṣem n zelmeḍ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_wrist_y">lmeɛṣem n zelmeḍ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_wrist_x">lmeɛṣem n yefus x</string>
+    <string formatted="false" name="formula_editor_sensor_right_wrist_y">lmeɛṣem n yefus y</string>
+    <string formatted="false" name="formula_editor_sensor_left_pinky_knuckle_x">tasɣunt n uḍad amecṭuḥ n zelmeḍ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_pinky_knuckle_y">tasɣunt n uḍad amecṭuḥ n zelmeḍ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_pinky_knuckle_x">tasɣunt n uḍad amecṭuḥ n yefus x</string>
+    <string formatted="false" name="formula_editor_sensor_right_pinky_knuckle_y">tasɣunt n uḍad amecṭuḥ n yefus y</string>
+    <string formatted="false" name="formula_editor_sensor_left_index_knuckle_x">tasɣunt n uḍad n tmuqqli n zelmeḍ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_index_knuckle_y">tasɣunt n uḍad n tmuqqli n zelmeḍ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_index_knuckle_x">tasɣunt n uḍad n tmuqqli n yefus x</string>
+    <string formatted="false" name="formula_editor_sensor_right_index_knuckle_y">tasɣunt n uḍad n tmuqqli n yefus y</string>
+    <string formatted="false" name="formula_editor_sensor_left_thumb_knuckle_x">tasɣunt n uḍad ameqqran n zelmeḍ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_thumb_knuckle_y">tasɣunt n uḍad ameqqran n zelmeḍ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_thumb_knuckle_x">tasɣunt n uḍad ameqqran n yefus x</string>
+    <string formatted="false" name="formula_editor_sensor_right_thumb_knuckle_y">tasɣunt n uḍad ameqqran n yefus y</string>
+    <string formatted="false" name="formula_editor_sensor_left_hip_x">taɣrit n zelmeḍ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_hip_y">taɣrit n zelmeḍ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_hip_x">taɣrit n yefus x</string>
+    <string formatted="false" name="formula_editor_sensor_right_hip_y">taɣrit n yefus y</string>
+    <string formatted="false" name="formula_editor_sensor_left_knee_x">afud n zelmeḍ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_knee_y">afud n zelmeḍ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_knee_x">afud n yefus x</string>
+    <string formatted="false" name="formula_editor_sensor_right_knee_y">afud n yefus y</string>
+    <string formatted="false" name="formula_editor_sensor_left_ankle_x">tiṭ n uḍar n zelmeḍ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_ankle_y">tiṭ n uḍar n zelmeḍ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_ankle_x">tiṭ n uḍar n yefus x</string>
+    <string formatted="false" name="formula_editor_sensor_right_ankle_y">tiṭ n uḍar n yefus y</string>
+    <string formatted="false" name="formula_editor_sensor_left_heel_x">awurez n zelmeḍ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_heel_y">awurez n zelmeḍ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_heel_x">awurez n yefus x</string>
+    <string formatted="false" name="formula_editor_sensor_right_heel_y">awurez n yefus y</string>
+    <string formatted="false" name="formula_editor_sensor_left_foot_index_x">aḍad n uḍar n zelmeḍ x</string>
+    <string formatted="false" name="formula_editor_sensor_left_foot_index_y">aḍad n uḍar n zelmeḍ y</string>
+    <string formatted="false" name="formula_editor_sensor_right_foot_index_x">aḍad n uḍar n yefus x</string>
+    <string formatted="false" name="formula_editor_sensor_right_foot_index_y">aḍad n uḍar n yefus y</string>
+    <string formatted="false" name="formula_editor_sensor_text_from_camera">aḍris seg tkamiṛat</string>
+    <string formatted="false" name="formula_editor_sensor_text_blocks_number">amḍan n yigrawen n uḍris</string>
+    <string formatted="false" name="formula_editor_function_text_block_x">x n ugraw n uḍris seg tkamiṛat</string>
+    <string formatted="false" name="formula_editor_function_text_block_y">y n ugraw n uḍris seg tkamiṛat</string>
+    <string formatted="false" name="formula_editor_function_text_block_size">tiddi n ugraw n uḍris seg tkamiṛat</string>
+    <string formatted="false" name="formula_editor_function_text_block_from_camera">agraw n uḍris seg tkamiṛat</string>
+    <string formatted="false" name="formula_editor_function_text_block_language_from_camera">tutlayt n ugraw n uḍris seg tkamiṛat</string>
+    <string formatted="false" name="formula_editor_function_text_block_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_get_id_of_detected_object">asulay n tɣawsa yettwafen</string>
+    <string formatted="false" name="formula_editor_function_object_with_id_visible">taɣawsa s usulay tettban</string>
+    <string formatted="false" name="formula_editor_intro_title_formula_editor">Amaẓrag n tenfalit</string>
+    <string formatted="false" name="formula_editor_intro_summary_formula_editor">S umaẓrag n tenfalit tzemreḍ ad d-tesnulfuḍ tinfaliyin n tusnakt d tmeẓla i tzemreḍ ad tesqedceḍ deg yiblugen-ik·im.\n\nKemmel s usiti ɣef “UḌFIṚ” neɣ ffeɣ s “ZGEL”.</string>
+    <string formatted="false" name="formula_editor_intro_title_input_field">Urti n unekcam</string>
+    <string formatted="false" name="formula_editor_intro_summary_input_field">Dagi tzemreḍ ad twaliḍ yerna ad tẓergeḍ tanfalit-ik·im.</string>
+    <string formatted="false" name="formula_editor_intro_title_keyboard">Anasiw</string>
+    <string formatted="false" name="formula_editor_intro_summary_keyboard">Dagi i tzemreḍ ad d-tesnulfuḍ tanfalit-ik·im, am wakken d tamsiḍent.</string>
+    <string formatted="false" name="formula_editor_intro_title_compute">Siḍen</string>
+    <string formatted="false" name="formula_editor_intro_summary_compute">I wakken ad twaliḍ agmuḍ amiran n tenfalit-ik·im, tzemreḍ ad tesqedceḍ \"Siḍen\".</string>
+    <string formatted="false" name="formula_editor_intro_title_object">Ayla</string>
+    <string formatted="false" name="formula_editor_intro_summary_object">D tagrumma n wazalen yettglamen ayla n uwadem neɣ n tɣawsa-k·m tamirant. Amedya, tikkura x d y, neɣ arured amiran.</string>
+    <string formatted="false" name="formula_editor_intro_title_functions">Tiwuriwin</string>
+    <string formatted="false" name="formula_editor_intro_summary_functions">Am tmsiḍent, amaẓrag n tenfalit yettmuddu-d aṭas n twuriwin n tusnakt.\nTzemreḍ ad d-tafeḍ tiwuriwin n trigonometrie am \"sin\" d \"cos\", amsirew n wuṭṭunen igacuranen, d twuriwin n uḍris d tebdarin.</string>
+    <string formatted="false" name="formula_editor_intro_title_logic">Tameẓla</string>
+    <string formatted="false" name="formula_editor_intro_summary_logic">Tameẓla tettwaseqdac i userwes n wazalen d usdukkel n tinfaliyin n tmeẓla.\nI userwes n wazalen, tzemreḍ ad tesqedceḍ imeskaren n tmeẓla am \"&gt;\" (yugar) neɣ \"=\" (yegda).\nI usdukkel n tinfaliyin n tmeẓla, tzemreḍ ad tesqedceḍ imeskaren n tmeẓla am \"AKKED\", \"NEƔ\" d \"MAČČI\".</string>
+    <string formatted="false" name="formula_editor_intro_title_device">Imaṭṭafen</string>
+    <string formatted="false" name="formula_editor_intro_summary_device">Deg \"Imaṭṭafen\" tzemreḍ ad d-tafeḍ talɣut i d-yettḥazen yibenk-ik·im.\nAmedya, aknaw n yibenk-ik·im, neɣ tazmert n yimesli i k·m-d-yezzin.</string>
+    <string formatted="false" name="formula_editor_intro_title_data">Isefka</string>
+    <string formatted="false" name="formula_editor_intro_summary_data">Imuttiyen d tebdarin yettwasqedcen deg usenfar-ik·im ad ten-tafeḍ dagi. \nTzemreḍ kan ad ten-tesekcmeḍ deg tenfalit-ik·im, neɣ ad ternuḍ wiyaḍ imaynuten.</string>
+    <string formatted="false" name="formula_editor_listening_language_sensor">tutlayt n tesliḍt</string>
+    <string formatted="false" name="formula_editor_speech_recognition">Tiɣimit n wawal</string>
+    <string formatted="false" name="camera_error_text_detection">Yella wugur deg tifin n uḍris. Kra n yisegran ahat mazal ttwasadren deg ugilal. Ma ulac aɣilif, ḥrez ad tiliḍ teqqneḍ ɣer Internet syin uɣal-d ticki.</string>
+    <string formatted="false" name="warning_formula_recognized">Teskecmeḍ aḍris i yettbanen am tenfalit. Ma tebɣiḍ ad tesqedceḍ tiwuriwin, imaṭṭafen, imuttiyen d yiferdisen-nniḍen n tenfalit, ma ulac aɣilif fren-iten s tqeffalin n umaẓrag n tenfalit.</string>
+    <!--  -->
+    <!-- Brick Data Editor Strings -->
+    <string formatted="false" name="brick_show_variable">Sken amutti</string>
+    <string formatted="false" name="brick_hide_variable">Ffer amutti</string>
+    <string formatted="false" name="brick_show_variable_position">deg</string>
+    <string formatted="false" name="brick_show_variable_size">tiddi:</string>
+    <string formatted="false" name="brick_show_variable_color">ini:</string>
+    <string formatted="false" name="brick_show_variable_aligned">s tarigla</string>
+    <string formatted="false" name="brick_show_variable_aligned_centered">di tlemmast</string>
+    <string formatted="false" name="brick_show_variable_aligned_left">ɣer zelmeḍ</string>
+    <string formatted="false" name="brick_show_variable_aligned_right">ɣer yefus</string>
+    <string formatted="false" name="brick_context_dialog_pick_color">Fren ini</string>
+    <string formatted="false" name="brick_context_dialog_pick_note">Fren tazenẓunt</string>
+    <!-- -->
+    <!-- Camera related strings -->
+    <string formatted="false" name="brick_video">Sbadu takamiṛat</string>
+    <string formatted="false" name="video_brick_camera_on">termed</string>
+    <string formatted="false" name="video_brick_camera_off">tensa</string>
+    <string formatted="false" name="brick_choose_camera">Seqdec takamiṛat</string>
+    <string formatted="false" name="choose_camera_front">n zdat</string>
+    <string formatted="false" name="choose_camera_back">n deffir</string>
+    <string formatted="false" name="camera_error_generic">Yella wayen ur neddi ara deg useqdec n tkamiṛat.</string>
+    <string formatted="false" name="camera_error_face_detection">Yella wugur deg tifin n wudem. Kra n yisegran ahat mazal ttwasadren deg ugilal. Ma ulac aɣilif, ḥrez ad tiliḍ teqqneḍ ɣer Internet syin uɣal-d ticki.</string>
+    <!-- -->
+    <!-- Cast strings -->
+    <string formatted="false" name="cast_gamepad_A">A</string>
+    <string formatted="false" name="cast_gamepad_B">B</string>
+    <string formatted="false" name="cast_gamepad_up">asawen</string>
+    <string formatted="false" name="cast_gamepad_down">akessar</string>
+    <string formatted="false" name="cast_gamepad_left">zelmeḍ</string>
+    <string formatted="false" name="cast_gamepad_right">yefus</string>
+    <string formatted="false" name="cast_error_not_connected_msg">Ma ulac aɣilif, qqen ɣer Chromecast-ik·im qbel</string>
+    <string formatted="false" name="cast_error_cast_bricks_in_no_cast_project">Asenfar-ik·im iseqdac iblugen Chromecast, ur yezmir ara ad yebdu s wudem adigan</string>
+    <string formatted="false" name="cast_device_selector_dialog_title">Azen ɣer</string>
+    <string formatted="false" name="cast_button_menu_item_title">Taqeffalt n usiweḍ</string>
+    <string formatted="false" name="cast_ready_to_cast">Yewjed i usiweḍ ɣer</string>
+    <string formatted="false" name="cast_enable_cast_feature">Timahilin Chromecast nsant. Ma ulac aɣilif, rmed timahilin n usiweḍ deg yiɣewwaṛen.</string>
+    <string formatted="false" name="cast_searching_for_cast_devices">Anadi ɣef yibenkan Chromecast</string>
+    <string formatted="false" name="cast_trouble_finding_devices_tip">.\nUr d-twaliḍ ara ibenk-ik·im? Ɛreḍ ad tsenseḍ Wifi n yibenk-ik·im syin ad t-tesremdeḍ.</string>
+    <string formatted="false" name="cast_connection_timout_msg">Akud n tuqqna yezri. Ma ulac aɣilif, ɛreḍ tikkelt-nniḍen.</string>
+    <string formatted="false" name="cast_screen_pause_text">Yeḥbes</string>
+    <!-- -->
+    <string formatted="false" name="deletion_alert_title">Kkes?</string>
+    <string formatted="false" name="deletion_alert_text">Tukksa n umutti neɣ n tebdart i mazal yettwasqedcen tezmer ad d-tesseɣli tuccḍiwin. Ur tezmireḍ ara ad tesfesxeḍ aya!</string>
+    <!-- Upload progress dialog -->
+    <string formatted="false" name="progress_upload_dialog_message">Asenfar-ik·im ad yettwasali ɣer usmel n beṭṭu n usnas, anida wiyaḍ zemren ad t-sqedcen yerna ad t-id-sadren. Tzemreḍ daɣen ad d-tsadreḍ asenfar-ik·im d asnas iman-is.</string>
+    <string formatted="false" name="progress_upload_dialog_failed">Asali ur yeddi ara. Tamahilt n usali ulac-itt akka tura. Ma ulac aɣilif, ɛreḍ tikkelt-nniḍen ticki.</string>
+    <string formatted="false" name="progress_upload_dialog_show_program">Sken asenfar</string>
+    <!--  -->
+    <!-- unchanged upload dialog -->
+    <string formatted="false" name="unchanged_upload_warning">Asenfar i tɛerḍeḍ ad tsaliḍ yella yakan deg tɣerɣert n temɣiwant s yiwet n talɣa kifkif. Ma ulac aɣilif, beddel asenfar-ik·im, xersum s usnerni-ines, send ad tsaliḍ asenfar-ik·im yettwaɛawden.</string>
+    <string formatted="false" name="unchanged_upload_info">Ma ulac aɣilif, rnu kra n wawalen igerrzen i umeskar aɣbalu deg tgezmi n yimttekkiyen deg usmel n temɣiwant neɣ deg textiṛiyin n usenfar. Ẓer belli aseqdac ad d-yawi alɣu mi ara yedd usali-k·m.</string>
+    <string formatted="false" name="unchanged_upload_url">I wakken ad tissineḍ ugar ɣef yisenfaren yettwaɛawden, ma ulac aɣilif rzu ɣer %1s.</string>
+    <!-- -->
+    <!-- Snackbar hints -->
+    <string formatted="false" name="got_it">Fehmeɣ</string>
+    <string formatted="false" name="preference_description_hints">Rmed i wakken ad d-banen iwellihen</string>
+    <string formatted="false" name="preference_title_enable_hints">Sken iwellihen</string>
+    <string formatted="false" name="hint_category">Akk iblugen ttwasmizzwren deg taggayin. Fren taggayt i tettnadiḍ.</string>
+    <string formatted="false" name="hint_bricks">I wakken ad ternuḍ ablug ɣer uskript-ik·im, sit ɣef yiblug i tebɣiḍ ad tesqedceḍ.</string>
+    <string formatted="false" name="hint_scripts">Askript yesbadu tikli n uwadem neɣ n tɣawsa-k·m. I wakken ad ternuḍ iblugen ɣer uskript, sit ɣef uzamul \"+\".</string>
+    <string formatted="false" name="hint_looks">Dagi ad d-tafeḍ tilɣiwin yemgaraden n uwadem neɣ n tɣawsa-k·m. I wakken ad ternuḍ talɣa tamaynut, sit ɣef uzamul \"+\".</string>
+    <string formatted="false" name="hint_sounds">Dagi tzemreḍ ad ternuḍ imeslan imaynuten i uwadem neɣ i tɣawsa-k·m. Cfu ad tesqedceḍ ablug seg taggayt n yimesli.</string>
+    <string formatted="false" name="hint_objects">Ahil-ik·im yettwaxdem s yiwudam d tɣawsiwin yemgaraden i yezmren ad myegren. I wakken ad ternuḍ awadem neɣ taɣawsa tamaynut, sit ɣef uzamul \"+\".</string>
+    <!--  -->
+    <!-- Dialog Disable hints -->
+    <string formatted="false" name="dialog_disable_hints_title">Sken iwellihen?</string>
+    <string formatted="false" name="dialog_disable_hints_text">Iwellihen ttaken-ak·am-d talɣut tafayda mi ara txeddmeḍ asenfar-ik·im amezwaru.\n\nTimeẓri n yiwellihen tezmer ad tettwabeddel deg yiɣewwaṛen.</string>
+    <string formatted="false" name="dialog_disable_hints_button_hide">FFER</string>
+    <string formatted="false" name="dialog_disable_hints_button_show">SKEN</string>
+    <!--  -->
+    <!-- Crash report dialog -->
+    <!--  -->
+    <!-- Multilingual List -->
+    <string formatted="false" name="device_language">Tutlayt n yibenk-ik·im</string>
+    <!-- Symbols -->
+    <string formatted="false" name="percent_symbol">%</string>
+    <string formatted="false" name="hertz_symbol">㎐</string>
+    <string formatted="false" name="no_internet_connection">Ulac tuqqna ɣer Internet. Ḥrez ad yili Wi-Fi neɣ isefka n uziraz rmed.</string>
+    <string formatted="false" name="edit">Ẓreg</string>
+    <string formatted="false" name="data_value">Azal</string>
+    <string formatted="false" name="category_recently_used">Yettwasqedcen melmi kan</string>
+    <string formatted="false" name="new_sprite_dialog_place_visually">Sers s tmuɣli</string>
+    <string formatted="false" name="place_visually_text">Ad ak·am-d-nettsuter ad tserseḍ awadem neɣ taɣawsa tamaynut ɣef usayes.</string>
+    <string formatted="false" name="new_empty_sprite_note">Tazmilt: Awadem neɣ taɣawsa ad d-yettwaxleq war talɣa.</string>
+    <!-- Information -->
+    <string formatted="false" name="no_variable_selected">Ulac amutti yettwafernen</string>
+    <string formatted="false" name="search">Anadi…</string>
+    <string formatted="false" name="no_results_found">Ulac igmaḍ yettwafen</string>
+    <string formatted="false" name="query_field_is_empty">Urti n unadi d ilem</string>
+    <string formatted="false" name="paste">Senṭeḍ</string>
+    <!-- Particle Effects -->
+    <string formatted="false" name="fade_particle_effect">Sbadu asemdu n tqqiyin</string>
+    <string formatted="false" name="particle_effects_fade_in">ad d-iban</string>
+    <string formatted="false" name="particle_effects_fade_out">ad yenṣer</string>
+    <string formatted="false" name="turn_particle_effect_additivity">Sbadu tamerna n usemdu n tqqiyin</string>
+    <string formatted="false" name="particle_effects_additive_on">termed</string>
+    <string formatted="false" name="particle_effects_additive_off">tensa</string>
+    <string formatted="false" name="set_particle_color_to">Sbadu ini n tqqiyin ɣer</string>
+    <string formatted="false" name="undo_sort">Sefsex asmizzwer</string>
+    <string formatted="false" name="sort">Smizzwer</string>
+    <string formatted="false" name="checkbox">tankult n uṛcam</string>
+    <!-- Shortcut strings -->
+    <string formatted="false" name="pin_to_home_screen">Rnu ɣer ugdil agejdan</string>
+    <string formatted="false" name="shortcut_not_supported">Inegzumen ur ttusefraken ara ɣef yibenk-a</string>
+    <string formatted="false" name="project_busy_try_again">Asenfar yeṭṭef, ɛreḍ tikkelt-nniḍen</string>
+    <string formatted="false" name="shortcut_project_not_found">Ulac asenfar, anegzum yensa</string>
+    <string formatted="false" name="shortcut_permission_required_message">Ibenk-a yesra ad d-tettunefk tsiregt n yinegzumen send ad yettwarnu unegzum ɣer ugdil agejdan. Ma ulac aɣilif, efk tasiregt deg yiɣewwaṛen.</string>
+    <string formatted="false" name="miui_open_settings">Ldi iɣewwaṛen</string>
+    <string formatted="false" name="shortcut_already_pinned">Asenfar-a yettwarna yakan ɣer ugdil-ik·im agejdan</string>
+</resources>
