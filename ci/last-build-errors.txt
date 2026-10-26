@@ -3,5 +3,5 @@ BUILD ERRORS: 2 unique
 == Missing symbols (count) ==
 
 == First errors ==
-error: filename "StageActivity.swift" used twice: '/Users/runner/work/catroid-ios/catroid-ios/catroid/src/main/java/org/catrobat/catroid/stagecore/StageActivity.swift' and '/Users/runner/work/catroid-ios/catroid-ios/catroid/src/main/java/org/catrobat/catroid/stage/StageActivity.swift'
-error: Filename "StageActivity.swift" used twice: '/Users/runner/work/catroid-ios/catroid-ios/catroid/src/main/java/org/catrobat/catroid/stagecore/StageActivity.swift' and '/Users/runner/work/catroid-ios/catroid-ios/catroid/src/main/java/org/catrobat/catroid/stage/StageActivity.swift' (in target 'Catroid' from project 'Catroid')
+error: filename "StageListener.swift" used twice: '/Users/runner/work/catroid-ios/catroid-ios/catroid/src/main/java/org/catrobat/catroid/stagecore/StageListener.swift' and '/Users/runner/work/catroid-ios/catroid-ios/catroid/src/main/java/org/catrobat/catroid/stage/StageListener.swift'
+error: Filename "StageListener.swift" used twice: '/Users/runner/work/catroid-ios/catroid-ios/catroid/src/main/java/org/catrobat/catroid/stagecore/StageListener.swift' and '/Users/runner/work/catroid-ios/catroid-ios/catroid/src/main/java/org/catrobat/catroid/stage/StageListener.swift' (in target 'Catroid' from project 'Catroid')
