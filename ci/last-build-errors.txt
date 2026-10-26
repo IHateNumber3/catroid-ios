@@ -1,7 +1,131 @@
-BUILD ERRORS: 2 unique
+BUILD ERRORS: 97 unique
 
 == Missing symbols (count) ==
+  12  AndroidStringProvider
+   4  StageActivity
+   3  PickableDrum
+   3  SetNextLookAction
+   3  get
+   3  MobileServiceAvailability
+   2  LegoEv3MotorTurnAngleBrick
+   2  ParameterizedData
+   2  Type
+   2  UtteranceProgressListenerDelegate
+   1  LegoNxtMotorMoveBrick
+   1  LegoNxtMotorStopBrick
+   1  LegoNxtMotorTurnAngleBrick
+   1  LegoEv3MotorMoveBrick
+   1  LegoEv3MotorStopBrick
+   1  LegoEv3SetLedBrick
+   1  PhiroPlayToneBrick
+   1  PhiroMotorMoveForwardBrick
+   1  PhiroMotorMoveBackwardBrick
+   1  PhiroRGBLightBrick
+   1  PhiroMotorStopBrick
+   1  ArcBrick
+   1  SpeakAction
+   1  SpeakAndWaitAction
+   1  AskSpeechAction
+   1  StartListeningAction
+   1  GlideToAction
+   1  DefaultProjectHandler
+   1  PlaySoundBrick
 
 == First errors ==
-error: filename "StageListener.swift" used twice: '/Users/runner/work/catroid-ios/catroid-ios/catroid/src/main/java/org/catrobat/catroid/stagecore/StageListener.swift' and '/Users/runner/work/catroid-ios/catroid-ios/catroid/src/main/java/org/catrobat/catroid/stage/StageListener.swift'
-error: Filename "StageListener.swift" used twice: '/Users/runner/work/catroid-ios/catroid-ios/catroid/src/main/java/org/catrobat/catroid/stagecore/StageListener.swift' and '/Users/runner/work/catroid-ios/catroid-ios/catroid/src/main/java/org/catrobat/catroid/stage/StageListener.swift' (in target 'Catroid' from project 'Catroid')
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:195:103: error: cannot find type 'LegoNxtMotorMoveBrick' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:204:57: error: cannot find type 'LegoNxtMotorStopBrick' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:210:108: error: cannot find type 'LegoNxtMotorTurnAngleBrick' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:228:109: error: cannot find type 'LegoEv3MotorMoveBrick' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:237:57: error: cannot find type 'LegoEv3MotorStopBrick' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:243:58: error: cannot find type 'LegoEv3SetLedBrick' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:259:108: error: cannot find type 'LegoEv3MotorTurnAngleBrick' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:268:105: error: cannot find type 'PhiroPlayToneBrick' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:277:114: error: cannot find type 'PhiroMotorMoveForwardBrick' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:286:115: error: cannot find type 'PhiroMotorMoveBackwardBrick' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:295:101: error: cannot find type 'PhiroRGBLightBrick' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:316:61: error: cannot find type 'PhiroMotorStopBrick' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:378:90: error: cannot find type 'ArcBrick' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:673:116: error: cannot find type 'PickableDrum' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:792:113: error: cannot find type 'AndroidStringProvider' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:802:116: error: cannot find type 'AndroidStringProvider' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1040:185: error: cannot find type 'AndroidStringProvider' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1050:262: error: cannot find type 'AndroidStringProvider' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1063:113: error: cannot find type 'AndroidStringProvider' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1233:73: error: cannot find type 'ParameterizedData' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1244:142: error: cannot find type 'ParameterizedData' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1389:132: error: cannot find type 'SetNextLookAction' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1398:128: error: cannot find type 'SetNextLookAction' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1407:100: error: cannot find type 'SetNextLookAction' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:613:22: error: cannot find 'SpeakAction' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:615:54: error: missing argument labels 'scope:text:' in call
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:615:62: error: cannot convert value of type 'Formula' to expected argument type 'String'
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:616:45: error: cannot find 'get' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:616:49: error: cannot find 'MobileServiceAvailability' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:617:27: error: cannot find 'StageActivity' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:622:22: error: cannot find 'SpeakAndWaitAction' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:624:54: error: missing argument labels 'scope:text:' in call
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:624:62: error: cannot convert value of type 'Formula' to expected argument type 'String'
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:625:45: error: cannot find 'get' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:625:49: error: cannot find 'MobileServiceAvailability' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:626:27: error: cannot find 'StageActivity' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1372:12: error: cannot find 'get' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1372:16: error: cannot find 'MobileServiceAvailability' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1372:86: error: value of type 'ProjectManager' has no member 'applicationContext'
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1373:26: error: cannot find 'AskSpeechAction' in scope
+catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1377:26: error: cannot find 'StartListeningAction' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/ForItemInUserListAction.swift:9:21: error: overriding declaration requires an 'override' keyword
+catroid/src/main/java/org/catrobat/catroid/content/actions/ForVariableFromToAction.swift:14:21: error: overriding declaration requires an 'override' keyword
+catroid/src/main/java/org/catrobat/catroid/content/actions/GlideToPhysicsAction.swift:8:24: error: method does not override any method from its superclass
+catroid/src/main/java/org/catrobat/catroid/content/actions/GlideToPhysicsAction.swift:13:24: error: method does not override any method from its superclass
+catroid/src/main/java/org/catrobat/catroid/content/actions/GlideToPhysicsAction.swift:3:34: error: cannot find type 'GlideToAction' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/HideTextAction.swift:6:32: error: cannot find type 'AndroidStringProvider' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/HideTextAction.swift:26:54: error: cannot find type 'AndroidStringProvider' in scope
+catroid/src/main/java/org/catrobat/catroid/stage/HmsSpeechRecognitionHolder.swift:6:26: error: 'OnSpeechRecognitionResultCallback' is ambiguous for type lookup in this context
+catroid/src/main/java/org/catrobat/catroid/stage/SpeechRecognitionHolderInterface.swift:9:19: error: 'OnSpeechRecognitionResultCallback' is ambiguous for type lookup in this context
+catroid/src/main/java/org/catrobat/catroid/stage/HmsSpeechRecognitionHolder.swift:4:14: error: type 'HmsSpeechRecognitionHolder' does not conform to protocol 'SpeechRecognitionHolderInterface'
+catroid/src/main/java/org/catrobat/catroid/content/actions/LegoEv3MotorTurnAngleAction.swift:16:43: error: cannot find type 'LegoEv3MotorTurnAngleBrick' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/PhiroSensorAction.swift:14:21: error: overriding declaration requires an 'override' keyword
+catroid/src/main/java/org/catrobat/catroid/content/actions/PhiroSensorAction.swift:16:24: error: method does not override any method from its superclass
+catroid/src/main/java/org/catrobat/catroid/content/actions/PlayDrumForBeatsAction.swift:5:23: error: cannot find type 'PickableDrum' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/PlayDrumForBeatsAction.swift:25:41: error: cannot find type 'PickableDrum' in scope
+catroid/src/main/java/org/catrobat/catroid/ProjectManager.swift:195:68: error: cannot find type 'DefaultProjectHandler' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/RaspiIfLogicAction.swift:12:21: error: overriding declaration requires an 'override' keyword
+catroid/src/main/java/org/catrobat/catroid/content/actions/RaspiIfLogicAction.swift:18:24: error: method does not override any method from its superclass
+catroid/src/main/java/org/catrobat/catroid/content/actions/RaspiIfLogicAction.swift:72:15: error: value of type 'Action' has no member 'setActor'
+catroid/src/main/java/org/catrobat/catroid/content/actions/RaspiIfLogicAction.swift:73:18: error: value of type 'Action' has no member 'setActor'
+catroid/src/main/java/org/catrobat/catroid/content/actions/RaspiIfLogicAction.swift:74:20: error: value of type 'Action' has no member 'setActor'
+catroid/src/main/java/org/catrobat/catroid/content/actions/ReadListFromDeviceAction.swift:7:21: error: overriding declaration requires an 'override' keyword
+catroid/src/main/java/org/catrobat/catroid/content/actions/ReadListFromDeviceAction.swift:16:17: error: overriding declaration requires an 'override' keyword
+catroid/src/main/java/org/catrobat/catroid/content/actions/ReadListFromDeviceAction.swift:23:17: error: overriding declaration requires an 'override' keyword
+catroid/src/main/java/org/catrobat/catroid/content/actions/ReadVariableFromDeviceAction.swift:7:21: error: overriding declaration requires an 'override' keyword
+catroid/src/main/java/org/catrobat/catroid/content/actions/ReadVariableFromDeviceAction.swift:16:17: error: overriding declaration requires an 'override' keyword
+catroid/src/main/java/org/catrobat/catroid/content/actions/ReadVariableFromDeviceAction.swift:21:17: error: overriding declaration requires an 'override' keyword
+catroid/src/main/java/org/catrobat/catroid/content/actions/ReportAction.swift:8:21: error: overriding declaration requires an 'override' keyword
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetNfcTagAction.swift:11:21: error: overriding declaration requires an 'override' keyword
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetPhysicsObjectTypeAction.swift:5:15: error: cannot find type 'Type' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetPhysicsObjectTypeAction.swift:17:33: error: cannot find type 'Type' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetTextAction.swift:8:9: error: overriding property must be as accessible as the declaration it overrides
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetTextAction.swift:8:9: error: property 'actor' with type 'TextActor?' cannot override a property with type 'Actor?'
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetVisibleAction.swift:11:12: error: cannot find 'StageActivity' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetVisibleAction.swift:12:25: error: cannot find 'StageActivity' in scope
+catroid/src/main/java/org/catrobat/catroid/stage/ShowTextActor.swift:21:79: error: static property 'defaultAlignment' is private and cannot be referenced from a default argument value
+catroid/src/main/java/org/catrobat/catroid/content/actions/ShowTextColorSizeAlignmentAction.swift:12:9: error: overriding property must be as accessible as the declaration it overrides
+catroid/src/main/java/org/catrobat/catroid/content/actions/ShowTextColorSizeAlignmentAction.swift:12:9: error: property 'actor' with type 'ShowTextActor?' cannot override a property with type 'Actor?'
+catroid/src/main/java/org/catrobat/catroid/content/actions/ShowTextColorSizeAlignmentAction.swift:13:32: error: cannot find type 'AndroidStringProvider' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/ShowTextColorSizeAlignmentAction.swift:88:67: error: cannot find type 'AndroidStringProvider' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/ShowTextColorSizeAlignmentAction.swift:35:17: error: ambiguous use of 'actor'
+catroid/src/main/java/org/catrobat/catroid/stage/SpeechRecognitionHolder.swift:6:17: error: invalid redeclaration of 'OnSpeechRecognitionResultCallback'
+catroid/src/main/java/org/catrobat/catroid/stage/SpeechRecognitionHolder.swift:14:31: error: 'OnSpeechRecognitionResultCallback' is ambiguous for type lookup in this context
+catroid/src/main/java/org/catrobat/catroid/stage/SpeechRecognitionHolderFactory.swift:33:19: error: 'OnSpeechRecognitionResultCallback' is ambiguous for type lookup in this context
+catroid/src/main/java/org/catrobat/catroid/stage/SpeechRecognitionHolderFactory.swift:32:19: error: type 'DummySpeechRecognitionHolder' does not conform to protocol 'SpeechRecognitionHolderInterface'
+catroid/src/main/java/org/catrobat/catroid/content/Sprite.swift:145:42: error: cannot find type 'PlaySoundBrick' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/StopAllScriptsAction.swift:5:21: error: overriding declaration requires an 'override' keyword
+catroid/src/main/java/org/catrobat/catroid/content/actions/StopOtherScriptsAction.swift:7:21: error: overriding declaration requires an 'override' keyword
+catroid/src/main/java/org/catrobat/catroid/content/actions/StopThisScriptAction.swift:6:21: error: overriding declaration requires an 'override' keyword
+catroid/src/main/java/org/catrobat/catroid/content/actions/ThinkSayBubbleAction.swift:5:32: error: cannot find type 'AndroidStringProvider' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/ThinkSayBubbleAction.swift:27:53: error: cannot find type 'AndroidStringProvider' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/ThinkSayBubbleAction.swift:35:54: error: cannot find type 'AndroidStringProvider' in scope
+catroid/src/main/java/org/catrobat/catroid/stage/UtteranceProgressListenerContainer.swift:7:38: error: cannot find type 'UtteranceProgressListenerDelegate' in scope
+catroid/src/main/java/org/catrobat/catroid/stage/UtteranceProgressListenerContainer.swift:15:36: error: cannot find type 'UtteranceProgressListenerDelegate' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitTillIdleAction.swift:4:21: error: overriding declaration requires an 'override' keyword
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitUntilAction.swift:10:21: error: overriding declaration requires an 'override' keyword
