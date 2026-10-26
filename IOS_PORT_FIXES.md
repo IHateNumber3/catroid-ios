@@ -62,3 +62,9 @@ Important: parser success only verifies Swift syntax. It does not establish that
 - Added a minimal `UserDefinedReceiverBrick` runtime class for user-defined script headers.
 - Removed optional singleton access in `WaitForBubbleBrickAction` by using `StageListener.shared`.
 - Parsed all 386 Swift source files with `swiftc -parse`; no syntax errors. This is not an iOS SDK typecheck/build, and the sound manager bridge currently tracks playback state but does not itself play audio.
+
+
+## Pass 9 — duplicate StageActivity.swift
+
+- Updated `project.yml` to exclude `**/stagecore/StageActivity.swift` from the Catroid target, retaining `stage/StageActivity.swift`.
+- This addresses the reported duplicate Swift filename error at project source selection time. It does not claim a full Xcode build was run here.
