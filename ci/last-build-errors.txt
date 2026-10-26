@@ -1,242 +1,45 @@
-BUILD ERRORS: 157 unique
+BUILD ERRORS: 34 unique
 
 == Missing symbols (count) ==
-   8  AndroidStringProvider
-   4  SetNextLookAction
-   3  get
-   3  MobileServiceAvailability
-   3  TapAtAction
-   2  EventAction
-   2  LegoEv3MotorTurnAngleBrick
-   2  PickableDrum
-   2  ParameterizedData
-   2  GlideToAction
-   2  SetLookAction
-   2  SetLookByIndexAction
-   2  SpeechSynthesizer
-   2  AskSpeechAction
-   2  RepeatAction
-   2  ChooseCameraAction
-   2  WriteUserDataOnDeviceAction
-   2  ArduinoImpl
-   2  ServiceProvider
-   2  CatroidService
-   2  BluetoothDevice
-   1  LegoNxtMotorMoveBrick
-   1  LegoNxtMotorStopBrick
-   1  LegoNxtMotorTurnAngleBrick
-   1  LegoEv3MotorMoveBrick
-   1  LegoEv3MotorStopBrick
-   1  LegoEv3SetLedBrick
-   1  PhiroPlayToneBrick
-   1  PhiroMotorMoveForwardBrick
-   1  PhiroMotorMoveBackwardBrick
-   1  PhiroRGBLightBrick
-   1  PhiroMotorStopBrick
-   1  ArcBrick
-   1  UserDefinedBrickAction
-   1  BroadcastAction
-   1  PlaySoundAtAction
-   1  ChangeBrightnessByNAction
-   1  ChangeColorByNAction
-   1  GoToRandomPositionAction
-   1  GoToOtherSpritePositionAction
-   1  IfOnEdgeBounceAction
-   1  StartPlotAction
-   1  StopPlotAction
-   1  StartEngraveAction
-   1  StopEngraveAction
-   1  StartCutAction
-   1  StopCutAction
-   1  ArcAction
-   1  GoThroughAction
-   1  SetCameraFocusPointAction
-   1  PlaySoundAction
-   1  StopSoundAction
-   1  CloneAction
-   1  SetBrightnessAction
-   1  SetPreviousLookAction
-   1  DeleteLookAction
-   1  SpeakAction
-   1  SpeakAndWaitAction
-   1  PauseForBeatsAction
-   1  ChangeTempoByAction
-   1  ChangeVariableAction
-   1  SetVariableAction
-   1  AskAction
-   1  DeleteItemOfUserListAction
-   1  AddItemToUserListAction
-   1  InsertItemIntoUserListAction
-   1  StoreCSVIntoUserListAction
-   1  ReplaceItemInUserListAction
-   1  SceneStartAction
-   1  IfLogicAction
-   1  RepeatUntilAction
-   1  WriteEmbroideryToFileAction
-   1  SavePlotAction
-   1  SaveLaserAction
-   1  SharePlotAction
-   1  ShareLaserAction
-   1  ShowTextAction
-   1  FlashAction
-   1  VibrateAction
-   1  CameraBrickAction
+   4  SoundFilePathWithSprite
+   3  recentlyStarted
+   3  recentlyStopped
+   2  SoundManager
+   1  EventAction
+   1  UserDefinedReceiverBrick
 
 == First errors ==
 catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:7:165: error: cannot find type 'EventAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:18:82: error: cannot find type 'EventAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:195:103: error: cannot find type 'LegoNxtMotorMoveBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:204:57: error: cannot find type 'LegoNxtMotorStopBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:210:108: error: cannot find type 'LegoNxtMotorTurnAngleBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:228:109: error: cannot find type 'LegoEv3MotorMoveBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:237:57: error: cannot find type 'LegoEv3MotorStopBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:243:58: error: cannot find type 'LegoEv3SetLedBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:259:108: error: cannot find type 'LegoEv3MotorTurnAngleBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:268:105: error: cannot find type 'PhiroPlayToneBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:277:114: error: cannot find type 'PhiroMotorMoveForwardBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:286:115: error: cannot find type 'PhiroMotorMoveBackwardBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:295:101: error: cannot find type 'PhiroRGBLightBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:316:61: error: cannot find type 'PhiroMotorStopBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:378:90: error: cannot find type 'ArcBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:673:116: error: cannot find type 'PickableDrum' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:792:113: error: cannot find type 'AndroidStringProvider' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:802:116: error: cannot find type 'AndroidStringProvider' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1040:185: error: cannot find type 'AndroidStringProvider' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1050:262: error: cannot find type 'AndroidStringProvider' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1063:113: error: cannot find type 'AndroidStringProvider' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1233:73: error: cannot find type 'ParameterizedData' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1244:142: error: cannot find type 'ParameterizedData' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1389:132: error: cannot find type 'SetNextLookAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1398:128: error: cannot find type 'SetNextLookAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1407:100: error: cannot find type 'SetNextLookAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:8:22: error: cannot find 'UserDefinedBrickAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:19:22: error: cannot find 'BroadcastAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:43:22: error: cannot find 'PlaySoundAtAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:61:22: error: cannot find 'ChangeBrightnessByNAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:69:22: error: cannot find 'ChangeColorByNAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:136:22: error: cannot find 'GlideToAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:145:22: error: cannot find 'GlideToAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:148:33: error: 'nil' requires a contextual type
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:161:40: error: cannot find 'GoToRandomPositionAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:165:45: error: cannot find 'GoToOtherSpritePositionAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:190:22: error: cannot find 'IfOnEdgeBounceAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/LegoEv3MotorTurnAngleAction.swift:16:43: error: cannot find type 'LegoEv3MotorTurnAngleBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:312:30: error: value of optional type 'Action?' must be unwrapped to a value of type 'Action'
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:343:22: error: cannot find 'StartPlotAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:349:22: error: cannot find 'StopPlotAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:355:22: error: cannot find 'StartEngraveAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:361:22: error: cannot find 'StopEngraveAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:367:22: error: cannot find 'StartCutAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:373:22: error: cannot find 'StopCutAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:379:22: error: cannot find 'ArcAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:385:33: error: 'nil' requires a contextual type
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:390:22: error: cannot find 'GoThroughAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:394:33: error: 'nil' requires a contextual type
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:421:22: error: cannot find 'SetCameraFocusPointAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:437:22: error: cannot find 'PlaySoundAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:444:22: error: cannot find 'StopSoundAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:466:22: error: cannot find 'CloneAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:478:22: error: cannot find 'SetBrightnessAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:506:22: error: cannot find 'SetLookAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:514:22: error: cannot find 'SetLookByIndexAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:523:22: error: cannot find 'SetLookAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:531:22: error: cannot find 'SetLookByIndexAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:541:22: error: cannot find 'SetNextLookAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:549:22: error: cannot find 'SetPreviousLookAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:557:22: error: cannot find 'DeleteLookAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:573:16: error: value of type 'GlideToPhysicsAction' has no member 'setScope'
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:575:16: error: value of type 'GlideToPhysicsAction' has no member 'setPosition'
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:576:16: error: value of type 'GlideToPhysicsAction' has no member 'setDuration'
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:577:16: error: value of type 'GlideToPhysicsAction' has no member 'act'
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:578:16: error: cannot convert return expression of type 'GlideToPhysicsAction' to return type 'Action'
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:613:22: error: cannot find 'SpeakAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:615:37: error: cannot find 'SpeechSynthesizer' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:616:45: error: cannot find 'get' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:616:49: error: cannot find 'MobileServiceAvailability' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:622:22: error: cannot find 'SpeakAndWaitAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:624:37: error: cannot find 'SpeechSynthesizer' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:625:45: error: cannot find 'get' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:625:49: error: cannot find 'MobileServiceAvailability' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:635:22: error: cannot find 'PauseForBeatsAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:666:22: error: cannot find 'ChangeTempoByAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/PlayDrumForBeatsAction.swift:25:41: error: cannot find type 'PickableDrum' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:699:22: error: cannot find 'ChangeVariableAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:708:22: error: cannot find 'SetVariableAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:717:22: error: cannot find 'AskAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:726:22: error: cannot find 'AskSpeechAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:735:22: error: cannot find 'DeleteItemOfUserListAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:750:22: error: cannot find 'AddItemToUserListAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:759:22: error: cannot find 'InsertItemIntoUserListAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:769:22: error: cannot find 'StoreCSVIntoUserListAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:779:22: error: cannot find 'ReplaceItemInUserListAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/ThinkSayBubbleAction.swift:36:67: error: cannot find type 'AndroidStringProvider' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:820:22: error: cannot find 'SceneStartAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:827:22: error: cannot find 'IfLogicAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:837:22: error: cannot find 'RepeatAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:850:16: error: value of type 'ForVariableFromToAction' has no member 'setAction'
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:853:16: error: value of type 'ForVariableFromToAction' has no member 'setLoopDelay'
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:854:16: error: cannot convert return expression of type 'ForVariableFromToAction' to return type 'Action'
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:859:16: error: value of type 'ForItemInUserListAction' has no member 'setAction'
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:862:16: error: value of type 'ForItemInUserListAction' has no member 'setLoopDelay'
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:863:16: error: cannot convert return expression of type 'ForItemInUserListAction' to return type 'Action'
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:875:22: error: cannot find 'RepeatUntilAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:893:22: error: cannot find 'RepeatAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:940:22: error: cannot find 'WriteEmbroideryToFileAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:948:22: error: cannot find 'SavePlotAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:956:22: error: cannot find 'SaveLaserAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:964:22: error: cannot find 'SharePlotAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:972:22: error: cannot find 'ShareLaserAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:995:37: error: missing argument label 'script:' in call
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1041:22: error: cannot find 'ShowTextAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/ShowTextColorSizeAlignmentAction.swift:85:67: error: cannot find type 'AndroidStringProvider' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/HideTextAction.swift:37:67: error: cannot find type 'AndroidStringProvider' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1072:22: error: cannot find 'FlashAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1078:22: error: cannot find 'VibrateAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1086:22: error: cannot find 'CameraBrickAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1092:22: error: cannot find 'FadeParticleEffectAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1100:22: error: cannot find 'AdditiveParticleEffectAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1107:22: error: cannot find 'SetParticleColorAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1115:22: error: cannot find 'ChooseCameraAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1121:22: error: cannot find 'ChooseCameraAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1169:30: error: value of optional type 'Action?' must be unwrapped to a value of type 'Action'
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1214:22: error: cannot find 'AssertEqualsAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1224:22: error: cannot find 'AssertUserListAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1234:22: error: cannot find 'RepeatParameterizedAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1245:22: error: cannot find 'ParameterizedAssertAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1256:22: error: cannot find 'FinishStageAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1262:22: error: cannot find 'TapAtAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1271:22: error: cannot find 'TapAtAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1281:22: error: cannot find 'TapAtAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1293:22: error: cannot find 'WriteUserDataOnDeviceAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1294:54: error: value of optional type 'Project?' must be unwrapped to refer to member 'directory' of wrapped base type 'Project'
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1295:24: error: cannot find 'DeviceVariableAccessor' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1302:22: error: cannot find 'WriteVariableToFileAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1311:22: error: cannot find 'ReadVariableFromFileAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1321:22: error: cannot find 'WriteUserDataOnDeviceAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1322:54: error: value of optional type 'Project?' must be unwrapped to refer to member 'directory' of wrapped base type 'Project'
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1323:24: error: cannot find 'DeviceListAccessor' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1337:16: error: cannot convert return expression of type 'ReadVariableFromDeviceAction' to return type 'Action'
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1343:16: error: cannot convert return expression of type 'ReadListFromDeviceAction' to return type 'Action'
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1347:22: error: cannot find 'WebRequestAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1356:22: error: cannot find 'LookRequestAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1364:22: error: cannot find 'OpenUrlAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1372:12: error: cannot find 'get' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1372:16: error: cannot find 'MobileServiceAvailability' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1372:86: error: value of type 'ProjectManager' has no member 'applicationContext'
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1373:26: error: cannot find 'AskSpeechAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1377:26: error: cannot find 'StartListeningAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1384:22: error: cannot find 'SetListeningLanguageAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1390:22: error: cannot find 'PaintNewLookAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1399:22: error: cannot find 'CopyLookAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1408:22: error: cannot find 'EditLookAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/ArduinoSendDigitalValueAction.swift:28:87: error: cannot find 'ArduinoImpl' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/ArduinoSendDigitalValueAction.swift:36:23: error: cannot find 'ServiceProvider' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/ArduinoSendDigitalValueAction.swift:36:50: error: cannot find 'CatroidService' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/ArduinoSendDigitalValueAction.swift:36:99: error: cannot find 'BluetoothDevice' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/ArduinoSendPWMValueAction.swift:28:87: error: cannot find 'ArduinoImpl' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/ArduinoSendPWMValueAction.swift:36:23: error: cannot find 'ServiceProvider' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/ArduinoSendPWMValueAction.swift:36:50: error: cannot find 'CatroidService' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/ArduinoSendPWMValueAction.swift:36:99: error: cannot find 'BluetoothDevice' in scope
-catroid/src/main/java/org/catrobat/catroid/common/BrickValues.swift:46:23: error: keyword 'repeat' cannot be used as an identifier here
-catroid/src/main/java/org/catrobat/catroid/common/BrickValues.swift:46:23: error: property declaration does not bind any variables
-catroid/src/main/java/org/catrobat/catroid/content/BroadcastScript.swift:19:33: error: cannot find 'BroadcastReceiverBrick' in scope
+catroid/src/main/java/org/catrobat/catroid/content/UserDefinedScript.swift:16:33: error: cannot find 'UserDefinedReceiverBrick' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForBubbleBrickAction.swift:7:26: error: value of optional type 'StageListener?' must be unwrapped to refer to member 'getBubbleActorForSprite' of wrapped base type 'StageListener'
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForBubbleBrickAction.swift:8:27: error: value of optional type 'StageListener?' must be unwrapped to refer to member 'removeBubbleActorForSprite' of wrapped base type 'StageListener'
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:19:41: error: consecutive statements on a line must be separated by ';'
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:29:41: error: consecutive statements on a line must be separated by ';'
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:6:23: error: cannot find type 'SoundManager' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:53:49: error: cannot find type 'SoundManager' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:17:54: error: value of type 'MidiSoundManager' has no member 'startedSoundfilePaths'
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:18:39: error: cannot find 'SoundFilePathWithSprite' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:19:40: error: '>' is not a postfix unary operator
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:19:17: error: cannot find 'SoundFilePathWithSprite' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:19:16: error: binary operator '<' cannot be applied to operands of type 'Set<_>.Type' and '_'
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:19:13: error: generic parameter 'Element' could not be inferred
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:19:42: error: cannot find 'recentlyStarted' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:19:77: error: value of type 'MidiSoundManager' has no member 'startedSoundfilePaths'
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:20:16: error: cannot find 'recentlyStarted' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:20:83: error: value of type 'MidiSoundManager' has no member 'isSoundInSpritePlaying'
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:21:17: error: cannot find 'recentlyStarted' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:28:39: error: cannot find 'SoundFilePathWithSprite' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:29:40: error: '>' is not a postfix unary operator
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:29:17: error: cannot find 'SoundFilePathWithSprite' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:29:16: error: binary operator '<' cannot be applied to operands of type 'Set<_>.Type' and '_'
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:29:13: error: generic parameter 'Element' could not be inferred
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:29:42: error: cannot find 'recentlyStopped' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:30:16: error: cannot find 'recentlyStopped' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:31:17: error: cannot find 'recentlyStopped' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitForSoundAction.swift:45:44: error: value of type 'MidiSoundManager' has no member 'midiPlayers'
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitTillIdleAction.swift:18:26: error: consecutive statements on a line must be separated by ';'
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitTillIdleAction.swift:23:60: error: consecutive statements on a line must be separated by ';'
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitTillIdleAction.swift:11:49: error: value of optional type 'StageListener?' must be unwrapped to refer to member 'stage' of wrapped base type 'StageListener'
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitTillIdleAction.swift:11:76: error: value of type '[Actor]' has no member 'size'
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitTillIdleAction.swift:17:36: error: value of optional type 'StageListener?' must be unwrapped to refer to member 'stage' of wrapped base type 'StageListener'
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitTillIdleAction.swift:23:38: error: expected member name or initializer call after type name
