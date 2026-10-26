@@ -7,7 +7,7 @@ open class WaitForSoundAction: WaitAction {
     var midiSoundManager: MidiSoundManager = MidiSoundManager.instance
     var soundStopped: Bool = false
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     public func setSoundFilePath(_ soundFilePath: String) {
         self.soundFilePath = soundFilePath

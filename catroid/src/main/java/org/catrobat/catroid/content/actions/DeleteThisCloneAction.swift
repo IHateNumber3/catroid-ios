@@ -3,7 +3,7 @@ import Foundation
 open class DeleteThisCloneAction: TemporalAction {
     var sprite: Sprite!
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func update(_ percent: Float) {
         if sprite == nil {

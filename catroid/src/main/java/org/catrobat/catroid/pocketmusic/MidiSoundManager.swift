@@ -5,6 +5,7 @@ import AVFoundation
 /// Воспроизведение нот будет подключено вместе с PlayNoteBrick.
 public final class MidiSoundManager {
     public static let shared = MidiSoundManager()
+    public static var instance: MidiSoundManager { return shared }
     public static func getInstance() -> MidiSoundManager { return shared }
 
     public private(set) var instrument: MusicalInstrument = .acousticGrandPiano

@@ -4,7 +4,7 @@ open class ChangeVolumeByNAction: TemporalAction {
     var volume: Formula!
     var scope: Scope!
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func update(_ percent: Float) {
         do {

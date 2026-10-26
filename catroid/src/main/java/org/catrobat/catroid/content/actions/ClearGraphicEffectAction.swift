@@ -3,7 +3,7 @@ import Foundation
 open class ClearGraphicEffectAction: TemporalAction {
     var sprite: Sprite!
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func update(_ percent: Float) {
         sprite.look.setBrightnessInUserInterfaceDimensionUnit(100.0)

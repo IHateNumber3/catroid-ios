@@ -4,7 +4,7 @@ open class SetTempoAction: TemporalAction {
     var scope: Scope!
     var tempo: Formula!
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func update(_ delta: Float) {
         do {

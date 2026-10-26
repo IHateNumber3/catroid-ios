@@ -4,19 +4,19 @@ open class TripleStitchAction: TemporalAction {
     var scope: Scope!
     var steps: Formula!
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func update(_ delta: Float) {
         var stepsInterpretation: Int = 0
         do {
             if steps != nil {
-                stepsInterpretation = try steps.interpretInteger(scope)
+                try stepsInterpretation = steps.interpretInteger(scope)
             }
         } catch let interpretationException {
             stepsInterpretation = 0
             Log.d(String(describing: type(of: self)), "Formula interpretation for this specific Brick failed.", interpretationException)
         }
-        self.scope.sprite.runningStitch.activateStitching(scope.sprite, TripleRunningStitch(sprite: scope.sprite, type: stepsInterpretation))
+        self.scope.sprite.runningStitch.activateStitching(scope.sprite, TripleRunningStitch(scope.sprite, stepsInterpretation))
     }
 
     public func setScope(_ scope: Scope) {

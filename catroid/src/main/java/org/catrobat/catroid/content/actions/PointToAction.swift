@@ -4,7 +4,7 @@ open class PointToAction: TemporalAction {
     var sprite: Sprite!
     var pointedSprite: Sprite!
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func update(_ percent: Float) {
         if pointedSprite == nil || !ProjectManager.instance.currentlyPlayingScene.spriteList.contains(pointedSprite) {

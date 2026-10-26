@@ -3,7 +3,7 @@ import Foundation
 open class ComeToFrontAction: TemporalAction {
     var sprite: Sprite!
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func update(_ delta: Float) {
         List<Sprite> spriteList = ProjectManager.instance.currentProject.spriteListWithClones

@@ -11,7 +11,7 @@ open class TemporalAction: Action {
     private var began = false
     private var complete = false
 
-    public required override init() { super.init() }
+    public override init() { super.init() }
 
     public init(duration: Float, interpolation: Interpolation? = nil) {
         self.duration = duration

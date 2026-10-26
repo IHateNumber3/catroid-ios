@@ -5,7 +5,7 @@ open class HideTextAction: TemporalAction {
     var sprite: Sprite!
     var androidStringProvider: AndroidStringProvider!
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func begin() {
         if StageActivity.stageListener != nil {

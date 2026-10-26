@@ -6,7 +6,7 @@ open class SetVelocityAction: TemporalAction {
     var velocityX: Formula!
     var velocityY: Formula!
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func update(_ percent: Float) {
         var newVelocityX: Float

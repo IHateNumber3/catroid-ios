@@ -10,54 +10,49 @@ open class ShowTextColorSizeAlignmentAction: TemporalAction {
     var scope: Scope!
     var alignment: Int = 0
     var actor: ShowTextActor!
-    var androidStringProvider: StringProvider! // Змінено на Swift-еквівалент (або твій тип)
+    var androidStringProvider: AndroidStringProvider!
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func begin() {
         do {
-            let xPositionVal: Int = try self.xPosition.interpretInteger(scope)
-            let yPositionVal: Int = try self.yPosition.interpretInteger(scope)
-            let relativeTextSizeVal: Float = try self.relativeTextSize.interpretFloat(scope) / 100
-            let colorVal: String = try self.color.interpretString(scope)
-            
-            if let stageListener = StageManager.shared.stageListener {
-                let stageActors = stageListener.stage.actors
-                let dummyActor = ShowTextActor(UserVariable("dummyActor"), 0, 0, relativeTextSizeVal, colorVal, scope.sprite, alignment, androidStringProvider)
-                
-                for existingActor in stageActors {
-                    // У Swift перевірка типу робиться через `is` та `as?`
-                    if type(of: existingActor) == type(of: dummyActor) {
-                        if let showTextActor = existingActor as? ShowTextActor {
-                            if showTextActor.variableNameToCompare == variableToShow.name && showTextActor.sprite == scope.sprite {
-                                existingActor.remove()
-                            }
+            var xPosition: Int = try self.xPosition.interpretInteger(scope)
+            var yPosition: Int = try self.yPosition.interpretInteger(scope)
+            var relativeTextSize: Float = try self.relativeTextSize.interpretFloat(scope) / 100
+            var color: String = try self.color.interpretString(scope)
+            if StageActivity.stageListener != nil {
+                Array<Actor> stageActors = StageActivity.stageListener.stage.actors
+                var dummyActor = ShowTextActor(UserVariable("dummyActor"), 0, 0, relativeTextSize, color, scope.sprite, alignment, androidStringProvider)
+                for actor in stageActors {
+                    if actor.getClass().equals(dummyActor.getClass()) {
+                        var showTextActor = (ShowTextActor) actor
+                        if showTextActor.variableNameToCompare.equals(variableToShow.name) && showTextActor.sprite.equals(scope.sprite) {
+                            actor.remove()
                         }
                     }
                 }
-                actor = ShowTextActor(variableToShow, xPositionVal, yPositionVal, relativeTextSizeVal, colorVal, scope.sprite, alignment, androidStringProvider)
+                actor = ShowTextActor(variableToShow, xPosition, yPosition, relativeTextSize, color, scope.sprite, alignment, androidStringProvider)
             }
-            
-            if relativeTextSizeVal <= 0.0 {
+            if relativeTextSize <= 0.0 {
                 variableToShow.setVisible(false)
             } else {
-                StageManager.shared.stageListener?.addActor(actor)
+                StageActivity.stageListener.addActor(actor)
                 variableToShow.setVisible(true)
             }
         } catch let e {
-            Log.d(ShowTextColorSizeAlignmentAction.TAG, "InterpretationException: \(e)")
+            Log.d(ShowTextColorSizeAlignmentAction.TAG, "InterpretationException: " + e)
         }
     }
 
     open override func update(_ percent: Float) {
         do {
-            let xPositionVal: Int = try self.xPosition.interpretInteger(scope)
-            let yPositionVal: Int = try self.yPosition.interpretInteger(scope)
-            if let actor = actor {
-                actor.setPositionX(Float(xPositionVal))
-                actor.setPositionY(Float(yPositionVal))
+            var xPosition: Int = try self.xPosition.interpretInteger(scope)
+            var yPosition: Int = try self.yPosition.interpretInteger(scope)
+            if actor != nil {
+                actor.setPositionX(xPosition)
+                actor.setPositionY(yPosition)
             }
-        } catch {
+        } catch let e {
             Log.d(ShowTextColorSizeAlignmentAction.TAG, "InterpretationException")
         }
     }
@@ -87,7 +82,7 @@ open class ShowTextColorSizeAlignmentAction: TemporalAction {
         self.alignment = alignment
     }
 
-    public func setAndroidStringProvider(_ androidStringProvider: StringProvider) {
+    public func setAndroidStringProvider(_ androidStringProvider: AndroidStringProvider) {
         self.androidStringProvider = androidStringProvider
     }
 }

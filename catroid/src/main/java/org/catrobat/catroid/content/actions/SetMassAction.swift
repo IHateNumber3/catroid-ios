@@ -5,7 +5,7 @@ open class SetMassAction: TemporalAction {
     var physicsObject: PhysicsObject!
     var mass: Formula!
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func update(_ percent: Float) {
         var newMass: Float

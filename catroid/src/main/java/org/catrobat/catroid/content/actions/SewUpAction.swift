@@ -2,53 +2,28 @@ import Foundation
 
 open class SewUpAction: TemporalAction {
     var sprite: Sprite!
-    public static let STEPS: Float = 3.0
+    public static let STEPS: Int = 3
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func begin() {
-        // Конвертація градусів у радіани у Swift
-        let degrees = sprite.look.motionDirectionInUserInterfaceDimensionUnit
-        let radians = Double(degrees) * .pi / 180.0
-        
+        var radians: Double = Math.toRadians(sprite.look.motionDirectionInUserInterfaceDimensionUnit)
         sprite.runningStitch.pause()
-        
         var x: Float = sprite.look.xInUserInterfaceDimensionUnit
         var y: Float = sprite.look.yInUserInterfaceDimensionUnit
-        
-        let threadColor = sprite.embroideryThreadColor
-        let zIndex = sprite.look.zIndex
-        
-        if let stageListener = StageManager.shared.stageListener {
-            stageListener.embroideryPatternManager.addStitchCommand(
-                DSTStitchCommand(x: x, y: y, zIndex: zIndex, sprite: sprite, color: threadColor)
-            )
-            
-            x += SewUpAction.STEPS * Float(sin(radians))
-            y += SewUpAction.STEPS * Float(cos(radians))
-            stageListener.embroideryPatternManager.addStitchCommand(
-                DSTStitchCommand(x: x, y: y, zIndex: zIndex, sprite: sprite, color: threadColor)
-            )
-            
-            x -= SewUpAction.STEPS * Float(sin(radians))
-            y -= SewUpAction.STEPS * Float(cos(radians))
-            stageListener.embroideryPatternManager.addStitchCommand(
-                DSTStitchCommand(x: x, y: y, zIndex: zIndex, sprite: sprite, color: threadColor)
-            )
-            
-            x -= SewUpAction.STEPS * Float(sin(radians))
-            y -= SewUpAction.STEPS * Float(cos(radians))
-            stageListener.embroideryPatternManager.addStitchCommand(
-                DSTStitchCommand(x: x, y: y, zIndex: zIndex, sprite: sprite, color: threadColor)
-            )
-            
-            x += SewUpAction.STEPS * Float(sin(radians))
-            y += SewUpAction.STEPS * Float(cos(radians))
-            stageListener.embroideryPatternManager.addStitchCommand(
-                DSTStitchCommand(x: x, y: y, zIndex: zIndex, sprite: sprite, color: threadColor)
-            )
-        }
-        
+        StageActivity.stageListener.embroideryPatternManager.addStitchCommand(DSTStitchCommand(x, y, sprite.look.zIndex, sprite, sprite.embroideryThreadColor))
+        x += SewUpAction.STEPS * Math.sin(radians)
+        y += SewUpAction.STEPS * Math.cos(radians)
+        StageActivity.stageListener.embroideryPatternManager.addStitchCommand(DSTStitchCommand(x, y, sprite.look.zIndex, sprite, sprite.embroideryThreadColor))
+        x -= SewUpAction.STEPS * Math.sin(radians)
+        y -= SewUpAction.STEPS * Math.cos(radians)
+        StageActivity.stageListener.embroideryPatternManager.addStitchCommand(DSTStitchCommand(x, y, sprite.look.zIndex, sprite, sprite.embroideryThreadColor))
+        x -= SewUpAction.STEPS * Math.sin(radians)
+        y -= SewUpAction.STEPS * Math.cos(radians)
+        StageActivity.stageListener.embroideryPatternManager.addStitchCommand(DSTStitchCommand(x, y, sprite.look.zIndex, sprite, sprite.embroideryThreadColor))
+        x += SewUpAction.STEPS * Math.sin(radians)
+        y += SewUpAction.STEPS * Math.cos(radians)
+        StageActivity.stageListener.embroideryPatternManager.addStitchCommand(DSTStitchCommand(x, y, sprite.look.zIndex, sprite, sprite.embroideryThreadColor))
         sprite.runningStitch.setStartCoordinates(sprite.look.xInUserInterfaceDimensionUnit, sprite.look.yInUserInterfaceDimensionUnit)
         sprite.runningStitch.resume()
     }

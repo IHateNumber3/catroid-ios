@@ -1,7 +1,7 @@
 import Foundation
 
 open class WaitForBubbleBrickAction: WaitAction {
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func end() {
         if StageActivity.stageListener.getBubbleActorForSprite(scope.sprite) != nil {

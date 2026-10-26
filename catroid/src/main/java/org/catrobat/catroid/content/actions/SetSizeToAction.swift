@@ -4,11 +4,11 @@ open class SetSizeToAction: TemporalAction {
     var scope: Scope!
     var size: Formula!
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func update(_ delta: Float) {
         do {
-            let newSize: Float = try size == nil ? Float(0) : size.interpretFloat(scope)
+            var newSize: Float = try size == nil ? Float(0) : size.interpretFloat(scope)
             scope.sprite.look.setSizeInUserInterfaceDimensionUnit(newSize)
         } catch let interpretationException {
             Log.d(String(describing: type(of: self)), "Formula interpretation for this specific Brick failed.", interpretationException)

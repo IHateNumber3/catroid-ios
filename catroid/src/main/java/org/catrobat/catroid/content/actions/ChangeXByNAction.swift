@@ -4,7 +4,7 @@ open class ChangeXByNAction: TemporalAction {
     var scope: Scope!
     var xMovement: Formula!
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func update(_ percent: Float) {
         do {

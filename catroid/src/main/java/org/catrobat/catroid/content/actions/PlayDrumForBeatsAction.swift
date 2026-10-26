@@ -5,7 +5,7 @@ open class PlayDrumForBeatsAction: TemporalAction {
     var selectedDrum: PickableDrum!
     var beats: Formula!
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func begin() {
         do {

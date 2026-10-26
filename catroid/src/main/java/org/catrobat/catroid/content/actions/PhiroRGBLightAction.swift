@@ -10,7 +10,7 @@ open class PhiroRGBLightAction: TemporalAction {
     var blue: Formula!
     var scope: Scope!
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func update(_ percent: Float) {
         // Аппаратное действие (Bluetooth/NFC) на iOS не поддерживается

@@ -10,7 +10,7 @@ open class RaspiPwmAction: TemporalAction {
     var frequencyInterpretation: Double = 0
     var percentageInterpretation: Double = 0
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func begin() {
         do {

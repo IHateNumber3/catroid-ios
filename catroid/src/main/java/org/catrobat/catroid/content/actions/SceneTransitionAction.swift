@@ -4,7 +4,7 @@ open class SceneTransitionAction: TemporalAction {
     var sceneName: String!
     var sprite: Sprite!
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func update(_ percent: Float) {
         if sceneName != nil && !ProjectManager.instance.currentlyPlayingScene.name.equals(sceneName) {

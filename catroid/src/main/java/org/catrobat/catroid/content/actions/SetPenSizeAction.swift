@@ -4,7 +4,7 @@ open class SetPenSizeAction: TemporalAction {
     var scope: Scope!
     var penSize: Formula!
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func update(_ delta: Float) {
         do {

@@ -4,7 +4,7 @@ open class WaitAction: TemporalAction {
     var scope: Scope!
     var duration: Formula!
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func begin() {
         do {

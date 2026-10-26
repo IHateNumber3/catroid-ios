@@ -5,7 +5,7 @@ open class SetBounceFactorAction: TemporalAction {
     var physicsObject: PhysicsObject!
     var bounceFactor: Formula!
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func update(_ percent: Float) {
         var newBounceFactor: Float

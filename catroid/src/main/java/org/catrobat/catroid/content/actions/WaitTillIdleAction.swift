@@ -1,7 +1,7 @@
 import Foundation
 
 open class WaitTillIdleAction: Action {
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func act(_ delta: Float) -> Bool {
         return allActorsIdle()

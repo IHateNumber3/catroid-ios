@@ -6,7 +6,7 @@ open class ForItemInUserListAction: LoopAction {
     var isCurrentLoopInitialized: Bool = false
     var index: Int = 0
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func delegate(_ delta: Float) -> Bool {
         if !isCurrentLoopInitialized {

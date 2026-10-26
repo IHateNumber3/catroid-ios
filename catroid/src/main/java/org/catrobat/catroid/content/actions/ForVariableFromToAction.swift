@@ -11,7 +11,7 @@ open class ForVariableFromToAction: LoopAction {
     var toValue: Int = 0
     var step: Int = 1
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func delegate(_ delta: Float) -> Bool {
         if !isRepeatActionInitialized && !interpretParameters() {

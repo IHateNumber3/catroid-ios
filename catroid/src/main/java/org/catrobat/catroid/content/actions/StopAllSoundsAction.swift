@@ -1,10 +1,10 @@
 import Foundation
 
 open class StopAllSoundsAction: TemporalAction {
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func update(_ percent: Float) {
-        SoundManager.shared.stopAllSounds()
-        MidiSoundManager.shared.stopAllSounds()
+        SoundManager.instance.stopAllSounds()
+        MidiSoundManager.instance.stopAllSounds()
     }
 }

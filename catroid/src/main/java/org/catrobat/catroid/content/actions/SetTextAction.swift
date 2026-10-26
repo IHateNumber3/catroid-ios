@@ -7,7 +7,7 @@ open class SetTextAction: TemporalAction {
     var scope: Scope!
     var actor: TextActor!
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func begin() {
         do {

@@ -11,7 +11,7 @@ open class PhiroSensorAction: Action {
     var isInterpretedCorrectly: Bool = false
     public static let DISTANCE_THRESHOLD_VALUE: Int = 850
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func begin() {
         // Аппаратное действие (Bluetooth/NFC) на iOS не поддерживается

@@ -4,7 +4,7 @@ open class ChangeYByNAction: TemporalAction {
     var scope: Scope!
     var yMovement: Formula!
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     open override func update(_ arg0: Float) {
         do {

@@ -9,7 +9,7 @@ open class RaspiIfLogicAction: Action {
     var pinNumber: Formula!
     var pin: Int = 0
 
-    public required init() { super.init() }
+    public override init() { super.init() }
 
     public func setPinNumber(_ pinNumber: Formula) {
         self.pinNumber = pinNumber
