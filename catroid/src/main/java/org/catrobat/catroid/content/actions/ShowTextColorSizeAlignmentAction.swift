@@ -12,48 +12,51 @@ open class ShowTextColorSizeAlignmentAction: TemporalAction {
     var actor: ShowTextActor!
     var androidStringProvider: AndroidStringProvider!
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func begin() {
         do {
-            var xPosition: Int = try self.xPosition.interpretInteger(scope)
-            var yPosition: Int = try self.yPosition.interpretInteger(scope)
-            var relativeTextSize: Float = try self.relativeTextSize.interpretFloat(scope) / 100
-            var color: String = try self.color.interpretString(scope)
-            if StageActivity.stageListener != nil {
-                Array<Actor> stageActors = StageActivity.stageListener.stage.actors
-                var dummyActor = ShowTextActor(UserVariable("dummyActor"), 0, 0, relativeTextSize, color, scope.sprite, alignment, androidStringProvider)
-                for actor in stageActors {
-                    if actor.getClass().equals(dummyActor.getClass()) {
-                        var showTextActor = (ShowTextActor) actor
-                        if showTextActor.variableNameToCompare.equals(variableToShow.name) && showTextActor.sprite.equals(scope.sprite) {
-                            actor.remove()
-                        }
-                    }
+            let x = try xPosition.interpretInteger(scope)
+            let y = try yPosition.interpretInteger(scope)
+            let size = try relativeTextSize.interpretFloat(scope) / 100
+            let resolvedColor = try color.interpretString(scope)
+            let scene = StageListener.shared.stage
+
+            // Remove the previous label for this variable/sprite pair.
+            for node in scene.textNodes {
+                guard let oldActor = node as? ShowTextActor else { continue }
+                if oldActor.targetVariableNameToCompare == variableToShow.name && oldActor.associatedSprite === scope.sprite {
+                    scene.removeTextNode(oldActor)
                 }
-                actor = ShowTextActor(variableToShow, xPosition, yPosition, relativeTextSize, color, scope.sprite, alignment, androidStringProvider)
             }
-            if relativeTextSize <= 0.0 {
+
+            if size <= 0 {
                 variableToShow.setVisible(false)
-            } else {
-                StageActivity.stageListener.addActor(actor)
-                variableToShow.setVisible(true)
+                actor = nil
+                return
             }
-        } catch let e {
-            Log.d(ShowTextColorSizeAlignmentAction.TAG, "InterpretationException: " + e)
+
+            let newActor = ShowTextActor(userVariable: variableToShow,
+                                         xPosition: x, yPosition: y,
+                                         relativeSize: size, color: resolvedColor,
+                                         sprite: scope.sprite, alignment: alignment)
+            actor = newActor
+            scene.addActor(newActor)
+            variableToShow.setVisible(true)
+        } catch {
+            Log.d(ShowTextColorSizeAlignmentAction.TAG, "Could not show variable text", error)
         }
     }
 
     open override func update(_ percent: Float) {
         do {
-            var xPosition: Int = try self.xPosition.interpretInteger(scope)
-            var yPosition: Int = try self.yPosition.interpretInteger(scope)
-            if actor != nil {
-                actor.setPositionX(xPosition)
-                actor.setPositionY(yPosition)
-            }
-        } catch let e {
-            Log.d(ShowTextColorSizeAlignmentAction.TAG, "InterpretationException")
+            let x = try xPosition.interpretInteger(scope)
+            let y = try yPosition.interpretInteger(scope)
+            actor?.setPositionX(x)
+            actor?.setPositionY(y)
+            actor?.updateVariables()
+        } catch {
+            Log.d(ShowTextColorSizeAlignmentAction.TAG, "Could not update variable text", error)
         }
     }
 

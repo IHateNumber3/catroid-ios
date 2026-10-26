@@ -3,7 +3,7 @@ import Foundation
 open class PenDownAction: TemporalAction {
     var sprite: Sprite!
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func update(_ delta: Float) {
         if self.sprite.penConfiguration.isPenDown() {

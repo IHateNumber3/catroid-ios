@@ -20,9 +20,9 @@ public class ViewSwitchLock {
             locked = true
             
             // Автоматическое снятие блокировки через 200 мс
-            DispatchQueue.global().asyncAfter(deadline: .now() + ViewSwitchLock.unlockTimeout) { [weak self] {
+            DispatchQueue.global().asyncAfter(deadline: .now() + ViewSwitchLock.unlockTimeout) { [weak self] in
                 self?.unlock()
-            } }
+            }
             
             return true
         }

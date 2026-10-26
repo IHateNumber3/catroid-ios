@@ -10,6 +10,8 @@ public final class UserVariable: UserData, Hashable {
     // transient
     public var value: Any = 0.0
     public var visible = true
+    public var isVisible: Bool { get { visible } set { visible = newValue } }
+    public func setVisible(_ visible: Bool) { self.visible = visible }
     public var isDummy = false
 
     public init() {
@@ -36,6 +38,8 @@ public final class UserVariable: UserData, Hashable {
 
     public var deviceKey: UUID { return deviceValueKey }
     public func setDeviceValueKey(_ key: UUID) { deviceValueKey = key }
+
+    public func setValue(_ value: Any) { self.value = value }
 
     public func reset() { value = 0.0 }
 

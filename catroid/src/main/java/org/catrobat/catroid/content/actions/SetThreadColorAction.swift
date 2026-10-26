@@ -5,7 +5,7 @@ open class SetThreadColorAction: TemporalAction {
     var color: Formula!
     var sprite: Sprite!
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func update(_ delta: Float) {
         do {

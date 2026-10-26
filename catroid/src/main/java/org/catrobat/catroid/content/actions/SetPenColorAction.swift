@@ -6,7 +6,7 @@ open class SetPenColorAction: TemporalAction {
     var green: Formula!
     var blue: Formula!
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func update(_ delta: Float) {
         do {

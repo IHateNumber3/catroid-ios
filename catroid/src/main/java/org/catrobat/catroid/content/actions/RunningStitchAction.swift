@@ -4,7 +4,7 @@ open class RunningStitchAction: TemporalAction {
     var scope: Scope!
     var length: Formula!
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func update(_ delta: Float) {
         var lengthInterpretation: Int = 0

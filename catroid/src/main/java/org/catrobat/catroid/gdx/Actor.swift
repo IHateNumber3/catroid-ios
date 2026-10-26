@@ -76,6 +76,9 @@ open class Actor {
         actions.append(action)
     }
 
+    /// Compatibility accessor used by actions ported from scene2d.
+    public func getActions() -> [Action] { actions }
+
     public func clearActions() {
         actions.forEach { $0.actor = nil }
         actions.removeAll()

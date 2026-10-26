@@ -4,7 +4,7 @@ open class SewUpAction: TemporalAction {
     var sprite: Sprite!
     public static let STEPS: Int = 3
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func begin() {
         var radians: Double = Math.toRadians(sprite.look.motionDirectionInUserInterfaceDimensionUnit)

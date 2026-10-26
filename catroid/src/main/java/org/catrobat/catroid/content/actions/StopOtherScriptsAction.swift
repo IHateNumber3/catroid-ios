@@ -4,35 +4,22 @@ open class StopOtherScriptsAction: Action {
     var currentScript: Script!
     var sprite: Sprite!
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func act(_ delta: Float) -> Bool {
-        if !(actor is Look) || actor.getActions() == nil {
-            return true
-        }
-        sprite.releaseAllPointers()
-        var look = (Look) actor
+        guard let look = actor as? Look else { return true }
+        sprite?.releaseAllPointers()
         look.stopThreads(getOtherThreads(look))
         return true
     }
 
-    private func getOtherThreads(_ look: Look) -> Array<Action> {
-        Array<Action> otherThreads = new Array<>(look.getActions())
-        Iterator<Action> it = otherThreads.iterator()
-        while it.hasNext() {
-            var action = it.next()
-            if action is ScriptSequenceAction && (action as! ScriptSequenceAction).script == currentScript {
-                it.remove()
-            }
+    private func getOtherThreads(_ look: Look) -> [Action] {
+        look.getActions().filter { action in
+            guard let sequence = action as? ScriptSequenceAction else { return true }
+            return sequence.script !== currentScript
         }
-        return otherThreads
     }
 
-    public func setCurrentScript(_ currentScript: Script) {
-        self.currentScript = currentScript
-    }
-
-    public func setSprite(_ sprite: Sprite) {
-        self.sprite = sprite
-    }
+    public func setCurrentScript(_ currentScript: Script) { self.currentScript = currentScript }
+    public func setSprite(_ sprite: Sprite) { self.sprite = sprite }
 }

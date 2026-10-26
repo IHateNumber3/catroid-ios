@@ -5,7 +5,7 @@ open class ZigZagStitchAction: TemporalAction {
     var length: Formula!
     var width: Formula!
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func update(_ delta: Float) {
         var lengthInterpretation: Float = 0

@@ -8,8 +8,8 @@ public class CameraPositioner {
     public var virtualWidthHalf: CGFloat
     
     public var spriteToFocusOn: Sprite?
-    public var horizontalFlex: Float = 0.0f
-    public var verticalFlex: Float = 0.0f
+    public var horizontalFlex: Float = 0.0
+    public var verticalFlex: Float = 0.0
     
     private static let calculatePercent: Float = 100.0
     

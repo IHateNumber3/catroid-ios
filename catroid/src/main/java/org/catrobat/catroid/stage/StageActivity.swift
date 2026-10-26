@@ -2,6 +2,8 @@ import UIKit
 import SpriteKit
 
 public class StageViewController: UIViewController {
+    public static var stageListener: StageListener? { StageListener.shared }
+    public var currentStageScene: StageScene?
 
     public static let tag = "StageViewController"
     
@@ -52,8 +54,11 @@ public class StageViewController: UIViewController {
         
         // Настраиваем SKView для отрисовки графики Catroid (вместо LibGDX)
         skView = SKView(frame: view.bounds)
-        skView.autoresizingMask = [.flexibleWidth, .height]
+        skView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.addSubview(skView)
+        let scene = StageScene(size: skView.bounds.size)
+        currentStageScene = scene
+        skView.presentScene(scene)
         
         // Демонстрация FPS / статистики при необходимости
         skView.showsFPS = true

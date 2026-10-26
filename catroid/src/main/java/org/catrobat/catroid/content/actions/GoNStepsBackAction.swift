@@ -4,7 +4,7 @@ open class GoNStepsBackAction: TemporalAction {
     var scope: Scope!
     var steps: Formula!
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func update(_ delta: Float) {
         var stepsValue: Float

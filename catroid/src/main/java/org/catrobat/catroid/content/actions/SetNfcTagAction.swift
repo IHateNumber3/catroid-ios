@@ -8,7 +8,7 @@ open class SetNfcTagAction: Action {
     var firstExecution: Bool = true
     public static let TAG: String = String(describing: SetNfcTagAction.self)
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     public func setNfcTagNdefSpinnerSelection(_ spinnerSelection: Int) {
         self.nfcTagNdefSpinnerSelection = spinnerSelection

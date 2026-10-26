@@ -4,7 +4,7 @@ open class SetVisibleAction: TemporalAction {
     var sprite: Sprite!
     var visible: Bool = false
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func update(_ delta: Float) {
         sprite.look.setLookVisible(visible)

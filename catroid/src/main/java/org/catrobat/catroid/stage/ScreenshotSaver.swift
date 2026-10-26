@@ -124,13 +124,20 @@ public class ScreenshotSaver {
     }
     
     private func createImage(from pixels: [UInt32], width: Int, height: Int) -> UIImage? {
+        guard width > 0, height > 0, pixels.count >= width * height else { return nil }
         var mutablePixels = pixels
-        guard let provider = CGDataProvider(data: Data(bytes: &mutablePixels, count: pixels.count * MemoryLayout<UInt32>.size)) else {
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        let bitmapInfo = CGBitmapInfo.byteOrder32Big.rawValue | CGImageAlphaInfo.premultipliedFirst.rawValue
+        guard let context = CGContext(data: &mutablePixels,
+                                      width: width,
+                                      height: height,
+                                      bitsPerComponent: 8,
+                                      bytesPerRow: width * MemoryLayout<UInt32>.size,
+                                      space: colorSpace,
+                                      bitmapInfo: bitmapInfo),
+              let image = context.makeImage() else {
             return nil
         }
-        
-        let bitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.premultipliedFirst.rawValue | CGBitmapInfo.byteOrder32Big.rawValue)
-        
-        guard let cgImage = CGImage(
-            width: width,
-            
+        return UIImage(cgImage: image)
+    }
+}

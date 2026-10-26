@@ -48,9 +48,9 @@ public enum Constants {
     public static let tmpDirectoryName: String = "tmp"
     public static let textToSpeechTmpPath: String = tmpPath + "/textToSpeech"
     public static let uploadUrl: String = "https://upload.catrob.at"
-    public static let mainUrlHttps: String = BuildConfig.WEB_TEST_FLAG ? WEB_TEST_URL : MAIN_URL_PRODUCTION
+    public static let mainUrlHttps: String = "https://catrob.at"
     public static let baseAppUrlHttps: String = mainUrlHttps + "/app/"
-    public static let shareProjectUrl: String = BASE_URL_HTTPS + "/project/"
+    public static let shareProjectUrl: String = mainUrlHttps + "/project/"
     public static let catrobatAboutUrl: String = "https://www.catrobat.org/"
     public static let catrobatFormulaWikiUrl: String = "https://catrobat.org/docs/"
     public static let aboutPocketcodeLicenseUrl: String = "https://developer.catrobat.org/pages/legal/licenses/"
@@ -60,7 +60,7 @@ public enum Constants {
     public static let catrobatLogicWikiUrl: String = "https://catrobat.org/docs/"
     public static let catrobatSensorsWikiUrl: String = "https://catrobat.org/docs/"
     public static let catrobatObjectWikiUrl: String = "https://catrobat.org/docs/"
-    public static let catrobatDeleteAccountUrl: String = BASE_URL_HTTPS + "profile/edit"
+    public static let catrobatDeleteAccountUrl: String = mainUrlHttps + "/profile/edit"
     public static let catrobatTermsOfUseTokenFlavorUrl: String = "?flavorName="
     public static let catrobatTermsOfUseTokenVersionUrl: String = "&versionCode="
     public static let catrobatTermsOfUseAccepted: Int = 1
@@ -115,7 +115,7 @@ public enum Constants {
     public static let scratchConverterApiBaseUrl: String = scratchConverterBaseUrl + "api/v1/"
     public static let scratchConverterApiDefaultProjectsUrl: String = scratchConverterApiBaseUrl + "projects/"
     public static let scratchSecondReleasePublishedDateYear: Int = 2013
-    public static let scratchSecondReleasePublishedDateMonth: Int = Calendar.MAY
+    public static let scratchSecondReleasePublishedDateMonth: Int = 5
     public static let scratchSecondReleasePublishedDateDay: Int = 9
     public static let scratchHttpRequestMinTimeout: Int = 1_000
     public static let scratchHttpRequestMaxNumberOfRetries: Int = 2

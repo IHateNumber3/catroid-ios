@@ -5,27 +5,21 @@ open class ForVariableFromToAction: LoopAction {
     var from: Formula!
     var to: Formula!
     var scope: Scope!
-    var isCurrentLoopInitialized: Bool = false
-    var isRepeatActionInitialized: Bool = false
-    var fromValue: Int = 0
-    var toValue: Int = 0
-    var step: Int = 1
+    var isCurrentLoopInitialized = false
+    var isRepeatActionInitialized = false
+    var fromValue = 0
+    var toValue = 0
+    var step = 1
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func delegate(_ delta: Float) -> Bool {
-        if !isRepeatActionInitialized && !interpretParameters() {
-            return true
-        }
-        if !isCurrentLoopInitialized {
-            setCurrentTime(0.0)
-            isCurrentLoopInitialized = true
-        }
-        setCurrentTime(getCurrentTime() + delta)
-        if action != nil && action.act(delta) && !isLoopDelayNeeded() {
-            if !(controlVariable.value is Double) || (step > 0 && Double(controlVariable.value) >= toValue) || (step < 0 && Double(controlVariable.value) <= toValue) {
-                return true
-            }
+        if !isRepeatActionInitialized && !interpretParameters() { return true }
+        if !isCurrentLoopInitialized { currentTime = 0; isCurrentLoopInitialized = true }
+        currentTime += delta
+        if let action = action, action.act(delta), !isLoopDelayNeeded() {
+            let currentValue = (controlVariable.value as? NSNumber)?.doubleValue ?? Double.nan
+            if !currentValue.isFinite || (step > 0 && currentValue >= Double(toValue)) || (step < 0 && currentValue <= Double(toValue)) { return true }
             changeControlVariable(step)
             isCurrentLoopInitialized = false
             action.restart()
@@ -38,45 +32,26 @@ open class ForVariableFromToAction: LoopAction {
         isRepeatActionInitialized = false
         super.restart()
     }
-
-    public func setScope(_ scope: Scope) {
-        self.scope = scope
-    }
-
-    public func setRange(_ from: Formula, _ to: Formula) {
-        self.from = from
-        self.to = to
-    }
-
-    public func setControlVariable(_ variable: UserVariable) {
-        controlVariable = variable
-    }
+    public func setScope(_ scope: Scope) { self.scope = scope }
+    public func setRange(_ from: Formula, _ to: Formula) { self.from = from; self.to = to }
+    public func setControlVariable(_ variable: UserVariable) { controlVariable = variable }
 
     private func interpretParameters() -> Bool {
         isRepeatActionInitialized = true
         do {
-            var fromInterpretation: Double = try from == nil ? Double(0) : from.interpretDouble(scope)
-            fromValue = fromInterpretation.intValue
-            var toInterpretation: Double = try to == nil ? Double(0) : to.interpretDouble(scope)
-            toValue = toInterpretation.intValue
-            setStepValue()
+            fromValue = Int(try from == nil ? 0.0 : from.interpretDouble(scope))
+            toValue = Int(try to == nil ? 0.0 : to.interpretDouble(scope))
+            step = fromValue <= toValue ? 1 : -1
             setControlVariable(fromValue)
             return true
-        } catch let interpretationException {
-            Log.d(String(describing: type(of: self)), "Formula interpretation for this specific Brick failed.", interpretationException)
+        } catch {
+            Log.d(String(describing: type(of: self)), "Formula interpretation for this specific Brick failed.", error)
             return false
         }
     }
-
-    private func setStepValue() {
-        step = (fromValue <= toValue) ? 1 : -1
-    }
-
-    private func setControlVariable(_ value: Int) {
-        controlVariable.setValue(Double(value))
-    }
-
+    private func setControlVariable(_ value: Int) { controlVariable.setValue(Double(value)) }
     private func changeControlVariable(_ value: Int) {
-        controlVariable.setValue(Double(controlVariable.value) + Double(value))
+        let current = (controlVariable.value as? NSNumber)?.doubleValue ?? 0
+        controlVariable.setValue(current + Double(value))
     }
 }

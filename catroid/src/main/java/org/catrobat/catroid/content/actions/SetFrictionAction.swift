@@ -5,7 +5,7 @@ open class SetFrictionAction: TemporalAction {
     var physicsObject: PhysicsObject!
     var friction: Formula!
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func update(_ percent: Float) {
         do {

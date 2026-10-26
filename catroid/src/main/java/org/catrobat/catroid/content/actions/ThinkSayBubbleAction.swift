@@ -1,51 +1,39 @@
 import Foundation
 
 open class ThinkSayBubbleAction: TemporalAction {
-    public static let TAG: String = String(describing: ThinkSayBubbleAction.self)
+    public static let TAG = String(describing: ThinkSayBubbleAction.self)
     var androidStringProvider: AndroidStringProvider!
     var scope: Scope!
     var text: Formula!
     var type: Int = 0
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func update(_ delta: Float) {
-        ShowBubbleActor showBubbleActor
+        guard let scope = scope else { return }
+        let bubble: ShowBubbleActor
         do {
-            showBubbleActor = createBubbleActor(androidStringProvider)
-        } catch let e {
-            Log.d(ThinkSayBubbleAction.TAG, "Failed to create Bubble Actor", e)
+            bubble = try createBubbleActor(androidStringProvider)
+        } catch {
+            Log.d(Self.TAG, "Failed to create Bubble Actor", error)
             return
         }
-        if StageActivity.stageListener.getBubbleActorForSprite(scope.sprite) != nil {
-            StageActivity.stageListener.removeBubbleActorForSprite(scope.sprite)
+        if StageListener.shared.getBubbleActorForSprite(scope.sprite) != nil {
+            StageListener.shared.removeBubbleActorForSprite(scope.sprite)
         }
-        if showBubbleActor != nil {
-            StageActivity.stageListener.setBubbleActorForSprite(scope.sprite, showBubbleActor)
-        }
+        StageListener.shared.setBubbleActorForSprite(scope.sprite, bubble)
     }
 
-    public func createBubbleActor(_ stringProvider: AndroidStringProvider) -> ShowBubbleActor {
-        var textToDisplay: String = text == nil ? "" : text.getUserFriendlyString(stringProvider, scope)
-        if textToDisplay.isEmpty() {
-            return nil
+    public func createBubbleActor(_ stringProvider: AndroidStringProvider) throws -> ShowBubbleActor {
+        let textToDisplay = text == nil ? "" : text.getUserFriendlyString(stringProvider, scope)
+        guard !textToDisplay.isEmpty else {
+            throw NSError(domain: "ThinkSayBubbleAction", code: 1, userInfo: [NSLocalizedDescriptionKey: "Bubble text is empty"])
         }
         return ShowBubbleActor(textToDisplay, scope.sprite, type)
     }
 
-    public func setAndroidStringProvider(_ androidStringProvider: AndroidStringProvider) {
-        self.androidStringProvider = androidStringProvider
-    }
-
-    public func setScope(_ scope: Scope) {
-        self.scope = scope
-    }
-
-    public func setText(_ text: Formula) {
-        self.text = text
-    }
-
-    public func setType(_ type: Int) {
-        self.type = type
-    }
+    public func setAndroidStringProvider(_ provider: AndroidStringProvider) { androidStringProvider = provider }
+    public func setScope(_ scope: Scope) { self.scope = scope }
+    public func setText(_ text: Formula) { self.text = text }
+    public func setType(_ type: Int) { self.type = type }
 }

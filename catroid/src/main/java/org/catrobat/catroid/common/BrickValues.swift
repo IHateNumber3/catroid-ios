@@ -43,7 +43,7 @@ public enum BrickValues {
     public static let changeVolumeBy: Double = -10.0
     public static let playAtDefaultOffset: Double = 0.5
     public static let wait: Int = 1000
-    public static let repeat: Int = 10
+    public static let repeatCount: Int = 10
     public static let ifCondition: String = "1 < 2"
     public static let note: String = "add comment here…"
     public static let stopThisScript: Int = 0

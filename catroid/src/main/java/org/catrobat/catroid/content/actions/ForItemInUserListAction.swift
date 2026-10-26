@@ -3,27 +3,23 @@ import Foundation
 open class ForItemInUserListAction: LoopAction {
     var userList: UserList!
     var currentItemVariable: UserVariable!
-    var isCurrentLoopInitialized: Bool = false
-    var index: Int = 0
+    var isCurrentLoopInitialized = false
+    var index = 0
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func delegate(_ delta: Float) -> Bool {
         if !isCurrentLoopInitialized {
-            setCurrentTime(0)
+            currentTime = 0
             isCurrentLoopInitialized = true
         }
-        if userList == nil {
-            return true
-        }
-        List<Object> list = userList.value
-        if list == nil || index >= list.size() {
-            return true
-        }
-        setCurrentItemVariable(list.get(index))
-        setCurrentTime(getCurrentTime() + delta)
-        if action != nil && action.act(delta) && !isLoopDelayNeeded() {
-            index++
+        guard let userList = userList else { return true }
+        let items = userList.value
+        guard index < items.count else { return true }
+        currentItemVariable?.setValue(items[index])
+        currentTime += delta
+        if let action = action, action.act(delta), !isLoopDelayNeeded() {
+            index += 1
             isCurrentLoopInitialized = false
             action.restart()
         }
@@ -36,15 +32,6 @@ open class ForItemInUserListAction: LoopAction {
         super.restart()
     }
 
-    public func setUserList(_ userList: UserList) {
-        self.userList = userList
-    }
-
-    public func setCurrentItemVariable(_ variable: UserVariable) {
-        self.currentItemVariable = variable
-    }
-
-    private func setCurrentItemVariable(_ listItem: Any) {
-        self.currentItemVariable.setValue(listItem)
-    }
+    public func setUserList(_ userList: UserList) { self.userList = userList }
+    public func setCurrentItemVariable(_ variable: UserVariable) { self.currentItemVariable = variable }
 }

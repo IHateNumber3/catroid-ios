@@ -14,8 +14,8 @@ public class ProjectViewController: UIViewController {
     // Элементы UI (аналог ActivityRecyclerBinding)
     private let containerView = UIView()
     private let bottomBarView = UIView()
-    private val addButton = UIButton(type: .system)
-    private val playButton = UIButton(type: .system)
+    private let addButton = UIButton(type: .system)
+    private let playButton = UIButton(type: .system)
     
     public override func viewDidLoad() {
         super.viewDidLoad()

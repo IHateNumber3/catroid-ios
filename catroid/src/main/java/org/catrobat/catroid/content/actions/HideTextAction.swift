@@ -5,36 +5,23 @@ open class HideTextAction: TemporalAction {
     var sprite: Sprite!
     var androidStringProvider: AndroidStringProvider!
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func begin() {
-        if StageActivity.stageListener != nil {
-            Array<Actor> stageActors = StageActivity.stageListener.stage.actors
-            var dummyActor = ShowTextActor(UserVariable("dummyActor"), 0, 0, 1.0, nil, sprite, androidStringProvider)
-            for actor in stageActors {
-                if actor.getClass().equals(dummyActor.getClass()) {
-                    var showTextActor = (ShowTextActor) actor
-                    if showTextActor.variableNameToCompare.equals(variableToHide.name) && showTextActor.sprite.equals(sprite) {
-                        actor.remove()
-                    }
+        if let variable = variableToHide, let sprite = sprite {
+            let scene = StageListener.shared.stage
+            for node in scene.textNodes {
+                guard let textActor = node as? ShowTextActor else { continue }
+                if textActor.targetVariableNameToCompare == variable.name && textActor.associatedSprite === sprite {
+                    scene.removeTextNode(textActor)
                 }
             }
+            variable.setVisible(false)
         }
-        variableToHide.setVisible(false)
     }
 
-    open override func update(_ percent: Float) {
-    }
-
-    public func setVariableToHide(_ userVariable: UserVariable) {
-        self.variableToHide = userVariable
-    }
-
-    public func setSprite(_ sprite: Sprite) {
-        self.sprite = sprite
-    }
-
-    public func setAndroidStringProvider(_ androidStringProvider: AndroidStringProvider) {
-        self.androidStringProvider = androidStringProvider
-    }
+    open override func update(_ percent: Float) { }
+    public func setVariableToHide(_ variable: UserVariable) { variableToHide = variable }
+    public func setSprite(_ sprite: Sprite) { self.sprite = sprite }
+    public func setAndroidStringProvider(_ provider: AndroidStringProvider) { androidStringProvider = provider }
 }

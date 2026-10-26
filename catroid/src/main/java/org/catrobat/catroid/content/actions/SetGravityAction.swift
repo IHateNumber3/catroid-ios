@@ -6,7 +6,7 @@ open class SetGravityAction: TemporalAction {
     var gravityX: Formula!
     var gravityY: Formula!
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func update(_ percent: Float) {
         var newGravityX: Float

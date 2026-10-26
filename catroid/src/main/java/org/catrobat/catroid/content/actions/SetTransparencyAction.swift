@@ -4,7 +4,7 @@ open class SetTransparencyAction: TemporalAction {
     var scope: Scope!
     var transparency: Formula!
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func update(_ percent: Float) {
         do {

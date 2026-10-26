@@ -7,17 +7,17 @@ open class SetTextAction: TemporalAction {
     var scope: Scope!
     var actor: TextActor!
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func begin() {
         do {
             var string: String = try text.interpretString(scope)
             var posX: Int = try endX.interpretInteger(scope)
             var posY: Int = try endY.interpretInteger(scope)
-            actor = TextActor(string, posX, posY)
-            StageActivity.stageListener.addActor(actor)
+            actor = TextActor(text: string, posX: posX, posY: posY)
+            StageListener.shared.addActor(actor)
         } catch let exception {
-            Log.e(String(describing: type(of: self)), Log.getStackTraceString(exception))
+            Log.e(String(describing: type(of: self)), String(describing: exception))
         }
     }
 
@@ -30,7 +30,7 @@ open class SetTextAction: TemporalAction {
             actor.setPosX(posX)
             actor.setPosY(posY)
         } catch let exception {
-            Log.e(String(describing: type(of: self)), Log.getStackTraceString(exception))
+            Log.e(String(describing: type(of: self)), String(describing: exception))
         }
     }
 

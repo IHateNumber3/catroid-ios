@@ -16,5 +16,4 @@ public enum Log {
     public static func e(_ tag: String, _ msg: String, _ e: Error? = nil) {
         logger.error("[\(tag)] \(msg) \(e.map { String(describing: $0) } ?? "")")
     }
-    public static func getStackTraceString(_ e: Error) -> String { return String(describing: e) }
 }

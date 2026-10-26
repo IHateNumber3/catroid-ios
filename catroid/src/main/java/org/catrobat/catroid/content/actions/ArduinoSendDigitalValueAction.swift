@@ -8,7 +8,7 @@ open class ArduinoSendDigitalValueAction: TemporalAction {
     var value: Int = 0
     var restart: Bool = false
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func begin() {
         var pinNumberInterpretation: Int

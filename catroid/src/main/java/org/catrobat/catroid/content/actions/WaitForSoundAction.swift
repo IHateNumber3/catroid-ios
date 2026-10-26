@@ -1,60 +1,43 @@
 import Foundation
 
+/// Waits for the selected sound to stop. Playback tracking is supplied by the iOS sound managers.
 open class WaitForSoundAction: WaitAction {
-    public static let TAG: String = String(describing: WaitForSoundAction.self)
-    var soundFilePath: String!
-    var soundManager: SoundManager = SoundManager.instance
-    var midiSoundManager: MidiSoundManager = MidiSoundManager.instance
-    var soundStopped: Bool = false
+    public static let TAG = String(describing: WaitForSoundAction.self)
+    private var soundFilePath: String?
+    private var soundManager: SoundManager = .shared
+    private var midiSoundManager: MidiSoundManager = .shared
+    private var soundStopped = false
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
-    public func setSoundFilePath(_ soundFilePath: String) {
-        self.soundFilePath = soundFilePath
-    }
+    public func setSoundFilePath(_ path: String) { soundFilePath = path }
 
     open override func update(_ percent: Float) {
-        if soundFilePath != nil && !midiSoundManager.startedSoundfilePaths.isEmpty() {
-            var spriteSoundFilePath = SoundFilePathWithSprite(soundFilePath, scope.sprite)
-            Set<SoundFilePathWithSprite> recentlyStarted = midiSoundManager.startedSoundfilePaths
-            if recentlyStarted.contains(spriteSoundFilePath) && !midiSoundManager.isSoundInSpritePlaying(scope.sprite, soundFilePath) {
-                recentlyStarted.remove(spriteSoundFilePath)
-                finish()
-                soundStopped = true
-                return
-            }
+        guard let path = soundFilePath, let sprite = scope?.sprite else { return }
+        let key = SoundFilePathWithSprite(soundFilePath: path, sprite: sprite)
+        if midiSoundManager.startedSoundfilePaths.contains(key),
+           !midiSoundManager.isSoundInSpritePlaying(sprite, path) {
+            midiSoundManager.startedSoundfilePaths.remove(key)
+            soundStopped = true
+            finish()
+            return
         }
-        if soundFilePath != nil && !soundManager.recentlyStoppedSoundfilePaths.isEmpty() {
-            var spriteSoundFilePath = SoundFilePathWithSprite(soundFilePath, scope.sprite)
-            Set<SoundFilePathWithSprite> recentlyStopped = soundManager.recentlyStoppedSoundfilePaths
-            if recentlyStopped.contains(spriteSoundFilePath) {
-                recentlyStopped.remove(spriteSoundFilePath)
-                finish()
-                soundStopped = true
-            }
+        if soundManager.recentlyStoppedSoundfilePaths.contains(key) {
+            soundManager.recentlyStoppedSoundfilePaths.remove(key)
+            soundStopped = true
+            finish()
         }
     }
 
     open override func end() {
-        for mediaPlayer in soundManager.mediaPlayers {
-            if mediaPlayer.isPlaying() && mediaPlayer.startedBySprite == scope.sprite && mediaPlayer.pathToSoundFile.equals(soundFilePath) && !soundStopped {
-                restart()
-                setTime(mediaPlayer.currentPosition)
-            }
-        }
-        for midiPlayer in midiSoundManager.midiPlayers {
-            if midiPlayer.isPlaying() && midiPlayer.startedBySprite == scope.sprite && midiPlayer.pathToSoundFile.equals(soundFilePath) && !soundStopped {
-                restart()
-                setTime(midiPlayer.currentPosition)
-            }
+        guard let path = soundFilePath, let sprite = scope?.sprite, !soundStopped else { return }
+        if let player = soundManager.mediaPlayers.first(where: { $0.isPlaying && $0.startedBySprite === sprite && $0.pathToSoundFile == path }) {
+            restart(); setTime(player.currentPosition)
+        } else if let player = midiSoundManager.midiPlayers.first(where: { $0.isPlaying && $0.startedBySprite === sprite && $0.pathToSoundFile == path }) {
+            restart(); setTime(player.currentPosition)
         }
     }
 
-    public func setSoundManager(_ soundManager: SoundManager) {
-        self.soundManager = soundManager
-    }
-
-    public func setMidiSoundManager(_ midiSoundManager: MidiSoundManager) {
-        self.midiSoundManager = midiSoundManager
-    }
+    public func setSoundManager(_ soundManager: SoundManager) { self.soundManager = soundManager }
+    public func setMidiSoundManager(_ soundManager: MidiSoundManager) { self.midiSoundManager = soundManager }
 }

@@ -2,9 +2,9 @@ import Foundation
 
 open class SetPhysicsObjectTypeAction: TemporalAction {
     var physicsObject: PhysicsObject!
-    var type: PhysicsObject.PhysicsType = .none
+    var type: Type = PhysicsObject.Type.none
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func update(_ percent: Float) {
         physicsObject.setType(type)
@@ -14,7 +14,7 @@ open class SetPhysicsObjectTypeAction: TemporalAction {
         self.physicsObject = physicsObject
     }
 
-    public func setType(_ type: PhysicsObject.PhysicsType) {
+    public func setType(_ type: Type) {
         self.type = type
     }
 }

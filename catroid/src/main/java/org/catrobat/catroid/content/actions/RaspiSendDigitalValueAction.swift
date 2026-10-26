@@ -8,7 +8,7 @@ open class RaspiSendDigitalValueAction: TemporalAction {
     var pin: Int = 0
     var value: Bool = false
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func begin() {
         var pinNumberInterpretation: Int

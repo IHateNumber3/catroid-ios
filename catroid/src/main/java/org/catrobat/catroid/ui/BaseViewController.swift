@@ -5,7 +5,7 @@ open class BaseViewController: UIViewController {
     private static let tag = "BaseViewController"
     
     // Флаг ожидания восстановления состояния (аналог savedInstanceStateExpected)
-    protected var savedInstanceStateExpected: Bool = false
+    public var savedInstanceStateExpected: Bool = false
 
     open override func viewDidLoad() {
         super.viewDidLoad()

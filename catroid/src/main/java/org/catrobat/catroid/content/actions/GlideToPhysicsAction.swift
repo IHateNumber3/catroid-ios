@@ -3,7 +3,7 @@ import Foundation
 open class GlideToPhysicsAction: GlideToAction {
     var physicsLook: PhysicsLook!
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func begin() {
         physicsLook.startGlide()

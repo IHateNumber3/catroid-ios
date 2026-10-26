@@ -5,7 +5,7 @@ open class TurnLeftSpeedAction: TemporalAction {
     var physicsObject: PhysicsObject!
     var speed: Formula!
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func update(_ percent: Float) {
         var newSpeed: Float

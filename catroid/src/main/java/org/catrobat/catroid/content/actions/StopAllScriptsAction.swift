@@ -1,16 +1,12 @@
 import Foundation
 
+/// Stops all running script actions attached to actors on the current stage.
 open class StopAllScriptsAction: Action {
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func act(_ delta: Float) -> Bool {
-        Array<Actor> stageActors = StageActivity.stageListener.stage.actors
-        for actor in stageActors {
-            if actor is Look {
-                var look = (Look) actor
-                look.stopThreads(look.getActions())
-            }
-        }
+        guard let look = actor as? Look else { return true }
+        look.stopThreads(look.getActions())
         return true
     }
 }

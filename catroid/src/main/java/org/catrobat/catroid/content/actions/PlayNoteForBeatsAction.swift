@@ -5,7 +5,7 @@ open class PlayNoteForBeatsAction: TemporalAction {
     var midiValue: Formula!
     var beats: Formula!
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func begin() {
         do {

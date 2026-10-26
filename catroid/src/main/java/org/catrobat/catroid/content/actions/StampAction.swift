@@ -3,7 +3,7 @@ import Foundation
 open class StampAction: TemporalAction {
     var sprite: Sprite!
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func update(_ delta: Float) {
         self.sprite.penConfiguration.setStamp(true)

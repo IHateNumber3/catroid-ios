@@ -23,13 +23,12 @@ targets:
     type: application
     platform: iOS
     sources:
-      # Портированное ядро. Старые наброски ui/ и stage/ пока исключены — их заменит порт.
+      # Портированное ядро и необходимая реализация сцены iOS.
       - path: catroid/src/main/java
         includes:
           - "**/*.swift"
         excludes:
           - "**/ui/**"
-          - "**/stage/**"
       - path: ios/App
       - path: ios-bridge
         excludes:

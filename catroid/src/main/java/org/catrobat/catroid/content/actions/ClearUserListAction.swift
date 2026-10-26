@@ -3,7 +3,7 @@ import Foundation
 open class ClearUserListAction: TemporalAction {
     var userList: UserList!
 
-    public override init() { super.init() }
+    public required init() { super.init() }
 
     open override func update(_ percent: Float) {
         if userList == nil {
