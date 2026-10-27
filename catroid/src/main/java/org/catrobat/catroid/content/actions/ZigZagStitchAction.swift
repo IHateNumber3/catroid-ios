@@ -26,7 +26,7 @@ open class ZigZagStitchAction: TemporalAction {
             heightInterpretation = 0
             Log.d(String(describing: type(of: self)), "Formula interpretation for this specific Brick failed.", interpretationException)
         }
-        self.scope.sprite.runningStitch.activateStitching(scope.sprite, ZigZagRunningStitch(scope.sprite, lengthInterpretation, heightInterpretation))
+        self.scope.sprite.runningStitch.activateStitching(sprite: scope.sprite, type: ZigZagRunningStitch(scope.sprite, lengthInterpretation, heightInterpretation))
     }
 
     public func setScope(_ scope: Scope) {
