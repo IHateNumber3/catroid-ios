@@ -20,7 +20,7 @@ open class LegoEv3PlayToneBrick: FormulaBrick {
     }
 
     open override func addRequiredResources(_ resourcesSet: ResourcesSet) {
-        resourcesSet.add(BLUETOOTH_LEGO_EV3)
+        resourcesSet.add(20) // Brick.BLUETOOTH_LEGO_EV3
         super.addRequiredResources(resourcesSet)
     }
 

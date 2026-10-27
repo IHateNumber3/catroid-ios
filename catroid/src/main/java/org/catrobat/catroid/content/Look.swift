@@ -2,6 +2,15 @@ import Foundation
 import UIKit
 import SpriteKit
 
+// Swift-side constants matching physics/ParticleConstants.kt in the Android source.
+enum ParticleConstants {
+    static let velocityHighMin: Float = 120
+    static let velocityHighMax: Float = 300
+    static let lifeHighMaxActive: Float = 1000
+    static let lifeHighMaxDead: Float = 5000
+    static let particleScale: Float = 32
+}
+
 /// Look = scene2d Actor (логика/трансформ) + SKSpriteNode (отрисовка).
 /// Система координат как в libGDX: y вверх, x/y — левый нижний угол неповёрнутого прямоугольника.
 open class Look: Actor {
