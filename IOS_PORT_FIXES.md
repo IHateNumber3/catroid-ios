@@ -116,3 +116,8 @@ Important: parser success only verifies Swift syntax. It does not establish that
 ## Pass 14 — last reported compile errors
 - `DeleteThisCloneAction`: safely unwrap optional `StageActivity.stageListener` before removing a clone.
 - `EmbroideryActor`: call the Java-style `getEmbroideryPatternList()` API exposed by `EmbroideryPatternManager` rather than a nonexistent Swift property.
+
+### Pass 13 — EV3 turn-angle brick type
+- Added a Swift compatibility declaration for `LegoEv3MotorTurnAngleBrick.Motor`, since the Android Java brick is not compiled into the iOS target.
+- Preserved the original motor enum cases used by `ActionFactory` and `LegoEv3MotorTurnAngleAction`.
+- EV3 hardware motor control remains unsupported on iOS; this change resolves the missing type, not Bluetooth hardware support.
