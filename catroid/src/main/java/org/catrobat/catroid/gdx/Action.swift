@@ -9,6 +9,12 @@ open class Action {
     /// Аналог переопределения setActor() в scene2d
     open func actorDidChange() {}
 
+    /// Compatibility hooks used by actions ported from the Android implementation.
+    open func begin() {}
+    open func end() {}
+
+    public func setActor(_ actor: Actor?) { self.actor = actor }
+
     /// true — действие завершено
     open func act(_ delta: Float) -> Bool { return true }
     open func restart() {}

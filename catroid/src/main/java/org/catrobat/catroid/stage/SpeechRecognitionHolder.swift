@@ -3,10 +3,6 @@ import Speech
 import AVFoundation
 import UIKit
 
-public protocol OnSpeechRecognitionResultCallback: AnyObject {
-    func onResult(_ result: String)
-}
-
 public class SpeechRecognitionHolder: NSObject, SFSpeechRecognizerDelegate {
     
     private static let tag = "SpeechRecognitionHolder"

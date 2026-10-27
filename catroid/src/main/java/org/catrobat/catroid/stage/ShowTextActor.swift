@@ -3,7 +3,7 @@ import UIKit
 
 public class ShowTextActor: SKNode {
     
-    private static let defaultAlignment: Int = 1 // ALIGNMENT_STYLE_CENTERED
+    public static let defaultAlignment: Int = 1 // ALIGNMENT_STYLE_CENTERED
     private static let defaultTextSize: CGFloat = 20.0
     
     private var textSize: CGFloat
@@ -11,9 +11,9 @@ public class ShowTextActor: SKNode {
     private var yPosition: Int
     private var color: String
     private var variableToShow: UserVariable // Предполагается наличие класса UserVariable
-    private var variableNameToCompare: String
+    public private(set) var variableNameToCompare: String
     private var alignment: Int
-    private var sprite: Sprite // Предполагается наличие класса Sprite
+    public private(set) var sprite: Sprite // Предполагается наличие класса Sprite
     
     private var labelNode: SKLabelNode!
     

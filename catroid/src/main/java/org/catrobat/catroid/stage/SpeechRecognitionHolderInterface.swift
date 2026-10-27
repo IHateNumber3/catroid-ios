@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 
 public protocol OnSpeechRecognitionResultCallback: AnyObject {
-    func onResult(spokenWords: String)
+    func onResult(_ result: String)
 }
 
 public protocol SpeechRecognitionHolderInterface: AnyObject {

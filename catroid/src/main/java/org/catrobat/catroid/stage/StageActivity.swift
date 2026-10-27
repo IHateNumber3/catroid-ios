@@ -103,3 +103,6 @@ public class StageViewController: UIViewController {
         print("[\(StageViewController.tag)] Screen size updated: \(screenBounds.width)x\(screenBounds.height)")
     }
 }
+
+/// Compatibility alias for code ported from Android's StageActivity.
+public typealias StageActivity = StageViewController

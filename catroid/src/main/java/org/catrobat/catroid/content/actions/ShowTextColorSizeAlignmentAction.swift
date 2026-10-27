@@ -9,7 +9,7 @@ open class ShowTextColorSizeAlignmentAction: TemporalAction {
     var variableToShow: UserVariable!
     var scope: Scope!
     var alignment: Int = 0
-    var actor: ShowTextActor!
+    var showTextActor: ShowTextActor!
     var androidStringProvider: AndroidStringProvider!
 
     public required init() { super.init() }
@@ -25,7 +25,7 @@ open class ShowTextColorSizeAlignmentAction: TemporalAction {
             // Remove the previous label for this variable/sprite pair.
             for node in scene.textNodes {
                 guard let oldActor = node as? ShowTextActor else { continue }
-                if oldActor.targetVariableNameToCompare == variableToShow.name && oldActor.associatedSprite === scope.sprite {
+                if oldActor.variableNameToCompare == variableToShow.name && oldActor.sprite === scope.sprite {
                     scene.removeTextNode(oldActor)
                 }
             }

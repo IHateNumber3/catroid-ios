@@ -75,3 +75,13 @@ Important: parser success only verifies Swift syntax. It does not establish that
 - Excluded the legacy `stagecore/**` subtree from the iOS target. The active iOS implementation is under `stage/`; this prevents duplicate source basenames such as `StageActivity.swift` and `StageListener.swift` from entering the target together.
 - Audited all Swift files present in this archive: no duplicate Swift basenames remain within the archived source tree. The reported `stagecore` files were not present in the supplied archive itself, indicating they exist in the checkout or were left behind during overlay extraction.
 - Archive layout is flat at the repository root: `project.yml`, `catroid/`, `ios/`, etc. are at ZIP root, not wrapped in an extra folder.
+
+## Pass 11 — compile-error cleanup
+
+- Added missing lifecycle hooks and `setActor` compatibility to the base `Action`.
+- Removed duplicate `OnSpeechRecognitionResultCallback` declaration and unified its callback signature.
+- Exposed `ShowTextActor.defaultAlignment` for use in a public default argument and exposed read-only actor metadata used by sibling actions.
+- Added `StageActivity` compatibility alias to the iOS `StageViewController`.
+- Added an iOS `AndroidStringProvider` compatibility shim.
+- Renamed `SetTextAction` and `ShowTextColorSizeAlignmentAction` stored text actor references so they no longer illegally override `Action.actor`.
+- These are source-level fixes only; a full Xcode typecheck/build still needs to confirm remaining errors.
