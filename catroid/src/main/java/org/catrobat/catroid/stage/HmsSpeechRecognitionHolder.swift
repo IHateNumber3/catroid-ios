@@ -12,7 +12,7 @@ public class HmsSpeechRecognitionHolder: SpeechRecognitionHolderInterface {
         // На iOS локаль управляется нативным фреймворком Speech
     }
     
-    public func initSpeechRecognition(stageViewController: UIViewController, stageResourceHolder: StageResourceHolder) {
+    public func initSpeechRecognition(stageViewController: StageViewController, stageResourceHolder: StageResourceHolder) {
         self.viewController = stageViewController
         // На iOS HMS не используется, сразу сообщаем об успешной инициализации ресурса
         stageResourceHolder.resourceInitialized()

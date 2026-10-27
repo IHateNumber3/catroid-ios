@@ -85,3 +85,9 @@ Important: parser success only verifies Swift syntax. It does not establish that
 - Added an iOS `AndroidStringProvider` compatibility shim.
 - Renamed `SetTextAction` and `ShowTextColorSizeAlignmentAction` stored text actor references so they no longer illegally override `Action.actor`.
 - These are source-level fixes only; a full Xcode typecheck/build still needs to confirm remaining errors.
+
+
+## Pass 12 — speech recognition protocol conformance
+
+- Updated speech-holder implementations and dummy holder to use the protocol’s exact `StageViewController` parameter type for `initSpeechRecognition`.
+- This targets the remaining reported conformance error in `HmsSpeechRecognitionHolder.swift`. Full Xcode typechecking is not available in this environment.

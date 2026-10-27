@@ -34,7 +34,7 @@ fileprivate class DummySpeechRecognitionHolder: SpeechRecognitionHolderInterface
     
     func forceSetLanguage() {}
     
-    func initSpeechRecognition(stageViewController: UIViewController, stageResourceHolder: StageResourceHolder) {}
+    func initSpeechRecognition(stageViewController: StageViewController, stageResourceHolder: StageResourceHolder) {}
     
     func startListening() {}
     

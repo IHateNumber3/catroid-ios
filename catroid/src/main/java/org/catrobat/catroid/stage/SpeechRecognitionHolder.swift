@@ -23,7 +23,7 @@ public class SpeechRecognitionHolder: NSObject, SFSpeechRecognizerDelegate {
         // На iOS локаль задается при инициализации SFSpeechRecognizer(locale:)
     }
     
-    public func initSpeechRecognition(stageViewController: UIViewController, stageResourceHolder: StageResourceHolder) {
+    public func initSpeechRecognition(stageViewController: StageViewController, stageResourceHolder: StageResourceHolder) {
         // Запрос разрешений на использование распознавания речи и микрофона
         SFSpeechRecognizer.requestAuthorization { authStatus in
             DispatchQueue.main.async {
