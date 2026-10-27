@@ -1,6 +1,7 @@
 BUILD ERRORS: 1 unique
 
 == Missing symbols (count) ==
+   1  LegoEv3MotorTurnAngleBrick
 
 == First errors ==
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetVisibleAction.swift:14:23: error: value of type 'ShowBubbleActor?' has no member 'setVisible'
+catroid/src/main/java/org/catrobat/catroid/content/actions/LegoEv3MotorTurnAngleAction.swift:16:43: error: cannot find type 'LegoEv3MotorTurnAngleBrick' in scope
