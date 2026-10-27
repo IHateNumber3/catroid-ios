@@ -1,9 +1,9 @@
-BUILD ERRORS: 4 unique
+BUILD ERRORS: 3 unique
 
 == Missing symbols (count) ==
+   2  UtteranceProgressListenerDelegate
 
 == First errors ==
-catroid/src/main/java/org/catrobat/catroid/content/actions/ScriptSequenceAction.swift:13:14: error: ambiguous use of 'init'
-catroid/src/main/java/org/catrobat/catroid/content/actions/ScriptSequenceActionWithWaiter.swift:11:15: error: ambiguous use of 'init'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetInstrumentAction.swift:10:26: error: type 'MidiSoundManager' has no member 'instance'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetNfcTagAction.swift:11:21: error: overriding declaration requires an 'override' keyword
+catroid/src/main/java/org/catrobat/catroid/stage/UtteranceProgressListenerContainer.swift:7:38: error: cannot find type 'UtteranceProgressListenerDelegate' in scope
+catroid/src/main/java/org/catrobat/catroid/stage/UtteranceProgressListenerContainer.swift:15:36: error: cannot find type 'UtteranceProgressListenerDelegate' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/WaitTillIdleAction.swift:4:21: error: overriding declaration requires an 'override' keyword
