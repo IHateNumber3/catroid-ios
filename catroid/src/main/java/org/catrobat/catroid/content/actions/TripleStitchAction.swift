@@ -16,7 +16,7 @@ open class TripleStitchAction: TemporalAction {
             stepsInterpretation = 0
             Log.d(String(describing: type(of: self)), "Formula interpretation for this specific Brick failed.", interpretationException)
         }
-        self.scope.sprite.runningStitch.activateStitching(scope.sprite, TripleRunningStitch(scope.sprite, stepsInterpretation))
+        self.scope.sprite.runningStitch.activateStitching(sprite: scope.sprite, type: TripleRunningStitch(scope.sprite, stepsInterpretation))
     }
 
     public func setScope(_ scope: Scope) {
