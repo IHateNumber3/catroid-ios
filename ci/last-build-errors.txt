@@ -1,44 +1,6 @@
-BUILD ERRORS: 22 unique
+BUILD ERRORS: 1 unique
 
 == Missing symbols (count) ==
-   3  PickableDrum
-   3  SetNextLookAction
-   2  ParameterizedData
-   1  LegoNxtMotorMoveBrick
-   1  LegoNxtMotorStopBrick
-   1  LegoNxtMotorTurnAngleBrick
-   1  LegoEv3MotorMoveBrick
-   1  LegoEv3MotorStopBrick
-   1  LegoEv3SetLedBrick
-   1  PhiroPlayToneBrick
-   1  PhiroMotorMoveForwardBrick
-   1  PhiroMotorMoveBackwardBrick
-   1  PhiroRGBLightBrick
-   1  PhiroMotorStopBrick
-   1  ArcBrick
-   1  DefaultProjectHandler
-   1  PlaySoundBrick
 
 == First errors ==
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:195:103: error: cannot find type 'LegoNxtMotorMoveBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:204:57: error: cannot find type 'LegoNxtMotorStopBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:210:108: error: cannot find type 'LegoNxtMotorTurnAngleBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:228:109: error: cannot find type 'LegoEv3MotorMoveBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:237:57: error: cannot find type 'LegoEv3MotorStopBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:243:58: error: cannot find type 'LegoEv3SetLedBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:268:105: error: cannot find type 'PhiroPlayToneBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:277:114: error: cannot find type 'PhiroMotorMoveForwardBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:286:115: error: cannot find type 'PhiroMotorMoveBackwardBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:295:101: error: cannot find type 'PhiroRGBLightBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:316:61: error: cannot find type 'PhiroMotorStopBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:378:90: error: cannot find type 'ArcBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:667:116: error: cannot find type 'PickableDrum' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1227:73: error: cannot find type 'ParameterizedData' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1238:142: error: cannot find type 'ParameterizedData' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1377:132: error: cannot find type 'SetNextLookAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1386:128: error: cannot find type 'SetNextLookAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:1395:100: error: cannot find type 'SetNextLookAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/PlayDrumForBeatsAction.swift:5:23: error: cannot find type 'PickableDrum' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/PlayDrumForBeatsAction.swift:25:41: error: cannot find type 'PickableDrum' in scope
-catroid/src/main/java/org/catrobat/catroid/ProjectManager.swift:195:68: error: cannot find type 'DefaultProjectHandler' in scope
-catroid/src/main/java/org/catrobat/catroid/content/Sprite.swift:145:42: error: cannot find type 'PlaySoundBrick' in scope
+catroid/src/main/java/org/catrobat/catroid/stage/EmbroideryActor.swift:28:43: error: value of type 'EmbroideryPatternManager' has no member 'embroideryPatternList'
