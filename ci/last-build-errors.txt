@@ -1,64 +1,37 @@
-BUILD ERRORS: 55 unique
+BUILD ERRORS: 25 unique
 
 == Missing symbols (count) ==
-   9  Math
-   4  mode
-   3  Integer
-   2  Type
+   2  action
+   2  ColorCollisionDetection
+   2  PointF
+   1  ColorAtXYDetection
+   1  ColorEqualsColor
+   1  SensorHandler
+   1  GlideToAction
 
 == First errors ==
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetPhysicsObjectTypeAction.swift:5:15: error: cannot find type 'Type' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetPhysicsObjectTypeAction.swift:17:33: error: cannot find type 'Type' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetRotationStyleAction.swift:9:37: error: cannot find 'mode' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetRotationStyleAction.swift:10:12: error: cannot find 'mode' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetRotationStyleAction.swift:11:25: error: value of optional type 'LookData?' must be unwrapped to refer to member 'getTextureRegion' of wrapped base type 'LookData'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetRotationStyleAction.swift:11:57: error: missing argument labels 'x:y:' in call
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetRotationStyleAction.swift:14:12: error: cannot find 'mode' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetRotationStyleAction.swift:15:25: error: value of optional type 'LookData?' must be unwrapped to refer to member 'getTextureRegion' of wrapped base type 'LookData'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetRotationStyleAction.swift:15:57: error: missing argument labels 'x:y:' in call
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetRotationStyleAction.swift:25:21: error: cannot find 'mode' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetRotationStyleAction.swift:25:14: error: value of type 'SetRotationStyleAction' has no member 'mode'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetTempoAction.swift:12:30: error: type 'MidiSoundManager' has no member 'instance'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetTextAction.swift:12:24: error: declaration 'begin()' cannot override more than one superclass declaration
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetThreadColorAction.swift:16:64: error: no exact matches in call to instance method 'substring'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetThreadColorAction.swift:17:66: error: no exact matches in call to instance method 'substring'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetThreadColorAction.swift:18:65: error: no exact matches in call to instance method 'substring'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetThreadColorAction.swift:19:31: error: cannot find 'Integer' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetThreadColorAction.swift:20:33: error: cannot find 'Integer' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetThreadColorAction.swift:21:32: error: cannot find 'Integer' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetThreadColorAction.swift:22:39: error: 'Color' cannot be constructed because it has no accessible initializers
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetThreadColorAction.swift:23:19: error: type 'Color' has no member 'argb8888ToColor'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetThreadColorAction.swift:24:20: error: value of type 'Sprite' has no member 'setEmbroideryThreadColor'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetVisibleAction.swift:12:39: error: value of optional type 'StageListener?' must be unwrapped to refer to member 'getBubbleActorForSprite' of wrapped base type 'StageListener'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SetVolumeToAction.swift:12:26: error: type 'SoundManager' has no member 'instance'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:9:24: error: declaration 'begin()' cannot override more than one superclass declaration
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:10:31: error: cannot find 'Math' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:14:37: error: value of type 'StageListener?' has no member 'embroideryPatternManager'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:15:34: error: cannot find 'Math' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:15:32: error: cannot convert value of type 'Int' to expected argument type 'Float'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:15:26: error: cannot convert value of type 'Int' to expected argument type 'Float'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:16:34: error: cannot find 'Math' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:16:26: error: cannot convert value of type 'Int' to expected argument type 'Float'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:16:32: error: cannot convert value of type 'Int' to expected argument type 'Float'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:17:37: error: value of type 'StageListener?' has no member 'embroideryPatternManager'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:18:34: error: cannot find 'Math' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:18:26: error: cannot convert value of type 'Int' to expected argument type 'Float'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:18:32: error: cannot convert value of type 'Int' to expected argument type 'Float'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:19:34: error: cannot find 'Math' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:19:26: error: cannot convert value of type 'Int' to expected argument type 'Float'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:19:32: error: cannot convert value of type 'Int' to expected argument type 'Float'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:20:37: error: value of type 'StageListener?' has no member 'embroideryPatternManager'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:21:34: error: cannot find 'Math' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:21:32: error: cannot convert value of type 'Int' to expected argument type 'Float'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:21:26: error: cannot convert value of type 'Int' to expected argument type 'Float'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:22:34: error: cannot find 'Math' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:22:32: error: cannot convert value of type 'Int' to expected argument type 'Float'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:22:26: error: cannot convert value of type 'Int' to expected argument type 'Float'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:23:37: error: value of type 'StageListener?' has no member 'embroideryPatternManager'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:24:34: error: cannot find 'Math' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:24:32: error: cannot convert value of type 'Int' to expected argument type 'Float'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:24:26: error: cannot convert value of type 'Int' to expected argument type 'Float'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:25:34: error: cannot find 'Math' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:25:32: error: cannot convert value of type 'Int' to expected argument type 'Float'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:25:26: error: cannot convert value of type 'Int' to expected argument type 'Float'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SewUpAction.swift:26:37: error: value of type 'StageListener?' has no member 'embroideryPatternManager'
+catroid/src/main/java/org/catrobat/catroid/content/actions/ForItemInUserListAction.swift:9:21: error: overriding declaration requires an 'override' keyword
+catroid/src/main/java/org/catrobat/catroid/content/actions/ForItemInUserListAction.swift:21:25: error: cannot find 'action' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/ForVariableFromToAction.swift:14:21: error: overriding declaration requires an 'override' keyword
+catroid/src/main/java/org/catrobat/catroid/content/actions/ForVariableFromToAction.swift:20:25: error: cannot find 'action' in scope
+catroid/src/main/java/org/catrobat/catroid/formulaeditor/FormulaElement.swift:183:75: error: value of optional type 'Scene?' must be unwrapped to a value of type 'Scene'
+catroid/src/main/java/org/catrobat/catroid/formulaeditor/FormulaElement.swift:221:48: error: cannot find 'ColorCollisionDetection' in scope
+catroid/src/main/java/org/catrobat/catroid/formulaeditor/FormulaElement.swift:224:48: error: cannot find 'ColorCollisionDetection' in scope
+catroid/src/main/java/org/catrobat/catroid/formulaeditor/FormulaElement.swift:227:20: error: cannot find 'ColorAtXYDetection' in scope
+catroid/src/main/java/org/catrobat/catroid/formulaeditor/FormulaElement.swift:234:48: error: cannot find 'ColorEqualsColor' in scope
+catroid/src/main/java/org/catrobat/catroid/formulaeditor/common/FormulaElementOperations.swift:60:27: error: value of type 'StageListener' has no member 'firstFrameDrawn'
+catroid/src/main/java/org/catrobat/catroid/formulaeditor/common/FormulaElementOperations.swift:101:56: error: value of type 'StageListener' has no member 'getAllClonesOfSprite'
+catroid/src/main/java/org/catrobat/catroid/formulaeditor/common/FormulaElementOperations.swift:154:16: error: cannot find 'SensorHandler' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/GlideToPhysicsAction.swift:8:24: error: method does not override any method from its superclass
+catroid/src/main/java/org/catrobat/catroid/content/actions/GlideToPhysicsAction.swift:13:24: error: method does not override any method from its superclass
+catroid/src/main/java/org/catrobat/catroid/content/actions/GlideToPhysicsAction.swift:3:34: error: cannot find type 'GlideToAction' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/GlideToPhysicsAction.swift:6:30: error: 'super' cannot be used in class 'GlideToPhysicsAction' because it has no superclass
+catroid/src/main/java/org/catrobat/catroid/content/actions/GlideToPhysicsAction.swift:10:9: error: 'super' cannot be used in class 'GlideToPhysicsAction' because it has no superclass
+catroid/src/main/java/org/catrobat/catroid/content/actions/GlideToPhysicsAction.swift:14:9: error: 'super' cannot be used in class 'GlideToPhysicsAction' because it has no superclass
+catroid/src/main/java/org/catrobat/catroid/content/actions/GoNStepsBackAction.swift:19:31: error: value of type 'Look' has no member 'setZIndex'
+catroid/src/main/java/org/catrobat/catroid/content/actions/GoNStepsBackAction.swift:35:27: error: value of type 'Look' has no member 'setZIndex'
+catroid/src/main/java/org/catrobat/catroid/content/actions/PenDownAction.swift:9:41: error: cannot call value of non-function type 'Bool'
+catroid/src/main/java/org/catrobat/catroid/content/actions/PenDownAction.swift:13:51: error: cannot find 'PointF' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/PenUpAction.swift:9:42: error: cannot call value of non-function type 'Bool'
+catroid/src/main/java/org/catrobat/catroid/content/actions/PenUpAction.swift:13:51: error: cannot find 'PointF' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/PhiroSensorAction.swift:14:21: error: overriding declaration requires an 'override' keyword
