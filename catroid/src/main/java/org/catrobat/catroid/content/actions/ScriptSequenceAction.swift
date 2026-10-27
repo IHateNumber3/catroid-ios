@@ -9,11 +9,6 @@ public class ScriptSequenceAction: SequenceAction {
         super.init()
     }
 
-    public convenience init(_ actions: Action..., script: Script) {
-        self.init(script: script)
-        actions.forEach { addAction($0) }
-    }
-
     public func clone() -> ScriptSequenceAction {
         return cloneAndChangeScript(script)
     }

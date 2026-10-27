@@ -17,8 +17,8 @@ open class PlayNoteForBeatsAction: TemporalAction {
             if beats != nil {
                 try playedBeats = beats.interpretFloat(scope)
             }
-            MidiSoundManager.instance.playNoteForBeats(playedMidiValue, playedBeats)
-            super.setDuration(Float(MidiSoundManager.instance).getDurationForBeats(playedBeats) / 1000)
+            MidiSoundManager.shared.playNoteForBeats(playedMidiValue, playedBeats)
+            super.setDuration(Float(MidiSoundManager.shared).getDurationForBeats(playedBeats) / 1000)
         } catch let interpretationException {
             Log.d(String(describing: type(of: self)), "Formula interpretation for this specific Brick failed.", interpretationException)
         }

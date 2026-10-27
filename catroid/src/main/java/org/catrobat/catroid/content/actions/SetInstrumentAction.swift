@@ -7,7 +7,7 @@ open class SetInstrumentAction: TemporalAction {
 
     open override func update(_ percent: Float) {
         var instrument = MusicalInstrument.getInstrumentFromProgram(selectedInstrument.value)
-        MidiSoundManager.instance.setInstrument(instrument)
+        MidiSoundManager.shared.setInstrument(instrument)
     }
 
     public func setInstrument(_ selectedInstrument: PickableMusicalInstrument) {
