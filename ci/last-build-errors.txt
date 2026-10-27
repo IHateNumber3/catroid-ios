@@ -3,4 +3,4 @@ BUILD ERRORS: 1 unique
 == Missing symbols (count) ==
 
 == First errors ==
-catroid/src/main/java/org/catrobat/catroid/stage/EmbroideryActor.swift:28:43: error: value of type 'EmbroideryPatternManager' has no member 'getEmbroideryPatternList'
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetVisibleAction.swift:14:23: error: value of type 'ShowBubbleActor?' has no member 'setVisible'
