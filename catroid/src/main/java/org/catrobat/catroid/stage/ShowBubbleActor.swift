@@ -122,6 +122,11 @@ public class ShowBubbleActor: SKNode {
         }
     }
     
+    /// Shows or hides the speech/thought bubble without destroying its state.
+    public func setVisible(_ visible: Bool) {
+        isHidden = !visible
+    }
+
     public func close() {
         removeFromParent()
     }
