@@ -25,7 +25,7 @@ public class EmbroideryActor: SKNode {
     
     /// Отрисовка стежков вышивки (аналог метода draw)
     public func updateEmbroideryDrawing() {
-        let stitchPoints = patternManager.getEmbroideryPatternList()
+        let stitchPoints = patternManager.embroideryPatternList
         guard stitchPoints.count >= 2 else {
             embroideryShapeNode.path = nil
             return
