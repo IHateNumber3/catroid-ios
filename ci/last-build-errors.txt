@@ -1,37 +1,7 @@
-BUILD ERRORS: 25 unique
+BUILD ERRORS: 2 unique
 
 == Missing symbols (count) ==
-   2  action
-   2  ColorCollisionDetection
-   2  PointF
-   1  ColorAtXYDetection
-   1  ColorEqualsColor
-   1  SensorHandler
-   1  GlideToAction
 
 == First errors ==
-catroid/src/main/java/org/catrobat/catroid/content/actions/ForItemInUserListAction.swift:9:21: error: overriding declaration requires an 'override' keyword
-catroid/src/main/java/org/catrobat/catroid/content/actions/ForItemInUserListAction.swift:21:25: error: cannot find 'action' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/ForVariableFromToAction.swift:14:21: error: overriding declaration requires an 'override' keyword
-catroid/src/main/java/org/catrobat/catroid/content/actions/ForVariableFromToAction.swift:20:25: error: cannot find 'action' in scope
-catroid/src/main/java/org/catrobat/catroid/formulaeditor/FormulaElement.swift:183:75: error: value of optional type 'Scene?' must be unwrapped to a value of type 'Scene'
-catroid/src/main/java/org/catrobat/catroid/formulaeditor/FormulaElement.swift:221:48: error: cannot find 'ColorCollisionDetection' in scope
-catroid/src/main/java/org/catrobat/catroid/formulaeditor/FormulaElement.swift:224:48: error: cannot find 'ColorCollisionDetection' in scope
-catroid/src/main/java/org/catrobat/catroid/formulaeditor/FormulaElement.swift:227:20: error: cannot find 'ColorAtXYDetection' in scope
-catroid/src/main/java/org/catrobat/catroid/formulaeditor/FormulaElement.swift:234:48: error: cannot find 'ColorEqualsColor' in scope
-catroid/src/main/java/org/catrobat/catroid/formulaeditor/common/FormulaElementOperations.swift:60:27: error: value of type 'StageListener' has no member 'firstFrameDrawn'
-catroid/src/main/java/org/catrobat/catroid/formulaeditor/common/FormulaElementOperations.swift:101:56: error: value of type 'StageListener' has no member 'getAllClonesOfSprite'
-catroid/src/main/java/org/catrobat/catroid/formulaeditor/common/FormulaElementOperations.swift:154:16: error: cannot find 'SensorHandler' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/GlideToPhysicsAction.swift:8:24: error: method does not override any method from its superclass
-catroid/src/main/java/org/catrobat/catroid/content/actions/GlideToPhysicsAction.swift:13:24: error: method does not override any method from its superclass
-catroid/src/main/java/org/catrobat/catroid/content/actions/GlideToPhysicsAction.swift:3:34: error: cannot find type 'GlideToAction' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/GlideToPhysicsAction.swift:6:30: error: 'super' cannot be used in class 'GlideToPhysicsAction' because it has no superclass
-catroid/src/main/java/org/catrobat/catroid/content/actions/GlideToPhysicsAction.swift:10:9: error: 'super' cannot be used in class 'GlideToPhysicsAction' because it has no superclass
-catroid/src/main/java/org/catrobat/catroid/content/actions/GlideToPhysicsAction.swift:14:9: error: 'super' cannot be used in class 'GlideToPhysicsAction' because it has no superclass
-catroid/src/main/java/org/catrobat/catroid/content/actions/GoNStepsBackAction.swift:19:31: error: value of type 'Look' has no member 'setZIndex'
-catroid/src/main/java/org/catrobat/catroid/content/actions/GoNStepsBackAction.swift:35:27: error: value of type 'Look' has no member 'setZIndex'
-catroid/src/main/java/org/catrobat/catroid/content/actions/PenDownAction.swift:9:41: error: cannot call value of non-function type 'Bool'
-catroid/src/main/java/org/catrobat/catroid/content/actions/PenDownAction.swift:13:51: error: cannot find 'PointF' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/PenUpAction.swift:9:42: error: cannot call value of non-function type 'Bool'
-catroid/src/main/java/org/catrobat/catroid/content/actions/PenUpAction.swift:13:51: error: cannot find 'PointF' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/PhiroSensorAction.swift:14:21: error: overriding declaration requires an 'override' keyword
+catroid/src/main/java/org/catrobat/catroid/content/actions/DeleteThisCloneAction.swift:12:23: error: value of optional type 'StageListener?' must be unwrapped to refer to member 'removeClonedSpriteFromStage' of wrapped base type 'StageListener'
+catroid/src/main/java/org/catrobat/catroid/stage/EmbroideryActor.swift:28:43: error: value of type 'EmbroideryPatternManager' has no member 'embroideryPatternList'
