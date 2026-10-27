@@ -95,6 +95,10 @@ open class Look: Actor {
         return (lx >= 0 && lx < width && ly >= 0 && ly < height) ? self : nil
     }
 
+    public func setZIndex(_ index: Int) {
+        if let parent = self.parent { parent.setZIndex(of: self, index) } else { self.zIndex = index }
+    }
+
     // MARK: - Visibility
     public var isLookVisible: Bool {
         get { return sync { lookVisible } }

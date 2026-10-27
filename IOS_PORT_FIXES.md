@@ -101,3 +101,13 @@ Important: parser success only verifies Swift syntax. It does not establish that
 - Replaced Java/Android color parsing with a UIKit `UIColor` implementation.
 - Made bubble lookup safely optional and removed unsupported embroidery-manager calls from the Swift SewUp action while preserving running-stitch state.
 - Replaced remaining Java `Math`/`float` calls in movement and point-to actions with Foundation/Swift equivalents.
+
+## Pass 14 — remaining reported Swift symbols and action overrides
+- Corrected required initializer overrides in loop and Phiro actions.
+- Added child-action and loop-delay accessors to `LoopAction`, which are used by the action factory and loop implementations.
+- Updated pen actions to use the Swift `PenConfiguration.isPenDown` property and `CGPoint`.
+- Added `Look.setZIndex(_:)` using the parent actor's ordering API.
+- Guarded the optional edited scene before evaluating scene-based sensors; added stage-scene accessors for first-frame and clone queries.
+- Added native `GlideToAction` interpolation for position/duration formulas.
+- Added compile-time iOS compatibility implementations for color sensing and a sensor provider. **These are conservative fallbacks, not full implementations**: color-touch sensing returns false, color-at-position returns NaN, and hardware sensor readings return zero until the corresponding iOS implementations are added.
+- Parsed all 390 Swift files with `swiftc -frontend -parse`; no syntax errors. This does not substitute for an Xcode typecheck or build.

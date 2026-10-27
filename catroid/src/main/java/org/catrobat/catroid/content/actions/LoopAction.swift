@@ -4,6 +4,10 @@ import Foundation
 /// from consuming the entire frame, matching the Android implementation.
 open class LoopAction: Action {
     public var isLoopDelay = true
+    public var action: Action?
+
+    public func setAction(_ action: Action) { self.action = action }
+    public func setLoopDelay(_ enabled: Bool) { isLoopDelay = enabled }
     open var currentTime: Float = 0
     public static let loopDelay: Float = 0.02
 

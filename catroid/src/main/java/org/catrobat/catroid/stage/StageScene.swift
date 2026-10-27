@@ -16,6 +16,7 @@ public class StageScene: SKScene {
     
     // Список спрайтов на сцене
     private var sprites: [Sprite] = []
+    public var spritesFromStage: [Sprite] { sprites }
     private var bubbleActors: [ObjectIdentifier: ShowBubbleActor] = [:]
     public private(set) var actors: [Actor] = []
     public private(set) var textNodes: [SKNode] = []

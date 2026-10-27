@@ -180,6 +180,7 @@ public final class FormulaElement {
             return interpretFunction(Functions.getFunctionByValue(value), scope)
         case .sensor:
             guard let project = project else { return Conversions.FALSE }
+            guard let editedScene = editedScene else { return Conversions.FALSE }
             return FormulaElementOperations.interpretSensor(scope.sprite, editedScene, project, value)
         case .userVariable:
             return FormulaElementOperations.interpretUserVariable(UserDataWrapper.getUserVariable(value ?? "", scope))
