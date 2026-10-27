@@ -131,4 +131,4 @@ jobs:
 
       - name: Fail if build failed
         if: steps.build.outcome == 'failure'
-        run: echo failed
+        run: exit 1
