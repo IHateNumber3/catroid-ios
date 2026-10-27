@@ -1,7 +1,13 @@
-BUILD ERRORS: 2 unique
+BUILD ERRORS: 5 unique
 
 == Missing symbols (count) ==
+   2  WhenConditionBrick
+   1  WhenBackgroundChangesBrick
+   1  ZigZagRunningStitch
 
 == First errors ==
-catroid/src/main/java/org/catrobat/catroid/content/actions/StopAllSoundsAction.swift:7:29: error: value of type 'SoundManager' has no member 'stopAllSounds'
-catroid/src/main/java/org/catrobat/catroid/content/actions/TripleStitchAction.swift:19:58: error: missing argument labels 'sprite:type:' in call
+catroid/src/main/java/org/catrobat/catroid/content/WhenBackgroundChangesScript.swift:9:33: error: cannot find 'WhenBackgroundChangesBrick' in scope
+catroid/src/main/java/org/catrobat/catroid/content/WhenConditionScript.swift:19:33: error: cannot find 'WhenConditionBrick' in scope
+catroid/src/main/java/org/catrobat/catroid/content/WhenConditionScript.swift:35:43: error: cannot find type 'WhenConditionBrick' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/ZigZagStitchAction.swift:29:73: error: cannot find 'ZigZagRunningStitch' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/ZigZagStitchAction.swift:29:58: error: missing argument labels 'sprite:type:' in call
