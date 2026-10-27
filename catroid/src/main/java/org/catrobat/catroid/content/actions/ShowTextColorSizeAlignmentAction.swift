@@ -32,6 +32,7 @@ open class ShowTextColorSizeAlignmentAction: TemporalAction {
 
             if size <= 0 {
                 variableToShow.setVisible(false)
+                showTextActor = nil
                 actor = nil
                 return
             }
@@ -40,7 +41,8 @@ open class ShowTextColorSizeAlignmentAction: TemporalAction {
                                          xPosition: x, yPosition: y,
                                          relativeSize: size, color: resolvedColor,
                                          sprite: scope.sprite, alignment: alignment)
-            actor = newActor
+            showTextActor = newActor
+            actor = nil
             scene.addActor(newActor)
             variableToShow.setVisible(true)
         } catch {
@@ -52,9 +54,9 @@ open class ShowTextColorSizeAlignmentAction: TemporalAction {
         do {
             let x = try xPosition.interpretInteger(scope)
             let y = try yPosition.interpretInteger(scope)
-            actor?.setPositionX(x)
-            actor?.setPositionY(y)
-            actor?.updateVariables()
+            showTextActor?.setPositionX(x)
+            showTextActor?.setPositionY(y)
+            showTextActor?.updateVariables()
         } catch {
             Log.d(ShowTextColorSizeAlignmentAction.TAG, "Could not update variable text", error)
         }

@@ -7,7 +7,7 @@ open class WaitUntilAction: Action {
     public static let LOOP_DELAY: Float = 0.02
     var currentTime: Float = 0
 
-    public required init() { super.init() }
+    public required override init() { super.init() }
 
     public func setCondition(_ condition: Formula) {
         self.condition = condition

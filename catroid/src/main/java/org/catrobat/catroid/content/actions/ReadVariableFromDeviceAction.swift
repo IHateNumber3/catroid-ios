@@ -4,7 +4,7 @@ open class ReadVariableFromDeviceAction: AsynchronousAction {
     var userVariable: UserVariable!
     var readActionFinished: Bool = false
 
-    public required init() { super.init() }
+    public required override init() { super.init() }
 
     open override func act(_ delta: Float) -> Bool {
         if userVariable == nil {
@@ -13,12 +13,12 @@ open class ReadVariableFromDeviceAction: AsynchronousAction {
         return super.act(delta)
     }
 
-    public func initialize() {
+    open override func initialize() {
         readActionFinished = false
         ReadTask().execute(userVariable)
     }
 
-    public func isFinished() -> Bool {
+    open override func isFinished() -> Bool {
         return readActionFinished
     }
 

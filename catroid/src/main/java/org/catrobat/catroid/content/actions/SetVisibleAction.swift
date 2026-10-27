@@ -11,7 +11,7 @@ open class SetVisibleAction: TemporalAction {
         if StageActivity.stageListener != nil {
             var actor = StageActivity.stageListener?.getBubbleActorForSprite(sprite)
             if actor != nil {
-                actor.setVisible(visible)
+                actor?.setVisible(visible)
             }
         }
     }

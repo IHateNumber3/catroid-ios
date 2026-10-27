@@ -5,7 +5,7 @@ open class ReportAction: Action {
     var reportFormula: Formula!
     var scope: Scope!
 
-    public required init() { super.init() }
+    public required override init() { super.init() }
 
     public func setScope(_ scope: Scope) {
         self.scope = scope

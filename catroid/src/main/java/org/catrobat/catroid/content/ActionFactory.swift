@@ -610,20 +610,14 @@ open class ActionFactory {
     }
 
     open func createSpeakAction(_ sprite: Sprite, _ sequence: SequenceAction, _ text: Formula) -> Action {
-        let action = SpeakAction()
         let scope = Scope(project: ProjectManager.shared.currentProject, sprite: sprite, sequence: sequence)
-        action.setSpeechSynthesizer(SpeechSynthesizer(scope, text))
-        action.setMobileServiceAvailability(get(MobileServiceAvailability.class))
-        action.setContext(StageActivity.activeStageActivity.get())
+        let action = SpeakAction(scope: scope, text: text)
         return action
     }
 
     open func createSpeakAndWaitAction(_ sprite: Sprite, _ sequence: SequenceAction, _ text: Formula) -> Action {
-        let action = SpeakAndWaitAction()
         let scope = Scope(project: ProjectManager.shared.currentProject, sprite: sprite, sequence: sequence)
-        action.setSpeechSynthesizer(SpeechSynthesizer(scope, text))
-        action.setMobileServiceAvailability(get(MobileServiceAvailability.class))
-        action.setContext(StageActivity.activeStageActivity.get())
+        let action = SpeakAndWaitAction(scope: scope, text: text)
         return action
     }
 
@@ -1369,15 +1363,9 @@ open class ActionFactory {
     }
 
     open func createStartListeningAction(_ userVariable: UserVariable) -> Action {
-        if get(MobileServiceAvailability.class).isHmsAvailable(ProjectManager.shared.applicationContext) {
-            let action = AskSpeechAction()
-            action.setAnswerVariable(userVariable)
-            return action
-        } else {
-            let action = StartListeningAction()
-            action.setUserVariable(userVariable)
-            return action
-        }
+        let action = StartListeningAction()
+        action.setUserVariable(userVariable)
+        return action
     }
 
     open func createSetListeningLanguageAction(_ listeningLanguageTag: String) -> Action {
