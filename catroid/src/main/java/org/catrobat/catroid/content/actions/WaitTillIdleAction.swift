@@ -1,7 +1,7 @@
 import Foundation
 
 open class WaitTillIdleAction: Action {
-    public required init() { super.init() }
+    public required override init() { super.init() }
     open override func act(_ delta: Float) -> Bool {
         let actors = StageListener.shared.stage.actors
         guard !actors.isEmpty else { return false }

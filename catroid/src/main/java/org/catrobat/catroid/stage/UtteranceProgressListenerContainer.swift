@@ -1,6 +1,13 @@
 import Foundation
 import AVFoundation
 
+/// Native iOS counterpart of Android's UtteranceProgressListener callbacks.
+public protocol UtteranceProgressListenerDelegate: AnyObject {
+    func onDone(utteranceId: String)
+    func onStart(utteranceId: String)
+    func onError(utteranceId: String)
+}
+
 public class UtteranceProgressListenerContainer {
     
     // Словарь для хранения списков слушателей по идентификатору речевого фрагмента
