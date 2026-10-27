@@ -30,7 +30,7 @@ open class PointToAction: TemporalAction {
                 rotationDegrees = -90
             }
         } else {
-            rotationDegrees = 90 - Math.toDegrees(Math.atan2(pointedSpriteYPosition - spriteYPosition, pointedSpriteXPosition - spriteXPosition))
+            rotationDegrees = 90 - (atan2(Double(pointedSpriteYPosition - spriteYPosition), Double(pointedSpriteXPosition - spriteXPosition)) * 180.0 / Double.pi)
         }
         if sprite.look is PhysicsLook {
             (sprite.look as! PhysicsLook).setFlippedByDirection(Float(rotationDegrees))

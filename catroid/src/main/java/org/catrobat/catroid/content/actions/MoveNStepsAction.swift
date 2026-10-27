@@ -9,8 +9,8 @@ open class MoveNStepsAction: TemporalAction {
     open override func update(_ percent: Float) {
         do {
             var stepsValue: Double = try steps == nil ? Double(0) : steps.interpretDouble(scope)
-            var radians: Double = Math.toRadians(scope.sprite.look.motionDirectionInUserInterfaceDimensionUnit)
-            scope.sprite.look.changePositionInInterfaceDimensionUnit((float) (stepsValue * Math.sin(radians)), (float) (stepsValue * Math.cos(radians)))
+            var radians: Double = Double(scope.sprite.look.motionDirectionInUserInterfaceDimensionUnit) * Double.pi / 180.0
+            scope.sprite.look.changePositionInInterfaceDimensionUnit(Float(stepsValue * sin(radians)), Float(stepsValue * cos(radians)))
             scope.sprite.movedByStepsBrick = true
         } catch let interpretationException {
             Log.d(String(describing: type(of: self)), "Formula interpretation for this specific Brick failed.", interpretationException)

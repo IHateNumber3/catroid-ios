@@ -2,7 +2,7 @@ import Foundation
 
 open class SetPhysicsObjectTypeAction: TemporalAction {
     var physicsObject: PhysicsObject!
-    var type: Type = PhysicsObject.Type.none
+    var type: PhysicsObject.PhysicsType = .none
 
     public required init() { super.init() }
 
@@ -14,7 +14,7 @@ open class SetPhysicsObjectTypeAction: TemporalAction {
         self.physicsObject = physicsObject
     }
 
-    public func setType(_ type: Type) {
+    public func setType(_ type: PhysicsObject.PhysicsType) {
         self.type = type
     }
 }

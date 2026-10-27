@@ -8,6 +8,9 @@ public final class MidiSoundManager {
     public static func getInstance() -> MidiSoundManager { return shared }
 
     public private(set) var instrument: MusicalInstrument = .acousticGrandPiano
+    public private(set) var tempo: Float = 60
+    public func setTempo(_ value: Float) { tempo = max(1, value) }
+    public func setVolume(_ value: Float) { }
     public var startedSoundfilePaths: Set<SoundFilePathWithSprite> = []
     public var midiPlayers: [SoundPlaybackState] = []
 

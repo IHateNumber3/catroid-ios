@@ -39,8 +39,8 @@ open class TemporalAction: Action {
         return complete
     }
 
-    open func begin() {}
-    open func end() {}
+    open override func begin() {}
+    open override func end() {}
     open func update(_ percent: Float) {}
 
     /// Завершает действие досрочно

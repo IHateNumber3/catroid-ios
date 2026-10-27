@@ -9,7 +9,7 @@ open class SetTempoAction: TemporalAction {
     open override func update(_ delta: Float) {
         do {
             var newTempo: Int = try tempo == nil ? Int(0) : tempo.interpretInteger(scope)
-            MidiSoundManager.instance.setTempo(newTempo)
+            MidiSoundManager.shared.setTempo(Float(newTempo))
         } catch let interpretationException {
             Log.d(String(describing: type(of: self)), "Formula interpretation for this specific Brick failed.", interpretationException)
         }

@@ -91,3 +91,13 @@ Important: parser success only verifies Swift syntax. It does not establish that
 
 - Updated speech-holder implementations and dummy holder to use the protocol’s exact `StageViewController` parameter type for `initSpeechRecognition`.
 - This targets the remaining reported conformance error in `HmsSpeechRecognitionHolder.swift`. Full Xcode typechecking is not available in this environment.
+
+
+## Pass 13 — Swift compiler errors reported by CI
+- Unified `TemporalAction.begin/end` with the lifecycle hooks inherited from `Action` to avoid duplicate override declarations.
+- Corrected physics action enum references to the Swift port's `PhysicsObject.PhysicsType`.
+- Fixed rotation-style storage/setter and optional texture-region access, using labeled `flip(x:y:)`.
+- Updated sound singleton references to Swift `shared` and added the action-facing volume/tempo bridge methods.
+- Replaced Java/Android color parsing with a UIKit `UIColor` implementation.
+- Made bubble lookup safely optional and removed unsupported embroidery-manager calls from the Swift SewUp action while preserving running-stitch state.
+- Replaced remaining Java `Math`/`float` calls in movement and point-to actions with Foundation/Swift equivalents.

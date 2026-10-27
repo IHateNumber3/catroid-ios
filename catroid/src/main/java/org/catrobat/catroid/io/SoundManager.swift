@@ -4,6 +4,7 @@ import Foundation
 public final class SoundManager {
     public static let shared = SoundManager()
     public static func getInstance() -> SoundManager { shared }
+    public func setVolume(_ value: Float) { /* playback volume is applied by active players when implemented */ }
     public var recentlyStoppedSoundfilePaths: Set<SoundFilePathWithSprite> = []
     public var mediaPlayers: [SoundPlaybackState] = []
     private init() {}

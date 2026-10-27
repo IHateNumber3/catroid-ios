@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 
 open class SetThreadColorAction: TemporalAction {
     var scope: Scope!
@@ -9,33 +10,19 @@ open class SetThreadColorAction: TemporalAction {
 
     open override func update(_ delta: Float) {
         do {
-            var colorStringInterpretation: String = "0xff0000"
-            if color != nil {
-                try colorStringInterpretation = color.interpretString(scope)
-            }
-            var red: String = "0x" + colorStringInterpretation.substring(1, 3)
-            var green: String = "0x" + colorStringInterpretation.substring(3, 5)
-            var blue: String = "0x" + colorStringInterpretation.substring(5, 7)
-            var redInt: Int = Integer.decode(red)
-            var greenInt: Int = Integer.decode(green)
-            var blueInt: Int = Integer.decode(blue)
-            var colorInterpretation = Color()
-            Color.argb8888ToColor(colorInterpretation, Color.argb(0xFF, redInt, greenInt, blueInt))
-            sprite.setEmbroideryThreadColor(colorInterpretation)
-        } catch let exception {
-            Log.d(String(describing: type(of: self)), "Formula interpretation for this specific Brick failed.", exception)
+            let raw = try color?.interpretString(scope) ?? "#ff0000"
+            let hex = raw.trimmingCharacters(in: CharacterSet(charactersIn: "#")).replacingOccurrences(of: "0x", with: "")
+            guard hex.count >= 6, let value = UInt64(String(hex.suffix(6)), radix: 16) else { return }
+            let red = CGFloat((value >> 16) & 0xFF) / 255.0
+            let green = CGFloat((value >> 8) & 0xFF) / 255.0
+            let blue = CGFloat(value & 0xFF) / 255.0
+            sprite.embroideryThreadColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
+        } catch {
+            Log.d(String(describing: type(of: self)), "Formula interpretation for this specific Brick failed.", error)
         }
     }
 
-    public func setScope(_ scope: Scope) {
-        self.scope = scope
-    }
-
-    public func setSprite(_ sprite: Sprite) {
-        self.sprite = sprite
-    }
-
-    public func setColor(_ color: Formula) {
-        self.color = color
-    }
+    public func setScope(_ scope: Scope) { self.scope = scope }
+    public func setSprite(_ sprite: Sprite) { self.sprite = sprite }
+    public func setColor(_ color: Formula) { self.color = color }
 }

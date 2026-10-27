@@ -9,7 +9,7 @@ open class SetVisibleAction: TemporalAction {
     open override func update(_ delta: Float) {
         sprite.look.setLookVisible(visible)
         if StageActivity.stageListener != nil {
-            var actor = StageActivity.stageListener.getBubbleActorForSprite(sprite)
+            var actor = StageActivity.stageListener?.getBubbleActorForSprite(sprite)
             if actor != nil {
                 actor.setVisible(visible)
             }

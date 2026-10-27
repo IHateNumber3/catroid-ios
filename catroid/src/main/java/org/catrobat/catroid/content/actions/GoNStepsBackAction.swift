@@ -31,7 +31,7 @@ open class GoNStepsBackAction: TemporalAction {
 
     private func goNStepsBack(_ steps: Int) {
         var zPosition: Int = scope.sprite.look.zIndex
-        var newSpriteZIndex: Int = Math.max(zPosition - steps, Constants.zIndexFirstSprite)
+        var newSpriteZIndex: Int = max(zPosition - steps, Constants.zIndexFirstSprite)
         scope.sprite.look.setZIndex(newSpriteZIndex)
     }
 
