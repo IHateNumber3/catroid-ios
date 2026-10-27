@@ -1,6 +1,7 @@
 import Foundation
 
 public enum BrickValues {
+    public static let THINK_BRICK: Int = 1
     public static let xPosition: Int = 100
     public static let yPosition: Int = 200
     public static let changeXBy: Int = 10

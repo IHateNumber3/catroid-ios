@@ -29,7 +29,7 @@ open class ThinkSayBubbleAction: TemporalAction {
         guard !textToDisplay.isEmpty else {
             throw NSError(domain: "ThinkSayBubbleAction", code: 1, userInfo: [NSLocalizedDescriptionKey: "Bubble text is empty"])
         }
-        return ShowBubbleActor(textToDisplay, scope.sprite, type)
+        return ShowBubbleActor(text: textToDisplay, sprite: scope.sprite, type: type)
     }
 
     public func setAndroidStringProvider(_ provider: AndroidStringProvider) { androidStringProvider = provider }

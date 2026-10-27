@@ -11,6 +11,7 @@ public final class MidiSoundManager {
     public private(set) var tempo: Float = 60
     public func setTempo(_ value: Float) { tempo = max(1, value) }
     public func setVolume(_ value: Float) { }
+    public func stopAllSounds() { midiPlayers.forEach { $0.isPlaying = false } }
     public var startedSoundfilePaths: Set<SoundFilePathWithSprite> = []
     public var midiPlayers: [SoundPlaybackState] = []
 

@@ -3,7 +3,7 @@ import Foundation
 open class StopThisScriptAction: Action {
     var currentScript: Script!
 
-    public required init() { super.init() }
+    public required override init() { super.init() }
 
     public func setCurrentScript(_ currentScript: Script) {
         self.currentScript = currentScript

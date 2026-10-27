@@ -16,6 +16,6 @@ open class ThinkBubbleBrick: FormulaBrick {
     }
 
     open override func addActionToSequence(sprite: Sprite, sequence: ScriptSequenceAction) {
-        sequence.addAction(sprite.actionFactory.createThinkSayBubbleAction(sprite, sequence, AndroidStringProvider(), getFormulaWithBrickField(.string), THINK_BRICK))
+        sequence.addAction(sprite.actionFactory.createThinkSayBubbleAction(sprite, sequence, AndroidStringProvider(), getFormulaWithBrickField(.string), BrickValues.THINK_BRICK))
     }
 }

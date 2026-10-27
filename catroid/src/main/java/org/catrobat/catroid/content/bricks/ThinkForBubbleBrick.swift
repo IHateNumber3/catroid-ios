@@ -20,7 +20,7 @@ open class ThinkForBubbleBrick: FormulaBrick {
     open override var defaultBrickField: BrickField { return .string }
 
     open override func addActionToSequence(sprite: Sprite, sequence: ScriptSequenceAction) {
-        sequence.addAction(sprite.actionFactory.createThinkSayForBubbleAction(sprite, sequence, AndroidStringProvider(), getFormulaWithBrickField(.string), THINK_BRICK))
+        sequence.addAction(sprite.actionFactory.createThinkSayForBubbleAction(sprite, sequence, AndroidStringProvider(), getFormulaWithBrickField(.string), BrickValues.THINK_BRICK))
         sequence.addAction(sprite.actionFactory.createWaitForBubbleBrickAction(sprite, sequence, getFormulaWithBrickField(.durationInSeconds)))
     }
 }

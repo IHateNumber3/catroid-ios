@@ -4,7 +4,7 @@ open class StopOtherScriptsAction: Action {
     var currentScript: Script!
     var sprite: Sprite!
 
-    public required init() { super.init() }
+    public required override init() { super.init() }
 
     open override func act(_ delta: Float) -> Bool {
         guard let look = actor as? Look else { return true }
