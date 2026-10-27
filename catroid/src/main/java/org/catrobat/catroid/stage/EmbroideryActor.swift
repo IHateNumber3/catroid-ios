@@ -25,7 +25,7 @@ public class EmbroideryActor: SKNode {
     
     /// Отрисовка стежков вышивки (аналог метода draw)
     public func updateEmbroideryDrawing() {
-        let stitchPoints = patternManager.embroideryPatternList
+        let stitchPoints = patternManager.getEmbroideryPatternList()
         guard stitchPoints.count >= 2 else {
             embroideryShapeNode.path = nil
             return
@@ -44,7 +44,7 @@ public class EmbroideryActor: SKNode {
         var colorChange = false
         
         while let nextPoint = iterator.next() {
-            let previousPointCoord = firstPointCoord
+            let previousPointCoord = CGPoint(x: CGFloat(stitchPoint.x), y: CGFloat(stitchPoint.y))
             let nextPointCoord = CGPoint(x: CGFloat(nextPoint.x), y: CGFloat(nextPoint.y))
             
             colorChange = colorChange || nextPoint.isColorChangePoint
