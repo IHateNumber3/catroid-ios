@@ -9,7 +9,7 @@ open class DeleteThisCloneAction: TemporalAction {
         if sprite == nil {
             return
         }
-        StageActivity.stageListener.removeClonedSpriteFromStage(sprite)
+        StageActivity.stageListener?.removeClonedSpriteFromStage(sprite)
     }
 
     public func setSprite(_ sprite: Sprite) {

@@ -111,3 +111,8 @@ Important: parser success only verifies Swift syntax. It does not establish that
 - Added native `GlideToAction` interpolation for position/duration formulas.
 - Added compile-time iOS compatibility implementations for color sensing and a sensor provider. **These are conservative fallbacks, not full implementations**: color-touch sensing returns false, color-at-position returns NaN, and hardware sensor readings return zero until the corresponding iOS implementations are added.
 - Parsed all 390 Swift files with `swiftc -frontend -parse`; no syntax errors. This does not substitute for an Xcode typecheck or build.
+
+
+## Pass 14 — last reported compile errors
+- `DeleteThisCloneAction`: safely unwrap optional `StageActivity.stageListener` before removing a clone.
+- `EmbroideryActor`: call the Java-style `getEmbroideryPatternList()` API exposed by `EmbroideryPatternManager` rather than a nonexistent Swift property.
