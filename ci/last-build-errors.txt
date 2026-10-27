@@ -1,18 +1,9 @@
-BUILD ERRORS: 11 unique
+BUILD ERRORS: 4 unique
 
 == Missing symbols (count) ==
-   2  THINK_BRICK
-   1  TripleRunningStitch
 
 == First errors ==
-catroid/src/main/java/org/catrobat/catroid/content/actions/StopAllScriptsAction.swift:5:21: error: overriding declaration requires an 'override' keyword
-catroid/src/main/java/org/catrobat/catroid/content/actions/StopAllSoundsAction.swift:7:22: error: type 'SoundManager' has no member 'instance'
-catroid/src/main/java/org/catrobat/catroid/content/actions/StopAllSoundsAction.swift:8:26: error: type 'MidiSoundManager' has no member 'instance'
-catroid/src/main/java/org/catrobat/catroid/content/actions/StopOtherScriptsAction.swift:7:21: error: overriding declaration requires an 'override' keyword
-catroid/src/main/java/org/catrobat/catroid/content/actions/StopThisScriptAction.swift:6:21: error: overriding declaration requires an 'override' keyword
-catroid/src/main/java/org/catrobat/catroid/content/bricks/ThinkBubbleBrick.swift:19:154: error: cannot find 'THINK_BRICK' in scope
-catroid/src/main/java/org/catrobat/catroid/content/bricks/ThinkForBubbleBrick.swift:23:157: error: cannot find 'THINK_BRICK' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/ThinkSayBubbleAction.swift:28:75: error: argument type 'AndroidStringProvider' does not conform to expected type 'FormulaStringProvider'
-catroid/src/main/java/org/catrobat/catroid/content/actions/ThinkSayBubbleAction.swift:32:31: error: missing argument labels 'text:sprite:type:' in call
-catroid/src/main/java/org/catrobat/catroid/content/actions/TripleStitchAction.swift:19:73: error: cannot find 'TripleRunningStitch' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/TripleStitchAction.swift:19:58: error: missing argument labels 'sprite:type:' in call
+catroid/src/main/java/org/catrobat/catroid/content/actions/ScriptSequenceAction.swift:13:14: error: ambiguous use of 'init'
+catroid/src/main/java/org/catrobat/catroid/content/actions/ScriptSequenceActionWithWaiter.swift:11:15: error: ambiguous use of 'init'
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetInstrumentAction.swift:10:26: error: type 'MidiSoundManager' has no member 'instance'
+catroid/src/main/java/org/catrobat/catroid/content/actions/SetNfcTagAction.swift:11:21: error: overriding declaration requires an 'override' keyword
