@@ -118,9 +118,9 @@ jobs:
       - name: Package unsigned IPA
         if: steps.build.outcome == 'success'
         run: |
-          APP=$(find ~/Library/Developer/Xcode/DerivedData -name 'Catroid.app' -path '*Debug-iphonesimulator*' | head -1)
+          APP=$(find ~/Library/Developer/Xcode/DerivedData -name 'Catroid.app' -path '*Debug-iphoneos*' | head -1)
           echo "app: $APP"
-          mkdir -p Payload && cp -R "$APP" Payload/ && zip -qr Catroid-simulator.zip Payload
+          mkdir -p Payload && cp -R "$APP" Payload/ && zip -qr Catroid.ipa Payload
 
       - name: Upload IPA
         if: steps.build.outcome == 'success'
