@@ -39,13 +39,7 @@ open class RaspiIfLogicAction: Action {
     }
 
     func readIfConditionValue() -> Bool {
-        var connection = RaspberryPiService.instance.connection
-        do {
-            Log.d(RaspiIfLogicAction.TAG, "RPi get " + pin)
-            return connection.getPin(pin)
-        } catch let e {
-            Log.e(RaspiIfLogicAction.TAG, "RPi: exception during getPin: " + e)
-        }
+        // Raspberry Pi socket transport is not available in this iOS port yet.
         return false
     }
 

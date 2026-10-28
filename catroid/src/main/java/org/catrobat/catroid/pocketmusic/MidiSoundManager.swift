@@ -29,6 +29,12 @@ public final class MidiSoundManager {
         return midiPlayers.contains { $0.isPlaying && $0.startedBySprite === sprite && $0.pathToSoundFile == path }
     }
 
+    public func playNoteForBeats(_ midiValue: Int, _ beats: Float) { }
+    public func playDrumForBeats(_ drum: Drum, _ beats: Float, _ sprite: Sprite) { }
+    public func getDurationForBeats(_ beats: Float) -> Double {
+        return Double(max(0, beats)) * 60_000.0 / Double(max(1, tempo))
+    }
+
     public func setInstrument(_ instrument: MusicalInstrument) {
         self.instrument = instrument
     }

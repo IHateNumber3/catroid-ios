@@ -34,13 +34,7 @@ open class RaspiPwmAction: TemporalAction {
     }
 
     open override func update(_ percent: Float) {
-        var connection = RaspberryPiService.instance.connection
-        do {
-            Log.d(RaspiPwmAction.TAG, "RPi pwm pin=" + pinInterpretation + ", " + percentageInterpretation + "%, " + frequencyInterpretation + "Hz")
-            connection.setPWM(pinInterpretation, frequencyInterpretation, percentageInterpretation)
-        } catch let e {
-            Log.e(RaspiPwmAction.TAG, "RPi: exception during setPwm: " + e)
-        }
+        // Raspberry Pi PWM transport is not available in this iOS port yet.
     }
 
     public func setScope(_ scope: Scope) {

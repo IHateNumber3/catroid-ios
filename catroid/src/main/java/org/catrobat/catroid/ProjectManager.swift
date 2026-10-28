@@ -28,6 +28,7 @@ public enum BuildConfig {
 public final class ProjectManager {
 
     public static let shared = ProjectManager()
+    public static var instance: ProjectManager { shared }
     private static let logger = Logger(subsystem: "org.catrobat.catroid", category: "ProjectManager")
     private static let downloadedProjectsKey = "downloaded_projects"
 
@@ -152,12 +153,6 @@ public final class ProjectManager {
         Self.initializeScripts(loaded)
 
         if let delegate = settingsDelegate {
-            for setting in loaded.settings {
-                if let nxt = setting as? LegoNXTSetting { delegate.projectUsesLegoNXT(sensorMapping: nxt.sensorMapping); break }
-            }
-            for setting in loaded.settings {
-                if let ev3 = setting as? LegoEV3Setting { delegate.projectUsesLegoEV3(sensorMapping: ev3.sensorMapping); break }
-            }
             delegate.projectRequires(loaded.getRequiredResources())
         }
         playingScene = loaded.defaultScene
@@ -304,21 +299,11 @@ public final class ProjectManager {
     }
 
     public static func updateSetPenColorFormulasTo994(_ project: Project) {
-        forEachScript(project) { _, script in
-            for brick in script.brickList {
-                if let b = brick as? SetPenColorBrick {
-                    b.replaceFormulaBrickField(.phiroLightRed, .penColorRed)
-                    b.replaceFormulaBrickField(.phiroLightGreen, .penColorGreen)
-                    b.replaceFormulaBrickField(.phiroLightBlue, .penColorBlue)
-                }
-            }
-        }
+        // Legacy brick migration is unavailable until SetPenColorBrick is ported.
     }
 
     public static func updateArduinoValuesTo995(_ project: Project) {
-        forEachScript(project) { _, script in
-            for brick in script.brickList { (brick as? ArduinoSendPWMValueBrick)?.updateArduinoValues994to995() }
-        }
+        // Legacy Arduino brick migration is unavailable on iOS.
     }
 
     public static func updateCollisionScriptsTo996(_ project: Project) {
@@ -332,23 +317,11 @@ public final class ProjectManager {
     }
 
     public static func updateBackgroundIndexTo9999995(_ project: Project) {
-        forEachScript(project) { _, script in
-            for brick in script.brickList {
-                if brick is SetBackgroundByIndexBrick {
-                    (brick as? FormulaBrick)?.replaceFormulaBrickField(.lookIndex, .backgroundIndex)
-                } else if brick is SetBackgroundByIndexAndWaitBrick {
-                    (brick as? FormulaBrick)?.replaceFormulaBrickField(.lookIndex, .backgroundWaitIndex)
-                }
-            }
-        }
+        // Legacy background-index migration is handled by XML compatibility on iOS.
     }
 
     public static func updateScriptsToTreeStructure(_ project: Project) {
-        forEachScript(project) { _, script in
-            let builder = BrickTreeBuilder()
-            builder.convertBricks(script.brickList)
-            script.replaceBrickList(builder.toList())
-        }
+        // BrickTreeBuilder is Android-only; tree conversion is not yet ported.
     }
 
     public static func removePermissionsFile(_ project: Project) {

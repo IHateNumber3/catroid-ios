@@ -30,13 +30,7 @@ open class RaspiSendDigitalValueAction: TemporalAction {
     }
 
     open override func update(_ percent: Float) {
-        var connection = RaspberryPiService.instance.connection
-        do {
-            Log.d(RaspiSendDigitalValueAction.TAG, "RPi set " + pin + " to " + value)
-            connection.setPin(pin, value)
-        } catch let e {
-            Log.e(RaspiSendDigitalValueAction.TAG, "RPi: exception during setPin: " + e)
-        }
+        // Raspberry Pi GPIO transport is not available in this iOS port yet.
     }
 
     public func setScope(_ scope: Scope) {

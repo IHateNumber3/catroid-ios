@@ -7,7 +7,7 @@ open class PointToAction: TemporalAction {
     public required init() { super.init() }
 
     open override func update(_ percent: Float) {
-        if pointedSprite == nil || !ProjectManager.instance.currentlyPlayingScene.spriteList.contains(pointedSprite) {
+        if pointedSprite == nil || !ProjectManager.shared.currentlyPlayingScene.spriteList.contains(pointedSprite) {
             return
         }
         var spriteXPosition: Float = sprite.look.xInUserInterfaceDimensionUnit

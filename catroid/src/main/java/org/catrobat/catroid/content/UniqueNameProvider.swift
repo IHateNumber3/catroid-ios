@@ -5,6 +5,19 @@ import Foundation
 public final class UniqueNameProvider {
     public init() {}
 
+    public func getUniqueName(_ name: String, _ existingNames: [String]) -> String {
+        let existing = Set(existingNames)
+        guard existing.contains(name) else { return name }
+        let base = name.replacingOccurrences(of: "\\s*\\(\\d+\\)$", with: "", options: .regularExpression).trimmingCharacters(in: .whitespacesAndNewlines)
+        var index = 1
+        while index < Int.max {
+            let candidate = "\(base) (\(index))"
+            if !existing.contains(candidate) { return candidate }
+            index += 1
+        }
+        return base
+    }
+
     public func getUniqueNameInNameables(_ name: String, _ scope: [Nameable]) -> String {
         let existing = Set(scope.map { $0.name })
         guard existing.contains(name) else { return name }

@@ -33,6 +33,7 @@ public final class StageListener {
     }
     public var firstFrameDrawn: Bool { stage.firstFrameDrawn }
     public var spritesFromStage: [Sprite] { stage.spritesFromStage }
+    public func getSpritesFromStage() -> [Sprite] { stage.spritesFromStage }
     public func getAllClonesOfSprite(_ sprite: Sprite) -> [Sprite] { stage.spritesFromStage.filter { $0 !== sprite && $0.name == sprite.name } }
     public var penActor: PenActor {
         if let actor = stage.childNode(withName: "__catroid_pen_actor") as? PenActor { return actor }

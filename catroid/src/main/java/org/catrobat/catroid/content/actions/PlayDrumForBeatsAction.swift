@@ -12,7 +12,7 @@ open class PlayDrumForBeatsAction: TemporalAction {
             var drum = Drum.getDrumFromProgram(selectedDrum.value)
             var playedBeats: Float = try beats == nil ? Float(0) : beats.interpretFloat(scope)
             MidiSoundManager.shared.playDrumForBeats(drum, playedBeats, scope.sprite)
-            super.setDuration(Float(MidiSoundManager.shared).getDurationForBeats(playedBeats) / 1000)
+            super.setDuration(MidiSoundManager.shared.getDurationForBeats(playedBeats) / 1000)
         } catch let interpretationException {
             Log.d(String(describing: type(of: self)), "Formula interpretation for this specific Brick failed.", interpretationException)
         }
