@@ -1,17 +1,15 @@
-BUILD ERRORS: 12 unique
+BUILD ERRORS: 8 unique
 
 == Missing symbols (count) ==
+   2  UniqueNameProvider
+   1  DSTStitchCommand
 
 == First errors ==
-catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:228:21: error: overriding declaration requires an 'override' keyword
-catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:248:17: error: overriding declaration requires an 'override' keyword
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:385:16: error: value of type 'ArcAction' has no member 'setInterpolation'
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:385:33: error: 'nil' requires a contextual type
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:394:16: error: value of type 'GoThroughAction' has no member 'setInterpolation'
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:394:33: error: 'nil' requires a contextual type
-catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:565:17: error: overriding declaration requires an 'override' keyword
-catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:580:17: error: overriding declaration requires an 'override' keyword
-catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:925:17: error: overriding declaration requires an 'override' keyword
-catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:962:17: error: overriding declaration requires an 'override' keyword
-catroid/src/main/java/org/catrobat/catroid/content/ActionFactory.swift:989:37: error: missing argument label 'script:' in call
-catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:1248:21: error: overriding declaration requires an 'override' keyword
+catroid/src/main/java/org/catrobat/catroid/content/Sprite.swift:549:23: error: value of type 'StageScene' has no member 'touchUp'
+catroid/src/main/java/org/catrobat/catroid/content/Sprite.swift:571:21: error: cannot assign to property: 'file' setter is inaccessible
+catroid/src/main/java/org/catrobat/catroid/content/Sprite.swift:573:32: error: cannot find 'UniqueNameProvider' in scope
+catroid/src/main/java/org/catrobat/catroid/content/Sprite.swift:580:21: error: cannot assign to property: 'file' setter is inaccessible
+catroid/src/main/java/org/catrobat/catroid/content/Sprite.swift:582:32: error: cannot find 'UniqueNameProvider' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/StampAction.swift:10:46: error: reference to member 'stampToFrameBuffer' cannot be resolved without a contextual type
+catroid/src/main/java/org/catrobat/catroid/content/actions/StitchAction.swift:12:79: error: cannot find 'DSTStitchCommand' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/StitchAction.swift:12:62: error: reference to member 'addStitchCommand' cannot be resolved without a contextual type
