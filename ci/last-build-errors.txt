@@ -1,7 +1,5 @@
-BUILD ERRORS: 2 unique
+BUILD ERRORS: 0 unique
 
 == Missing symbols (count) ==
 
 == First errors ==
-catroid/src/main/java/org/catrobat/catroid/content/actions/PlayDrumForBeatsAction.swift:15:55: error: value of type 'MidiSoundManager' has no member 'Float'
-catroid/src/main/java/org/catrobat/catroid/content/actions/PlayNoteForBeatsAction.swift:21:55: error: value of type 'MidiSoundManager' has no member 'Float'
