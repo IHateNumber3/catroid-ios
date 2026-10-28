@@ -231,7 +231,7 @@ public final class Project {
         if isCastProject { resources.add(.castRequired) }
         if hasMultiplayerVariables() { resources.add(.bluetoothMultiplayer) }
 
-        let physicsFactory = ActionPhysicsFactory()
+        let physicsFactory = ActionFactory() // iOS fallback: native physics action factory is not ported yet
         let factory = ActionFactory()
         for scene in sceneList {
             for sprite in scene.spriteList {
