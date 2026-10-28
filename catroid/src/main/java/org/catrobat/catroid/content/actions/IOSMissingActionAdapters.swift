@@ -340,7 +340,7 @@ public final class IfOnEdgeBounceAction: IOSMissingActionAdapter {
     public override func act(_ delta: Float) -> Bool {
         guard !applied else { return true }; applied = true
         guard let sprite = configuration["setSprite"] as? Sprite else { return true }
-        let look = sprite.look
+        guard let look = sprite.look else { return true }
         let halfWidth = Float(StageListener.shared.stage.virtualWidth) / 2
         let halfHeight = Float(StageListener.shared.stage.virtualHeight) / 2
         let x = look.xInUserInterfaceDimensionUnit
@@ -445,7 +445,7 @@ public final class ArcAction: TemporalAction {
         let effectiveLeft = (interpretedDegrees < 0) ? direction != .LEFT : direction == .LEFT
         signedDegrees = abs(interpretedDegrees) * (effectiveLeft ? 1 : -1)
         radiusValue = abs(interpretedRadius)
-        let look = scope.sprite.look
+        guard let look = scope.sprite.look else { return }
         let x = Double(look.xInUserInterfaceDimensionUnit), y = Double(look.yInUserInterfaceDimensionUnit)
         let motion = Double(look.motionDirectionInUserInterfaceDimensionUnit) * Double.pi / 180
         centerX = x + radiusValue * (effectiveLeft ? -cos(motion) : cos(motion))
@@ -1233,7 +1233,7 @@ public final class AssertUserListAction: IOSMissingActionAdapter {
         for index in 0..<min(actual.value.count, expected.value.count) {
             let a = String(describing: actual.value[index]), e = String(describing: expected.value[index])
             if a != e && !(Double(a) != nil && Double(a) == Double(e)) {
-                let prefix = Self.commonPrefixLength(a, e)
+                let prefix = commonPrefixLength(a, e)
                 errors.append("position: \(index + 1)\nexpected: <\(e)>\nactual:   <\(a)>\ndeviation: \(String(repeating: "-", count: prefix))^")
             }
         }
@@ -1242,6 +1242,11 @@ public final class AssertUserListAction: IOSMissingActionAdapter {
         let position = (configuration["setPosition"] as? String) ?? ""
         StageActivity.finishTestWithResult(TestResult(message: "on sprite \"\(scope?.sprite.name ?? "?")\"\n\(position)\nAssertUserListError\n" + errors.joined(separator: "\n\n"), resultCode: TestResult.stageActivityTestFail))
         return false
+    }
+    private func commonPrefixLength(_ lhs: String, _ rhs: String) -> Int {
+        var count = 0
+        for (a, b) in zip(lhs, rhs) { if a != b { break }; count += 1 }
+        return count
     }
     public override func restart() { evaluated = false; super.restart() }
 }
