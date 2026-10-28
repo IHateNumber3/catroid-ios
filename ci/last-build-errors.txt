@@ -1,27 +1,16 @@
-BUILD ERRORS: 16 unique
+BUILD ERRORS: 11 unique
 
 == Missing symbols (count) ==
-   2  BroadcastMessageBrick
-   1  SystemClock
-   1  FileMetaDataExtractor
-   1  BackpackListManager
-   1  CloneBrick
-   1  saveBitmap
 
 == First errors ==
-catroid/src/main/java/org/catrobat/catroid/content/actions/ResetTimerAction.swift:7:45: error: cannot find 'SystemClock' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/ResetTimerAction.swift:7:23: error: type 'SensorHandler' has no member 'timerReferenceValue'
-catroid/src/main/java/org/catrobat/catroid/content/actions/RunningStitchAction.swift:19:58: error: missing argument labels 'sprite:type:' in call
-catroid/src/main/java/org/catrobat/catroid/content/Scene.swift:93:23: error: cannot find 'FileMetaDataExtractor' in scope
-catroid/src/main/java/org/catrobat/catroid/content/Scene.swift:97:16: error: cannot find 'BackpackListManager' in scope
-catroid/src/main/java/org/catrobat/catroid/content/Scene.swift:112:51: error: cannot find type 'CloneBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/Scene.swift:136:42: error: cannot find type 'BroadcastMessageBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/Scene.swift:152:42: error: cannot find type 'BroadcastMessageBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/SceneTransitionAction.swift:10:48: error: type 'ProjectManager' has no member 'instance'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SceneTransitionAction.swift:12:27: error: value of optional type 'StageListener?' must be unwrapped to refer to member 'transitionToScene' of wrapped base type 'StageListener'
-catroid/src/main/java/org/catrobat/catroid/stage/ScreenshotSaver.swift:42:52: error: value of type 'NSRegularExpression' has no member 'matchesString'
-catroid/src/main/java/org/catrobat/catroid/stage/ScreenshotSaver.swift:43:50: error: value of type 'NSRegularExpression' has no member 'matchesString'
-catroid/src/main/java/org/catrobat/catroid/stage/ScreenshotSaver.swift:70:37: error: generic parameter 'T' could not be inferred
-catroid/src/main/java/org/catrobat/catroid/stage/ScreenshotSaver.swift:70:67: error: type 'UInt8' has no member 'instanceType'
-catroid/src/main/java/org/catrobat/catroid/stage/ScreenshotSaver.swift:94:50: error: value of type 'UIImage' has no member 'resized'
-catroid/src/main/java/org/catrobat/catroid/stage/ScreenshotSaver.swift:107:17: error: cannot find 'saveBitmap' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:346:17: error: value of optional type 'Look?' must be unwrapped to refer to member 'xInUserInterfaceDimensionUnit' of wrapped base type 'Look'
+catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:347:17: error: value of optional type 'Look?' must be unwrapped to refer to member 'yInUserInterfaceDimensionUnit' of wrapped base type 'Look'
+catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:348:39: error: value of optional type 'Look?' must be unwrapped to refer to member 'widthInUserInterfaceDimensionUnit' of wrapped base type 'Look'
+catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:349:40: error: value of optional type 'Look?' must be unwrapped to refer to member 'heightInUserInterfaceDimensionUnit' of wrapped base type 'Look'
+catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:350:25: error: value of optional type 'Look?' must be unwrapped to refer to member 'motionDirectionInUserInterfaceDimensionUnit' of wrapped base type 'Look'
+catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:354:9: error: value of optional type 'Look?' must be unwrapped to refer to member 'setMotionDirectionInUserInterfaceDimensionUnit' of wrapped base type 'Look'
+catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:355:9: error: value of optional type 'Look?' must be unwrapped to refer to member 'setPositionInUserInterfaceDimensionUnit' of wrapped base type 'Look'
+catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:449:24: error: value of optional type 'Look?' must be unwrapped to refer to member 'xInUserInterfaceDimensionUnit' of wrapped base type 'Look'
+catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:449:72: error: value of optional type 'Look?' must be unwrapped to refer to member 'yInUserInterfaceDimensionUnit' of wrapped base type 'Look'
+catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:450:29: error: value of optional type 'Look?' must be unwrapped to refer to member 'motionDirectionInUserInterfaceDimensionUnit' of wrapped base type 'Look'
+catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:1236:35: error: type 'Self' has no member 'commonPrefixLength'
