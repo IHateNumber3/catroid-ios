@@ -126,8 +126,8 @@ jobs:
         if: steps.build.outcome == 'success'
         uses: actions/upload-artifact@v4
         with:
-          name: Catroid-simulator
-          path: Catroid-simulator.zip
+          name: Catroid-iOS
+          path: Catroid.zip
 
       - name: Fail if build failed
         if: steps.build.outcome == 'failure'
