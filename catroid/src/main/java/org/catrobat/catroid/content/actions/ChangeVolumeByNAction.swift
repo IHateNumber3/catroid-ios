@@ -9,7 +9,7 @@ open class ChangeVolumeByNAction: TemporalAction {
     open override func update(_ percent: Float) {
         do {
             var newVolume: Float = try volume == nil ? Float(0) : volume.interpretFloat(scope)
-            SoundManager.instance.setVolume(SoundManager.instance.volume + newVolume)
+            SoundManager.shared.setVolume(SoundManager.shared.volume + newVolume)
         } catch let interpretationException {
             Log.d(String(describing: type(of: self)), "Formula interpretation for this specific Brick failed.", interpretationException)
         }

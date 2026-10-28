@@ -6,7 +6,7 @@ open class ComeToFrontAction: TemporalAction {
     public required init() { super.init() }
 
     open override func update(_ delta: Float) {
-        let spriteList = ProjectManager.shared.currentProject?.spriteListWithClones ?? []
+        let spriteList = ProjectManager.shared.currentProject?.getSpriteListWithClones() ?? []
         sprite.look.setZIndex(spriteList.count + Constants.zIndexNumberVirtualLayers - 1)
     }
 

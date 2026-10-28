@@ -9,6 +9,7 @@ public final class SoundManager {
     public var recentlyStoppedSoundfilePaths: Set<SoundFilePathWithSprite> = []
     public private(set) var mediaPlayers: [SoundPlaybackState] = []
     private var masterVolume: Float = 1
+    public var volume: Float { masterVolume }
 
     public func setVolume(_ value: Float) {
         masterVolume = max(0, min(1, value))
