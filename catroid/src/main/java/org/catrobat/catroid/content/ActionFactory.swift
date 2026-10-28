@@ -986,7 +986,7 @@ open class ActionFactory {
     }
 
     public static func createScriptSequenceAction(_ script: Script) -> Action {
-        return ScriptSequenceAction(script)
+        return ScriptSequenceAction(script: script)
     }
 
     open func createSetBounceFactorAction(_ sprite: Sprite, _ sequence: SequenceAction, _ bounceFactor: Formula) -> Action {

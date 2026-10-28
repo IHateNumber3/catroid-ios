@@ -225,7 +225,7 @@ public extension IOSMissingLoopActionAdapter {
 }
 
 public final class UserDefinedBrickAction: IOSMissingEventActionAdapter {
-    public required init() { super.init() }
+    public required override init() { super.init() }
 
     public override var receivingSprites: [Sprite] {
         guard let sprite = configuration["setSprite"] as? Sprite else { return [] }
@@ -245,7 +245,7 @@ public final class UserDefinedBrickAction: IOSMissingEventActionAdapter {
 }
 
 public final class BroadcastAction: IOSMissingEventActionAdapter {
-public required init() { super.init() }
+public required override init() { super.init() }
     public override var receivingSprites: [Sprite] {
         ProjectManager.shared.currentlyPlayingScene?.spriteList ?? []
     }
@@ -436,6 +436,7 @@ public final class ArcAction: TemporalAction {
     public func setDirection(_ value: ArcBrick.Directions) { direction = value }
     public func setRadius(_ value: Formula) { radiusFormula = value }
     public func setDegrees(_ value: Formula) { degreesFormula = value }
+    public func setInterpolation(_ value: Interpolation?) { /* Geometry action currently uses its native curve. */ }
     public override func begin() {
         guard let scope = scope,
               let degrees = degreesFormula, let radius = radiusFormula,
@@ -468,6 +469,7 @@ public final class GoThroughAction: TemporalAction {
     public required init() { super.init() }
     public func setScope(_ value: Scope) { scope = value }
     public func setTargetCoordinates(_ x1: Formula, _ y1: Formula, _ x2: Formula, _ y2: Formula) { self.x1 = x1; self.y1 = y1; self.x2 = x2; self.y2 = y2 }
+    public func setInterpolation(_ value: Interpolation?) { /* Geometry action currently uses its native curve. */ }
     public override func begin() {
         guard let scope = scope, let x1 = x1, let y1 = y1, let x2 = x2, let y2 = y2,
               let throughX = try? x1.interpretDouble(scope), let throughY = try? y1.interpretDouble(scope),
@@ -562,7 +564,7 @@ public required init() { super.init() }
 }
 
 public final class SetLookAction: IOSMissingEventActionAdapter {
-public required init() { super.init() }
+public required override init() { super.init() }
     public override var receivingSprites: [Sprite] {
         guard let sprite = configuration["setSprite"] as? Sprite else { return [] }
         return [sprite]
@@ -577,7 +579,7 @@ public required init() { super.init() }
 }
 
 public final class SetLookByIndexAction: IOSMissingEventActionAdapter {
-public required init() { super.init() }
+public required override init() { super.init() }
     public override var receivingSprites: [Sprite] {
         guard let sprite = configuration["setSprite"] as? Sprite else { return [] }
         return [sprite]
@@ -922,7 +924,7 @@ public required init() { super.init() }
 }
 
 public final class RepeatAction: IOSMissingLoopActionAdapter {
-public required init() { super.init() }
+public required override init() { super.init() }
     private var initializedCount = false
     private var count = 0
     private var completed = 0
@@ -959,7 +961,7 @@ public required init() { super.init() }
 }
 
 public final class RepeatUntilAction: IOSMissingLoopActionAdapter {
-public required init() { super.init() }
+public required override init() { super.init() }
     public override func delegate(_ delta: Float) -> Bool {
         guard let child = action else { return true }
         if let condition = configuration["setRepeatCondition"] as? Formula,
@@ -1245,7 +1247,7 @@ public final class AssertUserListAction: IOSMissingActionAdapter {
 }
 
 public final class RepeatParameterizedAction: IOSMissingLoopActionAdapter {
-    public required init() { super.init() }
+    public required override init() { super.init() }
     private var initialized = false
     private var finished = false
     private var currentIndex = 0
