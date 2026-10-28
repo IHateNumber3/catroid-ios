@@ -7,10 +7,10 @@ open class SceneTransitionAction: TemporalAction {
     public required init() { super.init() }
 
     open override func update(_ percent: Float) {
-        if sceneName != nil && !(ProjectManager.shared.currentlyPlayingScene?.name ?? "") == sceneName {
-            sprite.releaseAllPointers()
-            StageActivity.stageListener?.transitionToScene(sceneName)
-        }
+        guard let targetSceneName = sceneName else { return }
+        guard ProjectManager.shared.currentlyPlayingScene?.name != targetSceneName else { return }
+        sprite?.releaseAllPointers()
+        StageActivity.stageListener?.transitionToScene(targetSceneName)
     }
 
     open override func reset() {

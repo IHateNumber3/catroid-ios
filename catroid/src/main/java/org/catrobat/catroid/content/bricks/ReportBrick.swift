@@ -7,6 +7,6 @@ open class ReportBrick: FormulaBrick {
     }
 
     open override func addActionToSequence(sprite: Sprite, sequence: ScriptSequenceAction) {
-        sequence.addAction(sprite.actionFactory.createReportAction(sprite, SequenceAction(), sequence.getScript(), getFormulaWithBrickField(.reportBrick)))
+        sequence.addAction(sprite.actionFactory.createReportAction(sprite, SequenceAction(), sequence.script, getFormulaWithBrickField(.reportBrick)))
     }
 }
