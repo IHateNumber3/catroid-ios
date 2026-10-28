@@ -1,40 +1,9 @@
-BUILD ERRORS: 26 unique
+BUILD ERRORS: 3 unique
 
 == Missing symbols (count) ==
-   3  RaspberryPiService
-   1  Drum
    1  ActionPhysicsFactory
-   1  LegoNXTSetting
-   1  LegoEV3Setting
-   1  SetPenColorBrick
-   1  ArduinoSendPWMValueBrick
-   1  SetBackgroundByIndexBrick
-   1  BrickTreeBuilder
 
 == First errors ==
-catroid/src/main/java/org/catrobat/catroid/content/actions/PlayDrumForBeatsAction.swift:12:24: error: cannot find 'Drum' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/PlayDrumForBeatsAction.swift:14:37: error: value of type 'MidiSoundManager' has no member 'playDrumForBeats'
-catroid/src/main/java/org/catrobat/catroid/content/actions/PlayDrumForBeatsAction.swift:15:31: error: no exact matches in call to initializer
-catroid/src/main/java/org/catrobat/catroid/content/actions/PlayDrumForBeatsAction.swift:15:62: error: reference to member 'getDurationForBeats' cannot be resolved without a contextual type
-catroid/src/main/java/org/catrobat/catroid/content/actions/PlayNoteForBeatsAction.swift:20:37: error: value of type 'MidiSoundManager' has no member 'playNoteForBeats'
-catroid/src/main/java/org/catrobat/catroid/content/actions/PlayNoteForBeatsAction.swift:21:31: error: no exact matches in call to initializer
-catroid/src/main/java/org/catrobat/catroid/content/actions/PlayNoteForBeatsAction.swift:21:62: error: reference to member 'getDurationForBeats' cannot be resolved without a contextual type
-catroid/src/main/java/org/catrobat/catroid/content/actions/PointToAction.swift:10:52: error: type 'ProjectManager' has no member 'instance'
-catroid/src/main/java/org/catrobat/catroid/content/Project.swift:159:29: error: value of type 'StageListener' has no member 'getSpritesFromStage'
-catroid/src/main/java/org/catrobat/catroid/content/Project.swift:185:56: error: value of type 'UniqueNameProvider' has no member 'getUniqueName'
+catroid/src/main/java/org/catrobat/catroid/content/actions/PlayDrumForBeatsAction.swift:15:55: error: cannot convert value of type 'Double' to expected argument type 'Float'
+catroid/src/main/java/org/catrobat/catroid/content/actions/PlayNoteForBeatsAction.swift:21:55: error: cannot convert value of type 'Double' to expected argument type 'Float'
 catroid/src/main/java/org/catrobat/catroid/content/Project.swift:234:30: error: cannot find 'ActionPhysicsFactory' in scope
-catroid/src/main/java/org/catrobat/catroid/ProjectManager.swift:156:42: error: cannot find type 'LegoNXTSetting' in scope
-catroid/src/main/java/org/catrobat/catroid/ProjectManager.swift:159:42: error: cannot find type 'LegoEV3Setting' in scope
-catroid/src/main/java/org/catrobat/catroid/ProjectManager.swift:309:38: error: cannot find type 'SetPenColorBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/ProjectManager.swift:320:56: error: cannot find type 'ArduinoSendPWMValueBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/ProjectManager.swift:337:29: error: cannot find type 'SetBackgroundByIndexBrick' in scope
-catroid/src/main/java/org/catrobat/catroid/ProjectManager.swift:348:27: error: cannot find 'BrickTreeBuilder' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/RaspiIfLogicAction.swift:42:26: error: cannot find 'RaspberryPiService' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/RaspiIfLogicAction.swift:44:56: error: cannot convert value of type 'Int' to expected argument type 'String'
-catroid/src/main/java/org/catrobat/catroid/content/actions/RaspiIfLogicAction.swift:47:76: error: binary operator '+' cannot be applied to operands of type 'String' and 'any Error'
-catroid/src/main/java/org/catrobat/catroid/content/actions/RaspiPwmAction.swift:37:26: error: cannot find 'RaspberryPiService' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/RaspiPwmAction.swift:39:13: error: the compiler is unable to type-check this expression in reasonable time; try breaking up the expression into distinct sub-expressions
-catroid/src/main/java/org/catrobat/catroid/content/actions/RaspiPwmAction.swift:42:72: error: binary operator '+' cannot be applied to operands of type 'String' and 'any Error'
-catroid/src/main/java/org/catrobat/catroid/content/actions/RaspiSendDigitalValueAction.swift:33:26: error: cannot find 'RaspberryPiService' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/RaspiSendDigitalValueAction.swift:35:63: error: binary operator '+' cannot be applied to operands of type 'String' and 'Int'
-catroid/src/main/java/org/catrobat/catroid/content/actions/RaspiSendDigitalValueAction.swift:38:85: error: binary operator '+' cannot be applied to operands of type 'String' and 'any Error'
