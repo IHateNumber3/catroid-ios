@@ -1,8 +1,6 @@
-BUILD ERRORS: 3 unique
+BUILD ERRORS: 1 unique
 
 == Missing symbols (count) ==
 
 == First errors ==
-catroid/src/main/java/org/catrobat/catroid/content/bricks/ReportBrick.swift:10:103: error: value of type 'ScriptSequenceAction' has no member 'getScript'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SceneTransitionAction.swift:10:84: error: cannot convert value of type 'String' to expected argument type 'Bool'
-catroid/src/main/java/org/catrobat/catroid/content/actions/SceneTransitionAction.swift:10:94: error: optional type 'String?' cannot be used as a boolean; test for '!= nil' instead
+catroid/src/main/java/org/catrobat/catroid/content/bricks/LegoEv3PlayToneBrick.swift:23:26: error: cannot convert value of type 'Int' to expected argument type 'BrickResource'
