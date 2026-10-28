@@ -28,6 +28,10 @@ public final class EmbroideryPatternManager {
         points.append(point)
     }
 
+    public func addStitchCommand(_ command: DSTStitchCommand) {
+        addPoint(x: command.x, y: command.y, jump: command.isJumpPoint, colorChange: command.isColorChangePoint)
+    }
+
     public func getEmbroideryPatternList() -> [EmbroideryStitchPoint] { lock.lock(); defer { lock.unlock() }; return points }
     public func validPatternExists() -> Bool { lock.lock(); defer { lock.unlock() }; return points.count > 1 }
     public func clear() { lock.lock(); defer { lock.unlock() }; points.removeAll() }
@@ -93,5 +97,21 @@ public final class EmbroideryStitchPoint {
     public var isConnectingPoint: Bool { !isJumpPoint && !isColorChangePoint }
     public init(x: Float, y: Float, isJumpPoint: Bool = false, isColorChangePoint: Bool = false) {
         self.x = x; self.y = y; self.isJumpPoint = isJumpPoint; self.isColorChangePoint = isColorChangePoint
+    }
+}
+
+/// iOS representation of the stitch command used by the original Android implementation.
+public final class DSTStitchCommand {
+    public let x: Float
+    public let y: Float
+    public let zIndex: Int
+    public weak var sprite: Sprite?
+    public let threadColor: UIColor
+    public let isJumpPoint: Bool
+    public let isColorChangePoint: Bool
+
+    public init(_ x: Float, _ y: Float, _ zIndex: Int, _ sprite: Sprite, _ threadColor: UIColor) {
+        self.x = x; self.y = y; self.zIndex = zIndex; self.sprite = sprite; self.threadColor = threadColor
+        self.isJumpPoint = false; self.isColorChangePoint = false
     }
 }

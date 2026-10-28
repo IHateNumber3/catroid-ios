@@ -67,6 +67,11 @@ public class StageScene: SKScene {
     public func registerSprite(_ sprite: Sprite) {
         if !sprites.contains(where: { $0 === sprite }) { sprites.append(sprite) }
     }
+
+    /// Releases a synthetic touch pointer used by translated Pocket Code actions.
+    public func touchUp(x: Int, y: Int, pointer: Int, button: Int) {
+        TouchUtil.touchUp(pointer: pointer)
+    }
     
     override public func didMove(to view: SKView) {
         super.didMove(to: view)

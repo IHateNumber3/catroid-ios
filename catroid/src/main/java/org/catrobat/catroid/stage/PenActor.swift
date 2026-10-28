@@ -72,6 +72,11 @@ public class PenActor: SKNode {
         updateTexture()
     }
     
+    /// Compatibility entry point used by the Stamp brick.
+    public func stampToFrameBuffer() {
+        updatePenAndStamps(sprites: StageListener.shared.stage.spritesFromStage)
+    }
+
     private func updateTexture() {
         guard let image = coreGraphicsImage else { return }
         canvasTexture = SKTexture(image: image)
