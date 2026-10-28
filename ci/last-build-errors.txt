@@ -1,9 +1,7 @@
-BUILD ERRORS: 3 unique
+BUILD ERRORS: 2 unique
 
 == Missing symbols (count) ==
-   1  ActionPhysicsFactory
 
 == First errors ==
-catroid/src/main/java/org/catrobat/catroid/content/actions/PlayDrumForBeatsAction.swift:15:55: error: cannot convert value of type 'Double' to expected argument type 'Float'
-catroid/src/main/java/org/catrobat/catroid/content/actions/PlayNoteForBeatsAction.swift:21:55: error: cannot convert value of type 'Double' to expected argument type 'Float'
-catroid/src/main/java/org/catrobat/catroid/content/Project.swift:234:30: error: cannot find 'ActionPhysicsFactory' in scope
+catroid/src/main/java/org/catrobat/catroid/content/actions/PlayDrumForBeatsAction.swift:15:55: error: value of type 'MidiSoundManager' has no member 'Float'
+catroid/src/main/java/org/catrobat/catroid/content/actions/PlayNoteForBeatsAction.swift:21:55: error: value of type 'MidiSoundManager' has no member 'Float'
