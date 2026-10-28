@@ -1,16 +1,8 @@
-BUILD ERRORS: 11 unique
+BUILD ERRORS: 3 unique
 
 == Missing symbols (count) ==
 
 == First errors ==
-catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:346:17: error: value of optional type 'Look?' must be unwrapped to refer to member 'xInUserInterfaceDimensionUnit' of wrapped base type 'Look'
-catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:347:17: error: value of optional type 'Look?' must be unwrapped to refer to member 'yInUserInterfaceDimensionUnit' of wrapped base type 'Look'
-catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:348:39: error: value of optional type 'Look?' must be unwrapped to refer to member 'widthInUserInterfaceDimensionUnit' of wrapped base type 'Look'
-catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:349:40: error: value of optional type 'Look?' must be unwrapped to refer to member 'heightInUserInterfaceDimensionUnit' of wrapped base type 'Look'
-catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:350:25: error: value of optional type 'Look?' must be unwrapped to refer to member 'motionDirectionInUserInterfaceDimensionUnit' of wrapped base type 'Look'
-catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:354:9: error: value of optional type 'Look?' must be unwrapped to refer to member 'setMotionDirectionInUserInterfaceDimensionUnit' of wrapped base type 'Look'
-catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:355:9: error: value of optional type 'Look?' must be unwrapped to refer to member 'setPositionInUserInterfaceDimensionUnit' of wrapped base type 'Look'
-catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:449:24: error: value of optional type 'Look?' must be unwrapped to refer to member 'xInUserInterfaceDimensionUnit' of wrapped base type 'Look'
-catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:449:72: error: value of optional type 'Look?' must be unwrapped to refer to member 'yInUserInterfaceDimensionUnit' of wrapped base type 'Look'
-catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:450:29: error: value of optional type 'Look?' must be unwrapped to refer to member 'motionDirectionInUserInterfaceDimensionUnit' of wrapped base type 'Look'
-catroid/src/main/java/org/catrobat/catroid/content/actions/IOSMissingActionAdapters.swift:1236:35: error: type 'Self' has no member 'commonPrefixLength'
+catroid/src/main/java/org/catrobat/catroid/content/bricks/ReportBrick.swift:10:103: error: value of type 'ScriptSequenceAction' has no member 'getScript'
+catroid/src/main/java/org/catrobat/catroid/content/actions/SceneTransitionAction.swift:10:84: error: cannot convert value of type 'String' to expected argument type 'Bool'
+catroid/src/main/java/org/catrobat/catroid/content/actions/SceneTransitionAction.swift:10:94: error: optional type 'String?' cannot be used as a boolean; test for '!= nil' instead
