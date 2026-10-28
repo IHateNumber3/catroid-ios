@@ -9,7 +9,7 @@ open class StitchAction: TemporalAction {
         sprite.runningStitch.pause()
         var x: Float = sprite.look.xInUserInterfaceDimensionUnit
         var y: Float = sprite.look.yInUserInterfaceDimensionUnit
-        StageActivity.stageListener.embroideryPatternManager.addStitchCommand(DSTStitchCommand(x, y, sprite.look.zIndex, sprite, sprite.embroideryThreadColor))
+        StageActivity.stageListener?.embroideryPatternManager.addStitchCommand(DSTStitchCommand(x, y, sprite.look.zIndex, sprite, sprite.embroideryThreadColor))
         sprite.runningStitch.setStartCoordinates(x, y)
         sprite.runningStitch.resume()
     }
