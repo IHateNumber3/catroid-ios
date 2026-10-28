@@ -1,15 +1,10 @@
-BUILD ERRORS: 8 unique
+BUILD ERRORS: 4 unique
 
 == Missing symbols (count) ==
    2  UniqueNameProvider
-   1  DSTStitchCommand
 
 == First errors ==
-catroid/src/main/java/org/catrobat/catroid/content/Sprite.swift:549:23: error: value of type 'StageScene' has no member 'touchUp'
-catroid/src/main/java/org/catrobat/catroid/content/Sprite.swift:571:21: error: cannot assign to property: 'file' setter is inaccessible
 catroid/src/main/java/org/catrobat/catroid/content/Sprite.swift:573:32: error: cannot find 'UniqueNameProvider' in scope
-catroid/src/main/java/org/catrobat/catroid/content/Sprite.swift:580:21: error: cannot assign to property: 'file' setter is inaccessible
 catroid/src/main/java/org/catrobat/catroid/content/Sprite.swift:582:32: error: cannot find 'UniqueNameProvider' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/StampAction.swift:10:46: error: reference to member 'stampToFrameBuffer' cannot be resolved without a contextual type
-catroid/src/main/java/org/catrobat/catroid/content/actions/StitchAction.swift:12:79: error: cannot find 'DSTStitchCommand' in scope
-catroid/src/main/java/org/catrobat/catroid/content/actions/StitchAction.swift:12:62: error: reference to member 'addStitchCommand' cannot be resolved without a contextual type
+catroid/src/main/java/org/catrobat/catroid/content/actions/StampAction.swift:10:23: error: value of optional type 'StageListener?' must be unwrapped to refer to member 'penActor' of wrapped base type 'StageListener'
+catroid/src/main/java/org/catrobat/catroid/content/actions/StitchAction.swift:12:23: error: value of optional type 'StageListener?' must be unwrapped to refer to member 'embroideryPatternManager' of wrapped base type 'StageListener'
