@@ -23,6 +23,7 @@ public class StageScene: SKScene {
 
     public func addActor(_ actor: Actor) {
         if !actors.contains(where: { $0 === actor }) { actors.append(actor) }
+        if let look = actor as? Look, look.node.parent !== self { addChild(look.node) }
     }
 
     public func addActor(_ node: SKNode) {
@@ -83,24 +84,46 @@ public class StageScene: SKScene {
     }
     
     private func loadSceneContent() {
-        // Загрузка спрайтов текущей сцены, добавление их на SKScene
-        // Аналог initActors(sprites) из Java-кода
         print("[\(StageScene.tag)] Loading sprites and actors...")
-        
+        guard let scene = ProjectManager.shared.currentlyPlayingScene else {
+            isPausedState = false
+            firstFrameDrawn = true
+            return
+        }
+        loadScene(scene)
         isPausedState = false
         firstFrameDrawn = true
     }
+
+    /// Rebuilds the visible actor layer for the selected Catrobat scene.
+    public func loadScene(_ scene: Scene) {
+        for sprite in sprites { sprite.look.node.removeFromParent() }
+        actors.removeAll { $0 is Look }
+        sprites = scene.spriteList
+        for sprite in sprites {
+            if sprite.look.lookData == nil, let firstLook = sprite.lookList.first { sprite.look.setLookData(firstLook) }
+            addActor(sprite.look)
+            sprite.initConditionScriptTriggers()
+            sprite.initIfConditionBrickTriggers()
+            sprite.initializeEventThreads(startType: .start)
+        }
+        cameraPositionerResetIfAvailable()
+    }
+
+    private func cameraPositionerResetIfAvailable() {
+        StageListener.shared.cameraPositioner.reset()
+    }
     
-    // MARK: - Игровой цикл (аналог render() в LibGDX)
+    // MARK: - Game loop (iOS equivalent of scene2d Stage.act)
+    private var previousFrameTime: TimeInterval = 0
     override public func update(_ currentTime: TimeInterval) {
         super.update(currentTime)
-        
-        if isFinished || isPausedState {
-            return
-        }
-        
-        // Здесь происходит обновление физики, скриптов и действий спрайтов за кадр (Delta Time)
-        // Аналог stage.act(optimizedDeltaTime) и physicsWorld.step(...)
+        guard !isFinished, !isPausedState else { previousFrameTime = currentTime; return }
+        let rawDelta = previousFrameTime > 0 ? currentTime - previousFrameTime : 1.0 / 60.0
+        previousFrameTime = currentTime
+        let delta = Float(min(max(rawDelta, 0), 0.1))
+        for actor in actors { actor.act(delta) }
+        StageListener.shared.cameraPositioner.updateCameraPositionForFocusedSprite()
     }
     
     // MARK: - Управление состоянием (Pause / Resume / Finish)

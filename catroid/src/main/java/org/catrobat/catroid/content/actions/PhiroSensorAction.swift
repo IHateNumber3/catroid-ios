@@ -4,7 +4,7 @@ open class PhiroSensorAction: Action {
     var sensorNumber: Int = 0
     var scope: Scope!
     var ifAction: Action!
-    var elseAction: Action!
+    var elseAction: Action?
     var ifCondition: Formula!
     var ifConditionValue: Bool = false
     var isInitialized: Bool = false
@@ -24,7 +24,7 @@ open class PhiroSensorAction: Action {
 
     open override func restart() {
         ifAction.restart()
-        elseAction.restart()
+        elseAction?.restart()
         isInitialized = false
         super.restart()
     }
@@ -37,7 +37,7 @@ open class PhiroSensorAction: Action {
         self.ifAction = ifAction
     }
 
-    public func setElseAction(_ elseAction: Action) {
+    public func setElseAction(_ elseAction: Action?) {
         self.elseAction = elseAction
     }
 

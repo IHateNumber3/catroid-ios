@@ -15,7 +15,14 @@ open class ReadVariableFromDeviceAction: AsynchronousAction {
 
     open override func initialize() {
         readActionFinished = false
-        ReadTask().execute(userVariable)
+        guard let variable = userVariable,
+              let projectDirectory = ProjectManager.shared.currentProject?.directory else {
+            readActionFinished = true
+            return
+        }
+        let stored = DeviceVariableAccessor(projectDirectory).readDictionary()
+        if let value = stored[variable.name] { variable.value = value }
+        readActionFinished = true
     }
 
     open override func isFinished() -> Bool {

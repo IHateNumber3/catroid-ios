@@ -25,8 +25,8 @@ public class CameraPositioner {
               let look = sprite.look else { return }
         
         // Получаем координаты спрайта (аналог xInUserInterfaceDimensionUnit)
-        let spritePositionX = CGFloat(look.position.x) // Или твоя реализация UI координат
-        let spritePositionY = CGFloat(look.position.y)
+        let spritePositionX = CGFloat(look.xInUserInterfaceDimensionUnit) // Или твоя реализация UI координат
+        let spritePositionY = CGFloat(look.yInUserInterfaceDimensionUnit)
         
         let limitX = virtualWidthHalf * (CGFloat(horizontalFlex) / CGFloat(CameraPositioner.calculatePercent))
         let limitY = virtualHeightHalf * (CGFloat(verticalFlex) / CGFloat(CameraPositioner.calculatePercent))

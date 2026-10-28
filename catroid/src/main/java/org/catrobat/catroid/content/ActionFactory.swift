@@ -145,7 +145,7 @@ open class ActionFactory {
         let action = GlideToAction()
         action.setPosition(x, y)
         action.setDuration(0)
-        action.setInterpolation(nil)
+        action.interpolation = nil
         let scope = Scope(project: ProjectManager.shared.currentProject, sprite: sprite, sequence: sequence)
         action.setScope(scope)
         return action
@@ -1285,8 +1285,8 @@ open class ActionFactory {
 
     open func createWriteVariableOnDeviceAction(_ userVariable: UserVariable) -> Action {
         let action = WriteUserDataOnDeviceAction()
-        var projectDirectory = ProjectManager.shared.currentProject.directory
-        var accessor = DeviceVariableAccessor(projectDirectory)
+        guard let project = ProjectManager.shared.currentProject else { return action }
+        let accessor = DeviceVariableAccessor(project.directory)
         action.setUserData(userVariable)
         action.setAccessor(accessor)
         return action
@@ -1313,10 +1313,9 @@ open class ActionFactory {
 
     open func createWriteListOnDeviceAction(_ userList: UserList) -> Action {
         let action = WriteUserDataOnDeviceAction()
-        var projectDirectory = ProjectManager.shared.currentProject.directory
-        var accessor = DeviceListAccessor(projectDirectory)
-        var data = userList
-        action.setUserData(data)
+        guard let project = ProjectManager.shared.currentProject else { return action }
+        let accessor = DeviceListAccessor(project.directory)
+        action.setUserData(userList)
         action.setAccessor(accessor)
         return action
     }

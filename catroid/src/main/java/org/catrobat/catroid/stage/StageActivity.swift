@@ -6,6 +6,18 @@ public class StageViewController: UIViewController {
     public var currentStageScene: StageScene?
 
     public static let tag = "StageViewController"
+    public private(set) static var lastTestResult: TestResult?
+
+    public static func finishTestWithResult(_ result: TestResult) {
+        lastTestResult = result
+        DispatchQueue.main.async {
+            guard let controller = activeStage else { return }
+            let title = result.resultCode == TestResult.stageActivityTestFail ? "Catroid test failed" : "Catroid test result"
+            let alert = UIAlertController(title: title, message: result.message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            if controller.presentedViewController == nil { controller.present(alert, animated: true) }
+        }
+    }
     
     // Слабая ссылка на активный экземпляр (аналог activeStageActivity)
     public static weak var activeStage: StageViewController?
@@ -50,6 +62,7 @@ public class StageViewController: UIViewController {
     }
 
     private func setupUI() {
+        EmbroideryPatternManager.shared.clear()
         view.backgroundColor = .black
         
         // Настраиваем SKView для отрисовки графики Catroid (вместо LibGDX)

@@ -49,6 +49,7 @@ targets:
         UIRequiredDeviceCapabilities: [arm64]
         UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait, UIInterfaceOrientationLandscapeLeft, UIInterfaceOrientationLandscapeRight]
         NSCameraUsageDescription: Camera is used by bricks that need it.
+        NSPhotoLibraryUsageDescription: Catroid uses selected images as sprite looks.
         NSMicrophoneUsageDescription: Microphone is used by sound and loudness sensors.
         NSMotionUsageDescription: Motion sensors are used by the accelerometer and inclination formulas.
         NSSpeechRecognitionUsageDescription: Speech recognition is used by listening bricks.

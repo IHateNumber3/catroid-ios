@@ -45,6 +45,7 @@ open class GlideToAction: TemporalAction {
     open override func restart() { super.restart() }
     public func setScope(_ scope: Scope) { self.scope = scope }
     public func setPosition(_ x: Formula, _ y: Formula) { endX = x; endY = y }
+    public func setInterpolation(_ interpolation: Interpolation?) { self.interpolation = interpolation }
     public func setDurationFormula(_ duration: Formula) { self.duration = duration }
     public func setDuration(_ duration: Formula) { self.duration = duration }
 }

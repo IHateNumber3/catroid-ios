@@ -12,7 +12,25 @@ public final class StageListener {
         return StageScene(size: CGSize(width: 800, height: 480))
     }
 
+    public var embroideryPatternManager: EmbroideryPatternManager { EmbroideryPatternManager.shared }
     public var shapeRenderer: ShapeRenderer? { nil }
+    private var cameraPositionerStorage: CameraPositioner?
+    public var cameraPositioner: CameraPositioner {
+        if let existing = cameraPositionerStorage { return existing }
+        let scene = stage
+        let camera = scene.camera ?? SKCameraNode()
+        if scene.camera == nil { scene.camera = camera; scene.addChild(camera) }
+        let created = CameraPositioner(camera: camera,
+                                       virtualHeightHalf: scene.size.height / 2,
+                                       virtualWidthHalf: scene.size.width / 2)
+        cameraPositionerStorage = created
+        return created
+    }
+    public func focusCamera(on sprite: Sprite, horizontalFlex: Float, verticalFlex: Float) {
+        cameraPositioner.horizontalFlex = horizontalFlex
+        cameraPositioner.verticalFlex = verticalFlex
+        cameraPositioner.spriteToFocusOn = sprite
+    }
     public var firstFrameDrawn: Bool { stage.firstFrameDrawn }
     public var spritesFromStage: [Sprite] { stage.spritesFromStage }
     public func getAllClonesOfSprite(_ sprite: Sprite) -> [Sprite] { stage.spritesFromStage.filter { $0 !== sprite && $0.name == sprite.name } }
@@ -31,5 +49,11 @@ public final class StageListener {
     public func setBubbleActorForSprite(_ sprite: Sprite, _ bubble: ShowBubbleActor) { stage.setBubbleActorForSprite(sprite, showBubbleActor: bubble) }
     public func removeBubbleActorForSprite(_ sprite: Sprite) { stage.removeBubbleActorForSprite(sprite) }
     public func removeClonedSpriteFromStage(_ sprite: Sprite) { _ = stage.removeClonedSpriteFromStage(sprite) }
-    public func transitionToScene(_ name: String) { }
+    public func transitionToScene(_ name: String) {
+        guard let project = ProjectManager.shared.currentProject,
+              let target = project.getSceneByName(name) else { return }
+        ProjectManager.shared.currentlyPlayingScene = target
+        stage.loadScene(target)
+        stage.resumeScene()
+    }
 }

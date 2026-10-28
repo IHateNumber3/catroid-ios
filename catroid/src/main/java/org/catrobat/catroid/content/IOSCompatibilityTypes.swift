@@ -1,7 +1,7 @@
 import Foundation
 
 // Swift counterparts for model types that were originally Java/Kotlin-only.
-public struct ParameterizedData {
+public final class ParameterizedData {
     public var currentPosition: Int = 0
     public var listSize: Int = 1
     public var failMessages = ""
@@ -11,11 +11,7 @@ public struct ParameterizedData {
         self.currentPosition = currentPosition; self.listSize = listSize
         self.failMessages = failMessages; self.successMessages = successMessages; self.currentParameters = currentParameters
     }
-    public mutating func reset() { currentPosition = 0; listSize = 1; failMessages = ""; successMessages = ""; currentParameters = "" }
-}
-
-public final class SetNextLookAction {
-    public init() {}
+    public func reset() { currentPosition = 0; listSize = 1; failMessages = ""; successMessages = ""; currentParameters = "" }
 }
 
 public enum PickableDrum: Int, CaseIterable {

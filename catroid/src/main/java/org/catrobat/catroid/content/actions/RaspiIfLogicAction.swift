@@ -4,7 +4,7 @@ open class RaspiIfLogicAction: Action {
     public static let TAG: String = String(describing: RaspiIfLogicAction.self)
     var scope: Scope!
     var ifAction: Action!
-    var elseAction: Action!
+    var elseAction: Action?
     var isInitialized: Bool = false
     var pinNumber: Formula!
     var pin: Int = 0
@@ -34,7 +34,7 @@ open class RaspiIfLogicAction: Action {
         if readIfConditionValue() {
             return ifAction.act(delta)
         } else {
-            return elseAction.act(delta)
+            return elseAction?.act(delta) ?? true
         }
     }
 
@@ -51,7 +51,7 @@ open class RaspiIfLogicAction: Action {
 
     open override func restart() {
         ifAction.restart()
-        elseAction.restart()
+        elseAction?.restart()
         isInitialized = false
         super.restart()
     }
@@ -64,13 +64,13 @@ open class RaspiIfLogicAction: Action {
         self.ifAction = ifAction
     }
 
-    public func setElseAction(_ elseAction: Action) {
+    public func setElseAction(_ elseAction: Action?) {
         self.elseAction = elseAction
     }
 
     public func setActor(_ actor: Actor) {
         super.setActor(actor)
         ifAction.setActor(actor)
-        elseAction.setActor(actor)
+        elseAction?.setActor(actor)
     }
 }

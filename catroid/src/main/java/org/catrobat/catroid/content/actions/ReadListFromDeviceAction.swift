@@ -15,8 +15,13 @@ open class ReadListFromDeviceAction: AsynchronousAction {
 
     open override func initialize() {
         readActionFinished = false
-        // Device-list access is not available in this iOS compatibility layer.
-        // Finish safely instead of leaving the asynchronous action suspended forever.
+        guard let list = userList,
+              let projectDirectory = ProjectManager.shared.currentProject?.directory else {
+            readActionFinished = true
+            return
+        }
+        let stored = DeviceListAccessor(projectDirectory).readDictionary()
+        if let values = stored[list.name] as? [Any] { list.value = values }
         readActionFinished = true
     }
 

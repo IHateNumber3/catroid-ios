@@ -25,7 +25,7 @@ open class ArduinoSendDigitalValueAction: TemporalAction {
             pinValueInterpretation = 0
             Log.d(String(describing: type(of: self)), "Formula interpretation for this specific Brick failed.", interpretationException)
         }
-        if (!restart) && (pinNumberInterpretation >= 0) && (pinNumberInterpretation < ArduinoImpl.numberOfDigitalPins) {
+        if (!restart) && (pinNumberInterpretation >= 0) && (pinNumberInterpretation < 14) {
             self.pin = pinNumberInterpretation
             self.value = pinValueInterpretation
         }
@@ -33,10 +33,8 @@ open class ArduinoSendDigitalValueAction: TemporalAction {
     }
 
     open override func update(_ percent: Float) {
-        var arduino = ServiceProvider.getService(CatroidService.bluetoothDeviceService).getDevice(BluetoothDevice.arduino)
-        if arduino != nil {
-            arduino.setDigitalArduinoPin(pin, value)
-        }
+        // Arduino Bluetooth transport is Android-specific; the iOS transport is not wired yet.
+        // Keep this action safely inert until a CoreBluetooth implementation is connected.
     }
 
     public func setScope(_ scope: Scope) {
