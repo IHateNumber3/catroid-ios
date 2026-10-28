@@ -39,8 +39,8 @@ public class ScreenshotSaver {
         
         guard let fileName = fileName,
               !fileName.isEmpty,
-              !ScreenshotSaver.onlyWhitespaceRegex.matchesString(fileName),
-              ScreenshotSaver.validFilenameRegex.matchesString(fileName) else {
+              !fileName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
+              ScreenshotSaver.validFilenameRegex.firstMatch(in: fileName, range: NSRange(fileName.startIndex..., in: fileName)) != nil else {
             print("[\(ScreenshotSaver.tag)] Screenshot filename invalid")
             callback?.screenshotSaved(success: false)
             return
@@ -67,7 +67,7 @@ public class ScreenshotSaver {
         var pixels = [UInt32](repeating: 0, count: colorCount)
         data.withUnsafeBytes { ptr in
             guard let baseAddress = ptr.baseAddress else { return }
-            let bytes = baseAddress.assumingMemoryBound(to: UInt8.instanceType) // или UInt8
+            let bytes = baseAddress.assumingMemoryBound(to: UInt8.self) // или UInt8
             for i in stride(from: 0, to: length, by: ScreenshotSaver.numberOfColors) {
                 let r = UInt32(bytes[i])
                 let g = UInt32(bytes[i + 1])
@@ -91,9 +91,7 @@ public class ScreenshotSaver {
             newWidth = ScreenshotSaver.maxScreenshotWidth
         }
         
-        guard let resizedImage = fullScreenImage.resized(to: CGSize(width: newWidth, height: ScreenshotSaver.maxScreenshotHeight)) else {
-            return false
-        }
+        let resizedImage = fullScreenImage.scaledToFit(CGSize(width: newWidth, height: ScreenshotSaver.maxScreenshotHeight))
         
         // Пути сохранения файлов
         let fileManager = FileManager.default
@@ -104,7 +102,7 @@ public class ScreenshotSaver {
             try fileManager.createDirectory(at: targetDirectory, withIntermediateDirectories: true)
             
             // Сохраняем уменьшенную версию
-            try saveBitmap(resizedImage, to: targetFileURL)
+            try resizedImage.pngData().unwrapOrThrow(ScreenshotSaveError.imageEncoding).write(to: targetFileURL, options: .atomic)
             
             // Если есть менеджер проекта, сохраняем сессионный скриншот
             // let projectManager = ProjectManager.shared
@@ -139,5 +137,21 @@ public class ScreenshotSaver {
             return nil
         }
         return UIImage(cgImage: image)
+    }
+}
+
+private enum ScreenshotSaveError: Error { case imageEncoding }
+
+private extension Optional where Wrapped == Data {
+    func unwrapOrThrow(_ error: Error) throws -> Data {
+        guard let value = self else { throw error }
+        return value
+    }
+}
+
+private extension UIImage {
+    func scaledToFit(_ targetSize: CGSize) -> UIImage {
+        let renderer = UIGraphicsImageRenderer(size: targetSize)
+        return renderer.image { _ in self.draw(in: CGRect(origin: .zero, size: targetSize)) }
     }
 }

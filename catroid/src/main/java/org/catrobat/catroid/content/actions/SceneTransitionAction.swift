@@ -7,9 +7,9 @@ open class SceneTransitionAction: TemporalAction {
     public required init() { super.init() }
 
     open override func update(_ percent: Float) {
-        if sceneName != nil && !ProjectManager.instance.currentlyPlayingScene.name.equals(sceneName) {
+        if sceneName != nil && !(ProjectManager.shared.currentlyPlayingScene?.name ?? "") == sceneName {
             sprite.releaseAllPointers()
-            StageActivity.stageListener.transitionToScene(sceneName)
+            StageActivity.stageListener?.transitionToScene(sceneName)
         }
     }
 

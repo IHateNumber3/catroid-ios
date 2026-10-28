@@ -16,7 +16,7 @@ open class RunningStitchAction: TemporalAction {
             lengthInterpretation = 0
             Log.d(String(describing: type(of: self)), "Formula interpretation for this specific Brick failed.", interpretationException)
         }
-        self.scope.sprite.runningStitch.activateStitching(scope.sprite, SimpleRunningStitch(scope.sprite, lengthInterpretation))
+        self.scope.sprite.runningStitch.activateStitching(sprite: scope.sprite, type: SimpleRunningStitch(scope.sprite, lengthInterpretation))
     }
 
     public func setScope(_ scope: Scope) {

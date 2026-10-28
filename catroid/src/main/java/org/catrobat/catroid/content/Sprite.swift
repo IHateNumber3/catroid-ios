@@ -561,6 +561,19 @@ open class Sprite: Nameable, Hashable {
 
     // MARK: - Copy / merge
 
+    private static func uniqueName(_ name: String, in existingNames: [String]) -> String {
+        let existing = Set(existingNames)
+        guard existing.contains(name) else { return name }
+        let base = name.replacingOccurrences(of: "\\s*\\(\\d+\\)$", with: "", options: .regularExpression)
+        var index = 1
+        while index < Int.max {
+            let candidate = "\(base) (\(index))"
+            if !existing.contains(candidate) { return candidate }
+            index += 1
+        }
+        return base
+    }
+
     private func copyLooksAndSounds(from sprite: Sprite, destinationScene: Scene, setUniqueName: Bool) throws {
         let imageDir = destinationScene.directory.appendingPathComponent(Constants.imageDirectoryName)
         let soundsDir = destinationScene.directory.appendingPathComponent(Constants.soundDirectoryName)
@@ -570,7 +583,7 @@ open class Sprite: Nameable, Hashable {
             let newData = data.clone()
             newData.setFile(lookFile)
             if setUniqueName {
-                newData.name = UniqueNameProvider().getUniqueNameInNameables(newData.name, lookList)
+                newData.name = Self.uniqueName(newData.name, in: lookList.map { $0.name })
             }
             lookList.append(newData)
         }
@@ -579,7 +592,7 @@ open class Sprite: Nameable, Hashable {
             let newData = data.clone()
             newData.setFile(soundFile)
             if setUniqueName {
-                newData.name = UniqueNameProvider().getUniqueNameInNameables(newData.name, soundList)
+                newData.name = Self.uniqueName(newData.name, in: soundList.map { $0.name })
             }
             soundList.append(newData)
         }
