@@ -127,7 +127,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Catroid-iOS
-          path: Catroid.zip
+          path: Catroid.ipa
 
       - name: Fail if build failed
         if: steps.build.outcome == 'failure'
