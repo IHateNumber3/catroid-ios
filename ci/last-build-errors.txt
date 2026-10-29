@@ -1,5 +1,11 @@
-BUILD ERRORS: 0 unique
+BUILD ERRORS: 6 unique
 
 == Missing symbols (count) ==
 
 == First errors ==
+catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:8:42: error: consecutive declarations on a line must be separated by ';'
+catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:8:42: error: expected declaration
+catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:8:44: error: consecutive declarations on a line must be separated by ';'
+catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:8:94: error: consecutive declarations on a line must be separated by ';'
+catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:8:94: error: expected declaration
+catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:8:96: error: consecutive declarations on a line must be separated by ';'
