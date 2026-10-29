@@ -1,0 +1,2006 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--
+  ~ Catroid: An on-device visual programming system for Android devices
+  ~ Copyright (C) 2010-2026 The Catrobat Team
+  ~ (<http://developer.catrobat.org/credits>)
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU Affero General Public License as
+  ~ published by the Free Software Foundation, either version 3 of the
+  ~ License, or (at your option) any later version.
+  ~
+  ~ An additional term exception under section 7 of the GNU Affero
+  ~ General Public License, version 3, is available at
+  ~ http://developer.catrobat.org/license_additional_term
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  ~ GNU Affero General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU Affero General Public License
+  ~ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+  -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- General terms -->
+    <string formatted="false" name="stage">Escenario</string>
+    <string formatted="false" name="play">Executar</string>
+    <string formatted="false" name="settings">Configuración</string>
+    <string formatted="false" name="redo">Refacer</string>
+    <string formatted="false" name="undo">Desfacer</string>
+    <string formatted="false" name="new_option">novo…</string>
+    <string formatted="false" name="edit_option">editar…</string>
+    <string formatted="false" name="confirm">Confirmar</string>
+    <string formatted="false" name="ignore">Ignorar</string>
+    <string formatted="false" name="cancel">Cancelar</string>
+    <string formatted="false" name="save">Gardar</string>
+    <string formatted="false" name="help">Axuda</string>
+    <string formatted="false" name="discard">Descartar</string>
+    <string formatted="false" name="next">Seguinte</string>
+    <string formatted="false" name="ok">Aceptar</string>
+    <string formatted="false" name="done">Feito</string>
+    <string formatted="false" name="close">Pechar</string>
+    <string formatted="false" name="assistant">Asistente</string>
+    <string formatted="false" name="yes">Si</string>
+    <string formatted="false" name="no">Non</string>
+    <string formatted="false" name="once">Unha vez</string>
+    <string formatted="false" name="always">Sempre</string>
+    <string formatted="false" name="deny">Denegar</string>
+    <string formatted="false" name="do_not_show_again">NON VOLVER MOSTRAR</string>
+    <string formatted="false" name="accept">Aceptar</string>
+    <string formatted="false" name="decline">Rexeitar</string>
+    <string formatted="false" name="select_all">Seleccionar todo</string>
+    <string formatted="false" name="deselect_all">Deseleccionar todo</string>
+    <string formatted="false" name="skip">omitir</string>
+    <string formatted="false" name="warning">Aviso</string>
+    <string formatted="false" name="error">Erro</string>
+    <string formatted="false" name="loading">Cargando…</string>
+    <string formatted="false" name="please_wait">Agarda, por favor</string>
+    <string formatted="false" name="search_hint">Buscar</string>
+    <string formatted="false" name="backpack_add">Engadir á mochila</string>
+    <string formatted="false" name="share_website_text">share.catrob.at</string>
+    <!-- Security warning dialog -->
+    <string formatted="false" name="security_warning_dialog_msg">O proxecto que descargaches escoita a túa voz en segundo plano e tamén envía datos a internet. Isto pode ser inofensivo e necesario para o seu funcionamento previsto. Porén, asegúrate de que o que dis mentres se executa o proxecto é seguro. En caso de dúbida, elimina o proxecto descargado. Se estás seguro de que é daniño, tamén podes denunciar o proxecto na súa páxina da plataforma da comunidade Catrobat.</string>
+    <!-- Replace Api dialog -->
+    <string formatted="false" name="api_replacement_dialog_neutral">Subir sen cambios</string>
+    <string formatted="false" name="api_replacement_dialog_accept">Subir coas claves substituídas</string>
+    <string formatted="false" name="api_replacement_dialog_warning">O proxecto contén bloques que acceden á web e parece conter tamén claves de API. Consulta %1s para saber por que subir estas claves pode ser perigoso.</string>
+    <string formatted="false" name="api_replacement">inserir aquí a clave de API</string>
+    <!-- -->
+    <!-- Login/Logout Mechanism -->
+    <string formatted="false" name="loading_check_oauth_token">Comprobando os datos de inicio de sesión…</string>
+    <string formatted="false" name="loading_google_exchange_code">Intercambiando os datos de inicio de sesión de Google…</string>
+    <string formatted="false" name="loading_google_login">Completouse o inicio de sesión con Google no noso servidor…</string>
+    <string formatted="false" name="logout_successful">Pechaches a sesión correctamente</string>
+    <string formatted="false" name="degrees">graos</string>
+    <string formatted="false" name="background">Fondo</string>
+    <string formatted="false" name="landscape">horizontal</string>
+    <string formatted="false" name="portrait">vertical</string>
+    <string formatted="false" name="unknown">descoñecido</string>
+    <string formatted="false" name="disconnect">Desconectar</string>
+    <!--  -->
+    <!-- Main Menu -->
+    <string formatted="false" name="main_menu_continue">Continuar proxecto</string>
+    <string formatted="false" name="main_menu_new">Novo proxecto</string>
+    <string formatted="false" name="main_menu_programs">Proxectos</string>
+    <string formatted="false" name="main_menu_help">Axuda</string>
+    <string formatted="false" name="main_menu_web">Catrobat</string>
+    <string formatted="false" name="main_menu_upload">Subir proxecto</string>
+    <string formatted="false" name="main_menu_play">Executar proxecto</string>
+    <string formatted="false" name="main_menu_rate_app">Valóranos!</string>
+    <string formatted="false" name="main_menu_terms_of_use">Condicións de uso e servizo</string>
+    <string formatted="false" name="main_menu_privacy_policy">Política de privacidade</string>
+    <string formatted="false" name="main_menu_about">Acerca desta aplicación</string>
+    <string formatted="false" name="main_menu_login">Iniciar sesión</string>
+    <string formatted="false" name="main_menu_logout">Pechar sesión</string>
+    <string formatted="false" name="main_menu_scratch_converter">Conversor de Scratch</string>
+    <string formatted="false" name="main_menu_play_store_not_installed">Non se atopou a tenda de aplicacións</string>
+    <!--  -->
+    <!-- Marketing activity -->
+    <string formatted="false" name="marketing_created_with">Creado con</string>
+    <string formatted="false" name="marketing_app_details">Detalles sobre esta aplicación</string>
+    <string formatted="false" name="marketing_more_on_google_play">Máis aplicacións na tenda</string>
+    <string formatted="false" name="error_cannot_open_huawei_app_gallery">Vaia! Non se puido abrir Huawei AppGallery. Téntao de novo máis tarde.</string>
+    <string formatted="false" name="google_play_store_logo">Google Play Store</string>
+    <string formatted="false" name="huawei_app_gallery">Huawei AppGallery</string>
+    <!-- NFC activity -->
+    <string formatted="false" name="nfc_activity_title">Etiquetas NFC</string>
+    <!-- Settings activity -->
+    <string formatted="false" name="preference_title">Configuración</string>
+    <string formatted="false" name="preference_title_language">Idioma</string>
+    <string formatted="false" name="preference_description_language">Establecer o idioma da aplicación</string>
+    <string formatted="false" name="preference_title_web_access">Acceso á web</string>
+    <string formatted="false" name="preference_description_web_access">Edita para engadir ou quitar dominios de confianza</string>
+    <string formatted="false" name="preference_screen_web_access_title">Editar dominios de confianza</string>
+    <string formatted="false" name="preference_title_ai">Extensión de intelixencia artificial (IA)</string>
+    <string formatted="false" name="preference_description_ai">Activar bloques e sensores de IA</string>
+    <string formatted="false" name="preference_title_ai_speech_recognition">Recoñecemento de voz</string>
+    <string formatted="false" name="preference_description_ai_speech_recognition">Activar bloques e sensores de recoñecemento de voz</string>
+    <string formatted="false" name="preference_title_ai_speech_synthetization">Síntese de voz</string>
+    <string formatted="false" name="preference_description_ai_speech_synthetization">Activar bloques e sensores de síntese de voz</string>
+    <string formatted="false" name="preference_title_ai_face_detection">Detección de caras</string>
+    <string formatted="false" name="preference_description_ai_face_detection">Activar bloques e sensores de detección de caras</string>
+    <string formatted="false" name="preference_title_ai_pose_detection">Detección de posturas</string>
+    <string formatted="false" name="preference_description_ai_pose_detection">Activar bloques e sensores de detección de posturas</string>
+    <string formatted="false" name="preference_title_ai_text_recognition">Recoñecemento de texto</string>
+    <string formatted="false" name="preference_description_ai_text_recognition">Activar bloques e sensores de recoñecemento de texto</string>
+    <string formatted="false" name="preference_title_ai_object_recognition">Recoñecemento de obxectos</string>
+    <string formatted="false" name="preference_description_ai_object_recognition">Activar sensores de recoñecemento e seguimento de obxectos</string>
+    <string formatted="false" name="preference_title_accessibility">Accesibilidade</string>
+    <string formatted="false" name="preference_description_accessibility">Cambiar o aspecto da aplicación</string>
+    <string formatted="false" name="preference_title_accessibility_profiles">Perfís de accesibilidade</string>
+    <string formatted="false" name="preference_title_accessibility_profile">Perfís predefinidos</string>
+    <string formatted="false" name="preference_title_accessibility_profile_headline">Perfís</string>
+    <string formatted="false" name="preference_title_accessibility_predefined_profile_headline">Perfís predefinidos</string>
+    <string formatted="false" name="preference_description_accessibility_profiles">Escolle un perfil de accesibilidade predefinido</string>
+    <string formatted="false" name="preference_title_accessibility_text_appearance">Aspecto do texto</string>
+    <string formatted="false" name="preference_title_accessibility_handling">Manexo</string>
+    <string formatted="false" name="preference_title_accessibility_category_icons_big">Iconas grandes</string>
+    <string formatted="false" name="preference_description_accessibility_category_icons_big">Aumentar o tamaño das iconas.</string>
+    <string formatted="false" name="preference_title_accessibility_category_icons_high_contrast">Iconas de alto contraste</string>
+    <string formatted="false" name="preference_title_accessibility_Brick_icons">Iconas</string>
+    <string formatted="false" name="preference_title_accessibility_category_icons">Mostrar iconas</string>
+    <string formatted="false" name="preference_description_accessibility_category_icons">Engadir iconas ás categorías e aos bloques.</string>
+    <string formatted="false" name="preference_title_accessibility_high_contrast">Alto contraste</string>
+    <string formatted="false" name="preference_description_accessibility_high_contrast">Aumentar o contraste do texto.</string>
+    <string formatted="false" name="preference_description_accessibility_large_text">Aumentar o tamaño do texto.</string>
+    <string formatted="false" name="preference_title_accessibility_large_text">Texto grande</string>
+    <string formatted="false" name="preference_title_accessibility_element_spacing">Espazado amplo entre elementos</string>
+    <string formatted="false" name="preference_description_accessibility_element_spacing">Aumentar o espazado entre os elementos das listas.</string>
+    <string formatted="false" name="preference_title_accessibility_dragndrop_delay">Atraso ao arrastrar e soltar</string>
+    <string formatted="false" name="preference_description_accessibility_dragndrop_delay">Atraso ao arrastrar e soltar bloques.</string>
+    <string formatted="false" name="preference_title_accessibility_beginner_bricks">Modo principiante</string>
+    <string formatted="false" name="preference_description_accessibility_beginner_bricks">Mostrar só as funcións sinxelas.</string>
+    <string formatted="false" name="preference_title_accessibility_font_style">Escolle un tipo de letra</string>
+    <string formatted="false" name="accessibility_font_regular">Normal</string>
+    <string formatted="false" name="accessibility_font_serif">Serifa</string>
+    <string formatted="false" name="accessibility_font_dyslexic">Dislexia</string>
+    <string formatted="false" name="accessibility_settings_applied">Aplicáronse os cambios</string>
+    <string formatted="false" name="preference_access_title_profile_default">Predeterminado</string>
+    <string formatted="false" name="preference_access_summary_profile_default">Configuración predeterminada</string>
+    <string formatted="false" name="preference_access_title_profile_custom">O meu perfil personalizado</string>
+    <string formatted="false" name="preference_access_summary_profile_custom">A miña configuración persoal</string>
+    <string formatted="false" name="preference_access_title_profile_argus">Argus</string>
+    <string formatted="false" name="preference_access_summary_profile_argus">Alto contraste, iconas adicionais</string>
+    <string formatted="false" name="preference_access_title_profile_odin">Odin</string>
+    <string formatted="false" name="preference_access_summary_profile_odin">Texto grande, iconas grandes, espazado amplo entre elementos, alto contraste</string>
+    <string formatted="false" name="preference_access_title_profile_fenrir">Fenrir</string>
+    <string formatted="false" name="preference_access_summary_profile_fenrir">Espazado amplo entre elementos, atraso ao arrastrar e soltar</string>
+    <string formatted="false" name="preference_access_title_profile_tiro">Tiro</string>
+    <string formatted="false" name="preference_access_summary_profile_tiro">Modo principiante</string>
+    <string name="preference_dialog_use_full_features">Usar todas as funcións</string>
+    <string name="preference_dialog_appgallery">AppGallery</string>
+    <string name="preference_dialog_google_play">Google Play</string>
+    <string name="preference_lego_dialog_text">Para aproveitar todas as funcións das extensións de Lego Mindstorms, usa a aplicación Mindstorms Code EV3 NXT de Catrobat.</string>
+    <string name="preference_embroidery_dialog_text">Para aproveitar todas as funcións da extensión de bordado, usa a aplicación Embroidery Designer de Catrobat.</string>
+    <string name="preference_phiro_dialog_text">Para aproveitar todas as funcións da extensión de robótica Phiro, usa a aplicación Phiro Code de Catrobat.</string>
+    <!-- Lego/Drone/Raspi/Chromecast/Embroidery -->
+    <string formatted="false" name="preference_title_enable_quadcopter_bricks">Extensión Parrot AR.Drone 2.0</string>
+    <string formatted="false" name="preference_description_quadcopter_bricks">Permitir que a aplicación controle cuadricópteros Parrot AR.Drone 2.0</string>
+    <string formatted="false" name="preference_title_enable_jumpingsumo_bricks">Extensión Parrot Jumping Sumo</string>
+    <string formatted="false" name="preference_description_jumpingsumo_bricks">Permitir que a aplicación controle robots Jumping Sumo de Parrot</string>
+    <string formatted="false" name="preference_title_enable_mindstorms_nxt_bricks">Extensión Lego Mindstorms NXT</string>
+    <string formatted="false" name="preference_title_enable_mindstorms_ev3_bricks">Extensión Lego Mindstorms EV3</string>
+    <string formatted="false" name="preference_description_mindstorms_nxt_bricks">Permitir que a aplicación controle robots Lego Mindstorms NXT</string>
+    <string formatted="false" name="preference_description_mindstorms_ev3_bricks">Permitir que a aplicación controle robots Lego Mindstorms EV3</string>
+    <string formatted="false" name="preference_title_mindstorms_nxt_sensors">Sensores Lego NXT</string>
+    <string formatted="false" name="preference_title_mindstorms_ev3_sensors">Sensores Lego EV3</string>
+    <string formatted="false" name="preference_title_drone_config_properties">Configuración do Parrot AR.Drone 2.0</string>
+    <string formatted="false" name="preference_title_enable_phiro_bricks">Extensión Phiro de RobotixEdu</string>
+    <string formatted="false" name="preference_description_phiro_bricks">Permitir que a aplicación controle robots Phiro de RobotixEdu</string>
+    <string formatted="false" name="preference_title_enable_arduino_bricks">Extensión Arduino</string>
+    <string formatted="false" name="preference_description_arduino_bricks">Permitir que a aplicación controle placas Arduino</string>
+    <string formatted="false" name="preference_title_enable_embroidery_bricks">Extensión de bordado</string>
+    <string formatted="false" name="preference_description_embroidery_bricks">Crear patróns para máquinas de bordar</string>
+    <string formatted="false" name="preference_title_cast_feature_globally_enabled">Extensión Chromecast</string>
+    <string formatted="false" name="preference_description_cast_feature_globally_enabled">Mostrar o botón de emisión e activar os proxectos para emitir</string>
+    <string formatted="false" name="preference_title_enable_plot_bricks">Extensión de plóter e láser</string>
+    <string formatted="false" name="preference_description_plot_bricks">Crear patróns para plóters e máquinas de corte láser</string>
+    <string formatted="false" name="preference_title_enable_nfc_bricks">Extensión NFC (comunicación de campo próximo)</string>
+    <string formatted="false" name="preference_description_nfc_bricks">Permitir que a aplicación use etiquetas NFC nos proxectos</string>
+    <string formatted="false" name="preference_title_enable_crash_reports">Enviar informes de erros anónimos</string>
+    <string formatted="false" name="preference_description_crash_reports">Permitir que a aplicación envíe automaticamente informes de erros</string>
+    <!-- -->
+    <string formatted="false" name="preference_title_enable_raspi_bricks">Extensión Raspberry Pi</string>
+    <string formatted="false" name="preference_description_raspi_bricks">Permitir que a aplicación controle ordenadores Raspberry Pi</string>
+    <string formatted="false" name="preference_raspi_enable_bricks">Activar bloques e sensores</string>
+    <string formatted="false" name="preference_raspi_help">Axuda / primeiros pasos</string>
+    <string formatted="false" name="preference_raspi_help_summary">Obter axuda para configurar a conexión</string>
+    <string formatted="false" name="preference_raspi_host">Enderezo IP / nome do servidor da Raspberry Pi</string>
+    <string formatted="false" name="preference_raspi_port">Porto da Raspberry Pi</string>
+    <!--  -->
+    <string formatted="false" name="preference_title_multiplayer_variables_enabled">Extensión multixogador</string>
+    <string formatted="false" name="preference_description_multiplayer_variables_enabled">Permitir que a aplicación use variables multixogador compartidas por Bluetooth</string>
+    <string formatted="false" name="preference_title_enable_test_bricks">Extensión de probas</string>
+    <string formatted="false" name="preference_description_test_bricks">Permite crear probas</string>
+    <!-- Scratch Converter activity -->
+    <string formatted="false" name="beta">BETA</string>
+    <string formatted="false" name="error_scratch_program_not_accessible_any_more">Vaia! Parece que o proxecto desapareceu ou que perdiches o acceso a el.</string>
+    <string formatted="false" name="error_scratch_project_data_not_available">Vaia! Parece que faltan partes do proxecto. Téntao de novo máis tarde.</string>
+    <string formatted="false" name="error_request_timeout">Vaia! O noso servidor non respondeu a tempo. Téntao de novo máis tarde.</string>
+    <string formatted="false" name="error_scratch_program_conversion_failed">Vaia! Non se puido converter o proxecto. Téntao de novo máis tarde.</string>
+    <string formatted="false" name="error_specific_scratch_program_conversion_failed_x">Vaia! Non se puido converter %1$s. Téntao de novo máis tarde.</string>
+    <string formatted="false" name="error_scratch_converter_outdated_app_version">A túa versión desta aplicación está desactualizada. O noso conversor de Scratch só funciona coa última versión. Actualiza a aplicación.</string>
+    <string formatted="false" name="error_cannot_open_not_existing_scratch_program">Non puiden abrir este proxecto de Scratch. Parece que cancelaches a conversión ou descarga do proxecto de Scratch, ou que renomeaches ou eliminaches o proxecto mentres tanto.</string>
+    <string formatted="false" name="error_cannot_open_currently_downloading_scratch_program">Aínda non podes abrir o proxecto. Agarda ata que se descargue.</string>
+    <string formatted="false" name="error_cannot_open_not_yet_downloaded_scratch_program">Aínda non podes abrir o proxecto. Descárgao primeiro e despois ábreo.</string>
+    <string formatted="false" name="error_cannot_convert_deprecated_scratch_program_x_x">Non puiden converter %1$s. Parece ser un proxecto de Scratch antigo, anterior a %2$s. Proba con outro.</string>
+    <plurals name="error_cannot_convert_more_than_x_programs">
+        <item quantity="one">Non podes converter máis de %d proxecto á vez. Agarda primeiro a que rematen as conversións en curso.</item>
+        <item quantity="other">Non podes converter máis de %d proxectos á vez. Agarda primeiro a que rematen as conversións en curso.</item>
+    </plurals>
+    <string formatted="false" name="error_cannot_open_failed_scratch_program">Non podes abrir o proxecto porque non se converteu correctamente. Tenta convertelo de novo.</string>
+    <string formatted="false" name="search_failed">Non se atopou nada. Téntao de novo máis tarde.</string>
+    <string formatted="false" name="connection_lost_or_closed_by_server">Perdeuse a conexión co servidor.</string>
+    <string formatted="false" name="connection_failed">Agora mesmo non podemos conectarte ao servidor. Téntao de novo máis tarde.</string>
+    <string formatted="false" name="authentication_failed">Parece que hai un problema coa túa conexión ao servizo. Ponte en contacto co equipo de Catrobat.</string>
+    <plurals name="scratch_conversion_scheduled_x">
+        <item quantity="one">Engadiuse %d proxecto de Scratch á cola…</item>
+        <item quantity="other">Engadíronse %d proxectos de Scratch á cola…</item>
+    </plurals>
+    <string formatted="false" name="scratch_conversion_started">Comezou a conversión do proxecto de Scratch…</string>
+    <string formatted="false" name="convert">Converter</string>
+    <string formatted="false" name="converting">Convertendo…</string>
+    <string formatted="false" name="status_scheduled">Programado</string>
+    <string formatted="false" name="status_waiting_for_worker">Buscando un procesador libre… Agarda…</string>
+    <string formatted="false" name="status_started">Iniciado…</string>
+    <string formatted="false" name="status_conversion_finished">Conversión completada</string>
+    <plurals name="status_in_progress_x_jobs">
+        <item quantity="one">En curso: %d tarefa</item>
+        <item quantity="other">En curso: %d tarefas</item>
+    </plurals>
+    <plurals name="status_completed_x_jobs">
+        <item quantity="one">Completadas: %d tarefa</item>
+        <item quantity="other">Completadas: %d tarefas</item>
+    </plurals>
+    <string formatted="false" name="status_conversion_failed">Fallou a conversión!</string>
+    <string formatted="false" name="status_downloading">Descargando…</string>
+    <string formatted="false" name="status_download_finished">Descarga completada.</string>
+    <string formatted="false" name="status_download_canceled">Descarga cancelada!</string>
+    <string formatted="false" name="scratch_programs_in_progress_title">En curso</string>
+    <string formatted="false" name="scratch_programs_finished_title">Proxectos convertidos</string>
+    <string formatted="false" name="by_x">de %1$s</string>
+    <string formatted="false" name="warning_program_visibility">AVISO:\nParece que este é un proxecto privado. Podes tentar convertelo, pero é posible que non funcione.</string>
+    <string formatted="false" name="instructions">Instrucións</string>
+    <string formatted="false" name="notes_and_credits">Notas e créditos</string>
+    <string formatted="false" name="shared_at_x">Compartido: %1$s</string>
+    <string formatted="false" name="modified_at_x">Modificado: %1$s</string>
+    <string formatted="false" name="remixes">Remixes</string>
+    <!--  -->
+    <string formatted="false" name="author">Autor:</string>
+    <string formatted="false" name="screen_size">Tamaño do escenario:</string>
+    <string formatted="false" name="mode">Modo:</string>
+    <string formatted="false" name="remix_of">Remix de:</string>
+    <string formatted="false" name="description_hint">Toca para engadir unha descrición</string>
+    <string formatted="false" name="notes_and_credits_hint">Toca para engadir notas e créditos</string>
+    <!-- ScratchReconvertDialog Strings -->
+    <string formatted="false" name="reconvert_text">Convertiches este proxecto hai %1$s.</string>
+    <plurals name="minutes">
+        <item quantity="one">%d minuto</item>
+        <item quantity="other">%d minutos</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%d hora</item>
+        <item quantity="other">%d horas</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">%d día</item>
+        <item quantity="other">%d días</item>
+    </plurals>
+    <string formatted="false" name="reconvert_dialog_download">Descargar de novo o proxecto</string>
+    <string formatted="false" name="reconvert_dialog_reconvert">Converter de novo este proxecto</string>
+    <!--  -->
+    <!-- ERRORS -->
+    <!-- Terms of Use and Service Error -->
+    <string formatted="false" name="declined_terms_of_use_and_service_alert">Para usar a nosa aplicación, é necesario aceptar as nosas Condicións de uso e servizo. Porén, se non te sentes cómodo con iso, podes usar os nosos servizos web gratuítos en</string>
+    <string formatted="false" name="wtf_error">Produciuse un erro inesperado: non puiden restaurar o proxecto de exemplo.</string>
+    <!-- Project Handling Errors -->
+    <string formatted="false" name="error_copy_project">Produciuse un erro ao copiar o proxecto</string>
+    <!-- Dialog Errors -->
+    <string formatted="false" name="name_already_exists">Este nome xa está en uso. Escolle outro.</string>
+    <string formatted="false" name="name_consists_of_spaces_only">Só escribiches espazos no campo de texto. Escribe un texto con letras, números ou outros caracteres especiais.</string>
+    <string formatted="false" name="name_empty">Escribe un texto</string>
+    <!-- Recycler View -->
+    <string formatted="false" name="am_empty_list">Aínda non hai elementos nesta lista. Engade algún primeiro.</string>
+    <string formatted="false" name="reject_import">Non se puido engadir a personaxe ou obxecto.</string>
+    <string formatted="false" name="am_merge_error">Non se combinou nada. Para combinar, hai que seleccionar exactamente 2 proxectos.</string>
+    <string formatted="false" name="am_backpack">Gardar na mochila</string>
+    <string formatted="false" name="am_unpack">Sacar da mochila</string>
+    <string formatted="false" name="am_copy">Copiar</string>
+    <string formatted="false" name="am_delete">Eliminar</string>
+    <string formatted="false" name="am_rename">Renomear</string>
+    <string formatted="false" name="am_convert">Converter</string>
+    <string formatted="false" name="am_merge">Combinar</string>
+    <string formatted="false" name="dialog_confirm_delete">Non poderás desfacer isto!</string>
+    <string formatted="false" name="list_headline_sprites">Personaxes e obxectos</string>
+    <!-- Options Menu Options -->
+    <string formatted="false" name="backpack">Mochila</string>
+    <string formatted="false" name="copy">Copiar</string>
+    <string formatted="false" name="delete">Eliminar</string>
+    <string formatted="false" name="rename">Renomear</string>
+    <string formatted="false" name="merge">Combinar</string>
+    <string formatted="false" name="show_details">Mostrar detalles</string>
+    <string formatted="false" name="hide_details">Ocultar detalles</string>
+    <string formatted="false" name="project_options">Opcións do proxecto</string>
+    <string formatted="false" name="from_local">Engadir desde o dispositivo</string>
+    <string formatted="false" name="sort_projects">Ordenar</string>
+    <string formatted="false" name="unsort_projects">Desordenar</string>
+    <string formatted="false" name="import_from_project">Selecciona o proxecto do que importar</string>
+    <!-- New Dialog Titles -->
+    <string formatted="false" name="new_scene_dialog">Nova escena</string>
+    <!-- Delete Dialog Titles -->
+    <plurals name="delete_projects">
+        <item quantity="one">Eliminar este proxecto?</item>
+        <item quantity="other">Eliminar estes proxectos?</item>
+    </plurals>
+    <plurals name="delete_scenes">
+        <item quantity="one">Eliminar esta escena?</item>
+        <item quantity="other">Eliminar estas escenas?</item>
+    </plurals>
+    <plurals name="delete_sprites">
+        <item quantity="one">Eliminar esta personaxe ou obxecto?</item>
+        <item quantity="other">Eliminar estas personaxes e obxectos?</item>
+    </plurals>
+    <plurals name="delete_looks">
+        <item quantity="one">Eliminar esta aparencia?</item>
+        <item quantity="other">Eliminar estas aparencias?</item>
+    </plurals>
+    <plurals name="delete_sounds">
+        <item quantity="one">Eliminar este son?</item>
+        <item quantity="other">Eliminar estes sons?</item>
+    </plurals>
+    <plurals name="delete_nfc_tags">
+        <item quantity="one">Eliminar esta etiqueta?</item>
+        <item quantity="other">Eliminar estas etiquetas?</item>
+    </plurals>
+    <plurals name="delete_scripts">
+        <item quantity="one">Eliminar este script?</item>
+        <item quantity="other">Eliminar estes scripts?</item>
+    </plurals>
+    <!-- Dialog Labels -->
+    <string formatted="false" name="project_name_label">Nome do proxecto</string>
+    <string formatted="false" name="scene_name_label">Nome da escena</string>
+    <string formatted="false" name="sprite_name_label">Nome da personaxe ou obxecto</string>
+    <string formatted="false" name="sprite_group_name_label">Nome do grupo</string>
+    <string formatted="false" name="script_group_label">Nome do grupo de scripts</string>
+    <string formatted="false" name="look_name_label">Nome da aparencia</string>
+    <string formatted="false" name="sound_name_label">Nome do son</string>
+    <string formatted="false" name="nfc_tag_name_label">Nome da etiqueta NFC</string>
+    <string formatted="false" name="string_label">Texto</string>
+    <string formatted="false" name="data_label">Nome</string>
+    <string formatted="false" name="keyword_label">Buscar</string>
+    <string formatted="false" name="html_label">Inserir texto HTML</string>
+    <string formatted="false" name="Image_format_not_supported">Formato de imaxe non compatible</string>
+    <string formatted="false" name="import_conflicting_variables">Non se puido engadir a personaxe ou obxecto.</string>
+    <string formatted="false" name="import_conflicting_variables_reason">O motivo é que os seguintes nomes de variables ou listas están en conflito, porque se usan para todas as personaxes e obxectos e, co mesmo nome, tamén só para unha das personaxes ou obxectos:</string>
+    <string formatted="false" name="import_conflicting_variables_try_again">Renomea unha destas variables ou listas e téntao de novo.</string>
+    <!-- Details -->
+    <string formatted="false" name="project_details">Último acceso: %s, tamaño: %s</string>
+    <string formatted="false" name="last_access_today">hoxe, %s</string>
+    <string formatted="false" name="scene_details">Personaxes e obxectos: %d, aparencias: %d, sons: %d</string>
+    <string formatted="false" name="sprite_details">Bloques: %d, aparencias: %d, sons: %d</string>
+    <string formatted="false" name="look_details">Resolución: %s, tamaño: %s</string>
+    <string formatted="false" name="sound_duration">Duración: %s</string>
+    <string formatted="false" name="sound_details">Duración: %s, tamaño: %s</string>
+    <!--  -->
+    <!-- Rename Dialog Titles -->
+    <string formatted="false" name="rename_project">Renomear proxecto</string>
+    <string formatted="false" name="rename_scene_dialog">Renomear escena</string>
+    <string formatted="false" name="rename_sprite_dialog">Renomear personaxe ou obxecto</string>
+    <string formatted="false" name="rename_look_dialog">Renomear aparencia</string>
+    <string formatted="false" name="rename_sound_dialog">Renomear son</string>
+    <string formatted="false" name="rename_nfctag_dialog">Renomear etiqueta NFC</string>
+    <string formatted="false" name="rename_data_dialog">Renomear</string>
+    <!-- New Script Group Dialog -->
+    <string formatted="false" name="new_group">Novo grupo</string>
+    <string formatted="false" name="default_group_name">Grupo</string>
+    <!-- New Scene Menu -->
+    <string formatted="false" name="new_scene">Nova escena</string>
+    <!-- Action Toasts -->
+    <!-- Backpack -->
+    <string formatted="false" name="backpack_empty">A mochila está baleira. Non hai nada que sacar.</string>
+    <plurals name="packed_scenes">
+        <item quantity="one">Gardouse %d escena na mochila.</item>
+        <item quantity="other">Gardáronse %d escenas na mochila.</item>
+    </plurals>
+    <plurals name="packed_sprites">
+        <item quantity="one">Gardouse %d personaxe ou obxecto na mochila.</item>
+        <item quantity="other">Gardáronse %d personaxes e obxectos na mochila.</item>
+    </plurals>
+    <plurals name="packed_looks">
+        <item quantity="one">Gardouse %d aparencia na mochila.</item>
+        <item quantity="other">Gardáronse %d aparencias na mochila.</item>
+    </plurals>
+    <plurals name="packed_sounds">
+        <item quantity="one">Gardouse %d son na mochila.</item>
+        <item quantity="other">Gardáronse %d sons na mochila.</item>
+    </plurals>
+    <string formatted="false" name="packed_script_group">Gardouse un grupo de scripts na mochila.</string>
+    <!-- Unpack -->
+    <plurals name="unpacked_scenes">
+        <item quantity="one">Sacouse %d escena da mochila.</item>
+        <item quantity="other">Sacáronse %d escenas da mochila.</item>
+    </plurals>
+    <plurals name="unpacked_sprites">
+        <item quantity="one">Sacouse %d personaxe ou obxecto da mochila.</item>
+        <item quantity="other">Sacáronse %d personaxes e obxectos da mochila.</item>
+    </plurals>
+    <plurals name="unpacked_looks">
+        <item quantity="one">Sacouse %d aparencia da mochila.</item>
+        <item quantity="other">Sacáronse %d aparencias da mochila.</item>
+    </plurals>
+    <plurals name="unpacked_sounds">
+        <item quantity="one">Sacouse %d son da mochila.</item>
+        <item quantity="other">Sacáronse %d sons da mochila.</item>
+    </plurals>
+    <plurals name="unpacked_scripts">
+        <item quantity="one">Sacouse %d script da mochila.</item>
+        <item quantity="other">Sacáronse %d scripts da mochila.</item>
+    </plurals>
+    <!-- Copy -->
+    <plurals name="copied_scenes">
+        <item quantity="one">Copiouse %d escena.</item>
+        <item quantity="other">Copiáronse %d escenas.</item>
+    </plurals>
+    <plurals name="copied_sprites">
+        <item quantity="one">Copiouse %d personaxe ou obxecto.</item>
+        <item quantity="other">Copiáronse %d personaxes e obxectos.</item>
+    </plurals>
+    <plurals name="copied_looks">
+        <item quantity="one">Copiouse %d aparencia.</item>
+        <item quantity="other">Copiáronse %d aparencias.</item>
+    </plurals>
+    <plurals name="copied_sounds">
+        <item quantity="one">Copiouse %d son.</item>
+        <item quantity="other">Copiáronse %d sons.</item>
+    </plurals>
+    <plurals name="copied_nfc_tags">
+        <item quantity="one">Copiouse %d etiqueta NFC.</item>
+        <item quantity="other">Copiáronse %d etiquetas NFC.</item>
+    </plurals>
+    <!-- Delete -->
+    <plurals name="deleted_projects">
+        <item quantity="one">Eliminouse %d proxecto.</item>
+        <item quantity="other">Elimináronse %d proxectos.</item>
+    </plurals>
+    <plurals name="deleted_scenes">
+        <item quantity="one">Eliminouse %d escena.</item>
+        <item quantity="other">Elimináronse %d escenas.</item>
+    </plurals>
+    <plurals name="deleted_sprites">
+        <item quantity="one">Eliminouse %d personaxe ou obxecto.</item>
+        <item quantity="other">Elimináronse %d personaxes e obxectos.</item>
+    </plurals>
+    <plurals name="deleted_looks">
+        <item quantity="one">Eliminouse %d aparencia.</item>
+        <item quantity="other">Elimináronse %d aparencias.</item>
+    </plurals>
+    <plurals name="deleted_sounds">
+        <item quantity="one">Eliminouse %d son.</item>
+        <item quantity="other">Elimináronse %d sons.</item>
+    </plurals>
+    <plurals name="deleted_nfc_tags">
+        <item quantity="one">Eliminouse %d etiqueta NFC.</item>
+        <item quantity="other">Elimináronse %d etiquetas NFC.</item>
+    </plurals>
+    <plurals name="deleted_scripts">
+        <item quantity="one">Eliminouse %d script.</item>
+        <item quantity="other">Elimináronse %d scripts.</item>
+    </plurals>
+    <plurals name="deleted_Items">
+        <item quantity="one">Eliminouse %d elemento.</item>
+        <item quantity="other">Elimináronse %d elementos.</item>
+    </plurals>
+    <!-- Imported -->
+    <plurals name="imported_projects">
+        <item quantity="one">Importouse %d proxecto.</item>
+        <item quantity="other">Importáronse %d proxectos.</item>
+    </plurals>
+    <!-- Renamed -->
+    <string formatted="false" name="renamed_project">Renomeouse o proxecto</string>
+    <!--  -->
+    <!-- ProjectListActivity and ProjectListFragment -->
+    <string formatted="false" name="project_list_title">Proxectos</string>
+    <string formatted="false" name="last_used">Último acceso:</string>
+    <string formatted="false" name="size">Tamaño:</string>
+    <string formatted="false" name="description">Descrición:</string>
+    <string formatted="false" name="set_description">Engadir descrición</string>
+    <string formatted="false" name="notes_and_credits_title">Notas e créditos:</string>
+    <string formatted="false" name="set_notes_and_credits">Engadir notas e créditos</string>
+    <string formatted="false" name="details_date_today">Hoxe</string>
+    <string formatted="false" name="import_project">Importar proxecto</string>
+    <string formatted="false" name="export_project">Exportar proxecto</string>
+    <string formatted="false" name="error_import_project">Algo foi mal ao importar os proxectos.</string>
+    <string formatted="false" name="no_projects_selected">Non se seleccionou ningún proxecto para importar</string>
+    <string formatted="false" name="only_select_catrobat_files">Selecciona só ficheiros de proxecto</string>
+    <string formatted="false" name="error_no_files_found">Non se atopou ningún ficheiro de proxecto.</string>
+    <string formatted="false" name="import_sprite_from_project_launcher">Importar obxecto dun proxecto local</string>
+    <!-- ProjectOptionsFragment -->
+    <string formatted="false" name="project_options_description">Descrición</string>
+    <string formatted="false" name="project_options_notes_and_credits">Notas e créditos</string>
+    <string formatted="false" name="project_options_tags">Etiquetas</string>
+    <string formatted="false" name="project_options_aspect_ratio">Manter a proporción orixinal</string>
+    <string formatted="false" name="project_options_more_details">Propiedades do proxecto</string>
+    <string formatted="false" name="project_options_delete_project">Eliminar proxecto</string>
+    <!-- ScriptListFragment -->
+    <string formatted="false" name="fragment_script_text_description">Toca \"+\" para engadir scripts</string>
+    <!--  -->
+    <!-- SpriteListFragment -->
+    <string formatted="false" name="fragment_sprite_text_description">Toca \"+\" para engadir personaxes ou obxectos</string>
+    <string formatted="false" name="default_sprite_name">A miña personaxe ou obxecto</string>
+    <!--  -->
+    <!-- LookListFragment -->
+    <string formatted="false" name="fragment_look_text_description">Toca \"+\" para engadir aparencias</string>
+    <string formatted="false" name="select_look_from_gallery">Seleccionar imaxe</string>
+    <string formatted="false" name="select_look_from_camera">Seleccionar foto</string>
+    <!--  -->
+    <!-- SoundListFragment -->
+    <string formatted="false" name="fragment_sound_text_description">Toca \"+\" para engadir sons</string>
+    <string formatted="false" name="sound_select_source">Selecciona un son</string>
+    <!--  -->
+    <!-- NfcTagListFragment -->
+    <string formatted="false" name="fragment_nfctag_text_description">Escanea etiquetas NFC para engadilas</string>
+    <string formatted="false" name="ndef_record_label">como tipo de rexistro</string>
+    <string formatted="false" name="brick_set_nfc_tag">Agardar á seguinte etiqueta NFC para escribir</string>
+    <string formatted="false" name="brick_set_nfc_tag_default_value">www.catrobat.org</string>
+    <string formatted="false" name="default_tag_name">Etiqueta NFC</string>
+    <string formatted="false" name="tnf_empty">Baleiro</string>
+    <string formatted="false" name="tnf_external_type">Tipo externo</string>
+    <string formatted="false" name="tnf_mime_media">Texto</string>
+    <string formatted="false" name="tnf_well_known_http">HTTP</string>
+    <string formatted="false" name="tnf_well_known_https">HTTPS</string>
+    <string formatted="false" name="tnf_well_known_tel">Número de teléfono</string>
+    <string formatted="false" name="tnf_well_known_sms">SMS</string>
+    <string formatted="false" name="tnf_well_known_mailto">Correo electrónico</string>
+    <!--  -->
+    <!-- DataListFragment -->
+    <string formatted="false" name="multiplayer_vars_headline">Variables para dispositivos conectados</string>
+    <string formatted="false" name="global_vars_headline">Variables para todas as personaxes e obxectos</string>
+    <string formatted="false" name="local_vars_headline">Variables só para esta personaxe ou obxecto</string>
+    <string formatted="false" name="global_lists_headline">Listas para todas as personaxes e obxectos</string>
+    <string formatted="false" name="local_lists_headline">Listas só para esta personaxe ou obxecto</string>
+    <string formatted="false" name="fragment_data_text_description">Toca \"+\" para engadir\nvariables ou listas</string>
+    <plurals name="user_defined_brick_input_headline">
+        <item quantity="one">Entrada para este bloque</item>
+        <item quantity="other">Entradas para este bloque</item>
+    </plurals>
+    <!-- NewDataDialog -->
+    <string formatted="false" name="new_data_for_all_sprites">Para todas as personaxes, obxectos e clons de todas as escenas</string>
+    <string formatted="false" name="new_data_for_this_sprite_only">Só para esta personaxe ou obxecto, ou un dos seus clons</string>
+    <string formatted="false" name="new_data_for_connected_devices">Para todas as personaxes, obxectos e clons de todas as escenas dos proxectos nos dispositivos multixogador conectados</string>
+    <!-- Backpack -->
+    <string formatted="false" name="backpack_title">A túa mochila</string>
+    <string formatted="false" name="actor_object_title">Personaxes e obxectos</string>
+    <string formatted="false" name="pack">Gardar na mochila</string>
+    <string formatted="false" name="unpack">Sacar da mochila</string>
+    <!--  -->
+    <!-- NewProjectDialog -->
+    <string name="new_project_title">Crear proxecto</string>
+    <string formatted="false" name="new_project_dialog_example_project">Proxecto de exemplo</string>
+    <string name="new_project_dialog_portrait">Vertical</string>
+    <string name="new_project_dialog_landscape">Horizontal</string>
+    <string name="new_project_dialog_cast">Emitir</string>
+    <!--  -->
+    <!-- NewMergedProjectDialog -->
+    <string formatted="false" name="new_merge_project_dialog_title">Proxecto combinado</string>
+    <string formatted="false" name="merging_project_text">Estes dous proxectos aínda non se poden combinar</string>
+    <!--  -->
+    <!-- NewSpriteDialog -->
+    <string formatted="false" name="new_sprite_dialog_title">Nova personaxe ou obxecto</string>
+    <!--  -->
+    <!-- NewLookDialog -->
+    <string formatted="false" name="new_look_dialog_title">Engadir aparencia</string>
+    <string formatted="false" name="add_look_from_camera">Cámara</string>
+    <string formatted="false" name="add_look_object_library">Biblioteca</string>
+    <string formatted="false" name="add_look_draw_new_image">Debuxar</string>
+    <string formatted="false" name="add_look_choose_image">Galería</string>
+    <string formatted="false" name="add_look_media_library">Aparencias</string>
+    <string formatted="false" name="add_look_from_local_project">Proxectos locais</string>
+    <string name="add_look_empty_object">Obxecto baleiro</string>
+    <string name="add_look_actors_and_object">Personaxes e obxectos locais</string>
+    <!--  -->
+    <!-- NewSoundDialog -->
+    <string formatted="false" name="new_sound_dialog_title">Engadir son</string>
+    <string formatted="false" name="add_sound_from_recorder">Gravar son</string>
+    <string formatted="false" name="add_sound_choose_file">Seleccionar ficheiro</string>
+    <string formatted="false" name="add_sound_music">Compositor musical</string>
+    <string formatted="false" name="add_sound_choose_sound">Sons</string>
+    <!-- NotePickerDialog -->
+    <string formatted="false" name="note_picker_title">Selector de notas</string>
+    <!--  -->
+    <!-- Rating Dialog -->
+    <string formatted="false" name="rating_dialog_title">Valorar a aplicación</string>
+    <string formatted="false" name="rating_google_play_dialog_text">Se che gusta esta aplicación, valóranos na tenda de aplicacións.</string>
+    <string formatted="false" name="rating_dialog_rate_now">Agora</string>
+    <string formatted="false" name="rating_dialog_rate_later">Máis tarde</string>
+    <string formatted="false" name="rating_dialog_rate_never">Nunca</string>
+    <!--  -->
+    <!-- Terms of Use Dialog -->
+    <string formatted="false" name="dialog_terms_of_use_title">Condicións de uso e servizo</string>
+    <string formatted="false" name="dialog_terms_of_use_info">Para poder usar as aplicacións e outros servizos que ofrece o proxecto Catrobat, tes que aceptar as nosas Condicións de uso e servizo. Tes que cumprir estritamente estas condicións cando uses as nosas aplicacións e outros servizos. Consulta a ligazón de abaixo para ver a súa redacción exacta.\n</string>
+    <string formatted="false" name="dialog_terms_of_use_link_text">Condicións de uso e servizo</string>
+    <!--  -->
+    <!-- Privacy Policy -->
+    <string formatted="false" name="disclaimer_privacy_police_header_headline">Benvido/a!</string>
+    <string formatted="false" name="disclaimer_privacy_policy_header">Para usar esta aplicación, acepta a nosa</string>
+    <!-- -->
+    <!-- About Dialog -->
+    <string formatted="false" name="dialog_about_title">Acerca desta aplicación</string>
+    <string formatted="false" name="dialog_about_license_info">Esta aplicación ofrece un contorno de programación e un intérprete para a linguaxe de programación visual Catrobat.\n O código fonte desta aplicación está publicado principalmente baixo a licenza GNU AGPL v3. Para máis detalles sobre a licenza, consulta a ligazón de abaixo.\n</string>
+    <string formatted="false" name="dialog_about_license_link_text">Licenza do código fonte</string>
+    <string formatted="false" name="dialog_about_catrobat_link_text">Acerca de Catrobat</string>
+    <string formatted="false" name="dialog_about_catrobat_language_version">Versión da linguaxe Catrobat</string>
+    <string formatted="false" name="dialog_about_version">versión:</string>
+    <!--  -->
+    <!-- NetworkAlertDialog -->
+    <string formatted="false" name="error_no_network_title">Sen rede</string>
+    <!-- UploadProjectDialog -->
+    <string formatted="false" name="upload_project_dialog_title">Subir proxecto</string>
+    <string formatted="false" name="upload_description">Descrición:</string>
+    <string formatted="false" name="upload_notes_and_credits">Notas e créditos:</string>
+    <string formatted="false" name="upload_notes_and_credits_explanation">Como creaches este proxecto? Usaches ideas, scripts ou deseños doutras persoas? Dálles as grazas aquí.</string>
+    <string formatted="false" name="upload_tag_dialog_title">Escolle ata tres categorías</string>
+    <string formatted="false" name="upload_tags_maximum_error">Non se poden seleccionar máis de 3 etiquetas.</string>
+    <!-- Save Project to External Storage -->
+    <string formatted="false" name="save_to_external_storage_button">Exportar proxecto</string>
+    <string formatted="false" name="notification_save_project_to_external_storage_title_pending">" "</string>
+    <string formatted="false" name="notification_save_project_to_external_storage_pending">Gardando o proxecto no almacenamento externo.</string>
+    <string formatted="false" name="notification_save_project_to_external_storage_title_open">" "</string>
+    <string formatted="false" name="notification_save_project_to_external_storage_open">"Gardouse o proxecto en %1$s"</string>
+    <string formatted="false" name="save_project_to_external_storage_io_exception_message">Non se puido gardar o proxecto: non hai memoria suficiente!</string>
+    <!--  -->
+    <!-- SoundRecorderActivity -->
+    <string formatted="false" name="soundrecorder_name">Gravadora de son</string>
+    <string formatted="false" name="soundrecorder_error">Fallou a gravación do son</string>
+    <string formatted="false" name="soundrecorder_recorded_filename">gravación</string>
+    <string formatted="false" name="soundrecorder_text_view">Toca a icona de arriba para iniciar e deter a gravación.</string>
+    <!--  -->
+    <!-- Brick context dialog -->
+    <string formatted="false" name="brick_context_dialog_move_brick">Mover bloque</string>
+    <string formatted="false" name="brick_context_dialog_move_script">Mover script</string>
+    <string formatted="false" name="brick_context_dialog_move_definition">Mover esta definición</string>
+    <string formatted="false" name="brick_context_dialog_delete_brick">Eliminar bloque</string>
+    <string formatted="false" name="brick_context_dialog_copy_brick">Copiar bloque</string>
+    <string formatted="false" name="brick_context_dialog_copy_script">Copiar script</string>
+    <string formatted="false" name="brick_context_dialog_formula_edit_brick">Editar fórmula</string>
+    <string formatted="false" name="brick_context_dialog_delete_script">Eliminar script</string>
+    <string formatted="false" name="brick_context_dialog_delete_definition">Eliminar esta definición</string>
+    <string formatted="false" name="brick_context_dialog_comment_in">Activar bloque</string>
+    <string formatted="false" name="brick_context_dialog_comment_out">Desactivar bloque</string>
+    <string formatted="false" name="brick_context_dialog_highlight_brick_parts">Resaltar as partes do bloque</string>
+    <string formatted="false" name="brick_context_dialog_comment_in_script">Activar script</string>
+    <string formatted="false" name="brick_context_dialog_comment_out_script">Desactivar script</string>
+    <string formatted="false" name="brick_context_dialog_help">Axuda</string>
+    <string formatted="false" name="comment_in_out">Desactivar/activar</string>
+    <!--  -->
+    <!-- Play scene dialog -->
+    <string formatted="false" name="play_scene_dialog_title">Executar escena:</string>
+    <string formatted="false" name="play_scene_dialog_default">Primeira escena (%1$s)</string>
+    <string formatted="false" name="play_scene_dialog_current">Escena actual (%1$s)</string>
+    <!--  -->
+    <!-- Sign In dialogs -->
+    <string formatted="false" name="sign_in_dialog_title">Iniciar sesión</string>
+    <string formatted="false" name="username">Nome de usuario</string>
+    <string formatted="false" name="password">Contrasinal</string>
+    <string formatted="false" name="reset_password">Restablecer contrasinal</string>
+    <string formatted="false" name="new_user_registered">Creouse a conta nova</string>
+    <string formatted="false" name="user_logged_in">Iniciaches sesión correctamente</string>
+    <string formatted="false" name="register_error">Inicio de sesión non válido</string>
+    <string formatted="false" name="register_terms">Ao rexistrarte aceptas as nosas</string>
+    <string formatted="false" name="register_code_terms_of_use_text">Condicións de uso e servizo</string>
+    <string formatted="false" name="login">Iniciar sesión</string>
+    <string formatted="false" name="register">Rexistrarse</string>
+    <string formatted="false" name="password_confirm">Confirmar contrasinal</string>
+    <string formatted="false" name="accountName">Correo electrónico</string>
+    <string formatted="false" name="signin_thanks">Grazas por rexistrarte!</string>
+    <string formatted="false" name="signin_choose_username">Escolle o teu nome de usuario:</string>
+    <string formatted="false" name="signin_choose_username_empty">Escribe un nome de usuario.</string>
+    <string formatted="false" name="signin_choose_username_hint">O nome de usuario non debería ser o teu nome real nin un enderezo de correo electrónico.</string>
+    <string formatted="false" name="oauth_username_taken">Outra persoa xa usa este nome. Escolle outro!</string>
+    <string formatted="false" name="show_password">Mostrar contrasinal</string>
+    <string formatted="false" name="sign_in_error">Algo foi mal ao iniciar sesión.</string>
+    <string formatted="false" name="error_google_plus_sign_in">Erro ao iniciar sesión con Google. Estado: %s</string>
+    <string formatted="false" name="error_session_expired">A sesión caducou. Inicia sesión de novo.</string>
+    <string formatted="false" name="error_register_empty_username">O nome de usuario está baleiro</string>
+    <string formatted="false" name="error_register_username_as_email">Non se pode usar un enderezo de correo electrónico como nome de usuario</string>
+    <string formatted="false" name="error_register_invalid_username">O nome de usuario só pode conter letras (a–z), números (0–9), guións (-), guións baixos (_) e puntos (.).</string>
+    <string formatted="false" name="error_register_username_start_with">O nome de usuario non pode comezar por guión (-), guión baixo (_) nin punto (.).</string>
+    <string formatted="false" name="error_register_invalid_email_format">O formato do correo electrónico non é válido</string>
+    <string formatted="false" name="error_register_empty_password">O campo do contrasinal está baleiro</string>
+    <string formatted="false" name="error_register_password_at_least_6_characters">O contrasinal debe ter polo menos 6 caracteres</string>
+    <string formatted="false" name="error_register_passwords_mismatch">Os contrasinais non coinciden</string>
+    <string formatted="false" name="error_register_empty_confirm_password">O campo de confirmación do contrasinal está baleiro</string>
+    <string formatted="false" name="error_register_username_already_exists">O nome de usuario xa existe</string>
+    <string formatted="false" name="error_register_email_exists">O enderezo de correo electrónico xa existe</string>
+    <!--  -->
+    <!-- OverwriteRenameDialog Strings -->
+    <string formatted="false" name="overwrite_title">O proxecto xa existe.</string>
+    <string formatted="false" name="overwrite_text">Xa existe un proxecto con este nome.</string>
+    <string formatted="false" name="overwrite_replace">Sobrescribir o proxecto</string>
+    <string formatted="false" name="overwrite_rename">Escoller un nome novo</string>
+    <!--  -->
+    <!-- Music activity -->
+    <string formatted="false" name="pocket_music_default_project_name">Canción sen título</string>
+    <string formatted="false" name="pocket_music_default_track_name">Pista 1</string>
+    <!--  -->
+    <!-- Resource initialization fka PrestageActivity -->
+    <string formatted="false" name="prestage_text_to_speech_engine_not_installed">O motor de texto a voz non está instalado!\nQueres instalalo?</string>
+    <string formatted="false" name="prestage_resource_not_available_title">Compoñente non dispoñible</string>
+    <string formatted="false" name="prestage_resource_not_available_text">Lamentablemente, este proxecto non funciona no teu dispositivo. Os seguintes compoñentes non están dispoñibles:\n\n</string>
+    <string formatted="false" name="prestage_no_vibration_available">\u2022 Vibración\n</string>
+    <string formatted="false" name="prestage_no_acceleration_sensor_available">\u2022 Sensor de aceleración\n</string>
+    <string formatted="false" name="prestage_no_inclination_sensor_available">\u2022 Sensor de inclinación\n</string>
+    <string formatted="false" name="prestage_no_compass_sensor_available">\u2022 Compás\n</string>
+    <string formatted="false" name="prestage_no_gps_sensor_available">\u2022 Xeolocalización\n</string>
+    <string formatted="false" name="prestage_text_to_speech_error">\u2022 Motor de texto a voz\n</string>
+    <string formatted="false" name="prestage_no_back_camera_available">\u2022 Cámara traseira\n</string>
+    <string formatted="false" name="prestage_no_face_detection_available">\u2022 Detección de caras\n</string>
+    <string formatted="false" name="prestage_no_object_detection_available">\u2022 Recoñecemento de obxectos\n</string>
+    <string formatted="false" name="prestage_no_pose_detection_available">\u2022 Detección de posturas\n</string>
+    <string formatted="false" name="prestage_no_text_detection_available">\u2022 Detección de texto\n</string>
+    <string formatted="false" name="prestage_no_front_camera_available">\u2022 Cámara frontal\n</string>
+    <string formatted="false" name="prestage_no_camera_available">\u2022 Cámara\n</string>
+    <string formatted="false" name="prestage_no_flash_available">\u2022 Lanterna\n</string>
+    <string formatted="false" name="prestage_default_resource_not_available">\u2022 Compoñente descoñecido\n</string>
+    <string formatted="false" name="no_nfc_available">NFC non dispoñible</string>
+    <string formatted="false" name="nfc_not_activated">Activa o NFC e preme Atrás para volver á aplicación.</string>
+    <string formatted="false" name="nfc_facedetection_support">Usar NFC e a detección de caras ao mesmo tempo pode causar problemas de rendemento.</string>
+    <!--  -->
+    <!-- Stage menu dialog -->
+    <string formatted="false" name="stage_dialog_back">Atrás</string>
+    <string formatted="false" name="stage_dialog_resume">Continuar</string>
+    <string formatted="false" name="stage_dialog_restart">Reiniciar</string>
+    <string formatted="false" name="stage_dialog_axes_on">Mostrar eixes</string>
+    <string formatted="false" name="stage_dialog_axes_off">Ocultar eixes</string>
+    <string formatted="false" name="stage_dialog_maximize">Maximizar/\nestirar</string>
+    <string formatted="false" name="stage_dialog_screenshot">Vista previa</string>
+    <string formatted="false" name="stage_dialog_embroidery">Bordado</string>
+    <!--  -->
+    <!-- Broadcast spinner -->
+    <string formatted="false" name="dialog_new_broadcast_message_title">Nova mensaxe</string>
+    <string formatted="false" name="dialog_broadcast_message_name">mensaxe:</string>
+    <string formatted="false" name="dialog_edit_broadcast_message_title">Editar mensaxe</string>
+    <!--  -->
+    <!-- NFC spinner -->
+    <string formatted="false" name="brick_when_nfc_edit_list_of_nfc_tags">Editar a lista de etiquetas NFC</string>
+    <string formatted="false" name="brick_when_nfc_default_all">todas</string>
+    <!-- -->
+    <!-- Brick categories -->
+    <string formatted="false" name="categories">Categorías</string>
+    <string formatted="false" name="category_embroidery">Bordado</string>
+    <string formatted="false" name="category_motion">Movemento</string>
+    <string formatted="false" name="category_looks">Aparencias</string>
+    <string formatted="false" name="category_pen">Lapis</string>
+    <string formatted="false" name="category_plot">Plóter</string>
+    <string formatted="false" name="category_laser">Cortadora láser</string>
+    <string formatted="false" name="category_sound">Son</string>
+    <string formatted="false" name="category_control">Control</string>
+    <string formatted="false" name="category_event">Eventos</string>
+    <string formatted="false" name="category_user_bricks">Os teus bloques</string>
+    <string formatted="false" name="category_data">Datos</string>
+    <string formatted="false" name="category_device">Dispositivo</string>
+    <string formatted="false" name="category_lego_nxt">Lego NXT</string>
+    <string formatted="false" name="category_lego_ev3">Lego EV3</string>
+    <string formatted="false" name="category_drone">AR.Drone 2.0</string>
+    <string formatted="false" name="category_jumping_sumo">Jumping Sumo</string>
+    <string formatted="false" name="category_phiro">Phiro</string>
+    <string formatted="false" name="category_arduino">Arduino</string>
+    <string formatted="false" name="category_cast">Chromecast</string>
+    <string formatted="false" name="category_raspi">Raspberry Pi</string>
+    <string formatted="false" name="category_assertions">Probas</string>
+    <string formatted="false" name="category_search_bricks">Buscar bloques</string>
+    <!--  -->
+    <!-- User Defined Bricks -->
+    <string formatted="false" name="brick_user_defined_add_label">Engadir etiqueta</string>
+    <string formatted="false" name="brick_user_defined_add_input">Engadir entrada</string>
+    <string formatted="false" name="brick_user_defined_add_input_description">Engade unha entrada para este bloque:</string>
+    <string formatted="false" name="brick_user_defined_add_label_description">Engade unha etiqueta para este bloque:</string>
+    <string formatted="false" name="brick_user_defined_default_input_name">Nome da entrada</string>
+    <string formatted="false" name="brick_user_defined_default_label">Texto da etiqueta</string>
+    <string formatted="false" name="brick_user_defined_already_exists">Xa existe un bloque con estas etiquetas. Engade máis etiquetas ou entradas.</string>
+    <string formatted="false" name="brick_user_defined_script_define">Definir</string>
+    <string formatted="false" name="brick_user_defined_script_screen_refresh_as">actualización da pantalla como</string>
+    <string formatted="false" name="brick_user_defined_with_screen_refreshing">con</string>
+    <string formatted="false" name="brick_user_defined_without_screen_refreshing">sen</string>
+    <string formatted="false" name="brick_user_defined_list_empty">Toca \"+\" para engadir os teus propios bloques novos.</string>
+    <string formatted="false" name="brick_report">Informar</string>
+    <!--  -->
+    <!-- Motion bricks -->
+    <string formatted="false" name="brick_place_at">"Colocar en"</string>
+    <string formatted="false" name="brick_option_place_visually">Colocar visualmente</string>
+    <string formatted="false" name="x_label">"x:"</string>
+    <string formatted="false" name="y_label">"y:"</string>
+    <string formatted="false" name="brick_set_x">"Fixar x en"</string>
+    <string formatted="false" name="brick_set_y">"Fixar y en"</string>
+    <string formatted="false" name="brick_change_x_by">"Cambiar x en"</string>
+    <string formatted="false" name="brick_change_y_by">"Cambiar y en"</string>
+    <string formatted="false" name="brick_go_back">Retroceder</string>
+    <string formatted="false" name="brick_set_rotation_style">"Fixar o estilo de rotación"</string>
+    <string formatted="false" name="brick_set_rotation_style_lr">só esquerda-dereita</string>
+    <string formatted="false" name="brick_set_rotation_style_normal">en todas as direccións</string>
+    <string formatted="false" name="brick_set_rotation_style_no">non rotar</string>
+    <plurals name="brick_go_back_layer_plural">
+        <item quantity="one">capa</item>
+        <item quantity="other">capas</item>
+    </plurals>
+    <string formatted="false" name="brick_come_to_front">Ir ao primeiro plano</string>
+    <string formatted="false" name="brick_if_on_edge_bounce">Se toca o bordo, rebotar</string>
+    <string formatted="false" name="brick_move">Mover</string>
+    <plurals name="brick_move_n_step_plural">
+        <item quantity="one">paso</item>
+        <item quantity="other">pasos</item>
+    </plurals>
+    <string formatted="false" name="brick_turn_left">Xirar á esquerda</string>
+    <string formatted="false" name="brick_turn_right">Xirar á dereita</string>
+    <string formatted="false" name="brick_point_in_direction">Apuntar na dirección</string>
+    <string formatted="false" name="brick_point_to">Apuntar cara a</string>
+    <string formatted="false" name="brick_glide">Esvarar</string>
+    <string formatted="false" name="brick_glide_to_x">ata x:</string>
+    <string formatted="false" name="brick_go_to">Ir a</string>
+    <string formatted="false" name="brick_go_to_touch_position">posición tocada</string>
+    <string formatted="false" name="brick_go_to_random_position">posición aleatoria</string>
+    <!--  -->
+    <!-- Physics -->
+    <string formatted="false" name="brick_set_physics_object_type">Fixar o teu tipo de movemento en</string>
+    <string formatted="false" name="brick_set_physics_object_type_dynamic">móbil e rebotando coa gravidade</string>
+    <string formatted="false" name="brick_set_physics_object_type_fixed">inmóbil coa gravidade, pero os demais rebotan en ti</string>
+    <string formatted="false" name="brick_set_physics_object_type_no">sen moverse nin rebotar coa gravidade (predeterminado)</string>
+    <string formatted="false" name="brick_set_mass">"Fixar a masa en"</string>
+    <string formatted="false" name="brick_set_mass_unit">quilogramos</string>
+    <string formatted="false" name="brick_set_gravity_to">"Fixar a gravidade de todas as personaxes e obxectos en"</string>
+    <string formatted="false" name="brick_set_gravity_unit">pasos/segundo²</string>
+    <string formatted="false" name="brick_set_velocity_to">"Fixar a velocidade en"</string>
+    <string formatted="false" name="brick_set_velocity_unit">pasos/segundo</string>
+    <string formatted="false" name="brick_turn_speed_unit">graos/segundo</string>
+    <string formatted="false" name="brick_set_friction">"Fixar o rozamento en"</string>
+    <string formatted="false" name="brick_set_bounce_factor">"Fixar o factor de rebote en"</string>
+    <string formatted="false" name="brick_rotate_left">"Rotar á esquerda"</string>
+    <string formatted="false" name="brick_rotate_right">"Rotar á dereita"</string>
+    <!-- Look bricks -->
+    <string formatted="false" name="brick_set_look">Cambiar á aparencia</string>
+    <string formatted="false" name="brick_set_look_by_index">Cambiar á aparencia número</string>
+    <string formatted="false" name="brick_and_wait">e agardar</string>
+    <string formatted="false" name="brick_set_background">Fixar o fondo</string>
+    <string formatted="false" name="brick_set_background_and_wait">Fixar o fondo e agardar</string>
+    <string formatted="false" name="brick_set_background_by_index">Fixar o fondo número</string>
+    <string formatted="false" name="brick_when_background">Cando o fondo cambie a</string>
+    <string formatted="false" name="brick_set_size_to">Fixar o tamaño en</string>
+    <string formatted="false" name="brick_change_size_by">Cambiar o tamaño en</string>
+    <string formatted="false" name="brick_hide">Ocultar</string>
+    <string formatted="false" name="brick_show">Mostrar</string>
+    <string formatted="false" name="brick_set_transparency">"Fixar a transparencia"</string>
+    <string formatted="false" name="brick_change_ghost_effect">"Cambiar a transparencia"</string>
+    <string formatted="false" name="brick_set_brightness">"Fixar o brillo"</string>
+    <string formatted="false" name="brick_change_brightness">"Cambiar o brillo"</string>
+    <string formatted="false" name="brick_set_color">"Fixar a cor"</string>
+    <string formatted="false" name="brick_change_color">"Cambiar a cor"</string>
+    <string formatted="false" name="by_label">en</string>
+    <string formatted="false" name="to_label">en</string>
+    <string formatted="false" name="brick_clear_graphic_effect">Quitar os efectos gráficos</string>
+    <string formatted="false" name="brick_next_look">Seguinte aparencia</string>
+    <string formatted="false" name="brick_next_background">Seguinte fondo</string>
+    <string formatted="false" name="brick_previous_look">Aparencia anterior</string>
+    <string formatted="false" name="brick_previous_background">Fondo anterior</string>
+    <string formatted="false" name="brick_edit_look">Editar aparencia</string>
+    <string formatted="false" name="brick_edit_background">Editar fondo</string>
+    <string formatted="false" name="brick_delete_look">Eliminar aparencia</string>
+    <string formatted="false" name="brick_delete_background">Eliminar fondo</string>
+    <string formatted="false" name="brick_flash">Poñer a lanterna</string>
+    <string formatted="false" name="brick_flash_on">acendida</string>
+    <string formatted="false" name="brick_flash_off">apagada</string>
+    <string formatted="false" name="brick_vibration">Vibrar durante</string>
+    <string formatted="false" name="brick_ask_label">Preguntar</string>
+    <string formatted="false" name="brick_ask_store">e gardar a resposta escrita en</string>
+    <string formatted="false" name="brick_ask_default_question">Como te chamas?</string>
+    <string formatted="false" name="brick_ask_dialog_hint">"Escribe a túa resposta:"</string>
+    <string formatted="false" name="brick_ask_dialog_submit">Enviar resposta</string>
+    <string formatted="false" name="brick_ask_speech_label">Preguntar</string>
+    <string formatted="false" name="brick_ask_speech_store">e gardar a resposta falada en</string>
+    <string formatted="false" name="brick_ask_speech_default_question">Como te chamas?</string>
+    <string formatted="false" name="brick_paint_new_look">Pintar unha aparencia nova</string>
+    <string formatted="false" name="brick_paint_new_background">Pintar un fondo novo</string>
+    <string formatted="false" name="brick_paint_new_look_name">"nome da aparencia nova"</string>
+    <string formatted="false" name="brick_copy_look">Copiar a aparencia e chamala</string>
+    <string formatted="false" name="brick_copy_look_name">nome da aparencia copiada</string>
+    <string formatted="false" name="brick_copy_background">Copiar o fondo e chamalo</string>
+    <string formatted="false" name="brick_focus_point">Ser o punto de enfoque cun</string>
+    <string formatted="false" name="brick_horizontal_and">de flexibilidade horizontal e un</string>
+    <string formatted="false" name="brick_vertical_flex">de flexibilidade vertical</string>
+    <!--  -->
+    <!-- Pen bricks -->
+    <string formatted="false" name="brick_pen_down">Baixar o lapis</string>
+    <string formatted="false" name="brick_pen_up">Subir o lapis</string>
+    <string formatted="false" name="brick_pen_size">Fixar o tamaño do lapis en</string>
+    <string formatted="false" name="brick_pen_color">Fixar a cor do lapis en</string>
+    <string formatted="false" name="brick_clear_background">Borrar</string>
+    <string formatted="false" name="brick_stamp">Estampar</string>
+    <!--  -->
+    <!-- Sound bricks -->
+    <string formatted="false" name="brick_play_sound">Reproducir o son</string>
+    <string formatted="false" name="brick_play_sound_and_wait">Reproducir o son e agardar</string>
+    <string formatted="false" name="brick_stop_sound">Deter o son</string>
+    <string formatted="false" name="brick_stop_all_sounds">Deter todos os sons</string>
+    <string formatted="false" name="brick_set_volume_to">Fixar o volume en</string>
+    <string formatted="false" name="brick_change_volume_by">Cambiar o volume en</string>
+    <string formatted="false" name="brick_speak">Dicir en voz alta</string>
+    <string formatted="false" name="brick_speak_default_value">Ola!</string>
+    <string formatted="false" name="brick_speak_and_wait">e agardar</string>
+    <string formatted="false" name="brick_start_listening_to_voice">Comezar a escoitar a voz e gardar as palabras faladas en</string>
+    <string formatted="false" name="speech_recognition_not_available">O recoñecemento de voz non está dispoñible.</string>
+    <string formatted="false" name="speech_recognition_offline_mode_error_dialog_title">Faltan os datos sen conexión</string>
+    <string formatted="false" name="speech_recognition_offline_mode_missing_data_error_dialog_msg">Falta o recoñecemento de voz sen conexión para %s ou hai que actualizalo. Queres descargalo ou actualizalo agora?</string>
+    <string formatted="false" name="brick_set_listening_language">Fixar o idioma de escoita en</string>
+    <string formatted="false" name="set_instrument_to">Fixar o instrumento en</string>
+    <string formatted="false" name="set_tempo_to">Fixar o tempo en</string>
+    <string formatted="false" name="change_tempo_by">Cambiar o tempo en</string>
+    <string formatted="false" name="pause_for">Pausar durante</string>
+    <string formatted="false" name="play_drum">Tocar o tambor</string>
+    <string formatted="false" name="beats">tempos</string>
+    <string formatted="false" name="play_note">Tocar a nota</string>
+    <string formatted="false" name="for_string">durante</string>
+    <string formatted="false" name="at_string">en</string>
+    <string formatted="false" name="seconds_string">segundos</string>
+    <!--  -->
+    <!-- Plot bricks -->
+    <string formatted="false" name="brick_save_plot">Gardar o debuxo do plóter como SVG</string>
+    <string formatted="false" name="brick_share_plot">Compartir o debuxo do plóter como SVG</string>
+    <string formatted="false" name="brick_stop_plot">Deixar de debuxar co plóter</string>
+    <string formatted="false" name="brick_start_plot">Comezar a debuxar co plóter</string>
+    <string formatted="false" name="brick_stop_cut">Deixar de cortar</string>
+    <string formatted="false" name="brick_start_cut">Comezar a cortar</string>
+    <string formatted="false" name="brick_save_laser">Gardar os datos da cortadora láser en SVG</string>
+    <string formatted="false" name="brick_stop_engrave">Deixar de gravar</string>
+    <string formatted="false" name="brick_start_engrave">Comezar a gravar</string>
+    <string formatted="false" name="brick_default_plot_file">plot.svg</string>
+    <string formatted="false" name="brick_share">Compartir</string>
+    <string formatted="false" name="brick_share_laser">Compartir os datos da cortadora láser como SVG</string>
+    <string formatted="false" name="brick_default_laser_file">laser.svg</string>
+    <!-- Embroidery bricks -->
+    <string formatted="false" name="brick_stitch">Puntada</string>
+    <string formatted="false" name="brick_running_stitch">Comezar punto corrido con lonxitude</string>
+    <string formatted="false" name="brick_zigzag_stitch">Comezar punto en zigzag con lonxitude</string>
+    <string formatted="false" name="brick_zigzag_stitch_width">e largura</string>
+    <string formatted="false" name="brick_triple_stitch">Comezar punto triplo con lonxitude</string>
+    <string formatted="false" name="brick_stop_stitch">Deter a puntada actual</string>
+    <string formatted="false" name="brick_write_embroidery">Escribir os datos do bordado no ficheiro</string>
+    <string formatted="false" name="brick_default_embroidery_file">embroidery.dst</string>
+    <string formatted="false" name="brick_sew_up">Rematar a costura</string>
+    <string formatted="false" name="brick_thread_color">Fixar a cor do fío en</string>
+    <string formatted="false" name="embroider_arc_direction">Bordar un arco cara a</string>
+    <string formatted="false" name="embroidery_through">Crear un arco que pase por</string>
+    <!--  -->
+    <!-- Device bricks -->
+    <string formatted="false" name="brick_reset_timer">Reiniciar o cronómetro</string>
+    <string formatted="false" name="brick_open">Abrir</string>
+    <string formatted="false" name="brick_in_browser">no navegador</string>
+    <!-- Control bricks -->
+    <string formatted="false" name="brick_when_started">Cando comece a escena</string>
+    <string formatted="false" name="brick_when">Cando se toque</string>
+    <string formatted="false" name="brick_when_condition_when">Cando</string>
+    <string formatted="false" name="brick_when_becomes_true">pase a ser verdadeiro</string>
+    <string formatted="false" name="brick_wait">Agardar</string>
+    <string formatted="false" name="brick_wait_until">Agardar ata que</string>
+    <string formatted="false" name="brick_wait_until_second_part">sexa verdadeiro</string>
+    <string formatted="false" name="brick_when_gamepad_button">Cando se toque o botón</string>
+    <string formatted="false" name="brick_when_gamepad_button_tapped">do mando</string>
+    <string formatted="false" name="brick_when_nfc">Cando se detecte NFC</string>
+    <string formatted="false" name="brick_stop_script">Deter</string>
+    <string formatted="false" name="brick_stop_this_script">este script</string>
+    <string formatted="false" name="brick_stop_all_scripts">todos os scripts</string>
+    <string formatted="false" name="brick_stop_other_scripts">os outros scripts desta personaxe ou obxecto</string>
+    <plurals name="second_plural">
+        <item quantity="one">"segundo"</item>
+        <item quantity="other">"segundos"</item>
+    </plurals>
+    <string formatted="false" name="brick_collision_receive">Cando rebotes en</string>
+    <string formatted="false" name="collision_with_anything">calquera bordo, personaxe ou obxecto</string>
+    <string formatted="false" name="brick_broadcast_receive">Cando recibas</string>
+    <string formatted="false" name="brick_broadcast">Enviar a todos</string>
+    <string formatted="false" name="brick_broadcast_wait">Enviar a todos e agardar</string>
+    <string formatted="false" name="brick_scene_transition">Continuar a escena</string>
+    <string formatted="false" name="brick_scene_start">Iniciar a escena</string>
+    <string formatted="false" name="brick_note">Nota</string>
+    <string formatted="false" name="brick_think_bubble">Pensar</string>
+    <string formatted="false" name="brick_say_bubble">Dicir</string>
+    <string formatted="false" name="brick_think_say_for_text">durante</string>
+    <string formatted="false" name="brick_forever">Para sempre</string>
+    <string formatted="false" name="brick_loop_for_values_from">Para os valores desde</string>
+    <string formatted="false" name="brick_loop_for_each_value_from">Para cada valor de</string>
+    <string formatted="false" name="brick_loop_in">en</string>
+    <string formatted="false" name="brick_loop_to">ata</string>
+    <string formatted="false" name="brick_repeat">Repetir</string>
+    <string formatted="false" name="brick_repeat_until">Repetir ata que</string>
+    <string formatted="false" name="brick_when_touched">Cando se toque o escenario</string>
+    <string formatted="false" name="brick_clone">Crear un clon de</string>
+    <string formatted="false" name="brick_clone_this">ti mesmo</string>
+    <string formatted="false" name="brick_when_cloned">Cando comeces como clon</string>
+    <string formatted="false" name="brick_delete_this_clone">Eliminar este clon</string>
+    <string formatted="false" name="brick_assert_that">Comprobar que</string>
+    <string formatted="false" name="brick_is_equal_to">é igual ao valor esperado</string>
+    <string formatted="false" name="brick_wait_till_idle">Agardar ata que se deteñan todos os demais scripts</string>
+    <string formatted="false" name="brick_tap_at">"Tocar unha vez en"</string>
+    <string formatted="false" name="brick_touch_at">"Tocar en"</string>
+    <string formatted="false" name="brick_tap_for">"durante"</string>
+    <string formatted="false" name="brick_touch_slide">"Tocar e esvarar"</string>
+    <string formatted="false" name="brick_touch_from_x">"desde x:"</string>
+    <string formatted="false" name="brick_finish_stage">Rematar o escenario</string>
+    <string formatted="false" name="brick_finish_tests">Rematar as probas</string>
+    <string formatted="false" name="brick_assert_lists">Comprobar listas</string>
+    <string formatted="false" name="brick_assert_actual">Real:</string>
+    <string formatted="false" name="brick_assert_expected">Esperado:</string>
+    <string formatted="false" name="brick_parameterized_assert">comprobar</string>
+    <string formatted="false" name="brick_parameterized_equals">é igual ao elemento esperado de</string>
+    <plurals name="brick_parameterized_foreach_plural">
+        <item quantity="one">Para cada elemento de</item>
+        <item quantity="other">Para cada tupla de elementos de</item>
+    </plurals>
+    <plurals name="brick_parameterized_stored_plural">
+        <item quantity="one">gardado na variable co mesmo nome</item>
+        <item quantity="other">gardados nas variables cos mesmos nomes</item>
+    </plurals>
+    <plurals name="list_selection_plural">
+        <item quantity="one">%d lista seleccionada</item>
+        <item quantity="other">%d listas seleccionadas</item>
+    </plurals>
+    <plurals name="time_plural">
+        <item quantity="one">vez</item>
+        <item quantity="other">veces</item>
+    </plurals>
+    <string formatted="false" name="brick_loop_end">Fin do bucle</string>
+    <string formatted="false" name="brick_if_begin">Se</string>
+    <string formatted="false" name="brick_if_begin_second_part">é verdadeiro, entón</string>
+    <string formatted="false" name="brick_if_else">Se non</string>
+    <string formatted="false" name="brick_if_end">Fin do se</string>
+    <string formatted="false" name="brick_set_variable">Fixar a variable</string>
+    <string formatted="false" name="brick_change_variable">Cambiar a variable</string>
+    <string formatted="false" name="brick_write_variable_on_device">Escribir a variable no dispositivo</string>
+    <string formatted="false" name="brick_read_variable_from_device">Ler a variable do dispositivo</string>
+    <string formatted="false" name="brick_write_variable_to_file_top">Escribir a variable</string>
+    <string formatted="false" name="brick_write_variable_to_file_bottom">no ficheiro</string>
+    <string formatted="false" name="brick_write_variable_to_file_default_value">variable.txt</string>
+    <string formatted="false" name="brick_write_variable_to_file_success">"Escribíronse os datos correctamente en %1$s"</string>
+    <string formatted="false" name="brick_read_variable_from_file_top">Ler a variable</string>
+    <string formatted="false" name="brick_read_variable_from_file_center">do ficheiro</string>
+    <string formatted="false" name="brick_read_variable_from_file_bottom">e</string>
+    <string formatted="false" name="brick_read_variable_from_file_keep">manter o ficheiro</string>
+    <string formatted="false" name="brick_read_variable_from_file_delete">eliminar o ficheiro</string>
+    <string formatted="false" name="brick_write_list_on_device">Escribir a lista no dispositivo</string>
+    <string formatted="false" name="brick_read_list_from_device">Ler a lista do dispositivo</string>
+    <string formatted="false" name="brick_note_default_value">engade aquí un comentario…</string>
+    <string formatted="false" name="brick_think_bubble_default_value">Hmmmm!</string>
+    <string formatted="false" name="brick_say_bubble_default_value">Ola!</string>
+    <string formatted="false" name="brick_broadcast_default_value">"nova mensaxe"</string>
+    <string formatted="false" name="brick_add_item_to_userlist_add">Engadir</string>
+    <string formatted="false" name="brick_add_item_to_userlist">á lista</string>
+    <string formatted="false" name="brick_clear_userlist">Eliminar todos os elementos da lista</string>
+    <string formatted="false" name="brick_delete_item_from_userlist_delete">Eliminar o elemento da lista</string>
+    <string formatted="false" name="brick_delete_item_from_userlist">na posición</string>
+    <string formatted="false" name="brick_insert_item_into_userlist_insert_into">Inserir</string>
+    <string formatted="false" name="brick_insert_item_into_userlist_into_list">na lista</string>
+    <string formatted="false" name="brick_insert_item_into_userlist_at_position">na posición</string>
+    <string formatted="false" name="brick_replace_item_in_userlist_replace_in_list">Substituír o elemento da lista</string>
+    <string formatted="false" name="brick_replace_item_in_userlist_item_at_index">na posición</string>
+    <string formatted="false" name="brick_replace_item_in_userlist_with_value">por</string>
+    <string formatted="false" name="brick_web_request">Enviar unha solicitude web a</string>
+    <string formatted="false" name="brick_web_request_default_value">https://catrob.at/joke</string>
+    <string formatted="false" name="brick_web_request_result">e gardar a resposta en</string>
+    <string formatted="false" name="web_request_warning_title">Permitir o acceso á web?</string>
+    <string formatted="false" name="web_request_warning_message">Ten moito coidado antes de permitir o acceso, xa que a ligazón pode expoñer a túa información persoal, como a túa localización xeográfica exacta ou calquera texto que escribiches, a persoas malintencionadas ou ao público. Consulta a nosa &lt;a href=%1s&gt;wiki&lt;/a&gt; para saber por que isto pode ser extremadamente perigoso.</string>
+    <string formatted="false" name="web_request_trust_domain_warning_title">Permitir sempre o acceso á web?</string>
+    <string formatted="false" name="web_request_trust_domain_warning_message">Se permites sempre o acceso, non se che volverá pedir que confirmes enderezos web deste dominio.</string>
+    <string formatted="false" name="trusted_domains_edit_hint">Se máis adiante queres retirar este permiso, podes quitar a entrada da lista de dominios de confianza na configuración desta aplicación.</string>
+    <string formatted="false" name="brick_look_request">Obter a imaxe de</string>
+    <string formatted="false" name="brick_look_request_result">e usala como aparencia actual</string>
+    <string formatted="false" name="brick_background_request_result">e usala como fondo actual</string>
+    <string formatted="false" name="look_request_http_error_message">"Obter a imaxe de %1$s devolveu o erro HTTP %2$s"</string>
+    <string formatted="false" name="look_request_type_error_message">"Obter a imaxe de %1$s non obtivo ningún formato de imaxe recoñecido"</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_store">Gardar a columna</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_of">dos</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_csv">valores separados por comas</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_into">na lista</string>
+    <string formatted="false" name="brick_store_csv_into_userlist_data">gatiño,bonito\ncadelo,traste\npolbo,intelixente</string>
+    <!--  -->
+    <!--Instruments-->
+    <string formatted="false" name="piano">piano</string>
+    <string formatted="false" name="electric_piano">piano eléctrico</string>
+    <string formatted="false" name="cello">violonchelo</string>
+    <string formatted="false" name="flute">frauta</string>
+    <string formatted="false" name="vibraphone">vibráfono</string>
+    <string formatted="false" name="organ">órgano</string>
+    <string formatted="false" name="guitar">guitarra</string>
+    <string formatted="false" name="electric_guitar">guitarra eléctrica</string>
+    <string formatted="false" name="bass">baixo</string>
+    <string formatted="false" name="pizzicato">pizzicato</string>
+    <string formatted="false" name="synth_pad">pad de sintetizador</string>
+    <string formatted="false" name="choir">coro</string>
+    <string formatted="false" name="synth_lead">sintetizador solista</string>
+    <string formatted="false" name="wooden_flute">frauta de madeira</string>
+    <string formatted="false" name="trombone">trombón</string>
+    <string formatted="false" name="saxophone">saxofón</string>
+    <string formatted="false" name="bassoon">fagot</string>
+    <string formatted="false" name="clarinet">clarinete</string>
+    <string formatted="false" name="music_box">caixa de música</string>
+    <string formatted="false" name="steel_drum">tambor metálico</string>
+    <string formatted="false" name="marimba">marimba</string>
+    <!--  -->
+    <!--Drums-->
+    <string formatted="false" name="snare_drum">caixa</string>
+    <string formatted="false" name="bass_drum">bombo</string>
+    <string formatted="false" name="side_stick">baqueta no aro</string>
+    <string formatted="false" name="crash_cymbal">prato crash</string>
+    <string formatted="false" name="open_hi_hat">charles aberto</string>
+    <string formatted="false" name="closed_hi_hat">charles pechado</string>
+    <string formatted="false" name="tambourine">pandeireta</string>
+    <string formatted="false" name="hand_clap">palmada</string>
+    <string formatted="false" name="claves">claves</string>
+    <string formatted="false" name="wood_block">bloque de madeira</string>
+    <string formatted="false" name="cowbell">cencerro</string>
+    <string formatted="false" name="triangle">triángulo</string>
+    <string formatted="false" name="bongo">bongó</string>
+    <string formatted="false" name="conga">conga</string>
+    <string formatted="false" name="cabasa">cabasa</string>
+    <string formatted="false" name="guiro">güiro</string>
+    <string formatted="false" name="vibraslap">vibraslap</string>
+    <string formatted="false" name="open_cuica">cuíca aberta</string>
+    <!--  -->
+    <!-- Default Values -->
+    <string formatted="false" name="default_project_name">O meu proxecto</string>
+    <string formatted="false" name="default_variable_name">Variable</string>
+    <string formatted="false" name="default_scene_name">Escena</string>
+    <string formatted="false" name="default_script_group_name">Grupo de scripts</string>
+    <string formatted="false" name="default_broadcast_message_name">Mensaxe</string>
+    <string formatted="false" name="default_list_name">Lista</string>
+    <string formatted="false" name="default_project_background_name">Fondo</string>
+    <string formatted="false" name="default_project_cloud_name">Nubes</string>
+    <string formatted="false" name="default_project_cloud_sprite_name_1">Nubes1</string>
+    <string formatted="false" name="default_project_cloud_sprite_name_2">Nubes2</string>
+    <string formatted="false" name="default_project_sprites_animal_name">Animal</string>
+    <string formatted="false" name="default_project_sprites_animal_wings_up">Ás arriba</string>
+    <string formatted="false" name="default_project_sprites_animal_wings_down">Ás abaixo</string>
+    <string formatted="false" name="default_project_sprites_tweet_1">Chío1</string>
+    <string formatted="false" name="default_project_sprites_tweet_2">Chío2</string>
+    <!--suppress UnusedResources -->
+    <string formatted="false" name="default_project_needle_name">Agulla</string>
+    <!--suppress UnusedResources -->
+    <string formatted="false" name="default_project_outer_loop">Bucle exterior</string>
+    <!--suppress UnusedResources -->
+    <string formatted="false" name="default_project_inner_loop">Bucle interior</string>
+    <!-- Default ChromeCast Values -->
+    <string formatted="false" name="default_cast_project_background_name">Fondo</string>
+    <string formatted="false" name="default_cast_project_cloud_name">Nubes</string>
+    <string formatted="false" name="default_cast_project_cloud_sprite_name1">Nubes1</string>
+    <string formatted="false" name="default_cast_project_cloud_sprite_name2">Nubes2</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name">Paxaro</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name_wing_up">Paxaro ás arriba</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name_wing_down">Paxaro ás abaixo</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name_wing_up_left">Paxaro ás arriba esquerda</string>
+    <string formatted="false" name="default_cast_project_sprites_bird_name_wing_down_left">Paxaro ás abaixo esquerda</string>
+    <string formatted="false" name="default_cast_project_sprites_tweet_1">Chío1</string>
+    <string formatted="false" name="default_cast_project_sprites_tweet_2">Chío2</string>
+    <string formatted="false" name="default_cast_project_var_direction">dirección</string>
+    <string formatted="false" name="default_cast_project_name">O meu primeiro proxecto para Chromecast</string>
+    <!-- Default Drone Values -->
+    <string formatted="false" name="drone_brick_set_text">Texto</string>
+    <string formatted="false" name="drone_brick_set_x">X:</string>
+    <!--  -->
+    <!-- Drone config spinner values  -->
+    <string formatted="false" name="drone_config_indoor_with_hull">interior con carcasa</string>
+    <string formatted="false" name="drone_config_indoor_without_hull">interior sen carcasa</string>
+    <string formatted="false" name="drone_config_outdoor_with_hull">exterior con carcasa</string>
+    <string formatted="false" name="drone_config_outdoor_without_hull">exterior sen carcasa</string>
+    <!-- Drone altitude limit values  -->
+    <string formatted="false" name="drone_set_altitude_max_3m">3 metros</string>
+    <string formatted="false" name="drone_set_altitude_max_5m">5 metros</string>
+    <string formatted="false" name="drone_set_altitude_max_10m">10 metros</string>
+    <string formatted="false" name="drone_set_altitude_max_100m">100 metros</string>
+    <!-- Drone max vertical speed limit values  -->
+    <string formatted="false" name="drone_set_vertical_min">200 mm/s</string>
+    <string formatted="false" name="drone_set_vertical_indoor">700 mm/s</string>
+    <string formatted="false" name="drone_set_vertical_outdoor">1000 mm/s</string>
+    <string formatted="false" name="drone_set_vertical_max">2000 mm/s</string>
+    <!-- Drone max rotation speed limit values  -->
+    <string formatted="false" name="drone_set_rotation_min">40 graos/s</string>
+    <string formatted="false" name="drone_set_rotation_indoor">100 graos/s</string>
+    <string formatted="false" name="drone_set_rotation_outdoor">200 graos/s</string>
+    <string formatted="false" name="drone_set_rotation_max">350 graos/s</string>
+    <!-- Drone max tilt limit values  -->
+    <string formatted="false" name="drone_set_tilt_min">5 graos</string>
+    <string formatted="false" name="drone_set_tilt_indoor">12 graos</string>
+    <string formatted="false" name="drone_set_tilt_outdoor">20 graos</string>
+    <string formatted="false" name="drone_set_tilt_max">30 graos</string>
+    <!-- Notification Channel -->
+    <string formatted="false" name="channel_description">Canle de notificacións de %1$s</string>
+    <!--  -->
+    <!-- Notifications -->
+    <string formatted="false" name="notification_screenshot_ok">Gardouse a imaxe de vista previa</string>
+    <string formatted="false" name="notification_download_project_cancel">Cancelar a descarga do proxecto</string>
+    <string formatted="false" name="notification_reconvert_download_program_cancel">Cancelouse a descarga/reconversión do proxecto</string>
+    <string formatted="false" name="notification_upload_title_pending">"Subindo"</string>
+    <string formatted="false" name="notification_upload_title_finished">"Mira"</string>
+    <string formatted="false" name="notification_upload_pending">Subida en curso</string>
+    <string formatted="false" name="notification_upload_finished">Subida completada</string>
+    <string formatted="false" name="notification_upload_rejected">Rexeitouse o proxecto subido</string>
+    <string formatted="false" name="notification_upload_retry">Tentar de novo</string>
+    <string formatted="false" name="notification_open_play_store">Abrir a tenda de aplicacións</string>
+    <string formatted="false" name="notification_download_title_pending">"Descargando"</string>
+    <string formatted="false" name="notification_download_pending">Descarga en curso</string>
+    <string formatted="false" name="notification_download_finished">Descarga completada</string>
+    <string formatted="false" name="notification_title_open">"Abrir"</string>
+    <string formatted="false" name="size_of_project">Tamaño:</string>
+    <!--  -->
+    <!-- Runtime permission messages -->
+    <string formatted="false" name="runtime_permission_general">Esta aplicación necesita os permisos solicitados para funcionar correctamente. Por exemplo, o bloque Cámara necesita acceder á cámara do dispositivo, o elemento de fórmula \"localización\" necesita acceder ao sensor de xeolocalización do dispositivo e, para importar e exportar proxectos desde e cara á memoria local, a aplicación necesita permiso de lectura e escritura nela. Sempre podes cambiar os permisos na configuración do teu dispositivo.</string>
+    <!-- Error messages -->
+    <string formatted="false" name="error_project_upload">Algo foi mal ao subir o proxecto.</string>
+    <string formatted="false" name="error_project_download">Algo foi mal ao descargar o proxecto.</string>
+    <string formatted="false" name="error_project_already_in_queue">"O proxecto %s xa está na cola."</string>
+    <string formatted="false" name="error_could_not_decode_project_name_from_url">"Non se puido iniciar a descarga. Parece que hai un problema co noso servidor."</string>
+    <string formatted="false" name="error_new_project">Algo foi mal ao crear un proxecto novo.</string>
+    <string formatted="false" name="error_rename_scene">Algo foi mal ao renomear a escena.</string>
+    <string formatted="false" name="error_load_project">Algo foi mal ao cargar o proxecto.</string>
+    <string formatted="false" name="error_screenshot_failed">Algo foi mal ao gardar a imaxe de vista previa.</string>
+    <string formatted="false" name="error_internet_connection">Produciuse un erro descoñecido. Comproba a túa conexión a internet.</string>
+    <string formatted="false" name="error_project_compatibility">O proxecto non é compatible con esta versión da aplicación.</string>
+    <string formatted="false" name="error_outdated_version">Esta versión da aplicación está desactualizada. Queres actualizala agora?</string>
+    <string formatted="false" name="error_upload_project_with_default_name">Non podes subir un proxecto co nome \"%s\". Renomea o proxecto.</string>
+    <string formatted="false" name="error_upload_default_project">Non podes subir un proxecto de exemplo sen modificar. Cambia algo e téntao de novo.</string>
+    <string formatted="false" name="error_adding_brick">Algo foi mal ao engadir este bloque.</string>
+    <string formatted="false" name="error_copying_brick">Algo foi mal ao copiar este bloque.</string>
+    <string formatted="false" name="error_rename_incompatible_project">Non se pode renomear un proxecto incompatible.</string>
+    <string formatted="false" name="error_embroidery_file_export">Algo foi mal ao compartir o ficheiro de bordado.</string>
+    <string formatted="false" name="error_embroidery_file_write">Algo foi mal ao escribir o ficheiro de bordado.</string>
+    <string formatted="false" name="error_embroidery_data_not_found">Falta o bordado.</string>
+    <string formatted="false" name="error_plot_file_write">Algo foi mal ao escribir o ficheiro SVG do plóter.</string>
+    <string formatted="false" name="error_plot_data_not_found">Falta o debuxo do plóter.</string>
+    <string formatted="false" name="error_unknown_error">Algo foi mal.</string>
+    <string formatted="false" name="error_gps_not_available">Os datos de xeolocalización non están dispoñibles.</string>
+    <string formatted="false" name="error_set_description">Algo foi mal ao gardar a nova descrición.</string>
+    <string formatted="false" name="error_set_notes_and_credits">Algo foi mal ao gardar as novas notas e créditos.</string>
+    <string formatted="false" name="error_no_whatsapp">WhatsApp non está instalado</string>
+    <string formatted="false" name="error_unsupported_bricks_chromecast">Este script non se pode engadir a un proxecto para Chromecast.</string>
+    <!--  -->
+    <!-- Bluetooth Connection Strings -->
+    <string formatted="false" name="notification_blueth_err">Non se puido activar o Bluetooth. Tenta desactivalo e activalo de novo.</string>
+    <string formatted="false" name="title_paired_devices">Dispositivos vinculados</string>
+    <string formatted="false" name="title_other_devices">Dispositivos dispoñibles</string>
+    <string formatted="false" name="bluetooth_connection_title">Conexión Bluetooth</string>
+    <string formatted="false" name="skip_bluetooth_connection">Omitir</string>
+    <string formatted="false" name="connecting_please_wait">Conectando co teu dispositivo.\nAgarda…</string>
+    <string formatted="false" name="bt_connection_failed">Fallou a conexión co dispositivo!</string>
+    <string formatted="false" name="none_found">Non se atopou ningún dispositivo sen vincular</string>
+    <string formatted="false" name="multiplayer_bluetooth_connection_information_title">É necesaria unha conexión Bluetooth!</string>
+    <string formatted="false" name="multiplayer_bluetooth_connection_information">Para xogar a este xogo en modo multixogador é necesaria unha conexión Bluetooth. Os dous xogadores teñen que iniciar o xogo e estar nesta pantalla para que a conexión funcione correctamente!</string>
+    <!--  -->
+    <!-- Arduino Bricks -->
+    <string formatted="false" name="brick_arduino_select_digital_value">Fixar o pin dixital do Arduino</string>
+    <string formatted="false" name="brick_arduino_select_analog_value">Fixar o pin PWM~ do Arduino</string>
+    <string formatted="false" name="brick_arduino_set_pin_value_to">en</string>
+    <!--  -->
+    <!-- Raspi Bricks -->
+    <string formatted="false" name="brick_raspi_select_digital_value">Fixar o pin da Raspberry Pi</string>
+    <string formatted="false" name="brick_raspi_set_pin_value_to">en</string>
+    <string formatted="false" name="brick_raspi_if_begin">Se o pin da Raspberry Pi</string>
+    <string formatted="false" name="brick_raspi_if_begin_second_part">é verdadeiro, entón</string>
+    <string formatted="false" name="brick_raspi_when_begin">Cando o pin da Raspberry Pi</string>
+    <string formatted="false" name="brick_raspi_when_equals">cambie a</string>
+    <string formatted="false" name="brick_raspi_pressed_text">alto</string>
+    <string formatted="false" name="brick_raspi_released_text">baixo</string>
+    <string formatted="false" name="brick_raspi_set_pwm">Fixar o pin PWM da Raspberry Pi</string>
+    <!--  -->
+    <!-- Raspi Settings -->
+    <string formatted="false" name="raspi_settings_title_name">Configuración da Raspberry Pi</string>
+    <string formatted="false" name="raspi_settings_gpio_version">Versión de GPIO</string>
+    <string formatted="false" name="error_connecting_to">Erro: non se puido conectar a %s : %d</string>
+    <!--  -->
+    <!-- MQTT Settings -->
+    <string formatted="false" name="preference_title_enable_mqtt_bricks">Extensión MQTT</string>
+    <string formatted="false" name="preference_description_mqtt_bricks">Permitir que a aplicación se conecte a brókers MQTT</string>
+    <string formatted="false" name="preference_title_mqtt_enabled">Activar os bloques MQTT</string>
+    <string formatted="false" name="preference_description_mqtt_enabled">Activar bloques e sensores para MQTT</string>
+    <string formatted="false" name="preference_title_mqtt_category">Configuración de MQTT</string>
+    <string formatted="false" name="preference_title_mqtt_broker_host">Servidor do bróker</string>
+    <string formatted="false" name="preference_description_mqtt_broker_host">Enderezo IP ou nome do servidor do bróker MQTT</string>
+    <string formatted="false" name="preference_title_mqtt_broker_port">Porto do bróker</string>
+    <string formatted="false" name="preference_description_mqtt_broker_port">Número de porto do bróker MQTT (1–65535)</string>
+    <string formatted="false" name="preference_title_mqtt_use_tls">Usar TLS</string>
+    <string formatted="false" name="preference_title_mqtt_username">Nome de usuario</string>
+    <string formatted="false" name="preference_title_mqtt_password">Contrasinal</string>
+    <string formatted="false" name="preference_title_mqtt_client_id">ID do cliente</string>
+    <string formatted="false" name="preference_mqtt_port_invalid">O porto debe ser un número entre 1 e 65535</string>
+    <!--  -->
+    <!-- Lego Mindstorms Strings -->
+    <string formatted="false" name="nxt_brick_motor_move">Fixar o motor NXT</string>
+    <string formatted="false" name="nxt_motor_speed_to">en</string>
+    <string formatted="false" name="nxt_motor_speed">de velocidade</string>
+    <string formatted="false" name="nxt_brick_motor_turn_angle">Xirar o motor NXT</string>
+    <string formatted="false" name="nxt_motor_move_by">en</string>
+    <string formatted="false" name="nxt_motor_stop">Deter o motor NXT</string>
+    <string formatted="false" name="nxt_play_tone">Tocar un ton NXT</string>
+    <string formatted="false" name="nxt_tone_duration">Duración</string>
+    <string formatted="false" name="nxt_tone_frequency">Frecuencia</string>
+    <string formatted="false" name="nxt_tone_hundred_hz">×100Hz</string>
+    <string formatted="false" name="nxt_motor_a">A</string>
+    <string formatted="false" name="nxt_motor_b">B</string>
+    <string formatted="false" name="nxt_motor_c">C</string>
+    <string formatted="false" name="nxt_motor_b_and_c">B+C</string>
+    <string formatted="false" name="nxt_motor_all">Todos</string>
+    <string formatted="false" name="nxt_choose_sensor_1">Sensor conectado ao porto 1</string>
+    <string formatted="false" name="nxt_choose_sensor_2">Sensor conectado ao porto 2</string>
+    <string formatted="false" name="nxt_choose_sensor_3">Sensor conectado ao porto 3</string>
+    <string formatted="false" name="nxt_choose_sensor_4">Sensor conectado ao porto 4</string>
+    <string formatted="false" name="nxt_no_sensor">ningún</string>
+    <string formatted="false" name="nxt_sensor_touch">Sensor de contacto NXT</string>
+    <string formatted="false" name="nxt_sensor_sound">Sensor de son NXT</string>
+    <string formatted="false" name="nxt_sensor_light">Sensor de luz NXT</string>
+    <string formatted="false" name="nxt_sensor_light_active">Sensor de luz NXT activo</string>
+    <string formatted="false" name="nxt_sensor_ultrasonic">Sensor de ultrasóns NXT</string>
+    <string formatted="false" name="nxt_sensor_not_found">Non se atopou o sensor!</string>
+    <string formatted="false" name="lego_nxt_sensor_config_info_title">Configuración dos sensores NXT</string>
+    <string formatted="false" name="preference_disable_nxt_info_dialog">Desactivar o diálogo informativo</string>
+    <string formatted="false" name="preference_disable_nxt_info_dialog_description">A configuración NXT específica do proxecto non se mostra ao abrir un proxecto.</string>
+    <string formatted="false" name="preference_title_mindstorms_nxt_sensors_description">A asignación dos sensores NXT aos portos é específica de cada proxecto e só se pode configurar nos proxectos abertos.</string>
+    <string formatted="false" name="lego_nxt_sensor_config_info_text">O proxecto actual usa bloques ou sensores de Lego Mindstorms NXT. Para que funcione correctamente, conecta os sensores ao robot da seguinte maneira</string>
+    <string formatted="false" name="lego_port_1">Porto 1</string>
+    <string formatted="false" name="lego_port_2">Porto 2</string>
+    <string formatted="false" name="lego_port_3">Porto 3</string>
+    <string formatted="false" name="lego_port_4">Porto 4</string>
+    <string formatted="false" name="lego_sensor_config_dont_show_again">Non volver mostrar esta mensaxe.</string>
+    <string formatted="false" name="lego_sensor_port_config_dialog_title">Escolle un porto para conectar %1$s.</string>
+    <string formatted="false" name="lego_ev3_sensor_config_info_title">Configuración dos sensores EV3</string>
+    <string formatted="false" name="preference_disable_ev3_info_dialog_description">A configuración EV3 específica do proxecto non se mostra ao abrir un proxecto.</string>
+    <string formatted="false" name="preference_title_mindstorms_ev3_sensors_description">A asignación dos sensores EV3 aos portos é específica de cada proxecto e só se pode configurar nos proxectos abertos.</string>
+    <string formatted="false" name="lego_ev3_sensor_config_info_text">O proxecto actual usa bloques ou sensores de Lego Mindstorms EV3. Para que funcione correctamente, conecta os sensores ao robot da seguinte maneira</string>
+    <string formatted="false" name="ev3_choose_sensor_1">Sensor conectado ao porto 1</string>
+    <string formatted="false" name="ev3_choose_sensor_2">Sensor conectado ao porto 2</string>
+    <string formatted="false" name="ev3_choose_sensor_3">Sensor conectado ao porto 3</string>
+    <string formatted="false" name="ev3_choose_sensor_4">Sensor conectado ao porto 4</string>
+    <string formatted="false" name="ev3_no_sensor">ningún</string>
+    <string formatted="false" name="ev3_sensor_touch">Sensor de contacto EV3</string>
+    <string formatted="false" name="ev3_sensor_infrared">Sensor de infravermellos EV3</string>
+    <string formatted="false" name="ev3_sensor_color">Sensor de cor EV3</string>
+    <string formatted="false" name="ev3_sensor_color_ambient">Sensor de cor EV3 (luz ambiente)</string>
+    <string formatted="false" name="ev3_sensor_color_reflected">Sensor de cor EV3 (luz reflectida)</string>
+    <string formatted="false" name="ev3_sensor_hitechnic_color">Sensor de cor HiTechnic</string>
+    <string formatted="false" name="ev3_sensor_nxt_temperature_c">Sensor de temperatura NXT (°C)</string>
+    <string formatted="false" name="ev3_sensor_nxt_temperature_f">Sensor de temperatura NXT (°F)</string>
+    <string formatted="false" name="ev3_sensor_nxt_light">Sensor de luz NXT</string>
+    <string formatted="false" name="ev3_sensor_nxt_light_active">Sensor de luz NXT activo</string>
+    <string formatted="false" name="ev3_sensor_nxt_sound">Sensor de son NXT</string>
+    <string formatted="false" name="ev3_sensor_nxt_ultrasonic">Sensor de ultrasóns NXT</string>
+    <string formatted="false" name="ev3_motor_a">A</string>
+    <string formatted="false" name="ev3_motor_b">B</string>
+    <string formatted="false" name="ev3_motor_c">C</string>
+    <string formatted="false" name="ev3_motor_d">D</string>
+    <string formatted="false" name="ev3_motor_b_and_c">B+C</string>
+    <string formatted="false" name="ev3_motor_all">Todos</string>
+    <string formatted="false" name="ev3_play_tone">Tocar un ton EV3</string>
+    <string formatted="false" name="ev3_tone_duration_for">durante</string>
+    <string formatted="false" name="ev3_tone_volume">Volume</string>
+    <string formatted="false" name="ev3_tone_percent">%</string>
+    <string formatted="false" name="ev3_motor_stop">Deter o motor EV3</string>
+    <string formatted="false" name="ev3_motor_move">Fixar o motor EV3</string>
+    <string formatted="false" name="ev3_brick_motor_turn_angle">Xirar o motor EV3</string>
+    <string formatted="false" name="ev3_motor_move_by">en</string>
+    <string formatted="false" name="ev3_set_led_status">Fixar o estado do LED EV3</string>
+    <string formatted="false" name="ev3_led_status_off">Apagado</string>
+    <string formatted="false" name="ev3_led_status_green">Verde</string>
+    <string formatted="false" name="ev3_led_status_red">Vermello</string>
+    <string formatted="false" name="ev3_led_status_orange">Laranxa</string>
+    <string formatted="false" name="ev3_led_status_green_flashing">Verde intermitente</string>
+    <string formatted="false" name="ev3_led_status_red_flashing">Vermello intermitente</string>
+    <string formatted="false" name="ev3_led_status_orange_flashing">Laranxa intermitente</string>
+    <string formatted="false" name="ev3_led_status_green_pulse">Verde pulsante</string>
+    <string formatted="false" name="ev3_led_status_red_pulse">Vermello pulsante</string>
+    <string formatted="false" name="ev3_led_status_orange_pulse">Laranxa pulsante</string>
+    <!--  -->
+    <!-- Drone Bricks -->
+    <string formatted="false" name="brick_drone_takeoff_land">Despegar / aterrar o AR.Drone 2.0</string>
+    <string formatted="false" name="brick_drone_play_led_animation">Reproducir a animación de luces do AR.Drone 2.0</string>
+    <string formatted="false" name="brick_drone_flip">Dar a volta ao AR.Drone 2.0</string>
+    <string formatted="false" name="brick_drone_move_left">Mover o AR.Drone 2.0 á esquerda</string>
+    <string formatted="false" name="brick_drone_move_right">Mover o AR.Drone 2.0 á dereita</string>
+    <string formatted="false" name="brick_drone_move_forward">Mover o AR.Drone 2.0 cara adiante</string>
+    <string formatted="false" name="brick_drone_move_backward">Mover o AR.Drone 2.0 cara atrás</string>
+    <string formatted="false" name="brick_drone_move_up">Mover o AR.Drone 2.0 cara arriba</string>
+    <string formatted="false" name="brick_drone_move_down">Mover o AR.Drone 2.0 cara abaixo</string>
+    <string formatted="false" name="brick_drone_emergency">Emerxencia do AR.Drone 2.0</string>
+    <string formatted="false" name="brick_drone_turn_right">Xirar o AR.Drone 2.0 á dereita</string>
+    <string formatted="false" name="brick_drone_turn_left">Xirar o AR.Drone 2.0 á esquerda</string>
+    <string formatted="false" name="brick_drone_set_config">Fixar a configuración do AR.Drone 2.0</string>
+    <string formatted="false" name="brick_drone_switch_camera">Cambiar a cámara do AR.Drone 2.0</string>
+    <string formatted="false" name="brick_drone_set_altitude">Límite de altitude</string>
+    <string formatted="false" name="brick_drone_set_vertical_speed">Límite de velocidade vertical</string>
+    <string formatted="false" name="brick_drone_set_rotation_speed">Límite de velocidade de rotación</string>
+    <string formatted="false" name="brick_drone_set_tilt_limit">Límite de inclinación</string>
+    <string formatted="false" name="brick_drone_with.">con</string>
+    <string formatted="false" name="brick_drone_power">de potencia</string>
+    <!--  -->
+    <!-- Drone play led animation strings -->
+    <string formatted="false" name="drone_animation_blinkgreenred">Escintilar verde e vermello</string>
+    <string formatted="false" name="drone_animation_blinkgreen">Escintilar verde</string>
+    <string formatted="false" name="drone_animation_blinkred">Escintilar vermello</string>
+    <string formatted="false" name="drone_animation_blinkorange">Escintilar laranxa</string>
+    <string formatted="false" name="drone_animation_snakegreenred">Serpe verde e vermella</string>
+    <string formatted="false" name="drone_animation_fire">Lume</string>
+    <string formatted="false" name="drone_animation_standard">Estándar</string>
+    <string formatted="false" name="drone_animation_red">Vermello</string>
+    <string formatted="false" name="drone_animation_green">Verde</string>
+    <string formatted="false" name="drone_animation_redsnake">Serpe vermella</string>
+    <string formatted="false" name="drone_animation_blank">Apagado</string>
+    <string formatted="false" name="drone_animation_rightmissile">Mísil dereito</string>
+    <string formatted="false" name="drone_animation_leftmissile">Mísil esquerdo</string>
+    <string formatted="false" name="drone_animation_doublemissile">Mísil dobre</string>
+    <string formatted="false" name="drone_animation_frontleftgreenothersred">Dianteira esquerda verde, resto vermello</string>
+    <string formatted="false" name="drone_animation_frontrightgreenothersred">Dianteira dereita verde, resto vermello</string>
+    <string formatted="false" name="drone_animation_rearrightgreenothersred">Traseira dereita verde, resto vermello</string>
+    <string formatted="false" name="drone_animation_rearleftgreenothersred">Traseira esquerda verde, resto vermello</string>
+    <string formatted="false" name="drone_animation_leftgreenrightred">Esquerda verde, dereita vermello</string>
+    <string formatted="false" name="drone_animation_leftredrightgreen">Esquerda vermello, dereita verde</string>
+    <string formatted="false" name="drone_animation_blinkstandard">Escintilación estándar</string>
+    <!-- Jumping Sumo Bricks -->
+    <string formatted="false" name="brick_jumping_sumo_move_forward">Mover o Jumping Sumo cara adiante</string>
+    <string formatted="false" name="brick_jumping_sumo_move_backward">Mover o Jumping Sumo cara atrás</string>
+    <string formatted="false" name="brick_jumping_sumo_animation">Animacións do Jumping Sumo</string>
+    <string formatted="false" name="brick_jumping_sumo_no_sound">Sen son do Jumping Sumo</string>
+    <string formatted="false" name="brick_jumping_sumo_jump_long">Salto longo do Jumping Sumo</string>
+    <string formatted="false" name="brick_jumping_sumo_jump_high">Salto alto do Jumping Sumo</string>
+    <string formatted="false" name="brick_jumping_sumo_rotate_left">Xirar o Jumping Sumo á esquerda</string>
+    <string formatted="false" name="brick_jumping_sumo_rotate_right">Xirar o Jumping Sumo á dereita</string>
+    <string formatted="false" name="brick_jumping_sumo_rotate_text">graos</string>
+    <string formatted="false" name="brick_jumping_sumo_turn">Dar a volta ao Jumping Sumo</string>
+    <string formatted="false" name="brick_jumping_sumo_taking_picture">Sacar unha foto co Jumping Sumo</string>
+    <!--  -->
+    <!-- defaultJumpingSumoValues -->
+    <string formatted="false" name="default_jumping_sumo_project_sprites_sound">Son</string>
+    <!--  -->
+    <!-- Jumping Sumo animation strings -->
+    <string formatted="false" name="animation_spin">Xiro</string>
+    <string formatted="false" name="animation_tab">Toque</string>
+    <string formatted="false" name="animation_slowshake">Sacudida lenta</string>
+    <string formatted="false" name="animation_metronome">Metrónomo</string>
+    <string formatted="false" name="animation_ondulation">Ondulación</string>
+    <string formatted="false" name="animation_spinjump">Salto con xiro</string>
+    <string formatted="false" name="animation_spiral">Espiral</string>
+    <string formatted="false" name="animation_slalom">Slalom</string>
+    <!-- Jumping Sumo sound strings -->
+    <string formatted="false" name="jumping_sumo_volume">Volume</string>
+    <string formatted="false" name="sound_default">Normal</string>
+    <string formatted="false" name="sound_robot">Robot</string>
+    <string formatted="false" name="sound_insect">Insecto</string>
+    <string formatted="false" name="sound_monster">Monstro</string>
+    <!--  -->
+    <!-- Shared arc and go-through strings -->
+    <string formatted="false" name="direction_left">esquerda</string>
+    <string formatted="false" name="direction_right">dereita</string>
+    <string formatted="false" name="arc_direction">Ir en arco cara á</string>
+    <string formatted="false" name="go_through">Pasar por</string>
+    <string formatted="false" name="go_through_target">e despois ir a</string>
+    <string formatted="false" name="arc_with_radius">con raio</string>
+    <string formatted="false" name="arc_for_degrees">ao longo de</string>
+    <!--  -->
+    <!-- Phiro bricks -->
+    <!-- motor -->
+    <string formatted="false" name="phiro_motor_stop">Deter o motor Phiro</string>
+    <string formatted="false" name="brick_phiro_motor_forward_action">Mover o motor Phiro cara adiante</string>
+    <string formatted="false" name="brick_phiro_motor_backward_action">Mover o motor Phiro cara atrás</string>
+    <string formatted="false" name="phiro_motor_speed">Velocidade</string>
+    <!-- sensor -->
+    <string formatted="false" name="brick_phiro_sensor_begin">Se o Phiro</string>
+    <string formatted="false" name="brick_phiro_sensor_second_part">está activado</string>
+    <!-- tone -->
+    <string formatted="false" name="phiro_play_tone">Tocar música Phiro\n</string>
+    <string formatted="false" name="phiro_tone_duration">Duración</string>
+    <string formatted="false" name="brick_phiro_select_tone">ton</string>
+    <string formatted="false" name="phiro_seconds">segundos</string>
+    <!-- light -->
+    <string formatted="false" name="brick_phiro_rgb_led_action">Fixar a luz do Phiro</string>
+    <string formatted="false" name="phiro_rgb_led_red">Vermello</string>
+    <string formatted="false" name="phiro_rgb_led_green">Verde</string>
+    <string formatted="false" name="phiro_rgb_led_blue">Azul</string>
+    <!--  -->
+    <!-- Phiro tone strings -->
+    <string formatted="false" name="phiro_tone_do">Do</string>
+    <string formatted="false" name="phiro_tone_re">Re</string>
+    <string formatted="false" name="phiro_tone_mi">Mi</string>
+    <string formatted="false" name="phiro_tone_fa">Fa</string>
+    <string formatted="false" name="phiro_tone_so">Sol</string>
+    <string formatted="false" name="phiro_tone_la">La</string>
+    <string formatted="false" name="phiro_tone_ti">Si</string>
+    <!--  -->
+    <!-- Phiro motor strings -->
+    <string formatted="false" name="phiro_motor_left">Esquerdo</string>
+    <string formatted="false" name="phiro_motor_right">Dereito</string>
+    <string formatted="false" name="phiro_motor_both">Ambos</string>
+    <!--  -->
+    <!-- Phiro light strings -->
+    <string formatted="false" name="phiro_light_left">Esquerda</string>
+    <string formatted="false" name="phiro_light_right">Dereita</string>
+    <string formatted="false" name="phiro_light_both">Ambas</string>
+    <!--  -->
+    <!-- Phiro sensor strings -->
+    <string formatted="false" name="phiro_sensor_front_left">Sensor dianteiro esquerdo</string>
+    <string formatted="false" name="phiro_sensor_front_right">Sensor dianteiro dereito</string>
+    <string formatted="false" name="phiro_sensor_side_left">Sensor lateral esquerdo</string>
+    <string formatted="false" name="phiro_sensor_side_right">Sensor lateral dereito</string>
+    <string formatted="false" name="phiro_sensor_bottom_left">Sensor inferior esquerdo</string>
+    <string formatted="false" name="phiro_sensor_bottom_right">Sensor inferior dereito</string>
+    <!--  -->
+    <string formatted="false" name="color_red">vermello</string>
+    <string formatted="false" name="color_green">verde</string>
+    <string formatted="false" name="color_blue">azul</string>
+    <!-- -->
+    <!-- Formula editor strings -->
+    <string formatted="false" name="formula_editor_data">Datos</string>
+    <string formatted="false" name="formula_editor_true">verdadeiro</string>
+    <string formatted="false" name="formula_editor_false">falso</string>
+    <string formatted="false" name="formula_editor_decimal_mark">.</string>
+    <string formatted="false" name="formula_editor_title">Editor de fórmulas</string>
+    <string formatted="false" name="formula_editor_changes_discarded">Descartáronse os cambios!</string>
+    <string formatted="false" name="formula_editor_parse_fail">A fórmula non é válida!</string>
+    <string formatted="false" name="formula_nothing_selected">Define o valor de entrada</string>
+    <string formatted="false" name="formula_editor_parse_fail_formula_too_long">A fórmula é demasiado longa!</string>
+    <string formatted="false" name="formula_editor_choose_object_variable">Propiedades desta personaxe ou obxecto</string>
+    <string formatted="false" name="formula_editor_bracket_open">(</string>
+    <string formatted="false" name="formula_editor_bracket_close">)</string>
+    <string formatted="false" name="formula_editor_function_sin">seno</string>
+    <string formatted="false" name="formula_editor_function_sin_parameter">(90)</string>
+    <string formatted="false" name="formula_editor_function_cos">coseno</string>
+    <string formatted="false" name="formula_editor_function_cos_parameter">(360)</string>
+    <string formatted="false" name="formula_editor_function_tan">tanxente</string>
+    <string formatted="false" name="formula_editor_function_tan_parameter">(45)</string>
+    <string formatted="false" name="formula_editor_function_ln">logaritmo natural</string>
+    <string formatted="false" name="formula_editor_function_ln_parameter">(2.718281828459)</string>
+    <string formatted="false" name="formula_editor_function_log">logaritmo decimal</string>
+    <string formatted="false" name="formula_editor_function_log_parameter">(10)</string>
+    <string formatted="false" name="formula_editor_function_pi">pi</string>
+    <string formatted="false" name="formula_editor_function_pi_parameter"></string>
+    <string formatted="false" name="formula_editor_object_color">cor</string>
+    <string formatted="false" name="formula_editor_function_sqrt">raíz cadrada</string>
+    <string formatted="false" name="formula_editor_function_sqrt_parameter">(4)</string>
+    <string formatted="false" name="formula_editor_function_rand">valor aleatorio entre</string>
+    <string formatted="false" name="formula_editor_function_rand_parameter">(1,6)</string>
+    <string formatted="false" name="formula_editor_function_abs">valor absoluto</string>
+    <string formatted="false" name="formula_editor_function_abs_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_round">redondear</string>
+    <string formatted="false" name="formula_editor_function_round_parameter">(1.6)</string>
+    <string formatted="false" name="formula_editor_function_mod">módulo</string>
+    <string formatted="false" name="formula_editor_function_mod_parameter">(3,2)</string>
+    <string formatted="false" name="formula_editor_function_arcsin">arcoseno</string>
+    <string formatted="false" name="formula_editor_function_arcsin_parameter">(0.5)</string>
+    <string formatted="false" name="formula_editor_function_arccos">arcocoseno</string>
+    <string formatted="false" name="formula_editor_function_arccos_parameter">(0)</string>
+    <string formatted="false" name="formula_editor_function_arctan">arcotanxente</string>
+    <string formatted="false" name="formula_editor_function_arctan_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_arctan2">arcotanxente2</string>
+    <string formatted="false" name="formula_editor_function_arctan2_parameter">(-1, 0)</string>
+    <string formatted="false" name="formula_editor_function_exp">exponencial</string>
+    <string formatted="false" name="formula_editor_function_exp_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_power">potencia</string>
+    <string formatted="false" name="formula_editor_function_power_parameter">(2,3)</string>
+    <string formatted="false" name="formula_editor_function_floor">chan</string>
+    <string formatted="false" name="formula_editor_function_floor_parameter">(0.7)</string>
+    <string formatted="false" name="formula_editor_function_ceil">teito</string>
+    <string formatted="false" name="formula_editor_function_ceil_parameter">(0.3)</string>
+    <string formatted="false" name="formula_editor_function_max">máximo de</string>
+    <string formatted="false" name="formula_editor_function_max_parameter">(5,4)</string>
+    <string formatted="false" name="formula_editor_function_min">mínimo de</string>
+    <string formatted="false" name="formula_editor_function_min_parameter">(7,2)</string>
+    <string formatted="false" name="formula_editor_function_if_then_else">se entón se non</string>
+    <string formatted="false" name="formula_editor_function_if_then_else_parameter">(falso, 2, 3)</string>
+    <string formatted="false" name="formula_editor_function_true">verdadeiro</string>
+    <string formatted="false" name="formula_editor_function_false">falso</string>
+    <string formatted="false" name="formula_editor_function_length">lonxitude</string>
+    <string formatted="false" name="formula_editor_function_length_parameter">(\'hello world\')</string>
+    <string formatted="false" name="formula_editor_function_letter">letra</string>
+    <string formatted="false" name="formula_editor_function_letter_parameter">(1,\'hello world\')</string>
+    <string formatted="false" name="formula_editor_function_subtext">subtexto</string>
+    <string formatted="false" name="formula_editor_function_subtext_parameter">(3,5,\'hello world\')</string>
+    <string formatted="false" name="formula_editor_function_join">unir</string>
+    <string formatted="false" name="formula_editor_function_join_parameter">(\'hello\',\' world\')</string>
+    <string formatted="false" name="formula_editor_function_join3">unir</string>
+    <string formatted="false" name="formula_editor_function_join3_parameter">(\'hello\',\' world\',\'!\')</string>
+    <string formatted="false" name="formula_editor_function_regex">expresión regular</string>
+    <string formatted="false" name="formula_editor_function_regex_parameter">(\' an? ([^ .]+)\',\'I am a panda.\')</string>
+    <string formatted="false" name="formula_editor_function_regex_assistant">Asistente de expresións regulares</string>
+    <string formatted="false" name="formula_editor_dialog_regular_expression_assistant_title">Asistente de expresións regulares</string>
+    <string formatted="false" name="formula_editor_function_regex_html_extractor_not_found">Non se atopou a palabra clave.</string>
+    <string formatted="false" name="formula_editor_function_regex_json_extractor_title">Extractor de JSON</string>
+    <string formatted="false" name="formula_editor_function_arduino_read_pin_value_digital">pin dixital de arduino</string>
+    <string formatted="false" name="formula_editor_function_arduino_read_pin_value_analog">pin analóxico de arduino</string>
+    <string formatted="false" name="formula_editor_function_raspi_read_pin_value_digital">pin de raspberry pi</string>
+    <string formatted="false" name="formula_editor_function_pin_default_parameter">(0)</string>
+    <string formatted="false" name="formula_editor_function_finger_x">x do toque no escenario</string>
+    <string formatted="false" name="formula_editor_function_finger_y">y do toque no escenario</string>
+    <string formatted="false" name="formula_editor_function_is_finger_touching">escenario tocado</string>
+    <string formatted="false" name="formula_editor_function_multi_finger_x">x do toque no escenario</string>
+    <string formatted="false" name="formula_editor_function_multi_finger_y">y do toque no escenario</string>
+    <string formatted="false" name="formula_editor_function_is_multi_finger_touching">escenario tocado</string>
+    <string formatted="false" name="formula_editor_function_index_of_last_finger">índice do último toque no escenario</string>
+    <string formatted="false" name="formula_editor_function_number_of_current_touches">número de toques actuais</string>
+    <string formatted="false" name="formula_editor_function_index_of_current_touch">índice do toque actual</string>
+    <string formatted="false" name="formula_editor_function_no_parameter"></string>
+    <string formatted="false" name="formula_editor_function_touch_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_list_item">elemento</string>
+    <string formatted="false" name="formula_editor_function_list_item_parameter">(1,*list name*)</string>
+    <string formatted="false" name="formula_editor_function_contains">contén</string>
+    <string formatted="false" name="formula_editor_function_contains_parameter">(*list name*,1)</string>
+    <string formatted="false" name="formula_editor_function_index_of_item">índice do elemento</string>
+    <string formatted="false" name="formula_editor_function_index_of_item_parameter">(1,*list name*)</string>
+    <string formatted="false" name="formula_editor_function_number_of_items">número de elementos</string>
+    <string formatted="false" name="formula_editor_function_number_of_items_parameter">(*list name*)</string>
+    <string formatted="false" name="formula_editor_function_flatten">aplanar</string>
+    <string formatted="false" name="formula_editor_function_flatten_parameter">(*list name*)</string>
+    <string formatted="false" name="formula_editor_function_collision">toca a personaxe ou obxecto</string>
+    <string formatted="false" name="formula_editor_function_collides_with_edge">toca o bordo</string>
+    <string formatted="false" name="formula_editor_function_touched">toca o dedo</string>
+    <string formatted="false" name="formula_editor_function_collides_with_color">toca a cor</string>
+    <string formatted="false" name="formula_editor_function_color_touches_color">cor toca a cor</string>
+    <string formatted="false" name="formula_editor_sensor_color_at_x_y">cor en x y</string>
+    <string formatted="false" name="formula_editor_sensor_color_equals_color">cor igual á cor con % de tolerancia</string>
+    <string formatted="false" name="formula_editor_sensor_x_acceleration">aceleración x</string>
+    <string formatted="false" name="formula_editor_sensor_y_acceleration">aceleración y</string>
+    <string formatted="false" name="formula_editor_sensor_z_acceleration">aceleración z</string>
+    <string formatted="false" name="formula_editor_sensor_compass_direction">dirección do compás</string>
+    <string formatted="false" name="formula_editor_sensor_latitude">latitude</string>
+    <string formatted="false" name="formula_editor_sensor_longitude">lonxitude xeográfica</string>
+    <string formatted="false" name="formula_editor_sensor_location_accuracy">precisión da localización</string>
+    <string formatted="false" name="formula_editor_sensor_altitude">altitude</string>
+    <string formatted="false" name="formula_editor_sensor_user_language">idioma do usuario</string>
+    <string formatted="false" name="formula_editor_sensor_x_inclination">inclinación x</string>
+    <string formatted="false" name="formula_editor_sensor_y_inclination">inclinación y</string>
+    <string formatted="false" name="formula_editor_sensor_loudness">volume do son</string>
+    <string formatted="false" name="formula_editor_sensor_timer">cronómetro</string>
+    <string formatted="false" name="formula_editor_sensor_date_year">ano</string>
+    <string formatted="false" name="formula_editor_sensor_date_month">mes</string>
+    <string formatted="false" name="formula_editor_sensor_date_day">día</string>
+    <string formatted="false" name="formula_editor_sensor_date_weekday">día da semana</string>
+    <string formatted="false" name="formula_editor_sensor_time_hour">hora</string>
+    <string formatted="false" name="formula_editor_sensor_time_minute">minuto</string>
+    <string formatted="false" name="formula_editor_sensor_time_second">segundo</string>
+    <string formatted="false" name="formula_editor_sensor_drone_battery_status">estado da batería do dron</string>
+    <string formatted="false" name="formula_editor_sensor_drone_emergency_state">estado de emerxencia do dron</string>
+    <string formatted="false" name="formula_editor_sensor_drone_flying">dron voando</string>
+    <string formatted="false" name="formula_editor_sensor_drone_initialized">dron inicializado</string>
+    <string formatted="false" name="formula_editor_sensor_drone_usb_active">USB do dron activo</string>
+    <string formatted="false" name="formula_editor_sensor_drone_usb_remaining_time">tempo restante do USB do dron</string>
+    <string formatted="false" name="formula_editor_sensor_drone_camera_ready">cámara do dron lista</string>
+    <string formatted="false" name="formula_editor_sensor_drone_record_ready">gravación do dron lista</string>
+    <string formatted="false" name="formula_editor_sensor_drone_recording">cámara do dron gravando</string>
+    <string formatted="false" name="formula_editor_sensor_drone_num_frames">número de fotogramas da cámara do dron</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_1">sensor NXT 1</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_2">sensor NXT 2</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_3">sensor NXT 3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_4">sensor NXT 4</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_1">sensor EV3 1</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_2">sensor EV3 2</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_3">sensor EV3 3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_4">sensor EV3 4</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_touch">contacto NXT</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_sound">son NXT</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_light">luz NXT</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_light_active">luz NXT activa</string>
+    <string formatted="false" name="formula_editor_sensor_lego_nxt_ultrasonic">ultrasóns NXT</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_touch">contacto EV3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_infrared">infravermellos EV3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_color">cor EV3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_color_ambient">cor ambiente EV3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_color_reflected">cor reflectida EV3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_hitechnic_color">cor HiTechnic EV3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_temperature_c">temperatura NXT EV3 en °C</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_temperature_f">temperatura NXT EV3 en °F</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_light">luz NXT EV3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_light_active">luz NXT EV3 activa</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_sound">son NXT EV3</string>
+    <string formatted="false" name="formula_editor_sensor_lego_ev3_sensor_nxt_ultrasonic">ultrasóns NXT EV3</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_a_pressed">botón A do mando premido</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_b_pressed">botón B do mando premido</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_up_pressed">frecha arriba do mando premida</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_down_pressed">frecha abaixo do mando premida</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_left_pressed">frecha esquerda do mando premida</string>
+    <string formatted="false" name="formula_editor_sensor_gamepad_right_pressed">frecha dereita do mando premida</string>
+    <string formatted="false" name="formula_editor_sensor_stage_width">largura do escenario</string>
+    <string formatted="false" name="formula_editor_sensor_stage_height">altura do escenario</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_front_left">sensor dianteiro esquerdo do phiro</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_front_right">sensor dianteiro dereito do phiro</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_side_left">sensor lateral esquerdo do phiro</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_side_right">sensor lateral dereito do phiro</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_bottom_left">sensor inferior esquerdo do phiro</string>
+    <string formatted="false" name="formula_editor_phiro_sensor_bottom_right">sensor inferior dereito do phiro</string>
+    <string formatted="false" name="formula_editor_nfc_tag_id">id da etiqueta NFC</string>
+    <string formatted="false" name="formula_editor_nfc_tag_message">mensaxe da etiqueta NFC</string>
+    <string formatted="false" name="formula_editor_object_x">posición x</string>
+    <string formatted="false" name="formula_editor_object_y">posición y</string>
+    <string formatted="false" name="formula_editor_object_transparency">transparencia</string>
+    <string formatted="false" name="formula_editor_object_brightness">brillo</string>
+    <string formatted="false" name="formula_editor_object_size">tamaño</string>
+    <string formatted="false" name="formula_editor_object_rotation">dirección do movemento</string>
+    <string formatted="false" name="formula_editor_object_rotation_look">dirección da aparencia</string>
+    <string formatted="false" name="formula_editor_object_layer">capa</string>
+    <string formatted="false" name="formula_editor_object_x_velocity">velocidade x</string>
+    <string formatted="false" name="formula_editor_object_y_velocity">velocidade y</string>
+    <string formatted="false" name="formula_editor_object_angular_velocity">velocidade angular</string>
+    <string formatted="false" name="formula_editor_object_look_number">número da aparencia</string>
+    <string formatted="false" name="formula_editor_object_look_name">nome da aparencia</string>
+    <string formatted="false" name="formula_editor_object_number_of_looks">número de aparencias</string>
+    <string formatted="false" name="formula_editor_object_background_number">número do fondo</string>
+    <string formatted="false" name="formula_editor_object_background_name">nome do fondo</string>
+    <string formatted="false" name="formula_editor_object_number_of_backgrounds">número de fondos</string>
+    <string formatted="false" name="formula_editor_object_distance_to">distancia á posición tocada</string>
+    <string formatted="false" name="formula_editor_confirm">Confirmar</string>
+    <string formatted="false" name="formula_editor_object">Propiedades</string>
+    <string formatted="false" name="formula_editor_functions">Funcións</string>
+    <string formatted="false" name="formula_editor_logic">Lóxica</string>
+    <string formatted="false" name="formula_editor_device">Sensores</string>
+    <string formatted="false" name="formula_editor_device_sensors">Sensores do dispositivo</string>
+    <string formatted="false" name="formula_editor_functions_maths">Matemáticas</string>
+    <string formatted="false" name="formula_editor_functions_strings">Texto</string>
+    <string formatted="false" name="formula_editor_functions_lists">Listas</string>
+    <string formatted="false" name="formula_editor_logic_boolean">Operadores lóxicos (booleanos) e constantes</string>
+    <string formatted="false" name="formula_editor_logic_comparison">Operadores de comparación</string>
+    <string formatted="false" name="formula_editor_object_look">Propiedades da aparencia</string>
+    <string formatted="false" name="formula_editor_object_movement">Propiedades do movemento</string>
+    <string formatted="false" name="formula_editor_device_face_detection">Detección de caras</string>
+    <string formatted="false" name="formula_editor_device_pose_detection">Detección de posturas</string>
+    <string formatted="false" name="formula_editor_device_text_recognition">Recoñecemento de texto</string>
+    <string formatted="false" name="formula_editor_device_object_recognition">Recoñecemento de obxectos</string>
+    <string formatted="false" name="formula_editor_device_date_and_time">Data e hora</string>
+    <string formatted="false" name="formula_editor_device_touch_detection">Detección de toques</string>
+    <string formatted="false" name="formula_editor_device_lego_nxt">Lego Mindstorms NXT</string>
+    <string formatted="false" name="formula_editor_device_lego_ev3">Lego Mindstorms EV3</string>
+    <string formatted="false" name="formula_editor_device_arduino">Arduino</string>
+    <string formatted="false" name="formula_editor_device_phiro">Phiro</string>
+    <string formatted="false" name="formula_editor_device_raspberry">Raspberry Pi</string>
+    <string formatted="false" name="formula_editor_device_drone">Dron</string>
+    <string formatted="false" name="formula_editor_device_nfc">NFC</string>
+    <string formatted="false" name="formula_editor_device_cast">Chromecast</string>
+    <string formatted="false" name="formula_editor_string">Abc</string>
+    <string formatted="false" name="formula_editor_logic_notequal">≠</string>
+    <string formatted="false" name="formula_editor_logic_lesserthan">&lt;</string>
+    <string formatted="false" name="formula_editor_logic_greaterthan">&gt;</string>
+    <string formatted="false" name="formula_editor_logic_and">e</string>
+    <string formatted="false" name="formula_editor_logic_or">ou</string>
+    <string formatted="false" name="formula_editor_logic_not">non</string>
+    <string formatted="false" name="formula_editor_logic_greaterequal">≥</string>
+    <string formatted="false" name="formula_editor_logic_leserequal">≤</string>
+    <string formatted="false" name="formula_editor_logic_equal">=</string>
+    <string formatted="false" name="formula_editor_operator_mult">×</string>
+    <string formatted="false" name="formula_editor_operator_plus">+</string>
+    <string formatted="false" name="formula_editor_operator_minus">-</string>
+    <string formatted="false" name="formula_editor_operator_divide">÷</string>
+    <string formatted="false" name="formula_editor_operator_power">^</string>
+    <string formatted="false" name="formula_editor_image_button_description_delete">eliminar</string>
+    <string formatted="false" name="formula_editor_image_button_description_calculate">calcular</string>
+    <string formatted="false" name="formula_editor_image_button_description_confirm">confirmar</string>
+    <string formatted="false" name="formula_editor_image_button_description_color_picker">selector de cor</string>
+    <string formatted="false" name="formula_editor_image_button_description_functions_toggle">mostrar/ocultar funcións</string>
+    <string formatted="false" name="formula_editor_variable_dialog_title">Nova variable</string>
+    <string formatted="false" name="formula_editor_list_dialog_title">Nova lista</string>
+    <string formatted="false" name="formula_editor_regex_html_extractor_dialog_title">Extractor de HTML</string>
+    <string formatted="false" name="formula_editor_discard_changes_dialog_message">Queres gardar os cambios?</string>
+    <string formatted="false" name="formula_editor_discard_changes_dialog_title">Gardar os cambios?</string>
+    <string formatted="false" name="formula_editor_new_string_name">Texto novo</string>
+    <string formatted="false" name="formula_editor_dialog_change_text">Cambiar o texto</string>
+    <string formatted="false" name="formula_editor_dialog_change_regular_expression">Cambiar a expresión regular</string>
+    <string formatted="false" name="formula_editor_fragment_data_current_items">elementos actuais</string>
+    <string formatted="false" name="formula_editor_data_dialog_is_list">Facer que sexa unha lista</string>
+    <string formatted="false" name="formula_editor_sensor_face_detected">primeira cara visible</string>
+    <string formatted="false" name="formula_editor_sensor_face_size">tamaño da primeira cara</string>
+    <string formatted="false" name="formula_editor_sensor_face_x_position">posición x da primeira cara</string>
+    <string formatted="false" name="formula_editor_sensor_face_y_position">posición y da primeira cara</string>
+    <string formatted="false" name="formula_editor_sensor_second_face_detected">segunda cara visible</string>
+    <string formatted="false" name="formula_editor_sensor_second_face_size">tamaño da segunda cara</string>
+    <string formatted="false" name="formula_editor_sensor_second_face_x_position">posición x da segunda cara</string>
+    <string formatted="false" name="formula_editor_sensor_second_face_y_position">posición y da segunda cara</string>
+    <string formatted="false" name="formula_editor_sensor_head_top_x">x da parte superior da cabeza</string>
+    <string formatted="false" name="formula_editor_sensor_head_top_y">y da parte superior da cabeza</string>
+    <string formatted="false" name="formula_editor_sensor_neck_x">x do pescozo</string>
+    <string formatted="false" name="formula_editor_sensor_neck_y">y do pescozo</string>
+    <string formatted="false" name="formula_editor_sensor_nose_x">x do nariz</string>
+    <string formatted="false" name="formula_editor_sensor_nose_y">y do nariz</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_inner_x">x do interior do ollo esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_inner_y">y do interior do ollo esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_center_x">x do centro do ollo esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_center_y">y do centro do ollo esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_outer_x">x do exterior do ollo esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_left_eye_outer_y">y do exterior do ollo esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_inner_x">x do interior do ollo dereito</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_inner_y">y do interior do ollo dereito</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_center_x">x do centro do ollo dereito</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_center_y">y do centro do ollo dereito</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_outer_x">x do exterior do ollo dereito</string>
+    <string formatted="false" name="formula_editor_sensor_right_eye_outer_y">y do exterior do ollo dereito</string>
+    <string formatted="false" name="formula_editor_sensor_left_ear_x">x da orella esquerda</string>
+    <string formatted="false" name="formula_editor_sensor_left_ear_y">y da orella esquerda</string>
+    <string formatted="false" name="formula_editor_sensor_right_ear_x">x da orella dereita</string>
+    <string formatted="false" name="formula_editor_sensor_right_ear_y">y da orella dereita</string>
+    <string formatted="false" name="formula_editor_sensor_mouth_left_corner_x">x da comisura esquerda da boca</string>
+    <string formatted="false" name="formula_editor_sensor_mouth_left_corner_y">y da comisura esquerda da boca</string>
+    <string formatted="false" name="formula_editor_sensor_mouth_right_corner_x">x da comisura dereita da boca</string>
+    <string formatted="false" name="formula_editor_sensor_mouth_right_corner_y">y da comisura dereita da boca</string>
+    <string formatted="false" name="formula_editor_sensor_left_shoulder_x">x do ombreiro esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_left_shoulder_y">y do ombreiro esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_right_shoulder_x">x do ombreiro dereito</string>
+    <string formatted="false" name="formula_editor_sensor_right_shoulder_y">y do ombreiro dereito</string>
+    <string formatted="false" name="formula_editor_sensor_left_elbow_x">x do cóbado esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_left_elbow_y">y do cóbado esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_right_elbow_x">x do cóbado dereito</string>
+    <string formatted="false" name="formula_editor_sensor_right_elbow_y">y do cóbado dereito</string>
+    <string formatted="false" name="formula_editor_sensor_left_wrist_x">x do pulso esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_left_wrist_y">y do pulso esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_right_wrist_x">x do pulso dereito</string>
+    <string formatted="false" name="formula_editor_sensor_right_wrist_y">y do pulso dereito</string>
+    <string formatted="false" name="formula_editor_sensor_left_pinky_knuckle_x">x do nocello do maimiño esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_left_pinky_knuckle_y">y do nocello do maimiño esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_right_pinky_knuckle_x">x do nocello do maimiño dereito</string>
+    <string formatted="false" name="formula_editor_sensor_right_pinky_knuckle_y">y do nocello do maimiño dereito</string>
+    <string formatted="false" name="formula_editor_sensor_left_index_knuckle_x">x do nocello do índice esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_left_index_knuckle_y">y do nocello do índice esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_right_index_knuckle_x">x do nocello do índice dereito</string>
+    <string formatted="false" name="formula_editor_sensor_right_index_knuckle_y">y do nocello do índice dereito</string>
+    <string formatted="false" name="formula_editor_sensor_left_thumb_knuckle_x">x do nocello do polgar esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_left_thumb_knuckle_y">y do nocello do polgar esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_right_thumb_knuckle_x">x do nocello do polgar dereito</string>
+    <string formatted="false" name="formula_editor_sensor_right_thumb_knuckle_y">y do nocello do polgar dereito</string>
+    <string formatted="false" name="formula_editor_sensor_left_hip_x">x da cadeira esquerda</string>
+    <string formatted="false" name="formula_editor_sensor_left_hip_y">y da cadeira esquerda</string>
+    <string formatted="false" name="formula_editor_sensor_right_hip_x">x da cadeira dereita</string>
+    <string formatted="false" name="formula_editor_sensor_right_hip_y">y da cadeira dereita</string>
+    <string formatted="false" name="formula_editor_sensor_left_knee_x">x do xeonllo esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_left_knee_y">y do xeonllo esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_right_knee_x">x do xeonllo dereito</string>
+    <string formatted="false" name="formula_editor_sensor_right_knee_y">y do xeonllo dereito</string>
+    <string formatted="false" name="formula_editor_sensor_left_ankle_x">x do nocelo esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_left_ankle_y">y do nocelo esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_right_ankle_x">x do nocelo dereito</string>
+    <string formatted="false" name="formula_editor_sensor_right_ankle_y">y do nocelo dereito</string>
+    <string formatted="false" name="formula_editor_sensor_left_heel_x">x do talón esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_left_heel_y">y do talón esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_right_heel_x">x do talón dereito</string>
+    <string formatted="false" name="formula_editor_sensor_right_heel_y">y do talón dereito</string>
+    <string formatted="false" name="formula_editor_sensor_left_foot_index_x">x da punta do pé esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_left_foot_index_y">y da punta do pé esquerdo</string>
+    <string formatted="false" name="formula_editor_sensor_right_foot_index_x">x da punta do pé dereito</string>
+    <string formatted="false" name="formula_editor_sensor_right_foot_index_y">y da punta do pé dereito</string>
+    <string formatted="false" name="formula_editor_sensor_text_from_camera">texto da cámara</string>
+    <string formatted="false" name="formula_editor_sensor_text_blocks_number">número de bloques de texto</string>
+    <string formatted="false" name="formula_editor_function_text_block_x">x do bloque de texto da cámara</string>
+    <string formatted="false" name="formula_editor_function_text_block_y">y do bloque de texto da cámara</string>
+    <string formatted="false" name="formula_editor_function_text_block_size">tamaño do bloque de texto da cámara</string>
+    <string formatted="false" name="formula_editor_function_text_block_from_camera">bloque de texto da cámara</string>
+    <string formatted="false" name="formula_editor_function_text_block_language_from_camera">idioma do bloque de texto da cámara</string>
+    <string formatted="false" name="formula_editor_function_text_block_parameter">(1)</string>
+    <string formatted="false" name="formula_editor_function_get_id_of_detected_object">ID do obxecto detectado</string>
+    <string formatted="false" name="formula_editor_function_object_with_id_visible">obxecto con ID visible</string>
+    <string formatted="false" name="formula_editor_intro_title_formula_editor">Editor de fórmulas</string>
+    <string formatted="false" name="formula_editor_intro_summary_formula_editor">Co editor de fórmulas podes crear fórmulas matemáticas e lóxicas para usar nos teus bloques.\n\nContinúa tocando “SEGUINTE” ou sae con “OMITIR”.</string>
+    <string formatted="false" name="formula_editor_intro_title_input_field">Campo de entrada</string>
+    <string formatted="false" name="formula_editor_intro_summary_input_field">Aquí podes ver e editar a túa fórmula.</string>
+    <string formatted="false" name="formula_editor_intro_title_keyboard">Teclado</string>
+    <string formatted="false" name="formula_editor_intro_summary_keyboard">Aquí podes crear a túa fórmula, igual que nunha calculadora.</string>
+    <string formatted="false" name="formula_editor_intro_title_compute">Calcular</string>
+    <string formatted="false" name="formula_editor_intro_summary_compute">Para mostrar o resultado actual da túa fórmula, podes usar \"Calcular\".</string>
+    <string formatted="false" name="formula_editor_intro_title_object">Propiedades</string>
+    <string formatted="false" name="formula_editor_intro_summary_object">Isto é unha colección de valores que describen as propiedades da túa personaxe ou obxecto actual. Por exemplo, as coordenadas x e y, ou a velocidade actual.</string>
+    <string formatted="false" name="formula_editor_intro_title_functions">Funcións</string>
+    <string formatted="false" name="formula_editor_intro_summary_functions">Igual que unha calculadora, o editor de fórmulas ofrece moitas funcións matemáticas.\nAtoparás funcións trigonométricas como \"sin\" e \"cos\", un xerador de números aleatorios e funcións de texto e de listas.</string>
+    <string formatted="false" name="formula_editor_intro_title_logic">Lóxica</string>
+    <string formatted="false" name="formula_editor_intro_summary_logic">A lóxica úsase para comparar valores e combinar fórmulas lóxicas.\nPara comparar valores podes usar operacións lóxicas como \"&gt;\" (maior que) ou \"=\" (igual a).\nPara combinar fórmulas lóxicas podes usar operacións lóxicas como \"E\", \"OU\" e \"NON\".</string>
+    <string formatted="false" name="formula_editor_intro_title_device">Sensores</string>
+    <string formatted="false" name="formula_editor_intro_summary_device">En \"Sensores\" atoparás información que rexistra o teu dispositivo.\nPor exemplo, a inclinación do teu dispositivo ou o volume do son do teu contorno.</string>
+    <string formatted="false" name="formula_editor_intro_title_data">Datos</string>
+    <string formatted="false" name="formula_editor_intro_summary_data">Aquí atoparás as variables e listas que se usan no teu proxecto. \nPodes inserilas directamente na túa fórmula ou engadir outras novas.</string>
+    <string formatted="false" name="formula_editor_listening_language_sensor">idioma de escoita</string>
+    <string formatted="false" name="formula_editor_speech_recognition">Recoñecemento de voz</string>
+    <string formatted="false" name="camera_error_text_detection">Houbo un problema coa detección de texto. É posible que algúns compoñentes aínda se estean descargando en segundo plano. Asegúrate de que estás conectado a internet e volve máis tarde.</string>
+    <string formatted="false" name="warning_formula_recognized">Escribiches un texto que parece unha fórmula. Se queres usar funcións, sensores, variables e outros elementos de fórmula, selecciónaos cos botóns do editor de fórmulas.</string>
+    <!--  -->
+    <!-- Brick Data Editor Strings -->
+    <string formatted="false" name="brick_show_variable">Mostrar a variable</string>
+    <string formatted="false" name="brick_hide_variable">Ocultar a variable</string>
+    <string formatted="false" name="brick_show_variable_position">en</string>
+    <string formatted="false" name="brick_show_variable_size">tamaño:</string>
+    <string formatted="false" name="brick_show_variable_color">cor:</string>
+    <string formatted="false" name="brick_show_variable_aligned">aliñada</string>
+    <string formatted="false" name="brick_show_variable_aligned_centered">ao centro</string>
+    <string formatted="false" name="brick_show_variable_aligned_left">á esquerda</string>
+    <string formatted="false" name="brick_show_variable_aligned_right">á dereita</string>
+    <string formatted="false" name="brick_context_dialog_pick_color">Escoller cor</string>
+    <string formatted="false" name="brick_context_dialog_pick_note">Escoller nota</string>
+    <!-- -->
+    <!-- Camera related strings -->
+    <string formatted="false" name="brick_video">Poñer a cámara</string>
+    <string formatted="false" name="video_brick_camera_on">acendida</string>
+    <string formatted="false" name="video_brick_camera_off">apagada</string>
+    <string formatted="false" name="brick_choose_camera">Usar a cámara</string>
+    <string formatted="false" name="choose_camera_front">frontal</string>
+    <string formatted="false" name="choose_camera_back">traseira</string>
+    <string formatted="false" name="camera_error_generic">Algo foi mal ao tentar usar a cámara.</string>
+    <string formatted="false" name="camera_error_face_detection">Houbo un problema coa detección de caras. É posible que algúns compoñentes aínda se estean descargando en segundo plano. Asegúrate de que estás conectado a internet e volve máis tarde.</string>
+    <!-- -->
+    <!-- Cast strings -->
+    <string formatted="false" name="cast_gamepad_A">A</string>
+    <string formatted="false" name="cast_gamepad_B">B</string>
+    <string formatted="false" name="cast_gamepad_up">arriba</string>
+    <string formatted="false" name="cast_gamepad_down">abaixo</string>
+    <string formatted="false" name="cast_gamepad_left">esquerda</string>
+    <string formatted="false" name="cast_gamepad_right">dereita</string>
+    <string formatted="false" name="cast_error_not_connected_msg">Primeiro conéctate ao teu Chromecast</string>
+    <string formatted="false" name="cast_error_cast_bricks_in_no_cast_project">O teu proxecto usa bloques de Chromecast e non se pode iniciar localmente</string>
+    <string formatted="false" name="cast_device_selector_dialog_title">Emitir en</string>
+    <string formatted="false" name="cast_button_menu_item_title">Botón de emisión</string>
+    <string formatted="false" name="cast_ready_to_cast">Listo para emitir en</string>
+    <string formatted="false" name="cast_enable_cast_feature">As funcións de Chromecast están desactivadas. Actívaas na configuración.</string>
+    <string formatted="false" name="cast_searching_for_cast_devices">Buscando dispositivos Chromecast</string>
+    <string formatted="false" name="cast_trouble_finding_devices_tip">.\nNon ves o teu dispositivo? Tenta desactivar e activar a wifi do dispositivo.</string>
+    <string formatted="false" name="cast_connection_timout_msg">Esgotouse o tempo de conexión. Téntao de novo.</string>
+    <string formatted="false" name="cast_screen_pause_text">En pausa</string>
+    <!-- -->
+    <string formatted="false" name="deletion_alert_title">Eliminar?</string>
+    <string formatted="false" name="deletion_alert_text">Eliminar unha variable ou lista que aínda se está a usar pode causar erros. Non poderás desfacer isto!</string>
+    <!-- Upload progress dialog -->
+    <string formatted="false" name="progress_upload_dialog_message">O teu proxecto estase subindo ao sitio da aplicación para compartir, onde outras persoas poden usalo e descargalo. Tamén podes descargar o teu proxecto como aplicación independente.</string>
+    <string formatted="false" name="progress_upload_dialog_failed">Fallou a subida. A función de subida non está dispoñible neste momento. Téntao de novo máis tarde.</string>
+    <string formatted="false" name="progress_upload_dialog_show_program">Mostrar o proxecto</string>
+    <!--  -->
+    <!-- unchanged upload dialog -->
+    <string formatted="false" name="unchanged_upload_warning">O proxecto que tentas subir xa existe exactamente igual na plataforma da comunidade. Cambia o teu proxecto, mellor aínda se o melloras, antes de subir o teu remix.</string>
+    <string formatted="false" name="unchanged_upload_info">Considera deixar unhas palabras amables para a persoa autora orixinal na sección de créditos do sitio da comunidade ou nas opcións do proxecto. Ten en conta que esa persoa recibirá unha notificación cando subas o proxecto correctamente.</string>
+    <string formatted="false" name="unchanged_upload_url">Para saber máis sobre os remixes, visita %1s.</string>
+    <!-- -->
+    <!-- Snackbar hints -->
+    <string formatted="false" name="got_it">Entendido</string>
+    <string formatted="false" name="preference_description_hints">Activa esta opción para mostrar suxestións</string>
+    <string formatted="false" name="preference_title_enable_hints">Mostrar suxestións</string>
+    <string formatted="false" name="hint_category">Todos os bloques están ordenados en categorías. Escolle a categoría que buscas.</string>
+    <string formatted="false" name="hint_bricks">Para engadir un bloque ao teu script, toca o bloque que queres usar.</string>
+    <string formatted="false" name="hint_scripts">O script define o comportamento da túa personaxe ou obxecto. Para engadir bloques ao script, toca o símbolo \"+\".</string>
+    <string formatted="false" name="hint_looks">Aquí atoparás as diferentes aparencias da túa personaxe ou obxecto. Para engadir unha aparencia nova, toca o símbolo \"+\".</string>
+    <string formatted="false" name="hint_sounds">Aquí podes engadir sons novos á túa personaxe ou obxecto. Lembra usar un bloque da categoría Son.</string>
+    <string formatted="false" name="hint_objects">O teu proxecto consta de diferentes personaxes e obxectos que poden interactuar entre si. Para engadir unha personaxe ou obxecto novo, toca o símbolo \"+\".</string>
+    <!--  -->
+    <!-- Dialog Disable hints -->
+    <string formatted="false" name="dialog_disable_hints_title">Mostrar suxestións?</string>
+    <string formatted="false" name="dialog_disable_hints_text">As suxestións ofrécenche información útil mentres creas o teu primeiro proxecto.\n\nPodes cambiar a visibilidade das suxestións na configuración.</string>
+    <string formatted="false" name="dialog_disable_hints_button_hide">OCULTAR</string>
+    <string formatted="false" name="dialog_disable_hints_button_show">MOSTRAR</string>
+    <!--  -->
+    <!-- Crash report dialog -->
+    <!--  -->
+    <!-- Multilingual List -->
+    <string formatted="false" name="device_language">Idioma do teu dispositivo</string>
+    <!-- Symbols -->
+    <string formatted="false" name="percent_symbol">%</string>
+    <string formatted="false" name="hertz_symbol">㎐</string>
+    <string formatted="false" name="no_internet_connection">Non hai conexión a internet. Asegúrate de que a wifi ou os datos móbiles estean activados.</string>
+    <string formatted="false" name="edit">Editar</string>
+    <string formatted="false" name="data_value">Valor</string>
+    <string formatted="false" name="category_recently_used">Usados recentemente</string>
+    <string formatted="false" name="new_sprite_dialog_place_visually">Colocar visualmente</string>
+    <string formatted="false" name="place_visually_text">Pedirase que coloques a nova personaxe ou obxecto no escenario.</string>
+    <string formatted="false" name="new_empty_sprite_note">Nota: a personaxe ou obxecto crearase sen ningunha aparencia.</string>
+    <!-- Information -->
+    <string formatted="false" name="no_variable_selected">Non hai ningunha variable seleccionada</string>
+    <string formatted="false" name="search">Buscar</string>
+    <string formatted="false" name="no_results_found">Non se atopou ningún resultado</string>
+    <string formatted="false" name="query_field_is_empty">O campo de busca está baleiro</string>
+    <string formatted="false" name="paste">Pegar</string>
+    <!-- Particle Effects -->
+    <string formatted="false" name="fade_particle_effect">Esvaecer o efecto de partículas</string>
+    <string formatted="false" name="particle_effects_fade_in">ao entrar</string>
+    <string formatted="false" name="particle_effects_fade_out">ao saír</string>
+    <string formatted="false" name="turn_particle_effect_additivity">Poñer a aditividade do efecto de partículas</string>
+    <string formatted="false" name="particle_effects_additive_on">activada</string>
+    <string formatted="false" name="particle_effects_additive_off">desactivada</string>
+    <string formatted="false" name="set_particle_color_to">Fixar a cor das partículas en</string>
+    <string formatted="false" name="undo_sort">Desfacer a ordenación</string>
+    <string formatted="false" name="sort">Ordenar</string>
+    <string formatted="false" name="checkbox">caixa de verificación</string>
+    <!-- Shortcut strings -->
+    <string formatted="false" name="pin_to_home_screen">Fixar na pantalla de inicio</string>
+    <string formatted="false" name="shortcut_not_supported">Este dispositivo non admite atallos</string>
+    <string formatted="false" name="project_busy_try_again">O proxecto está ocupado. Téntao de novo</string>
+    <string formatted="false" name="shortcut_project_not_found">Non se atopou o proxecto. Desactivouse o atallo</string>
+    <string formatted="false" name="shortcut_permission_required_message">Este dispositivo require que concedas o permiso de atallos antes de engadir un atallo á pantalla de inicio. Concede o permiso na configuración.</string>
+    <string formatted="false" name="miui_open_settings">Abrir a configuración</string>
+    <string formatted="false" name="shortcut_already_pinned">Este proxecto xa está fixado na túa pantalla de inicio</string>
+</resources>
