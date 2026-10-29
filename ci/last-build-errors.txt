@@ -1,10 +1,5 @@
-BUILD ERRORS: 3 unique
+BUILD ERRORS: 0 unique
 
 == Missing symbols (count) ==
-   2  ProjectViewController
-   1  XMLDocument
 
 == First errors ==
-catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:82:30: error: cannot find 'ProjectViewController' in scope
-catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:125:22: error: cannot find 'ProjectViewController' in scope
-catroid/src/main/java/org/catrobat/catroid/ProjectStore.swift:51:35: error: cannot find 'XMLDocument' in scope
