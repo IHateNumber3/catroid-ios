@@ -5,7 +5,9 @@ public final class ProjectListViewController: UIViewController {
     private static let tag = "ProjectListViewController"
     public static let importLocalIntentKey = "merge"
     
-    public var isImportMode: Bool = false\n    public var startWithCreateDialog: Bool = false\n    private var projects: [String] = UserDefaults.standard.stringArray(forKey: "CatroidProjectNames") ?? []
+    public var isImportMode: Bool = false
+    public var startWithCreateDialog: Bool = false
+    private var projects: [String] = UserDefaults.standard.stringArray(forKey: "CatroidProjectNames") ?? []
     
     private let tableView = UITableView(frame: .zero, style: .plain)
     
