@@ -35,6 +35,7 @@ targets:
           - "**/stagecore/**"
       - path: catroid/src/main/java/org/catrobat/catroid/ui/MainMenuViewController.swift
       - path: catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift
+      - path: catroid/src/main/java/org/catrobat/catroid/ui/ProjectViewController.swift
       - path: catroid/src/main/java/org/catrobat/catroid/ui/SettingsViewController.swift
       - path: ios-bridge
         excludes:

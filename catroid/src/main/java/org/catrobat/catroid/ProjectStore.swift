@@ -47,20 +47,21 @@ public enum ProjectStore {
     public static func load(_ name: String) -> Project? {
         let dir = directoryURL(for: name)
         let xmlURL = dir.appendingPathComponent("code.xml")
-        guard let data = try? Data(contentsOf: xmlURL),
-              let document = try? XMLDocument(data: data),
-              let root = document.rootElement(), root.name == "program" else { return nil }
-        let header = root.elements(forName: "header").first
-        let projectName = header?.elements(forName: "programName").first?.stringValue ?? name
-        let landscape = (header?.elements(forName: "landscapeMode").first?.stringValue ?? "false") == "true"
+        guard let parser = try? XMLParser(contentsOf: xmlURL) else { return nil }
+        let reader = CatrobatHeaderReader()
+        parser.delegate = reader
+        guard parser.parse(), reader.rootElementName == "program" else { return nil }
+
+        let projectName = reader.values["programName"] ?? name
+        let landscape = (reader.values["landscapeMode"] ?? "false").lowercased() == "true"
         let project = Project(name: projectName, landscapeMode: landscape)
         project.directory = dir
-        project.description = header?.elements(forName: "description").first?.stringValue ?? ""
-        if let version = header?.elements(forName: "catrobatLanguageVersion").first?.stringValue, let number = Double(version) {
+        project.description = reader.values["description"] ?? ""
+        if let version = reader.values["catrobatLanguageVersion"], let number = Double(version) {
             project.catrobatLanguageVersion = number
         }
-        // This minimal reader deliberately does not claim to restore bricks/formulas.
-        // Keep a valid default scene when the XML has no scenes recognized by this port.
+        // This reader currently restores header metadata only. It intentionally does not
+        // pretend to restore legacy bricks/formulas; that requires Catroid's full serializer.
         if project.sceneList.isEmpty {
             let scene = Scene(name: NSLocalizedString("default_scene_name", value: "Scene", comment: ""), project: project)
             scene.addSprite(Sprite(name: NSLocalizedString("background", value: "Background", comment: "")))
@@ -96,5 +97,34 @@ public enum ProjectStore {
         }
         xml += "</scenes></program>"
         return xml
+    }
+}
+
+
+/// iOS-compatible XML header reader. XMLDocument is not available on iOS; XMLParser is.
+private final class CatrobatHeaderReader: NSObject, XMLParserDelegate {
+    var rootElementName: String?
+    var values: [String: String] = [:]
+    private var elementStack: [String] = []
+    private var currentText = ""
+
+    func parser(_ parser: XMLParser, didStartElement elementName: String,
+                namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String: String] = [:]) {
+        if rootElementName == nil { rootElementName = elementName }
+        elementStack.append(elementName)
+        currentText = ""
+    }
+
+    func parser(_ parser: XMLParser, foundCharacters string: String) {
+        currentText += string
+    }
+
+    func parser(_ parser: XMLParser, didEndElement elementName: String,
+                namespaceURI: String?, qualifiedName qName: String?) {
+        if elementStack.count >= 2, elementStack[elementStack.count - 2] == "header" {
+            values[elementName] = (values[elementName] ?? "") + currentText.trimmingCharacters(in: .whitespacesAndNewlines)
+        }
+        if !elementStack.isEmpty { elementStack.removeLast() }
+        currentText = ""
     }
 }
