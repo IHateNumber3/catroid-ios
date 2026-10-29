@@ -1,130 +1,124 @@
+
 import Foundation
 
-/// Per-project Catrobat directory storage. XML is kept at the standard code.xml path.
-/// This Swift implementation currently serializes the header and scene/object names;
-/// full XStream brick/formula converters and historical migration parity still need porting.
+/// Filesystem storage for native Catrobat projects.
+/// XML serialization and backward compatibility belong to ProjectSerializing.
 public enum ProjectStore {
     private static let rootName = "CatroidProjects"
-    private static var rootURL: URL {
-        FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+
+    public static var rootURL: URL {
+        FileManager.default
+            .urls(for: .documentDirectory, in: .userDomainMask)[0]
             .appendingPathComponent(rootName, isDirectory: true)
     }
 
-    private static func safeName(_ name: String) -> String {
-        let forbidden = CharacterSet(charactersIn: "/\\:\0")
-        let cleaned = name.components(separatedBy: forbidden).joined(separator: "_").trimmingCharacters(in: .whitespacesAndNewlines)
-        return cleaned.isEmpty ? "Untitled" : cleaned
-    }
-
     public static func directoryURL(for name: String) -> URL {
-        rootURL.appendingPathComponent(safeName(name), isDirectory: true)
+        let forbidden = CharacterSet(charactersIn: "/\\:\0")
+        let safeName = name
+            .components(separatedBy: forbidden)
+            .joined(separator: "_")
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+
+        return rootURL.appendingPathComponent(
+            safeName.isEmpty ? "Untitled" : safeName,
+            isDirectory: true
+        )
     }
 
-    @discardableResult public static func save(_ project: Project) -> Bool {
+    @discardableResult
+    public static func save(_ project: Project) -> Bool {
+        guard let serializer = ProjectManager.serializer else {
+            print("[ProjectStore] Native Catrobat serializer is not registered.")
+            return false
+        }
+
         do {
-            let dir = directoryURL(for: project.name)
-            try FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
-            try FileManager.default.createDirectory(at: dir.appendingPathComponent("images", isDirectory: true), withIntermediateDirectories: true)
-            try FileManager.default.createDirectory(at: dir.appendingPathComponent("sounds", isDirectory: true), withIntermediateDirectories: true)
-            project.directory = dir
-            let xml = makeXML(project)
-            try xml.write(to: dir.appendingPathComponent("code.xml"), atomically: true, encoding: .utf8)
+            let directory = directoryURL(for: project.name)
+
+            try FileManager.default.createDirectory(
+                at: directory,
+                withIntermediateDirectories: true
+            )
+
+            project.directory = directory
+            try serializer.saveProject(project)
+
+            let xmlURL = directory.appendingPathComponent("code.xml")
+            guard FileManager.default.fileExists(atPath: xmlURL.path) else {
+                print("[ProjectStore] Serializer did not create code.xml.")
+                return false
+            }
+
             return true
         } catch {
-            print("[ProjectStore] Catrobat save failed: \(error)")
+            print("[ProjectStore] Save failed: \(error)")
             return false
         }
     }
 
     public static func projectNames() -> [String] {
-        guard let urls = try? FileManager.default.contentsOfDirectory(at: rootURL, includingPropertiesForKeys: [.isDirectoryKey]) else { return [] }
-        return urls.filter { url in
-            (try? url.resourceValues(forKeys: [.isDirectoryKey]).isDirectory) == true &&
-            FileManager.default.fileExists(atPath: url.appendingPathComponent("code.xml").path)
-        }.map { $0.lastPathComponent }.sorted { $0.localizedCaseInsensitiveCompare($1) == .orderedAscending }
+        guard let directories = try? FileManager.default.contentsOfDirectory(
+            at: rootURL,
+            includingPropertiesForKeys: [.isDirectoryKey],
+            options: [.skipsHiddenFiles]
+        ) else {
+            return []
+        }
+
+        return directories.compactMap { directory in
+            guard
+                (try? directory.resourceValues(
+                    forKeys: [.isDirectoryKey]
+                ).isDirectory) == true,
+                FileManager.default.fileExists(
+                    atPath: directory.appendingPathComponent("code.xml").path
+                )
+            else {
+                return nil
+            }
+
+            return directory.lastPathComponent
+        }
+        .sorted {
+            $0.localizedCaseInsensitiveCompare($1) == .orderedAscending
+        }
     }
 
     public static func load(_ name: String) -> Project? {
-        let dir = directoryURL(for: name)
-        let xmlURL = dir.appendingPathComponent("code.xml")
-        guard let parser = try? XMLParser(contentsOf: xmlURL) else { return nil }
-        let reader = CatrobatHeaderReader()
-        parser.delegate = reader
-        guard parser.parse(), reader.rootElementName == "program" else { return nil }
+        guard
+            let serializer = ProjectManager.serializer
+        else {
+            print("[ProjectStore] Native Catrobat serializer is not registered.")
+            return nil
+        }
 
-        let projectName = reader.values["programName"] ?? name
-        let landscape = (reader.values["landscapeMode"] ?? "false").lowercased() == "true"
-        let project = Project(name: projectName, landscapeMode: landscape)
-        project.directory = dir
-        project.description = reader.values["description"] ?? ""
-        if let version = reader.values["catrobatLanguageVersion"], let number = Double(version) {
-            project.catrobatLanguageVersion = number
+        let directory = directoryURL(for: name)
+        let xmlURL = directory.appendingPathComponent("code.xml")
+
+        guard FileManager.default.fileExists(atPath: xmlURL.path) else {
+            print("[ProjectStore] Missing code.xml for \(name).")
+            return nil
         }
-        // This reader currently restores header metadata only. It intentionally does not
-        // pretend to restore legacy bricks/formulas; that requires Catroid's full serializer.
-        if project.sceneList.isEmpty {
-            let scene = Scene(name: NSLocalizedString("default_scene_name", value: "Scene", comment: ""), project: project)
-            scene.addSprite(Sprite(name: NSLocalizedString("background", value: "Background", comment: "")))
-            project.addScene(scene)
+
+        do {
+            let project = try serializer.loadProject(directory)
+            project.directory = directory
+            return project
+        } catch {
+            print("[ProjectStore] Load failed: \(error)")
+            return nil
         }
-        return project
     }
 
     public static func delete(_ name: String) {
-        try? FileManager.default.removeItem(at: directoryURL(for: name))
-    }
+        do {
+            let directory = directoryURL(for: name)
 
-    private static func makeXML(_ project: Project) -> String {
-        func esc(_ value: String) -> String {
-            value.replacingOccurrences(of: "&", with: "&amp;")
-                .replacingOccurrences(of: "<", with: "&lt;")
-                .replacingOccurrences(of: ">", with: "&gt;")
-                .replacingOccurrences(of: "\"", with: "&quot;")
-                .replacingOccurrences(of: "'", with: "&apos;")
+            if FileManager.default.fileExists(atPath: directory.path) {
+                try FileManager.default.removeItem(at: directory)
+            }
+        } catch {
+            print("[ProjectStore] Delete failed: \(error)")
         }
-        let h = project.xmlHeader
-        var xml = "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\" ?>\n<program><header>"
-        xml += "<programName>\(esc(project.name))</programName>"
-        xml += "<description>\(esc(project.description))</description>"
-        xml += "<notesAndCredits>\(esc(project.notesAndCredits))</notesAndCredits>"
-        xml += "<screenWidth>\(h.virtualScreenWidth)</screenWidth><screenHeight>\(h.virtualScreenHeight)</screenHeight>"
-        xml += "<catrobatLanguageVersion>\(h.catrobatLanguageVersion)</catrobatLanguageVersion>"
-        xml += "<landscapeMode>\(h.landscapeMode)</landscapeMode><scenesEnabled>true</scenesEnabled></header><scenes>"
-        for scene in project.sceneList {
-            xml += "<scene><name>\(esc(scene.name))</name><objectList>"
-            for sprite in scene.spriteList { xml += "<sprite><name>\(esc(sprite.name))</name></sprite>" }
-            xml += "</objectList></scene>"
-        }
-        xml += "</scenes></program>"
-        return xml
-    }
-}
-
-
-/// iOS-compatible XML header reader. XMLDocument is not available on iOS; XMLParser is.
-private final class CatrobatHeaderReader: NSObject, XMLParserDelegate {
-    var rootElementName: String?
-    var values: [String: String] = [:]
-    private var elementStack: [String] = []
-    private var currentText = ""
-
-    func parser(_ parser: XMLParser, didStartElement elementName: String,
-                namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String: String] = [:]) {
-        if rootElementName == nil { rootElementName = elementName }
-        elementStack.append(elementName)
-        currentText = ""
-    }
-
-    func parser(_ parser: XMLParser, foundCharacters string: String) {
-        currentText += string
-    }
-
-    func parser(_ parser: XMLParser, didEndElement elementName: String,
-                namespaceURI: String?, qualifiedName qName: String?) {
-        if elementStack.count >= 2, elementStack[elementStack.count - 2] == "header" {
-            values[elementName] = (values[elementName] ?? "") + currentText.trimmingCharacters(in: .whitespacesAndNewlines)
-        }
-        if !elementStack.isEmpty { elementStack.removeLast() }
-        currentText = ""
     }
 }
