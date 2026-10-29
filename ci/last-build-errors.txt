@@ -1,5 +1,7 @@
-BUILD ERRORS: 0 unique
+BUILD ERRORS: 1 unique
 
 == Missing symbols (count) ==
+   1  MainMenuViewController
 
 == First errors ==
+catroid/src/main/java/org/catrobat/catroid/CatroidApplication.swift:29:24: error: cannot find 'MainMenuViewController' in scope
