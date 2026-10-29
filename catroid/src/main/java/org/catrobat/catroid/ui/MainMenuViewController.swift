@@ -1,131 +1,82 @@
 import UIKit
 
-public class MainMenuViewController: UIViewController {
-    
-    private static let tag = "MainMenuViewController"
-    
-    private var oldPrivacyPolicy: Int = 0
-    private let termsOfUseAcceptedVersion = 1 // Эквивалент Constants.CATROBAT_TERMS_OF_USE_ACCEPTED
-    
+public final class MainMenuViewController: UIViewController {
+    private let projectsButton = UIButton(type: .system)
+    private let createButton = UIButton(type: .system)
+
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = .systemBackground
         title = "Catroid"
-        
-        // Настройка дефолтных значений и языка
-        setupPreferences()
-        
-        // Проверка версии принятой политики конфиденциальности
-        oldPrivacyPolicy = UserDefaults.standard.integer(forKey: "AGREED_TO_PRIVACY_POLICY_VERSION")
-        
-        loadContent()
-        
-        if oldPrivacyPolicy != termsOfUseAcceptedVersion {
-            showTermsOfUseDialog()
-        }
-    }
-    
-    private func setupPreferences() {
-        // Установка стандартных настроек (аналог SharedPreferences в Android)
-        UserDefaults.standard.register(defaults: [
-            "AGREED_TO_PRIVACY_POLICY_VERSION": 0
-        ])
-    }
-    
-    private func loadContent() {
-        // Настройка главного интерфейса и навигационной панели
-        setupNavigationBar()
-        setupMainMenuView()
-    }
-    
-    private func setupNavigationBar() {
         navigationController?.navigationBar.prefersLargeTitles = false
-        
-        // Добавление кнопки настроек в тулбар (аналог options menu)
-        let settingsButton = UIBarButtonItem(
+
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
             image: UIImage(systemName: "gearshape"),
             style: .plain,
             target: self,
             action: #selector(settingsTapped)
         )
-        navigationItem.rightBarButtonItem = settingsButton
-    }
-    
-    private func setupMainMenuView() {
-        // Добавление контейнера под главное меню (эквивалент MainMenuFragment)
-        let label = UILabel()
-        label.text = "Главное меню Catroid"
-        label.textAlignment = .center
-        label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        view.addSubview(label)
+
+        let logo = UIImageView(image: UIImage(systemName: "puzzlepiece.extension"))
+        logo.tintColor = .systemBlue
+        logo.contentMode = .scaleAspectFit
+        logo.translatesAutoresizingMaskIntoConstraints = false
+
+        let heading = UILabel()
+        heading.text = "Pocket Code"
+        heading.font = .systemFont(ofSize: 30, weight: .bold)
+        heading.textAlignment = .center
+        heading.translatesAutoresizingMaskIntoConstraints = false
+
+        let subtitle = UILabel()
+        subtitle.text = "Создавай свои проекты"
+        subtitle.font = .preferredFont(forTextStyle: .subheadline)
+        subtitle.textColor = .secondaryLabel
+        subtitle.textAlignment = .center
+        subtitle.translatesAutoresizingMaskIntoConstraints = false
+
+        configureButton(projectsButton, title: "Мои проекты", symbol: "folder")
+        projectsButton.addTarget(self, action: #selector(openProjects), for: .touchUpInside)
+        configureButton(createButton, title: "Создать проект", symbol: "plus")
+        createButton.addTarget(self, action: #selector(createProject), for: .touchUpInside)
+
+        let stack = UIStackView(arrangedSubviews: [logo, heading, subtitle, projectsButton, createButton])
+        stack.axis = .vertical
+        stack.alignment = .fill
+        stack.spacing = 18
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(stack)
+
         NSLayoutConstraint.activate([
-            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            stack.centerYAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerYAnchor),
+            stack.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 28),
+            stack.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -28),
+            logo.heightAnchor.constraint(equalToConstant: 76),
+            projectsButton.heightAnchor.constraint(equalToConstant: 52),
+            createButton.heightAnchor.constraint(equalToConstant: 52)
         ])
     }
-    
-    // MARK: - Terms of Use Dialog
-    
-    private func showTermsOfUseDialog() {
-        let alert = UIAlertController(
-            title: "Условия использования",
-            message: "Пожалуйста, примите Условия использования и Политику конфиденциальности для продолжения работы с Catroid.",
-            preferredStyle: .alert
-        )
-        
-        alert.addAction(UIAlertAction(title: "Принять", style: .default) { [weak self] _ in
-            self?.handleAgreedToPrivacyPolicyButton()
-        })
-        
-        alert.addAction(UIAlertAction(title: "Отклонить", style: .cancel) { [weak self] _ in
-            self?.handleDeclinedPrivacyPolicyButton()
-        })
-        
-        // Блокируем закрытие по тапу вне алерта (setCancelable(false))
-        DispatchQueue.main.async {
-            self.present(alert, animated: true, completion: nil)
-        }
+
+    private func configureButton(_ button: UIButton, title: String, symbol: String) {
+        var config = UIButton.Configuration.filled()
+        config.title = title
+        config.image = UIImage(systemName: symbol)
+        config.imagePadding = 10
+        config.cornerStyle = .medium
+        button.configuration = config
     }
-    
-    private func handleAgreedToPrivacyPolicyButton() {
-        UserDefaults.standard.set(termsOfUseAcceptedVersion, forKey: "AGREED_TO_PRIVACY_POLICY_VERSION")
-        print("[\(MainMenuViewController.tag)] Terms of use accepted.")
+
+    @objc private func openProjects() {
+        navigationController?.pushViewController(ProjectListViewController(), animated: true)
     }
-    
-    private func handleDeclinedPrivacyPolicyButton() {
-        let alert = UIAlertController(
-            title: "Внимание",
-            message: "Вы должны принять условия использования, чтобы использовать приложение.",
-            preferredStyle: .alert
-        )
-        
-        alert.addAction(UIAlertAction(title: "OK", style: .default) { [weak self] _ in
-            self?.showTermsOfUseDialog()
-        })
-        
-        present(alert, animated: true, completion: nil)
+
+    @objc private func createProject() {
+        let controller = ProjectListViewController()
+        controller.startWithCreateDialog = true
+        navigationController?.pushViewController(controller, animated: true)
     }
-    
-    // MARK: - Actions & Menu
-    
+
     @objc private func settingsTapped() {
-        // Переход на экран настроек (эквивалент SettingsActivity)
-        print("[\(MainMenuViewController.tag)] Open settings tapped.")
-        // let settingsVC = SettingsViewController()
-        // navigationController?.pushViewController(settingsVC, animated: true)
-    }
-    
-    public override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        // Сохранение проекта при паузе (аналог onPause)
-        saveCurrentProjectAsync()
-    }
-    
-    private func saveCurrentProjectAsync() {
-        // Асинхронное сохранение текущего проекта
-        print("[\(MainMenuViewController.tag)] Saving current project asynchronously...")
+        navigationController?.pushViewController(SettingsViewController(), animated: true)
     }
 }

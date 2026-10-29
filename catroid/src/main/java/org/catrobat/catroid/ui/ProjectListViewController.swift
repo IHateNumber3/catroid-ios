@@ -5,7 +5,7 @@ public final class ProjectListViewController: UIViewController {
     private static let tag = "ProjectListViewController"
     public static let importLocalIntentKey = "merge"
     
-    public var isImportMode: Bool = false
+    public var isImportMode: Bool = false\n    public var startWithCreateDialog: Bool = false\n    private var projects: [String] = UserDefaults.standard.stringArray(forKey: "CatroidProjectNames") ?? []
     
     private let tableView = UITableView(frame: .zero, style: .plain)
     
@@ -19,7 +19,10 @@ public final class ProjectListViewController: UIViewController {
         setupBottomBar()
         
         if isImportMode {
-            title = "Импорт из проекта" // Эквивалент R.string.import_from_project
+            title = "Импорт из проекта"
+        }
+        if startWithCreateDialog {
+            DispatchQueue.main.async { [weak self] in self?.handleAddProjectTapped() }
         }
     }
     
@@ -80,8 +83,13 @@ public final class ProjectListViewController: UIViewController {
             textField.placeholder = "Имя проекта"
         }
         alert.addAction(UIAlertAction(title: "Отмена", style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Создать", style: .default, handler: { [weak self] _ in
-            print("Project created successfully.")
+        alert.addAction(UIAlertAction(title: "Создать", style: .default, handler: { [weak self, weak alert] _ in
+            guard let self = self,
+                  let name = alert?.textFields?.first?.text?.trimmingCharacters(in: .whitespacesAndNewlines),
+                  !name.isEmpty else { return }
+            self.projects.append(name)
+            UserDefaults.standard.set(self.projects, forKey: "CatroidProjectNames")
+            self.tableView.reloadData()
         }))
         present(alert, animated: true, completion: nil)
     }
@@ -94,11 +102,17 @@ extension ProjectListViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0 // Заглушка списка проектов
+        return projects.count
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "ProjectCell")
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "ProjectCell")
+        var content = cell.defaultContentConfiguration()
+        content.text = projects[indexPath.row]
+        content.secondaryText = "Проект Catroid"
+        content.image = UIImage(systemName: "folder")
+        cell.contentConfiguration = content
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
 }
