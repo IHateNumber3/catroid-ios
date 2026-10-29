@@ -28,8 +28,10 @@ targets:
         includes:
           - "**/*.swift"
         excludes:
+          - "**/ui/**"
           # Legacy stagecore contains duplicate filenames/classes; use the iOS stage implementation.
           - "**/stagecore/**"
+      - path: catroid/src/main/java/org/catrobat/catroid/ui/MainMenuViewController.swift
       - path: ios/App
       - path: ios-bridge
         excludes:
