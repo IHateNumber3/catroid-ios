@@ -31,7 +31,11 @@ targets:
           - "**/ui/**"
           # Legacy stagecore contains duplicate filenames/classes; use the iOS stage implementation.
           - "**/stagecore/**"
+      # Explicitly include reviewed iOS screens; the rest of Android's ui tree stays excluded.
       - path: catroid/src/main/java/org/catrobat/catroid/ui/MainMenuViewController.swift
+      - path: catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift
+      - path: catroid/src/main/java/org/catrobat/catroid/ui/ProjectViewController.swift
+      - path: catroid/src/main/java/org/catrobat/catroid/ui/SettingsViewController.swift
       - path: ios/App
       - path: ios-bridge
         excludes:
