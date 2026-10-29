@@ -2,6 +2,8 @@ import Foundation
 import UIKit
 
 public class CatroidApplication: NSObject, UIApplicationDelegate {
+
+    public var window: UIWindow?
     
     private static let tag = "CatroidApplication"
     
@@ -16,6 +18,14 @@ public class CatroidApplication: NSObject, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
         CatroidApplication.shared = self
+
+        // This app uses UIApplicationMain directly, so install its initial screen here.
+        let appWindow = UIWindow(frame: UIScreen.main.bounds)
+        appWindow.rootViewController = UINavigationController(
+            rootViewController: MainMenuViewController()
+        )
+        appWindow.makeKeyAndVisible()
+        self.window = appWindow
         
         print("[\(CatroidApplication.tag)] CatroidApplication onCreate (iOS Port)")
         
