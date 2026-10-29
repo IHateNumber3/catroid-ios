@@ -1,7 +1,7 @@
-BUILD ERRORS: 1 unique
+BUILD ERRORS: 2 unique
 
 == Missing symbols (count) ==
-   1  MainMenuViewController
 
 == First errors ==
-catroid/src/main/java/org/catrobat/catroid/CatroidApplication.swift:29:24: error: cannot find 'MainMenuViewController' in scope
+error: filename "UniqueNameProvider.swift" used twice: '/Users/runner/work/catroid-ios/catroid-ios/catroid/src/main/java/org/catrobat/catroid/ui/recyclerview/util/UniqueNameProvider.swift' and '/Users/runner/work/catroid-ios/catroid-ios/catroid/src/main/java/org/catrobat/catroid/content/UniqueNameProvider.swift'
+error: Filename "UniqueNameProvider.swift" used twice: '/Users/runner/work/catroid-ios/catroid-ios/catroid/src/main/java/org/catrobat/catroid/ui/recyclerview/util/UniqueNameProvider.swift' and '/Users/runner/work/catroid-ios/catroid-ios/catroid/src/main/java/org/catrobat/catroid/content/UniqueNameProvider.swift' (in target 'Catroid' from project 'Catroid')
