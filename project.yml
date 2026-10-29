@@ -23,7 +23,9 @@ targets:
     type: application
     platform: iOS
     sources:
-      # Портированное ядро и необходимая реализация сцены iOS.
+      # Explicit Swift entry point. Keep this file in the application target.
+      - path: ios/App/main.swift
+      # Swift port sources. Android Java/Kotlin and XML files are not compiled as Swift.
       - path: catroid/src/main/java
         includes:
           - "**/*.swift"
@@ -31,12 +33,9 @@ targets:
           - "**/ui/**"
           # Legacy stagecore contains duplicate filenames/classes; use the iOS stage implementation.
           - "**/stagecore/**"
-      # Explicitly include reviewed iOS screens; the rest of Android's ui tree stays excluded.
       - path: catroid/src/main/java/org/catrobat/catroid/ui/MainMenuViewController.swift
       - path: catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift
-      - path: catroid/src/main/java/org/catrobat/catroid/ui/ProjectViewController.swift
       - path: catroid/src/main/java/org/catrobat/catroid/ui/SettingsViewController.swift
-      - path: ios/App
       - path: ios-bridge
         excludes:
           - README.md
@@ -46,6 +45,10 @@ targets:
           - "**/*.h"
         compilerFlags:
           - -w
+    resources:
+      - path: catroid/src/main/assets
+      - path: catroid/src/main/res
+      - path: catroid/src/lunaAndCat/res
     info:
       path: ios/Info.plist
       properties:

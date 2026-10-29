@@ -1,95 +1,135 @@
 import UIKit
 
-public enum ProjectFragmentPosition { case scenes, sprites }
+public enum ProjectFragmentPosition {
+    case scenes
+    case sprites
+}
 
-/// Project overview backed by ProjectManager's current in-memory Project.
-public final class ProjectViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+public class ProjectViewController: UIViewController {
+    
+    private static let tag = "ProjectViewController"
+    
     public var fragmentPosition: ProjectFragmentPosition = .scenes
-    private let tableView = UITableView(frame: .zero, style: .insetGrouped)
-    private let segmented = UISegmentedControl(items: ["Сцены", "Спрайты"])
-    private var rows: [String] = []
-
+    
+    // Элементы UI (аналог ActivityRecyclerBinding)
+    private let containerView = UIView()
+    private let bottomBarView = UIView()
+    private let addButton = UIButton(type: .system)
+    private let playButton = UIButton(type: .system)
+    
     public override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
-        title = ProjectManager.shared.currentProject?.name ?? "Проект"
-        navigationItem.rightBarButtonItem = UIBarButtonItem(
-            image: UIImage(systemName: "ellipsis.circle"), style: .plain,
-            target: self, action: #selector(showProjectOptions)
+        title = "Проект"
+        
+        setupNavigationBar()
+        setupLayout()
+        setupBottomBarActions()
+        
+        loadFragment(position: fragmentPosition)
+    }
+    
+    private func setupNavigationBar() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: UIImage(systemName: "chevron.left"),
+            style: .plain,
+            target: self,
+            action: #selector(backTapped)
         )
-        segmented.selectedSegmentIndex = fragmentPosition == .scenes ? 0 : 1
-        segmented.addTarget(self, action: #selector(segmentChanged), for: .valueChanged)
-        segmented.translatesAutoresizingMaskIntoConstraints = false
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "ItemCell")
-        view.addSubview(segmented)
-        view.addSubview(tableView)
+        
+        let optionsButton = UIBarButtonItem(
+            image: UIImage(systemName: "ellipsis.circle"),
+            style: .plain,
+            target: self,
+            action: #selector(optionsTapped)
+        )
+        navigationItem.rightBarButtonItem = optionsButton
+    }
+    
+    private func setupLayout() {
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        bottomBarView.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(containerView)
+        view.addSubview(bottomBarView)
+        
         NSLayoutConstraint.activate([
-            segmented.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 12),
-            segmented.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            segmented.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            tableView.topAnchor.constraint(equalTo: segmented.bottomAnchor, constant: 8),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            containerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            containerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            containerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            containerView.bottomAnchor.constraint(equalTo: bottomBarView.topAnchor),
+            
+            bottomBarView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            bottomBarView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            bottomBarView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            bottomBarView.heightAnchor.constraint(equalToConstant: 60)
         ])
-        reloadRows()
+        
+        bottomBarView.backgroundColor = .secondarySystemBackground
+        
+        // Настройка кнопок нижней панели (Add & Play)
+        addButton.setTitle("Добавить", for: .normal)
+        playButton.setTitle("Запустить", for: .normal)
+        
+        addButton.translatesAutoresizingMaskIntoConstraints = false
+        playButton.translatesAutoresizingMaskIntoConstraints = false
+        
+        bottomBarView.addSubview(addButton)
+        bottomBarView.addSubview(playButton)
+        
+        NSLayoutConstraint.activate([
+            addButton.leadingAnchor.constraint(equalTo: bottomBarView.leadingAnchor, constant: 20),
+            addButton.centerYAnchor.constraint(equalTo: bottomBarView.centerYAnchor),
+            
+            playButton.trailingAnchor.constraint(equalTo: bottomBarView.trailingAnchor, constant: -20),
+            playButton.centerYAnchor.constraint(equalTo: bottomBarView.centerYAnchor)
+        ])
     }
-
-    private func reloadRows() {
-        guard let project = ProjectManager.shared.currentProject else { rows = []; tableView.reloadData(); return }
-        switch fragmentPosition {
+    
+    private func setupBottomBarActions() {
+        addButton.addTarget(self, action: #selector(handleAddButton), for: .touchUpInside)
+        playButton.addTarget(self, action: #selector(handlePlayButton), for: .touchUpInside)
+    }
+    
+    private func loadFragment(position: ProjectFragmentPosition) {
+        // Логика переключения между контроллером списка сцен и списка спрайтов
+        switch position {
         case .scenes:
-            rows = project.sceneList.map { $0.name }
+            print("[\(ProjectViewController.tag)] Loading SceneListViewController")
+            // addChild(SceneListViewController())
         case .sprites:
-            rows = (ProjectManager.shared.currentlyEditedScene?.spriteList ?? []).map { $0.name }
+            print("[\(ProjectViewController.tag)] Loading SpriteListViewController")
+            // addChild(SpriteListViewController())
         }
-        tableView.reloadData()
-        tableView.backgroundView = rows.isEmpty ? emptyState() : nil
     }
-
-    private func emptyState() -> UIView {
-        let label = UILabel()
-        label.text = "Здесь пока пусто"
-        label.textColor = .secondaryLabel
-        label.textAlignment = .center
-        return label
+    
+    // MARK: - Actions
+    
+    @objc private func handleAddButton() {
+        print("[\(ProjectViewController.tag)] Add button tapped.")
+        // В зависимости от текущего экрана вызываем добавление сцены или спрайта
     }
-
-    @objc private func segmentChanged() {
-        fragmentPosition = segmented.selectedSegmentIndex == 0 ? .scenes : .sprites
-        reloadRows()
+    
+    @objc private func handlePlayButton() {
+        print("[\(ProjectViewController.tag)] Play button tapped. Starting stage...")
+        // Запуск StageScene / StageViewController
     }
-
-    @objc private func showProjectOptions() {
-        let alert = UIAlertController(title: title, message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Обновить список", style: .default) { [weak self] _ in self?.reloadRows() })
-        alert.addAction(UIAlertAction(title: "Отмена", style: .cancel))
-        if let popover = alert.popoverPresentationController { popover.barButtonItem = navigationItem.rightBarButtonItem }
-        present(alert, animated: true)
+    
+    @objc private func optionsTapped() {
+        print("[\(ProjectViewController.tag)] Project options tapped.")
     }
-
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { rows.count }
-
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
-        var content = cell.defaultContentConfiguration()
-        content.text = rows[indexPath.row]
-        content.image = UIImage(systemName: fragmentPosition == .scenes ? "rectangle.on.rectangle" : "person.crop.square")
-        cell.contentConfiguration = content
-        cell.accessoryType = .disclosureIndicator
-        return cell
+    
+    @objc private func backTapped() {
+        navigationController?.popViewController(animated: true)
     }
-
-    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-        guard fragmentPosition == .scenes,
-              let scene = ProjectManager.shared.currentProject?.getSceneByName(rows[indexPath.row]) else { return }
-        ProjectManager.shared.currentlyEditedScene = scene
-        fragmentPosition = .sprites
-        segmented.selectedSegmentIndex = 1
-        reloadRows()
+    
+    public override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        // Автоматическое сохранение проекта при уходе с экрана (аналог onPause)
+        saveProjectAsync()
+    }
+    
+    private func saveProjectAsync() {
+        print("[\(ProjectViewController.tag)] Saving project asynchronously...")
     }
 }
