@@ -1,5 +1,28 @@
-BUILD ERRORS: 0 unique
+BUILD ERRORS: 17 unique
 
 == Missing symbols (count) ==
+   6  view
+   2  title
+   2  navigationItem
+   1  BaseCastViewController
+   1  handleBackAction
+   1  present
 
 == First errors ==
+catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:12:26: error: method does not override any method from its superclass
+catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:3:41: error: cannot find type 'BaseCastViewController' in scope
+catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:82:1: error: cannot declare conformance to 'NSObjectProtocol' in Swift; 'ProjectListViewController' should inherit 'NSObject' instead
+catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:13:9: error: 'super' cannot be used in class 'ProjectListViewController' because it has no superclass
+catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:14:9: error: cannot find 'view' in scope
+catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:15:9: error: cannot find 'title' in scope
+catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:22:13: error: cannot find 'title' in scope
+catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:27:9: error: cannot find 'navigationItem' in scope
+catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:31:31: error: cannot find 'handleBackAction' in scope
+catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:42:13: error: cannot find 'navigationItem' in scope
+catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:51:9: error: cannot find 'view' in scope
+catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:54:53: error: cannot find 'view' in scope
+catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:55:57: error: cannot find 'view' in scope
+catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:56:58: error: cannot find 'view' in scope
+catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:57:56: error: cannot find 'view' in scope
+catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:77:9: error: cannot find 'present' in scope
+catroid/src/main/java/org/catrobat/catroid/ui/ProjectListViewController.swift:77:52: error: 'nil' requires a contextual type
