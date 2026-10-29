@@ -1,6 +1,6 @@
 import UIKit
 
-public class ProjectListViewController: BaseCastViewController {
+public final class ProjectListViewController: UIViewController {
     
     private static let tag = "ProjectListViewController"
     public static let importLocalIntentKey = "merge"
@@ -63,6 +63,15 @@ public class ProjectListViewController: BaseCastViewController {
         print("[\(ProjectListViewController.tag)] Configuring bottom bar elements.")
     }
     
+    @objc private func handleBackAction() {
+        if let navigationController = navigationController,
+           navigationController.viewControllers.count > 1 {
+            navigationController.popViewController(animated: true)
+        } else {
+            dismiss(animated: true, completion: nil)
+        }
+    }
+
     @objc private func handleAddProjectTapped() {
         print("[\(ProjectListViewController.tag)] Opening New Project Dialog...")
         // Показ диалогового окна создания нового проекта (эквивалент NewProjectDialogFragment)
