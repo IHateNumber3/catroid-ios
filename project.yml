@@ -28,7 +28,6 @@ targets:
         includes:
           - "**/*.swift"
         excludes:
-          - "**/ui/**"
           # Legacy stagecore contains duplicate filenames/classes; use the iOS stage implementation.
           - "**/stagecore/**"
       - path: ios/App
