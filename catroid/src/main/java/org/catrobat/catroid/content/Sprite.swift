@@ -68,6 +68,16 @@ open class Sprite: Nameable, Hashable {
         myOriginal = sprite
     }
 
+    /// Restores the script/brick tree from the standard Catrobat object XML node.
+    /// Unknown script and brick classes remain as archived placeholders with their XML intact.
+    public func restoreCatrobatScripts(from objectNode: CatrobatXMLNode) {
+        CatrobatScriptArchiveCodec.restoreScripts(on: self, from: objectNode)
+    }
+
+    public func restoreCatrobatScripts(from codeXML: Data) throws {
+        try CatrobatScriptArchiveCodec.restoreScripts(on: self, from: codeXML)
+    }
+
     public func setLookList(_ list: [LookData]) { lookList = list }
     public func setSoundList(_ list: [SoundInfo]) { soundList = list }
 

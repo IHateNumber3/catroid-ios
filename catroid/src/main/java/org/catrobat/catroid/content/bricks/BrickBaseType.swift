@@ -5,6 +5,9 @@ import Foundation
 open class BrickBaseType: Brick {
 
     public var commentedOut = false
+
+    /// Original XStream XML node; retained until every concrete brick field has a Swift mapping.
+    public var catrobatXMLArchive: CatrobatXMLNode?
     public internal(set) var brickId = UUID()
     private weak var parentBrick: Brick?
 
@@ -19,6 +22,7 @@ open class BrickBaseType: Brick {
         commentedOut = other.commentedOut
         brickId = UUID()
         parentBrick = nil
+        catrobatXMLArchive = other.catrobatXMLArchive
     }
 
     open func clone() -> Brick {

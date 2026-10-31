@@ -12,6 +12,9 @@ open class Script {
 
     public internal(set) var scriptId: UUID = UUID()
 
+    /// Original XStream XML node. Keeps fields not yet mapped to Swift models losslessly.
+    public var catrobatXMLArchive: CatrobatXMLNode?
+
     // transient в Java: не сериализуется
     var cachedScriptBrick: ScriptBrick?
 
@@ -38,6 +41,7 @@ open class Script {
         posX = other.posX
         posY = other.posY
         scriptId = UUID()
+        catrobatXMLArchive = other.catrobatXMLArchive
     }
 
     public final func clone() -> Script {
